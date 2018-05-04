@@ -1,0 +1,19 @@
+.navbar-brand{
+  a {
+    transition: width .4s;
+    display: block;
+    overflow: hidden;
+    width: 64px;
+    border-radius: 16px;
+    &:hover{
+      width: 205px;
+    }
+  }
+  img {
+    width: 250px;
+    padding: 16px 7px;
+    background-color: #1772f2;
+    vertical-align: top;
+    
+  }
+}

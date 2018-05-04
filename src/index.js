@@ -13,7 +13,7 @@ import {
 import { Provider } from 'react-redux'
 import store from './_main/store'
 
-import Style from './_main/style/bootstrap'
+import Style from './_main/styles/bootstrap'
 
 ReactDOM.render(
     <Provider store={store}>

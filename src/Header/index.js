@@ -1,45 +1,39 @@
 import React from 'react'
+import logo from '../_main/images/ilovecoding-logo.svg'
+import styles from './styles'
 
 class Header extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+        this.printLinks = this.printLinks.bind(this)
+    }
+
+    printLinks(){
+        let links = [{
+            label: 'Start Here',
+            link: '#',
+        }, {
+            label: 'Success Stories',
+            link: '#',
+        }]
+
+        return links.map(({label, link}, index)=> (
+            <a key={index} className="p-2 text-secondary" href={link}>{label}</a>
+        ))
     }
     render(){
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">Navbar</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                        </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" href="#">Action</a>
-                        <a className="dropdown-item" href="#">Another action</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                    </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+            <nav className="navbar navbar-expand-lg navbar-light">
+                <div className="navbar-brand mr-md-auto">
+                    <a href="/">
+                        <img src={logo} alt="iLoveCoding.org Logo" />
+                    </a>
                 </div>
+
+                <nav className="my-2 my-md-0 mr-md-3">
+                    {this.printLinks()}
+                </nav>
+                <a className="btn btn-outline-primary" href="#">Student Login</a>
             </nav>
         )
     }
