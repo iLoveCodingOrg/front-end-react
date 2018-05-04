@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 import Header from '../../Header'
 import Footer from '../../Footer'
@@ -23,7 +24,7 @@ class Home extends React.Component{
 }
 
 Home.propTypes = {
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
     // show: PropTypes.bool.isRequired
 }
 

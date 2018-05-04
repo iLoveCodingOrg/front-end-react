@@ -1,10 +1,10 @@
 {
-  "name": "React-Redux-Simple-Starter",
+  "name": "ilc-react",
   "version": "1.0.0",
-  "description": "React Redux Simple Starter with Parcel",
+  "description": "iLoveCoding Front-End React Application",
   "main": "src/index.js",
   "scripts": {
-    "start": "./node_modules/parcel/bin/cli.js ./src/index.html",
+    "start": "./node_modules/parcel-bundler/bin/cli.js ./src/index.html",
     "start-webpack": "webpack-dev-server",
     "build": "webpack"
   },
@@ -16,11 +16,14 @@
   "author": "Aziz Ali, @ilovecodingOrg",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-redux": "^5.0.3",
-    "react-router": "^3.0.2",
-    "redux": "^3.6.0",
+    "bootstrap": "^4.1.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
     "thunk": "0.0.1"
   },
   "devDependencies": {
@@ -31,6 +34,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.23.0",
     "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.9.0",
     "parcel-bundler": "^1.8.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
