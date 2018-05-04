@@ -11,13 +11,11 @@ class Home extends React.Component{
     render(){
         return (
             <div>
-                <Header/>
-                    Home
-                    <pre>
-                        {JSON.stringify(this.props.show, 0, 2)}
-                    </pre>
-                    <button onClick={this.props.onClick}> Click to Toggle</button>
-                <Footer/>
+                Home
+                <pre>
+                    {JSON.stringify(this.props.show, 0, 2)}
+                </pre>
+                <button onClick={this.props.onClick}> Click to Toggle</button>
             </div>
         )
     }

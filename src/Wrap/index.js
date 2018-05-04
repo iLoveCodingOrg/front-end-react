@@ -10,7 +10,7 @@ class Wrap extends React.Component{
     render(){
         const ChildComponent = this.props.childComponent
         return (
-            <div className="container-fluid">
+            <div>
                 <Header/>
                     <ChildComponent />
                 <Footer/>

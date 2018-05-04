@@ -23,7 +23,9 @@ ReactDOM.render(
                     exact
                     path='/'
                     render={()=> <Wrap childComponent={Home}/>} />
-                <Route path='/about' component={About} />
+                <Route
+                    path='/about'
+                    render={()=> <Wrap childComponent={About}/>} />
             </Switch>
         </BrowserRouter>
     </Provider>

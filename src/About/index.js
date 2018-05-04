@@ -4,15 +4,13 @@ import Header from '../Header'
 import Footer from '../Footer'
 
 class About extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
     }
     render(){
         return (
             <div>
-                <Header/>
-                    About
-                <Footer/>
+                About
             </div>
         )
     }
