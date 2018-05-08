@@ -6,7 +6,7 @@
   "scripts": {
     "start": "./node_modules/parcel-bundler/bin/cli.js ./src/index.html",
     "start-webpack": "webpack-dev-server",
-    "build": "./node_modules/parcel-bundler/bin/cli.js build ./src/index.html",
+    "build": "./node_modules/parcel-bundler/bin/cli.js build ./src/index.html && cp _redirects dist/_redirects",
     "build-webpack": "webpack"
   },
   "keywords": [
