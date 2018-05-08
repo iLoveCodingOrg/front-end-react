@@ -1,11 +1,11 @@
 import * as actionCreators from './actionCreators'
 import reducer from './reducer'
-import View from './components/View'
-import Edit from './components/Edit'
+import Login from './components/Login'
+import ForgetPassword from './components/ForgetPassword'
 
 export {
     reducer,
     actionCreators,
-    View as PageView,
-    Edit as PageEdit,
+    Login,
+    ForgetPassword,
 }

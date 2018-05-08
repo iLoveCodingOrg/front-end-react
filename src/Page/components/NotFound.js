@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class About extends React.Component{
+class NotFound extends React.Component{
     constructor(props){
         super(props)
     }
     render(){
         return (
             <div>
-                About
+                NotFound Page
             </div>
         )
     }
 }
 
-export default About
+export default NotFound

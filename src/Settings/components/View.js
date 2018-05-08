@@ -1,19 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-import Header from '../Header'
-import Footer from '../Footer'
-
-class About extends React.Component{
+class Settings extends React.Component{
     constructor(props){
         super(props)
     }
     render(){
         return (
             <div>
-                About
+                Settings
             </div>
         )
     }
 }
 
-export default About
+export default Settings

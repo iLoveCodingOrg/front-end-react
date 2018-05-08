@@ -6,7 +6,8 @@
   "scripts": {
     "start": "./node_modules/parcel-bundler/bin/cli.js ./src/index.html",
     "start-webpack": "webpack-dev-server",
-    "build": "webpack"
+    "build": "./node_modules/parcel-bundler/bin/cli.js build ./src/index.html",
+    "build-webpack": "webpack"
   },
   "keywords": [
     "Cat",

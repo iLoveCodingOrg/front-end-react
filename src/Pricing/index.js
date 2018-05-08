@@ -1,19 +1,11 @@
-import React from 'react'
+import * as actionCreators from './actionCreators'
+import reducer from './reducer'
+import View from './components/View'
+import Edit from './components/Edit'
 
-import Header from '../Header'
-import Footer from '../Footer'
-
-class About extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    render(){
-        return (
-            <div>
-                About
-            </div>
-        )
-    }
+export {
+    reducer,
+    actionCreators,
+    View as PageView,
+    Edit as PageEdit,
 }
-
-export default About

@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class About extends React.Component{
+class View extends React.Component{
     constructor(props){
         super(props)
     }
     render(){
         return (
             <div>
-                About
+                View Page
             </div>
         )
     }
 }
 
-export default About
+export default View
