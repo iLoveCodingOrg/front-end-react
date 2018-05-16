@@ -26,9 +26,9 @@ import {
     Switch
 } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import store from './_main/store'
+import store from './_app/store'
 
-import Style from './_main/styles/bootstrap'
+import Style from './_app/styles/bootstrap'
 
 ReactDOM.render(
     <Provider store={store}>

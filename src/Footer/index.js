@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../_main/images/ilovecoding-logo.svg'
+import logo from '../_app/images/ilovecoding-logo.svg'
 import styles from './styles'
 
 export default () => (
