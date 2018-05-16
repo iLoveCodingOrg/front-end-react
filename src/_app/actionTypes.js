@@ -1,0 +1,5 @@
+// LESSONS
+export const SET_LESSONS = 'SET_LESSONS'
+export const CLEAR_LESSONS = 'CLEAR_LESSONS'
+export const SET_LESSON = 'SET_LESSON'
+export const CLEAR_LESSON = 'CLEAR_LESSON'

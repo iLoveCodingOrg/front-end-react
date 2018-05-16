@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../_app/images/ilovecoding-logo.svg'
 import styles from './styles'
+import { Link } from 'react-router-dom'
 
 class Header extends React.Component{
     constructor(props){
@@ -25,9 +26,9 @@ class Header extends React.Component{
         return (
             <nav className="d-flex flex-column flex-md-row align-items-center navbar-expand-lg py-2 px-3">
                 <div className="navbar-brand mr-md-auto">
-                    <a href="/">
+                    <Link to="/">
                         <img src={logo} alt="iLoveCoding.org Logo" />
-                    </a>
+                    </Link>
                 </div>
 
                 <nav className="my-2 my-md-0 mr-md-3">
