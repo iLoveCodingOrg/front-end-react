@@ -37,21 +37,20 @@ function renderApp(){
                 <Switch>
                     <Route
                         exact
-                        strict
                         path="/"
-                        rrender={(props)=> <Wrap {...props} childComponent={Home}/>} />
+                        render={(props)=> <Wrap {...props} childComponent={Home}/>} />
     
     
                     <Route
                         exact
                         strict
-                        path="/lessons/"
-                        rrender={(props)=> <Wrap {...props} childComponent={LessonList}/>} />
+                        path="/lessons"
+                        render={(props)=> <Wrap {...props} childComponent={LessonList}/>} />
                     <Route
                         exact
                         strict
                         path="/lessons/:slug"
-                        rrender={(props)=> <Wrap {...props} childComponent={LessonView}/>} />
+                        render={(props)=> <Wrap {...props} childComponent={LessonView}/>} />
                     <Route
                         exact
                         strict
@@ -79,22 +78,22 @@ function renderApp(){
                     <Route
                         exact
                         strict
-                        path="/pages/"
-                        rrender={(props)=> <Wrap {...props} childComponent={PageList}/>} />
+                        path="/pages"
+                        render={(props)=> <Wrap {...props} childComponent={PageList}/>} />
                     <Route
                         exact
                         strict
                         path="/pages/:slug"
-                        rrender={(props)=> <Wrap {...props} childComponent={PageView}/>} />
+                        render={(props)=> <Wrap {...props} childComponent={PageView}/>} />
                     <Route
                         exact
                         strict
                         path="/pages/:slug/edit"
-                        rrender={(props)=> <Wrap {...props} childComponent={PageEdit}/>} />
+                        render={(props)=> <Wrap {...props} childComponent={PageEdit}/>} />
                     
                     
                     <Route
-                        rrender={(props)=> <Wrap {...props} childComponent={NotFound}/>} />
+                        render={(props)=> <Wrap {...props} childComponent={NotFound}/>} />
                 </Switch>
             </BrowserRouter>
         </Provider>

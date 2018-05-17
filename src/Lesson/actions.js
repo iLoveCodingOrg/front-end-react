@@ -1,21 +1,14 @@
 import {
     SET_LESSONS,
-    CLEAR_LESSONS
+    CLEAR_LESSONS,
+    SET_LESSON,
+    CLEAR_LESSON
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
     checkStatus,
     parseJSON
 } from '../_app/utils'
-
-export function setLessons(lessons) {
-    return {
-        type: SET_LESSONS,
-        payload: {
-            lessons
-        }
-    }
-}
 
 export function showError(error) {
     return {
@@ -31,10 +24,41 @@ export function getLessons(){
     
     return (dispatch) => {
         return fetch(url)
-            .then(checkStatus)
+        .then(checkStatus)
+        .then(parseJSON)
+        .then((json) => {
+            dispatch(setLessons(json))
+        })
+        .catch((err) => {
+            dispatch(showError(err))
+        })
+    }
+}
+
+export function setLessons(lessons) {
+    return {
+        type: SET_LESSONS,
+        payload: {
+            lessons
+        }
+    }
+}
+
+export function clearLessons(){
+    return {
+        type: CLEAR_LESSONS
+    }
+}
+
+export function getLessonBySlug(slug){
+    const url = `${API_URL}lessons/${slug}/data`
+    
+    return (dispatch) => {
+        return fetch(url)
+        .then(checkStatus)
             .then(parseJSON)
             .then((json) => {
-                dispatch(setLessons(json))
+                dispatch(setLesson(json))
             })
             .catch((err) => {
                 dispatch(showError(err))
@@ -42,8 +66,17 @@ export function getLessons(){
     }
 }
 
-export function clearLessons(){
+export function setLesson(lesson) {
     return {
-        type: CLEAR_LESSONS
+        type: SET_LESSON,
+        payload: {
+            lesson
+        }
+    }
+}
+
+export function clearLesson(){
+    return {
+        type: CLEAR_LESSON
     }
 }
