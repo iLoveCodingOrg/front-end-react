@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
 import { reducer as home } from '../Home'
+import { reducer as pages } from '../Page'
 import { reducer as lessons } from '../Lesson'
 import { reducer as courses } from '../Course'
 
-var randomReducer = function(state={}, action){
+var randomReducer = function (state={}, action){
     return state
 }
 
@@ -12,6 +13,7 @@ var randomReducer = function(state={}, action){
 export default combineReducers({
     randomReducer,
     home,
+    pages,
     lessons,
     courses
 })

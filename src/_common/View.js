@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 class View extends React.Component{
     constructor(props){
         super(props)
+        console.log(props)
     }
 
     componentWillMount(){

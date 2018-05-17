@@ -1,17 +1,29 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
-class List extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    render(){
-        return (
-            <div>
-                List Page
-            </div>
-        )
+import { actions } from '../'
+import { List } from '../../_common'
+
+function mapStateToProps(state){
+    return {
+        list: state.pages.list
     }
 }
 
-export default List
+function mapDispatchtoProps(dispatch){
+    return {
+        getList: ()=>{
+            dispatch(actions.getPages())
+        },
+        clearList: ()=>{
+            dispatch(actions.clearPages())
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchtoProps)
+((props)=>{
+    return <List {...props} of="pages" />
+})

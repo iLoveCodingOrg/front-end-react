@@ -1,3 +1,9 @@
+// PAGES
+export const SET_PAGES = 'SET_PAGES'
+export const CLEAR_PAGES = 'CLEAR_PAGES'
+export const SET_PAGE = 'SET_PAGE'
+export const CLEAR_PAGE = 'CLEAR_PAGE'
+
 // LESSONS
 export const SET_LESSONS = 'SET_LESSONS'
 export const CLEAR_LESSONS = 'CLEAR_LESSONS'

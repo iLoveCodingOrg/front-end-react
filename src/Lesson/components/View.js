@@ -16,7 +16,7 @@ function mapDispatchtoProps(dispatch){
             dispatch(actions.getLessonBySlug(slug))
         },
         clearView: ()=>{
-            dispatch(actions.clearCourse())
+            dispatch(actions.clearPage())
         }
     }
 }

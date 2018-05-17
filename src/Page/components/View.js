@@ -1,17 +1,29 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
-class View extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    render(){
-        return (
-            <div>
-                View Page
-            </div>
-        )
+import { actions } from '../'
+import { View } from '../../_common'
+
+function mapStateToProps(state){
+    return {
+        view: state.pages.view
     }
 }
 
-export default View
+function mapDispatchtoProps(dispatch){
+    return {
+        getView: (slug)=>{
+            dispatch(actions.getPageBySlug(slug))
+        },
+        clearView: ()=>{
+            dispatch(actions.clearPage())
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchtoProps)
+((props)=>{
+    return <View {...props} of="page" />
+})

@@ -1,15 +1,13 @@
-import * as actionCreators from './actionCreators'
+import * as actions from './actions'
 import reducer from './reducer'
 import View from './components/View'
 import Edit from './components/Edit'
 import List from './components/List'
-import NotFound from './components/NotFound'
 
 export {
     reducer,
-    actionCreators,
+    actions,
     View,
     Edit,
-    List,
-    NotFound,
+    List
 }
