@@ -8,11 +8,11 @@ class Wrap extends React.Component{
         super(props)
     }
     render(){
-        const ChildComponent = this.props.childComponent
+        const { childComponent:ChildComponent, ...rest } = this.props
         return (
             <div>
                 <Header/>
-                    <ChildComponent />
+                    <ChildComponent {...rest}/>
                 <Footer/>
             </div>
         )

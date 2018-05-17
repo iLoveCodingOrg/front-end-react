@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
-import { IMG_URL } from '../_app/constants'
 import { Card } from './'
 
 class List extends React.Component{
@@ -19,7 +17,6 @@ class List extends React.Component{
     }
 
     render(){
-        console.log('this.props.list', this.props.list)
         return (
             <div>
                 {
@@ -29,7 +26,7 @@ class List extends React.Component{
                     </div>
                     :
                     this.props.list.map((item, index)=>{
-                      return <Card 
+                      return <Card
                         key={index}
                         item={item}
                         of={this.props.of}
@@ -42,9 +39,9 @@ class List extends React.Component{
 }
 
 List.propTypes = {
-    list: PropTypes.array.isRequired,
-    getList: PropTypes.func.isRequired,
     clearList: PropTypes.func.isRequired,
+    getList: PropTypes.func.isRequired,
+    list: PropTypes.array.isRequired,
     of: PropTypes.oneOf(['lessons', 'courses', 'pages']).isRequired
 }
 

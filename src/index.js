@@ -1,9 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { hot } from 'react-hot-loader'
 
 import Wrap from './Wrap'
-import {Home} from './Home'
+import { Home } from './Home'
 import {
     View as LessonView,
     Edit as LessonEdit,
@@ -29,7 +28,7 @@ import {
 import { Provider } from 'react-redux'
 import store from './_app/store'
 
-import Style from './_app/styles/bootstrap'
+import './_app/styles/bootstrap'
 
 function renderApp(){
     render(
@@ -38,48 +37,64 @@ function renderApp(){
                 <Switch>
                     <Route
                         exact
-                        path='/'
-                        render={()=> <Wrap childComponent={Home}/>} />
+                        strict
+                        path="/"
+                        rrender={(props)=> <Wrap {...props} childComponent={Home}/>} />
     
     
                     <Route
                         exact
-                        path='/lessons/'
-                        render={()=> <Wrap childComponent={LessonList}/>} />
+                        strict
+                        path="/lessons/"
+                        rrender={(props)=> <Wrap {...props} childComponent={LessonList}/>} />
                     <Route
-                        path='/lessons/:name'
-                        render={()=> <Wrap childComponent={LessonView}/>} />
+                        exact
+                        strict
+                        path="/lessons/:slug"
+                        rrender={(props)=> <Wrap {...props} childComponent={LessonView}/>} />
                     <Route
-                        path='/lessons/:name/edit'
-                        render={()=> <Wrap childComponent={LessonEdit}/>} />
+                        exact
+                        strict
+                        path="/lessons/:slug/edit"
+                        render={(props)=> <Wrap {...props} childComponent={LessonEdit}/>} />
     
     
                     <Route
                         exact
-                        path='/courses/'
-                        render={()=> <Wrap childComponent={CourseList}/>} />
+                        strict
+                        path="/courses"
+                        render={(props)=> <Wrap {...props} childComponent={CourseList}/>} />
                     <Route
-                        path='/courses/:name'
-                        render={()=> <Wrap childComponent={CourseView}/>} />
+                        exact
+                        strict
+                        path="/courses/:slug"
+                        render={(props)=> <Wrap {...props} childComponent={CourseView}/>} />
                     <Route
-                        path='/courses/:name/edit'
-                        render={()=> <Wrap childComponent={CourseEdit}/>} />
+                        exact
+                        strict
+                        path="/courses/:slug/edit"
+                        render={(props)=> <Wrap {...props} childComponent={CourseEdit}/>} />
     
     
                     <Route
                         exact
-                        path='/pages/'
-                        render={()=> <Wrap childComponent={PageList}/>} />
+                        strict
+                        path="/pages/"
+                        rrender={(props)=> <Wrap {...props} childComponent={PageList}/>} />
                     <Route
-                        path='/pages/:name'
-                        render={()=> <Wrap childComponent={PageView}/>} />
+                        exact
+                        strict
+                        path="/pages/:slug"
+                        rrender={(props)=> <Wrap {...props} childComponent={PageView}/>} />
                     <Route
-                        path='/pages/:name/edit'
-                        render={()=> <Wrap childComponent={PageEdit}/>} />
+                        exact
+                        strict
+                        path="/pages/:slug/edit"
+                        rrender={(props)=> <Wrap {...props} childComponent={PageEdit}/>} />
                     
                     
                     <Route
-                        render={()=> <Wrap childComponent={NotFound}/>} />
+                        rrender={(props)=> <Wrap {...props} childComponent={NotFound}/>} />
                 </Switch>
             </BrowserRouter>
         </Provider>

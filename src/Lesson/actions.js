@@ -1,8 +1,8 @@
 import {
     SET_LESSONS,
     CLEAR_LESSONS
-} from '../_app/actionTypes';
-import {API_URL} from '../_app/constants'
+} from '../_app/actionTypes'
+import { API_URL } from '../_app/constants'
 import {
     checkStatus,
     parseJSON
@@ -17,7 +17,7 @@ export function setLessons(lessons) {
     }
 }
 
-export function showError(err) {
+export function showError(error) {
     return {
         type: 'SHOW_ERROR',
         payload: {
@@ -27,18 +27,18 @@ export function showError(err) {
 }
 
 export function getLessons(){
-    const url = `${API_URL}/lessons`;
+    const url = `${API_URL}lessons`
     
     return (dispatch) => {
         return fetch(url)
             .then(checkStatus)
             .then(parseJSON)
             .then((json) => {
-                dispatch(setLessons(json));
+                dispatch(setLessons(json))
             })
             .catch((err) => {
-                dispatch(showError(err));
-            });
+                dispatch(showError(err))
+            })
     }
 }
 
