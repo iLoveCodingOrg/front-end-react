@@ -16,9 +16,11 @@ class Card extends React.Component{
             subTitle,
             access,
             level,
+            courseTotalDuration,
             duration,
             slug
         } = this.props.item
+        const { of } = this.props
         return (
             <div
                 className="d-flex flex-row"
@@ -27,11 +29,11 @@ class Card extends React.Component{
                     {thumbnail? <img src={`${IMG_URL}${thumbnail}`} /> : null}
                 </div>
                 <div>
-                    <h3><Link to={`/lessons/${slug}`}>{title}</Link></h3>
+                    <h3><Link to={`/${of}/${slug}`}>{title}</Link></h3>
                     <p>{subTitle}</p>
                     <div>Access: {access}</div>
                     <div>Level: {level}</div>
-                    <div>Duration: {duration} mins</div>
+                    <div>Duration: {courseTotalDuration || duration} mins</div>
                 </div>
             </div>
         )
@@ -39,7 +41,8 @@ class Card extends React.Component{
 }
 
 Card.propTypes = {
-    item: PropTypes.object.isRequired
+    item: PropTypes.object.isRequired,
+    of: PropTypes.oneOf(['lessons', 'courses', 'pages']).isRequired
 }
 
 export default Card

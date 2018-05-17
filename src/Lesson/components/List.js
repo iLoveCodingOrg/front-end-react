@@ -1,3 +1,4 @@
+import React from 'react'
 import { connect } from 'react-redux'
 
 import { actions } from '../'
@@ -23,4 +24,6 @@ function mapDispatchtoProps(dispatch){
 export default connect(
     mapStateToProps,
     mapDispatchtoProps)
-(List)
+((props)=>{
+    return <List {...props} of="lessons" />
+})

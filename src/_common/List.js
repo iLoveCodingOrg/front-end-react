@@ -29,7 +29,11 @@ class List extends React.Component{
                     </div>
                     :
                     this.props.list.map((item, index)=>{
-                      return <Card item={item} key={index} />
+                      return <Card 
+                        key={index}
+                        item={item}
+                        of={this.props.of}
+                        />
                     })
                 }
             </div>
@@ -40,7 +44,8 @@ class List extends React.Component{
 List.propTypes = {
     list: PropTypes.array.isRequired,
     getList: PropTypes.func.isRequired,
-    clearList: PropTypes.func.isRequired
+    clearList: PropTypes.func.isRequired,
+    of: PropTypes.oneOf(['lessons', 'courses', 'pages']).isRequired
 }
 
 export default List
