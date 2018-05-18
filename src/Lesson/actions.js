@@ -23,7 +23,7 @@ export function getLessons(){
     const url = `${API_URL}lessons`
     
     return (dispatch) => {
-        return fetch(url)
+        return fetch(url, { credentials: 'include' })
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
@@ -54,7 +54,7 @@ export function getLessonBySlug(slug){
     const url = `${API_URL}lessons/${slug}/data`
     
     return (dispatch) => {
-        return fetch(url)
+        return fetch(url, { credentials: 'include' })
         .then(checkStatus)
             .then(parseJSON)
             .then((json) => {

@@ -23,7 +23,7 @@ export function getPages(){
     const url = `${API_URL}pages`
     
     return (dispatch) => {
-        return fetch(url)
+        return fetch(url, { credentials: 'include' })
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
@@ -54,7 +54,7 @@ export function getPageBySlug(slug){
     const url = `${API_URL}pages/${slug}/data`
     
     return (dispatch) => {
-        return fetch(url)
+        return fetch(url, { credentials: 'include' })
         .then(checkStatus)
             .then(parseJSON)
             .then((json) => {
