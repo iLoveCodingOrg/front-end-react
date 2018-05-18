@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 import { actions } from '../'
 
@@ -17,6 +18,11 @@ class Login extends React.Component{
     handleSubmit(event){
         event.preventDefault();
         this.props.login(this.state.email, this.state.password)
+        .then(({ isSuccess })=>{
+            if(isSuccess){
+                this.props.history.push('/')
+            }
+        })
     }
     handleChange(fieldName, newValue){
         this.setState({
@@ -68,9 +74,11 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         login: (email, password)=>{
-            dispatch(actions.login(email, password))
+            return dispatch(actions.login(email, password))
         }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps)(withRouter(Login))

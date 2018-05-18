@@ -34,9 +34,11 @@ export function login(email, password){
         .then(parseJSON)
         .then((json) => {
             dispatch(setUser(json))
+            return { isSuccess: true }
         })
         .catch((err) => {
             dispatch(showError(err))
+            return { isSuccess: false }
         })
     }
 }
