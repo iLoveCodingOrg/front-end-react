@@ -15,3 +15,7 @@ export const SET_COURSES = 'SET_COURSES'
 export const CLEAR_COURSES = 'CLEAR_COURSES'
 export const SET_COURSE = 'SET_COURSE'
 export const CLEAR_COURSE = 'CLEAR_COURSE'
+
+// USER
+export const SET_USER = 'SET_USER'
+export const CLEAR_USER = 'CLEAR_USER'

@@ -10,7 +10,7 @@ function mapStateToProps(state){
     }
 }
 
-function mapDispatchtoProps(dispatch){
+function mapDispatchToProps(dispatch){
     return {
         getList: ()=>{
             dispatch(actions.getLessons())
@@ -23,7 +23,7 @@ function mapDispatchtoProps(dispatch){
 
 export default connect(
     mapStateToProps,
-    mapDispatchtoProps)
+    mapDispatchToProps)
 ((props)=>{
     return <List {...props} of="lessons" />
 })

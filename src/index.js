@@ -1,6 +1,16 @@
+import './_app/styles/bootstrap'
+
 import React from 'react'
 import { render } from 'react-dom'
+import {
+    BrowserRouter,
+    Route,
+    Switch
+} from 'react-router-dom'
+import { Provider } from 'react-redux'
 
+
+import store from './_app/store'
 import Wrap from './Wrap'
 import { Home } from './Home'
 import {
@@ -19,16 +29,7 @@ import {
     List as PageList,
     NotFound
 } from './Page'
-
-import {
-    BrowserRouter,
-    Route,
-    Switch
-} from 'react-router-dom'
-import { Provider } from 'react-redux'
-import store from './_app/store'
-
-import './_app/styles/bootstrap'
+import { Login } from './Login'
 
 function renderApp(){
     render(
@@ -91,7 +92,13 @@ function renderApp(){
                         path="/pages/:slug/edit"
                         render={(props)=> <Wrap {...props} childComponent={PageEdit}/>} />
                     
-                    
+                    <Route
+                        exact
+                        strict
+                        path="/login"
+                        component={Login}
+                    />
+
                     <Route
                         render={(props)=> <Wrap {...props} childComponent={NotFound}/>} />
                 </Switch>

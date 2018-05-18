@@ -1,9 +1,23 @@
+import {
+    SET_USER,
+    CLEAR_USER
+} from '../_app/actionTypes'
 const initialState = {
-    show: true
+    firstName: '',
+    lastName: '',
+    emailHash: '',
+    activePlans: []
 }
 
-export default function(state = initialState, action) {
-    state.show = !state.show
-    var newState =  Object.assign({}, state)
-    return newState
+export default function (state = initialState, { type, payload }) {
+    switch(type){
+        case SET_USER:
+            return {
+                ...payload.user
+            }
+        case CLEAR_USER:
+            return initialState
+        default:
+            return state
+    }
 }
