@@ -35,73 +35,75 @@ function renderApp(){
     render(
         <Provider store={store}>
             <BrowserRouter>
-                <Switch>
-                    <Route
-                        exact
-                        path="/"
-                        render={(props)=> <Wrap {...props} childComponent={Home}/>} />
-    
-    
-                    <Route
-                        exact
-                        strict
-                        path="/lessons"
-                        render={(props)=> <Wrap {...props} childComponent={LessonList}/>} />
-                    <Route
-                        exact
-                        strict
-                        path="/lessons/:slug"
-                        render={(props)=> <Wrap {...props} childComponent={LessonView}/>} />
-                    <Route
-                        exact
-                        strict
-                        path="/lessons/:slug/edit"
-                        render={(props)=> <Wrap {...props} childComponent={LessonEdit}/>} />
-    
-    
-                    <Route
-                        exact
-                        strict
-                        path="/courses"
-                        render={(props)=> <Wrap {...props} childComponent={CourseList}/>} />
-                    <Route
-                        exact
-                        strict
-                        path="/courses/:slug"
-                        render={(props)=> <Wrap {...props} childComponent={CourseView}/>} />
-                    <Route
-                        exact
-                        strict
-                        path="/courses/:slug/edit"
-                        render={(props)=> <Wrap {...props} childComponent={CourseEdit}/>} />
-    
-    
-                    <Route
-                        exact
-                        strict
-                        path="/pages"
-                        render={(props)=> <Wrap {...props} childComponent={PageList}/>} />
-                    <Route
-                        exact
-                        strict
-                        path="/pages/:slug"
-                        render={(props)=> <Wrap {...props} childComponent={PageView}/>} />
-                    <Route
-                        exact
-                        strict
-                        path="/pages/:slug/edit"
-                        render={(props)=> <Wrap {...props} childComponent={PageEdit}/>} />
-                    
-                    <Route
-                        exact
-                        strict
-                        path="/login"
-                        component={Login}
-                    />
+                <Wrap>
+                    <Switch>
+                        <Route
+                            exact
+                            path="/"
+                            component={Home}
+                        />
+        
+                        <Route
+                            exact
+                            strict
+                            path="/lessons"
+                            component={LessonList} />
+                        <Route
+                            exact
+                            strict
+                            path="/lessons/:slug"
+                            component={LessonView} />
+                        <Route
+                            exact
+                            strict
+                            path="/lessons/:slug/edit"
+                            component={LessonEdit} />
+        
+        
+                        <Route
+                            exact
+                            strict
+                            path="/courses"
+                            component={CourseList} />
+                        <Route
+                            exact
+                            strict
+                            path="/courses/:slug"
+                            component={CourseView} />
+                        <Route
+                            exact
+                            strict
+                            path="/courses/:slug/edit"
+                            component={CourseEdit} />
+        
+        
+                        <Route
+                            exact
+                            strict
+                            path="/pages"
+                            component={PageList} />
+                        <Route
+                            exact
+                            strict
+                            path="/pages/:slug"
+                            component={PageView} />
+                        <Route
+                            exact
+                            strict
+                            path="/pages/:slug/edit"
+                            component={PageEdit} />
+                        
+                        <Route
+                            exact
+                            strict
+                            path="/login"
+                            component={Login}
+                        />
 
-                    <Route
-                        render={(props)=> <Wrap {...props} childComponent={NotFound}/>} />
-                </Switch>
+                        <Route
+                            component={NotFound} />
+                    </Switch>
+                </Wrap>
             </BrowserRouter>
         </Provider>
         ,
