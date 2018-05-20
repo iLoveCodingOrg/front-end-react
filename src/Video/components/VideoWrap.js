@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { isEmpty } from 'lodash'
 
-import { isLoggedIn } from '../_user/selectors'
-import { Video } from './'
+import { isLoggedIn } from '../../_user/selectors'
+import { Video } from '../'
 
 class VideoWrap extends React.Component{
     constructor(props){

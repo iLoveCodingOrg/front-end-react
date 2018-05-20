@@ -1,19 +1,7 @@
-import React from 'react'
+import Video from './components/Video'
+import VideoWrap from './components/VideoWrap'
 
-import Header from '../Header'
-import Footer from '../Footer'
-
-class About extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    render(){
-        return (
-            <div>
-                About
-            </div>
-        )
-    }
+export {
+    Video,
+    VideoWrap
 }
-
-export default About
