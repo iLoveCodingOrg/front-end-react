@@ -24,17 +24,26 @@ class Card extends React.Component{
         } = this.props.item
         const { of } = this.props
         const isFree = (access)? false : true
+        const urlTo = `/${of}/${slug}`
+ 
         return (
             <div
                 className="d-flex flex-column flex-md-row mb-5 card"
             >
                 <div>
-                    {thumbnail? <img 
-                    className="mr-md-3 mb-md-0 mb-3 rounded"
-                    src={`${IMG_URL}${thumbnail}`} /> : null}
+                    {
+                        (thumbnail)?
+                        <Link to={urlTo}>
+                            <img
+                                className="mr-md-3 mb-md-0 mb-3 rounded"
+                                src={`${IMG_URL}${thumbnail}`} />
+                        </Link>
+                        :
+                        null
+                    }
                 </div>
                 <div>
-                    <h3><Link to={`/${of}/${slug}`}>{title}</Link></h3>
+                    <h3><Link to={urlTo}>{title}</Link></h3>
                     <div className="mb-2">
                         <Access isFree={isFree}/>
                         <Level level={level}/>

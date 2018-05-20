@@ -20,7 +20,7 @@ export function showError(error) {
 }
 
 export function getCourses(){
-    const url = `${API_URL}courses`
+    const url = `${API_URL}courses/all`
     
     return (dispatch) => {
         return fetch(url, { credentials: 'include' })
@@ -51,7 +51,7 @@ export function clearCourses(){
 }
 
 export function getCourseBySlug(slug){
-    const url = `${API_URL}courses/${slug}/lesson`
+    const url = `${API_URL}courses/${slug}/data`
     
     return (dispatch) => {
         return fetch(url, { credentials: 'include' })
