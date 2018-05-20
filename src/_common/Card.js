@@ -1,3 +1,4 @@
+import './cardStyle.scss'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
@@ -23,10 +24,12 @@ class Card extends React.Component{
         const { of } = this.props
         return (
             <div
-                className="d-flex flex-row"
+                className="d-flex flex-column flex-md-row mb-5 card"
             >
                 <div>
-                    {thumbnail? <img src={`${IMG_URL}${thumbnail}`} /> : null}
+                    {thumbnail? <img 
+                    className="mr-md-3 mb-md-0 mb-3 rounded"
+                    src={`${IMG_URL}${thumbnail}`} /> : null}
                 </div>
                 <div>
                     <h3><Link to={`/${of}/${slug}`}>{title}</Link></h3>
