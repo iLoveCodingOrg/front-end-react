@@ -20,7 +20,7 @@ export function showError(error) {
 }
 
 export function getLessons(){
-    const url = `${API_URL}lessons`
+    const url = `${API_URL}lessons/all`
     
     return (dispatch) => {
         return fetch(url, { credentials: 'include' })

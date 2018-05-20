@@ -19,8 +19,8 @@ class View extends React.Component{
         const {
             title,
             subTitle,
-            vidoeSource,
-            body
+            videoSource,
+            bodyContent
         } = this.props.view
 
         return (
@@ -33,11 +33,11 @@ class View extends React.Component{
                     :
                     <div>
                       <h1>{title}</h1>
-                      <p>{subTitle}</p>
+                      <p>subTitle: {subTitle}</p>
                       <div>
-                          {vidoeSource}
+                          videoSource: {videoSource}
                       </div>
-                      <p>{body}</p>
+                      <p>bodyContent: {bodyContent}</p>
                     </div>
                 }
             </div>
