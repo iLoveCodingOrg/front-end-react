@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import ViewHeader from './ViewHeader'
+
 class View extends React.Component{
     constructor(props){
         super(props)
@@ -19,12 +21,16 @@ class View extends React.Component{
         const {
             title,
             subTitle,
+            access,
+            duration,
+            courseTotalDuration,
+            level,
             videoSource,
             bodyContent
         } = this.props.view
-
+        const isFree = (access)? false : true
         return (
-            <div>
+            <div className="container">
                 {
                     !this.props.view.title ?
                     <div>
@@ -32,12 +38,17 @@ class View extends React.Component{
                     </div>
                     :
                     <div>
-                      <h1>{title}</h1>
-                      <p>subTitle: {subTitle}</p>
-                      <div>
-                          videoSource: {videoSource}
-                      </div>
-                      <p>bodyContent: {bodyContent}</p>
+                        <ViewHeader
+                            title={title}
+                            subTitle={subTitle}
+                            isFree={isFree}
+                            duration={ courseTotalDuration || duration }
+                            level={level}
+                        />
+                        <main>
+                            <div>videoSource: {videoSource}</div>
+                            <p>bodyContent: {bodyContent}</p>
+                        </main>
                     </div>
                 }
             </div>

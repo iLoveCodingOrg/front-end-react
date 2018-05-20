@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import { IMG_URL } from '../_app/constants'
+import { Access, Level, Duration } from './'
 
 class Card extends React.Component{
     constructor(props){
@@ -22,6 +23,7 @@ class Card extends React.Component{
             slug
         } = this.props.item
         const { of } = this.props
+        const isFree = (access)? false : true
         return (
             <div
                 className="d-flex flex-column flex-md-row mb-5 card"
@@ -33,10 +35,12 @@ class Card extends React.Component{
                 </div>
                 <div>
                     <h3><Link to={`/${of}/${slug}`}>{title}</Link></h3>
+                    <div className="mb-2">
+                        <Access isFree={isFree}/>
+                        <Level level={level}/>
+                        <Duration duration={ courseTotalDuration || duration} />
+                    </div>
                     <p>{subTitle}</p>
-                    <div>Access: {access}</div>
-                    <div>Level: {level}</div>
-                    <div>Duration: {courseTotalDuration || duration} mins</div>
                 </div>
             </div>
         )

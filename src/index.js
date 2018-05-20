@@ -1,4 +1,4 @@
-import './_app/styles/bootstrap'
+import './_app/styles/'
 
 import React from 'react'
 import { render } from 'react-dom'
