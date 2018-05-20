@@ -11,7 +11,7 @@ import { Provider } from 'react-redux'
 
 
 import store from './_app/store'
-import { Wrap } from './Wrap'
+import Wrap from './Wrap'
 import { Home } from './Home'
 import {
     View as LessonView,

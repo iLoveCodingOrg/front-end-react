@@ -44,7 +44,7 @@ export function login(email, password){
 }
 
 export function getUser(){
-    const url = `${API_URL}some_user_id`
+    const url = `${API_URL}users/me`
     
     return (dispatch) => {
         return fetch(url, { credentials: 'include' })
