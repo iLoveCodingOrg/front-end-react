@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import ViewHeader from './ViewHeader'
+import { VideoWrap } from './'
 
 class View extends React.Component{
     constructor(props){
@@ -46,7 +47,7 @@ class View extends React.Component{
                             level={level}
                         />
                         <main>
-                            <div>videoSource: {videoSource}</div>
+                            <VideoWrap videoSource={videoSource} />
                             <p>bodyContent: {bodyContent}</p>
                         </main>
                     </div>
