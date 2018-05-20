@@ -48,7 +48,7 @@ class View extends React.Component{
                         />
                         <main>
                             <VideoWrap videoSource={videoSource} />
-                            <p>bodyContent: {bodyContent}</p>
+                            <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
                         </main>
                     </div>
                 }
