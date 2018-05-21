@@ -11,9 +11,9 @@ class Access extends React.Component{
             <span>
                 {
                     this.props.isFree?
-                    <span className="badge badge-secondary">Free</span>
+                    <span className="badge badge-pill badge-dark">FREE</span>
                     :
-                    <span className="badge badge-success">Pro</span>
+                    <span className="badge badge-pill badge-success">PRO</span>
                 }
             </span>
         )

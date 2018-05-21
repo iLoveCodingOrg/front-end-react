@@ -44,9 +44,10 @@ class View extends React.Component{
                             isFree={isFree}
                             duration={ courseTotalDuration || duration }
                             level={level}
-                        />
+                            />
                         <main>
                             <VideoWrap videoSource={videoSource} />
+                            {this.props.children}
                             <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
                         </main>
                     </div>
