@@ -15,18 +15,17 @@ class CourseNav extends React.Component{
         this.setActiveLesson = this.setActiveLesson.bind(this)
     }
     
-    componentWillReceiveProps(){
-        this.setActiveLesson()
+    componentWillReceiveProps(nextProps){
+        this.setActiveLesson(nextProps)
     }
 
     componentWillMount(){
-        this.setActiveLesson()
+        this.setActiveLesson(this.props)
     }
 
-    setActiveLesson(){
-        const index = this.props.lessons.findIndex((item)=>{
-            // console.log(index, this.props.match.params.lessonSlug, item.slug)
-            return item.slug === this.props.match.params.lessonSlug
+    setActiveLesson(props){
+        const index = props.lessons.findIndex((item)=>{
+            return item.slug === props.match.params.lessonSlug
         })
 
         this.setState({
