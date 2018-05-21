@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { ViewHeader } from '../../_common/'
 import { VideoWrap } from '../../Video'
@@ -15,12 +16,13 @@ class CourseLessonView extends React.Component{
     }
 
     componentWillReceiveProps(nextProps){
+        const { lessonSlug, courseSlug } = this.props.match.params
         if(
-            this.props.match.params.lessonSlug !== nextProps.match.params.lessonSlug ||
-            this.props.match.params.courseSlug !== nextProps.match.params.courseSlug
+            lessonSlug !== nextProps.match.params.lessonSlug ||
+            courseSlug !== nextProps.match.params.courseSlug
         ){
-            this.props.getLesson(this.props.match.params.lessonSlug)
-            this.props.getCourse(this.props.match.params.courseSlug)
+            this.props.getLesson(lessonSlug)
+            this.props.getCourse(courseSlug)
         }
     }
 
@@ -44,7 +46,10 @@ class CourseLessonView extends React.Component{
             videoSource,
             bodyContent
         } = this.props.lessonView
+        
         const isFree = (access)? false : true
+        const { courseView } = this.props
+        const urlToCourse = `/courses/${courseView.slug}`
         return (
             <div className="container">
                 {
@@ -54,7 +59,20 @@ class CourseLessonView extends React.Component{
                     </div>
                     :
                     <div>
-                        <h3>{this.props.courseView.title}</h3>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item" aria-current="page">Courses</li>
+                                <li class="breadcrumb-item">
+                                    <Link to={urlToCourse}>
+                                        {courseView.title}
+                                    </Link>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">{title}</li>
+                            </ol>
+                        </nav>
+                        {/* <div className="h3 text-center font-italics font-weight-light">
+                            Course: {courseView.title}
+                        </div> */}
                         <ViewHeader
                             title={title}
                             subTitle={subTitle}
@@ -65,8 +83,8 @@ class CourseLessonView extends React.Component{
                         <main>
                             <VideoWrap videoSource={videoSource} />
                             <CourseNav
-                                course={this.props.courseView}
-                                lessons={this.props.courseView.lessons || []}
+                                course={courseView}
+                                lessons={courseView.lessons || []}
                             />
                             <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
                         </main>
@@ -78,10 +96,10 @@ class CourseLessonView extends React.Component{
 }
 
 CourseLessonView.propTypes = {
-    getLesson: PropTypes.func.isRequired,
+    courseView: PropTypes.object.isRequired,
     getCourse: PropTypes.func.isRequired,
-    lessonView: PropTypes.object.isRequired,
-    courseView: PropTypes.object.isRequired
+    getLesson: PropTypes.func.isRequired,
+    lessonView: PropTypes.object.isRequired
 }
 
 function mapStateToProps(state){
