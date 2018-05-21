@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 
 import { Card } from './'
 
 class List extends React.Component{
     constructor(props){
         super(props)
+
+        this.getTitle = this.getTitle.bind(this)
     }
 
     componentWillMount(){
@@ -14,6 +17,17 @@ class List extends React.Component{
 
     componentWillUnmount(){
         this.props.clearList()
+    }
+
+    getTitle(){
+        switch(this.props.of){
+            case 'lessons':
+                return 'All Lessons'
+            case 'courses':
+                return 'All Courses'
+            case 'pages':
+                return 'All Pages'
+        }
     }
 
     render(){
@@ -25,13 +39,18 @@ class List extends React.Component{
                         Loading...
                     </div>
                     :
-                    this.props.list.map((item, index)=>{
-                      return <Card
-                        key={index}
-                        item={item}
-                        of={this.props.of}
-                        />
-                    })
+                    <div>
+                        <Helmet><title>{this.getTitle()}</title></Helmet>
+                        {
+                            this.props.list.map((item, index)=>{
+                            return <Card
+                                key={index}
+                                item={item}
+                                of={this.props.of}
+                            />
+                            })
+                        }
+                    </div>
                 }
             </div>
         )

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { isEmpty } from 'lodash'
+import { Helmet } from 'react-helmet'
 
 import { ViewHeader } from '../../_common/'
 import { VideoWrap } from '../../Video'
@@ -55,6 +56,7 @@ class CourseLessonView extends React.Component{
                 {
                     !isEmpty(this.props.lessonView) && !isEmpty(this.props.courseView)?
                     <div>
+                        <Helmet><title>{title}</title></Helmet>
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
                                 <li className="breadcrumb-item" aria-current="page">Courses</li>

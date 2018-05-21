@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 
 import ViewHeader from './ViewHeader'
 import { VideoWrap } from '../Video'
@@ -46,6 +47,7 @@ class View extends React.Component{
                     </div>
                     :
                     <div>
+                        <Helmet><title>{title}</title></Helmet>
                         <ViewHeader
                             title={title}
                             subTitle={subTitle}
