@@ -21,8 +21,8 @@ class CourseLessonView extends React.Component{
             lessonSlug !== nextProps.match.params.lessonSlug ||
             courseSlug !== nextProps.match.params.courseSlug
         ){
-            this.props.getLesson(lessonSlug)
-            this.props.getCourse(courseSlug)
+            this.props.getLesson(nextProps.match.params.lessonSlug)
+            this.props.getCourse(nextProps.match.params.courseSlug)
         }
     }
 
@@ -60,14 +60,14 @@ class CourseLessonView extends React.Component{
                     :
                     <div>
                         <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item" aria-current="page">Courses</li>
-                                <li class="breadcrumb-item">
+                            <ol className="breadcrumb">
+                                <li className="breadcrumb-item" aria-current="page">Courses</li>
+                                <li className="breadcrumb-item">
                                     <Link to={urlToCourse}>
                                         {courseView.title}
                                     </Link>
                                 </li>
-                                <li class="breadcrumb-item active" aria-current="page">{title}</li>
+                                <li className="breadcrumb-item active" aria-current="page">{title}</li>
                             </ol>
                         </nav>
                         {/* <div className="h3 text-center font-italics font-weight-light">

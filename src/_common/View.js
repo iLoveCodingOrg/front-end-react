@@ -9,6 +9,14 @@ class View extends React.Component{
         super(props)
     }
 
+    componentWillReceiveProps(nextProps){
+        const { slug } = this.props.match.params
+        
+        if(nextProps.match.params.slug !== slug){
+            this.props.getView(nextProps.match.params.slug)
+        }
+    }
+
     componentWillMount(){
       this.props.getView(this.props.match.params.slug)
     }
