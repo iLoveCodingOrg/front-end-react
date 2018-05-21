@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { isEmpty } from 'lodash'
 
 import { ViewHeader } from '../../_common/'
 import { VideoWrap } from '../../Video'
@@ -41,7 +42,6 @@ class CourseLessonView extends React.Component{
             subTitle,
             access,
             duration,
-            courseTotalDuration,
             level,
             videoSource,
             bodyContent
@@ -53,11 +53,7 @@ class CourseLessonView extends React.Component{
         return (
             <div className="container">
                 {
-                    !title ?
-                    <div>
-                        Loading...
-                    </div>
-                    :
+                    !isEmpty(this.props.lessonView) && !isEmpty(this.props.courseView)?
                     <div>
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
@@ -70,24 +66,24 @@ class CourseLessonView extends React.Component{
                                 <li className="breadcrumb-item active" aria-current="page">{title}</li>
                             </ol>
                         </nav>
-                        {/* <div className="h3 text-center font-italics font-weight-light">
-                            Course: {courseView.title}
-                        </div> */}
                         <ViewHeader
                             title={title}
                             subTitle={subTitle}
                             isFree={isFree}
-                            duration={ courseTotalDuration || duration }
+                            duration={duration}
                             level={level}
-                            />
+                        />
                         <main>
                             <VideoWrap videoSource={videoSource} />
                             <CourseNav
                                 course={courseView}
-                                lessons={courseView.lessons || []}
                             />
                             <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
                         </main>
+                    </div>
+                    :
+                    <div>
+                        Loading...
                     </div>
                 }
             </div>

@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, withRouter } from 'react-router-dom'
+import  { get } from 'lodash'
 
 import { Access } from '../../_common'
+import { CourseLinks } from '../index'
 
 class CourseNav extends React.Component{
     constructor(props){
@@ -24,13 +26,17 @@ class CourseNav extends React.Component{
     }
 
     setActiveLesson(props){
-        const index = props.lessons.findIndex((item)=>{
-            return item.slug === props.match.params.lessonSlug
-        })
+        const lessons = get(props.course, 'lessons')
 
-        this.setState({
-            activeLessonIndex: index
-        })
+        if(lessons){
+            const index = props.course.lessons.findIndex((item)=>{
+                return item.slug === props.match.params.lessonSlug
+            })
+    
+            this.setState({
+                activeLessonIndex: index
+            })
+        }
     }
 
     renderItem(item, index, courseSlug){
@@ -55,13 +61,21 @@ class CourseNav extends React.Component{
     }
 
     render(){
-        const { slug: courseSlug } = this.props.course
+        const lessons = get(this.props.course, 'lessons')
+        const courseSlug = get(this.props.course, 'slug')
+
         return (
             <div className="list-group my-5">
+                {/* <CourseLinks 
+                    activeLessonIndex={this.state.activeLessonIndex}
+                    courseSlug={courseSlug}
+                    lessons={lessons}
+                /> */}
+
                 <div className="list-group-item list-group-item-dark">
                     <span className="h5">Course content</span>
                 </div>
-                {this.props.lessons.map((item, index)=>{
+                {lessons && lessons.map((item, index)=>{
                     return (this.renderItem(item, index, courseSlug))
                 })}
             </div>
@@ -70,8 +84,7 @@ class CourseNav extends React.Component{
 }
 
 CourseNav.propTypes = {
-    course: PropTypes.object.isRequired,
-    lessons: PropTypes.array.isRequired
+    course: PropTypes.object.isRequired
 }
 
 export default withRouter(CourseNav)
