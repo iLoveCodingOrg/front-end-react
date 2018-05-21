@@ -66,11 +66,14 @@ class CourseNav extends React.Component{
 
         return (
             <div className="list-group my-5">
-                {/* <CourseLinks 
-                    activeLessonIndex={this.state.activeLessonIndex}
-                    courseSlug={courseSlug}
-                    lessons={lessons}
-                /> */}
+                <div className="d-flex my-2 justify-content-center">
+                    <CourseLinks
+                        isMainBtnHidden={this.state.activeLessonIndex < 0}
+                        activeLessonIndex={this.state.activeLessonIndex}
+                        courseSlug={courseSlug}
+                        lessons={lessons}
+                    />
+                </div>
 
                 <div className="list-group-item list-group-item-dark">
                     <span className="h5">Course content</span>
