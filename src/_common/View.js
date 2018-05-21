@@ -14,7 +14,7 @@ class View extends React.Component{
     }
 
     componentWillUnmount(){
-        this.props.clearView()
+        // this.props.clearView()
     }
 
     render(){
@@ -60,7 +60,7 @@ class View extends React.Component{
 View.propTypes = {
     clearView: PropTypes.func.isRequired,
     getView: PropTypes.func.isRequired,
-    of: PropTypes.oneOf(['lesson', 'course', 'page']).isRequired,
+    of: PropTypes.oneOf(['lesson', 'course', 'courseLesson', 'page']).isRequired,
     view: PropTypes.object.isRequired
 }
 

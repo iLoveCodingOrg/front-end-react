@@ -20,6 +20,7 @@ import {
     List as LessonList
 } from './Lesson'
 import {
+    Routes as CourseRoutes,
     View as CourseView,
     Edit as CourseEdit,
     List as CourseList
@@ -65,23 +66,10 @@ function renderApp(){
                                 path="/lessons/:slug/edit"
                                 component={LessonEdit} />
             
-            
                             <Route
-                                exact
                                 strict
                                 path="/courses"
-                                component={CourseList} />
-                            <Route
-                                exact
-                                strict
-                                path="/courses/:slug"
-                                component={CourseView} />
-                            <Route
-                                exact
-                                strict
-                                path="/courses/:slug/edit"
-                                component={CourseEdit} />
-            
+                                component={CourseRoutes} />
             
                             <Route
                                 exact

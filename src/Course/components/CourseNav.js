@@ -9,12 +9,12 @@ class CourseNav extends React.Component{
         super(props)
     }
 
-    renderItem(item, index){
+    renderItem(item, index, courseSlug){
         const { title, slug, duration, access } = item
         const isFree = (access)? false : true
-        const urlTo = `/lessons/${slug}`
+        const urlTo = `/courses/${courseSlug}/lessons/${slug}`
 
-        return (<Link to={urlTo} 
+        return (<Link key={index} to={urlTo}
             className="clearfix list-group-item list-group-item-">
             <div className="float-left">
                 <span className="text-muted">
@@ -28,14 +28,15 @@ class CourseNav extends React.Component{
     }
 
     render(){
+        const { slug: courseSlug } = this.props.course
         return (
             <div className="list-group mt-5">
                 <div className="list-group-item list-group-item-dark">
-                    <span class="h5">Course content</span>
+                    <span className="h5">Course content</span>
                 </div>
                 {this.props.lessons.map((item, index)=>{
                     return (
-                        this.renderItem(item, index+1)
+                        this.renderItem(item, index+1, courseSlug)
                     )
                 })}
             </div>
@@ -44,6 +45,7 @@ class CourseNav extends React.Component{
 }
 
 CourseNav.propTypes = {
+    course: PropTypes.object.isRequired,
     lessons: PropTypes.array.isRequired
 }
 
