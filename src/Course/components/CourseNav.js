@@ -47,7 +47,7 @@ class CourseNav extends React.Component{
 
         return (
             <Link key={index} to={urlTo}
-                className={`clearfix list-group-item ${activeClass}`}>
+                className={`d-flex justify-content-between list-group-item ${activeClass}`}>
                 <div className="float-left">
                     <span className="text-muted">
                         Lessons #{index +1}:&nbsp;
@@ -55,7 +55,7 @@ class CourseNav extends React.Component{
                     {title}&nbsp;
                     <Access isFree={isFree} />
                 </div>
-                <div className="float-right">{duration} mins</div>
+                <div className="float-right small text-secondary align-self-center">{duration} mins</div>
             </Link>
         )
     }
