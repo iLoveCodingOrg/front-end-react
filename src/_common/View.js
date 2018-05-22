@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 
 import ViewHeader from './ViewHeader'
 import { VideoWrap } from '../Video'
+import Loading from '../Loading'
 
 class View extends React.Component{
     constructor(props){
@@ -42,7 +43,7 @@ class View extends React.Component{
             <div className="container">
                 {
                     (this.props.isLoading) ?
-                    <div className="loading-spinner spinner-sm" />
+                    <Loading />
                     :
                     <div>
                         <Helmet><title>{title}</title></Helmet>

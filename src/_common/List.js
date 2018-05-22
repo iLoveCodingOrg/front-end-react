@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 import { Card } from './'
+import Loading from '../Loading'
 
 class List extends React.Component{
     constructor(props){
@@ -35,7 +36,7 @@ class List extends React.Component{
             <div className="container">
                 {
                     (this.props.isLoading) ?
-                    <div className="loading-spinner spinner-sm" />
+                    <Loading />
                     :
                     <div>
                         <Helmet><title>{this.getTitle()}</title></Helmet>

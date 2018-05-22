@@ -10,7 +10,7 @@ import { VideoWrap } from '../../Video'
 import { actions as courseActions } from '../'
 import { actions as lessonActions } from '../../Lesson'
 import { CourseNav } from '../'
-
+import Loading from '../../Loading'
 
 class CourseLessonView extends React.Component{
     constructor(props){
@@ -54,7 +54,9 @@ class CourseLessonView extends React.Component{
         return (
             <div className="container">
                 {
-                    !isEmpty(this.props.lessonView) && !isEmpty(this.props.courseView)?
+                    (this.props.isLoading)?
+                    <Loading />
+                    :
                     <div>
                         <Helmet><title>{title}</title></Helmet>
                         <nav aria-label="breadcrumb">
@@ -83,10 +85,6 @@ class CourseLessonView extends React.Component{
                             <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
                         </main>
                     </div>
-                    :
-                    <div>
-                        Loading...
-                    </div>
                 }
             </div>
         )
@@ -102,6 +100,7 @@ CourseLessonView.propTypes = {
 
 function mapStateToProps(state){
     return {
+        isLoading: state.lessons.isLoading || state.courses.isLoading,
         lessonView: state.lessons.view,
         courseView: state.courses.view
     }
