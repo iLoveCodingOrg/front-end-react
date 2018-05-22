@@ -19,7 +19,7 @@ export default class ErrorBoundary extends React.Component {
               <div
               className="snap"
               onClick={() => Raven.lastEventId() && Raven.showReportDialog()}>
-                  <img src={oops} />
+                  <img src="https://media.giphy.com/media/13ywPzPJdfhmBG/giphy.gif" />
                   <p>We're sorry — something's gone wrong.</p>
                   <p>Our team has been notified, but click here fill out a report.</p>
               </div>

@@ -28,9 +28,6 @@ export default connect(
     mapDispatchToProps)
 ((props)=>{
     return (<View {...props} of="course">
-        <CourseNav
-            course={props.view}
-            lessons={props.view.lessons || []}
-        />
+        <CourseNav course={props.view} />
     </View>)
 })

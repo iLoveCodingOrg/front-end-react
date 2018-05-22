@@ -17,7 +17,7 @@ class List extends React.Component{
     }
 
     componentWillUnmount(){
-        this.props.clearList()
+        // this.props.clearList()
     }
 
     getTitle(){
