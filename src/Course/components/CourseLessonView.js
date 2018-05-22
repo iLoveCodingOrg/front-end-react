@@ -100,7 +100,7 @@ CourseLessonView.propTypes = {
 
 function mapStateToProps(state){
     return {
-        isLoading: state.lessons.isLoading || state.courses.isLoading,
+        isLoading: state.lessons.isLoadingView || state.courses.isLoadingView,
         lessonView: state.lessons.view,
         courseView: state.courses.view
     }
