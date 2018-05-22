@@ -5,7 +5,7 @@ import createRavenMiddleware from "raven-for-redux"
 
 import rootReducer from './rootReducer'
 
-const env = process.NODE_ENV || 'development'
+const env = process.env.NODE_ENV || 'development'
 Raven.config('https://c8a587be7b4940f4b4cbd9bc2c8a6538@sentry.io/1211166', {
     release: '0-0-0',
     environment: env,
@@ -26,7 +26,10 @@ if(process.env.NODE_ENV === 'development'){
 } else{
   store = createStore(
     rootReducer,
-    applyMiddleware(thunk)
+    applyMiddleware(
+      thunk,
+      createRavenMiddleware(Raven)
+    )
   )
 }
 

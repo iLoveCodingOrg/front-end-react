@@ -54,8 +54,7 @@ export function clearLessons(){
 }
 
 export function getLessonBySlug(slug){
-    Raven.captureException(new Error('test'))
-    const url = `${API_URL}lessons/${slug}/dataz`
+    const url = `${API_URL}lessons/${slug}/data`
     
     return (dispatch) => {
         return fetch(url, { credentials: 'include' })
