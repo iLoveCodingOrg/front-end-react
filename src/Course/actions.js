@@ -2,7 +2,8 @@ import {
     SET_COURSES,
     CLEAR_COURSES,
     SET_COURSE,
-    CLEAR_COURSE
+    CLEAR_COURSE,
+    SET_COURSE_LOADING
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -19,10 +20,21 @@ export function showError(error) {
     }
 }
 
+export function setLoading(isLoading=true) {
+    return {
+        type: SET_COURSE_LOADING,
+        payload: {
+            isLoading
+        }
+    }
+}
+
 export function getCourses(){
     const url = `${API_URL}courses/all`
     
     return (dispatch) => {
+        dispatch(setLoading(true))
+    
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
         .then(parseJSON)
@@ -31,6 +43,9 @@ export function getCourses(){
         })
         .catch((err) => {
             dispatch(showError(err))
+        })
+        .finally(()=>{
+            dispatch(setLoading(false))
         })
     }
 }
@@ -54,6 +69,8 @@ export function getCourseBySlug(slug){
     const url = `${API_URL}courses/${slug}/data`
     
     return (dispatch) => {
+        dispatch(setLoading(true))
+
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
             .then(parseJSON)
@@ -62,6 +79,9 @@ export function getCourseBySlug(slug){
             })
             .catch((err) => {
                 dispatch(showError(err))
+            })
+            .finally(()=>{
+                dispatch(setLoading(false))
             })
     }
 }

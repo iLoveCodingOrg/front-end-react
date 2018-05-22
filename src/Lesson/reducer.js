@@ -2,12 +2,14 @@ import {
     SET_LESSONS,
     CLEAR_LESSONS,
     SET_LESSON,
-    CLEAR_LESSON
+    CLEAR_LESSON,
+    SET_LESSON_LOADING
 } from '../_app/actionTypes'
 const initialState = {
     list: [],
     view: {
-    }
+    },
+    isLoading: true
 }
 
 export default function (state = initialState, { type, payload }) {
@@ -31,6 +33,11 @@ export default function (state = initialState, { type, payload }) {
             return {
                 ...state,
                 view: {}
+            }
+        case SET_LESSON_LOADING:
+            return {
+                ...state,
+                isLoading: payload.isLoading
             }
         default:
             return state

@@ -6,6 +6,7 @@ import { View } from '../../_common'
 
 function mapStateToProps(state){
     return {
+        isLoading: state.lessons.isLoading,
         view: state.lessons.view
     }
 }

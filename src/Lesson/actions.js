@@ -2,7 +2,8 @@ import {
     SET_LESSONS,
     CLEAR_LESSONS,
     SET_LESSON,
-    CLEAR_LESSON
+    CLEAR_LESSON,
+    SET_LESSON_LOADING
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -22,10 +23,21 @@ export function showError(error) {
     }
 }
 
+export function setLoading(isLoading=true) {
+    return {
+        type: SET_LESSON_LOADING,
+        payload: {
+            isLoading
+        }
+    }
+}
+
 export function getLessons(){
     const url = `${API_URL}lessons/all`
     
     return (dispatch) => {
+        dispatch(setLoading(true))
+
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
         .then(parseJSON)
@@ -34,6 +46,9 @@ export function getLessons(){
         })
         .catch((err) => {
             dispatch(showError(err))
+        })
+        .finally(()=>{
+            dispatch(setLoading(false))
         })
     }
 }
@@ -57,6 +72,8 @@ export function getLessonBySlug(slug){
     const url = `${API_URL}lessons/${slug}/data`
     
     return (dispatch) => {
+        dispatch(setLoading(true))
+
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
             .then(parseJSON)
@@ -65,6 +82,9 @@ export function getLessonBySlug(slug){
             })
             .catch((err) => {
                 dispatch(showError(err))
+            })
+            .finally(()=>{
+                dispatch(setLoading(false))
             })
     }
 }

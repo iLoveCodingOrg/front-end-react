@@ -2,12 +2,14 @@ import {
     SET_PAGES,
     CLEAR_PAGES,
     SET_PAGE,
-    CLEAR_PAGE
+    CLEAR_PAGE,
+    SET_PAGE_LOADING
 } from '../_app/actionTypes'
 const initialState = {
     list: [],
     view: {
-    }
+    },
+    isLoading: true
 }
 
 export default function (state = initialState, { type, payload }) {
@@ -31,6 +33,11 @@ export default function (state = initialState, { type, payload }) {
             return {
                 ...state,
                 view: {}
+            }
+        case SET_PAGE_LOADING:
+            return {
+                ...state,
+                isLoading: payload.isLoading
             }
         default:
             return state

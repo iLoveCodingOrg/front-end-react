@@ -1,0 +1,35 @@
+.loading-spinner {
+  border: 10px solid $blue;
+  border-top: 10px solid white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+
+.spinner-xs {
+  width: 18px;
+  height: 18px;
+  border-width: 3px;
+}
+
+.spinner-sm {
+  width: 40px;
+  height: 40px;
+  border-width: 6px;
+}
+
+.spinner-md {
+  width: 65px;
+  height: 65px;
+  border-width: 8px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

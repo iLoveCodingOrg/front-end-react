@@ -34,10 +34,8 @@ class List extends React.Component{
         return (
             <div className="container">
                 {
-                    !this.props.list.length ?
-                    <div>
-                        Loading...
-                    </div>
+                    (this.props.isLoading) ?
+                    <div className="loading-spinner spinner-sm" />
                     :
                     <div>
                         <Helmet><title>{this.getTitle()}</title></Helmet>
@@ -60,6 +58,7 @@ class List extends React.Component{
 List.propTypes = {
     clearList: PropTypes.func.isRequired,
     getList: PropTypes.func.isRequired,
+    isLoading: PropTypes.bool.isRequired,
     list: PropTypes.array.isRequired,
     of: PropTypes.oneOf(['lessons', 'courses', 'pages']).isRequired
 }

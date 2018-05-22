@@ -41,10 +41,8 @@ class View extends React.Component{
         return (
             <div className="container">
                 {
-                    !this.props.view.title ?
-                    <div>
-                        Loading...
-                    </div>
+                    (this.props.isLoading) ?
+                    <div className="loading-spinner spinner-sm" />
                     :
                     <div>
                         <Helmet><title>{title}</title></Helmet>

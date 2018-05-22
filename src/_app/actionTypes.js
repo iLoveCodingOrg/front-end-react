@@ -3,19 +3,23 @@ export const SET_PAGES = 'SET_PAGES'
 export const CLEAR_PAGES = 'CLEAR_PAGES'
 export const SET_PAGE = 'SET_PAGE'
 export const CLEAR_PAGE = 'CLEAR_PAGE'
+export const SET_PAGE_LOADING = 'SET_PAGE_LOADING'
 
 // LESSONS
 export const SET_LESSONS = 'SET_LESSONS'
 export const CLEAR_LESSONS = 'CLEAR_LESSONS'
 export const SET_LESSON = 'SET_LESSON'
 export const CLEAR_LESSON = 'CLEAR_LESSON'
+export const SET_LESSON_LOADING = 'SET_LESSON_LOADING'
 
 // COURSES
 export const SET_COURSES = 'SET_COURSES'
 export const CLEAR_COURSES = 'CLEAR_COURSES'
 export const SET_COURSE = 'SET_COURSE'
 export const CLEAR_COURSE = 'CLEAR_COURSE'
+export const SET_COURSE_LOADING = 'SET_COURSE_LOADING'
 
 // USER
 export const SET_USER = 'SET_USER'
 export const CLEAR_USER = 'CLEAR_USER'
+export const SET_USER_LOADING = 'SET_USER_LOADING'

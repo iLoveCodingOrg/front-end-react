@@ -2,12 +2,14 @@ import {
     SET_COURSES,
     CLEAR_COURSES,
     SET_COURSE,
-    CLEAR_COURSE
+    CLEAR_COURSE,
+    SET_COURSE_LOADING
 } from '../_app/actionTypes'
 const initialState = {
     list: [],
     view: {
-    }
+    },
+    isLoading: true
 }
 
 export default function (state = initialState, { type, payload }) {
@@ -31,6 +33,11 @@ export default function (state = initialState, { type, payload }) {
             return {
                 ...state,
                 view: {}
+            }
+        case SET_COURSE_LOADING:
+            return {
+                ...state,
+                isLoading: payload.isLoading
             }
         default:
             return state
