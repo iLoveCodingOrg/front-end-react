@@ -10,7 +10,10 @@ import {
     parseJSON
 } from '../_app/utils'
 
+import { logError } from '../_app/logService'
+
 export function showError(error) {
+    logError(new Error('show error hi'))
     return {
         type: 'SHOW_ERROR',
         payload: {
@@ -51,7 +54,8 @@ export function clearLessons(){
 }
 
 export function getLessonBySlug(slug){
-    const url = `${API_URL}lessons/${slug}/data`
+    Raven.captureException(new Error('test'))
+    const url = `${API_URL}lessons/${slug}/dataz`
     
     return (dispatch) => {
         return fetch(url, { credentials: 'include' })

@@ -13,6 +13,7 @@ import { Provider } from 'react-redux'
 import store from './_app/store'
 import Wrap from './Wrap'
 
+import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
 import { Home } from './Home'
 import {
@@ -36,61 +37,63 @@ function renderApp(){
         <Provider store={store}>
             <BrowserRouter>
                 <ScrollToTop>
-                    <Switch>
-                        <Route
-                            exact
-                            strict
-                            path="/login"
-                            component={Login} />
-                        <Wrap>
-                            <Switch>
-                                <Route
-                                    exact
-                                    path="/"
-                                    component={Home} />
-                
-                                <Route
-                                    exact
-                                    strict
-                                    path="/lessons"
-                                    component={LessonList} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/lessons/:slug"
-                                    component={LessonView} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/lessons/:slug/edit"
-                                    component={LessonEdit} />
-                
-                                <Route
-                                    strict
-                                    path="/courses"
-                                    component={CourseRoutes} />
-                
-                                <Route
-                                    exact
-                                    strict
-                                    path="/pages"
-                                    component={PageList} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/pages/:slug"
-                                    component={PageView} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/pages/:slug/edit"
-                                    component={PageEdit} />
+                    <ErrorBoundary>
+                        <Switch>
+                            <Route
+                                exact
+                                strict
+                                path="/login"
+                                component={Login} />
+                            <Wrap>
+                                <Switch>
+                                    <Route
+                                        exact
+                                        path="/"
+                                        component={Home} />
+                    
+                                    <Route
+                                        exact
+                                        strict
+                                        path="/lessons"
+                                        component={LessonList} />
+                                    <Route
+                                        exact
+                                        strict
+                                        path="/lessons/:slug"
+                                        component={LessonView} />
+                                    <Route
+                                        exact
+                                        strict
+                                        path="/lessons/:slug/edit"
+                                        component={LessonEdit} />
+                    
+                                    <Route
+                                        strict
+                                        path="/courses"
+                                        component={CourseRoutes} />
+                    
+                                    <Route
+                                        exact
+                                        strict
+                                        path="/pages"
+                                        component={PageList} />
+                                    <Route
+                                        exact
+                                        strict
+                                        path="/pages/:slug"
+                                        component={PageView} />
+                                    <Route
+                                        exact
+                                        strict
+                                        path="/pages/:slug/edit"
+                                        component={PageEdit} />
 
-                                <Route
-                                    component={NotFound} />
-                            </Switch>
-                        </Wrap>
-                    </Switch>
+                                    <Route
+                                        component={NotFound} />
+                                </Switch>
+                            </Wrap>
+                        </Switch>
+                    </ErrorBoundary>
                 </ScrollToTop>
             </BrowserRouter>
         </Provider>
@@ -98,6 +101,12 @@ function renderApp(){
         document.getElementById('app')
     )
 }
+
+const env = process.NODE_ENV || 'development'
+Raven.config('https://c8a587be7b4940f4b4cbd9bc2c8a6538@sentry.io/1211166', {
+    release: '0-0-0',
+    environment: env,
+}).install()
 
 renderApp()
 
