@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "./node_modules/parcel-bundler/bin/cli.js ./src/index.html",
-    "build": "./node_modules/parcel-bundler/bin/cli.js build --out-dir=build ./src/index.html && cp _redirects dist/_redirects"
+    "prebuild": "rm -rf build",
+    "build": "./node_modules/parcel-bundler/bin/cli.js build --public-url=/  --no-minify --out-dir=build ./src/index.html && cp _redirects build/_redirects"
   },
   "keywords": [
     "Cat",
