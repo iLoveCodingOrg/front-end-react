@@ -3,7 +3,8 @@ import {
     CLEAR_PAGES,
     SET_PAGE,
     CLEAR_PAGE,
-    SET_PAGE_LOADING
+    SET_PAGE_LOADING,
+    SET_PAGES_LIST_LOADING
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -20,9 +21,18 @@ export function showError(error) {
     }
 }
 
-export function setLoading(isLoading=true) {
+export function setLoadingView(isLoading=true) {
     return {
         type: SET_PAGE_LOADING,
+        payload: {
+            isLoading
+        }
+    }
+}
+
+export function setLoadingList(isLoading=true) {
+    return {
+        type: SET_PAGES_LIST_LOADING,
         payload: {
             isLoading
         }
@@ -33,7 +43,7 @@ export function getPages(){
     const url = `${API_URL}pages`
     
     return (dispatch) => {
-        dispatch(setLoading(false))
+        dispatch(setLoadingList(false))
 
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
@@ -45,7 +55,7 @@ export function getPages(){
             dispatch(showError(err))
         })
         .finally(()=>{
-            dispatch(setLoading(false))
+            dispatch(setLoadingList(false))
         })
     }
 }
@@ -69,7 +79,7 @@ export function getPageBySlug(slug){
     const url = `${API_URL}pages/${slug}/data`
     
     return (dispatch) => {
-        dispatch(setLoading(false))
+        dispatch(setLoadingView(false))
 
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
@@ -81,7 +91,7 @@ export function getPageBySlug(slug){
                 dispatch(showError(err))
             })
             .finally(()=>{
-                dispatch(setLoading(false))
+                dispatch(setLoadingView(false))
             })
     }
 }

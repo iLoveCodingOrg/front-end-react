@@ -3,7 +3,8 @@ import {
     CLEAR_LESSONS,
     SET_LESSON,
     CLEAR_LESSON,
-    SET_LESSON_LOADING
+    SET_LESSON_LOADING,
+    SET_LESSONS_LIST_LOADING
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -23,9 +24,18 @@ export function showError(error) {
     }
 }
 
-export function setLoading(isLoading=true) {
+export function setLoadingView(isLoading=true) {
     return {
         type: SET_LESSON_LOADING,
+        payload: {
+            isLoading
+        }
+    }
+}
+
+export function setLoadingList(isLoading=true) {
+    return {
+        type: SET_LESSONS_LIST_LOADING,
         payload: {
             isLoading
         }
@@ -36,7 +46,7 @@ export function getLessons(){
     const url = `${API_URL}lessons/all`
     
     return (dispatch) => {
-        dispatch(setLoading(true))
+        dispatch(setLoadingList(true))
 
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
@@ -48,7 +58,7 @@ export function getLessons(){
             dispatch(showError(err))
         })
         .finally(()=>{
-            dispatch(setLoading(false))
+            dispatch(setLoadingList(false))
         })
     }
 }
@@ -72,7 +82,7 @@ export function getLessonBySlug(slug){
     const url = `${API_URL}lessons/${slug}/data`
     
     return (dispatch) => {
-        dispatch(setLoading(true))
+        dispatch(setLoadingView(true))
 
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
@@ -84,7 +94,7 @@ export function getLessonBySlug(slug){
                 dispatch(showError(err))
             })
             .finally(()=>{
-                dispatch(setLoading(false))
+                dispatch(setLoadingView(false))
             })
     }
 }

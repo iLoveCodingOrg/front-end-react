@@ -7,7 +7,7 @@ import { CourseNav } from '../'
 
 function mapStateToProps(state){
     return {
-        isLoading: state.courses.isLoading,
+        isLoading: state.courses.isLoadingView,
         view: state.courses.view
     }
 }
