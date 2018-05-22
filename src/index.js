@@ -21,10 +21,7 @@ import {
     List as LessonList
 } from './Lesson'
 import {
-    Routes as CourseRoutes,
-    View as CourseView,
-    Edit as CourseEdit,
-    List as CourseList
+    Routes as CourseRoutes
 } from './Course'
 import {
     View as PageView,
