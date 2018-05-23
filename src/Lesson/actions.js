@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify'
 import {
     SET_LESSONS,
     CLEAR_LESSONS,
@@ -11,18 +12,6 @@ import {
     checkStatus,
     parseJSON
 } from '../_app/utils'
-
-import { logError } from '../_app/logService'
-
-export function showError(error) {
-    logError(new Error('show error hi'))
-    return {
-        type: 'SHOW_ERROR',
-        payload: {
-            error
-        }
-    }
-}
 
 export function setLoadingView(isLoading=true) {
     return {
@@ -52,10 +41,10 @@ export function getLessons(){
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
-            dispatch(setLessons(json))
+            dispatch(setLessons(null, json))
         })
-        .catch((err) => {
-            dispatch(showError(err))
+        .catch((error) => {
+            dispatch(setLessons(error))
         })
         .finally(()=>{
             dispatch(setLoadingList(false))
@@ -63,13 +52,26 @@ export function getLessons(){
     }
 }
 
-export function setLessons(lessons) {
-    return {
-        type: SET_LESSONS,
-        payload: {
-            lessons
+export function setLessons(error=null, data) {
+    const action = {
+        type: SET_LESSONS
+    }
+
+    if(error){
+        toast.error('Something went wrong! Could not load the lessons')
+
+        action.payload = {
+            error: error,
+            data: []
+        }
+    } else{
+        action.payload = {
+            error,
+            data
         }
     }
+
+    return action
 }
 
 export function clearLessons(){
@@ -88,10 +90,10 @@ export function getLessonBySlug(slug){
         .then(checkStatus)
             .then(parseJSON)
             .then((json) => {
-                dispatch(setLesson(json))
+                dispatch(setLesson(null, json))
             })
             .catch((err) => {
-                dispatch(showError(err))
+                dispatch(setLesson(err))
             })
             .finally(()=>{
                 dispatch(setLoadingView(false))
@@ -99,13 +101,26 @@ export function getLessonBySlug(slug){
     }
 }
 
-export function setLesson(lesson) {
-    return {
-        type: SET_LESSON,
-        payload: {
-            lesson
+export function setLesson(error=null, data) {
+    const action = {
+        type: SET_LESSON
+    }
+
+    if(error){
+        toast.error('Something went wrong! Could not load the lesson')
+
+        action.payload = {
+            error: error,
+            data: {}
+        }
+    } else{
+        action.payload = {
+            error,
+            data
         }
     }
+
+    return action
 }
 
 export function clearLesson(){

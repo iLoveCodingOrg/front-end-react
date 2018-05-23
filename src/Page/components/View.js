@@ -6,8 +6,8 @@ import { View } from '../../_common'
 
 function mapStateToProps(state){
     return {
-        isLoading: state.pages.isLoadingView,
-        view: state.pages.view
+        isLoading: state.pages.view.isLoading,
+        view: state.pages.view.data
     }
 }
 

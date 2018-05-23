@@ -1,5 +1,6 @@
 // import './_app/styles/bootstrap.scss'
 import './_app/styles/'
+import 'react-toastify/dist/ReactToastify.min.css'
 
 import React from 'react'
 import { render } from 'react-dom'
@@ -9,6 +10,7 @@ import {
     Switch
 } from 'react-router-dom'
 import { Provider } from 'react-redux'
+import { ToastContainer } from 'react-toastify'
 
 import store from './_app/store'
 import Wrap from './Wrap'
@@ -38,6 +40,17 @@ function renderApp(){
             <BrowserRouter>
                 <ScrollToTop>
                     <ErrorBoundary>
+                        <ToastContainer
+                            position="top-center"
+                            autoClose={5000}
+                            hideProgressBar={false}
+                            newestOnTop={true}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnVisibilityChange
+                            draggable
+                            pauseOnHover
+                        />
                         <Switch>
                             <Route
                                 exact

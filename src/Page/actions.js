@@ -1,25 +1,17 @@
+import { toast } from 'react-toastify'
 import {
     SET_PAGES,
     CLEAR_PAGES,
     SET_PAGE,
     CLEAR_PAGE,
     SET_PAGE_LOADING,
-    SET_PAGES_LIST_LOADING
+    SET_PAGES_LIST_LOADING,
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
     checkStatus,
     parseJSON
 } from '../_app/utils'
-
-export function showError(error) {
-    return {
-        type: 'SHOW_ERROR',
-        payload: {
-            error
-        }
-    }
-}
 
 export function setLoadingView(isLoading=true) {
     return {
@@ -49,10 +41,10 @@ export function getPages(){
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
-            dispatch(setPages(json))
+            dispatch(setPages(null, json))
         })
-        .catch((err) => {
-            dispatch(showError(err))
+        .catch((error) => {
+            dispatch(setPages(error))
         })
         .finally(()=>{
             dispatch(setLoadingList(false))
@@ -60,13 +52,26 @@ export function getPages(){
     }
 }
 
-export function setPages(pages) {
-    return {
-        type: SET_PAGES,
-        payload: {
-            pages
+export function setPages(error=null, data) {
+    const action = {
+        type: SET_PAGES
+    }
+
+    if(error){
+        toast.error('Something went wrong! Could not load the pages')
+
+        action.payload = {
+            error: error,
+            data: []
+        }
+    } else{
+        action.payload = {
+            error,
+            data
         }
     }
+
+    return action
 }
 
 export function clearPages(){
@@ -85,10 +90,10 @@ export function getPageBySlug(slug){
         .then(checkStatus)
             .then(parseJSON)
             .then((json) => {
-                dispatch(setPage(json))
+                dispatch(setPage(null, json))
             })
             .catch((err) => {
-                dispatch(showError(err))
+                dispatch(setPage(err))
             })
             .finally(()=>{
                 dispatch(setLoadingView(false))
@@ -96,13 +101,26 @@ export function getPageBySlug(slug){
     }
 }
 
-export function setPage(page) {
-    return {
-        type: SET_PAGE,
-        payload: {
-            page
+export function setPage(error=null, data) {
+    const action = {
+        type: SET_PAGE
+    }
+
+    if(error){
+        toast.error('Something went wrong! Could not load the page')
+
+        action.payload = {
+            error: error,
+            data: {}
+        }
+    } else{
+        action.payload = {
+            error,
+            data
         }
     }
+
+    return action
 }
 
 export function clearPage(){

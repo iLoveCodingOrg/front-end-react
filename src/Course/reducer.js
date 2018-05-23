@@ -1,17 +1,21 @@
 import {
     SET_COURSES,
-    CLEAR_COURSES,
     SET_COURSE,
     CLEAR_COURSE,
     SET_COURSE_LOADING,
     SET_COURSES_LIST_LOADING
 } from '../_app/actionTypes'
 const initialState = {
-    list: [],
-    view: {
+    list: {
+        isLoading: true,
+        error: false,
+        data: []
     },
-    isLoadingView: true,
-    isLoadingList: true
+    view: {
+        isLoading: true,
+        error: false,
+        data: {}
+    }
 }
 
 export default function (state = initialState, { type, payload }) {
@@ -19,32 +23,43 @@ export default function (state = initialState, { type, payload }) {
         case SET_COURSES:
             return {
                 ...state,
-                list: payload.courses
-            }
-        case CLEAR_COURSES:
-            return {
-                ...state,
-                list: []
+                list: {
+                    isLoading: false,
+                    error: payload.error,
+                    data: payload.data
+                }
             }
         case SET_COURSE:
             return {
                 ...state,
-                view: payload.course
+                view: {
+                    isLoading: false,
+                    error: payload.error,
+                    data: payload.data
+                }
             }
         case CLEAR_COURSE:
             return {
                 ...state,
-                view: {}
+                view: {
+                    ...initialState.view
+                }
             }
         case SET_COURSE_LOADING:
             return {
                 ...state,
-                isLoadingView: payload.isLoading
+                view: {
+                    ...state.view,
+                    isLoading: payload.isLoading
+                }
             }
         case SET_COURSES_LIST_LOADING:
             return {
                 ...state,
-                isLoadingList: payload.isLoading
+                list: {
+                    ...state.list,
+                    isLoading: payload.isLoading
+                }
             }
         default:
             return state

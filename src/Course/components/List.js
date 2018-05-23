@@ -6,8 +6,8 @@ import { List } from '../../_common'
 
 function mapStateToProps(state){
     return {
-        isLoading: state.courses.isLoadingList,
-        list: state.courses.list
+        isLoading: state.courses.list.isLoading,
+        list: state.courses.list.data
     }
 }
 

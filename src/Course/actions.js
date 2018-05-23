@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify'
 import {
     SET_COURSES,
     CLEAR_COURSES,
@@ -11,15 +12,6 @@ import {
     checkStatus,
     parseJSON
 } from '../_app/utils'
-
-export function showError(error) {
-    return {
-        type: 'SHOW_ERROR',
-        payload: {
-            error
-        }
-    }
-}
 
 export function setLoadingView(isLoading=true) {
     return {
@@ -49,10 +41,10 @@ export function getCourses(){
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
-            dispatch(setCourses(json))
+            dispatch(setCourses(null, json))
         })
-        .catch((err) => {
-            dispatch(showError(err))
+        .catch((error) => {
+            dispatch(setCourses(error))
         })
         .finally(()=>{
             dispatch(setLoadingList(false))
@@ -60,13 +52,26 @@ export function getCourses(){
     }
 }
 
-export function setCourses(courses) {
-    return {
-        type: SET_COURSES,
-        payload: {
-            courses
+export function setCourses(error=null, data) {
+    const action = {
+        type: SET_COURSES
+    }
+
+    if(error){
+        toast.error('Something went wrong! Could not load the courses')
+
+        action.payload = {
+            error: error,
+            data: []
+        }
+    } else{
+        action.payload = {
+            error,
+            data
         }
     }
+
+    return action
 }
 
 export function clearCourses(){
@@ -85,10 +90,10 @@ export function getCourseBySlug(slug){
         .then(checkStatus)
             .then(parseJSON)
             .then((json) => {
-                dispatch(setCourse(json))
+                dispatch(setCourse(null, json))
             })
             .catch((err) => {
-                dispatch(showError(err))
+                dispatch(setCourse(err))
             })
             .finally(()=>{
                 dispatch(setLoadingView(false))
@@ -96,13 +101,26 @@ export function getCourseBySlug(slug){
     }
 }
 
-export function setCourse(course) {
-    return {
-        type: SET_COURSE,
-        payload: {
-            course
+export function setCourse(error=null, data) {
+    const action = {
+        type: SET_COURSE
+    }
+
+    if(error){
+        toast.error('Something went wrong! Could not load the course')
+
+        action.payload = {
+            error: error,
+            data: {}
+        }
+    } else{
+        action.payload = {
+            error,
+            data
         }
     }
+
+    return action
 }
 
 export function clearCourse(){
