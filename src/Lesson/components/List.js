@@ -6,6 +6,7 @@ import { List } from '../../_common'
 
 function mapStateToProps(state){
     return {
+        error: state.lessons.list.error,
         isLoading: state.lessons.list.isLoading,
         list: state.lessons.list.data
     }

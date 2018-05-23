@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 
 import { Card } from './'
 import Loading from '../Loading'
+import ErrorBox from '../ErrorBox'
 
 class List extends React.Component{
     constructor(props){
@@ -35,8 +36,9 @@ class List extends React.Component{
         return (
             <div className="container">
                 {
-                    (this.props.isLoading) ?
-                    <Loading />
+                    (this.props.isLoading)? <Loading />
+                    :
+                    (this.props.error) ? <ErrorBox />
                     :
                     <div>
                         <Helmet><title>{this.getTitle()}</title></Helmet>

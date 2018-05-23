@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import ViewHeader from './ViewHeader'
 import { VideoWrap } from '../Video'
 import Loading from '../Loading'
+import ErrorBox from '../ErrorBox'
 
 class View extends React.Component{
     constructor(props){
@@ -42,8 +43,9 @@ class View extends React.Component{
         return (
             <div className="container">
                 {
-                    (this.props.isLoading) ?
-                    <Loading />
+                    (this.props.isLoading)? <Loading />
+                    :
+                    (this.props.error) ? <ErrorBox />
                     :
                     <div>
                         <Helmet><title>{title}</title></Helmet>

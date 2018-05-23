@@ -7,6 +7,7 @@ import { CourseNav } from '../'
 
 function mapStateToProps(state){
     return {
+        error: state.courses.view.error,
         isLoading: state.courses.view.isLoading,
         view: state.courses.view.data
     }

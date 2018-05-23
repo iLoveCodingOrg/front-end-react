@@ -11,6 +11,7 @@ import { actions as courseActions } from '../'
 import { actions as lessonActions } from '../../Lesson'
 import { CourseNav } from '../'
 import Loading from '../../Loading'
+import ErrorBox from '../../ErrorBox'
 
 class CourseLessonView extends React.Component{
     constructor(props){
@@ -54,8 +55,9 @@ class CourseLessonView extends React.Component{
         return (
             <div className="container">
                 {
-                    (this.props.isLoading)?
-                    <Loading />
+                    (this.props.isLoading)? <Loading />
+                    :
+                    (this.props.error) ? <ErrorBox />
                     :
                     <div>
                         <Helmet><title>{title}</title></Helmet>
@@ -102,6 +104,7 @@ function mapStateToProps(state){
     const { lessons, courses } = state
     return {
         isLoading: lessons.view.isLoading || courses.view.isLoading,
+        error: lessons.view.error || courses.view.error,
         lessonView: lessons.view.data,
         courseView: courses.view.data
     }
