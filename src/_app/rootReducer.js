@@ -3,6 +3,7 @@ import { reducer as home } from '../Home'
 import { reducer as pages } from '../Page'
 import { reducer as lessons } from '../Lesson'
 import { reducer as courses } from '../Course'
+import { reducer as checkout } from '../Checkout'
 import { reducer as user } from '../_user'
 
 // Reducer is responsible to update the state in the store
@@ -12,5 +13,6 @@ export default combineReducers({
     pages,
     lessons,
     courses,
+    checkout,
     user
 })

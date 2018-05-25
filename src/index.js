@@ -33,6 +33,7 @@ import {
     NotFound
 } from './Page'
 import { Login } from './Login'
+import { Checkout } from './Checkout'
 
 function renderApp(){
     render(
@@ -100,6 +101,12 @@ function renderApp(){
                                         strict
                                         path="/pages/:slug/edit"
                                         component={PageEdit} />
+
+                                    <Route
+                                        exact
+                                        strict
+                                        path="/checkout/:slug"
+                                        component={Checkout} />
 
                                     <Route
                                         component={NotFound} />
