@@ -7,8 +7,12 @@ class NotFound extends React.Component{
     }
     render(){
         return (
-            <div>
-                NotFound Page
+            <div className="d-flex flex-column align-items-center">
+                <h1>Page not found :-(</h1>
+                <p className="lead">
+                    Oops, you landed out of the internet! The page you are looking for does not exist
+                </p>
+                <img src="https://media.giphy.com/media/hEc4k5pN17GZq/giphy.gif" />
             </div>
         )
     }
