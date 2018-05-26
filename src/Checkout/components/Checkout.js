@@ -13,7 +13,8 @@ import {
     Header,
     Testimonials,
     UserForm,
-    WhatYouGet
+    WhatYouGet,
+    Due
 } from '../'
 
 class Checkout extends React.Component{
@@ -34,8 +35,9 @@ class Checkout extends React.Component{
     }
 
     render(){
+        const productName = get(this.props.product, 'name')
         return(
-            <div className="bg-light">
+            <div className="">
             <div className="container">
                 {
                     (this.props.isLoading)? <Loading />
@@ -45,25 +47,24 @@ class Checkout extends React.Component{
                     <div>
                         <Helmet><title>'title'</title></Helmet>
 
-                        <Header />
+                        <Header productName={productName} />
                         <div className="row">
-                            <div className="col-md-8 order-md-1">
+                            <div className="col-md-8 order-md-1 bg-light border p-4">
                                 <UserForm />
                                 <hr className="mb-4" />
                                 <CreditCard />
-                                <hr className="mb-4" />
+                                <Due />
                                 <button className="btn btn-primary btn-lg btn-block" type="submit">
-                                    Continue to checkout
+                                    Complete My Purchase
                                 </button>
+                                <small>Payment powered by Braintree (a Paypal company) - AES-256bit encryption - Your information is secure</small>
                             </div>
-                            <div className="col-md-4 order-md-2 mb-4">
+                            <div className="col-md-4 order-md-2 mb-4 px-4">
                                 <WhatYouGet />
                                 <Testimonials />
                             </div>
                         </div>
                         <Footer />
-
-                        {get(this.props.product, 'name')}
                     </div>
                 }
             </div>

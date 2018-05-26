@@ -1,14 +1,14 @@
 .navbar-brand{
-  a {
+  .img-wrap {
     transition: width .4s, border-radius .4s;
     display: block;
     overflow: hidden;
     width: 64px;
     border-radius: 40px;
-    &:hover{
-      width: 205px;
-      border-radius: 16px;
-    }
+  }
+  .img-wrap-hover:hover{
+    width: 205px;
+    border-radius: 16px;
   }
   img {
     width: 250px;

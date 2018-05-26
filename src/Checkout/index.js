@@ -7,6 +7,7 @@ import UserForm from './components/UserForm'
 import CreditCard from './components/CreditCard'
 import Testimonials from './components/Testimonials'
 import WhatYouGet from './components/WhatYouGet'
+import Due from './components/Due'
 
 export {
     reducer,
@@ -17,5 +18,6 @@ export {
     UserForm,
     CreditCard,
     Testimonials,
-    WhatYouGet
+    WhatYouGet,
+    Due
 }

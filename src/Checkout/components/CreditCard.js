@@ -3,7 +3,7 @@ import React from 'react'
 export default function (props) {
     return (
         <div>
-            <h4 className="mb-3">Payment</h4>
+            <h4 className="mb-3">Payment Information</h4>
             <div className="d-block my-3">
                 <div className="custom-control custom-radio">
                     <input id="debit" name="paymentMethod" type="radio" className="custom-control-input" required />
