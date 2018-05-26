@@ -58,6 +58,11 @@ function renderApp(){
                                 strict
                                 path="/login"
                                 component={Login} />
+                            <Route
+                                exact
+                                strict
+                                path="/checkout/:slug"
+                                component={Checkout} />
                             <Wrap>
                                 <Switch>
                                     <Route
@@ -101,12 +106,6 @@ function renderApp(){
                                         strict
                                         path="/pages/:slug/edit"
                                         component={PageEdit} />
-
-                                    <Route
-                                        exact
-                                        strict
-                                        path="/checkout/:slug"
-                                        component={Checkout} />
 
                                     <Route
                                         component={NotFound} />
