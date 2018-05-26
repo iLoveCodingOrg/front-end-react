@@ -4,7 +4,7 @@ export default function(props) {
     return (
         <div>
             <h4 className="mb-3">Contact Information</h4>
-            <form className="needs-validation" novalidate="">
+            <form className="needs-validation" noValidate>
                 <div className="row">
                     <div className="col-md-6 mb-3">
                         <label htmlFor="firstName">First name</label>

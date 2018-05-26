@@ -18,6 +18,7 @@
   "dependencies": {
     "@u-wave/react-vimeo": "^0.5.0",
     "bootstrap": "^4.1.1",
+    "braintree-web-drop-in-react": "^1.0.3",
     "immutability-helper": "^2.7.0",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.1",

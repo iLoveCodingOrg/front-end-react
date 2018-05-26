@@ -1,11 +1,19 @@
 import {
     SET_PRODUCT,
-    SET_PRODUCT_LOADING
+    SET_PRODUCT_LOADING,
+    SET_CLIENT_TOKEN,
+    SET_CLIENT_TOKEN_LOADING
 } from '../_app/actionTypes'
 const initialState = {
     isLoading: true,
     error: false,
-    product: []
+    product: [],
+    braintree: {
+        isLoading: true,
+        error: false,
+        clientToken: '',
+        nonce: ''
+    }
 }
 
 export default function (state = initialState, { type, payload }) {
@@ -21,6 +29,23 @@ export default function (state = initialState, { type, payload }) {
             return {
                 ...state,
                 isLoading: payload.isLoading
+            }
+        case SET_CLIENT_TOKEN:
+            return {
+                ...state,
+                braintree: {
+                    isLoading: false,
+                    error: payload.error,
+                    clientToken: payload.clientToken
+                }
+            }
+        case SET_CLIENT_TOKEN_LOADING:
+            return {
+                ...state,
+                braintree: {
+                    ...state.braintree,
+                    isLoading: payload.isLoading
+                }
             }
         default:
             return state

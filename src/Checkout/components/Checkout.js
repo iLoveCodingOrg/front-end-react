@@ -45,7 +45,7 @@ class Checkout extends React.Component{
                     (this.props.error) ? <ErrorBox />
                     :
                     <div>
-                        <Helmet><title>'title'</title></Helmet>
+                        <Helmet><title>{productName}</title></Helmet>
 
                         <Header productName={productName} />
                         <div className="row">
@@ -78,7 +78,8 @@ function mapStateToProps(state){
     return {
         error: state.checkout.error,
         isLoading: state.checkout.isLoading,
-        product: state.checkout.product
+        product: state.checkout.product,
+        nonce: state.checkout.braintree.nonce
     }
 }
 

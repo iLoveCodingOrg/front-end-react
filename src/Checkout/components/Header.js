@@ -11,7 +11,7 @@ export default function (props) {
                         </div>
                     </div>
                     <div className="d-flex flex-column">
-                        <div class="h6 text-muted text-uppercase m-0">
+                        <div className="h6 text-muted text-uppercase m-0">
                             You are about to buy:
                         </div>
                         <h1>
