@@ -1,14 +1,17 @@
 import React from 'react'
+import { isEmailValid } from '../../_app/utils'
 
 class UserForm extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            firstName: '',
-            lastName: '',
-            email: ''
+            firstName: { value: '' },
+            lastName: { value: '' },
+            email: { value: '' }
         }
         this.handleFirstName = this.handleFirstName.bind(this)
+        this.handleLastName = this.handleLastName.bind(this)
+        this.handleEmail = this.handleEmail.bind(this)
         this.validate = this.validate.bind(this)
         this.renderInlineError = this.renderInlineError.bind(this)
     }
@@ -25,12 +28,43 @@ class UserForm extends React.Component{
             }
         })
     }
+
+    handleLastName(event){
+        const value = event.target.value
+        const options = {
+            isRequired: true
+        }
+        this.setState({
+            lastName: {
+                value,
+                error: this.validate(value, options)
+            }
+        })
+    }
     
-    validate(value, { isRequired }) {
+    handleEmail(event){
+        const value = event.target.value
+        const options = {
+            isRequired: true,
+            isEmail: true
+        }
+        this.setState({
+            email: {
+                value,
+                error: this.validate(value, options)
+            }
+        })
+    }
+    
+    validate(value, { isRequired, isEmail }) {
         let error = ''
 
         if(isRequired){
             error = !value.length? 'Please enter the information' : ''
+        }
+        
+        if(isEmail){
+            error = !isEmailValid(value)? 'Please enter a valid email' : ''
         }
 
         return error
@@ -63,16 +97,21 @@ class UserForm extends React.Component{
                             className="form-control"
                             id="firstName"
                             placeholder="First Name"
-                            required />
+                            required
+                        />
                         {this.renderInlineError('firstName')}
                     </div>
                     <div className="col-md-6 mb-3">
                         <label htmlFor="lastName">Last name</label>
                         <input type="text"
+                            value={this.state.lastName.value}
+                            onChange={this.handleLastName}
                             className="form-control"
                             id="lastName"
                             placeholder="Last Name"
-                            required />
+                            required
+                        />
+                        {this.renderInlineError('lastName')}
                         <div className="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -82,10 +121,14 @@ class UserForm extends React.Component{
                 <div className="mb-3">
                     <label htmlFor="email">Email</label>
                     <input type="email"
+                        value={this.state.email.value}
+                        onChange={this.handleEmail}
                         className="form-control"
                         id="email"
                         placeholder="your@email.com"
+                        required
                     />
+                    {this.renderInlineError('email')}
                     <div className="invalid-feedback">
                         Please enter a valid email address for shipping updates.
                     </div>

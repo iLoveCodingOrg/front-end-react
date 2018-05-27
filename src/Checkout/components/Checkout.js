@@ -22,6 +22,14 @@ class Checkout extends React.Component{
     constructor(props){
         super(props)
 
+        this.state = {
+            userInfo: {
+                firstName: '',
+                lastName: '',
+                email: ''
+            }
+        }
+        this.setUserInfo = this.setUserInfo.bind(this)
         this.setBraintreeInstance = this.setBraintreeInstance.bind(this)
         this.buy = this.buy.bind(this)
         this.renderBuyError = this.renderBuyError.bind(this)
@@ -29,20 +37,19 @@ class Checkout extends React.Component{
     braintreeInstance;
     
     setBraintreeInstance(instance){
-        console.log('instance', instance)
         this.braintreeInstance = instance
     }
     
     async buy(event){
         event.preventDefault()
 
-        const { slug } = this.props.match.params        
+        const { slug } = this.props.match.params
         const { nonce } = await this.braintreeInstance.requestPaymentMethod()
 
         this.props.buy(slug, {
-            firstName: 'f',
-            lastName: 'l',
-            email: 'fakeilc12@dayrep.com',
+            firstName: this.state.userInfo.firstName,
+            lastName: this.state.userInfo.lastName,
+            email: this.state.userInfo.email,
             nonce
         })
             .then(({ isSubscribed })=>{
@@ -52,6 +59,11 @@ class Checkout extends React.Component{
             })
     }
 
+    setUserInfo(userInfo){
+        this.setState({
+            userInfo
+        })
+    }
     componentWillReceiveProps(nextProps){
         const { slug } = this.props.match.params
         
@@ -77,6 +89,8 @@ class Checkout extends React.Component{
     }
 
     render(){
+        const price = get(this.props.product, 'price')
+        const billingDuration = get(this.props.product, 'billingDuration')
         const productName = get(this.props.product, 'name')
         return(
             <div className="container">
@@ -94,11 +108,15 @@ class Checkout extends React.Component{
                                 onSubmit={this.buy}
                                 className="col-md-8 order-md-1 bg-light border p-4">
                                 {this.renderBuyError()}
-                                {/* <UserForm /> */}
+                                <UserForm
+                                    isDisabled={false}
+                                    userInfo={this.state.userInfo}
+                                    setUserInfo={this.setUserInfo}
+                                />
 
                                 <hr className="mb-4" />
                                 <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
-                                <Due />
+                                <Due price={price} billingDuration={billingDuration}/>
                                 <button
                                     className="btn btn-primary btn-lg btn-block"
                                     type="submit"
