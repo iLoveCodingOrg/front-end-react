@@ -2,7 +2,9 @@ import {
     SET_PRODUCT,
     SET_PRODUCT_LOADING,
     SET_CLIENT_TOKEN,
-    SET_CLIENT_TOKEN_LOADING
+    SET_CLIENT_TOKEN_LOADING,
+    SET_BUY_STATUS,
+    SET_BUY_LOADING
 } from '../_app/actionTypes'
 const initialState = {
     isLoading: true,
@@ -11,8 +13,14 @@ const initialState = {
     braintree: {
         isLoading: true,
         error: false,
-        clientToken: '',
-        nonce: ''
+        clientToken: ''
+    },
+    buy: {
+        isLoading: true,
+        error: false,
+        isEmailVerified: false,
+        isSubscribed: false,
+        message: ''
     }
 }
 
@@ -44,6 +52,25 @@ export default function (state = initialState, { type, payload }) {
                 ...state,
                 braintree: {
                     ...state.braintree,
+                    isLoading: payload.isLoading
+                }
+            }
+        case SET_BUY_STATUS:
+            return {
+                ...state,
+                buy: {
+                    isLoading: false,
+                    error: payload.error,
+                    isEmailVerified: payload.isEmailVerified,
+                    isSubscribed: payload.isSubscribed,
+                    message: payload.message
+                }
+            }
+        case SET_BUY_LOADING:
+            return {
+                ...state,
+                buy: {
+                    ...state.buy,
                     isLoading: payload.isLoading
                 }
             }

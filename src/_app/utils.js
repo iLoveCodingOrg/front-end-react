@@ -23,3 +23,8 @@ export function checkStatus(response) {
         throw response;
     }
 }
+
+
+export function jsonToUrlEncoded(json){
+    return Object.entries(json).map((e) => e.join('=')).join('&')
+}

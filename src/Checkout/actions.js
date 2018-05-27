@@ -3,12 +3,15 @@ import {
     SET_PRODUCT,
     SET_PRODUCT_LOADING,
     SET_CLIENT_TOKEN,
-    SET_CLIENT_TOKEN_LOADING
+    SET_CLIENT_TOKEN_LOADING,
+    SET_BUY_STATUS,
+    SET_BUY_LOADING
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
     checkStatus,
-    parseJSON
+    parseJSON,
+    jsonToUrlEncoded
 } from '../_app/utils'
 
 export function setLoading(isLoading=true) {
@@ -26,7 +29,7 @@ export function getProductBySlug(slug){
     return (dispatch) => {
         dispatch(setLoading(true))
 
-        return fetch(url, { credentials: 'include' })
+        return fetch(url)
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
@@ -109,6 +112,73 @@ export function setClientToken(error=null, clientToken) {
         action.payload = {
             error,
             clientToken
+        }
+    }
+
+    return action
+}
+
+export function setBuyLoading(isLoading=true) {
+    return {
+        type: SET_BUY_LOADING,
+        payload: {
+            isLoading
+        }
+    }
+}
+
+export function buy(slug, { firstName, lastName, email, nonce }){
+    const url = `${API_URL}purchases/product/${slug}/buy`
+    
+    return (dispatch) => {
+        dispatch(setBuyLoading(true))
+
+        return fetch(url, {
+            credentials: 'include',
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: jsonToUrlEncoded({ firstName, lastName, email, nonce })
+        })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(({ isSubscribed, isEmailVerified, message }) => {
+            if(isSubscribed){
+                dispatch(setBuyStatus(null, { isSubscribed, isEmailVerified, message }))
+                return { isSubscribed }
+            } else{
+                dispatch(setBuyStatus(message, { isSubscribed, isEmailVerified, message }))
+                return { isSubscribed: false }
+            }
+        })
+        .catch((error) => {
+            dispatch(setBuyStatus(error))
+        })
+        .finally(()=>{
+            dispatch(setBuyLoading(false))
+        })
+    }
+}
+
+export function setBuyStatus(error=null, { isSubscribed, isEmailVerified, message }) {
+    const action = {
+        type: SET_BUY_STATUS
+    }
+
+    if(error){
+        toast.error('Something went wrong! Could not complete purchase')
+
+        action.payload = {
+            error
+        }
+    } else{
+        action.payload = {
+            error,
+            isSubscribed,
+            isEmailVerified,
+            message
         }
     }
 
