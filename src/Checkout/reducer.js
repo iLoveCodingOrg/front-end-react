@@ -9,7 +9,7 @@ import {
 const initialState = {
     isLoading: true,
     error: false,
-    product: [],
+    product: {},
     braintree: {
         isLoading: true,
         error: false,
@@ -19,8 +19,7 @@ const initialState = {
         isLoading: true,
         error: false,
         isEmailVerified: false,
-        isSubscribed: false,
-        message: ''
+        isSubscribed: false
     }
 }
 
@@ -62,8 +61,7 @@ export default function (state = initialState, { type, payload }) {
                     isLoading: false,
                     error: payload.error,
                     isEmailVerified: payload.isEmailVerified,
-                    isSubscribed: payload.isSubscribed,
-                    message: payload.message
+                    isSubscribed: payload.isSubscribed
                 }
             }
         case SET_BUY_LOADING:

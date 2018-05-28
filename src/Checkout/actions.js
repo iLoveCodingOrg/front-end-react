@@ -146,10 +146,10 @@ export function buy(slug, { firstName, lastName, email, nonce }){
         .then(parseJSON)
         .then(({ isSubscribed, isEmailVerified, message }) => {
             if(isSubscribed){
-                dispatch(setBuyStatus(null, { isSubscribed, isEmailVerified, message }))
+                dispatch(setBuyStatus(null, { isSubscribed, isEmailVerified }))
                 return { isSubscribed }
             } else{
-                dispatch(setBuyStatus(message, { isSubscribed, isEmailVerified, message }))
+                dispatch(setBuyStatus(message, { isSubscribed, isEmailVerified }))
                 return { isSubscribed: false }
             }
         })

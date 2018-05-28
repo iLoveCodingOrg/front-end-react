@@ -47,9 +47,9 @@ class Checkout extends React.Component{
         const { nonce } = await this.braintreeInstance.requestPaymentMethod()
 
         this.props.buy(slug, {
-            firstName: this.state.userInfo.firstName,
-            lastName: this.state.userInfo.lastName,
-            email: this.state.userInfo.email,
+            firstName: this.state.userInfo.firstName.value,
+            lastName: this.state.userInfo.lastName.value,
+            email: this.state.userInfo.email.value,
             nonce
         })
             .then(({ isSubscribed })=>{
