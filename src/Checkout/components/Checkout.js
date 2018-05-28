@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import { withRouter } from 'react-router-dom'
-
 import { get } from 'lodash'
 
+import { isLoggedIn } from '../../_user/selectors'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
 import {
@@ -24,9 +25,9 @@ class Checkout extends React.Component{
 
         this.state = {
             userInfo: {
-                firstName: { value: '' },
-                lastName: { value: '' },
-                email: { value: '' }
+                firstName: { value: props.firstName || '' },
+                lastName: { value: props.lastName || '' },
+                email: { value: props.email || '' }
             }
         }
         this.setUserInfo = this.setUserInfo.bind(this)
@@ -64,11 +65,20 @@ class Checkout extends React.Component{
             userInfo
         })
     }
+
     componentWillReceiveProps(nextProps){
         const { slug } = this.props.match.params
         
         if(nextProps.match.params.slug !== slug){
             this.props.getProduct(nextProps.match.params.slug)
+        }
+
+        if(nextProps.firstName !== this.props.firstName){
+            this.setUserInfo({
+                firstName: { value: nextProps.firstName },
+                lastName: { value: nextProps.lastName },
+                email: { value: nextProps.email }
+            })
         }
     }
 
@@ -109,7 +119,7 @@ class Checkout extends React.Component{
                                 className="col-md-8 order-md-1 bg-light border p-4">
                                 {this.renderBuyError()}
                                 <UserForm
-                                    isDisabled={false}
+                                    isDisabled={this.props.isLoggedIn}
                                     userInfo={this.state.userInfo}
                                     setUserInfo={this.setUserInfo}
                                 />
@@ -138,13 +148,24 @@ class Checkout extends React.Component{
     }
 }
 
+Checkout.propTypes = {
+    buyError: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    isLoading: PropTypes.bool.isRequired,
+    isLoggedIn: PropTypes.bool.isRequired,
+    product: PropTypes.object.isRequired
+}
 
 function mapStateToProps(state){
     return {
+        isLoggedIn: isLoggedIn(state),
         error: state.checkout.error,
         isLoading: state.checkout.isLoading,
         product: state.checkout.product,
-        buyError: state.checkout.buy.error
+        buyError: state.checkout.buy.error,
+        firstName: state.user.firstName,
+        lastName: state.user.lastName,
+        email: state.user.email
     }
 }
 

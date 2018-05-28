@@ -13,6 +13,7 @@ import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
 
 import store from './_app/store'
+import Auth from './Auth'
 import Wrap from './Wrap'
 
 import ErrorBoundary from './ErrorBoundary'
@@ -52,6 +53,7 @@ function renderApp(){
                             draggable
                             pauseOnHover
                         />
+                        <Auth>
                         <Switch>
                             <Route
                                 exact
@@ -112,6 +114,7 @@ function renderApp(){
                                 </Switch>
                             </Wrap>
                         </Switch>
+                        </Auth>
                     </ErrorBoundary>
                 </ScrollToTop>
             </BrowserRouter>

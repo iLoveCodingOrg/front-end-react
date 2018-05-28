@@ -86,7 +86,8 @@ class UserForm extends React.Component{
     }
 
     render(){
-        const { firstName, lastName, email } = this.props.userInfo
+        const { isDisabled, userInfo } = this.props
+        const { firstName, lastName, email } = userInfo
         return (
             <div>
                 <h4 className="mb-3">Contact Information</h4>
@@ -99,6 +100,7 @@ class UserForm extends React.Component{
                             onChange={this.handleFirstName}
                             className="form-control"
                             placeholder="First Name"
+                            disabled={isDisabled}
                             required
                         />
                         {this.renderInlineError('firstName')}
@@ -112,6 +114,7 @@ class UserForm extends React.Component{
                             onChange={this.handleLastName}
                             className="form-control"
                             placeholder="Last Name"
+                            disabled={isDisabled}
                             required
                         />
                         {this.renderInlineError('lastName')}
@@ -126,6 +129,7 @@ class UserForm extends React.Component{
                         onChange={this.handleEmail}
                         className="form-control"
                         placeholder="your@email.com"
+                        disabled={isDisabled}
                         required
                     />
                     {this.renderInlineError('email')}
