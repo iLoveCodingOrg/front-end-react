@@ -65,6 +65,7 @@ export function setUser({ userData }) {
         payload: {
             user: {
                 braintreeCustomerId: userData.braintreeCustomerId,
+                email: userData.email,
                 emailHash: userData.emailHash,
                 emailVerified: userData.emailVerified,
                 firstName: userData.firstName,
