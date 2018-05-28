@@ -8,6 +8,7 @@ import { get } from 'lodash'
 import { isLoggedIn } from '../../_user/selectors'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
+import { actions as userActions } from '../../_user'
 import {
     actions,
     CreditCard,
@@ -119,6 +120,7 @@ class Checkout extends React.Component{
                                 className="col-md-8 order-md-1 bg-light border p-4">
                                 {this.renderBuyError()}
                                 <UserForm
+                                    logout={this.props.logout}
                                     isDisabled={this.props.isLoggedIn}
                                     userInfo={this.state.userInfo}
                                     setUserInfo={this.setUserInfo}
@@ -171,6 +173,14 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
+        logout: ()=>{
+            return dispatch(userActions.logout())
+            .then(({ isSuccess })=>{
+                if(isSuccess){
+                    window.location.reload()
+                }
+            })
+        },
         getProduct: (slug)=>{
             dispatch(actions.getProductBySlug(slug))
         },

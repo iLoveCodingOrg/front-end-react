@@ -43,6 +43,27 @@ export function login(email, password){
     }
 }
 
+export function logout(){
+    const url = `${API_URL}users/logout`
+    
+    return (dispatch) => {
+        return fetch(url, {
+            credentials: 'include',
+            method: 'POST'
+        })
+        .then(checkStatus)
+        .then(() => {
+            dispatch(clearUser())
+            return { isSuccess: true }
+        })
+        .catch((error) => {
+            console.log(error)
+            dispatch(showError(error))
+            return { isSuccess: false }
+        })
+    }
+}
+
 export function getUser(){
     const url = `${API_URL}users/me`
     

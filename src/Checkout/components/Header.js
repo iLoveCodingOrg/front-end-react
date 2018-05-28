@@ -23,6 +23,7 @@ export default function (props) {
                     Need help? support@ilovecoding.org
                 </div>
             </div>
+            <h3>🔒 Secure Checkout:</h3>
             <p className="lead">
                 Congratulations! Once you complete this secure registration form, you'll have instant access to my, "List-Grow Implementation Program" where you'll watch over my shoulder as we create your very own list-growing business that's based on your biggest passion!
             

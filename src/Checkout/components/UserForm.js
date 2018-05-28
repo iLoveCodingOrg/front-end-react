@@ -1,5 +1,6 @@
 import React from 'react'
 import { isEmailValid } from '../../_app/utils'
+import { isLoggedIn } from '../../_user/selectors';
 
 class UserForm extends React.Component{
     constructor(props){
@@ -8,6 +9,7 @@ class UserForm extends React.Component{
         this.handleLastName = this.handleLastName.bind(this)
         this.handleEmail = this.handleEmail.bind(this)
         this.validate = this.validate.bind(this)
+        this.renderLogoutOption = this.renderLogoutOption.bind(this)
         this.renderInlineError = this.renderInlineError.bind(this)
     }
 
@@ -71,6 +73,21 @@ class UserForm extends React.Component{
         return error
     }
 
+    renderLogoutOption(){
+        const { isDisabled, logout, userInfo } = this.props
+
+        if(isDisabled){
+            return (
+                <div className="mb-3">
+                    Not {userInfo.firstName.value}?
+                    <button className="border-0 btn-link" onClick={logout}>Log out</button>
+                </div>
+            )
+        } else{ 
+            return null
+        }
+    }
+
     renderInlineError(fieldName){
         const error = this.props.userInfo[fieldName].error
 
@@ -91,6 +108,7 @@ class UserForm extends React.Component{
         return (
             <div>
                 <h4 className="mb-3">Contact Information</h4>
+                {this.renderLogoutOption()}
                 <div className="row">
                     <div className="col-md-6 mb-3">
                         <label htmlFor="firstName">First name</label>
