@@ -24,9 +24,9 @@ class Checkout extends React.Component{
 
         this.state = {
             userInfo: {
-                firstName: '',
-                lastName: '',
-                email: ''
+                firstName: { value: '' },
+                lastName: { value: '' },
+                email: { value: '' }
             }
         }
         this.setUserInfo = this.setUserInfo.bind(this)

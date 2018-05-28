@@ -4,11 +4,6 @@ import { isEmailValid } from '../../_app/utils'
 class UserForm extends React.Component{
     constructor(props){
         super(props)
-        this.state = {
-            firstName: { value: '' },
-            lastName: { value: '' },
-            email: { value: '' }
-        }
         this.handleFirstName = this.handleFirstName.bind(this)
         this.handleLastName = this.handleLastName.bind(this)
         this.handleEmail = this.handleEmail.bind(this)
@@ -21,7 +16,9 @@ class UserForm extends React.Component{
         const options = {
             isRequired: true
         }
-        this.setState({
+
+        this.props.setUserInfo({
+            ...this.props.userInfo,
             firstName: {
                 value,
                 error: this.validate(value, options)
@@ -34,7 +31,9 @@ class UserForm extends React.Component{
         const options = {
             isRequired: true
         }
-        this.setState({
+
+        this.props.setUserInfo({
+            ...this.props.userInfo,
             lastName: {
                 value,
                 error: this.validate(value, options)
@@ -48,7 +47,9 @@ class UserForm extends React.Component{
             isRequired: true,
             isEmail: true
         }
-        this.setState({
+
+        this.props.setUserInfo({
+            ...this.props.userInfo,
             email: {
                 value,
                 error: this.validate(value, options)
@@ -71,7 +72,7 @@ class UserForm extends React.Component{
     }
 
     renderInlineError(fieldName){
-        const error = this.state[fieldName].error
+        const error = this.props.userInfo[fieldName].error
 
         if(error){
             return (
@@ -85,6 +86,7 @@ class UserForm extends React.Component{
     }
 
     render(){
+        const { firstName, lastName, email } = this.props.userInfo
         return (
             <div>
                 <h4 className="mb-3">Contact Information</h4>
@@ -92,46 +94,41 @@ class UserForm extends React.Component{
                     <div className="col-md-6 mb-3">
                         <label htmlFor="firstName">First name</label>
                         <input type="text"
-                            value={this.state.firstName.value}
+                            id="firstName"
+                            value={firstName.value}
                             onChange={this.handleFirstName}
                             className="form-control"
-                            id="firstName"
                             placeholder="First Name"
                             required
                         />
                         {this.renderInlineError('firstName')}
                     </div>
+
                     <div className="col-md-6 mb-3">
                         <label htmlFor="lastName">Last name</label>
                         <input type="text"
-                            value={this.state.lastName.value}
+                            id="lastName"
+                            value={lastName.value}
                             onChange={this.handleLastName}
                             className="form-control"
-                            id="lastName"
                             placeholder="Last Name"
                             required
                         />
                         {this.renderInlineError('lastName')}
-                        <div className="invalid-feedback">
-                            Valid last name is required.
-                        </div>
                     </div>
                 </div>
 
                 <div className="mb-3">
                     <label htmlFor="email">Email</label>
                     <input type="email"
-                        value={this.state.email.value}
+                        id="email"
+                        value={email.value}
                         onChange={this.handleEmail}
                         className="form-control"
-                        id="email"
                         placeholder="your@email.com"
                         required
                     />
                     {this.renderInlineError('email')}
-                    <div className="invalid-feedback">
-                        Please enter a valid email address for shipping updates.
-                    </div>
                 </div>
             </div>
         )
