@@ -5,6 +5,7 @@ import {
 const initialState = {
     firstName: '',
     lastName: '',
+    email: '',
     emailHash: '',
     activePlans: []
 }

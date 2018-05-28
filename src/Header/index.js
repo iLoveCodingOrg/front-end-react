@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 
 import logo from '../_app/images/ilovecoding-logo.svg'
 import { Link } from 'react-router-dom'
+import { isLoggedIn } from '../_user/selectors'
+import { actions } from '../_user'
 
 class Header extends React.Component{
     constructor(props){
@@ -50,13 +52,15 @@ class Header extends React.Component{
     }
 
     renderUser(){
-        const { firstName, emailHash } = this.props.user
+        const { user, logout } = this.props
+        const { firstName, emailHash } = user
         const gravatarUrl = this.getGravatarUrl(emailHash)
 
         return(
-            <div>
-                <img src={gravatarUrl} />
-                {firstName}
+            <div className="d-flex flex-row align-items-center">
+                <img className="rounded-circle mr-2" src={gravatarUrl} />
+                <div>{firstName}</div>
+                <button className="border-0 btn-link" onClick={logout}>(Log out)</button>
             </div>
         )
     }
@@ -82,7 +86,7 @@ class Header extends React.Component{
                     {this.printLinks()}
                 </nav>
                 {
-                    this.props.user.emailHash? this.renderUser() : this.renderGuest()
+                    this.props.isLoggedIn? this.renderUser() : this.renderGuest()
                 }
             </nav>
         )
@@ -91,12 +95,21 @@ class Header extends React.Component{
 
 function mapStateToProps(state){
     return {
+        isLoggedIn: isLoggedIn(state),
         user: state.user
     }
 }
 
-function mapDispatchToProps(){
+function mapDispatchToProps(dispatch){
     return {
+        logout: ()=>{
+            return dispatch(actions.logout())
+            .then(({ isSuccess })=>{
+                if(isSuccess){
+                    window.location.reload()
+                }
+            })
+        }
     }
 }
 
