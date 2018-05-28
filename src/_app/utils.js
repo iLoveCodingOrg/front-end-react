@@ -4,7 +4,7 @@
  * @returns {*} json
  */
 export function parseJSON(response) {
-    return response.json();
+    return response.json() || response
 }
 
 
@@ -16,11 +16,11 @@ export function parseJSON(response) {
  */
 export function checkStatus(response) {
     if (response.status >= 200 && response.status < 300) {
-        return response;
+        return response
     } else {
         // if api sends back failure status code,
         // throws response and treated as error in the catch block
-        throw response;
+        throw response
     }
 }
 

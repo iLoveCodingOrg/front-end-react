@@ -1,3 +1,4 @@
+import { get } from 'lodash'
 import { toast } from 'react-toastify'
 import {
     SET_PRODUCT,
@@ -153,8 +154,11 @@ export function buy(slug, { firstName, lastName, email, nonce }){
                 return { isSubscribed: false }
             }
         })
-        .catch((error) => {
-            dispatch(setBuyStatus(error))
+        .catch((error)=>{
+            parseJSON(error)
+            .then((error) => {
+                dispatch(setBuyStatus(error))
+            })
         })
         .finally(()=>{
             dispatch(setBuyLoading(false))
@@ -162,16 +166,25 @@ export function buy(slug, { firstName, lastName, email, nonce }){
     }
 }
 
-export function setBuyStatus(error=null, { isSubscribed, isEmailVerified, message }) {
+export function setBuyStatus(error=null, status = {}) {
+    const { isSubscribed, isEmailVerified, message } = status
+
     const action = {
         type: SET_BUY_STATUS
     }
-
+    let errorMessage
     if(error){
-        toast.error('Something went wrong! Could not complete purchase')
+        if(typeof  error === 'string'){
+            errorMessage = error
+        } else if (get(error, 'error.message')){
+            errorMessage = get(error, 'error.message')
+        } else {
+            errorMessage = 'Something went wrong! Could not complete purchase'
+        }
+        toast.error(errorMessage)
 
         action.payload = {
-            error
+            error: errorMessage
         }
     } else{
         action.payload = {
