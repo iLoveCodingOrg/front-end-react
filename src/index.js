@@ -53,68 +53,68 @@ function renderApp(){
                             draggable
                             pauseOnHover
                         />
-                        <Auth>
                         <Switch>
-                            <Route
-                                exact
-                                strict
-                                path="/login"
-                                component={Login} />
-                            <Route
-                                exact
-                                strict
-                                path="/checkout/:slug"
-                                component={Checkout} />
-                            <Wrap>
-                                <Switch>
-                                    <Route
-                                        exact
-                                        path="/"
-                                        component={Home} />
-                    
-                                    <Route
-                                        exact
-                                        strict
-                                        path="/lessons"
-                                        component={LessonList} />
-                                    <Route
-                                        exact
-                                        strict
-                                        path="/lessons/:slug"
-                                        component={LessonView} />
-                                    <Route
-                                        exact
-                                        strict
-                                        path="/lessons/:slug/edit"
-                                        component={LessonEdit} />
-                    
-                                    <Route
-                                        strict
-                                        path="/courses"
-                                        component={CourseRoutes} />
-                    
-                                    <Route
-                                        exact
-                                        strict
-                                        path="/pages"
-                                        component={PageList} />
-                                    <Route
-                                        exact
-                                        strict
-                                        path="/pages/:slug"
-                                        component={PageView} />
-                                    <Route
-                                        exact
-                                        strict
-                                        path="/pages/:slug/edit"
-                                        component={PageEdit} />
+                            <Auth>
+                                <Route
+                                    exact
+                                    strict
+                                    path="/login"
+                                    component={Login} />
+                                <Route
+                                    exact
+                                    strict
+                                    path="/checkout/:slug"
+                                    component={Checkout} />
+                                <Wrap>
+                                    <Switch>
+                                        <Route
+                                            exact
+                                            path="/"
+                                            component={Home} />
+                        
+                                        <Route
+                                            exact
+                                            strict
+                                            path="/lessons"
+                                            component={LessonList} />
+                                        <Route
+                                            exact
+                                            strict
+                                            path="/lessons/:slug"
+                                            component={LessonView} />
+                                        <Route
+                                            exact
+                                            strict
+                                            path="/lessons/:slug/edit"
+                                            component={LessonEdit} />
+                        
+                                        <Route
+                                            strict
+                                            path="/courses"
+                                            component={CourseRoutes} />
+                        
+                                        <Route
+                                            exact
+                                            strict
+                                            path="/pages"
+                                            component={PageList} />
+                                        <Route
+                                            exact
+                                            strict
+                                            path="/pages/:slug"
+                                            component={PageView} />
+                                        <Route
+                                            exact
+                                            strict
+                                            path="/pages/:slug/edit"
+                                            component={PageEdit} />
 
-                                    <Route
-                                        component={NotFound} />
-                                </Switch>
-                            </Wrap>
+                                        <Route
+                                            component={NotFound} />
+                                    </Switch>
+                                </Wrap>
+                            </Auth>
                         </Switch>
-                        </Auth>
                     </ErrorBoundary>
                 </ScrollToTop>
             </BrowserRouter>
