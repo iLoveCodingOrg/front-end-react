@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 import { actions } from '../_user'
 
@@ -27,7 +28,8 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default connect(
+// export default Auth
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps)
-(Auth)
+(Auth))

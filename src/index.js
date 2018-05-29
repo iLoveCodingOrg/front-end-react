@@ -53,8 +53,8 @@ function renderApp(){
                             draggable
                             pauseOnHover
                         />
-                        <Switch>
-                            <Auth>
+                        <Auth>
+                            <Switch>
                                 <Route
                                     exact
                                     strict
@@ -113,8 +113,8 @@ function renderApp(){
                                             component={NotFound} />
                                     </Switch>
                                 </Wrap>
-                            </Auth>
-                        </Switch>
+                            </Switch>
+                        </Auth>
                     </ErrorBoundary>
                 </ScrollToTop>
             </BrowserRouter>
