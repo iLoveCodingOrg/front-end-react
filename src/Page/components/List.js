@@ -4,6 +4,17 @@ import { connect } from 'react-redux'
 import { actions } from '../'
 import { List } from '../../_common'
 
+function ListHeader(props){
+    return (
+        <div className="d-flex flex-column align-items-center text-center mb-5">
+            <h1 className="title">All Pages</h1>
+            <p className="lead col-md-9 align-self-center">
+                List of all the pages
+            </p>
+        </div>
+    )
+}
+
 function mapStateToProps(state){
     return {
         error: state.pages.list.error,
@@ -27,5 +38,9 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps)
 ((props)=>{
-    return <List {...props} of="pages" />
+    return <List
+        {...props}
+        of="pages"
+        listHeader={ListHeader}
+    />
 })

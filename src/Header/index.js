@@ -67,7 +67,7 @@ class Header extends React.Component{
 
     renderGuest(){
         return(
-            <Link className="btn btn-outline-primary" to="/login">Student Login</Link>
+            <Link className="btn btn-sm btn-outline-primary" to="/login">Student Login</Link>
         )
     }
 

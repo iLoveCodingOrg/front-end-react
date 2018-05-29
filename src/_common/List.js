@@ -33,6 +33,7 @@ class List extends React.Component{
     }
 
     render(){
+        const ListHeaderComponent = this.props.listHeader
         return (
             <div className="container">
                 {
@@ -42,6 +43,7 @@ class List extends React.Component{
                     :
                     <div>
                         <Helmet><title>{this.getTitle()}</title></Helmet>
+                        <ListHeaderComponent />
                         {
                             this.props.list.map((item, index)=>{
                             return <Card
@@ -63,6 +65,7 @@ List.propTypes = {
     getList: PropTypes.func.isRequired,
     isLoading: PropTypes.bool.isRequired,
     list: PropTypes.array.isRequired,
+    listHeader: PropTypes.func.isRequired,
     of: PropTypes.oneOf(['lessons', 'courses', 'pages']).isRequired
 }
 
