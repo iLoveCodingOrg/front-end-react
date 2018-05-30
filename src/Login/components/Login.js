@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import queryString from 'query-string'
 
 import { LoginWrap } from '../'
 import { actions } from '../../_user'
@@ -24,10 +25,18 @@ class Login extends React.Component{
     }
     handleSubmit(event){
         event.preventDefault()
-        this.props.login(this.state.email, this.state.password)
+        
+        const { location, history, login } = this.props
+        const redirect = queryString.parse(location.search).redirect
+
+        login(this.state.email, this.state.password)
         .then(({ isSuccess })=>{
             if(isSuccess){
-                this.props.history.push('/')
+                if(redirect){
+                    history.push(redirect)
+                }else{
+                    history.push('/')
+                }
             }
         })
     }

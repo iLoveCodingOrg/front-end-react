@@ -1,6 +1,7 @@
 import './Login.scss'
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import logo from '../../_app/images/ilovecoding-logo.svg'
 
@@ -10,11 +11,11 @@ class LoginWrap extends React.Component{
     }
     render(){
         return (
-            <div className="d-flex flex-column bg-light full-screen">
+            <div className="bg-light full-screen">
                 <div className="d-flex justify-content-center navbar-brand py-3">
-                    <div className="img-wrap">
+                    <Link to="/" className="img-wrap">
                         <img src={logo} alt="iLoveCoding.org Logo" />
-                    </div>
+                    </Link>
                 </div>
                 {this.props.children}
                 <div className="text-muted text-center my-5">

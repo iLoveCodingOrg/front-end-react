@@ -12,7 +12,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onClick: () => {
-            console.log('function')
             dispatch(actionCreators.toggleShow())
         }
     }
