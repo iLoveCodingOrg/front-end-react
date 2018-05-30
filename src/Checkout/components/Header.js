@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../../_app/images/ilovecoding-logo.svg'
 
 export default function (props) {
     return (
@@ -7,7 +8,7 @@ export default function (props) {
                 <div className="d-flex align-items-center justify-content-center">
                     <div className="navbar-brand py-5 text-center">
                         <div className="img-wrap">
-                            <img src="/ilovecoding-logo.773fa887.svg" alt="iLoveCoding.org Logo" />
+                            <img src={logo} alt="iLoveCoding.org Logo" />
                         </div>
                     </div>
                     <div className="d-flex flex-column">
