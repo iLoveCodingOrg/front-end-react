@@ -4,8 +4,7 @@ import { connect } from 'react-redux'
 
 import logo from '../_app/images/ilovecoding-logo.svg'
 import { Link } from 'react-router-dom'
-import { isLoggedIn } from '../_user/selectors'
-import { actions } from '../_user'
+import { actions, selectors } from '../_user'
 
 class Header extends React.Component{
     constructor(props){
@@ -95,7 +94,7 @@ class Header extends React.Component{
 
 function mapStateToProps(state){
     return {
-        isLoggedIn: isLoggedIn(state),
+        isLoggedIn: selectors.isLoggedIn(state),
         user: state.user
     }
 }

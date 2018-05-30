@@ -1,8 +1,11 @@
 import './Login.scss'
 
 import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
+import { actions, selectors } from '../../_user'
 import logo from '../../_app/images/ilovecoding-logo.svg'
 
 class LoginWrap extends React.Component{
@@ -10,6 +13,7 @@ class LoginWrap extends React.Component{
         super(props)
     }
     render(){
+        const { isLoggedIn, firstName, lastName, logout } = this.props
         return (
             <div className="bg-light full-screen">
                 <div className="d-flex justify-content-center navbar-brand py-3">
@@ -17,7 +21,24 @@ class LoginWrap extends React.Component{
                         <img src={logo} alt="iLoveCoding.org Logo" />
                     </Link>
                 </div>
-                {this.props.children}
+
+                {
+                    isLoggedIn?
+                    <div className="text-center">
+                        <h2>
+                            Hi {firstName}! <br/>
+                        </h2>
+                        <p>
+                            You are already logged in.
+                            Not you? <button className="border-0 btn-link p-0" onClick={logout}>Log out</button>
+                        </p>
+                    </div>
+                    :
+                    this.props.children
+                }
+
+                
+                
                 <div className="text-muted text-center my-5">
                     iLoveCoding Inc. &copy; 2018
                 </div>
@@ -26,4 +47,27 @@ class LoginWrap extends React.Component{
     }
 }
 
-export default LoginWrap
+function mapStateToProps(state){
+    return {
+        isLoggedIn: selectors.isLoggedIn(state),
+        firstName: state.user.firstName,
+        lastName: state.user.lastName
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        logout: ()=>{
+            return dispatch(actions.logout())
+            .then(({ isSuccess })=>{
+                if(isSuccess){
+                    window.location.reload()
+                }
+            })
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps)(LoginWrap)
