@@ -22,6 +22,8 @@ class Login extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.renderError = this.renderError.bind(this)
+        this.renderVerifyEmailStatus = this.renderVerifyEmailStatus.bind(this)
+        this.handleVerifyEmail = this.handleVerifyEmail.bind(this)
     }
     handleSubmit(event){
         event.preventDefault()
@@ -45,12 +47,37 @@ class Login extends React.Component{
             [fieldName]: newValue
         })
     }
+    handleVerifyEmail(event){
+        event.preventDefault()
+
+        this.props.callVerifyEmail(this.state.email)
+    }
+    renderVerifyEmailStatus(){
+        const { verifyEmailStatus } = this.props
+        if(verifyEmailStatus){
+            return (
+                <div className="alert alert-success">
+                    {this.props.verifyEmailStatus}
+                </div>
+            )
+        }
+        return null
+    }
     renderError(){
         const { error } = this.props
+        const isEmailToBeVerified = (error === 'login failed as the email has not been verified')
         if(error){
             return (
                 <div className="alert alert-danger">
-                    {this.props.error}
+                    {this.props.error} &nbsp;
+                    {
+                        isEmailToBeVerified?
+                        <button
+                            onClick={this.handleVerifyEmail}
+                            className="btn-link p-0 border-0">Resend verification email</button>
+                        :
+                        null
+                    }
                 </div>
             )
         }
@@ -63,6 +90,7 @@ class Login extends React.Component{
                 <form className="form-login" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Please Login</h2>
                     <p>This login is only for students who are enrolled in one of iLoveCoding's Paid Programs.</p>
+                    {this.renderVerifyEmailStatus()}
                     {this.renderError()}
                     <div>
                         <label htmlFor="email" className="sr-only">Email address</label>
@@ -109,14 +137,16 @@ Login.propTypes = {
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     isLoading: PropTypes.bool.isRequired,
     isLoggedIn: PropTypes.bool.isRequired,
-    login: PropTypes.func.isRequired
+    login: PropTypes.func.isRequired,
+    verifyEmailStatus: PropTypes.string.isRequired
 }
 
 function mapStateToProps(state){
     return {
         error: state.user.error,
         isLoading: state.user.isLoading,
-        isLoggedIn: selectors.isLoggedIn(state)
+        isLoggedIn: selectors.isLoggedIn(state),
+        verifyEmailStatus: state.user.verifyEmailStatus
     }
 }
 
@@ -124,6 +154,9 @@ function mapDispatchToProps(dispatch){
     return {
         login: (email, password)=>{
             return dispatch(actions.login(email, password))
+        },
+        callVerifyEmail: (email, )=>{
+            return dispatch(actions.callVerifyEmail(email))
         }
     }
 }

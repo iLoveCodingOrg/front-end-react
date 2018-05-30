@@ -1,9 +1,9 @@
 import { get } from 'lodash'
-import { toast } from 'react-toastify'
 import {
     SET_USER_LOADING,
     SET_USER,
-    CLEAR_USER
+    CLEAR_USER,
+    SET_VERIFY_EMAIL
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -103,8 +103,6 @@ export function setUser(error=false, user) {
             errorMessage = 'Something went wrong! could not complete request'
         }
 
-        toast.error(errorMessage)
-
         action.payload = {
             error: errorMessage
         }
@@ -131,4 +129,64 @@ export function clearUser(){
     return {
         type: CLEAR_USER
     }
+}
+
+export function callVerifyEmail(email){
+    const url = `${API_URL}users/resend-verification-mail`
+    
+    return (dispatch) => {
+        dispatch(setLoading(true))
+
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then((json) => {
+            dispatch(setVerifyEmail(false, json))
+        })
+        .catch((error) => {
+            parseJSON(error)
+            .then((error) => {
+                dispatch(setVerifyEmail(error))
+            })
+        })
+        .finally(()=>{
+            dispatch(setLoading(false))
+        })
+    }
+}
+
+export function setVerifyEmail(error=false, message) {
+    const action = {
+        type: SET_VERIFY_EMAIL
+    }
+    let errorMessage
+    
+    if(error){
+        if(typeof  error === 'string'){
+            errorMessage = error
+        } else if (get(error, 'error.message')){
+            errorMessage = get(error, 'error.message')
+        } else {
+            errorMessage = 'Something went wrong! could not complete request'
+        }
+
+        action.payload = {
+            error: errorMessage
+        }
+    } else {
+        const message = 'We just sent you an email to verify your account! Please check your email'
+
+        action.payload = {
+            error,
+            verifyEmailStatus: message
+        }
+    }
+
+    return action
 }

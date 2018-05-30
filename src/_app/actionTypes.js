@@ -29,6 +29,7 @@ export const SET_COURSE_LOADING = 'SET_COURSE_LOADING'
 export const SET_USER = 'SET_USER'
 export const CLEAR_USER = 'CLEAR_USER'
 export const SET_USER_LOADING = 'SET_USER_LOADING'
+export const SET_VERIFY_EMAIL = 'SET_VERIFY_EMAIL'
 
 // CHECKOUT
 export const SET_PRODUCT = 'SET_PRODUCT'
