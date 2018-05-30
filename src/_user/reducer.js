@@ -2,7 +2,7 @@ import {
     SET_USER,
     CLEAR_USER,
     SET_USER_LOADING,
-    SET_VERIFY_EMAIL
+    SET_SEND_VERIFY_EMAIL
 } from '../_app/actionTypes'
 const initialState = {
     firstName: '',
@@ -32,7 +32,7 @@ export default function (state = initialState, { type, payload }) {
             }
         case CLEAR_USER:
             return initialState
-        case SET_VERIFY_EMAIL:
+        case SET_SEND_VERIFY_EMAIL:
             return {
                 ...state,
                 error: payload.error,

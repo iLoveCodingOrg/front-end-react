@@ -3,7 +3,7 @@ import {
     SET_USER_LOADING,
     SET_USER,
     CLEAR_USER,
-    SET_VERIFY_EMAIL
+    SET_SEND_VERIFY_EMAIL
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -131,7 +131,7 @@ export function clearUser(){
     }
 }
 
-export function callVerifyEmail(email){
+export function callSendVerifyEmail(email){
     const url = `${API_URL}users/resend-verification-mail`
     
     return (dispatch) => {
@@ -147,12 +147,12 @@ export function callVerifyEmail(email){
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
-            dispatch(setVerifyEmail(false, json))
+            dispatch(setSendVerifyEmail(false, json))
         })
         .catch((error) => {
             parseJSON(error)
             .then((error) => {
-                dispatch(setVerifyEmail(error))
+                dispatch(setSendVerifyEmail(error))
             })
         })
         .finally(()=>{
@@ -161,9 +161,9 @@ export function callVerifyEmail(email){
     }
 }
 
-export function setVerifyEmail(error=false, message) {
+export function setSendVerifyEmail(error=false, message) {
     const action = {
-        type: SET_VERIFY_EMAIL
+        type: SET_SEND_VERIFY_EMAIL
     }
     let errorMessage
     

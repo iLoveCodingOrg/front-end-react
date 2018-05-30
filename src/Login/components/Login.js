@@ -50,7 +50,7 @@ class Login extends React.Component{
     handleVerifyEmail(event){
         event.preventDefault()
 
-        this.props.callVerifyEmail(this.state.email)
+        this.props.callSendVerifyEmail(this.state.email)
     }
     renderVerifyEmailStatus(){
         const { verifyEmailStatus } = this.props
@@ -155,8 +155,8 @@ function mapDispatchToProps(dispatch){
         login: (email, password)=>{
             return dispatch(actions.login(email, password))
         },
-        callVerifyEmail: (email, )=>{
-            return dispatch(actions.callVerifyEmail(email))
+        callSendVerifyEmail: (email, )=>{
+            return dispatch(actions.callSendVerifyEmail(email))
         }
     }
 }
