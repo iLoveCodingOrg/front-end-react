@@ -35,6 +35,7 @@ import {
 } from './Page'
 import { Login, ForgotPassword } from './Login'
 import { Checkout } from './Checkout'
+import { VerifyEmail } from './VerifyEmail'
 
 function renderApp(){
     render(
@@ -55,6 +56,11 @@ function renderApp(){
                         />
                         <Auth>
                             <Switch>
+                                <Route
+                                    exact
+                                    strict
+                                    path="/verify-email"
+                                    component={VerifyEmail} />
                                 <Route
                                     exact
                                     strict
