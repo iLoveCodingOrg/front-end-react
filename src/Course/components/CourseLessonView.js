@@ -46,6 +46,7 @@ class CourseLessonView extends React.Component{
             duration,
             level,
             videoSource,
+            thumbnail,
             bodyContent
         } = this.props.lessonView
         
@@ -80,7 +81,11 @@ class CourseLessonView extends React.Component{
                             level={level}
                         />
                         <main>
-                            <VideoWrap videoSource={videoSource} />
+                            <VideoWrap
+                                title={title}
+                                thumbnail={thumbnail}
+                                videoSource={videoSource}
+                            />
                             <CourseNav
                                 course={courseView}
                             />

@@ -4,9 +4,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { isEmpty } from 'lodash'
+import { Link } from 'react-router-dom'
 
 import { isLoggedIn } from '../../_user/selectors'
 import { Video } from '../'
+import { IMG_URL } from '../../_app/constants'
 
 class VideoWrap extends React.Component{
     constructor(props){
@@ -14,22 +16,43 @@ class VideoWrap extends React.Component{
 
     }
     render(){
+        const {
+            thumbnail,
+            title,
+            videoSource,
+            isLoggedIn
+        } = this.props
         return (
             <div>
                 {
-                    (!isEmpty(this.props.videoSource))?
-                    <Video videoSource={this.props.videoSource} />:
-                    <div>
-                        You dont have access <br/>
-                        {
-                            (this.props.isLoggedIn)?
-                            <p>
-                                I am logged in so should upgrade plan <br/>
-                            </p>:
-                            <p>
-                                Buy, or if you already have it, login <br/>
-                            </p>
-                        }
+                    (!isEmpty(videoSource))?
+                    <Video videoSource={videoSource} />:
+                    <div className="d-flex flex-md-row flex-column alert alert-warning ">
+                        <img
+                            style={{ maxWidth: 300, maxHeight: 169 }}
+                            className="mr-md-3 mb-md-0 mb-3 rounded"
+                            src={`${IMG_URL}${thumbnail}`}
+                            alt={title}
+                        />
+                        <div>
+                            <div className="h3 font-weight-light">
+                                You do not have access to this lesson!
+                            </div>
+                            {
+                                (isLoggedIn)?
+                                <p>
+                                    <Link to="/pricing" className="btn-link p-0 border-0">Upgrade your membership</Link> to get access to this lesson along with hundreds of other lessons and complete courses.
+                                </p>:
+                                <div>
+                                    <p>
+                                        <Link to="/pricing" className="btn-link p-0 border-0">Enroll in the training</Link> to get access to this lesson along with hundreds of other lessons and complete courses.
+                                    </p>
+                                    <p>
+                                        Already enrolled? <Link to="/login" className="btn-link p-0 border-0">Login</Link>
+                                    </p>
+                                </div>
+                            }
+                        </div>
                     </div>
                 }
             </div>
@@ -39,6 +62,7 @@ class VideoWrap extends React.Component{
 
 VideoWrap.propTypes = {
     isLoggedIn: PropTypes.bool.isRequired,
+    thumbnail: PropTypes.string,
     videoSource: PropTypes.string
 }
 

@@ -8,7 +8,7 @@ function ListHeader(props){
     return (
         <div className="d-flex flex-column align-items-center text-center mb-5">
             <h1 className="title">All Pages</h1>
-            <p className="lead col-md-9 align-self-center">
+            <p className="lead col-lg-9 align-self-center">
                 List of all the pages
             </p>
         </div>

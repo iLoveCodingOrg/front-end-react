@@ -36,6 +36,7 @@ class View extends React.Component{
             duration,
             courseTotalDuration,
             level,
+            thumbnail,
             videoSource,
             bodyContent
         } = this.props.view
@@ -57,7 +58,11 @@ class View extends React.Component{
                             level={level}
                             />
                         <main>
-                            <VideoWrap videoSource={videoSource} />
+                            <VideoWrap
+                                title={title}
+                                thumbnail={thumbnail}
+                                videoSource={videoSource}
+                            />
                             {this.props.children}
                             <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
                         </main>
