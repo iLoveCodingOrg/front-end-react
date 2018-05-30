@@ -3,6 +3,7 @@ import './Login.scss'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withRouter, Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import { LoginWrap } from '../'
 
@@ -13,6 +14,7 @@ class ForgotPassword extends React.Component{
     render(){
         return (
             <LoginWrap>
+                <Helmet><title>Forgot Password of iLoveCoding?</title></Helmet>
                 <form className="form-forgot-password" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Forgot Password?</h2>
                     <p>Please enter your email to search for your account.</p>

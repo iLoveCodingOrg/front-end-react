@@ -1,3 +1,5 @@
+import { get } from 'lodash'
+import { toast } from 'react-toastify'
 import {
     SET_USER,
     CLEAR_USER
@@ -7,15 +9,6 @@ import {
     checkStatus,
     parseJSON
 } from '../_app/utils'
-
-export function showError(error) {
-    return {
-        type: 'SHOW_ERROR',
-        payload: {
-            error
-        }
-    }
-}
 
 export function login(email, password){
     const url = `${API_URL}users/login`
@@ -33,11 +26,14 @@ export function login(email, password){
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
-            dispatch(setUser(json))
+            dispatch(setUser(false, json))
             return { isSuccess: true }
         })
-        .catch((err) => {
-            dispatch(showError(err))
+        .catch((error) => {
+            parseJSON(error)
+            .then((error) => {
+                dispatch(setUser(error))
+            })
             return { isSuccess: false }
         })
     }
@@ -57,8 +53,8 @@ export function logout(){
             return { isSuccess: true }
         })
         .catch((error) => {
-            console.log(error)
-            dispatch(showError(error))
+            dispatch(setUser(error))
+            dispatch(clearUser())
             return { isSuccess: false }
         })
     }
@@ -72,18 +68,35 @@ export function getUser(){
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
-            dispatch(setUser(json))
-        })
-        .catch((err) => {
-            dispatch(showError(err))
+            dispatch(setUser(false, json))
         })
     }
 }
 
-export function setUser({ userData }) {
-    return {
-        type: SET_USER,
-        payload: {
+export function setUser(error=false, user) {
+    const action = {
+        type: SET_USER
+    }
+    let errorMessage
+    
+    if(error){
+        if(typeof  error === 'string'){
+            errorMessage = error
+        } else if (get(error, 'error.message')){
+            errorMessage = get(error, 'error.message')
+        } else {
+            errorMessage = 'Something went wrong! Could not complete purchase'
+        }
+
+        toast.error(errorMessage)
+
+        action.payload = {
+            error: errorMessage
+        }
+    } else {
+        const { userData } = user
+        action.payload = {
+            error,
             user: {
                 braintreeCustomerId: userData.braintreeCustomerId,
                 email: userData.email,
@@ -95,6 +108,8 @@ export function setUser({ userData }) {
             }
         }
     }
+
+    return action
 }
 
 export function clearUser(){
