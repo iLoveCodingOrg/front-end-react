@@ -1,7 +1,7 @@
 import Login from './components/Login'
-import ForgetPassword from './components/ForgetPassword'
+import ForgotPassword from './components/ForgotPassword'
 
 export {
     Login,
-    ForgetPassword
+    ForgotPassword
 }

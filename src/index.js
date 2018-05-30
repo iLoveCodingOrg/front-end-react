@@ -33,7 +33,7 @@ import {
     List as PageList,
     NotFound
 } from './Page'
-import { Login } from './Login'
+import { Login, ForgotPassword } from './Login'
 import { Checkout } from './Checkout'
 
 function renderApp(){
@@ -55,6 +55,11 @@ function renderApp(){
                         />
                         <Auth>
                             <Switch>
+                                <Route
+                                    exact
+                                    strict
+                                    path="/forgot-password"
+                                    component={ForgotPassword} />
                                 <Route
                                     exact
                                     strict

@@ -1,7 +1,6 @@
-.form-login{
+.form-login, .form-forgot-password{
   width: 100%;
   max-width: 330px;
-  padding: 15px;
   margin: 0 auto;
 
   .form-control{
@@ -10,14 +9,16 @@
       z-index: 2;
     }  
   }
-  
+  input[type='password']{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+.form-login {
   input[type='email']{
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-  }
-  input[type='password']{
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
   }
 }

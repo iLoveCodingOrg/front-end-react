@@ -35,12 +35,12 @@ class Login extends React.Component{
     render(){
         return (
             <div className="d-flex flex-column bg-light full-screen">
-                <form className="form-login" onSubmit={this.handleSubmit}>
-                    <div class="d-flex justify-content-center navbar-brand py-3">
-                        <div class="img-wrap">
-                            <img src={logo} alt="iLoveCoding.org Logo" />
-                        </div>
+                <div class="d-flex justify-content-center navbar-brand py-3">
+                    <div class="img-wrap">
+                        <img src={logo} alt="iLoveCoding.org Logo" />
                     </div>
+                </div>
+                <form className="form-login" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Please Login</h2>
                     <p>This login is only for students who are enrolled in one of iLoveCoding's Paid Programs.</p>
                     <div>
