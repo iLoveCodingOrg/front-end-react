@@ -10,7 +10,7 @@ const initialState = {
     emailHash: '',
     activePlans: [],
     error: false,
-    isLoading: true
+    isLoading: false
 }
 
 export default function (state = initialState, { type, payload }) {
@@ -22,7 +22,10 @@ export default function (state = initialState, { type, payload }) {
             }
         case SET_USER:
             return {
-                ...payload.user
+                ...state,
+                ...payload.user,
+                error: payload.error,
+                isLoading: false
             }
         case CLEAR_USER:
             return initialState

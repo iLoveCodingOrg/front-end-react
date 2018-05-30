@@ -1,12 +1,14 @@
 import './Login.scss'
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import { LoginWrap } from '../'
 import { actions } from '../../_user'
+import { selectors } from '../../_user'
 
 class Login extends React.Component{
     constructor(props){
@@ -18,6 +20,7 @@ class Login extends React.Component{
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.renderError = this.renderError.bind(this)
     }
     handleSubmit(event){
         event.preventDefault()
@@ -33,6 +36,17 @@ class Login extends React.Component{
             [fieldName]: newValue
         })
     }
+    renderError(){
+        const { error } = this.props
+        if(error){
+            return (
+                <div className="alert alert-danger">
+                    {this.props.error}
+                </div>
+            )
+        }
+        return null
+    }
     render(){
         return (
             <LoginWrap>
@@ -40,6 +54,7 @@ class Login extends React.Component{
                 <form className="form-login" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Please Login</h2>
                     <p>This login is only for students who are enrolled in one of iLoveCoding's Paid Programs.</p>
+                    {this.renderError()}
                     <div>
                         <label htmlFor="email" className="sr-only">Email address</label>
                         <input
@@ -65,9 +80,10 @@ class Login extends React.Component{
                     </div>
                     <div>
                         <input
+                            disabled={this.props.isLoading}
                             type="submit"
                             name="Login"
-                            value="Login"
+                            value={this.props.isLoading? 'Logging in ...' : 'Login'}
                             className="my-3 btn btn-lg btn-primary btn-block"
                         />
                     </div>
@@ -80,9 +96,18 @@ class Login extends React.Component{
     }
 }
 
+Login.propTypes = {
+    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+    isLoading: PropTypes.bool.isRequired,
+    isLoggedIn: PropTypes.bool.isRequired,
+    login: PropTypes.func.isRequired
+}
+
 function mapStateToProps(state){
     return {
-        isLoggedIn: state.user.emailHash
+        error: state.user.error,
+        isLoading: state.user.isLoading,
+        isLoggedIn: selectors.isLoggedIn(state)
     }
 }
 

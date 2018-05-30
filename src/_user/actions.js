@@ -1,6 +1,7 @@
 import { get } from 'lodash'
 import { toast } from 'react-toastify'
 import {
+    SET_USER_LOADING,
     SET_USER,
     CLEAR_USER
 } from '../_app/actionTypes'
@@ -10,10 +11,21 @@ import {
     parseJSON
 } from '../_app/utils'
 
+export function setLoading(isLoading=true) {
+    return {
+        type: SET_USER_LOADING,
+        payload: {
+            isLoading
+        }
+    }
+}
+
 export function login(email, password){
     const url = `${API_URL}users/login`
     
     return (dispatch) => {
+        dispatch(setLoading(true))
+
         return fetch(url, {
             method: 'POST',
             headers: {
@@ -35,6 +47,9 @@ export function login(email, password){
                 dispatch(setUser(error))
             })
             return { isSuccess: false }
+        })
+        .finally(()=>{
+            dispatch(setLoading(false))
         })
     }
 }
@@ -85,7 +100,7 @@ export function setUser(error=false, user) {
         } else if (get(error, 'error.message')){
             errorMessage = get(error, 'error.message')
         } else {
-            errorMessage = 'Something went wrong! Could not complete purchase'
+            errorMessage = 'Something went wrong! could not complete request'
         }
 
         toast.error(errorMessage)
