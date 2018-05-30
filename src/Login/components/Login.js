@@ -4,8 +4,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 
+import { LoginWrap } from '../'
 import { actions } from '../../_user'
-import logo from '../../_app/images/ilovecoding-logo.svg'
 
 class Login extends React.Component{
     constructor(props){
@@ -19,7 +19,7 @@ class Login extends React.Component{
         this.handleChange = this.handleChange.bind(this)
     }
     handleSubmit(event){
-        event.preventDefault();
+        event.preventDefault()
         this.props.login(this.state.email, this.state.password)
         .then(({ isSuccess })=>{
             if(isSuccess){
@@ -34,17 +34,12 @@ class Login extends React.Component{
     }
     render(){
         return (
-            <div className="d-flex flex-column bg-light full-screen">
-                <div class="d-flex justify-content-center navbar-brand py-3">
-                    <div class="img-wrap">
-                        <img src={logo} alt="iLoveCoding.org Logo" />
-                    </div>
-                </div>
+            <LoginWrap>
                 <form className="form-login" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Please Login</h2>
                     <p>This login is only for students who are enrolled in one of iLoveCoding's Paid Programs.</p>
                     <div>
-                        <label for="email" class="sr-only">Email address</label>
+                        <label htmlFor="email" className="sr-only">Email address</label>
                         <input
                             name="email"
                             type="email"
@@ -56,7 +51,7 @@ class Login extends React.Component{
                         />
                     </div>
                     <div>
-                        <label for="password" class="sr-only">Password</label>
+                        <label htmlFor="password" className="sr-only">Password</label>
                         <input
                             name="password"
                             type="password"
@@ -75,14 +70,10 @@ class Login extends React.Component{
                         />
                     </div>
                     <div className="text-center">
-                        <Link to="/forgot-password">Forgot Password</Link>
-                    </div>
-                    <div className="text-muted text-center my-5">
-                        iLoveCoding Inc. &copy; 2018
+                        <Link to="/forgot-password">Forgot Password?</Link>
                     </div>
                 </form>
-
-            </div>
+            </LoginWrap>
         )
     }
 }
