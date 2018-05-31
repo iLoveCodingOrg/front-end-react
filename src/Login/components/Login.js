@@ -86,7 +86,7 @@ class Login extends React.Component{
     render(){
         return (
             <LoginWrap>
-                <Helmet><title>Login to iLoveCoding?</title></Helmet>
+                <Helmet><title>Login to iLoveCoding</title></Helmet>
                 <form className="form-login" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Please Login</h2>
                     <p>This login is only for students who are enrolled in one of iLoveCoding's Paid Programs.</p>
