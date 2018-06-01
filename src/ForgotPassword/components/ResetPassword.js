@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import Loading from '../../Loading'
+import WrapMini from '../../WrapMini'
 import { actions } from '../'
 
 class ResetPassword extends React.Component {
@@ -100,6 +100,7 @@ class ResetPassword extends React.Component {
 
     render(){
         return (
+            <WrapMini>
             <div className="container">
                 <div className="row">
                     <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
@@ -157,6 +158,7 @@ class ResetPassword extends React.Component {
                     </div>
                 </div>
             </div>
+            </WrapMini>
         )
     }
 }

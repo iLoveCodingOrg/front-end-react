@@ -1,14 +1,14 @@
-import './Login.scss'
+import './style.scss'
 
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { actions, selectors } from '../../_user'
-import logo from '../../_app/images/ilovecoding-logo.svg'
+import { actions, selectors } from '../_user'
+import logo from '../_app/images/ilovecoding-logo.svg'
 
-class LoginWrap extends React.Component{
+class WrapMini extends React.Component{
     constructor(props){
         super(props)
     }
@@ -70,4 +70,4 @@ function mapDispatchToProps(dispatch){
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps)(LoginWrap)
+    mapDispatchToProps)(WrapMini)

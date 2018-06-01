@@ -33,10 +33,10 @@ import {
     List as PageList,
     NotFound
 } from './Page'
-import { Login, ForgotPassword } from './Login'
+import { Login } from './Login'
 import { Checkout } from './Checkout'
 import { VerifyEmail } from './VerifyEmail'
-import { ResetPassword } from './ResetPassword'
+import { ResetPassword, ForgotPassword } from './ForgotPassword'
 
 function renderApp(){
     render(
@@ -70,6 +70,11 @@ function renderApp(){
                                 <Route
                                     exact
                                     strict
+                                    path="/reset-password/:accessToken"
+                                    component={ResetPassword} />
+                                <Route
+                                    exact
+                                    strict
                                     path="/login"
                                     component={Login} />
                                 <Route
@@ -83,7 +88,7 @@ function renderApp(){
                                             exact
                                             path="/"
                                             component={Home} />
-                        
+
                                         <Route
                                             exact
                                             strict
@@ -99,7 +104,7 @@ function renderApp(){
                                             strict
                                             path="/lessons/:slug/edit"
                                             component={LessonEdit} />
-                        
+
                                         <Route
                                             strict
                                             path="/courses"
@@ -120,13 +125,7 @@ function renderApp(){
                                             strict
                                             path="/pages/:slug/edit"
                                             component={PageEdit} />
-                                
-                                        <Route
-                                            exact
-                                            strict
-                                            path="/reset-password/:accessToken"
-                                            component={ResetPassword} />
-                                
+
                                         <Route
                                             component={NotFound} />
                                     </Switch>

@@ -1,11 +1,9 @@
-import './Login.scss'
-
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import { validateField } from '../../_app/utils'
 
-import { LoginWrap } from '../'
+import WrapMini from '../../WrapMini'
 
 class ForgotPassword extends React.Component{
     constructor(props){
@@ -54,7 +52,7 @@ class ForgotPassword extends React.Component{
 
     render(){
         return (
-            <LoginWrap>
+            <WrapMini>
                 <Helmet><title>Forgot Password of iLoveCoding?</title></Helmet>
                 <form className="form-forgot-password" onSubmit={this.handleSubmit} noValidate>
                     <h2 className="text-center">Forgot Password?</h2>
@@ -85,7 +83,7 @@ class ForgotPassword extends React.Component{
                         <Link to="/login"> 🔙 Back to login</Link>
                     </div>
                 </form>
-            </LoginWrap>
+            </WrapMini>
         )
     }
 }

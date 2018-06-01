@@ -1,5 +1,3 @@
-import './Login.scss'
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -7,7 +5,7 @@ import { withRouter, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import queryString from 'query-string'
 
-import { LoginWrap } from '../'
+import WrapMini from '../../WrapMini'
 import { actions } from '../../_user'
 import { selectors } from '../../_user'
 
@@ -85,7 +83,7 @@ class Login extends React.Component{
     }
     render(){
         return (
-            <LoginWrap>
+            <WrapMini>
                 <Helmet><title>Login to iLoveCoding</title></Helmet>
                 <form className="form-login" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Please Login</h2>
@@ -128,7 +126,7 @@ class Login extends React.Component{
                         <Link to="/forgot-password">Forgot Password?</Link>
                     </div>
                 </form>
-            </LoginWrap>
+            </WrapMini>
         )
     }
 }
