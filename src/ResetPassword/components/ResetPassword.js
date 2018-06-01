@@ -13,7 +13,8 @@ class ResetPassword extends React.Component {
             password: '',
             confirmPassword: '',
             isPasswordMatch: true,
-            error: false
+            error: false,
+            isLoading: false
         }
 
         this.renderError = this.renderError.bind(this)
@@ -29,17 +30,21 @@ class ResetPassword extends React.Component {
         const { accessToken } = this.props.match.params
         const { email, password } = this.state
         
-        this.props.callResetPassword(accessToken, email, password)
-            .then((response)=>{
-                console.log('response', response)
-                if(response.isSuccess){
-                    this.props.history.push('/login')
-                } else {
-                    this.setState({
-                        error: response.message
-                    })
-                }
-            })
+        this.setState({ isLoading: true }, ()=>{
+            this.props.callResetPassword(accessToken, email, password)
+                .then((response)=>{
+                    if(response.isSuccess){
+                        this.props.history.push('/login')
+                    } else {
+                        this.setState({
+                            error: response.message
+                        })
+                    }
+                })
+                .finally(()=>{
+                    this.setState({ isLoading: false })
+                })
+        })
     }
 
     handleSubmit(event){
@@ -98,7 +103,8 @@ class ResetPassword extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                        <h1>Reset Password</h1>
+                        <h1 className="text-center">Reset Password</h1>
+                        <hr />
                         <form onSubmit={this.handleSubmit}>
                             {this.renderError()}
                             <div className="form-group row">
@@ -141,7 +147,12 @@ class ResetPassword extends React.Component {
                                     {this.renderPasswordMatchError()}
                                 </div>
                             </div>
-                            <input className="btn btn-primary btn-block" type="submit" value="Set New Password"/>
+                            <input
+                                disabled={this.state.isLoading || !this.state.isPasswordMatch}
+                                className="btn btn-primary btn-block"
+                                type="submit"
+                                value={(this.state.isLoading)? 'Loading...': 'Set New Password'}
+                            />
                         </form>
                     </div>
                 </div>
