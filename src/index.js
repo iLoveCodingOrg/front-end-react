@@ -36,6 +36,7 @@ import {
 import { Login, ForgotPassword } from './Login'
 import { Checkout } from './Checkout'
 import { VerifyEmail } from './VerifyEmail'
+import { ResetPassword } from './ResetPassword'
 
 function renderApp(){
     render(
@@ -119,7 +120,13 @@ function renderApp(){
                                             strict
                                             path="/pages/:slug/edit"
                                             component={PageEdit} />
-
+                                
+                                        <Route
+                                            exact
+                                            strict
+                                            path="/reset-password/:accessToken"
+                                            component={ResetPassword} />
+                                
                                         <Route
                                             component={NotFound} />
                                     </Switch>

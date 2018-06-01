@@ -162,7 +162,7 @@ export function callSendVerifyEmail(email){
     }
 }
 
-export function setSendVerifyEmail(error=false, message) {
+export function setSendVerifyEmail(error=false) {
     const action = {
         type: SET_SEND_VERIFY_EMAIL
     }
