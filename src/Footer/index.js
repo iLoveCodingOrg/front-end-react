@@ -1,44 +1,33 @@
 import React from 'react'
-import logo from '../_app/images/ilovecoding-logo.svg'
-import styles from './styles'
+import { Link } from 'react-router-dom'
 
 export default () => (
     <footer className="container pt-4 my-md-5 pt-md-5 border-top">
-        <div className="row">
-            <div className="col-4 text-center">
-                <h5>Features</h5>
+        <div className="d-flex justify-content-around">
+            <div className="">
+                <h5>Students</h5>
                 <ul className="list-unstyled text-small">
-                    <li><a className="text-muted" href="#">Cool stuff</a></li>
-                    <li><a className="text-muted" href="#">Random feature</a></li>
-                    <li><a className="text-muted" href="#">Team feature</a></li>
-                    <li><a className="text-muted" href="#">Stuff for developers</a></li>
-                    <li><a className="text-muted" href="#">Another one</a></li>
-                    <li><a className="text-muted" href="#">Last time</a></li>
+                    <li><Link to="/courses" className="text-muted">All Courses</Link></li>
+                    <li><Link to="/" className="text-muted">Submit success story</Link></li>
+                    <li><Link to="/" className="text-muted">Podcast</Link></li>
                 </ul>
             </div>
-            <div className="col-4 text-center">
-                <h5>Resources</h5>
+            <div className="">
+                <h5>Company</h5>
                 <ul className="list-unstyled text-small">
-                    <li><a className="text-muted" href="#">Resource</a></li>
-                    <li><a className="text-muted" href="#">Resource name</a></li>
-                    <li><a className="text-muted" href="#">Another resource</a></li>
-                    <li><a className="text-muted" href="#">Final resource</a></li>
+                    <li><Link to="/" className="text-muted">Blog</Link></li>
+                    <li><Link to="/" className="text-muted">Affiliates</Link></li>
+                    <li><Link to="/pages/about" className="text-muted">About us</Link></li>
                 </ul>
             </div>
-            <div className="col-4 text-center">
-                <h5>About</h5>
-                <ul className="list-unstyled text-small">
-                    <li><a className="text-muted" href="#">Team</a></li>
-                    <li><a className="text-muted" href="#">Locations</a></li>
-                    <li><a className="text-muted" href="#">Privacy</a></li>
-                    <li><a className="text-muted" href="#">Terms</a></li>
-                </ul>
-            </div>
-            <div className="col-12 text-center">
-                <small className="d-block my-3 text-muted">
-                    © 2018 iLoveCoding Inc.
-                </small>
-            </div>
+        </div>
+        <div className="col-12 text-center">
+            <small className="d-block my-3 text-muted">
+                © 2018 iLoveCoding Inc.
+                <Link to="/pages/privacy" className="pl-1 text-muted"><u>Privacy</u></Link>
+                <Link to="/pages/terms" className="pl-1 text-muted"><u>Terms</u></Link>
+
+            </small>
         </div>
     </footer>
 )

@@ -1,5 +1,7 @@
-import * as actionCreators from './actionCreators'
-import reducer from './reducer'
-import Home from './components/HomeContainer'
+import * as actions from './actions'
+import Home from './components/Home'
 
-export { reducer, actionCreators, Home }
+export {
+    actions,
+    Home
+}

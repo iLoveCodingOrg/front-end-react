@@ -9,34 +9,40 @@ import { actions, selectors } from '../_user'
 class Header extends React.Component{
     constructor(props){
         super(props)
-        this.printLinks = this.printLinks.bind(this)
-        this.printLinks2 = this.printLinks2.bind(this)
+        this.printLinksLeft = this.printLinksLeft.bind(this)
+        this.printLinksRight = this.printLinksRight.bind(this)
         this.renderUser = this.renderUser.bind(this)
         this.renderGuest = this.renderGuest.bind(this)
     }
 
-    printLinks2(){
-        const links = [{
-            label: 'Lessons',
-            link: '/lessons'
-        }, {
-            label: 'Courses',
-            link: '/courses'
-        }]
+    printLinksLeft(){
+        const links = [
+            // {
+            //     label: 'Lessons',
+            //     link: '/lessons'
+            // },
+            // {
+            //     label: 'Courses',
+            //     link: '/courses'
+            // }
+        ]
 
         return links.map(({ label, link }, index)=> (
             <Link key={index} className="p-2 text-secondary" to={link}>{label}</Link>
         ))
     }
 
-    printLinks(){
-        const links = [{
-            label: 'Start Here',
-            link: '#'
-        }, {
-            label: 'Success Stories',
-            link: '#'
-        }]
+    printLinksRight(){
+        const links = [
+            // {
+            //     label: 'Start Here',
+            //     link: '#'
+            // },
+            // {
+            //     label: 'Pricing',
+            //     link: '/pricing'
+            // }
+        ]
 
         return links.map(({ label, link }, index)=> (
             <Link key={index} className="p-2 text-secondary" to={link}>{label}</Link>
@@ -79,10 +85,10 @@ class Header extends React.Component{
                     </Link>
                 </div>
                 <nav className="my-2 my-md-0 ml-md-0 mr-md-auto">
-                    {this.printLinks2()}
+                    {this.printLinksLeft()}
                 </nav>
                 <nav className="my-2 my-md-0 mr-md-3">
-                    {this.printLinks()}
+                    {this.printLinksRight()}
                 </nav>
                 {
                     this.props.isLoggedIn? this.renderUser() : this.renderGuest()
