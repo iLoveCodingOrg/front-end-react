@@ -1,6 +1,6 @@
 import React from 'react'
 import { isEmailValid } from '../../_app/utils'
-import { isLoggedIn } from '../../_user/selectors';
+import { validateField } from '../../_app/utils'
 
 class UserForm extends React.Component{
     constructor(props){
@@ -8,7 +8,6 @@ class UserForm extends React.Component{
         this.handleFirstName = this.handleFirstName.bind(this)
         this.handleLastName = this.handleLastName.bind(this)
         this.handleEmail = this.handleEmail.bind(this)
-        this.validate = this.validate.bind(this)
         this.renderLogoutOption = this.renderLogoutOption.bind(this)
         this.renderInlineError = this.renderInlineError.bind(this)
     }
@@ -23,7 +22,7 @@ class UserForm extends React.Component{
             ...this.props.userInfo,
             firstName: {
                 value,
-                error: this.validate(value, options)
+                error: validateField(value, options)
             }
         })
     }
@@ -38,7 +37,7 @@ class UserForm extends React.Component{
             ...this.props.userInfo,
             lastName: {
                 value,
-                error: this.validate(value, options)
+                error: validateField(value, options)
             }
         })
     }
@@ -54,23 +53,9 @@ class UserForm extends React.Component{
             ...this.props.userInfo,
             email: {
                 value,
-                error: this.validate(value, options)
+                error: validateField(value, options)
             }
         })
-    }
-    
-    validate(value, { isRequired, isEmail }) {
-        let error = ''
-
-        if(isRequired){
-            error = !value.length? 'Please enter the information' : ''
-        }
-        
-        if(isEmail){
-            error = !isEmailValid(value)? 'Please enter a valid email' : ''
-        }
-
-        return error
     }
 
     renderLogoutOption(){
