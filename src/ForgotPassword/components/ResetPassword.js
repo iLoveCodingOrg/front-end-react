@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { Helmet } from 'react-helmet'
 
 import WrapMini from '../../WrapMini'
 import { actions } from '../'
@@ -101,72 +102,77 @@ class ResetPassword extends React.Component {
     render(){
         return (
             <WrapMini>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                        <h1 className="text-center">Reset Password</h1>
-                        <hr />
-                        <form onSubmit={this.handleSubmit}>
-                            {this.renderError()}
-                            <div className="form-group row">
-                                <label className="col-md-3" htmlFor="email">Confirm Email</label>
-                                <div className="col-md-9">
-                                    <input
-                                        className="form-control"
-                                        type="email"
-                                        name="email"
-                                        placeholder="Confirm Email"
-                                        onChange={this.handleEmail}
-                                        required
-                                    />
+                <Helmet><title>Reset new password for iLoveCoding</title></Helmet>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                            <h2 className="text-center">Reset Password</h2>
+                            <hr />
+                            <form onSubmit={this.handleSubmit}>
+                                {this.renderError()}
+                                <div className="form-group row">
+                                    <label className="col-md-3" htmlFor="email">Confirm Email</label>
+                                    <div className="col-md-9">
+                                        <input
+                                            className="form-control"
+                                            type="email"
+                                            name="email"
+                                            placeholder="Confirm Email"
+                                            onChange={this.handleEmail}
+                                            required
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="form-group row">
-                                <label className="col-md-3" htmlFor="password">New Password</label>
-                                <div className="col-md-9">
-                                    <input
-                                        className="form-control"
-                                        type="password"
-                                        name="password"
-                                        placeholder="Enter new password"
-                                        onChange={this.handlePassword}
-                                        required
-                                    />
+                                <div className="form-group row">
+                                    <label className="col-md-3" htmlFor="password">New Password</label>
+                                    <div className="col-md-9">
+                                        <input
+                                            className="form-control"
+                                            type="password"
+                                            name="password"
+                                            placeholder="Enter new password"
+                                            onChange={this.handlePassword}
+                                            required
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="form-group row">
-                                <label className="col-md-3" htmlFor="confirmPassword">Confirm New Password</label>
-                                <div className="col-md-9">
-                                    <input
-                                        className="form-control"
-                                        type="password"
-                                        name="confirmPassword"
-                                        placeholder="Re-enter new password"
-                                        onChange={this.handleConfirmPassword}
-                                        required
-                                    />
-                                    {this.renderPasswordMatchError()}
+                                <div className="form-group row">
+                                    <label className="col-md-3" htmlFor="confirmPassword">
+                                        Confirm New Password
+                                    </label>
+                                    <div className="col-md-9">
+                                        <input
+                                            className="form-control"
+                                            type="password"
+                                            name="confirmPassword"
+                                            placeholder="Re-enter new password"
+                                            onChange={this.handleConfirmPassword}
+                                            required
+                                        />
+                                        {this.renderPasswordMatchError()}
+                                    </div>
                                 </div>
-                            </div>
-                            <input
-                                disabled={this.state.isLoading || !this.state.isPasswordMatch}
-                                className="btn btn-primary btn-block"
-                                type="submit"
-                                value={(this.state.isLoading)? 'Loading...': 'Set New Password'}
-                            />
-                        </form>
+                                <input
+                                    disabled={this.state.isLoading || !this.state.isPasswordMatch}
+                                    className="btn btn-lg btn-primary btn-block"
+                                    type="submit"
+                                    value={(this.state.isLoading)? 'Loading...': 'Set New Password'}
+                                />
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
             </WrapMini>
         )
     }
 }
 
-function mapStateToProps(state){
-    return {
-        // isLoading: state.resetPassword.isLoading
-    }
+ResetPassword.propTypes = {
+    callResetPassword: PropTypes.func.isRequired
+}
+
+function mapStateToProps(){
+    return {}
 }
 
 function mapDispatchToProps(dispatch){

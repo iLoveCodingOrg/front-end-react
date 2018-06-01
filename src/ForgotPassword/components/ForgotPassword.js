@@ -1,15 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
-import { validateField } from '../../_app/utils'
 
+import { validateField } from '../../_app/utils'
 import WrapMini from '../../WrapMini'
+import { actions } from '../'
 
 class ForgotPassword extends React.Component{
     constructor(props){
         super(props)
 
         this.state = {
+            isLoading: false,
+            error: false,
             email: {
                 value: 'error',
                 error: true
@@ -24,6 +29,21 @@ class ForgotPassword extends React.Component{
     handleSubmit(event){
         event.preventDefault()
 
+        this.setState({ isLoading: true }, ()=>{
+            this.props.callForgotPassword(this.state.email.value)
+                .then((response)=>{
+                    if(response.isSuccess){
+                        this.setState({ error: false })
+                    } else {
+                        this.setState({
+                            error: response.message
+                        })
+                    }
+                })
+                .finally(()=>{
+                    this.setState({ isLoading: false })
+                })
+        })
     }
 
     handleEmail(event){
@@ -50,6 +70,19 @@ class ForgotPassword extends React.Component{
         }
     }
 
+    renderError(){
+        const { error } = this.state
+        if(error){
+            return (
+                <div className="alert alert-danger">
+                    {error}
+                </div>
+            )
+        } else {
+            return null
+        }
+    }
+
     render(){
         return (
             <WrapMini>
@@ -57,6 +90,7 @@ class ForgotPassword extends React.Component{
                 <form className="form-forgot-password" onSubmit={this.handleSubmit} noValidate>
                     <h2 className="text-center">Forgot Password?</h2>
                     <p>Please enter your email to search for your account.</p>
+                    {this.renderError()}
                     <div>
                         <label htmlFor="email" className="sr-only">Email address</label>
                         <input
@@ -72,11 +106,10 @@ class ForgotPassword extends React.Component{
                     </div>
                     <div>
                         <input
-                            disabled={this.state.email.error}
-                            type="submit"
-                            name="submit"
-                            value="Get new password"
+                            disabled={this.state.isLoading || this.state.email.error}
                             className="my-3 btn btn-lg btn-primary btn-block"
+                            type="submit"
+                            value={(this.state.isLoading)? 'Loading...': 'Get new password'}
                         />
                     </div>
                     <div className="text-center">
@@ -88,4 +121,23 @@ class ForgotPassword extends React.Component{
     }
 }
 
-export default ForgotPassword
+ForgotPassword.propTypes = {
+    callForgotPassword: PropTypes.func.isRequired
+}
+
+function mapStateToProps(){
+    return {}
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        callForgotPassword: (email)=>{
+            return dispatch(actions.callForgotPassword(email))
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps)
+(ForgotPassword)
