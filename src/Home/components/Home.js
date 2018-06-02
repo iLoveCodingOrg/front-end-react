@@ -1,4 +1,6 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
+
 import AboutAziz from './AboutAziz'
 import HomeForm from './HomeForm'
 
@@ -9,6 +11,11 @@ class Home extends React.Component{
     render(){
         return (
             <div className="d-flex flex-column">
+                <Helmet>
+                    <title>
+                        iLoveCoding: Master Javascript, Learn via Video Screencasts
+                    </title>
+                </Helmet>
                 <section className="
                     align-self-center
                     text-center
