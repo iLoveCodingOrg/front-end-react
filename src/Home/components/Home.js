@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutAziz from './AboutAziz'
+import HomeForm from './HomeForm'
 
 class Home extends React.Component{
     constructor(props){
@@ -26,33 +27,7 @@ class Home extends React.Component{
                         <p className="lead text-muted">
                             Enroll in my Free 5 lesson email course where I show you the exact strategies I used to go from a struggling newbie to a professional web developer.
                         </p>
-
-                        <div className="d-none d-sm-block">
-                            <div className="input-group">
-                                <input
-                                    autoFocus
-                                    type="text"
-                                    className="form-control form-control-lg border-primary"
-                                    placeholder="Enter your email address"
-                                    />
-                                <div className="input-group-prepend">
-                                    <button className="btn btn-lg btn-primary rounded-right">
-                                        Send Me Lesson #1
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="d-sm-none">
-                            <input
-                                type="text"
-                                className="form-control form-control-lg mb-3 border-primary"
-                                placeholder="Enter your email address"
-                            />
-                            <button className="btn btn-lg btn-primary btn-block">
-                                Send Me Lesson #1
-                            </button>
-                        </div>
+                        <HomeForm />
                     </div>
                 </section>
                 {/* <div className="bg-gray-100 mt-5">
