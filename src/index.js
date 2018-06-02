@@ -37,6 +37,7 @@ import { Login } from './Login'
 import { Checkout } from './Checkout'
 import { VerifyEmail } from './VerifyEmail'
 import { ResetPassword, ForgotPassword } from './ForgotPassword'
+import Analytics from './Analytics'
 
 function renderApp(){
     render(
@@ -44,6 +45,7 @@ function renderApp(){
             <BrowserRouter>
                 <ScrollToTop>
                     <ErrorBoundary>
+                        <Route path="/" component={Analytics} />
                         <ToastContainer
                             position="top-center"
                             autoClose={5000}
