@@ -41,6 +41,7 @@ class View extends React.Component{
             bodyContent
         } = this.props.view
         const isFree = (access)? false : true
+        const { of } = this.props
         return (
             <div className="container">
                 {
@@ -51,20 +52,27 @@ class View extends React.Component{
                     <div>
                         <Helmet><title>{title}</title></Helmet>
                         <ViewHeader
+                            of={of}
                             title={title}
                             subTitle={subTitle}
                             isFree={isFree}
                             duration={ courseTotalDuration || duration }
                             level={level}
-                            />
+                        />
                         <main>
-                            <VideoWrap
-                                title={title}
-                                thumbnail={thumbnail}
-                                videoSource={videoSource}
-                            />
+                            {
+                                !of==='page'?
+                                <VideoWrap
+                                    title={title}
+                                    thumbnail={thumbnail}
+                                    videoSource={videoSource}
+                                />: null
+
+                            }
                             {this.props.children}
-                            <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
+                            <div
+                                className="d-flex flex-column align-items-center"
+                                dangerouslySetInnerHTML={{ __html: bodyContent }} />
                         </main>
                     </div>
                 }
