@@ -61,7 +61,7 @@ class View extends React.Component{
                         />
                         <main>
                             {
-                                !of==='page'?
+                                of !== 'page'?
                                 <VideoWrap
                                     title={title}
                                     thumbnail={thumbnail}
