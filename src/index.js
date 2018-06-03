@@ -7,7 +7,8 @@ import { render } from 'react-dom'
 import {
     BrowserRouter,
     Route,
-    Switch
+    Switch,
+    Redirect
 } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
@@ -39,12 +40,23 @@ import { VerifyEmail } from './VerifyEmail'
 import { ResetPassword, ForgotPassword } from './ForgotPassword'
 import Analytics from './Analytics'
 
+const RemoveTrailingSlash = ({ location }) => {
+    const { pathname } = location
+      
+    if (pathname.substr(-1) === '/') {
+      return <Redirect to={pathname.substr(0, pathname.length - 1)} />
+    } else {
+      return null
+    }
+}
+
 function renderApp(){
     render(
         <Provider store={store}>
             <BrowserRouter>
                 <ScrollToTop>
                     <ErrorBoundary>
+                        <Route path="/" render={RemoveTrailingSlash} />
                         <Route path="/" component={Analytics} />
                         <ToastContainer
                             position="top-center"

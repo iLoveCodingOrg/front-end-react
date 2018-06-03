@@ -1,8 +1,5 @@
 import { get } from 'lodash'
 import { toast } from 'react-toastify'
-import {
-    SET_RESET_PASSWORD
-} from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
     checkStatus,
@@ -40,7 +37,7 @@ export function callForgotPassword(email){
 export function callResetPassword(accessToken, email, password){
     const url = `${API_URL}users/reset-password?access_token=${accessToken}`
     
-    return (dispatch) => {
+    return () => {
         return fetch(url, {
             method: 'PUT',
             headers: {
