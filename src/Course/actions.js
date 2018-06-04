@@ -47,9 +47,6 @@ export function getCourses(){
         .catch((error) => {
             dispatch(setCourses(error))
         })
-        .finally(()=>{
-            dispatch(setLoadingList(false))
-        })
     }
 }
 
@@ -95,9 +92,6 @@ export function getCourseBySlug(slug){
             })
             .catch((err) => {
                 dispatch(setCourse(err))
-            })
-            .finally(()=>{
-                dispatch(setLoadingView(false))
             })
     }
 }

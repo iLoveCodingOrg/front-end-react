@@ -33,15 +33,16 @@ class ForgotPassword extends React.Component{
             this.props.callForgotPassword(this.state.email.value)
                 .then((response)=>{
                     if(response.isSuccess){
-                        this.setState({ error: false })
+                        this.setState({
+                            error: false,
+                            isLoading: false
+                        })
                     } else {
                         this.setState({
-                            error: response.message
+                            error: response.message,
+                            isLoading: false
                         })
                     }
-                })
-                .finally(()=>{
-                    this.setState({ isLoading: false })
                 })
         })
     }

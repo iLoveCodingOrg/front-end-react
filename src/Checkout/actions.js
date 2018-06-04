@@ -40,9 +40,6 @@ export function getProductBySlug(slug){
         .catch((error) => {
             dispatch(setProduct(error))
         })
-        .finally(()=>{
-            dispatch(setLoading(false))
-        })
     }
 }
 
@@ -91,9 +88,6 @@ export function getBraintreeClientToken(){
         })
         .catch((error) => {
             dispatch(setClientToken(error))
-        })
-        .finally(()=>{
-            dispatch(setClientTokenLoading(false))
         })
     }
 }
@@ -160,9 +154,6 @@ export function buy(slug, { firstName, lastName, email, nonce }){
             .then((error) => {
                 dispatch(setBuyStatus(error))
             })
-        })
-        .finally(()=>{
-            dispatch(setBuyLoading(false))
         })
     }
 }

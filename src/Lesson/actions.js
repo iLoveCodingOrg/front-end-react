@@ -47,9 +47,6 @@ export function getLessons(){
         .catch((error) => {
             dispatch(setLessons(error))
         })
-        .finally(()=>{
-            dispatch(setLoadingList(false))
-        })
     }
 }
 
@@ -95,9 +92,6 @@ export function getLessonBySlug(slug){
             })
             .catch((err) => {
                 dispatch(setLesson(err))
-            })
-            .finally(()=>{
-                dispatch(setLoadingView(false))
             })
     }
 }

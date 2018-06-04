@@ -40,8 +40,9 @@ export function callVerifyEmail(uid, token){
             })
             return { isSuccess: false }
         })
-        .finally(()=>{
+        .then((res)=>{
             dispatch(setLoading(false))
+            return res
         })
     }
 }

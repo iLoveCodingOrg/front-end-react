@@ -50,8 +50,9 @@ export function login(email, password){
             })
             return { isSuccess: false }
         })
-        .finally(()=>{
+        .then((res)=>{
             dispatch(setLoading(false))
+            return res
         })
     }
 }
@@ -159,9 +160,6 @@ export function callSendVerifyEmail(email){
             .then((error) => {
                 dispatch(setSendVerifyEmail(error))
             })
-        })
-        .finally(()=>{
-            dispatch(setLoading(false))
         })
     }
 }

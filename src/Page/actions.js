@@ -47,9 +47,6 @@ export function getPages(){
         .catch((error) => {
             dispatch(setPages(error))
         })
-        .finally(()=>{
-            dispatch(setLoadingList(false))
-        })
     }
 }
 
@@ -95,9 +92,6 @@ export function getPageBySlug(slug){
             })
             .catch((err) => {
                 dispatch(setPage(err))
-            })
-            .finally(()=>{
-                dispatch(setLoadingView(false))
             })
     }
 }

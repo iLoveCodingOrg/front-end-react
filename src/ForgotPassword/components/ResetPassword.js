@@ -36,14 +36,13 @@ class ResetPassword extends React.Component {
                 .then((response)=>{
                     if(response.isSuccess){
                         this.props.history.push('/login')
+                        this.setState({ isLoading: false })
                     } else {
                         this.setState({
-                            error: response.message
+                            error: response.message,
+                            isLoading: false
                         })
                     }
-                })
-                .finally(()=>{
-                    this.setState({ isLoading: false })
                 })
         })
     }
