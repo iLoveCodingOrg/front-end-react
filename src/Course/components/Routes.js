@@ -10,6 +10,7 @@ import {
     List as CourseList,
     CourseLessonView
 } from '../'
+import { NotFound } from '../../Page'
 
 class Routes extends React.Component{
     constructor(props){
@@ -39,6 +40,8 @@ class Routes extends React.Component{
                     strict
                     path="/courses/:slug/edit"
                     component={CourseEdit} />
+                <Route
+                    component={NotFound} />
             </Switch>
         )
     }
