@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 import { toast } from 'react-toastify'
 import {
     SET_PAGES,

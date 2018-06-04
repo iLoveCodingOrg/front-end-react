@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 import { get } from 'lodash'
 import { toast } from 'react-toastify'
 import { API_URL } from '../_app/constants'
