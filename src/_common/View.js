@@ -69,7 +69,13 @@ class View extends React.Component{
                             {
                                 of !== 'page'?
                                 <VideoWrap
-                                    callMarkAsComplete={()=>callMarkAsComplete(id)}
+                                    callMarkAsComplete={()=>{
+                                        // Do not mark course as complete when video complete
+                                        // This feature should only work for lessons
+                                        if(of!=='course'){
+                                            callMarkAsComplete(id)
+                                        }
+                                    }}
                                     title={title}
                                     thumbnail={thumbnail}
                                     videoSource={videoSource}

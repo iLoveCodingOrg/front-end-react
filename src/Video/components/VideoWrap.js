@@ -65,6 +65,7 @@ class VideoWrap extends React.Component{
 }
 
 VideoWrap.propTypes = {
+    callMarkAsComplete: PropTypes.func.isRequired,
     isLoggedIn: PropTypes.bool.isRequired,
     thumbnail: PropTypes.string,
     videoSource: PropTypes.string

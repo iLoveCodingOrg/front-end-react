@@ -123,3 +123,21 @@ export function clearCourse(){
         type: CLEAR_COURSE
     }
 }
+
+export function callMarkCourseComplete(id){
+    const url = `${API_URL}courses/${id}/completed`
+    
+    return (dispatch) => {
+        return fetch(url, {
+            method: 'POST',
+            credentials: 'include' })
+        .then(checkStatus)
+            .then(parseJSON)
+            .then((json) => {
+                console.log(json)
+            })
+            .catch((err) => {
+                console.log(error)
+            })
+    }
+}

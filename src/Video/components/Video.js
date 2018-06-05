@@ -23,6 +23,7 @@ class Video extends React.Component{
 }
 
 Video.propTypes = {
+    callMarkAsComplete: PropTypes.func.isRequired,
     videoSource: PropTypes.string.isRequired
 }
 

@@ -51,14 +51,19 @@ class CourseLessonView extends React.Component{
         } = this.props.lessonView
         
         const isFree = (access)? false : true
-        const { courseView } = this.props
+        const {
+            courseView,
+            callMarkAsComplete,
+            isLoading,
+            error
+        } = this.props
         const urlToCourse = `/courses/${courseView.slug}`
         return (
             <div className="container">
                 {
-                    (this.props.isLoading)? <Loading />
+                    (isLoading)? <Loading />
                     :
-                    (this.props.error) ? <ErrorBox />
+                    (error) ? <ErrorBox />
                     :
                     <div>
                         <Helmet><title>{title}</title></Helmet>
@@ -82,6 +87,7 @@ class CourseLessonView extends React.Component{
                         />
                         <main>
                             <VideoWrap
+                                callMarkAsComplete={callMarkAsComplete}
                                 title={title}
                                 thumbnail={thumbnail}
                                 videoSource={videoSource}
@@ -117,6 +123,9 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
+        callMarkAsComplete: (id)=>{
+            dispatch(lessonActions.callMarkLessonComplete(id))
+        },
         getLesson: (slug)=>{
             dispatch(lessonActions.getLessonBySlug(slug))
         },
