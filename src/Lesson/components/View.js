@@ -14,6 +14,9 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
+        callMarkAsComplete: (id)=>{
+            dispatch(actions.callMarkLessonComplete(id))
+        },
         getView: (slug)=>{
             dispatch(actions.getLessonBySlug(slug))
         },

@@ -16,6 +16,7 @@ class Video extends React.Component{
             <Vimeo
                 className="video"
                 video={this.getId(this.props.videoSource)}
+                onEnd={()=>this.props.callMarkAsComplete()}
             />
         )
     }

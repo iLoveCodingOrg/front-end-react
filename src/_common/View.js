@@ -30,6 +30,7 @@ class View extends React.Component{
 
     render(){
         const {
+            id,
             title,
             subTitle,
             access,
@@ -41,13 +42,18 @@ class View extends React.Component{
             bodyContent
         } = this.props.view
         const isFree = (access)? false : true
-        const { of } = this.props
+        const {
+            of,
+            isLoading,
+            error,
+            callMarkAsComplete
+        } = this.props
         return (
             <div className="container">
                 {
-                    (this.props.isLoading)? <Loading />
+                    (isLoading)? <Loading />
                     :
-                    (this.props.error) ? <ErrorBox />
+                    (error) ? <ErrorBox />
                     :
                     <div>
                         <Helmet><title>{title}</title></Helmet>
@@ -63,6 +69,7 @@ class View extends React.Component{
                             {
                                 of !== 'page'?
                                 <VideoWrap
+                                    callMarkAsComplete={()=>callMarkAsComplete(id)}
                                     title={title}
                                     thumbnail={thumbnail}
                                     videoSource={videoSource}
@@ -82,6 +89,7 @@ class View extends React.Component{
 }
 
 View.propTypes = {
+    callMarkAsComplete: PropTypes.func,
     clearView: PropTypes.func.isRequired,
     getView: PropTypes.func.isRequired,
     of: PropTypes.oneOf(['lesson', 'course', 'courseLesson', 'page']).isRequired,

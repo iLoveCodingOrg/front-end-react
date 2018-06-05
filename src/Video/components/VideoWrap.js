@@ -20,13 +20,17 @@ class VideoWrap extends React.Component{
             thumbnail,
             title,
             videoSource,
-            isLoggedIn
+            isLoggedIn,
+            callMarkAsComplete
         } = this.props
         return (
             <div>
                 {
                     (!isEmpty(videoSource))?
-                    <Video videoSource={videoSource} />:
+                    <Video
+                        callMarkAsComplete={callMarkAsComplete}
+                        videoSource={videoSource}
+                    />:
                     <div className="d-flex flex-md-row flex-column alert alert-warning ">
                         <img
                             style={{ maxWidth: 300, maxHeight: 169 }}

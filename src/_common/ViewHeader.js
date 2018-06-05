@@ -25,7 +25,7 @@ ViewHeader.propTypes = {
     duration: PropTypes.string,
     isFree: PropTypes.bool,
     level: PropTypes.oneOf([0, 1, 2]),
-    of: PropTypes.oneOf(['lesson', 'course', 'courseLesson', 'page']).isRequired,
+    of: PropTypes.oneOf(['lesson', 'course', 'courseLesson', 'page']),
     subTitle: PropTypes.string,
     title: PropTypes.string
 }
