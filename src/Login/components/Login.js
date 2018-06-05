@@ -35,7 +35,7 @@ class Login extends React.Component{
                 if(redirect){
                     history.push(redirect)
                 }else{
-                    history.push('/')
+                    history.push('/dashboard')
                 }
             }
         })

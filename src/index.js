@@ -15,11 +15,13 @@ import { ToastContainer } from 'react-toastify'
 
 import store from './_app/store'
 import Auth from './Auth'
+import isPrivate from './isPrivate'
 import Wrap from './Wrap'
 
 import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
 import { Home } from './Home'
+import { Dashboard } from './Dashboard'
 import {
     View as LessonView,
     Edit as LessonEdit,
@@ -102,6 +104,11 @@ function renderApp(){
                                             exact
                                             path="/"
                                             component={Home} />
+
+                                        <Route
+                                            exact
+                                            path="/dashboard"
+                                            component={isPrivate(Dashboard)} />
 
                                         <Route
                                             exact
