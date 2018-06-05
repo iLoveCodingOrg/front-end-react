@@ -40,6 +40,7 @@ class CourseLessonView extends React.Component{
 
     render(){
         const {
+            id,
             title,
             subTitle,
             access,
@@ -47,7 +48,8 @@ class CourseLessonView extends React.Component{
             level,
             videoSource,
             thumbnail,
-            bodyContent
+            bodyContent,
+            isComplete
         } = this.props.lessonView
         
         const isFree = (access)? false : true
@@ -87,7 +89,7 @@ class CourseLessonView extends React.Component{
                         />
                         <main>
                             <VideoWrap
-                                callMarkAsComplete={callMarkAsComplete}
+                                callMarkAsComplete={()=>callMarkAsComplete(id)}
                                 title={title}
                                 thumbnail={thumbnail}
                                 videoSource={videoSource}

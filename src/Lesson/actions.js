@@ -6,13 +6,15 @@ import {
     SET_LESSON,
     CLEAR_LESSON,
     SET_LESSON_LOADING,
-    SET_LESSONS_LIST_LOADING
+    SET_LESSONS_LIST_LOADING,
+    SET_LESSON_AS_COMPLETE
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
     checkStatus,
     parseJSON
 } from '../_app/utils'
+import { selectors } from '../_user'
 
 export function setLoadingView(isLoading=true) {
     return {
@@ -126,18 +128,27 @@ export function clearLesson(){
 
 export function callMarkLessonComplete(id){
     const url = `${API_URL}lessons/${id}/completed`
-    
-    return (dispatch) => {
-        return fetch(url, {
-            method: 'POST',
-            credentials: 'include' })
-        .then(checkStatus)
-            .then(parseJSON)
-            .then((json) => {
-                console.log(json)
-            })
-            .catch((err) => {
-                console.log(error)
-            })
+    return (dispatch, getState) => {
+        if(selectors.isLoggedIn(getState()) || true){
+            return fetch(url, {
+                method: 'POST',
+                credentials: 'include' })
+                .then(checkStatus)
+                .then(parseJSON)
+                .then(() => {
+                    dispatch(setLessonAsComplete())
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        }
     }
 }
+
+export function setLessonAsComplete(isComplete = true){
+    return {
+        type: SET_LESSON_AS_COMPLETE,
+        payload: { isComplete }
+    }
+}
+

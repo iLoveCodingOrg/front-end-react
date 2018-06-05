@@ -39,7 +39,8 @@ class View extends React.Component{
             level,
             thumbnail,
             videoSource,
-            bodyContent
+            bodyContent,
+            isComplete
         } = this.props.view
         const isFree = (access)? false : true
         const {
