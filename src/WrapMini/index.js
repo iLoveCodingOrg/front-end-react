@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 import { actions, selectors } from '../_user'
 import logo from '../_app/images/ilovecoding-logo.svg'
+import { Copyrights } from '../Footer'
 
 class WrapMini extends React.Component{
     constructor(props){
@@ -37,11 +38,7 @@ class WrapMini extends React.Component{
                     this.props.children
                 }
 
-                
-                
-                <div className="text-muted text-center my-5">
-                    iLoveCoding Inc. &copy; 2018
-                </div>
+                <Copyrights />
             </div>
         )
     }
