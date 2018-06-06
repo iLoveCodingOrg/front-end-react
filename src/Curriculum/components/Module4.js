@@ -1,4 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+import { PrintCourses } from '../'
+
+const courses = [{
+    name: 'Learn React Native & Build Mobile App (Android & iOS)',
+    link: '/courses/react-native',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/react-native/0-intro.jpg'
+}]
+
+const practice = [{
+    name: 'Going Live: Putting Your Website Live',
+    link: '/',
+    thumbSrc: ''
+}, {
+    name: 'Build a calculator app',
+    link: '/',
+    thumbSrc: ''
+}]
 
 export default ()=>{
     return (
@@ -14,9 +33,7 @@ export default ()=>{
             </p>
             <hr/>
             <strong>Core Training</strong>
-            <ul>
-                <li><a href="">Learn React Native &amp; Build Mobile App (Android &amp; iOS)</a></li>
-            </ul>
+            <PrintCourses courses={courses} />
             <strong>Projects for Practice:</strong>
             <ul>
                 <li><a href="">Build Crypto Currency Price Checker App</a></li>

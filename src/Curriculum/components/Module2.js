@@ -1,4 +1,31 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+import { PrintCourses } from '../'
+
+const courses = [{
+    name: 'Learn jQuery in 14 days',
+    link: '/courses/learn-jquery-in-14-days',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/jQuery14-0-Intro.png'
+}, {
+    name: 'Learn & Master Bootstrap in a Week',
+    link: '/courses/learn-master-bootstrap-in-a-week',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/bootstrap-1-intro.png'
+}, {
+    name: 'Learn React JS in 14 Days',
+    link: '/courses/react',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/react/react0-intro.png'
+}]
+
+const practice = [{
+    name: 'Going Live: Putting Your Website Live',
+    link: '/',
+    thumbSrc: ''
+}, {
+    name: 'Build a calculator app',
+    link: '/',
+    thumbSrc: ''
+}]
 
 export default ()=>{
     return (
@@ -14,11 +41,7 @@ export default ()=>{
             </p>
             <hr/>
             <strong>Core Training</strong>
-            <ul>
-                <li><a href="">Learn jQuery in 14 days</a></li>
-                <li><a href="">Learn &amp; Master Bootstrap in a Week</a></li>
-                <li><a href="">Learn React JS in 14 Days</a></li>
-            </ul>
+            <PrintCourses courses={courses} />
             <strong>Projects for Practice:</strong>
             <ul>
                 <li><a href="">Build a Todo App with React</a></li>

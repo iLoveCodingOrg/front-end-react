@@ -1,4 +1,39 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+import { PrintCourses } from '../'
+
+const courses = [{
+    name: 'Learn to use any Web API - Part 1',
+    link: '/courses/use-web-api',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/api1-intro.jpg'
+}, {
+    name: 'Learn to use any Web API - Part 2',
+    link: '/courses/use-web-api-part2',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/api2-1-intro.png'
+}, {
+    name: 'Getting Good with Git',
+    link: '/courses/git',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/git-intro.png'
+}, {
+    name: 'Learn Object Oriented Programming with Javascript',
+    link: '/courses/object-oriented-javascript',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/oopjs.gif'
+}, {
+    name: 'Learn Angular JS in 14 days',
+    link: '/courses/learn-angular-js-in-14-days',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/learnAngular-1-intro.png'
+}]
+
+const practice = [{
+    name: 'Going Live: Putting Your Website Live',
+    link: '/',
+    thumbSrc: ''
+}, {
+    name: 'Build a calculator app',
+    link: '/',
+    thumbSrc: ''
+}]
 
 export default ()=>{
     return (
@@ -14,14 +49,7 @@ export default ()=>{
             </p>
             <p className="mb-0"><strong>Note:</strong> Besure to read the prerequisite section under each training before starting the training.</p>
             <hr/>
-            <strong>Core Training</strong>
-            <ul>
-                <li><a href="">Learn to use any Web API - Part 1</a></li>
-                <li><a href="">Learn to use any Web API - Part 2</a></li>
-                <li><a href="">Getting Good with Git</a></li>
-                <li><a href="">Learn Object Oriented Programming with Javascript</a></li>
-                <li><a href="">Learn Angular JS in 14 days</a></li>
-            </ul>
+            <PrintCourses courses={courses} />
         </section>
     )
 }

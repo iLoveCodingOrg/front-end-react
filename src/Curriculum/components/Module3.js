@@ -1,4 +1,31 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+import { PrintCourses } from '../'
+
+const courses = [{
+    name: 'Learn Node JS in a Week',
+    link: '/courses/learn-node-js-in-a-week',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-1-intro.png'
+}, {
+    name: 'Learn Express.js in 14 days',
+    link: '/courses/expressjs',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/express/express-0-intro.jpg'
+}, {
+    name: 'Crash Course to Databases & MongoDB',
+    link: '/courses/mongodb',
+    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/mongodb/mongodb-0-intro.jpg'
+}]
+
+const practice = [{
+    name: 'Going Live: Putting Your Website Live',
+    link: '/',
+    thumbSrc: ''
+}, {
+    name: 'Build a calculator app',
+    link: '/',
+    thumbSrc: ''
+}]
 
 export default ()=>{
     return (
@@ -14,11 +41,7 @@ export default ()=>{
             </p>
             <hr/>
             <strong>Core Training</strong>
-            <ul>
-                <li><a href="">Learn Node JS in a Week</a></li>
-                <li><a href="">Learn Express.js in 14 days</a></li>
-                <li><a href="">Crash Course to Databases &amp; MongoDB</a></li>
-            </ul>
+            <PrintCourses courses={courses} />
             <strong>Projects for Practice:</strong>
             <ul>
                 <li><a href="">Build A Note Taking App</a></li>
