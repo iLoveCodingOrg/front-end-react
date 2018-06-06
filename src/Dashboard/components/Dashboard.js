@@ -32,7 +32,7 @@ class Dashboard extends React.Component{
                             <h4>Start</h4>
                             <ul className="list-unstyled">
                                 <li><Link to="/">Getting started</Link></li>
-                                <li><Link to="/cirriculum">Full Curriculum</Link></li>
+                                <li><Link to="/curriculum">Full Curriculum</Link></li>
                                 <li><Link to="/courses?tag=front-end">Core Front-End Training</Link></li>
                                 <li><Link to="/courses?tag=full-stack">Core Full-Stack Training</Link></li>
                                 <li><Link to="/courses?tag=electives">Electives - Additional Learning</Link></li>

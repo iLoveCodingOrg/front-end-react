@@ -41,6 +41,7 @@ import { Checkout } from './Checkout'
 import { VerifyEmail } from './VerifyEmail'
 import { ResetPassword, ForgotPassword } from './ForgotPassword'
 import Analytics from './Analytics'
+import { Curriculum } from './Curriculum'
 
 const RemoveTrailingSlash = ({ location }) => {
     const { pathname } = location
@@ -104,6 +105,11 @@ function renderApp(){
                                             exact
                                             path="/"
                                             component={Home} />
+
+                                        <Route
+                                            exact
+                                            path="/curriculum"
+                                            component={Curriculum} />
 
                                         <Route
                                             exact

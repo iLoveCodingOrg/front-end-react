@@ -28,7 +28,7 @@ class Card extends React.Component{
  
         return (
             <div
-                className="d-flex flex-column flex-md-row mb-5 card"
+                className="d-flex flex-column flex-md-row mb-5 card border-0"
             >
                 <div>
                     {
