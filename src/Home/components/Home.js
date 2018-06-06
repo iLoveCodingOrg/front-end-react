@@ -1,7 +1,10 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
-import AboutAziz from './AboutAziz'
+import { selectors } from '../../_user'
+
 import HomeForm from './HomeForm'
 
 class Home extends React.Component{
@@ -9,6 +12,7 @@ class Home extends React.Component{
         super(props)
     }
     render(){
+        if(this.props.isLoggedIn) return <Redirect to="/dashboard" />
         return (
             <div className="d-flex flex-column">
                 <Helmet>
@@ -47,4 +51,10 @@ class Home extends React.Component{
     }
 }
 
-export default Home
+function mapStateToProps(state){
+    return {
+        isLoggedIn: selectors.isLoggedIn(state)
+    }
+}
+
+export default connect(mapStateToProps)(Home)
