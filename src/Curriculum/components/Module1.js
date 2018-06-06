@@ -20,7 +20,7 @@ export default ()=>{
             </ul>
             <strong>Projects for Practice:</strong>
             <ul>
-                <li><a href="">Launch your website</a></li>
+                <li><a href="">Going Live: Putting Your Website Live</a></li>
                 <li><a href="">Build a calculator app</a></li>
             </ul>
             <strong>Module Outcomes:</strong>
@@ -31,7 +31,7 @@ export default ()=>{
                 <li>Start Freelancing: Make websites for small businesses and non-profits</li>
                 <li>Build simple mini applications</li>
                 <li>Start thinking like a software engineer</li>
-                <li>Call yourself a web desinger</li>
+                <li>Call yourself a web designer</li>
             </ol>
         </section>
     )

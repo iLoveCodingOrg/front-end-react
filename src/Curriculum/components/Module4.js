@@ -10,19 +10,22 @@ export default ()=>{
                 Mobile Development
             </h2>
             <p className="lead text-muted mb-0">
-                Describe this module, in good detail, and even add some video descriping it. Its better visually if it spans multiple lines.
+                Learn how to build Mobile Applications for iPhone and Android with Javascript. Use the same technology used to build Instagram, Facebook, Airbnb and Walmart mobile apps.
             </p>
             <hr/>
             <strong>Core Training</strong>
             <ul>
-                <li><a href="">Learn HTML &amp; CSS in 14 days</a></li>
-                <li><a href="">Learn Javascript in 14 Days</a></li>
+                <li><a href="">Learn React Native &amp; Build Mobile App (Android &amp; iOS)</a></li>
             </ul>
-            <strong>Projects for practice:</strong>
+            <strong>Projects for Practice:</strong>
             <ul>
-                <li><a href="">Launch your website</a></li>
-                <li><a href="">Build a calculator app</a></li>
+                <li><a href="">Build Crypto Currency Price Checker App</a></li>
             </ul>
+            <strong>Module Outcomes:</strong>
+            <p>Once you are done with this module you will be able to:</p>
+            <ol>
+                <li>Learn to build Mobile apps for Android &amp; iOS devices</li>
+            </ol>
         </section>
     )
 }
