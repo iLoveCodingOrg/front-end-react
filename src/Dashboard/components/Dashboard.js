@@ -31,11 +31,8 @@ class Dashboard extends React.Component{
                         <div className="col-12 col-md-4 mt-5">
                             <h4>Start</h4>
                             <ul className="list-unstyled">
-                                <li><Link to="/">Getting started</Link></li>
                                 <li><Link to="/curriculum">Full Curriculum</Link></li>
-                                <li><Link to="/courses?tag=front-end">Core Front-End Training</Link></li>
-                                <li><Link to="/courses?tag=full-stack">Core Full-Stack Training</Link></li>
-                                <li><Link to="/courses?tag=electives">Electives - Additional Learning</Link></li>
+                                <li><Link to="/courses?tag=front-end">All Courses</Link></li>
                                 {/* <li><Link to="/">Quesitons &amp; Answers</Link>(Coming soon)</li> */}
                             </ul>
                         </div>
