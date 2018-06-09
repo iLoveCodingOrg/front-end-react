@@ -1,12 +1,12 @@
 import React from 'react'
 import logo from '../../_app/images/ilovecoding-logo.svg'
 
-export default function (props) {
+export default function ({ productName, productDesc }) {
     return (
         <div>
             <div className="d-flex justify-content-between flex-column-reverse flex-md-row align-items-center">
                 <div className="d-flex align-items-center justify-content-center">
-                    <div className="navbar-brand py-5 text-center">
+                    <div className="navbar-brand mr-3 py-5 text-center">
                         <div className="img-wrap">
                             <img src={logo} alt="iLoveCoding.org Logo" />
                         </div>
@@ -15,8 +15,8 @@ export default function (props) {
                         <div className="h6 text-muted text-uppercase m-0">
                             You are about to buy:
                         </div>
-                        <h1>
-                            {props.productName}
+                        <h1 className="h2">
+                            {productName}
                         </h1>
                     </div>
                 </div>
@@ -24,11 +24,13 @@ export default function (props) {
                     Need help? support@ilovecoding.org
                 </div>
             </div>
-            <h3>🔒 Secure Checkout:</h3>
-            <p className="lead">
-                Congratulations! Once you complete this secure registration form, you'll have instant access to my, "List-Grow Implementation Program" where you'll watch over my shoulder as we create your very own list-growing business that's based on your biggest passion!
-            
-            </p>
+            <div className="row alert alert-success">
+                <h4>🔒 Secure Checkout:</h4>
+                <p className="">
+                    Congratulations! Once you complete this secure registration form, you'll have instant access to "{productName}".
+                </p>
+                <p className="mb-0">{productDesc}</p>
+            </div>
         </div>
     )
 }

@@ -12,7 +12,7 @@ const data = {
     four: {
         price: '$150',
         terms: 'Only 4 payments of $150/month',
-        link: '/checkout/ilc-fs-157-4pay'
+        link: '/checkout/ilc-fs-150-4pay'
     }
 }
 class Price extends React.Component {

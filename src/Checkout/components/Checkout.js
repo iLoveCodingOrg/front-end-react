@@ -102,7 +102,9 @@ class Checkout extends React.Component{
     render(){
         const price = get(this.props.product, 'price')
         const billingDuration = get(this.props.product, 'billingDuration')
+        const billingCycles = get(this.props.product, 'billingCycles')
         const productName = get(this.props.product, 'name')
+        const productDesc = get(this.props.product, 'description')
         return(
             <div className="container">
                 {
@@ -113,7 +115,10 @@ class Checkout extends React.Component{
                     <div>
                         <Helmet><title>{productName}</title></Helmet>
 
-                        <Header productName={productName} />
+                        <Header
+                            productName={productName}
+                            productDesc={productDesc}
+                        />
                         <div className="row">
                             <form
                                 onSubmit={this.buy}
@@ -128,14 +133,20 @@ class Checkout extends React.Component{
 
                                 <hr className="mb-4" />
                                 <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
-                                <Due price={price} billingDuration={billingDuration}/>
+                                <Due
+                                    price={price}
+                                    billingDuration={billingDuration}
+                                    billingCycles={billingCycles}
+                                />
                                 <button
                                     className="btn btn-primary btn-lg btn-block"
                                     type="submit"
                                 >
                                     Complete My Purchase
                                 </button>
-                                <small>Payment powered by Braintree (a Paypal company) - AES-256bit encryption - Your information is secure</small>
+                                <div className="d-block text-center small mt-1">
+                                    Payment powered by Braintree (a Paypal company) - Your information is secure
+                                </div>
                             </form>
                             <div className="col-md-4 order-md-2 mb-4 px-4">
                                 <WhatYouGet />
