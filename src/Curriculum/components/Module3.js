@@ -29,7 +29,7 @@ const practice = [{
 
 export default ()=>{
     return (
-        <section className="bg-light card p-5 mt-5">
+        <section className="bg-light card p-4 p-md-5 mt-5">
             <h2>
                 <small className="d-block text-muted">
                     Module 3:
