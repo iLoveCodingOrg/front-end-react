@@ -10,8 +10,8 @@ const data = {
         link: '/checkout/ilc-fs-599'
     },
     four: {
-        price: '$157',
-        terms: 'Only 4 payments of $157/month',
+        price: '$150',
+        terms: 'Only 4 payments of $150/month',
         link: '/checkout/ilc-fs-157-4pay'
     }
 }
@@ -35,18 +35,17 @@ class Price extends React.Component {
         return (
             <section className="d-flex justify-content-center">
                 <div className="
+                    d-flex flex-column align-items-center
                     col-12
-                    col-sm-5
-                    col-md-4
-                    col-lg-3
-                    col-xlg-2
-                    mt-3
-                    mb-5">
+                    col-md-10
+                    col-lg-8">
                     <Switch
+                        style={{ maxWidth: '400px', minWidth: '320px' }}
                         onChange={this.handleSwitch}
                         selected={this.state.selected}
                     />
-                    <div className="card mb-4 box-shadow">
+                    <div style={{ maxWidth: '400px', minWidth: '320px' }}
+                        className="card mb-4 box-shadow">
                         <div className="card-header bg-dark text-white ">
                             <h4 className="my-0 font-weight-normal text-center">Full Stack Mastery</h4>
                         </div>

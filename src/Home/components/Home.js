@@ -27,7 +27,8 @@ class Home extends React.Component{
                     col-md-8
                     col-lg-6
                     mt-3
-                    mb-5"
+                    mb-5
+                    pb-5"
                     style={{ maxWidth: '540px' }}
                 >
                     <h1 className="headline">
