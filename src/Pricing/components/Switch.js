@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function (props){
     return (
-        <div className="my-3 d-flex flex-column align-items-center">
+        <div className="mb-3 d-flex flex-column align-items-center">
             Select payment option:<br />
             {/* {props.selected} */}
             <div className="switch">
@@ -15,7 +15,7 @@ export default function (props){
                     checked={props.selected === 'one'}
                     onChange={props.onChange}
                 />
-                <label className="small" htmlFor="one">One Time Payment</label>
+                <label className="small" htmlFor="one">One-Time Payment</label>
                 <input
                     type="radio"
                     name="payment"

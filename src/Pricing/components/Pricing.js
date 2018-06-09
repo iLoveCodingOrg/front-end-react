@@ -19,9 +19,9 @@ class Pricing extends React.Component{
                         Pricing | iLoveCoding
                     </title>
                 </Helmet>
-                <div className=""><Header /></div>
-                <div className="bg-light"><Testimonials /></div>
-                <div className=""><Price /></div>
+                <div className="py-5"><Header /></div>
+                <div className="py-5 bg-light"><Testimonials /></div>
+                <div className="py-5"><Price /></div>
             </div>
         )
     }

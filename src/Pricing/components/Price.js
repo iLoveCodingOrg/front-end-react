@@ -57,11 +57,11 @@ class Price extends React.Component {
                             <div className="text-muted text-center">{terms}</div>
                             <ul className="list-unstyled mt-3 mb-4">
                                 <li>- Complete Step-by-Step Training</li>
-                                <li>- <del>6-month</del> 1 Year Access</li>
-                                <li>- True Mentorship</li>
-                                <li>- Student Community</li>
-                                <li>- 60-day money back guarantee</li>
                                 <li>- All 4 in-depth learning modules</li>
+                                <li>- Access to Industry Expert (Aziz)</li>
+                                <li>- Student Community</li>
+                                <li>- <del>6-month</del> 1 Year Access</li>
+                                <li>- 60-day money back guarantee</li>
                             </ul>
                             <Link to={link} className="btn btn-block btn-lg text-center btn-primary">Get Instant Access</Link>
                         </div>

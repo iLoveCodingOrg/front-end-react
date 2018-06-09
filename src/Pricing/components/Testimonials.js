@@ -27,9 +27,7 @@ class Testimonials extends React.Component{
             <section className="d-flex justify-content-center">
                 <div className="
                     col-md-10
-                    col-lg-8
-                    mt-3
-                    mb-5">
+                    col-lg-8">
                 <PrintTestimonials data={data} />
                 </div>
             </section>
