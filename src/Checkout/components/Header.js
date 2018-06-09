@@ -20,16 +20,18 @@ export default function ({ productName, productDesc }) {
                         </h1>
                     </div>
                 </div>
-                <div className="alert-info alert my-2">
+                <div className="alert-light alert my-2 border">
                     Need help? support@ilovecoding.org
                 </div>
             </div>
-            <div className="row alert alert-success">
-                <h4>🔒 Secure Checkout:</h4>
-                <p className="">
-                    Congratulations! Once you complete this secure registration form, you'll have instant access to "{productName}".
-                </p>
-                <p className="mb-0">{productDesc}</p>
+            <div className="row">
+                <div className="alert alert-success">
+                    <h4>🔒 Secure Checkout:</h4>
+                    <p className="">
+                        Congratulations! Once you complete this secure registration form, you'll have instant access to <strong>{productName}</strong>.
+                    </p>
+                    <p className="mb-0">{productDesc}</p>
+                </div>
             </div>
         </div>
     )

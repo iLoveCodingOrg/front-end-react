@@ -47,7 +47,7 @@ class Price extends React.Component {
                     <div style={{ maxWidth: '400px', minWidth: '320px' }}
                         className="card mb-4 box-shadow">
                         <div className="card-header bg-dark text-white ">
-                            <h4 className="my-0 font-weight-normal text-center">Full Stack Mastery</h4>
+                            <h4 className="my-0 font-weight-normal text-center">Full-Stack Mastery</h4>
                         </div>
                         <div className="card-body align-self-center">
                             <h1 className="card-title pricing-card-title text-center">

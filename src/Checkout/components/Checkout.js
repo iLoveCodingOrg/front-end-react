@@ -120,34 +120,36 @@ class Checkout extends React.Component{
                             productDesc={productDesc}
                         />
                         <div className="row">
-                            <form
-                                onSubmit={this.buy}
-                                className="col-md-8 order-md-1 bg-light border p-4">
-                                {this.renderBuyError()}
-                                <UserForm
-                                    logout={this.props.logout}
-                                    isDisabled={this.props.isLoggedIn}
-                                    userInfo={this.state.userInfo}
-                                    setUserInfo={this.setUserInfo}
-                                />
+                            <div className="p-0 col-md-8 order-md-1">
+                                <form
+                                    onSubmit={this.buy}
+                                    className="bg-light border p-4">
+                                    {this.renderBuyError()}
+                                    <UserForm
+                                        logout={this.props.logout}
+                                        isDisabled={this.props.isLoggedIn}
+                                        userInfo={this.state.userInfo}
+                                        setUserInfo={this.setUserInfo}
+                                        />
 
-                                <hr className="mb-4" />
-                                <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
-                                <Due
-                                    price={price}
-                                    billingDuration={billingDuration}
-                                    billingCycles={billingCycles}
-                                />
-                                <button
-                                    className="btn btn-primary btn-lg btn-block"
-                                    type="submit"
-                                >
-                                    Complete My Purchase
-                                </button>
-                                <div className="d-block text-center small mt-1">
-                                    Payment powered by Braintree (a Paypal company) - Your information is secure
-                                </div>
-                            </form>
+                                    <hr className="mb-4" />
+                                    <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
+                                    <Due
+                                        price={price}
+                                        billingDuration={billingDuration}
+                                        billingCycles={billingCycles}
+                                        />
+                                    <button
+                                        className="btn btn-primary btn-lg btn-block"
+                                        type="submit"
+                                        >
+                                        Complete My Purchase
+                                    </button>
+                                    <div className="d-block text-center small mt-1">
+                                        Payment powered by Braintree (a Paypal company) - Your information is secure
+                                    </div>
+                                </form>
+                            </div>
                             <div className="col-md-4 order-md-2 mb-4 px-4">
                                 <WhatYouGet />
                                 <Testimonials />

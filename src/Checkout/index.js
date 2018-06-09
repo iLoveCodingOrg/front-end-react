@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import UserForm from './components/UserForm'
 import CreditCard from './components/CreditCard'
 import Testimonials from './components/Testimonials'
+import PrintTestimonials from './components/PrintTestimonials'
 import WhatYouGet from './components/WhatYouGet'
 import Due from './components/Due'
 
@@ -18,6 +19,7 @@ export {
     UserForm,
     CreditCard,
     Testimonials,
+    PrintTestimonials,
     WhatYouGet,
     Due
 }

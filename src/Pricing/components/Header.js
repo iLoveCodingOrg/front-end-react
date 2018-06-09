@@ -12,7 +12,7 @@ class Header extends React.Component{
                     col-md-10
                     col-lg-8">
 
-                    <h1><span className="text-muted">Introducing:</span> Full Stack Mastery</h1>
+                    <h1><span className="text-muted">Introducing:</span> Full-Stack Mastery</h1>
                     <p className="lead">
                         A comprehensive and complete traing that has helps 3000+ developers learn how to code and build awesome websites and mobile apps
                     </p>
