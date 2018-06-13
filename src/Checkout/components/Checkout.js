@@ -56,7 +56,7 @@ class Checkout extends React.Component{
         })
             .then(({ isSubscribed })=>{
                 if(isSubscribed){
-                    this.props.history.push('/')
+                    this.props.history.push('/pages/welcome')
                 }
             })
     }
