@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
-import ViewHeader from './ViewHeader'
-import { VideoWrap } from '../Video'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
+
+import { EditForm } from './'
 
 class View extends React.Component{
     constructor(props){
@@ -30,24 +30,11 @@ class View extends React.Component{
 
     render(){
         const {
-            id,
-            title,
-            subTitle,
-            access,
-            duration,
-            courseTotalDuration,
-            level,
-            thumbnail,
-            videoSource,
-            bodyContent,
-            lessonCount
+            title
         } = this.props.view
-        const isFree = (access)? false : true
         const {
-            of,
             isLoading,
-            error,
-            callMarkAsComplete
+            error
         } = this.props
         return (
             <div className="container">
@@ -57,37 +44,13 @@ class View extends React.Component{
                     (error) ? <ErrorBox />
                     :
                     <div>
-                        <Helmet><title>{title}</title></Helmet>
-                        <ViewHeader
-                            of={of}
-                            title={title}
-                            subTitle={subTitle}
-                            isFree={isFree}
-                            duration={ courseTotalDuration || duration }
-                            level={level}
-                            lessonCount={lessonCount}
-                        />
+                        <Helmet><title>Edit - {title}</title></Helmet>
                         <main>
-                            {
-                                of !== 'page'?
-                                <VideoWrap
-                                    callMarkAsComplete={()=>{
-                                        // Do not mark course as complete when video complete
-                                        // This feature should only work for lessons
-                                        if(of!=='course'){
-                                            callMarkAsComplete(id)
-                                        }
-                                    }}
-                                    title={title}
-                                    thumbnail={thumbnail}
-                                    videoSource={videoSource}
-                                />: null
-
-                            }
                             {this.props.children}
-                            <div
-                                className="d-flex flex-column align-items-center"
-                                dangerouslySetInnerHTML={{ __html: bodyContent }} />
+                            <EditForm data={this.props.view} />
+                            <pre>
+                                {JSON.stringify(this.props.view, null, 2)}
+                            </pre>
                         </main>
                     </div>
                 }
