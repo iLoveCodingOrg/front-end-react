@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import { IMG_URL } from '../_app/constants'
-import { Access, Level, Duration } from './'
+import { Access, Level, Duration, LessonCount } from './'
 
 class Card extends React.Component{
     constructor(props){
@@ -20,7 +20,8 @@ class Card extends React.Component{
             level,
             courseTotalDuration,
             duration,
-            slug
+            slug,
+            lessonCount
         } = this.props.item
         const { of } = this.props
         const isFree = (access)? false : true
@@ -48,6 +49,11 @@ class Card extends React.Component{
                         <Access isFree={isFree}/>
                         <Level level={level}/>
                         <Duration duration={ courseTotalDuration || duration} />
+                        {
+                            of === 'courses'?
+                            <LessonCount lessonCount={lessonCount} />
+                            : null
+                        }
                     </div>
                     <p>{subTitle}</p>
                 </div>

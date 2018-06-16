@@ -40,7 +40,7 @@ class View extends React.Component{
             thumbnail,
             videoSource,
             bodyContent,
-            isComplete
+            lessonCount
         } = this.props.view
         const isFree = (access)? false : true
         const {
@@ -65,6 +65,7 @@ class View extends React.Component{
                             isFree={isFree}
                             duration={ courseTotalDuration || duration }
                             level={level}
+                            lessonCount={lessonCount}
                         />
                         <main>
                             {

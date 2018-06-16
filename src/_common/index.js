@@ -5,6 +5,7 @@ import ViewHeader from './ViewHeader'
 import Access from './Access'
 import Level from './Level'
 import Duration from './Duration'
+import LessonCount from './LessonCount'
 
 export {
   List,
@@ -14,4 +15,5 @@ export {
   Access,
   Level,
   Duration,
+  LessonCount
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class Duration extends React.Component{
+class LessonCount extends React.Component{
     constructor(props){
         super(props)
     }
@@ -9,14 +9,14 @@ class Duration extends React.Component{
     render(){
         return (
             <small className="mr-3">
-                {this.props.duration} mins
+                {this.props.lessonCount} lessons
             </small>
         )
     }
 }
 
-Duration.propTypes = {
-    duration: PropTypes.string.isRequired
+LessonCount.propTypes = {
+    lessonCount: PropTypes.number.isRequired
 }
 
-export default Duration
+export default LessonCount
