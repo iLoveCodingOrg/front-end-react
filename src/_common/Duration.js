@@ -8,7 +8,7 @@ class Duration extends React.Component{
 
     render(){
         return (
-            <small className="pl-3">
+            <small className="">
                 {this.props.duration} mins
             </small>
         )

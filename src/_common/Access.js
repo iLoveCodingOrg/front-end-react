@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { selectors } from '../_user/'
 
 class Access extends React.Component{
     constructor(props){
@@ -11,9 +13,12 @@ class Access extends React.Component{
             <span>
                 {
                     this.props.isFree?
-                    <span className="badge badge-pill badge-dark">FREE</span>
+                        this.props.isLoggedIn?
+                        null
+                        :
+                        <span className="badge badge-pill badge-dark mr-3">FREE</span>
                     :
-                    <span className="badge badge-pill badge-success">PRO</span>
+                    <span className="badge badge-pill badge-success mr-3">PRO</span>
                 }
             </span>
         )
@@ -21,7 +26,13 @@ class Access extends React.Component{
 }
 
 Access.propTypes = {
-    isFree: PropTypes.bool.isRequired
+    isFree: PropTypes.bool.isRequired,
+    isLoggedIn: PropTypes.bool.isRequired
 }
 
-export default Access
+function mapStateToProps(state){
+    return {
+        isLoggedIn: selectors.isLoggedIn(state)
+    }
+}
+export default connect(mapStateToProps)(Access)

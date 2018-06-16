@@ -21,7 +21,7 @@ class Level extends React.Component {
 
     render() {
         return (
-            <small className="pl-3">
+            <small className="mr-3">
                 Level: {this.renderSwitch(this.props.level)}
             </small>
         )
