@@ -22,14 +22,8 @@ import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
 import { Home } from './Home'
 import { Dashboard } from './Dashboard'
-import {
-    View as LessonView,
-    Edit as LessonEdit,
-    List as LessonList
-} from './Lesson'
-import {
-    Routes as CourseRoutes
-} from './Course'
+import { Routes as LessonRoutes } from './Lesson'
+import { Routes as CourseRoutes } from './Course'
 import {
     View as PageView,
     Edit as PageEdit,
@@ -123,20 +117,9 @@ function renderApp(){
                                             component={isPrivate(Dashboard)} />
 
                                         <Route
-                                            exact
                                             strict
                                             path="/lessons"
-                                            component={LessonList} />
-                                        <Route
-                                            exact
-                                            strict
-                                            path="/lessons/:slug"
-                                            component={LessonView} />
-                                        <Route
-                                            exact
-                                            strict
-                                            path="/lessons/:slug/edit"
-                                            component={LessonEdit} />
+                                            component={LessonRoutes} />
 
                                         <Route
                                             strict
