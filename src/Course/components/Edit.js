@@ -1,17 +1,29 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
-class Edit extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    render(){
-        return (
-            <div>
-                Edit Page
-            </div>
-        )
+import { actions } from '../'
+import { Edit } from '../../_common'
+
+function mapStateToProps(state){
+    return {
+        error: state.courses.view.error,
+        isLoading: state.courses.view.isLoading,
+        view: state.courses.view.data
     }
 }
 
-export default Edit
+function mapDispatchToProps(dispatch){
+    return {
+        getView: (slug)=>{
+            dispatch(actions.getCourseBySlug(slug))
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps)
+((props)=>{
+    return (<Edit {...props} of="course">
+    </Edit>)
+})

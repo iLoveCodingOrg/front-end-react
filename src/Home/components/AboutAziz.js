@@ -13,7 +13,7 @@ class AboutAziz extends React.Component{
                 />
                 <div>
                     <h3>Hi, I’m your instructor Aziz Ali</h3>
-                    <blockquote class="blockquote">
+                    <blockquote className="blockquote">
                         <p>
                             Four years ago I was in your shoes - Afraid of programming. I thought coding was for geniuses and I was not smart enough to code. I wanted to make great websites and launch my startup so I tried to learn through cheap and free online courses and even hired a professional developer to teach me. Heck I even took coding classes in my university and nothing worked.
                         </p>
