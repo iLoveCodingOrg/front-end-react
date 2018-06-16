@@ -8,14 +8,24 @@ class AboutAziz extends React.Component{
         return (
             <div className="flex-row">
                 <img
-                    className="float-left rounded-circle mr-3"
-                    src="https://ilovecoding-assets.s3.amazonaws.com/img/azizali-150-129x129.png" alt="Aziz Ali Profile Picture" width="150" height="150"
+                    className="float-left rounded-circle mb-2 mr-3"
+                    src="https://ilovecoding-assets.s3.amazonaws.com/images/azizali-150.jpg" alt="Aziz Ali Profile Picture"
                 />
                 <div>
                     <h3>Hi, I’m your instructor Aziz Ali</h3>
-                    <blockquote class="blockquotez">
+                    <blockquote class="blockquote">
                         <p>
-                            After running away from coding for 9 years, I decided to face my demons. I committed to learning the most popular programming language on the planet – Javascript, and landed my <a title="How I landed my first Javascript Development Job and got 6 figures for it" href="https://blog.ilovecoding.org/6-figure-developer-job/">first 6-figure programming job</a>. I have made dozens of websites and applications and also worked on the Kiosk Application that runs on the United Airlines Airport terminal. Yup its made with Javascript. <a title="Aziz Ali, Founder of iLoveCoding" href="https://ilovecoding.org/pages/aziz-ali">Read more about me</a> and the story of <a title="About iLoveCoding" href="https://ilovecoding.org/pages/about">how iLoveCoding started</a>
+                            Four years ago I was in your shoes - Afraid of programming. I thought coding was for geniuses and I was not smart enough to code. I wanted to make great websites and launch my startup so I tried to learn through cheap and free online courses and even hired a professional developer to teach me. Heck I even took coding classes in my university and nothing worked.
+                        </p>
+                        <p>I gave up on coding for 9 years.</p>
+                        <p>Discouraged and demoralized with my confidence crushed.</p>
+                        <p>
+                            It was not untill 4 years ago in the month of June that I stumbled upon a method that changed things for me. I went from someone who struggled to understand even the basics of programming to becoming good enough to landing my first job as a professional developer. All within 5 months. Since then I have worked at United Airlines, CVS Caremark, and a couple of healthcare and technology startups building modern websites and apps for them.
+                        </p>
+                        <p>
+                            Using my process, I have taught programming to thousands of students via this very website. My students work at Twitter, Sony Erricson, CVS Caremark and hundreds of smaller companies as salaried employees or independent contractors (freelancers).</p>
+                        <p>
+                            Here on this website, I openly and transparently share my process, methodology and training that made the difference for me. I hope it does the same magic for you, as it did for me and countless others.
                         </p>
                     </blockquote>
                 </div>

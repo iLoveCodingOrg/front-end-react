@@ -6,6 +6,7 @@ import { Redirect } from 'react-router-dom'
 import { selectors } from '../../_user'
 
 import HomeForm from './HomeForm'
+import AboutAziz from './AboutAziz'
 
 class Home extends React.Component{
     constructor(props){
@@ -42,11 +43,11 @@ class Home extends React.Component{
                         <HomeForm />
                     </div>
                 </section>
-                {/* <div className="bg-gray-100 mt-5">
+                <div className="bg-gray-200 mt-5">
                     <div className="container p-5">
                         <AboutAziz />
                     </div>
-                </div> */}
+                </div>
             </div>
         )
     }
