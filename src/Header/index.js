@@ -34,18 +34,27 @@ class Header extends React.Component{
 
     printLinksRight(){
         const links = [
-            // {
-            //     label: 'Start Here',
-            //     link: '#'
-            // },
+            {
+                label: 'Full Training',
+                link: '/pricing',
+                className: 'btn btn-sm btn-outline-primary',
+                style: {}
+            },
             // {
             //     label: 'Pricing',
             //     link: '/pricing'
             // }
         ]
 
-        return links.map(({ label, link }, index)=> (
-            <Link key={index} className="p-2 text-secondary" to={link}>{label}</Link>
+        return links.map(({ label, link, className, style }, index)=> (
+            <Link
+                key={index}
+                style={style}
+                className={`${className}`}
+                to={link}
+            >
+                {label}
+            </Link>
         ))
     }
 
@@ -72,7 +81,7 @@ class Header extends React.Component{
 
     renderGuest(){
         return(
-            <Link className="btn btn-sm btn-outline-primary" to="/login">Student Login</Link>
+            <Link className="btn btn-sm" to="/login">Student Login</Link>
         )
     }
 

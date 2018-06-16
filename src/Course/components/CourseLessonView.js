@@ -71,7 +71,11 @@ class CourseLessonView extends React.Component{
                         <Helmet><title>{title}</title></Helmet>
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
-                                <li className="breadcrumb-item" aria-current="page">Courses</li>
+                                <li className="breadcrumb-item" aria-current="page">
+                                    <Link to="/courses">
+                                        Courses
+                                    </Link>
+                                </li>
                                 <li className="breadcrumb-item">
                                     <Link to={urlToCourse}>
                                         {courseView.title}
