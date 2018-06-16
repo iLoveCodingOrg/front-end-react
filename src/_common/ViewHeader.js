@@ -9,7 +9,7 @@ function ViewHeader({ title, subTitle, isFree, level, duration, of }){
             <h1 className="title">{title}</h1>
             <p className="lead">{subTitle}</p>
             {
-                !of==='page'?
+                of !== 'page'?
                 <div className="mb-3">
                     <Access isFree={isFree} />
                     <Level level={level} />
@@ -23,11 +23,11 @@ function ViewHeader({ title, subTitle, isFree, level, duration, of }){
 
 ViewHeader.propTypes = {
     duration: PropTypes.string,
-    isFree: PropTypes.bool,
+    isFree: PropTypes.bool.isRequired,
     level: PropTypes.oneOf([0, 1, 2]),
-    of: PropTypes.oneOf(['lesson', 'course', 'courseLesson', 'page']),
+    of: PropTypes.oneOf(['lesson', 'course', 'courseLesson', 'page']).isRequired,
     subTitle: PropTypes.string,
-    title: PropTypes.string
+    title: PropTypes.string.isRequired
 }
 
 export default ViewHeader

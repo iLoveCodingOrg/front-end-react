@@ -82,7 +82,7 @@ export function getPageBySlug(slug){
     const url = `${API_URL}pages/${slug}/data`
     
     return (dispatch) => {
-        dispatch(setLoadingView(false))
+        dispatch(setLoadingView(true))
 
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)

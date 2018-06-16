@@ -86,6 +86,7 @@ class CourseLessonView extends React.Component{
                             isFree={isFree}
                             duration={duration}
                             level={level}
+                            of="courseLesson"
                         />
                         <main>
                             <VideoWrap
