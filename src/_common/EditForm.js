@@ -6,8 +6,7 @@ class EditForm extends React.Component{
         super(props)
 
         this.state = {
-            ...props.data,
-            title: props.data.title
+            ...props.data
         }
 
         this.renderFields = this.renderFields.bind(this)
@@ -29,24 +28,12 @@ class EditForm extends React.Component{
     }
 
     renderFields(field){
-        const whiteListedFields = [
-            'slug',
-            'title',
-            'subTitle',
-            'videoSource',
-            'thumbnail',
-            'access',
-            'level',
-            'technology',
-            'topic'
-        ]
-
-        if(whiteListedFields.indexOf(field) == -1){
+        if(this.props.editableFields.indexOf(field) == -1){
             return null
         }
 
         return (
-            <div className="form-group row">
+            <div key={field} className="form-group row">
                 <label
                     className="col-sm-2 col-form-label float-right"
                     htmlFor={field}>{field}</label>
@@ -57,35 +44,37 @@ class EditForm extends React.Component{
                         name={field}
                         value={this.state[field]}
                         onChange={(e)=>{ this.handleChange(field, e.target.value) }}
-                        />
+                    />
                 </div>
             </div>
             )
     }
     
     render(){
-        const {
-            title,
-            subTitle,
-            duration,
-            courseDuration,
-            lesson,
-            bodyContent
-        } = this.props.data
         return (
-            <form>
+            <form onSubmit={(e)=>{
+                e.preventDefault()
+                this.props.onSubmitForm({ ...this.state })
+            }}>
                 {
                     Object.keys(this.props.data).map((fieldName)=>{
                         return this.renderFields(fieldName)
                     })
                 }
+                <button
+                    type="submit"
+                    className="btn btn-primary btn-lg btn-block">
+                    Save
+                </button>
             </form>
         )
     }
 }
 
 EditForm.propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    editableFields: PropTypes.array.isRequired,
+    onSubmitForm: PropTypes.func.isRequired
 }
 
 export default EditForm

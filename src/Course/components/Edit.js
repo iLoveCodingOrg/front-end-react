@@ -16,6 +16,9 @@ function mapDispatchToProps(dispatch){
     return {
         getView: (slug)=>{
             dispatch(actions.getCourseBySlug(slug))
+        },
+        update: (id, payload)=>{
+            return dispatch(actions.updateCourseById(id, payload))
         }
     }
 }

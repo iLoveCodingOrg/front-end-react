@@ -7,9 +7,24 @@ import ErrorBox from '../ErrorBox'
 
 import { EditForm } from './'
 
-class View extends React.Component{
+const editableFields = [
+    'slug',
+    'title',
+    'subTitle',
+    'videoSource',
+    'thumbnail',
+    'access',
+    'level',
+    'technology',
+    'topic',
+    'bodyContent'
+]
+
+class Edit extends React.Component{
     constructor(props){
         super(props)
+
+        this.handelFormSubmit = this.handelFormSubmit.bind(this)
     }
 
     componentWillReceiveProps(nextProps){
@@ -24,14 +39,22 @@ class View extends React.Component{
       this.props.getView(this.props.match.params.slug)
     }
 
-    componentWillUnmount(){
-        // this.props.clearView()
+    handelFormSubmit(payload){
+        const preparedPayload = {}
+        editableFields.forEach((field)=>{
+            preparedPayload[field] = payload[field]
+        })
+
+        this.props.update(this.props.view.id, preparedPayload)
+        .then(({ isSuccess })=>{
+            if(isSuccess){
+                window.location.reload()
+            }
+        })
     }
 
     render(){
-        const {
-            title
-        } = this.props.view
+        const { title } = this.props.view
         const {
             isLoading,
             error
@@ -47,7 +70,11 @@ class View extends React.Component{
                         <Helmet><title>Edit - {title}</title></Helmet>
                         <main>
                             {this.props.children}
-                            <EditForm data={this.props.view} />
+                            <EditForm
+                                editableFields={editableFields}
+                                data={this.props.view}
+                                onSubmitForm={this.handelFormSubmit}
+                            />
                             <pre>
                                 {JSON.stringify(this.props.view, null, 2)}
                             </pre>
@@ -59,10 +86,11 @@ class View extends React.Component{
     }
 }
 
-View.propTypes = {
+Edit.propTypes = {
     getView: PropTypes.func.isRequired,
     of: PropTypes.oneOf(['lesson', 'course', 'page']).isRequired,
+    update: PropTypes.func.isRequired,
     view: PropTypes.object.isRequired
 }
 
-export default View
+export default Edit

@@ -86,13 +86,13 @@ export function getCourseBySlug(slug){
 
         return fetch(url, { credentials: 'include' })
         .then(checkStatus)
-            .then(parseJSON)
-            .then((json) => {
-                dispatch(setCourse(null, json))
-            })
-            .catch((err) => {
-                dispatch(setCourse(err))
-            })
+        .then(parseJSON)
+        .then((json) => {
+            dispatch(setCourse(null, json))
+        })
+        .catch((err) => {
+            dispatch(setCourse(err))
+        })
     }
 }
 
@@ -127,17 +127,49 @@ export function clearCourse(){
 export function callMarkCourseComplete(id){
     const url = `${API_URL}courses/${id}/completed`
     
-    return (dispatch) => {
+    return () => {
         return fetch(url, {
             method: 'POST',
-            credentials: 'include' })
+            credentials: 'include'
+        })
         .then(checkStatus)
-            .then(parseJSON)
-            .then((json) => {
-                console.log(json)
+        .then(parseJSON)
+        .then((json) => {
+            console.log(json)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
+}
+
+export function updateCourseById(id, payload){
+    const url = `${API_URL}courses/${id}`
+    
+    return () => {
+        return fetch(url, {
+            method: 'PUT',
+            credentials: 'include',
+            headers: {
+                'content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ...payload
             })
-            .catch((err) => {
-                console.log(error)
+        })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(() => {
+            toast.success('Saved')
+            return { isSuccess: true }
+        })
+        .catch((error) => {
+            return parseJSON(error)
+            .then((error) => {
+                console.log('error', error)
+                toast.error(error.error.message)
+                return { isSuccess: false }
             })
+        })
     }
 }
