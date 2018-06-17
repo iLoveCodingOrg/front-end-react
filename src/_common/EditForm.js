@@ -9,8 +9,9 @@ class EditForm extends React.Component{
             ...props.data
         }
 
-        this.renderFields = this.renderFields.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.renderTextFields = this.renderTextFields.bind(this)
     }
 
     componentWillReceiveProps(nextProps){
@@ -26,12 +27,42 @@ class EditForm extends React.Component{
             [field]: value
         })
     }
+    
+    handleSubmit(e){
+        e.preventDefault()
+        
+        const prepairedPayload = {}
 
-    renderFields(field){
-        if(this.props.editableFields.indexOf(field) == -1){
-            return null
-        }
+        this.props.editableFields.forEach((item)=>{
+            const value = this.state[item.name]
+            if(item.type === 'array' && !Array.isArray(value)){
+                prepairedPayload[item.name] = value.split(',')
+            } else {
+                prepairedPayload[item.name] = value
+            }
+        })
+        this.props.onSubmitForm(prepairedPayload)
+    }
 
+    renderTextareaFields(field){
+        return (
+            <div key={field} className="form-group row">
+                <label
+                    className="col-sm-2 col-form-label float-right"
+                    htmlFor={field}>{field}</label>
+                <div className="col-sm-10">
+                    <textarea
+                        className="form-control"
+                        name={field}
+                        value={this.state[field]}
+                        onChange={(e)=>{ this.handleChange(field, e.target.value) }}
+                    />
+                </div>
+            </div>
+        )
+    }
+
+    renderTextFields(field, type){
         return (
             <div key={field} className="form-group row">
                 <label
@@ -40,25 +71,30 @@ class EditForm extends React.Component{
                 <div className="col-sm-10">
                     <input
                         className="form-control"
-                        type="text"
+                        type={type}
                         name={field}
                         value={this.state[field]}
                         onChange={(e)=>{ this.handleChange(field, e.target.value) }}
                     />
                 </div>
             </div>
-            )
+        )
     }
-    
+
     render(){
         return (
-            <form onSubmit={(e)=>{
-                e.preventDefault()
-                this.props.onSubmitForm({ ...this.state })
-            }}>
+            <form onSubmit={this.handleSubmit}>
                 {
-                    Object.keys(this.props.data).map((fieldName)=>{
-                        return this.renderFields(fieldName)
+                    this.props.editableFields.map((field)=>{
+                        if(
+                            field.type === 'text'
+                            || field.type === 'number'
+                            || field.type === 'array'
+                        ){
+                            return this.renderTextFields(field.name, field.type)
+                        } else if(field.type === 'textarea') {
+                            return this.renderTextareaFields(field.name)
+                        }
                     })
                 }
                 <button

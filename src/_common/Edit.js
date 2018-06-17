@@ -7,18 +7,37 @@ import ErrorBox from '../ErrorBox'
 
 import { EditForm } from './'
 
-const editableFields = [
-    'slug',
-    'title',
-    'subTitle',
-    'videoSource',
-    'thumbnail',
-    'access',
-    'level',
-    'technology',
-    'topic',
-    'bodyContent'
-]
+const editableFields = [{
+    name: 'slug',
+    type: 'text'
+}, {
+    name: 'title',
+    type: 'text'
+}, {
+    name: 'subTitle',
+    type: 'text'
+}, {
+    name: 'videoSource',
+    type: 'text'
+}, {
+    name: 'thumbnail',
+    type: 'text'
+}, {
+    name: 'access',
+    type: 'number'
+}, {
+    name: 'level',
+    type: 'number'
+}, {
+    name: 'technology',
+    type: 'array'
+}, {
+    name: 'topic',
+    type: 'array'
+}, {
+    name: 'bodyContent',
+    type: 'textarea'
+}]
 
 class Edit extends React.Component{
     constructor(props){
@@ -42,7 +61,7 @@ class Edit extends React.Component{
     handelFormSubmit(payload){
         const preparedPayload = {}
         editableFields.forEach((field)=>{
-            preparedPayload[field] = payload[field]
+            preparedPayload[field.name] = payload[field.name]
         })
 
         this.props.update(this.props.view.id, preparedPayload)
