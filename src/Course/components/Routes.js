@@ -10,6 +10,7 @@ import {
     CourseLessonView
 } from '../'
 import { NotFound } from '../../Page'
+import isPrivate from '../../isPrivate'
 
 class Routes extends React.Component{
     constructor(props){
@@ -37,7 +38,7 @@ class Routes extends React.Component{
                     exact
                     strict
                     path="/courses/:slug/edit"
-                    component={CourseEdit} />
+                    component={isPrivate(CourseEdit)} />
                 <Route
                     component={NotFound} />
             </Switch>

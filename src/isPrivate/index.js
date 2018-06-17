@@ -10,7 +10,6 @@ export default function (WrappedComponent) {
         }else{
             return <div className="container d-flex justify-content-center">
                 <div className="col-md-8">
-                    <h1>Dashboard</h1>
                     <div className="alert alert-info">
                         You must be logged in to view this page!
                         &nbsp;<Link to="/login">Login</Link>

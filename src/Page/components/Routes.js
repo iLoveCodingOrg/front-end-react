@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom'
 import { View, Edit, List } from '../'
 import { NotFound } from '../'
+import isPrivate from '../../isPrivate'
 
 class Routes extends React.Component{
     constructor(props){
@@ -27,7 +28,7 @@ class Routes extends React.Component{
                     exact
                     strict
                     path="/pages/:slug/edit"
-                    component={Edit} />
+                    component={isPrivate(Edit)} />
                 <Route
                     component={NotFound} />
             </Switch>

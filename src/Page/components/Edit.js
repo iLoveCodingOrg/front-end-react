@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 import { actions } from '../'
 import { Edit } from '../../_common'
@@ -23,7 +24,7 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps)
 ((props)=>{
@@ -50,4 +51,4 @@ export default connect(
         editableFields={editableFields}
         of="page">
     </Edit>)
-})
+}))
