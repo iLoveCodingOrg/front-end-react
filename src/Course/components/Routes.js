@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {
   Route,
   Switch
@@ -18,7 +17,6 @@ class Routes extends React.Component{
     }
     render(){
         return (
-            
             <Switch>
                 <Route
                     exact

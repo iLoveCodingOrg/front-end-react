@@ -7,38 +7,6 @@ import ErrorBox from '../ErrorBox'
 
 import { EditForm } from './'
 
-const editableFields = [{
-    name: 'slug',
-    type: 'text'
-}, {
-    name: 'title',
-    type: 'text'
-}, {
-    name: 'subTitle',
-    type: 'text'
-}, {
-    name: 'videoSource',
-    type: 'text'
-}, {
-    name: 'thumbnail',
-    type: 'text'
-}, {
-    name: 'access',
-    type: 'number'
-}, {
-    name: 'level',
-    type: 'number'
-}, {
-    name: 'technology',
-    type: 'array'
-}, {
-    name: 'topic',
-    type: 'array'
-}, {
-    name: 'bodyContent',
-    type: 'textarea'
-}]
-
 class Edit extends React.Component{
     constructor(props){
         super(props)
@@ -60,7 +28,7 @@ class Edit extends React.Component{
 
     handelFormSubmit(payload){
         const preparedPayload = {}
-        editableFields.forEach((field)=>{
+        this.props.editableFields.forEach((field)=>{
             preparedPayload[field.name] = payload[field.name]
         })
 
@@ -76,7 +44,8 @@ class Edit extends React.Component{
         const { title } = this.props.view
         const {
             isLoading,
-            error
+            error,
+            editableFields
         } = this.props
         return (
             <div className="container">
@@ -106,6 +75,7 @@ class Edit extends React.Component{
 }
 
 Edit.propTypes = {
+    editableFields: PropTypes.array.isRequired,
     getView: PropTypes.func.isRequired,
     of: PropTypes.oneOf(['lesson', 'course', 'page']).isRequired,
     update: PropTypes.func.isRequired,

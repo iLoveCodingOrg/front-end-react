@@ -27,6 +27,42 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps)
 ((props)=>{
-    return (<Edit {...props} of="course">
+
+    const editableFields = [{
+        name: 'slug',
+        type: 'text'
+    }, {
+        name: 'title',
+        type: 'text'
+    }, {
+        name: 'subTitle',
+        type: 'text'
+    }, {
+        name: 'videoSource',
+        type: 'text'
+    }, {
+        name: 'thumbnail',
+        type: 'text'
+    }, {
+        name: 'access',
+        type: 'number'
+    }, {
+        name: 'level',
+        type: 'number'
+    }, {
+        name: 'technology',
+        type: 'array'
+    }, {
+        name: 'topic',
+        type: 'array'
+    }, {
+        name: 'bodyContent',
+        type: 'textarea'
+    }]
+
+    return (<Edit
+        {...props}
+        editableFields={editableFields}
+        of="course">
     </Edit>)
 })

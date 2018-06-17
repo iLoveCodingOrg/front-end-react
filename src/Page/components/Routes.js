@@ -3,12 +3,8 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import {
-    View as LessonView,
-    Edit as LessonEdit,
-    List as LessonList
-} from '../'
-import { NotFound } from '../../Page'
+import { View, Edit, List } from '../'
+import { NotFound } from '../'
 
 class Routes extends React.Component{
     constructor(props){
@@ -20,18 +16,18 @@ class Routes extends React.Component{
                 <Route
                     exact
                     strict
-                    path="/lessons"
-                    component={LessonList} />
+                    path="/pages"
+                    component={List} />
                 <Route
                     exact
                     strict
-                    path="/lessons/:slug"
-                    component={LessonView} />
+                    path="/pages/:slug"
+                    component={View} />
                 <Route
                     exact
                     strict
-                    path="/lessons/:slug/edit"
-                    component={LessonEdit} />
+                    path="/pages/:slug/edit"
+                    component={Edit} />
                 <Route
                     component={NotFound} />
             </Switch>

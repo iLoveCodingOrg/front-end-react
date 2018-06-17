@@ -123,3 +123,34 @@ export function clearPage(){
         type: CLEAR_PAGE
     }
 }
+
+export function updatePageById(id, payload){
+    const url = `${API_URL}pages/${id}`
+    
+    return () => {
+        return fetch(url, {
+            method: 'PUT',
+            credentials: 'include',
+            headers: {
+                'content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ...payload
+            })
+        })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(() => {
+            toast.success('Saved')
+            return { isSuccess: true }
+        })
+        .catch((error) => {
+            return parseJSON(error)
+            .then((error) => {
+                console.log('error', error)
+                toast.error(error.error.message)
+                return { isSuccess: false }
+            })
+        })
+    }
+}

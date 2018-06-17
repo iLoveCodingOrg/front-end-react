@@ -24,12 +24,7 @@ import { Home } from './Home'
 import { Dashboard } from './Dashboard'
 import { Routes as LessonRoutes } from './Lesson'
 import { Routes as CourseRoutes } from './Course'
-import {
-    View as PageView,
-    Edit as PageEdit,
-    List as PageList,
-    NotFound
-} from './Page'
+import { Routes as PageRoutes, NotFound } from './Page'
 import { Login } from './Login'
 import { Checkout } from './Checkout'
 import { VerifyEmail } from './VerifyEmail'
@@ -125,22 +120,11 @@ function renderApp(){
                                             strict
                                             path="/courses"
                                             component={CourseRoutes} />
-                        
+
                                         <Route
-                                            exact
                                             strict
                                             path="/pages"
-                                            component={PageList} />
-                                        <Route
-                                            exact
-                                            strict
-                                            path="/pages/:slug"
-                                            component={PageView} />
-                                        <Route
-                                            exact
-                                            strict
-                                            path="/pages/:slug/edit"
-                                            component={PageEdit} />
+                                            component={PageRoutes} />
 
                                         <Route
                                             component={NotFound} />
