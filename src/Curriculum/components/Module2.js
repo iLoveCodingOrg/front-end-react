@@ -5,7 +5,7 @@ import { PrintTraining } from '../'
 const courses = [
     {
         name: 'Learn jQuery in 14 days',
-        link: '/courses/learn-jquery-in-14-days',
+        link: '/courses/jquery',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/jQuery14-0-Intro.png'
     },
     {

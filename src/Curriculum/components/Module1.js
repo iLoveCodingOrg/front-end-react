@@ -5,12 +5,12 @@ import { PrintTraining } from '../'
 const courses = [
     {
         name: 'Learn HTML & CSS in 14 days',
-        link: '/courses/learn-html-css-in-14-days',
+        link: '/courses/htmlcss',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/HTMLCSS14-1-intro.png'
     },
     {
         name: 'Learn Javascript in 14 Days',
-        link: '/courses/learn-javascript-in-14-days',
+        link: '/courses/js',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/learnJSin14.png'
     },
     {

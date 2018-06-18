@@ -5,7 +5,7 @@ import { PrintTraining } from '../'
 const courses = [
     {
         name: 'Learn Node JS in a Week',
-        link: '/courses/learn-node-js-in-a-week',
+        link: '/courses/nodejs',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-1-intro.png'
     },
     {
@@ -38,7 +38,7 @@ const practice = [
     },
     {
         name: 'Project: Build a Note Taking App with Express.js',
-        link: 'courses/expressjs-note-taking-app',
+        link: 'courses/expressjs-notes-app',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/express-p/express-p1-setup.jpg'
     }
 ]
