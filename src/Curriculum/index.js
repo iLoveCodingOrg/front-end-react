@@ -4,7 +4,7 @@ import Module2 from './components/Module2'
 import Module3 from './components/Module3'
 import Module4 from './components/Module4'
 import Electives from './components/Electives'
-import PrintCourses from './components/PrintCourses'
+import PrintTraining from './components/PrintTraining'
 
 export {
     Curriculum,
@@ -13,5 +13,5 @@ export {
     Module3,
     Module4,
     Electives,
-    PrintCourses
+    PrintTraining
 }

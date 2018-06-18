@@ -1,27 +1,47 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-import { PrintCourses } from '../'
+import { PrintTraining } from '../'
 
-const courses = [{
-    name: 'Learn HTML & CSS in 14 days',
-    link: '/courses/learn-html-css-in-14-days',
-    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/HTMLCSS14-1-intro.png'
-}, {
-    name: 'Learn Javascript in 14 Days',
-    link: '/courses/learn-javascript-in-14-days',
-    thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/learnJSin14.png'
-}]
+const courses = [
+    {
+        name: 'Learn HTML & CSS in 14 days',
+        link: '/courses/learn-html-css-in-14-days',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/HTMLCSS14-1-intro.png'
+    },
+    {
+        name: 'Learn Javascript in 14 Days',
+        link: '/courses/learn-javascript-in-14-days',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/learnJSin14.png'
+    },
+    {
+        name: 'Going Live: Putting Your Website Live',
+        link: '/courses/going-live-putting-your-website-live',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/goingLive-part1.png'
+    }
+]
 
-const practice = [{
-    name: 'Going Live: Putting Your Website Live',
-    link: '/',
-    thumbSrc: ''
-}, {
-    name: 'Build a calculator app',
-    link: '/',
-    thumbSrc: ''
-}]
+const practice = [
+    {
+        name: 'Project: Create a blog design from scratch using HTML and CSS',
+        link: '/courses/blog-design',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/HTMLCSS14-9-myBlogDesign-part1.png'
+    },
+    {
+        name: 'Build a stopwatch app with pure Javascript',
+        link: '/lessons/stopwatch-app-with-pure-javascript',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/stopWatch.png'
+    },
+    {
+        name: 'Build a simple To-Do App with pure Javascript',
+        link: '/lessons/simple-to-do-app-with-pure-javascript',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/todoApp.png'
+    },
+    {
+        name: 'Build a Rock Paper Scissor app with pure Javascript',
+        link: '/lessons/rock-paper-scissor-app-with-pure-javascript',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/rockPaperScissor.png'
+    },
+]
 
 export default ()=>{
     return (
@@ -35,15 +55,17 @@ export default ()=>{
             <p className="lead text-muted mb-0">
                 Learn the fundamentals of the HTML, CSS and Javascript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
             </p>
+
+            <PrintTraining
+                title="Core Training"
+                data={courses} />
+
+            <PrintTraining
+                title="Projects for Practice"
+                data={practice} />
+
             <hr/>
-            <strong>Core Training</strong>
-            <PrintCourses courses={courses} />
-            <strong>Projects for Practice:</strong>
-            <ul>
-                <li><a href="">Going Live: Putting Your Website Live</a></li>
-                <li><a href="">Build a calculator app</a></li>
-            </ul>
-            <strong>Module Outcomes:</strong>
+            <h5>Module Outcomes:</h5>
             <p>Once you are done with this module you will be able to:</p>
             <ol>
                 <li>Build simple websites</li>

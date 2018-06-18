@@ -16,7 +16,7 @@ export default ()=>{
             <div className="align-self-center col-md-10 col-lg-8 mt-3">
                 <h1 className="headline">Curriculum</h1>
                 <p className="lead text-muted">
-                    No need to learn 10 programing languages. When you follow this curriculum, you will come out the other side as a confident software engineer who is able to build fully functional modern web sites, and mobile Apps.
+                    No need to learn 10 programming languages. When you follow this curriculum, you will come out the other side as a confident software engineer who is able to build fully functional modern websites, and mobile Apps.
                 </p>
                 <p className="lead text-muted">
                     Trust the process, follow the modules...
