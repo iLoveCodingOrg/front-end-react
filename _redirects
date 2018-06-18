@@ -301,5 +301,10 @@
 
 /lessons/building-calculator-app-with-pure-javascript   /lessons/building-calculator-app-with-jquery    301
 
+/courses/learn-html-css-in-14-days  /courses/htmlcss 301
+/courses/learn-javascript-in-14-days  /courses/js 301
+/courses/learn-jquery-in-14-days  /courses/jquery 301
+/courses/learn-node-js-in-a-week  /courses/nodejs 301
+
 # Single Page Application Redirect
 /*      /index.html   200

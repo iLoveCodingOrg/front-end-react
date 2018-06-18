@@ -23,33 +23,39 @@ const courses = [
 const practice = [
     {
         name: 'Project: Create a Top Bar Widget with jQuery',
-        link: '/lessons/project-create-a-top-bar-widget-with-jquery',
+        link: '/courses/jquery/lessons/project-create-a-top-bar-widget-with-jquery',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/jQuery14-7-1-projectTopBar.png'
     },
     {
         name: 'Project: Create Tabs functionality with jQuery',
-        link: '/lessons/project-create-tabs-functionality-with-jquery',
+        link: '/courses/jquery/lessons/project-create-tabs-functionality-with-jquery',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/jQuery14-7-2-projectTabs.png'
     },
     {
         name: 'Animate: Animating elements with jQuery',
-        link: '/lessons/animate-animating-elements-with-jquery',
+        link: '/courses/jquery/lessons/animate-animating-elements-with-jquery',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/jQuery14-8-animate.png'
     },
     {
         name: 'Project: Create your own Image Carousel Slider with jQuery',
-        link: '/lessons/project-create-your-own-image-carousel-slider-with-jquery',
+        link: '/courses/jquery/lessons/project-create-your-own-image-carousel-slider-with-jquery',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/jQuery14-12-projectSlider.png'
     },
     {
         name: 'Ajax: Create a Single Page App with jQuery',
-        link: '/lessons/ajax-create-a-single-page-app-with-jquery',
+        link: '/courses/jquery/lessons/ajax-create-a-single-page-app-with-jquery',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/jQuery14-13-ajaxSinglePage.png'
     },
     {
         name: 'Ajax: Create a Location Finder App using jQuery & Google Maps API',
-        link: '/lessons/ajax-create-a-location-finder-app-using-jquery-google-maps-api-part-1',
+        link: '/courses/jquery/lessons/ajax-create-a-location-finder-app-using-jquery-google-maps-api-part-1',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/jQuery-14-14-googleMapsAPI-part1.png'
+    },
+    {
+        name: 'Build a Calculator App with jQuery',
+        link: '/lessons/building-calculator-app-with-jquery',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/calculator.png'
+        
     },
     {
         name: 'Project: Building a Todo List App with React',

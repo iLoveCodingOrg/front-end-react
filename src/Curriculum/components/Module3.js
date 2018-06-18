@@ -23,17 +23,17 @@ const courses = [
 const practice = [
     {
         name: 'Create a Simple HTTP Server with Node.js',
-        link: '/courses/learn-node-js-in-a-week/lessons/create-a-simple-http-server-with-nodejs',
+        link: '/courses/nodejs/lessons/create-a-simple-http-server-with-nodejs',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-8-httpServer.png'
     },
     {
         name: 'Project: Create a Web Scraper to Gather Information from the web',
-        link: '/courses/learn-node-js-in-a-week/lessons/project-create-a-web-scraper-to-gather-information-from-the-web',
+        link: '/courses/nodejs/lessons/project-create-a-web-scraper-to-gather-information-from-the-web',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-10-scraper.png'
     },
     {
         name: 'Creating a Simple Web App with Node.js',
-        link: '/courses/learn-node-js-in-a-week/lessons/creating-a-simple-web-app-with-nodejs',
+        link: '/courses/nodejs/lessons/creating-a-simple-web-app-with-nodejs',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-11-webapp.png'
     },
     {
