@@ -26,6 +26,8 @@ class VideoWrap extends React.Component{
         return (
             <div>
                 {
+                    videoSource === 'none'?
+                    null:
                     (!isEmpty(videoSource))?
                     <Video
                         callMarkAsComplete={callMarkAsComplete}
