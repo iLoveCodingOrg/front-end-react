@@ -15,6 +15,8 @@ import {
 
 import { Curriculum } from '../../Curriculum'
 
+import AboutAziz from '../../AboutAziz/AboutAziz'
+
 class Pricing extends React.Component{
     constructor(props){
         super(props)
@@ -31,6 +33,15 @@ class Pricing extends React.Component{
                 <div className="pb-5">
                     <Curriculum />
                 </div>
+                <div className="bg-gray-200 mt-4">
+                    <div className="py-5 d-flex justify-content-center">
+                        <div className="col-md-10 col-lg-8">
+                            <AboutAziz />
+                        </div>
+                    </div>
+
+                </div>
+                <div className="py-5 bg-light"><Testimonials /></div>
                 {/* <div className="py-5 bg-light"><Testimonials /></div>
                 <div className="py-5"><Outcomes /></div>
                 <div className="py-5 bg-light"><WhatsIncluded /></div>
@@ -54,7 +65,6 @@ class Pricing extends React.Component{
                     <Price />
                 </div>
                 <div className="py-5 bg-dark"><Guarantee /></div>
-                <div className="py-5 bg-light"><Testimonials /></div>
                 <div className="py-5"><FAQs /></div>
                 <div className="py-5 bg-secondary"><Price /></div>
             </div>

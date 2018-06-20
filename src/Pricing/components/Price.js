@@ -44,7 +44,7 @@ class Price extends React.Component {
                         onChange={this.handleSwitch}
                         selected={this.state.selected}
                     />
-                    <div style={{ maxWidth: '400px', minWidth: '320px' }}
+                    <div style={{ maxWidth: '500px', minWidth: '320px' }}
                         className="card mb-4 box-shadow">
                         <div className="card-header bg-dark text-white ">
                             <h4 className="my-0 font-weight-normal text-center">Full-Stack Mastery</h4>
@@ -54,15 +54,34 @@ class Price extends React.Component {
                                 {price}
                             </h1>
                             <div className="text-muted text-center">{terms}</div>
-                            <ul className="list-unstyled mt-3 mb-4">
-                                <li>- Complete Step-by-Step Training</li>
-                                <li>- All 4 in-depth learning modules</li>
-                                <li>- Access to Industry Expert (Aziz)</li>
-                                <li>- Student Community</li>
-                                <li>- <del>6-month</del> 1 Year Access</li>
-                                <li>- 60-day money back guarantee</li>
+                            
+                            <div className="text-center h4 my-3">
+                                <div className="badge border bg-gray-200">
+                                    Full one year access
+                                </div>
+                            </div>
+
+                            <strong>Complete Training:</strong>
+                            <ul>
+                                <li>Complete step-by-step video training</li>
+                                <li>Access to all in-depth training modules</li>
                             </ul>
+
+                            <strong>Personalized Mentorship:</strong>
+                            <ul>
+                                <li>Unlimited access to me (Aziz) via email</li>
+                                <li>Live weekly group calls with me (Aziz)</li>
+                                <li>Live 1-on-1 private office hours with me (Aziz)</li>
+                            </ul>
+
+                            <strong>More...</strong>
+                            <ul>
+                                <li>Connect with peers via a private student community</li>
+                                <li>60-day Full Money Back Guarantee</li>
+                            </ul>
+                            
                             <Link to={link} className="btn btn-block btn-lg text-center btn-primary">Get Instant Access</Link>
+                            <small>The training program is designed to be completed within 5-months. Still I am giving you one full year of access. This way you will have plenty of time to complete the training, review the lessons, practice and achieve your goals - even if you go at a slow pace.</small>
                         </div>
                     </div>
                 </div>

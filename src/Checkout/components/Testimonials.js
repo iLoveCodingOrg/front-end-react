@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { PrintTestimonials } from '../'
+import { PrintTestimonials } from '../../Pricing'
 
 const data = [
     {
@@ -26,7 +25,9 @@ class Testimonials extends React.Component{
         return (
             <section className="d-flex justify-content-center">
                 <div className="">
-                <PrintTestimonials data={data} />
+                <PrintTestimonials
+                    itemClasses="mb-3"
+                    data={data} />
                 </div>
             </section>
         )

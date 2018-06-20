@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom'
 import { selectors } from '../../_user'
 
 import HomeForm from './HomeForm'
-import AboutAziz from './AboutAziz'
+import AboutAziz from '../../AboutAziz/AboutAziz'
 
 class Home extends React.Component{
     constructor(props){

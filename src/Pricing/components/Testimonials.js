@@ -28,7 +28,9 @@ class Testimonials extends React.Component{
                 <div className="
                     col-md-10
                     col-lg-8">
-                <PrintTestimonials data={data} />
+                <PrintTestimonials
+                    itemClasses="blockquote"
+                    data={data} />
                 </div>
             </section>
         )

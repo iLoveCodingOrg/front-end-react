@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 class Header extends React.Component{
     constructor(props){
@@ -14,13 +13,13 @@ class Header extends React.Component{
 
                     <h1><span className="text-muted">Introducing:</span> Full-Stack Mastery</h1>
                     <p className="lead">
-                        A comprehensive and complete training that has helps 3000+ developers learn how to code and build awesome websites and mobile apps
+                        A comprehensive and complete training that has helped 3000+ developers learn how to code and build awesome websites and mobile apps
                     </p>
                     <hr/>
-                    <p className="">
+                    <p>
                         Using my 3x Methodology, you will achieve success even if:
                     </p>
-                    <ul className="">
+                    <ul>
                         <li>...you have never written a single line of code ever</li>
                         <li>...you are limited on time, and have a super busy schedule</li>
                         <li>...you have taken dozens of coding courses and not made progress</li>
