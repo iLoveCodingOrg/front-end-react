@@ -14,11 +14,17 @@ export default ()=>{
         <div className="d-flex flex-column">
             <Helmet><title>Curriculum</title></Helmet>
             <div className="align-self-center col-md-10 col-lg-8 mt-3">
-                <h1 className="headline">Curriculum</h1>
-                <p className="lead text-muted">
-                    No need to learn 10 programming languages. When you follow this curriculum, you will come out the other side as a confident software engineer who is able to build fully functional modern websites, and mobile Apps.
+                <h1 className="headline">The Perfect Curriculum</h1>
+                <p className="lead">
+                    Follow this curriculum to go from zero to a professional software engineer.
                 </p>
-                <p className="lead text-muted">
+                <p className="lead">
+                    By the time you are done with this curriculum you will have the complete skills to code and launch modern websites, web applications and even mobile apps from scratch. Plus you will have an impressive portfolio to land you a respectable job as a software engineer.
+                </p>
+                <p className="lead">
+                    We'll do all of this while focusing on one programming language, which is Javascript. Javascript is currently the most popular and versatile programing language on planet internet. In fact 95% of all top websites use Javascript, and all the tech giants use it to build their websites and mobile apps: Facebook, Paypal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.
+                </p>
+                <p className="lead">
                     <strong>Trust the process - follow the modules: </strong>
                     Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
                 </p>

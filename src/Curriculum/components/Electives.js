@@ -27,7 +27,22 @@ const courses = [
         name: 'Learn Angular JS in 14 days',
         link: '/courses/learn-angular-js-in-14-days',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/learnAngular-1-intro.png'
-    }
+    },
+    {
+        name: 'How to set a full cover background image on your website',
+        link: '/lessons/full-cover-background-image',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/fullCoverBackgroundImage.png'
+    },
+    {
+        name: 'How to set fullscreen video in the background on your website',
+        link: '/lessons/fullscreen-video-in-background',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/fullCoverBackgroundVideo.png'
+    },
+    {
+        name: 'Load Page Elements when Scrolled to that Area',
+        link: '/lessons/load-page-elements-when-scrolled-to-that-area',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/showOnScroll.png'
+    },
 ]
 
 export default ()=>{

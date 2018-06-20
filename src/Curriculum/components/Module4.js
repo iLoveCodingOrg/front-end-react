@@ -38,7 +38,7 @@ export default ()=>{
                 data={courses} />
 
             <PrintTraining
-                title="Projects for Practice"
+                title="Project for Practice"
                 data={practice} />
 
             <hr/>
