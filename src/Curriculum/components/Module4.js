@@ -27,10 +27,12 @@ export default ()=>{
                 </small>
                 Mobile Development
             </h2>
-            <p className="lead text-muted mb-0">
+            <p className="lead text-muted">
                 Learn how to build Mobile Applications for iPhone and Android with Javascript. Use the same technology used to build Instagram, Facebook, Airbnb and Walmart mobile apps.
             </p>
-            
+            <p className="mb-0">
+                <strong>Time to completion:</strong> 2 weeks (Focus for week number 17 and 18)
+            </p>
             <PrintTraining
                 title="Core Training"
                 data={courses} />

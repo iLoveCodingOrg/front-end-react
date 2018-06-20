@@ -52,10 +52,12 @@ export default ()=>{
                 </small>
                 Back-End Development
             </h2>
-            <p className="lead text-muted mb-0">
+            <p className="lead text-muted">
                 Learn how to make web application back-ends. Build Web APIs, security and authentication (i.e. Login Feature) and connect your app with the database
             </p>
-
+            <p className="mb-0">
+                <strong>Time to completion:</strong> 4 weeks (Focus for week number 13-16)
+            </p>
             <PrintTraining
                 title="Core Training"
                 data={courses} />

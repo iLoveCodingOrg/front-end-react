@@ -41,21 +41,28 @@ const practice = [
         link: '/lessons/rock-paper-scissor-app-with-pure-javascript',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/rockPaperScissor.png'
     },
+    {
+        name: 'Project: Build Your Own Snake Game with Javascript',
+        link: '/courses/snake-game',
+        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/snakegame1.png'
+    },
 ]
 
 export default ()=>{
     return (
-        <section className="bg-light card p-4 p-md-5 mt-5">
+        <section className="bg-light card p-4 p-md-5 mt-4">
             <h2>
                 <small className="d-block text-muted">
                     Module 1:
                 </small>
                 Fundamentals
             </h2>
-            <p className="lead text-muted mb-0">
+            <p className="lead text-muted">
                 Learn the fundamentals of the HTML, CSS and Javascript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
             </p>
-
+            <p className="mb-0">
+                <strong>Time to completion:</strong> 6 weeks (Focus for the first 6 weeks)
+            </p>
             <PrintTraining
                 title="Core Training"
                 data={courses} />

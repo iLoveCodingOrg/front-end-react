@@ -14,11 +14,11 @@ class Header extends React.Component{
 
                     <h1><span className="text-muted">Introducing:</span> Full-Stack Mastery</h1>
                     <p className="lead">
-                        A comprehensive and complete traing that has helps 3000+ developers learn how to code and build awesome websites and mobile apps
+                        A comprehensive and complete training that has helps 3000+ developers learn how to code and build awesome websites and mobile apps
                     </p>
                     <hr/>
                     <p className="">
-                        Using my 3x Metholody, you will achieve success even if:
+                        Using my 3x Methodology, you will achieve success even if:
                     </p>
                     <ul className="">
                         <li>...you have never written a single line of code ever</li>

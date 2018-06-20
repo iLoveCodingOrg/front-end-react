@@ -19,8 +19,27 @@ export default ()=>{
                     No need to learn 10 programming languages. When you follow this curriculum, you will come out the other side as a confident software engineer who is able to build fully functional modern websites, and mobile Apps.
                 </p>
                 <p className="lead text-muted">
-                    Trust the process, follow the modules...
+                    <strong>Trust the process - follow the modules: </strong>
+                    Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
                 </p>
+                <div className="row mt-4">
+                    <div className="col-sm-6 mb-2">
+                        <div className="alert bg-white py-4 border text-center mb-0">
+                            <h5>Time to completion - 5 months</h5>
+                            <p className="mb-0">
+                                Study 10 hrs/week and complete within 5 months.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="col-sm-6">
+                        <div className="alert bg-white py-4 border text-center mb-0">
+                            <h5>Weekly group calls with mentor</h5>
+                            <p className="mb-0">
+                                Bring your questions and problems to be addressed live.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <Module1 />
                 <Module2 />
                 <Module3 />
