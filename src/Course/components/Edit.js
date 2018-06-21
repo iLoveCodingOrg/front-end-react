@@ -45,6 +45,9 @@ export default withRouter(connect(
         name: 'thumbnail',
         type: 'text'
     }, {
+        name: 'duration',
+        type: 'text'
+    }, {
         name: 'access',
         type: 'number'
     }, {
@@ -55,6 +58,9 @@ export default withRouter(connect(
         type: 'array'
     }, {
         name: 'topic',
+        type: 'array'
+    }, {
+        name: 'lesson',
         type: 'array'
     }, {
         name: 'bodyContent',

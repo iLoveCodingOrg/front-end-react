@@ -45,6 +45,9 @@ export default withRouter(connect(
         name: 'thumbnail',
         type: 'text'
     }, {
+        name: 'duration',
+        type: 'text'
+    }, {
         name: 'access',
         type: 'number'
     }, {
