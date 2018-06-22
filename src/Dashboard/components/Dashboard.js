@@ -29,22 +29,30 @@ class Dashboard extends React.Component{
                     <hr className="mb-1"/>
                     <div className="row">
                         <div className="col-12 col-md-4 mt-5">
-                            <h4>Start</h4>
+                            <h4>Start training</h4>
                             <ul className="list-unstyled">
                                 <li><Link to="/curriculum">Full Curriculum</Link></li>
                                 <li><Link to="/courses?tag=front-end">All Courses</Link></li>
-                                {/* <li><Link to="/">Quesitons &amp; Answers</Link>(Coming soon)</li> */}
+                                <li><a to="/qa">Questions &amp; Answers</a> (Coming soon)</li>
                             </ul>
                         </div>
-                        <div className="col-12 col-md-8 mt-5">
-                            <h4>Community &amp; Support</h4>
+                        <div className="col-12 col-md-4 mt-5">
+                            <h4>Join the community</h4>
                             <ul className="list-unstyled">
                                 <li><a target="_blank" href="https://join.slack.com/t/ilovecoding/shared_invite/enQtMzU5Nzk5NTUxNDQwLWNiZWM4YWIzODEyNzFmYjAyNGQyNzg2MTM0YmRjMmYxZDAwOGY4ODcwYzA4NDBhMTFlN2NkMTZjYWExNWNjZmQ">Private Slack chat</a></li>
-                                <li><a target="_blank"  href="https://www.facebook.com/groups/1688313098134415">Private Facebook Group</a></li>
-                                <li><a to="/">Live Group Calls</a></li>
-                                <li><a target="_blank" href="mailto:support@ilovecoding.org">Email support</a></li>
+                                <li><a target="_blank"  href="https://www.facebook.com/groups/1688313098134415">Private Facebook group</a></li>
                             </ul>
-                            <p className="text-muted mb-0">We have a "no student left behind" policy! and to support that we have the above ways you can keep in touch with us. </p>
+                        </div>
+                        <div className="col-12 col-md-4 mt-5">
+                            <h4>Ask for support</h4>
+                            <ul className="list-unstyled">
+                                <li><Link to="/officehours">Schedule call with your mentor</Link></li>
+                                <li><a target="_blank" href="mailto:support@ilovecoding.org">Email support</a></li>
+                                <li><a to="/groupcall">Join a live group call (Coming soon)</a></li>
+                            </ul>
+                            <p className="text-muted mb-0"><em>
+                                We have a "no student left behind" policy! and to support that we have the above ways you can keep in touch with us.</em>
+                            </p>
                         </div>
                     </div>
                     <div className="row">
@@ -58,7 +66,7 @@ class Dashboard extends React.Component{
                         <div className="col-12 col-md-4 mt-5">
                             <h4>Additional</h4>
                             <ul className="list-unstyled">
-                                <li><a to="/">Tools &amp; Resources</a></li>
+                                <li><a to="/">Tools &amp; Resources</a> (Coming soon)</li>
                                 <li><a target="_blank" href="https://ilovecoding.typeform.com/to/g6mTg8">Submit your success story</a></li>
                             </ul>
                         </div>

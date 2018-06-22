@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Copyrights } from '../'
 
 export default () => (
-    <footer className="container pt-4 pt-md-5 border-top">
+    <footer className="container mt-5 pt-4 pt-md-5 border-top">
         <div className="d-flex justify-content-around">
             <div className="">
                 <h5>Students</h5>

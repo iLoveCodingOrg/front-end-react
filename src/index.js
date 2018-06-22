@@ -32,6 +32,7 @@ import { ResetPassword, ForgotPassword } from './ForgotPassword'
 import Analytics from './Analytics'
 import { Curriculum } from './Curriculum'
 import { Pricing } from './Pricing'
+import Officehours from './Officehours'
 
 const RemoveTrailingSlash = ({ location }) => {
     const { pathname } = location
@@ -125,6 +126,11 @@ function renderApp(){
                                             strict
                                             path="/pages"
                                             component={PageRoutes} />
+                                        
+                                        <Route
+                                            strict
+                                            path="/officehours"
+                                            component={Officehours} />
 
                                         <Route
                                             component={NotFound} />
