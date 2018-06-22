@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-class Officehours extends React.Component{
+export default class OfficeHours extends React.Component{
     constructor(props){
         super(props)
     }
@@ -17,15 +17,19 @@ class Officehours extends React.Component{
         return (
             <div className="d-flex flex-column">
                 <Helmet>
-                    <title>
-                        Schedule office hours with Aziz Ali
-                    </title>
+                    <title>Schedule office hours with Aziz Ali</title>
                 </Helmet>
                 <div className="align-self-center col-md-10 col-lg-8 mt-3">
-                    <h1 className="headline">Schedule office hours with Aziz Ali</h1>
-                    
-                    <p className="lead">Pick a date and time from the options below and schedule one-on-one time with me.</p>
-                
+                    <h1 className="headline">
+                        Schedule office hours with Aziz Ali
+                    </h1>
+
+                    <p className="lead">
+                        Pick a date and time from the options below and schedule one-on-one time with me.
+                    </p>
+                    <p className="lead">
+                        Take advantage of the time that I have available. Pick my brain, take advantage of my expertise while I am available. As I start getting busy I will no longer be able to offer this personalized service.
+                    </p>
 
                     <div className="alert alert-info pb-0">
                         <h5 className="alert-heading">
@@ -57,5 +61,3 @@ class Officehours extends React.Component{
         )
     }
 }
-
-export default Officehours

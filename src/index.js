@@ -32,7 +32,8 @@ import { ResetPassword, ForgotPassword } from './ForgotPassword'
 import Analytics from './Analytics'
 import { Curriculum } from './Curriculum'
 import { Pricing } from './Pricing'
-import Officehours from './Officehours'
+import OfficeHours from './OfficeHours'
+import GroupCalls from './GroupCalls'
 
 const RemoveTrailingSlash = ({ location }) => {
     const { pathname } = location
@@ -130,7 +131,12 @@ function renderApp(){
                                         <Route
                                             strict
                                             path="/officehours"
-                                            component={Officehours} />
+                                            component={isPrivate(OfficeHours)} />
+
+                                        <Route
+                                            strict
+                                            path="/groupcalls"
+                                            component={isPrivate(GroupCalls)} />
 
                                         <Route
                                             component={NotFound} />

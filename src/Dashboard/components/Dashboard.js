@@ -46,9 +46,9 @@ class Dashboard extends React.Component{
                         <div className="col-12 col-md-4 mt-5">
                             <h4>Ask for support</h4>
                             <ul className="list-unstyled">
-                                <li><Link to="/officehours">Schedule call with your mentor</Link></li>
+                                <li><Link to="/officehours">Schedule call with Aziz</Link></li>
+                                <li><Link to="/groupcalls">Join weekly group calls</Link></li>
                                 <li><a target="_blank" href="mailto:support@ilovecoding.org">Email support</a></li>
-                                <li><a to="/groupcall">Join a live group call (Coming soon)</a></li>
                             </ul>
                             <p className="text-muted mb-0"><em>
                                 We have a "no student left behind" policy! and to support that we have the above ways you can keep in touch with us.</em>
