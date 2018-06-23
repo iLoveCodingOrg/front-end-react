@@ -29,7 +29,6 @@ import { Login } from './Login'
 import { Checkout } from './Checkout'
 import { VerifyEmail } from './VerifyEmail'
 import { ResetPassword, ForgotPassword } from './ForgotPassword'
-import Analytics from './Analytics'
 import { Curriculum } from './Curriculum'
 import { Pricing } from './Pricing'
 import OfficeHours from './OfficeHours'
@@ -52,7 +51,6 @@ function renderApp(){
                 <ScrollToTop>
                     <ErrorBoundary>
                         <Route path="/" render={RemoveTrailingSlash} />
-                        <Route path="/" component={Analytics} />
                         <ToastContainer
                             position="top-center"
                             autoClose={5000}
