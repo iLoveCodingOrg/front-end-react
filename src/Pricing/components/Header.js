@@ -10,14 +10,19 @@ class Header extends React.Component{
                 <div className="
                     col-md-10
                     col-lg-8">
-
-                    <h1><span className="text-muted">Introducing:</span> Full-Stack Mastery</h1>
+                    
+                    <h2 class="text-center">
+                        Better than a coding bootcamp at 2% of the cost
+                    </h2>
+                    <h1 class="text-center">
+                        <span className="text-muted">Introducing:</span> Full-Stack Mastery
+                    </h1>
                     <p className="lead">
                         A comprehensive and complete training that has helped 3000+ developers learn how to code and build awesome websites and mobile apps
                     </p>
                     <hr/>
                     <p>
-                        Using my 3x Methodology, you will achieve success even if:
+                        Using my practice-focused, fundamentals-first learning methodology, you will achieve success even if:
                     </p>
                     <ul>
                         <li>...you have never written a single line of code ever</li>

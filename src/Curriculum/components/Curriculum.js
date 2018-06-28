@@ -16,10 +16,10 @@ export default ()=>{
             <div className="align-self-center col-md-10 col-lg-8 mt-3">
                 <h1 className="headline">The Perfect Curriculum</h1>
                 <p className="lead">
-                    Follow this curriculum to go from zero to a professional software engineer.
+                    Follow this curriculum to go from zero to a professional software developer.
                 </p>
                 <p className="lead">
-                    By the time you are done with this curriculum you will have the complete skills to code and launch modern websites, web applications and even mobile apps from scratch. Plus you will have an impressive portfolio to land you a respectable job as a software engineer.
+                    By the time you are done with this curriculum you will have the complete skills to code and launch modern websites, web applications and even mobile apps from scratch. Plus you will have an impressive portfolio to land you a respectable job as a software developer.
                 </p>
                 <p className="lead">
                     We'll do all of this while focusing on one programming language, which is Javascript. Javascript is currently the most popular and versatile programing language on planet internet. In fact 95% of all top websites use Javascript, and all the tech giants use it to build their websites and mobile apps: Facebook, Paypal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.

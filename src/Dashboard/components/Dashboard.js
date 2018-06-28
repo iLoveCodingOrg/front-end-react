@@ -46,7 +46,7 @@ class Dashboard extends React.Component{
                         <div className="col-12 col-md-4 mt-5">
                             <h4>Ask for support</h4>
                             <ul className="list-unstyled">
-                                <li><Link to="/officehours">Schedule call with Aziz</Link></li>
+                                <li><Link to="/officehours">Schedule a call with Aziz</Link></li>
                                 <li><Link to="/groupcalls">Join weekly group calls</Link></li>
                                 <li><a target="_blank" href="mailto:support@ilovecoding.org">Email support</a></li>
                             </ul>
