@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { isEmpty } from 'lodash'
 import { Helmet } from 'react-helmet'
 
 import { ViewHeader } from '../../_common/'
@@ -10,6 +9,7 @@ import { VideoWrap } from '../../Video'
 import { actions as courseActions } from '../'
 import { actions as lessonActions } from '../../Lesson'
 import { CourseNav } from '../'
+import SourceDemo from '../../SourceDemo'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
 
@@ -49,7 +49,8 @@ class CourseLessonView extends React.Component{
             videoSource,
             thumbnail,
             bodyContent,
-            isComplete
+            sourceUrl,
+            demoUrl
         } = this.props.lessonView
         
         const isFree = (access)? false : true
@@ -98,6 +99,10 @@ class CourseLessonView extends React.Component{
                                 title={title}
                                 thumbnail={thumbnail}
                                 videoSource={videoSource}
+                            />
+                            <SourceDemo
+                                source={sourceUrl}
+                                demo={demoUrl}
                             />
                             <CourseNav
                                 course={courseView}

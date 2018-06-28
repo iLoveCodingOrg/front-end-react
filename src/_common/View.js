@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 
 import ViewHeader from './ViewHeader'
 import { VideoWrap } from '../Video'
+import SourceDemo from '../SourceDemo'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 
@@ -40,7 +41,9 @@ class View extends React.Component{
             thumbnail,
             videoSource,
             bodyContent,
-            lessonCount
+            lessonCount,
+            sourceUrl,
+            demoUrl
         } = this.props.view
         const isFree = (access)? false : true
         const {
@@ -84,6 +87,10 @@ class View extends React.Component{
                                 />: null
 
                             }
+                            <SourceDemo
+                                source={sourceUrl}
+                                demo={demoUrl}
+                            />
                             {this.props.children}
                             <div
                                 className="d-flex flex-column align-items-center"
