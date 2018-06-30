@@ -25,15 +25,16 @@ class Home extends React.Component{
                 <div className="
                     align-self-center
                     text-center
-                    my-3
+                    my-4
+                    mt-md-5
                     mx-2 mx-sm-0
                     "
-                    style={{ maxWidth: '570px' }}
+                    style={{ maxWidth: '770px' }}
                 >
                     {/* <p className="lead text-primary text-muted">
                         Becoming a respectable software developer is a <strong>winnable game</strong>
                     </p> */}
-                    <h1>
+                    <h1 class="headline">
                         I will teach you how to code and
                         become a software developer
                         {/* build awesome websites and apps */}
@@ -83,7 +84,7 @@ class Home extends React.Component{
                     </p> */}
                 </div>
                 <div className="bg-gray-200 mt-5">
-                    <div className="col-md-10 col-lg-8 mr-auto ml-auto p-4">
+                    <div className="col-md-10 col-lg-8 mr-auto ml-auto py-5">
                         <AboutAziz />
                     </div>
                 </div>
