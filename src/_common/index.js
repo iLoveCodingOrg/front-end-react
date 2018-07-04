@@ -1,5 +1,6 @@
 import List from './List'
 import Card from './Card'
+import Add from './Add'
 import View from './View'
 import Edit from './Edit'
 import EditForm from './EditForm'
@@ -12,6 +13,7 @@ import LessonCount from './LessonCount'
 export {
   List,
   Card,
+  Add,
   View,
   Edit,
   EditForm,

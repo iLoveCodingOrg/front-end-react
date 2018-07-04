@@ -73,8 +73,8 @@ class Header extends React.Component{
         return (
             <div>
                 <button className="btn">Edit</button>
-                <Link to="/page/add" className="btn">Add Page</Link>
-                <Link to="/lesson/add" className="btn">Add Lesson</Link>
+                <Link to="/pages/add" className="btn">Add Page</Link>
+                <Link to="/lessons/add" className="btn">Add Lesson</Link>
                 <Link to="/courses/add" className="btn">Add Course</Link>
             </div>
         )

@@ -3,11 +3,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import {
-    View as LessonView,
-    Edit as LessonEdit,
-    List as LessonList
-} from '../'
+import { Add, View, Edit, List } from '../'
 import { NotFound } from '../../Page'
 import isPrivate from '../../isPrivate'
 
@@ -22,17 +18,22 @@ class Routes extends React.Component{
                     exact
                     strict
                     path="/lessons"
-                    component={LessonList} />
+                    component={List} />
+                <Route
+                    exact
+                    strict
+                    path="/lessons/add"
+                    component={Add} />
                 <Route
                     exact
                     strict
                     path="/lessons/:slug"
-                    component={LessonView} />
+                    component={View} />
                 <Route
                     exact
                     strict
                     path="/lessons/:slug/edit"
-                    component={isPrivate(LessonEdit)} />
+                    component={isPrivate(Edit)} />
                 <Route
                     component={NotFound} />
             </Switch>

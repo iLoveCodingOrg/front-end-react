@@ -11,10 +11,10 @@ class Header extends React.Component{
                     col-md-10
                     col-lg-8">
                     
-                    <h2 class="text-center">
+                    <h2 className="text-center">
                         Better than a coding bootcamp at 2% of the cost
                     </h2>
-                    <h1 class="text-center">
+                    <h1 className="text-center">
                         <span className="text-muted">Introducing:</span> Full-Stack Mastery
                     </h1>
                     <p className="lead">

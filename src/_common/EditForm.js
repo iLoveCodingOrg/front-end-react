@@ -31,17 +31,17 @@ class EditForm extends React.Component{
     handleSubmit(e){
         e.preventDefault()
         
-        const prepairedPayload = {}
+        const preparedPayload = {}
 
         this.props.editableFields.forEach((item)=>{
             const value = this.state[item.name]
             if(item.type === 'array' && !Array.isArray(value)){
-                prepairedPayload[item.name] = value.split(',')
+                preparedPayload[item.name] = value.split(',')
             } else {
-                prepairedPayload[item.name] = value
+                preparedPayload[item.name] = value
             }
         })
-        this.props.onSubmitForm(prepairedPayload)
+        this.props.onSubmitForm(preparedPayload)
     }
 
     renderTextareaFields(field){

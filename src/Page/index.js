@@ -1,5 +1,6 @@
 import * as actions from './actions'
 import reducer from './reducer'
+import Add from './components/Add'
 import View from './components/View'
 import Edit from './components/Edit'
 import List from './components/List'
@@ -9,6 +10,7 @@ import NotFound from './components/NotFound'
 export {
     reducer,
     actions,
+    Add,
     View,
     Edit,
     List,

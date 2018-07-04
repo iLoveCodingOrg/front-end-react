@@ -36,9 +36,9 @@ export default class GroupCall extends React.Component{
                     </div>
 
 
-                    <div class="widget_wrapper">
+                    <div className="widget_wrapper">
                         <div
-                            class="ewp_form_container ewp_widget_container"
+                            className="ewp_form_container ewp_widget_container"
                             webinar_id="7TeZqZ7i2W+C+GVXkbe9OA=="></div>
                     </div>
                 </div>

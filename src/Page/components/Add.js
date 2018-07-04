@@ -3,23 +3,16 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import { actions } from '../'
-import { Edit } from '../../_common'
+import { Add } from '../../_common'
 
-function mapStateToProps(state){
-    return {
-        error: state.pages.view.error,
-        isLoading: state.pages.view.isLoading,
-        view: state.pages.view.data
-    }
+function mapStateToProps(){
+    return
 }
 
 function mapDispatchToProps(dispatch){
     return {
-        getView: (slug)=>{
-            dispatch(actions.getPageBySlug(slug))
-        },
-        update: (id, payload)=>{
-            return dispatch(actions.updatePageById(id, payload))
+        add: (payload)=>{
+            return dispatch(actions.addPage(payload))
         }
     }
 }
@@ -40,9 +33,9 @@ export default withRouter(connect(
         type: 'textarea'
     }]
 
-    return (<Edit
+    return (<Add
         {...props}
         editableFields={editableFields}
-        of="page">
-    </Edit>)
+        of="page"
+    />)
 }))

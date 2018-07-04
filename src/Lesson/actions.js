@@ -182,3 +182,37 @@ export function updateLessonById(id, payload){
         })
     }
 }
+
+export function addLesson(payload){
+    const url = `${API_URL}lessons`
+    
+    return () => {
+        return fetch(url, {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+                'content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                ...payload
+            })
+        })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then((json) => {
+            toast.success('Saved')
+            return {
+                ...json,
+                isSuccess: true
+            }
+        })
+        .catch((error) => {
+            return parseJSON(error)
+            .then((error) => {
+                console.log('error', error)
+                toast.error(error.error.message)
+                return { isSuccess: false }
+            })
+        })
+    }
+}
