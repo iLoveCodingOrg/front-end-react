@@ -2,7 +2,7 @@ import './switch.scss'
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { Switch } from '../'
-import { isOfferValid } from '../../CountDown'
+import { isOfferValid } from '../../Offer'
 
 const data30 = {
     one: {

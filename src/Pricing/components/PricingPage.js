@@ -1,7 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Timer } from '../../CountDown/'
+import { Timer } from '../../Offer/'
 
+import { Offer } from '../../Offer'
 import {
     Header,
     Testimonials,
@@ -30,6 +31,7 @@ class Pricing extends React.Component{
                         Pricing | iLoveCoding
                     </title>
                 </Helmet>
+                <Offer />
                 <Timer title="30% Off expires in:"/>
                 <div className="pt-5"><Header /></div>
                 <div className="pb-5">
