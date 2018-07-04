@@ -43,10 +43,12 @@ class Edit extends React.Component{
     render(){
         const { title } = this.props.view
         const {
+            of,
             isLoading,
             error,
             editableFields
         } = this.props
+        const pageTitle = `Edit ${of}`
         return (
             <div className="container">
                 {
@@ -55,8 +57,9 @@ class Edit extends React.Component{
                     (error) ? <ErrorBox />
                     :
                     <div>
-                        <Helmet><title>Edit - {title}</title></Helmet>
+                        <Helmet><title>{pageTitle}</title></Helmet>
                         <main>
+                            <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
                             {this.props.children}
                             <EditForm
                                 editableFields={editableFields}

@@ -57,13 +57,13 @@ class Add extends React.Component{
             of,
             editableFields
         } = this.props
-        const title = `Add ${of}`
+        const pageTitle = `Add ${of}`
         return (
             <div className="container">
                 <div>
-                    <Helmet><title>{title}</title></Helmet>
+                    <Helmet><title>{pageTitle}</title></Helmet>
                     <main>
-                        <h1 className="my-4 text-center">{title}</h1>
+                        <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
                         {this.props.children}
                         <EditForm
                             data={this.prepareData()}

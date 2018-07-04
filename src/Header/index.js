@@ -2,6 +2,7 @@ import './styles'
 import { isEmpty } from 'lodash'
 import React from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 import logo from '../_app/images/ilovecoding-logo.svg'
 import { Link } from 'react-router-dom'
@@ -15,6 +16,8 @@ class Header extends React.Component{
         this.renderUser = this.renderUser.bind(this)
         this.renderGuest = this.renderGuest.bind(this)
         this.renderAdminLinks = this.renderAdminLinks.bind(this)
+        this.renderAddButtons = this.renderAddButtons.bind(this)
+        this.renderEditButton = this.renderEditButton.bind(this)
     }
 
     printLinksLeft(){
@@ -67,15 +70,33 @@ class Header extends React.Component{
         return `https://www.gravatar.com/avatar/${emailHash}.jpg?s=${size}&d=${defaultImageType}`
     }
 
-    renderAdminLinks(){
-        const { roles } = this.props.user
-        if(isEmpty(roles) || roles[0] !== 'admin') return
+    renderEditButton(){
+        const { pathname } = this.props.location
+        const pathParts = pathname.split('/')
+        const length = pathParts.length
+        const editLink = `/${pathParts[length-2]}/${pathParts[length-1]}/edit`
         return (
-            <div>
-                <button className="btn">Edit</button>
+            <Link to={editLink} className="btn">Edit</Link>
+        )
+    }
+
+    renderAddButtons(){
+        return (
+            <div className="d-inline">
                 <Link to="/pages/add" className="btn">Add Page</Link>
                 <Link to="/lessons/add" className="btn">Add Lesson</Link>
                 <Link to="/courses/add" className="btn">Add Course</Link>
+            </div>
+        )
+    }
+    renderAdminLinks(){
+        const { roles } = this.props.user
+        if(isEmpty(roles) || roles[0] !== 'admin') return
+        
+        return (
+            <div>
+                {this.renderEditButton()}
+                {this.renderAddButtons()}
             </div>
         )
     }
@@ -143,6 +164,6 @@ function mapDispatchToProps(dispatch){
     }
 }
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
-    mapDispatchToProps)(Header)
+    mapDispatchToProps)(Header))

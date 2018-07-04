@@ -52,6 +52,7 @@ class EditForm extends React.Component{
                     htmlFor={field}>{field}</label>
                 <div className="col-sm-10">
                     <textarea
+                        rows="13"
                         className="form-control"
                         name={field}
                         value={this.state[field]}
