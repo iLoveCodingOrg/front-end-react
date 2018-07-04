@@ -1,4 +1,5 @@
 import './styles'
+import { isEmpty } from 'lodash'
 import React from 'react'
 import { connect } from 'react-redux'
 
@@ -13,6 +14,7 @@ class Header extends React.Component{
         this.printLinksRight = this.printLinksRight.bind(this)
         this.renderUser = this.renderUser.bind(this)
         this.renderGuest = this.renderGuest.bind(this)
+        this.renderAdminLinks = this.renderAdminLinks.bind(this)
     }
 
     printLinksLeft(){
@@ -65,6 +67,19 @@ class Header extends React.Component{
         return `https://www.gravatar.com/avatar/${emailHash}.jpg?s=${size}&d=${defaultImageType}`
     }
 
+    renderAdminLinks(){
+        const { roles } = this.props.user
+        if(isEmpty(roles) || roles[0] !== 'admin') return
+        return (
+            <div>
+                <button className="btn">Edit</button>
+                <Link to="/page/add" className="btn">Add Page</Link>
+                <Link to="/lesson/add" className="btn">Add Lesson</Link>
+                <Link to="/courses/add" className="btn">Add Course</Link>
+            </div>
+        )
+    }
+
     renderUser(){
         const { user, logout } = this.props
         const { firstName, emailHash } = user
@@ -96,6 +111,7 @@ class Header extends React.Component{
                 <nav className="my-2 my-md-0 ml-md-0 mr-md-auto">
                     {this.printLinksLeft()}
                 </nav>
+                {this.renderAdminLinks()}
                 <nav className="my-2 my-md-0 mr-md-3">
                     {this.printLinksRight()}
                 </nav>

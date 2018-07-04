@@ -34,7 +34,7 @@ class Home extends React.Component{
                     {/* <p className="lead text-primary text-muted">
                         Becoming a respectable software developer is a <strong>winnable game</strong>
                     </p> */}
-                    <h1 class="headline">
+                    <h1 className="headline">
                         I will teach you how to code and
                         become a software developer
                         {/* build awesome websites and apps */}
