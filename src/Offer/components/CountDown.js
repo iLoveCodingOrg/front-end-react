@@ -1,14 +1,9 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
 import Countdown from 'react-countdown-now'
-import qs from 'query-string'
 import { isNil } from 'lodash'
+import { connect } from 'react-redux'
 
-export default withRouter(({ location, title }) => {
-    const query = qs.parse(location.search)
-    const timeNow = parseInt(query.t) || Date.now()
-    const timeLeft = query.l ? parseInt(query.l) : undefined
-
+function CountDown({ title, timeFrom, timeLeft }) {
     if (isNil(timeLeft)) return null
 
     function renderTimeUnit(time, label){
@@ -25,8 +20,7 @@ export default withRouter(({ location, title }) => {
     }
 
     return <Countdown
-        znow={()=> timeNow}
-        date={timeNow + timeLeft}
+        date={timeFrom + timeLeft}
         renderer={({ days, hours, minutes, seconds, completed }) => {
             if (completed) {
                 // Render a completed state
@@ -52,7 +46,7 @@ export default withRouter(({ location, title }) => {
                         <div className="
                             my-3
                             d-flex justify-content-center align-items-center
-                            ">
+                        ">
                             {renderTimeUnit(days, 'DAYS')}
                             <div className="h2 text-white p-1 p-md-2">:</div>
                             {renderTimeUnit(hours, 'HOURS')}
@@ -67,4 +61,13 @@ export default withRouter(({ location, title }) => {
         }
         }
     />
-})
+}
+
+function mapStateToProps(state){
+    return {
+        timeFrom: state.offer.timeFrom,
+        timeLeft: state.offer.timeLeft
+    }
+}
+
+export default connect(mapStateToProps)(CountDown)

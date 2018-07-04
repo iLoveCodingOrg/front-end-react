@@ -4,7 +4,7 @@ import { isNil } from 'lodash'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
-import { actions } from '../'
+import { actions, selectors } from '../'
 
 class Offer extends React.Component{
     constructor(props){
@@ -25,7 +25,7 @@ class Offer extends React.Component{
     render(){
         return (<div>
             I am Offer component
-            {this.props.timeFrom}, {this.props.timeLeft}
+            {this.props.timeFrom}, {this.props.timeLeft}, {this.props.isOfferValid}
         </div>)
     }
 }
@@ -33,7 +33,8 @@ class Offer extends React.Component{
 function mapStateToProps(state) {
     return {
         timeFrom: state.offer.timeFrom,
-        timeLeft: state.offer.timeLeft
+        timeLeft: state.offer.timeLeft,
+        isOfferValid: selectors.isOfferValid(state)
     }
 }
 

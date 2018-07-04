@@ -1,18 +1,20 @@
 import './switch.scss'
 import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+
+import { selectors } from '../../Offer'
 import { Switch } from '../'
-import { isOfferValid } from '../../Offer'
 
 const data30 = {
     one: {
         price: '$419.30',
-        terms: 'One-time Payment',
+        terms: 'One-time Payment (original price: $599)',
         link: '/checkout/ilc-fs-599'
     },
     four: {
         price: '$105',
-        terms: 'Only 4 payments of $105/month',
+        terms: 'Only 4 payments of $105/month (original price $150/month)',
         link: '/checkout/ilc-fs-150-4pay'
     }
 }
@@ -45,9 +47,8 @@ class Price extends React.Component {
         })
     }
     render(){
-        const is30Off = isOfferValid(this.props.location)
         let data
-        if(is30Off){
+        if(this.props.isOfferValid){
             data = data30
         } else{
             data = dataOriginal
@@ -112,4 +113,10 @@ class Price extends React.Component {
     }
 }
 
-export default withRouter(Price)
+function mapStateToProps(state){
+    return {
+        isOfferValid: selectors.isOfferValid(state)
+    }
+}
+
+export default connect(mapStateToProps)(Price)
