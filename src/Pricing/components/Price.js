@@ -1,9 +1,23 @@
 import './switch.scss'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { Switch } from '../'
+import { isOfferValid } from '../../CountDown'
 
-const data = {
+const data30 = {
+    one: {
+        price: '$419.30',
+        terms: 'One-time Payment',
+        link: '/checkout/ilc-fs-599'
+    },
+    four: {
+        price: '$105',
+        terms: 'Only 4 payments of $105/month',
+        link: '/checkout/ilc-fs-150-4pay'
+    }
+}
+
+const dataOriginal = {
     one: {
         price: '$599',
         terms: 'One-time Payment',
@@ -31,6 +45,14 @@ class Price extends React.Component {
         })
     }
     render(){
+        const is30Off = isOfferValid(this.props.location)
+        let data
+        if(is30Off){
+            data = data30
+        } else{
+            data = dataOriginal
+        }
+        
         const { price, link, terms } = data[this.state.selected]
         return (
             <section className="d-flex justify-content-center">
@@ -90,4 +112,4 @@ class Price extends React.Component {
     }
 }
 
-export default Price
+export default withRouter(Price)
