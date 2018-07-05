@@ -18,7 +18,7 @@ const data=[
                         Other training provide you too much or too little information. This can cause overwhelm or confusion. iLoveCoding is different. iLoveCoding provides a linear, structured and proven path to incrementally build your fundamental knowledge of web development. With every lesson you learn small but critical skills that make you a better developer.
                     </p>
                     <p>
-                        You have access to a mentor via email and via email and live calls. Whenever you get stuck or confused ping us, and we'll get you back on track of success.
+                        You have access to me (your mentor) via email, group calls and office hours. Bring your questions to me and I'll resolve your code issues, and point you in the right direction.
                     </p>
                 </div>
             )
@@ -30,10 +30,10 @@ const data=[
             return(
                 <div>
                     <p>
-                    I do not know. Everyone learns differently. That is why we have implemented subliminal learning techniques within our training so no matter what your learning style, you will be able to capture the new skills and remmeber it.
+                        Everyone learns differently. That is why I have implemented subliminal learning techniques within my training so no matter what your learning style, you will be able to capture the new skills and remember it.
                     </p>
                     <p>
-                    People who have tried and failed at other courses, books and bootcamps, repeatedly join iLoveCoding training program and find success.
+                        People who have tried and failed at other courses, books and bootcamps, repeatedly join iLoveCoding training program and find success.
                     </p>
                     <strong>Full-Stack Mastery is for you if:</strong>
                     <ul>
@@ -46,12 +46,11 @@ const data=[
                         <li>You get excited about the idea of building real practical apps</li>
                         <li>You want to be a freelancer and work on Client Development Projects</li>
                         <li>You want to build and launch your startup app or website</li>
-                        <li>You have failed with other courses, bootcamps, and want to give it another try</li>
+                        <li>You have failed with other courses, bootcamps, and want to give programming another try</li>
                     </ul>
                     <strong>Full-Stack Mastery is <u>NOT</u> for you if:</strong>
                     <ul>
                         <li>You will just buy and not apply what you are taught</li>
-                        <li>You are at your last dime, and do not have money to buy. Don’t join</li>
                         <li>You are just after the money and looking for shortcuts</li>
                     </ul>
                 </div>
@@ -67,10 +66,10 @@ const data=[
                         Yes absolutely! Front-End Development &amp; Front-End Development is a hot skill right now. The market is in your favor, meaning there are more jobs out there and less skilled people.
                     </p>
                     <p>
-                        Full-Stack Mastery will teach you the precise fundamental skills to build modern, practical websites and web apps. This is a skill which is highly employable. Not just that, the fundamental skills you learn here will make you prepared to pickup any new technology which is launched tomorrow.
+                        Full-Stack Mastery will teach you the precise fundamental skills to build modern, practical websites, web apps and mobile apps. This is a skill which is highly employable. Not just that, the fundamental skills you learn here will prepare you to pickup new technology that will launch in the future.
                     </p>
                     <p>
-                        This is where iLoveCoding is different. We prepare you for now and the future.
+                        This is where iLoveCoding is different. We prepare you for now and the future by focusing on fundamentals.
                     </p>
                 </div>
             )

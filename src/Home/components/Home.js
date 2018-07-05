@@ -7,6 +7,9 @@ import { selectors } from '../../_user'
 
 import HomeForm from './HomeForm'
 import AboutAziz from '../../AboutAziz/AboutAziz'
+import MyWorkLogos from '../../LogoList/MyWorkLogos'
+import StudentCompanies from '../../LogoList/StudentCompanies'
+import UsedBy from '../../LogoList/UsedBy'
 
 class Home extends React.Component{
     constructor(props){
@@ -83,11 +86,19 @@ class Home extends React.Component{
                         No prior computer science training necessary — I teach using simple words, skipping all the overly complicated language.
                     </p> */}
                 </div>
+                <div className="">
+                    <UsedBy />
+                </div>
                 <div className="bg-gray-200 mt-5">
                     <div className="col-md-10 col-lg-8 mr-auto ml-auto py-5">
                         <AboutAziz />
                     </div>
                 </div>
+                <div className="mt-1">
+                    <MyWorkLogos />
+                    {/* <StudentCompanies /> */}
+                </div>
+                
             </div>
         )
     }

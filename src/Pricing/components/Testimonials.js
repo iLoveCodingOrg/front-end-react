@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { PrintTestimonials } from '../'
 
 const data = [
@@ -36,6 +35,5 @@ class Testimonials extends React.Component{
         )
     }
 }
-
 
 export default Testimonials
