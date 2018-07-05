@@ -15,9 +15,10 @@ export default withRouter(({ location, title }) => {
         return(
             <div
                 style={{ minWidth: '76px' }}
-                className="d-flex flex-column align-items-center p-3
+                className="d-flex flex-column align-items-center
+                p-1 p-md-3
                 rounded bg-white">
-                <span className="h1">{time}</span>
+                <span className="h2">{time}</span>
                 <span className="text-dark">{label}</span>
             </div>
         )
@@ -33,7 +34,7 @@ export default withRouter(({ location, title }) => {
                         bg-dark text-white
                         d-flex justify-content-center align-items-center
                     ">
-                        <span className="h1 p-3 text-muted">
+                        <span className="h2 p-3 text-muted">
                             The offer has expired
                         </span>
                     </div>
@@ -52,11 +53,11 @@ export default withRouter(({ location, title }) => {
                             d-flex justify-content-center align-items-center
                             ">
                             {renderTimeUnit(days, 'DAYS')}
-                            <div className="h1 text-white p-2">:</div>
+                            <div className="h2 text-white p-1 p-md-2">:</div>
                             {renderTimeUnit(hours, 'HOURS')}
-                            <div className="h1 text-white p-2">:</div>
+                            <div className="h2 text-white p-1 p-md-2">:</div>
                             {renderTimeUnit(minutes, 'MINS')}
-                            <div className="h1 text-white p-2">:</div>
+                            <div className="h2 text-white p-1 p-md-2">:</div>
                             {renderTimeUnit(seconds, 'SECS')}
                         </div>
                     </div>
