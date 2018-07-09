@@ -20,6 +20,9 @@ import {
     Due
 } from '../'
 
+import { CountDown } from '../../Offer'
+import { selectors } from '../../Offer'
+
 class Checkout extends React.Component{
     constructor(props){
         super(props)
@@ -35,6 +38,7 @@ class Checkout extends React.Component{
         this.setBraintreeInstance = this.setBraintreeInstance.bind(this)
         this.buy = this.buy.bind(this)
         this.renderBuyError = this.renderBuyError.bind(this)
+        this.getPrice = this.getPrice.bind(this)
     }
     braintreeInstance;
     
@@ -52,7 +56,8 @@ class Checkout extends React.Component{
             firstName: this.state.userInfo.firstName.value,
             lastName: this.state.userInfo.lastName.value,
             email: this.state.userInfo.email.value,
-            nonce
+            nonce,
+            coupon: this.props.isOfferValid? '30percent' : undefined
         })
             .then(({ isSubscribed })=>{
                 if(isSubscribed){
@@ -99,65 +104,79 @@ class Checkout extends React.Component{
         return null
     }
 
+    getPrice(){
+        if(this.props.isOfferValid){
+            return roundTwoDecimal(parseInt(get(this.props.product, 'price'))*.7)
+        } else{
+            return get(this.props.product, 'price')
+        }
+
+        function roundTwoDecimal(number){
+            return (Math.round(number * 100)/100).toFixed(2)
+        }
+    }
+
     render(){
-        const price = get(this.props.product, 'price')
+        const price = this.getPrice()
         const billingDuration = get(this.props.product, 'billingDuration')
         const billingCycles = get(this.props.product, 'billingCycles')
         const productName = get(this.props.product, 'name')
         const productDesc = get(this.props.product, 'description')
         return(
-            <div className="container">
-                {
-                    (this.props.isLoading)? <Loading />
-                    :
-                    (this.props.error) ? <ErrorBox />
-                    :
-                    <div>
-                        <Helmet><title>{productName}</title></Helmet>
+            <div>
+                <CountDown title="30% Off expires in:" />
+                <div className="container">
+                    {
+                        (this.props.isLoading)? <Loading />
+                        :
+                        (this.props.error) ? <ErrorBox />
+                        :
+                        <div>
+                            <Helmet><title>{productName}</title></Helmet>
+                            <Header
+                                productName={productName}
+                                productDesc={productDesc}
+                            />
+                            <div className="row">
+                                <div className="p-0 col-md-8 order-md-1">
+                                    <form
+                                        onSubmit={this.buy}
+                                        className="bg-light border p-4">
+                                        {this.renderBuyError()}
+                                        <UserForm
+                                            logout={this.props.logout}
+                                            isDisabled={this.props.isLoggedIn}
+                                            userInfo={this.state.userInfo}
+                                            setUserInfo={this.setUserInfo}
+                                            />
 
-                        <Header
-                            productName={productName}
-                            productDesc={productDesc}
-                        />
-                        <div className="row">
-                            <div className="p-0 col-md-8 order-md-1">
-                                <form
-                                    onSubmit={this.buy}
-                                    className="bg-light border p-4">
-                                    {this.renderBuyError()}
-                                    <UserForm
-                                        logout={this.props.logout}
-                                        isDisabled={this.props.isLoggedIn}
-                                        userInfo={this.state.userInfo}
-                                        setUserInfo={this.setUserInfo}
-                                        />
-
-                                    <hr className="mb-4" />
-                                    <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
-                                    <Due
-                                        price={price}
-                                        billingDuration={billingDuration}
-                                        billingCycles={billingCycles}
-                                        />
-                                    <button
-                                        className="btn btn-primary btn-lg btn-block"
-                                        type="submit"
-                                        >
-                                        Complete My Purchase
-                                    </button>
-                                    <div className="d-block text-center small mt-1">
-                                        Payment powered by Braintree (a Paypal company) - Your information is secure
-                                    </div>
-                                </form>
+                                        <hr className="mb-4" />
+                                        <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
+                                        <Due
+                                            price={price}
+                                            billingDuration={billingDuration}
+                                            billingCycles={billingCycles}
+                                            />
+                                        <button
+                                            className="btn btn-primary btn-lg btn-block"
+                                            type="submit"
+                                            >
+                                            Complete My Purchase
+                                        </button>
+                                        <div className="d-block text-center small mt-1">
+                                            Payment powered by Braintree (a Paypal company) - Your information is secure
+                                        </div>
+                                    </form>
+                                </div>
+                                <div className="col-md-4 order-md-2 mb-4 px-4">
+                                    <WhatYouGet />
+                                    <Testimonials />
+                                </div>
                             </div>
-                            <div className="col-md-4 order-md-2 mb-4 px-4">
-                                <WhatYouGet />
-                                <Testimonials />
-                            </div>
+                            <Footer />
                         </div>
-                        <Footer />
-                    </div>
-                }
+                    }
+                </div>
             </div>
         )
     }
@@ -180,7 +199,8 @@ function mapStateToProps(state){
         buyError: state.checkout.buy.error,
         firstName: state.user.firstName,
         lastName: state.user.lastName,
-        email: state.user.email
+        email: state.user.email,
+        isOfferValid: selectors.isOfferValid(state)
     }
 }
 
@@ -198,6 +218,7 @@ function mapDispatchToProps(dispatch){
             dispatch(actions.getProductBySlug(slug))
         },
         buy: (slug, payload)=>{
+            console.log('payload aziz', payload)
             return dispatch(actions.buy(slug, payload))
         }
     }

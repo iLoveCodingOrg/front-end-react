@@ -24,6 +24,7 @@ function CountDown({ title, timeFrom, timeLeft }) {
         renderer={({ days, hours, minutes, seconds, completed }) => {
             if (completed) {
                 // Render a completed state
+                return null
                 return (
                     <div className="
                         bg-dark text-white
@@ -37,7 +38,7 @@ function CountDown({ title, timeFrom, timeLeft }) {
             } else {
                 // Render a countdown
                 return (
-                    <div className="bg-danger">
+                    <div className="bg-danger d-flex flex-column">
                         <div className="h5 mt-3 text-center">
                             <span className="badge badge-light text-uppercase">
                                 {title}

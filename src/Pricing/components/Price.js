@@ -53,7 +53,7 @@ class Price extends React.Component {
         } else{
             data = dataOriginal
         }
-        
+
         const { price, link, terms } = data[this.state.selected]
         return (
             <section className="d-flex justify-content-center">

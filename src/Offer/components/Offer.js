@@ -23,6 +23,7 @@ class Offer extends React.Component{
     }
 
     render(){
+        return null
         return (<div>
             I am Offer component
             {this.props.timeFrom}, {this.props.timeLeft}, {this.props.isOfferValid}
