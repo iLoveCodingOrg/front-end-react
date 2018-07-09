@@ -11,46 +11,27 @@ import { actions, selectors } from '../_user'
 class Header extends React.Component{
     constructor(props){
         super(props)
-        this.printLinksLeft = this.printLinksLeft.bind(this)
-        this.printLinksRight = this.printLinksRight.bind(this)
-        this.renderUser = this.renderUser.bind(this)
-        this.renderGuest = this.renderGuest.bind(this)
+        this.renderLinks = this.renderLinks.bind(this)
+        
+        this.renderUserLeft = this.renderUserLeft.bind(this)
+        this.renderGuestLeft = this.renderGuestLeft.bind(this)
+        
+        this.renderUserRight = this.renderUserRight.bind(this)
+        this.renderGuestRight = this.renderGuestRight.bind(this)
+        
         this.renderAdminLinks = this.renderAdminLinks.bind(this)
         this.renderAddButtons = this.renderAddButtons.bind(this)
         this.renderEditButton = this.renderEditButton.bind(this)
     }
 
-    printLinksLeft(){
-        const links = [
-            // {
-            //     label: 'Lessons',
-            //     link: '/lessons'
-            // },
-            // {
-            //     label: 'Courses',
-            //     link: '/courses'
-            // }
-        ]
+    getGravatarUrl(emailHash){
+        const defaultImageType = 'retro'
+        const size = 30
 
-        return links.map(({ label, link }, index)=> (
-            <Link key={index} className="p-2 text-secondary" to={link}>{label}</Link>
-        ))
+        return `https://www.gravatar.com/avatar/${emailHash}.jpg?s=${size}&d=${defaultImageType}`
     }
 
-    printLinksRight(){
-        const links = [
-            {
-                label: 'Full Training',
-                link: '/pricing',
-                className: 'btn btn-sm btn-outline-primary',
-                style: {}
-            },
-            // {
-            //     label: 'Pricing',
-            //     link: '/pricing'
-            // }
-        ]
-
+    renderLinks(links){
         return links.map(({ label, link, className, style }, index)=> (
             <Link
                 key={index}
@@ -63,11 +44,69 @@ class Header extends React.Component{
         ))
     }
 
-    getGravatarUrl(emailHash){
-        const defaultImageType = 'retro'
-        const size = 30
+    renderUserLeft(){
+        const links = [
+            // {
+            //     label: 'Dashboard',
+            //     link: '/dashboard',
+            //     className: 'btn btn-sm btn-outline-primary mr-3',
+            //     style: {}
+            // },
+            {
+                label: 'Full Curriculum',
+                link: '/curriculum',
+                className: 'btn btn-sm btn-outline-primary mr-3',
+                style: {}
+            }
+        ]
 
-        return `https://www.gravatar.com/avatar/${emailHash}.jpg?s=${size}&d=${defaultImageType}`
+        return this.renderLinks(links)
+    }
+
+    renderGuestLeft(){
+        const links = [
+            // {
+            //     label: 'Full Training',
+            //     link: '/pricing',
+            //     className: 'btn btn-sm btn-outline-primary',
+            //     style: {}
+            // }
+        ]
+
+        return this.renderLinks(links)
+    }
+
+    renderUserRight(){
+        const { user, logout } = this.props
+        const { firstName, emailHash } = user
+        const gravatarUrl = this.getGravatarUrl(emailHash)
+
+        return(
+            <div className="d-flex flex-row align-items-center">
+                <img className="rounded-circle mr-2" src={gravatarUrl} />
+                <div>{firstName}</div>
+                <button className="border-0 btn-link" onClick={logout}>(Log out)</button>
+            </div>
+        )
+    }
+
+    renderGuestRight(){
+        const links = [
+            {
+                label: 'Full Training',
+                link: '/pricing',
+                className: 'btn btn-sm btn-outline-primary',
+                style: {}
+            },
+            {
+                label: 'Student Login',
+                link: '/login',
+                className: 'btn btn-sm',
+                style: {}
+            }
+        ]
+
+        return this.renderLinks(links)
     }
 
     renderEditButton(){
@@ -89,6 +128,7 @@ class Header extends React.Component{
             </div>
         )
     }
+
     renderAdminLinks(){
         const { roles } = this.props.user
         if(isEmpty(roles) || roles[0] !== 'admin') return
@@ -101,26 +141,6 @@ class Header extends React.Component{
         )
     }
 
-    renderUser(){
-        const { user, logout } = this.props
-        const { firstName, emailHash } = user
-        const gravatarUrl = this.getGravatarUrl(emailHash)
-
-        return(
-            <div className="d-flex flex-row align-items-center">
-                <img className="rounded-circle mr-2" src={gravatarUrl} />
-                <div>{firstName}</div>
-                <button className="border-0 btn-link" onClick={logout}>(Log out)</button>
-            </div>
-        )
-    }
-
-    renderGuest(){
-        return(
-            <Link className="btn btn-sm" to="/login">Student Login</Link>
-        )
-    }
-
     render(){
         return (
             <nav className="d-flex flex-column flex-md-row align-items-center navbar-expand-lg py-2 px-3">
@@ -129,16 +149,17 @@ class Header extends React.Component{
                         <img src={logo} alt="iLoveCoding.org Logo" />
                     </Link>
                 </div>
-                <nav className="my-2 my-md-0 ml-md-0 mr-md-auto">
-                    {this.printLinksLeft()}
+                <nav className="my-2 my-md-0 ml-md-3 mr-md-auto">
+                    {
+                        this.props.isLoggedIn? this.renderUserLeft() : this.renderGuestLeft()
+                    }
                 </nav>
                 {this.renderAdminLinks()}
                 <nav className="my-2 my-md-0 mr-md-3">
-                    {this.printLinksRight()}
+                    {
+                        this.props.isLoggedIn? this.renderUserRight() : this.renderGuestRight()
+                    }
                 </nav>
-                {
-                    this.props.isLoggedIn? this.renderUser() : this.renderGuest()
-                }
             </nav>
         )
     }
