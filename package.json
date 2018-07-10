@@ -3,56 +3,49 @@
   "version": "1.0.12",
   "description": "iLoveCoding Front-End React Application",
   "main": "src/index.js",
+  "repository": {
+    "url": "git@bitbucket.org:ilovecodinginc/ilc-react.git",
+    "type": "git"
+  },
   "scripts": {
-    "start": "API_URL=http://localhost:3333/api/ ./node_modules/parcel-bundler/bin/cli.js ./src/index.html",
+    "start": "API_URL=http://localhost:3333/api/ ./node_modules/parcel-bundler/bin/cli.js --no-cache ./src/index.html",
     "prebuild": "rm -rf build",
     "build": "API_URL=https://api.ilovecoding.org/api/ ./node_modules/parcel-bundler/bin/cli.js build --public-url=/  --no-minify --out-dir=build ./src/index.html && cp _redirects build/_redirects"
   },
   "keywords": [
-    "Cat",
-    "Customer",
-    "History"
+    "iLoveCoding",
+    "react",
+    "LMS"
   ],
   "author": "Aziz Ali, @ilovecodingOrg",
   "license": "ISC",
   "dependencies": {
     "@u-wave/react-vimeo": "^0.5.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "bootstrap": "^4.1.1",
-    "braintree-web-drop-in-react": "^1.0.3",
-    "immutability-helper": "^2.7.0",
-    "lodash": "^4.17.10",
-    "prop-types": "^15.6.1",
-    "query-string": "^6.1.0",
+    "braintree-web-drop-in-react": "^1.0.4",
+    "prop-types": "^15.6.2",
+    "qs": "^6.5.2",
     "raven-for-redux": "^1.3.1",
-    "react": "^16.3.2",
+    "react": "^16.4.1",
     "react-countdown-now": "^1.3.0",
-    "react-dom": "^16.3.2",
+    "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "react-hot-loader": "^4.2.0",
     "react-redux": "^5.0.7",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-toastify": "^4.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-toastify": "^4.1.0",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0",
+    "redux-thunk": "^2.3.0",
     "reselect": "^3.0.1",
-    "store": "^2.0.12",
-    "thunk": "0.0.1",
-    "whatwg-fetch": "^2.0.4"
+    "store": "^2.0.12"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-core": "^6.23.1",
-    "babel-eslint": "^8.2.3",
-    "babel-loader": "^6.4.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-react-app": "^3.1.1",
-    "cross-env": "^5.1.6",
-    "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.8.2",
-    "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^4.9.0",
-    "parcel-bundler": "^1.8.1"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react-app": "^3.1.2",
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.9.4"
   }
 }

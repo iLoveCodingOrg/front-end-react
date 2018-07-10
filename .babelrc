@@ -1,4 +1,10 @@
 {
-    "presets": ["react-app"],
-    "plugins": ["react-hot-loader/babel", "transform-class-properties"]
+    "presets": [
+        "env"
+    ],
+    "plugins": [
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        "transform-runtime"
+    ]
 }
