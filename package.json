@@ -10,7 +10,7 @@
   "scripts": {
     "start": "API_URL=http://localhost:3333/api/ ./node_modules/parcel-bundler/bin/cli.js --no-cache ./src/index.html",
     "prebuild": "rm -rf build",
-    "build": "API_URL=https://api.ilovecoding.org/api/ ./node_modules/parcel-bundler/bin/cli.js build --public-url=/  --no-minify --out-dir=build ./src/index.html && cp _redirects build/_redirects"
+    "build": "API_URL=https://api.ilovecoding.org/api/ ./node_modules/parcel-bundler/bin/cli.js build --public-url=/  --no-minify --out-dir=build ./src/index.html && cp _redirects build/_redirects && cp sitemap.xml build/sitemap.xml"
   },
   "keywords": [
     "iLoveCoding",
