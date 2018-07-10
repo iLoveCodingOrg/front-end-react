@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import qs from 'query-string'
+import qs from 'qs'
 
 import Loading from '../../Loading'
 import { actions } from '../'

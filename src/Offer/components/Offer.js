@@ -1,5 +1,5 @@
 import React from 'react'
-import qs from 'query-string'
+import qs from 'qs'
 import { isNil } from 'lodash'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
