@@ -1,16 +1,23 @@
+import './editForm.scss'
+import '../../node_modules/react-quill/dist/quill.snow.css'
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import ReactQuill from 'react-quill'
 
 class EditForm extends React.Component{
     constructor(props){
         super(props)
 
         this.state = {
+            isViewSource: true,
             ...props.data
         }
 
+        this.handleViewSource = this.handleViewSource.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.renderViewSourceCheckbox = this.renderViewSourceCheckbox.bind(this)
         this.renderTextFields = this.renderTextFields.bind(this)
     }
 
@@ -28,6 +35,12 @@ class EditForm extends React.Component{
         })
     }
     
+    handleViewSource(e){
+        this.setState({
+            isViewSource: e.target.checked
+        })
+    }
+
     handleSubmit(e){
         e.preventDefault()
         
@@ -49,20 +62,49 @@ class EditForm extends React.Component{
             <div key={field} className="form-group row">
                 <label
                     className="col-sm-2 col-form-label float-right"
-                    htmlFor={field}>{field}</label>
+                    htmlFor={field}>
+                    {field}
+                </label>
                 <div className="col-sm-10">
-                    <textarea
-                        rows="13"
-                        className="form-control"
-                        name={field}
-                        value={this.state[field]}
-                        onChange={(e)=>{ this.handleChange(field, e.target.value) }}
-                    />
+                    {this.renderViewSourceCheckbox()}
+                    {
+                        (this.state.isViewSource)?
+                        <textarea
+                            rows="13"
+                            className="form-control"
+                            name={field}
+                            value={this.state[field]}
+                            onChange={(e)=>{ this.handleChange(field, e.target.value) }}
+                        />
+                        :
+                        <ReactQuill
+                            value={this.state[field]}
+                            onChange={(value)=>{ this.handleChange(field, value) }}
+                        />
+                    }
                 </div>
             </div>
         )
     }
 
+    renderViewSourceCheckbox(){
+        return(
+            <div className="form-check form-check-inline">
+                <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="view-source"
+                    onChange={this.handleViewSource}
+                    checked={this.state.isViewSource}
+                />
+                <label
+                    className="form-check-input"
+                    htmlFor="view-source">
+                    View Source
+                </label>
+            </div>
+        )
+    }
     renderTextFields(field, type){
         return (
             <div key={field} className="form-group row">

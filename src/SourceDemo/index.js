@@ -19,7 +19,7 @@ class SourceDemo extends React.Component{
         const { demo, source } = this.props
 
         return (
-            <div className="mt-2 btn-group float-right">
+            <div className="my-3 btn-group">
                 {
                     demo?
                     <a
