@@ -107,7 +107,7 @@ View.propTypes = {
     callMarkAsComplete: PropTypes.func,
     clearView: PropTypes.func.isRequired,
     getView: PropTypes.func.isRequired,
-    of: PropTypes.oneOf(['lesson', 'course', 'courseLesson', 'page']).isRequired,
+    of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page']).isRequired,
     view: PropTypes.object.isRequired
 }
 

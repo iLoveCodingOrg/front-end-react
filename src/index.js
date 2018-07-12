@@ -22,6 +22,7 @@ import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
 import { Home } from './Home'
 import { Dashboard } from './Dashboard'
+import { Routes as QuestionRoutes } from './Question'
 import { Routes as LessonRoutes } from './Lesson'
 import { Routes as CourseRoutes } from './Course'
 import { Routes as PageRoutes, NotFound } from './Page'
@@ -110,6 +111,11 @@ function renderApp(){
                                             exact
                                             path="/dashboard"
                                             component={isPrivate(Dashboard)} />
+
+                                        <Route
+                                            strict
+                                            path="/questions"
+                                            component={QuestionRoutes} />
 
                                         <Route
                                             strict

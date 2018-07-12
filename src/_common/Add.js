@@ -81,7 +81,7 @@ Add.propTypes = {
     add: PropTypes.func.isRequired,
     editableFields: PropTypes.array.isRequired,
     history: PropTypes.object.isRequired,
-    of: PropTypes.oneOf(['lesson', 'course', 'page']).isRequired
+    of: PropTypes.oneOf(['question', 'lesson', 'course', 'page']).isRequired
 }
 
 export default withRouter(Add)

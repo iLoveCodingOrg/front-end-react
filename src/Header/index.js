@@ -125,6 +125,7 @@ class Header extends React.Component{
                 <Link to="/pages/add" className="btn">Add Page</Link>
                 <Link to="/lessons/add" className="btn">Add Lesson</Link>
                 <Link to="/courses/add" className="btn">Add Course</Link>
+                <Link to="/questions/add" className="btn">Add Question</Link>
             </div>
         )
     }

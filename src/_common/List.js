@@ -66,7 +66,7 @@ List.propTypes = {
     isLoading: PropTypes.bool.isRequired,
     list: PropTypes.array.isRequired,
     listHeader: PropTypes.func.isRequired,
-    of: PropTypes.oneOf(['lessons', 'courses', 'pages']).isRequired
+    of: PropTypes.oneOf(['questions', 'lessons', 'courses', 'pages']).isRequired
 }
 
 export default List

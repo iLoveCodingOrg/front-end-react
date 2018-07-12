@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { reducer as pages } from '../Page'
+import { reducer as questions } from '../Question'
 import { reducer as lessons } from '../Lesson'
 import { reducer as courses } from '../Course'
 import { reducer as checkout } from '../Checkout'
@@ -11,6 +12,7 @@ import { reducer as offer } from '../Offer'
 // based on the Actions that are applied to it
 export default combineReducers({
     pages,
+    questions,
     lessons,
     courses,
     checkout,
