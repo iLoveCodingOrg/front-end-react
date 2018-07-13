@@ -1,16 +1,20 @@
-import './editForm.scss'
-import '../../node_modules/react-quill/dist/quill.snow.css'
+// import '../../node_modules/react-quill/dist/quill.snow.css'
+// import ReactQuill from 'react-quill'
+// import './editForm.scss'
+
+import '../../node_modules/react-trumbowyg/dist/trumbowyg.min.css'
+import Trumbowyg from 'react-trumbowyg'
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import ReactQuill from 'react-quill'
 
 class EditForm extends React.Component{
     constructor(props){
         super(props)
 
         this.state = {
-            isViewSource: true,
+            isViewSource: false,
             ...props.data
         }
 
@@ -77,10 +81,30 @@ class EditForm extends React.Component{
                             onChange={(e)=>{ this.handleChange(field, e.target.value) }}
                         />
                         :
-                        <ReactQuill
-                            value={this.state[field]}
-                            onChange={(value)=>{ this.handleChange(field, value) }}
+                        <Trumbowyg id='react-trumbowyg'
+                            buttons={
+                                [
+                                    ['viewHTML'],
+                                    ['formatting'],
+                                    'btnGrp-semantic',
+                                    ['link'],
+                                    ['insertImage'],
+                                    'btnGrp-justify',
+                                    'btnGrp-lists',
+                                    ['table'], // I ADDED THIS FOR THE TABLE PLUGIN BUTTON
+                                    ['fullscreen']
+                                ]
+                            }
+                            semantic={false}
+                            data={this.state[field]}
+                            placeholder='Type your text!'
+                            onChange={(editor)=>{ this.handleChange(field, editor.target.innerHTML) }}
+                            ref="trumbowyg"
                         />
+                        // <ReactQuill
+                        //     value={this.state[field]}
+                        //     onChange={(value)=>{ this.handleChange(field, value) }}
+                        // />
                     }
                 </div>
             </div>
