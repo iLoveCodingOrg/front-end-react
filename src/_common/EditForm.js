@@ -3,7 +3,7 @@
 // import './editForm.scss'
 
 import '../../node_modules/react-trumbowyg/dist/trumbowyg.min.css'
-import Trumbowyg from 'react-trumbowyg'
+import Editor from 'react-trumbowyg'
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -81,7 +81,7 @@ class EditForm extends React.Component{
                             onChange={(e)=>{ this.handleChange(field, e.target.value) }}
                         />
                         :
-                        <Trumbowyg id='react-trumbowyg'
+                        <Editor id='react-trumbowyg'
                             buttons={
                                 [
                                     ['viewHTML'],
@@ -95,6 +95,8 @@ class EditForm extends React.Component{
                                     ['fullscreen']
                                 ]
                             }
+                            resetCss={false}
+                            autogrow={true}
                             semantic={false}
                             data={this.state[field]}
                             placeholder='Type your text!'
