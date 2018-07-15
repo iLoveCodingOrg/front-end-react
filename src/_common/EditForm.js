@@ -98,7 +98,7 @@ class EditForm extends React.Component{
                             resetCss={false}
                             autogrow={true}
                             semantic={false}
-                            data={this.state[field]}
+                            data={this.props.data[field]}
                             placeholder='Type your text!'
                             onChange={(editor)=>{ this.handleChange(field, editor.target.innerHTML) }}
                             ref="trumbowyg"
