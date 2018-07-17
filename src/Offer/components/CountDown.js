@@ -20,7 +20,7 @@ function CountDown({ title, timeFrom, timeLeft }) {
     }
 
     return <Countdown
-        date={timeFrom + timeLeft}
+        date={(timeFrom + timeLeft)*1000}
         renderer={({ days, hours, minutes, seconds, completed }) => {
             if (completed) {
                 // Render a completed state

@@ -12,8 +12,7 @@ class Offer extends React.Component{
     }
 
     componentWillMount(){
-        const query = qs.parse(location.search)
-
+        const query = qs.parse(location.search, { ignoreQueryPrefix: true })
         if(isNil(query.t)) return
 
         const timeFrom = parseInt(query.t)
