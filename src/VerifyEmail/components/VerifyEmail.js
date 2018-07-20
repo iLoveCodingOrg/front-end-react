@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import qs from 'qs'
+import { qsParse } from '../../_app/utils'
 
 import Loading from '../../Loading'
 import { actions } from '../'
@@ -12,7 +12,7 @@ class VerifyEmail extends React.Component {
     }
 
     componentWillMount(){
-        const queryString = qs.parse(this.props.location.search)
+        const queryString = qsParse(this.props.location.search)
         this.props.callVerifyEmail(queryString.uid, queryString.token)
             .then((response)=>{
                 if(response.isSuccess){
@@ -22,8 +22,8 @@ class VerifyEmail extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
-        const prevQueryString = qs.parse(this.props.location.search)
-        const queryString = qs.parse(nextProps.location.search)
+        const prevQueryString = qsParse(this.props.location.search)
+        const queryString = qsParse(nextProps.location.search)
 
         if(
             prevQueryString.uid !== queryString.uid

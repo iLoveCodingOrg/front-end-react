@@ -1,3 +1,5 @@
+import { parse } from 'qs'
+
 /**
  * Return json parsed response
  * @param response
@@ -46,4 +48,8 @@ export function validateField(value, { isRequired, isEmail }) {
     }
 
     return error
+}
+
+export function qsParse(location){
+    return parse(location, { ignoreQueryPrefix: true })
 }
