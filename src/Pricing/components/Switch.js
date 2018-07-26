@@ -1,31 +1,78 @@
 import './switch.scss'
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function (props){
-    const randomName = Math.floor(Math.random()*100)
-    return (
-        <div className="mb-3 d-flex flex-column align-items-center">
-            <p className="text-white">Select payment option:</p>
+class Switch extends React.Component{
+    constructor(props){
+        super(props)
+        this.renderOptions = this.renderOptions.bind(this)
+    }
+    renderOptions(){
+        const { selected, onChange, options } = this.props
+
+        const randomName = Math.floor(Math.random()*100)
+
+        return options.map((option, index)=>(
+            <div key={index} className="float-left">
+                <input
+                    type="radio"
+                    name={randomName}
+                    id={`${randomName}-${option.name}`}
+                    value={option.name}
+                    checked={selected === option.name}
+                    onChange={onChange}
+                    />
+                <label className="" htmlFor={`${randomName}-${option.name}`}>{option.label}</label>
+                {
+                    (selected === option.name)
+                    ?
+                    <span
+                        className="switch-handle"
+                        style={{
+                            ...option.css
+                        }}
+                    />
+                    :
+                    null
+                }
+            </div>
+        ))
+    }
+    render(){
+        return (
+            <div className="mb-3 d-flex flex-column align-items-center">
+            <p className="">Select payment option:</p>
             <div className="switch">
-                <input
-                    type="radio"
-                    name={randomName}
-                    id={`${randomName}-one`}
-                    value="one"
-                    checked={props.selected === 'one'}
-                    onChange={props.onChange}
-                />
-                <label className="small" htmlFor={`${randomName}-one`}>One-Time Payment</label>
-                <input
-                    type="radio"
-                    name={randomName}
-                    id={`${randomName}-four`}
-                    value="four"
-                    checked={props.selected === 'four'}
-                    onChange={props.onChange}
-                />
-                <label className="small" htmlFor={`${randomName}-four`}>4 Month Payment Plan</label>
-                <span className="switch-handle"></span>
+                {this.renderOptions()}
             </div>
         </div>
-)}
+    )}
+}
+
+Switch.propTypes = {
+    onChange: PropTypes.func.isRequired,
+    selected: PropTypes.string.isRequired,
+    options: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
+}
+
+Switch.defaultProps = {
+    options: [{
+        name: "monthly",
+        label: "Monthly",
+        css: {
+            width: "72px",
+            left: "2px",
+        }
+    },
+    {
+        name: "yearly",
+        label: "Annual (Save 33%)",
+        css: {
+            width: "144px",
+            left: "80px",
+        }
+    }],
+    selected: "yearly"
+}
+
+export default Switch

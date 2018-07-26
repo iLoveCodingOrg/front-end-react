@@ -1,4 +1,3 @@
-import './switch.scss'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -7,12 +6,12 @@ import { selectors } from '../../Offer'
 import { Switch } from '../'
 
 const data30 = {
-    one: {
+    monthly: {
         price: '$419.30',
         terms: 'One-time Payment (original price: $599)',
         link: '/checkout/ilc-fs-599'
     },
-    four: {
+    yearly: {
         price: '$105',
         terms: 'Only 4 payments of $105/month (original price $150/month)',
         link: '/checkout/ilc-fs-150-4pay'
@@ -20,12 +19,12 @@ const data30 = {
 }
 
 const dataOriginal = {
-    one: {
+    monthly: {
         price: '$599',
         terms: 'One-time Payment',
         link: '/checkout/ilc-fs-599'
     },
-    four: {
+    yearly: {
         price: '$150',
         terms: 'Only 4 payments of $150/month',
         link: '/checkout/ilc-fs-150-4pay'
@@ -38,7 +37,7 @@ class Price extends React.Component {
         this.handleSwitch = this.handleSwitch.bind(this)
 
         this.state = {
-            selected: 'one'
+            selected: 'yearly'
         }
     }
     handleSwitch(event){

@@ -26,19 +26,9 @@
     transition: all .15s linear;
     background-color: #1772f2;
     border-radius: 50em;
-    height: 28px;
+    height: 33px;
     position: absolute;
     z-index: -1;
-    top: 3px
+    top: 2px
   }
-}
-
-.switch input:checked:first-child~.switch-handle {
-  width: 125px;
-  left: 3px
-}
-
-.switch input:checked:nth-child(3)~.switch-handle {
-  width: 145px;
-  left: 128px
 }
