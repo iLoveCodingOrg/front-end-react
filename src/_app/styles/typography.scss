@@ -1,3 +1,7 @@
+.em {
+  font-style: italic 
+}
+
 @include media-breakpoint-up(sm) {
   .headline {
     font-size: 3.3em;
