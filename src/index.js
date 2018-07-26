@@ -1,4 +1,4 @@
-// import './_app/styles/bootstrap.scss'
+import "../node_modules/open-iconic/font/css/open-iconic-bootstrap.css";
 import './_app/styles/'
 import 'react-toastify/dist/ReactToastify.min.css'
 
@@ -158,7 +158,3 @@ function renderApp(){
 }
 
 renderApp()
-
-if(module.hot){
-    module.hot.accept(renderApp)
-}
