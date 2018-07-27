@@ -65,7 +65,7 @@ class CourseNav extends React.Component{
         const courseSlug = get(this.props.course, 'slug')
 
         return (
-            <div className="list-group my-5">
+            <div className="list-group">
                 <div className="d-flex my-2 justify-content-center">
                     <CourseLinks
                         isMainBtnHidden={this.state.activeLessonIndex < 0}
@@ -75,7 +75,7 @@ class CourseNav extends React.Component{
                     />
                 </div>
 
-                <div className="list-group-item list-group-item-dark">
+                <div className="list-group-item bg-gray-200">
                     <span className="h5">Course content</span>
                 </div>
                 {lessons && lessons.map((item, index)=>{

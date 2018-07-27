@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { actions } from '../'
 import { List } from '../../_common'
 
-function ListHeader(props){
+function ListHeader(){
     return (
         <div className="d-flex flex-column align-items-center mb-5">
             <h1 className="title">All Courses</h1>

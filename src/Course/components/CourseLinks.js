@@ -26,7 +26,10 @@ class CourseLinks extends React.Component{
 
     getNextBtn(){
         const { activeLessonIndex, lessons, courseSlug } = this.props
-        if(activeLessonIndex < lessons.length-1){
+        if(
+            activeLessonIndex < lessons.length-1 &&
+            activeLessonIndex >= 0
+        ){
             const lesson = lessons[activeLessonIndex+1]
             const urlTo = `/courses/${courseSlug}/lessons/${lesson.slug}`
             return <Link to={urlTo} className="btn btn-dark">Next Lesson &gt;&gt;</Link>
@@ -35,13 +38,25 @@ class CourseLinks extends React.Component{
         }
     }
 
+    getStartBtn(){
+        const { activeLessonIndex, lessons, courseSlug } = this.props
+        if(activeLessonIndex < 0){
+            const lesson = lessons[activeLessonIndex+1]
+            const urlTo = `/courses/${courseSlug}/lessons/${lesson.slug}`
+            return <Link to={urlTo} className="btn btn-primary">Begin Learning &gt;&gt;</Link>
+        }else {
+            return null
+        }
+    }
+
     render(){
         return (
-          <div className="btn-group " role="group" aria-label="Basic example">
-              {this.getPreviousBtn()}
-              {this.getMainCourseBtn()}
-              {this.getNextBtn()}
-          </div>
+            <div className="btn-group " role="group" aria-label="Basic example">
+                {this.getStartBtn()}
+                {this.getPreviousBtn()}
+                {this.getMainCourseBtn()}
+                {this.getNextBtn()}
+            </div>
         )
     }
 }

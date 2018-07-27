@@ -27,8 +27,8 @@ class PriceBox extends React.Component {
                 <div className="card-body align-self-center">
                     { 
                         isPopular? 
-                        <h5 class="position-absolute" style={{ top: "5px", right: "5px" }}>
-                            <span class="badge bg-gray-300">Most Popular</span>
+                        <h5 className="position-absolute" style={{ top: "5px", right: "5px" }}>
+                            <span className="badge bg-gray-300">Most Popular</span>
                         </h5>
                         : null
                     }

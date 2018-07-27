@@ -109,7 +109,7 @@ class Price extends React.Component {
                             selected={this.state.selected}
                         />
                         <h5 className="position-absolute" style={{ right: "-127px", bottom: 0 }}>
-                            <div class="badge badge-orange">&lt; 4 Months Free</div>
+                            <div className="badge badge-orange">&lt; 4 Months Free</div>
                         </h5>
                     </div>
                     <div className="d-flex flex-wrap justify-content-center">
