@@ -14,14 +14,14 @@ const dataOriginal = {
             name: 'Pro Monthly',
             price: 37,
             terms: 'per month, paid monthly',
-            link: '/checkout/ilc-fs-599',
+            link: '/checkout/ilc-pro-37m',
         },
         yearly: {
             planType: 'pro',
             name: 'Pro Yearly',
             price: 24.79,
             terms: 'per month, paid yearly',
-            link: '/checkout/ilc-fs-150-4pay',
+            link: '/checkout/ilc-pro-297y',
         }
     },
     plus: {
@@ -30,14 +30,32 @@ const dataOriginal = {
             name: 'Plus Monthly',
             price: 74,
             terms: 'per month, paid monthly',
-            link: '/checkout/ilc-fs-599',
+            link: '/checkout/ilc-plus-74m',
+            isPopular: true
         },
         yearly: {
             planType: 'plus',
             name: 'Plus Yearly',
             price: 49.58,
             terms: 'per month, paid yearly',
-            link: '/checkout/ilc-fs-150-4pay',
+            link: '/checkout/ilc-plus-594y',
+            isPopular: true
+        }
+    },
+    premium: {
+        monthly: {
+            planType: 'premium',
+            name: 'Premium Monthly',
+            price: 148,
+            terms: 'per month, paid monthly',
+            link: '/checkout/ilc-premium-148m',
+        },
+        yearly: {
+            planType: 'premium',
+            name: 'Premium Yearly',
+            price: 99.16,
+            terms: 'per month, paid yearly',
+            link: '/checkout/ilc-premium-1189y',
         }
     }
 }
@@ -61,7 +79,7 @@ class Price extends React.Component {
             selected: event.target.value
         })
     }
-    renderPriceBox({name, price, terms, link, planType}){
+    renderPriceBox({name, price, terms, link, planType, isPopular = false}){
         return (
             <PriceBox
                 name={name}
@@ -69,6 +87,7 @@ class Price extends React.Component {
                 terms={terms}
                 link={link}
                 planType={planType}
+                isPopular={isPopular}
             />
         )
     }
@@ -82,16 +101,21 @@ class Price extends React.Component {
 
         return (
             <section className="d-flex justify-content-center">
-                <div className="
-                    d-flex flex-column align-items-center">
-                    <Switch
-                        style={{ maxWidth: '400px', minWidth: '320px' }}
-                        onChange={this.handleSwitch}
-                        selected={this.state.selected}
-                    />
+                <div className="d-flex flex-column align-items-center">
+                    <div className="position-relative mb-3 mx-sm-auto mr-auto">
+                        <Switch
+                            style={{ maxWidth: '400px', minWidth: '320px' }}
+                            onChange={this.handleSwitch}
+                            selected={this.state.selected}
+                        />
+                        <h5 className="position-absolute" style={{ right: "-127px", bottom: 0 }}>
+                            <div class="badge badge-orange">&lt; 4 Months Free</div>
+                        </h5>
+                    </div>
                     <div className="d-flex flex-wrap justify-content-center">
                         {this.renderPriceBox(data.pro[this.state.selected])}
                         {this.renderPriceBox(data.plus[this.state.selected])}
+                        {this.renderPriceBox(data.premium[this.state.selected])}
 
                     </div>
                     <div className="d-flex flex-wrap my-4">

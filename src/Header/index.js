@@ -71,24 +71,24 @@ class Header extends React.Component{
                 className: 'btn btn-sm btn-outline-primary',
                 style: {}
             },
-            // {
-            //     label: 'Training',
-            //     link: '/start',
-            //     className: 'nav-link px-3',
-            //     style: {}
-            // },
-            // {
-            //     label: 'Practice Projects',
-            //     link: '/start',
-            //     className: 'nav-link px-3',
-            //     style: {}
-            // },
-            // {
-            //     label: 'Question / Answers',
-            //     link: '/start',
-            //     className: 'nav-link px-3',
-            //     style: {}
-            // }
+            {
+                label: 'Courses',
+                link: '/courses',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'Practice Projects',
+                link: '/projects',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'Questions/Answers',
+                link: '/questions',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            }
         ]
 
         return this.renderLinks(links)
@@ -111,7 +111,19 @@ class Header extends React.Component{
     renderGuestRight(){
         const links = [
             {
-                label: 'Go Pro',
+                label: 'How it works',
+                link: '/pages/how-it-works',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'Real Results',
+                link: '/reviews',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'Upgrade',
                 link: '/pricing',
                 className: 'btn btn-sm btn-primary',
                 style: {}
@@ -119,7 +131,7 @@ class Header extends React.Component{
             {
                 label: 'Student Login',
                 link: '/login',
-                className: 'btn btn-sm',
+                className: 'nav-link btn btn-sm py-1',
                 style: {}
             }
         ]
@@ -162,8 +174,8 @@ class Header extends React.Component{
 
     render(){
         return (
-            <nav className="d-flex flex-column flex-md-row align-items-center navbar-expand-lg py-2 px-3 navbar-light">
-                <div className="navbar-brand">
+            <nav className="d-flex flex-column flex-md-row align-items-center navbar-expand p-2 navbar-light">
+                <div className="navbar-brand p-0">
                     <Link to="/" className="img-wrap img-wrap-hover">
                         <img src={logo} alt="iLoveCoding.org Logo" />
                     </Link>
@@ -174,7 +186,7 @@ class Header extends React.Component{
                     }
                 </nav>
                 {this.renderAdminLinks()}
-                <nav className="my-2 my-md-0">
+                <nav className="my-2 my-md-0 navbar-nav">
                     {
                         this.props.isLoggedIn? this.renderUserRight() : this.renderGuestRight()
                     }

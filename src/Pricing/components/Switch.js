@@ -40,7 +40,7 @@ class Switch extends React.Component{
     }
     render(){
         return (
-            <div className="mb-3 d-flex flex-column align-items-center">
+            <div className="d-flex flex-column align-items-center">
             <p className="">Select payment option:</p>
             <div className="switch">
                 {this.renderOptions()}

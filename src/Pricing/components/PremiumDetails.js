@@ -50,23 +50,23 @@ export default ()=>{
             <br/>
             <div className="mb-2 strong">Live Mentor Support:</div>
             <div>
-                <span className="oi oi-x text-muted" title="x" aria-hidden="true" />&nbsp;
+                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
                 Schedule live calls with mentor
             </div>
             <div>
-                <span className="oi oi-x text-muted" title="x" aria-hidden="true" />&nbsp;
+                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
                 Live code review &amp; feedback
             </div>
             <div>
-                <span className="oi oi-x text-muted" title="x" aria-hidden="true" />&nbsp;
+                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
                 Live interview preparation
             </div>
             <div>
-                <span className="oi oi-x text-muted" title="x" aria-hidden="true" />&nbsp;
+                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
                 Resume Improvement &amp; planning
             </div>
             <div>
-                <span className="oi oi-x text-muted" title="x" aria-hidden="true" />&nbsp;
+                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
                 Introduction with job recruiters
             </div>
         </div>

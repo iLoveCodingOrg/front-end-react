@@ -14,6 +14,7 @@ import WhosItNotFor from './components/WhosItNotFor'
 import Outcomes from './components/Outcomes'
 import ProDetails from './components/ProDetails'
 import PlusDetails from './components/PlusDetails'
+import PremiumDetails from './components/PremiumDetails'
 
 
 export {
@@ -32,5 +33,6 @@ export {
     WhosItNotFor,
     Outcomes,
     ProDetails,
-    PlusDetails
+    PlusDetails,
+    PremiumDetails
 }
