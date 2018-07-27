@@ -65,10 +65,28 @@ class Header extends React.Component{
 
     renderGuestLeft(){
         const links = [
+            {
+                label: 'Start Here',
+                link: '/start',
+                className: 'btn btn-sm btn-outline-primary',
+                style: {}
+            },
             // {
-            //     label: 'Full Training',
-            //     link: '/pricing',
-            //     className: 'btn btn-sm btn-outline-primary',
+            //     label: 'Training',
+            //     link: '/start',
+            //     className: 'nav-link px-3',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Practice Projects',
+            //     link: '/start',
+            //     className: 'nav-link px-3',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Question / Answers',
+            //     link: '/start',
+            //     className: 'nav-link px-3',
             //     style: {}
             // }
         ]
@@ -93,9 +111,9 @@ class Header extends React.Component{
     renderGuestRight(){
         const links = [
             {
-                label: 'Full Training',
+                label: 'Go Pro',
                 link: '/pricing',
-                className: 'btn btn-sm btn-outline-primary',
+                className: 'btn btn-sm btn-primary',
                 style: {}
             },
             {
@@ -144,19 +162,19 @@ class Header extends React.Component{
 
     render(){
         return (
-            <nav className="d-flex flex-column flex-md-row align-items-center navbar-expand-lg py-2 px-3">
+            <nav className="d-flex flex-column flex-md-row align-items-center navbar-expand-lg py-2 px-3 navbar-light">
                 <div className="navbar-brand">
                     <Link to="/" className="img-wrap img-wrap-hover">
                         <img src={logo} alt="iLoveCoding.org Logo" />
                     </Link>
                 </div>
-                <nav className="my-2 my-md-0 ml-md-3 mr-md-auto">
+                <nav className="my-2 my-md-0 ml-md-3 mr-md-auto navbar-nav">
                     {
                         this.props.isLoggedIn? this.renderUserLeft() : this.renderGuestLeft()
                     }
                 </nav>
                 {this.renderAdminLinks()}
-                <nav className="my-2 my-md-0 mr-md-3">
+                <nav className="my-2 my-md-0">
                     {
                         this.props.isLoggedIn? this.renderUserRight() : this.renderGuestRight()
                     }

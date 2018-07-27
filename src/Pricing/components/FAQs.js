@@ -79,11 +79,9 @@ const data=[
 export default function (){
     return (
     <div className="d-flex flex-column align-items-center">
-        <h3>Common Questions</h3>
+        <h2 class="mb-4">Common Questions</h2>
         <div className="col-md-10 col-lg-8">
-            <div>
-                <PrintFAQ data={data} />
-            </div>
+            <PrintFAQ data={data} />
         </div>
     </div>
 )}

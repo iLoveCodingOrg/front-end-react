@@ -1,5 +1,6 @@
 import Pricing from './components/PricingPage'
 import Price from './components/Price'
+import PriceBox from './components/PriceBox'
 import PrintTestimonials from './components/PrintTestimonials'
 import Testimonials from './components/Testimonials'
 import Header from './components/Header'
@@ -11,19 +12,25 @@ import WhatsIncluded from './components/WhatsIncluded'
 import WhosItFor from './components/WhosItFor'
 import WhosItNotFor from './components/WhosItNotFor'
 import Outcomes from './components/Outcomes'
+import ProDetails from './components/ProDetails'
+import PlusDetails from './components/PlusDetails'
+
 
 export {
     Pricing,
-    Header,
-    Testimonials,
-    PrintTestimonials,
-    Switch,
     Price,
+    PriceBox,
+    PrintTestimonials,
+    Testimonials,
+    Header,
+    Switch,
     Guarantee,
     FAQs,
     PrintFAQ,
     WhatsIncluded,
     WhosItFor,
     WhosItNotFor,
-    Outcomes
+    Outcomes,
+    ProDetails,
+    PlusDetails
 }
