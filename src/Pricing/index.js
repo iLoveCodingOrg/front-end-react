@@ -1,7 +1,6 @@
 import Pricing from './components/PricingPage'
 import Price from './components/Price'
 import PriceBox from './components/PriceBox'
-import PrintTestimonials from './components/PrintTestimonials'
 import Testimonials from './components/Testimonials'
 import Header from './components/Header'
 import Switch from './components/Switch'
@@ -21,7 +20,6 @@ export {
     Pricing,
     Price,
     PriceBox,
-    PrintTestimonials,
     Testimonials,
     Header,
     Switch,

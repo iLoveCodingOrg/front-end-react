@@ -1,7 +1,7 @@
 import React from 'react'
-import { PrintReviews, data } from '../../Reviews'
+import { PrintReviews, data } from '../'
 
-class Testimonials extends React.Component{
+class Reviews extends React.Component{
     constructor(props){
         super(props)
     }
@@ -10,9 +10,8 @@ class Testimonials extends React.Component{
             <section className="d-flex justify-content-center">
                 <div className="">
                 <PrintReviews
-                    containerClasses="flex-column"
-                    itemClasses="mb-3"
-                    data={[data[3], data[8]]} />
+                    itemClasses="m-3 col-4"
+                    data={data} />
                 </div>
             </section>
         )
@@ -20,4 +19,4 @@ class Testimonials extends React.Component{
 }
 
 
-export default Testimonials
+export default Reviews

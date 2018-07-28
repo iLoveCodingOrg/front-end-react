@@ -122,12 +122,12 @@ class Header extends React.Component{
             //     className: 'nav-link btn btn-sm py-1',
             //     style: {}
             // },
-            // {
-            //     label: 'Real Results',
-            //     link: '/reviews',
-            //     className: 'nav-link btn btn-sm py-1',
-            //     style: {}
-            // },
+            {
+                label: 'Real Results',
+                link: '/reviews',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
             {
                 label: 'Become a member',
                 link: '/pricing',

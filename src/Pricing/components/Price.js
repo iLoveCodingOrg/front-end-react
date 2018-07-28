@@ -122,7 +122,7 @@ class Price extends React.Component {
                         {
                             this.state.selected === 'yearly'?
                             <h5 className="position-absolute" style={{ right: "-127px", bottom: 0 }}>
-                                <div className="badge badge-orange"><span class="oi oi-arrow-thick-left" /> 4 Months Free</div>
+                                <div className="badge badge-orange"><span className="oi oi-arrow-thick-left" /> 4 Months Free</div>
                             </h5>
                             : null
                         }
