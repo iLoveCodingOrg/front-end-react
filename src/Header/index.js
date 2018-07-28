@@ -66,29 +66,35 @@ class Header extends React.Component{
     renderGuestLeft(){
         const links = [
             {
-                label: 'Start Here',
-                link: '/start',
+                label: 'Full Curriculum', // QUIZ
+                link: '/curriculum',
                 className: 'btn btn-sm btn-outline-primary',
                 style: {}
             },
-            {
-                label: 'Courses',
-                link: '/courses',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            },
-            {
-                label: 'Practice Projects',
-                link: '/projects',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            },
-            {
-                label: 'Questions/Answers',
-                link: '/questions',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            }
+            // {
+            //     label: 'Start Here', // QUIZ
+            //     link: '/start',
+            //     className: 'btn btn-sm btn-outline-primary',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Courses',
+            //     link: '/courses',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Practice Projects',
+            //     link: '/projects',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Questions/Answers',
+            //     link: '/questions',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // }
         ]
 
         return this.renderLinks(links)
@@ -110,20 +116,20 @@ class Header extends React.Component{
 
     renderGuestRight(){
         const links = [
+            // {
+            //     label: 'How it works',
+            //     link: '/pages/how-it-works',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Real Results',
+            //     link: '/reviews',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // },
             {
-                label: 'How it works',
-                link: '/pages/how-it-works',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            },
-            {
-                label: 'Real Results',
-                link: '/reviews',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            },
-            {
-                label: 'Upgrade',
+                label: 'Become a member',
                 link: '/pricing',
                 className: 'btn btn-sm btn-primary',
                 style: {}

@@ -15,29 +15,17 @@ export default function (props) {
                 </li>
                 <li className="list-group-item d-flex justify-content-between text-success">
                     <div>
-                        <h6 className="my-0">2x Extended Access</h6>
-                        <small className="text-muted">Get <del>3 month</del> <del>6-month</del> 12-month access to the program</small>
-                    </div>
-                </li>
-                <li className="list-group-item d-flex justify-content-between text-success">
-                    <div>
-                        <h6 className="my-0">True Mentorship Access</h6>
-                        <small className="text-muted">Access to Aziz as your mentor. Schedule calls with Aziz and get solution to the exact problem you are facing.</small>
-                    </div>
-                </li>
-                <li className="list-group-item d-flex justify-content-between text-success">
-                    <div>
                         <h6 className="my-0">Student Community</h6>
                         <small className="text-muted">
-                            Connect &nbsp; learn from a community of students who share your learn-to-code journey. 
-                            Talk to them live over Slack &nbsp; a Private Facebook Group
+                            Connect &amp; learn from a community of students who share your learn-to-code journey. 
+                            Talk to them live over Slack &amp; a Private Facebook Group
                         </small>
                     </div>
                 </li>
                 <li className="list-group-item d-flex justify-content-between text-success">
                     <div>
-                        <h6 className="my-0">60-Day Full Money Back Guarantee</h6>
-                        <small className="text-muted">Give us a try for the first 60-days, and if you find that iLoveCoding is not for you, Email us and ask for a full-refund.</small>
+                        <h6 className="my-0">30-Day Full Money Back Guarantee</h6>
+                        <small className="text-muted">Give us a try for the first 30-days, and if you find that iLoveCoding is not for you, Email us and ask for a full-refund.</small>
                     </div>
                 </li>
             </ul>

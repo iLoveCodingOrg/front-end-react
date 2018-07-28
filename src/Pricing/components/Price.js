@@ -49,6 +49,7 @@ const dataOriginal = {
             price: 148,
             terms: 'per month, paid monthly',
             link: '/checkout/ilc-premium-148m',
+            isClosed: true
         },
         yearly: {
             planType: 'premium',
@@ -56,6 +57,7 @@ const dataOriginal = {
             price: 99.16,
             terms: 'per month, paid yearly',
             link: '/checkout/ilc-premium-1189y',
+            isClosed: true
         }
     }
 }
@@ -79,7 +81,15 @@ class Price extends React.Component {
             selected: event.target.value
         })
     }
-    renderPriceBox({name, price, terms, link, planType, isPopular = false}){
+    renderPriceBox({
+        name,
+        price,
+        terms,
+        link,
+        planType,
+        isPopular = false,
+        isClosed = false
+    }){
         return (
             <PriceBox
                 name={name}
@@ -88,6 +98,7 @@ class Price extends React.Component {
                 link={link}
                 planType={planType}
                 isPopular={isPopular}
+                isClosed={isClosed}
             />
         )
     }
@@ -108,9 +119,13 @@ class Price extends React.Component {
                             onChange={this.handleSwitch}
                             selected={this.state.selected}
                         />
-                        <h5 className="position-absolute" style={{ right: "-127px", bottom: 0 }}>
-                            <div className="badge badge-orange">&lt; 4 Months Free</div>
-                        </h5>
+                        {
+                            this.state.selected === 'yearly'?
+                            <h5 className="position-absolute" style={{ right: "-127px", bottom: 0 }}>
+                                <div className="badge badge-orange"><span class="oi oi-arrow-thick-left" /> 4 Months Free</div>
+                            </h5>
+                            : null
+                        }
                     </div>
                     <div className="d-flex flex-wrap justify-content-center">
                         {this.renderPriceBox(data.pro[this.state.selected])}
@@ -120,7 +135,7 @@ class Price extends React.Component {
                     </div>
                     <div className="d-flex flex-wrap my-4">
                         <p className="m-2">👌 30-day unconditional money-back guarantee!</p>
-                        <p className="m-2">🔒 Secure Checkout</p>
+                        <p className="m-2">⚡️ Cancel Anytime.</p>
                     </div>
                 </div>
             </section>

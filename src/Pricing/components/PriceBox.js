@@ -7,6 +7,7 @@ import { ProDetails, PlusDetails, PremiumDetails } from '../index'
 class PriceBox extends React.Component {
     constructor(props){
         super(props)
+        this.renderCTA = this.renderCTA.bind(this)
     }
 
     renderPrice(number){
@@ -19,8 +20,24 @@ class PriceBox extends React.Component {
             </div>
         )
     }
+
+    renderCTA(){
+        const { isClosed, link } = this.props
+        if(isClosed){
+            return <Link to={link} className="btn btn-block btn-lg text-center btn-secondary disabled">Closed</Link>
+        }else{
+            return <Link to={link} className="btn btn-block btn-lg text-center btn-primary">Get Instant Access</Link>
+        }
+    }
+
     render(){
-        const { name, link, price, terms, planType, isPopular } = this.props
+        const {
+            name,
+            price,
+            terms,
+            planType,
+            isPopular,
+        } = this.props
         return (
             <div style={{ maxWidth: '500px', minWidth: '320px' }}
                 className="card mx-2 mb-4 mb-md-0">
@@ -35,19 +52,20 @@ class PriceBox extends React.Component {
                     <div className="h4 my-2 text-center font-weight-light">
                         {name}
                     </div>
-                    <h1 className="headline card-title pricing-card-title text-center mb-2">
+                    <h1 className="headline card-title pricing-card-title text-center mb-0">
                         {this.renderPrice(price)}
                     </h1>
 
-                    <div className="text-muted text-center">{terms}</div>
+                    <div className="text-muted text-center mb-3">{terms}</div>
 
-                    <Link to={link} className="mt-3 btn btn-block btn-lg text-center btn-outline-primary">Get Instant Access</Link>
+                    {this.renderCTA()}
 
                     { planType === 'pro'? <ProDetails />: null}
                     { planType === 'plus'? <PlusDetails />: null}
                     { planType === 'premium'? <PremiumDetails />: null}
-                    
-                    <Link to={link} className="btn btn-block btn-lg text-center btn-primary">Get Instant Access</Link>
+
+                    {this.renderCTA()}
+
                 </div>
             </div>
         )
@@ -55,6 +73,7 @@ class PriceBox extends React.Component {
 }
 
 PriceBox.propTypes = {
+    isClosed: PropTypes.bool.isRequired,
     isPopular: PropTypes.bool.isRequired,
     link: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

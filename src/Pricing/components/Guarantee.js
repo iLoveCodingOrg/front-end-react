@@ -10,7 +10,7 @@ export default function (){
                     If you follow the instructions and put in honest time and effort, we guarantee you will become a respectable software developer.
                 </p>
                 <p>
-                    If you are not happy with the training program for any reason what so ever, please request a refund within the first 60 days of your purchase.
+                    If you are not happy with the training program for any reason what so ever, please request a refund within the first 30 days of your purchase.
                 </p>
                 <p>
                     We’ll always ask what we could’ve done better so we don't make that mistake again.

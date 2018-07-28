@@ -10,7 +10,7 @@ export default ()=>{
             </div>
             <div>
                 <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
-                Full access to Q amp; A section
+                Full access to Q &amp; A section
             </div>
             <div>
                 <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
