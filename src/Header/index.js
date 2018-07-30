@@ -135,7 +135,7 @@ class Header extends React.Component{
                 style: {}
             },
             {
-                label: 'Become a member',
+                label: 'Become a Member',
                 link: '/pricing',
                 className: 'btn btn-sm btn-primary',
                 style: {}
