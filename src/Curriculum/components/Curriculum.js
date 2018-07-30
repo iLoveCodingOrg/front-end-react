@@ -40,7 +40,7 @@ export default ()=>{
                     By the time you are done with this curriculum you will have the complete skills to code and launch modern websites, web applications and even mobile apps from scratch. Plus you will have an impressive portfolio to land you a respectable job as a software developer.
                 </p>
                 <p className="lead">
-                    We'll do all of this while focusing on one programming language, which is Javascript. Javascript is currently the most popular and versatile programing language on planet internet. In fact 95% of all top websites use Javascript, and all the tech giants use it to build their websites and mobile apps: Facebook, Paypal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.
+                    We'll do all of this while focusing on one programming language, which is JavaScript. JavaScript is currently the most popular and versatile programing language on planet internet. In fact 95% of all top websites use JavaScript, and all the tech giants use it to build their websites and mobile apps: Facebook, Paypal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.
                 </p>
                 <p className="lead">
                     <strong>Trust the process - follow the modules: </strong>

@@ -9,7 +9,7 @@ const courses = [
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/HTMLCSS14-1-intro.png'
     },
     {
-        name: 'Learn Javascript in 14 Days',
+        name: 'Learn JavaScript in 14 Days',
         link: '/courses/js',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/learnJSin14.png'
     },
@@ -27,22 +27,22 @@ const practice = [
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/HTMLCSS14-9-myBlogDesign-part1.png'
     },
     {
-        name: 'Build a stopwatch app with pure Javascript',
+        name: 'Build a stopwatch app with pure JavaScript',
         link: '/lessons/stopwatch-app-with-pure-javascript',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/stopWatch.png'
     },
     {
-        name: 'Build a simple To-Do App with pure Javascript',
+        name: 'Build a simple To-Do App with pure JavaScript',
         link: '/lessons/simple-to-do-app-with-pure-javascript',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/todoApp.png'
     },
     {
-        name: 'Build a Rock Paper Scissor app with pure Javascript',
+        name: 'Build a Rock Paper Scissor app with pure JavaScript',
         link: '/lessons/rock-paper-scissor-app-with-pure-javascript',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/rockPaperScissor.png'
     },
     {
-        name: 'Project: Build Your Own Snake Game with Javascript',
+        name: 'Project: Build Your Own Snake Game with JavaScript',
         link: '/courses/snake-game',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/snakegame1.png'
     },
@@ -58,7 +58,7 @@ export default ()=>{
                 Fundamentals
             </h2>
             <p className="lead text-muted">
-                Learn the fundamentals of the HTML, CSS and Javascript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
+                Learn the fundamentals of the HTML, CSS and JavaScript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
             </p>
             <p className="mb-0">
                 <strong>Time to completion:</strong> 6 weeks (Focus for the first 6 weeks)

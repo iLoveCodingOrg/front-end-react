@@ -7,9 +7,9 @@ import { List } from '../../_common'
 function ListHeader(){
     return (
         <div className="d-flex flex-column align-items-center mb-5">
-            <h1>All Courses</h1>
+            <h1>Courses</h1>
             <p className="lead col-lg-9 align-self-center">
-                Courses are a collection of video lessons, put together in specific order to help you learn a specific technology. You can learn Javascript, jQuery, Angular JS and other technologies by selecting a course below.
+                Select from a topic you want tp learn: You can learn JavaScript, jQuery, React, Node.js and other technologies by selecting a course below. Build simple to advance websites and mobile apps.
             </p>
         </div>
     )

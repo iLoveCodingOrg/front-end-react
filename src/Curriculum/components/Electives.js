@@ -19,7 +19,7 @@ const courses = [
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/git-intro.png'
     },
     {
-        name: 'Learn Object Oriented Programming with Javascript',
+        name: 'Learn Object Oriented Programming with JavaScript',
         link: '/courses/object-oriented-javascript',
         thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/oopjs.gif'
     },

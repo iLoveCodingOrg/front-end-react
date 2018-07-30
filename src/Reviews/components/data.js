@@ -22,7 +22,7 @@ const data = [
   }
   ,{
       title: 'I am glad to having you as my mentor!',
-      body: 'Wow! Amazing. I am going through your calculator tutorial at the moment and I must say its something like I have never seen with other Javascript courses (Udemy/Youtube). Thank you for making these courses/tutorials. I am learning a lot and I am glad to having you as my mentor!',
+      body: 'Wow! Amazing. I am going through your calculator tutorial at the moment and I must say its something like I have never seen with other JavaScript courses (Udemy/Youtube). Thank you for making these courses/tutorials. I am learning a lot and I am glad to having you as my mentor!',
       thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/Brand/kevin-freeman.png',
       credit1: 'Kevin Freeman (Freelance Web Developer)',
   }
@@ -34,8 +34,8 @@ const data = [
       credit2: 'Leicester, UK'
   }
   ,{
-      title: 'Killer course for those wanting to learn Javascript the right way!',
-      body: 'I am in the second month of Aziz\'s school and it\'s been a very eye opening experience. Coming from a front-end coding / marketing / designer perspective, my Javascript skills have grown leaps and bounds in these last 2 months. I graduated from school with a Political Science degree, not a Computer Science degree – Aziz has a skill that communicates coding to those without the formal education in the arena. Killer course for those wanting to learn Javascript the right way.',
+      title: 'Killer course for those wanting to learn JavaScript the right way!',
+      body: 'I am in the second month of Aziz\'s school and it\'s been a very eye opening experience. Coming from a front-end coding / marketing / designer perspective, my JavaScript skills have grown leaps and bounds in these last 2 months. I graduated from school with a Political Science degree, not a Computer Science degree – Aziz has a skill that communicates coding to those without the formal education in the arena. Killer course for those wanting to learn JavaScript the right way.',
       thumbSrc: undefined,
       credit1: 'Kolin Karchon (CEO & Front-End Developer)',
       credit2: 'Seattle, WS USA'

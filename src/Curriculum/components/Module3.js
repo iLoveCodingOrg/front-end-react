@@ -77,7 +77,7 @@ export default ()=>{
                 <li>Build login capability for your app</li>
                 <li>Implement security and permissions in your app</li>
                 <li>Connect your app with a database</li>
-                <li>Call yourself a Full-Stack Javascript Developer</li>
+                <li>Call yourself a Full-Stack JavaScript Developer</li>
             </ol>
         </section>
     )
