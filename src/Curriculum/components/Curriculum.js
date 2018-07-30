@@ -14,7 +14,7 @@ export default ()=>{
         <div className="d-flex flex-column">
             <Helmet><title>Curriculum</title></Helmet>
             <div className="align-self-center col-md-10 col-lg-8 mt-3">
-                <h1 className="headline">The Perfect Curriculum</h1>
+                <h1>The Perfect Curriculum</h1>
                 <p className="lead">
                     Follow this curriculum to go from zero to a professional software developer.
                 </p>

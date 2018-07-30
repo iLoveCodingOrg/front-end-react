@@ -116,12 +116,18 @@ class Header extends React.Component{
 
     renderGuestRight(){
         const links = [
-            // {
-            //     label: 'How it works',
-            //     link: '/pages/how-it-works',
-            //     className: 'nav-link btn btn-sm py-1',
-            //     style: {}
-            // },
+            {
+                label: 'Why JavaScript?',
+                link: '/pages/why-javascript',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'How it works',
+                link: '/pages/how-it-works',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
             {
                 label: 'Real Results',
                 link: '/reviews',
@@ -192,7 +198,7 @@ class Header extends React.Component{
                     }
                 </nav>
                 {this.renderAdminLinks()}
-                <nav className="my-2 my-md-0 navbar-nav">
+                <nav className="my-2 my-md-0 navbar-nav flex-wrap justify-content-center">
                     {
                         this.props.isLoggedIn? this.renderUserRight() : this.renderGuestRight()
                     }

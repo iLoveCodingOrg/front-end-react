@@ -13,7 +13,7 @@ class Header extends React.Component{
                             Straight Forward Pricing
                             <br/>
                             <span className="
-                                h1
+                                small
                                 em
                                 font-weight-light
                                 text-muted">

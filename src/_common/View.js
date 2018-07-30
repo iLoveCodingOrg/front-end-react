@@ -87,14 +87,20 @@ class View extends React.Component{
                                 />: null
 
                             }
-                            <SourceDemo
-                                source={sourceUrl}
-                                demo={demoUrl}
-                            />
+                            {
+                                of !== 'page'?
+                                <SourceDemo
+                                    source={sourceUrl}
+                                    demo={demoUrl}
+                                />: null
+                            }
                             {this.props.children}
-                            <div
-                                className="d-flex flex-column align-items-center"
-                                dangerouslySetInnerHTML={{ __html: bodyContent }} />
+                            {
+                                !bodyContent? null:
+                                <div
+                                    className="col-md-9 border-top pt-4 mx-auto"
+                                    dangerouslySetInnerHTML={{ __html: bodyContent }} />
+                            }
                         </main>
                     </div>
                 }

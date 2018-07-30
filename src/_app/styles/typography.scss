@@ -11,14 +11,9 @@
 }
 
 @include media-breakpoint-up(sm) {
-  .headline {
+  .h1, h1 {
     font-size: 3.3em;
   }
-}
-
-.title{
-  margin-top: 1rem;
-  margin-bottom: .5rem;
 }
 
 @include media-breakpoint-up(sm) {

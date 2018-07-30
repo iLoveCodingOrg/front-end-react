@@ -20,7 +20,7 @@ export default class GroupCall extends React.Component{
                     <title>Weekly Group Calls</title>
                 </Helmet>
                 <div className="align-self-center col-md-10 col-lg-8 mt-3">
-                    <h1 className="headline">Weekly Group Calls</h1>
+                    <h1>Weekly Group Calls</h1>
                     
                     <p className="lead">Register to the next upcoming weekly group call</p>
                 

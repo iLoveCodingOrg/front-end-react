@@ -15,7 +15,7 @@ class ReviewsPage extends React.Component{
             <div className="d-flex flex-column">
                 <Helmet><title>Real Results | iLoveCoding</title></Helmet>
                 <div class="container text-center">
-                    <h1 className="headline">Real Results</h1>
+                    <h1>Real Results</h1>
                     <p className="lead">
                         I asked my students what changed for the better since learning from iLoveCoding. Here's what they had to say:
                     </p>

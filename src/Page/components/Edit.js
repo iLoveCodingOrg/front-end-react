@@ -36,6 +36,9 @@ export default withRouter(connect(
         name: 'title',
         type: 'text'
     }, {
+        name: 'subTitle',
+        type: 'text'
+    }, {
         name: 'bodyContent',
         type: 'textarea'
     }]

@@ -10,7 +10,7 @@ class Reviews extends React.Component{
             <section className="d-flex justify-content-center">
                 <div className="">
                 <PrintReviews
-                    itemClasses="m-3 col-4"
+                    itemClasses="m-3 col-lg-4 col-12"
                     data={data} />
                 </div>
             </section>

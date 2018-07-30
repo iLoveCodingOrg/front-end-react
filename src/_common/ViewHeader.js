@@ -5,27 +5,31 @@ import { Access, Level, Duration, LessonCount } from './'
 
 function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount }){
     return (
-        <div className="d-flex flex-column align-items-center text-center">
-            <h1 className="title">{title}</h1>
-            <p className="lead">{subTitle}</p>
-            <div className="mb-3">
+        <div className="d-flex flex-column align-items-center text-center mb-3">
+            <h1>{title}</h1>
+            {
+                subTitle?
+                <p className="lead">{subTitle}</p>
+                : null
+            }
             {
                 of !== 'page'?
-                <div className="d-inline">
-                    <Access isFree={isFree} />
-                    <Level level={level} />
-                    <Duration duration={duration} />
+                <div className="mb-3">
+                    <div className="d-inline">
+                        <Access isFree={isFree} />
+                        <Level level={level} />
+                        <Duration duration={duration} />
+                    </div>
+                    {
+                        of === 'course'?
+                        <div className="d-inline">
+                            <LessonCount lessonCount={lessonCount} />
+                        </div>
+                        : null
+                    }
                 </div>
                 : null
             }
-            {
-                of === 'course'?
-                <div className="d-inline">
-                    <LessonCount lessonCount={lessonCount} />
-                </div>
-                : null
-            }
-            </div>
         </div>
     )
 }

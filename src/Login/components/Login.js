@@ -87,7 +87,9 @@ class Login extends React.Component{
                 <Helmet><title>Login to iLoveCoding</title></Helmet>
                 <form className="form-login" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Please Login</h2>
-                    <p>This login is only for students who are enrolled in one of iLoveCoding's Paid Programs.</p>
+                    <p>
+                        This login is only for students who are enrolled in one of iLoveCoding's <Link to="/pricing">Paid Programs.</Link>
+                    </p>
                     {this.renderVerifyEmailStatus()}
                     {this.renderError()}
                     <div>
