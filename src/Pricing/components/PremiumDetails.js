@@ -6,7 +6,7 @@ export default ()=>{
             <div className="mb-2 strong">Unlimited Access To Training:</div>
             <div>
                 <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
-                Unlimited access to all courses &amp;, lessons
+                Unlimited access to all courses &amp; lessons
             </div>
             <div>
                 <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;

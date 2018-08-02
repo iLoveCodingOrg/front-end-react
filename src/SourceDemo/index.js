@@ -17,7 +17,9 @@ class SourceDemo extends React.Component{
     }
     render(){        
         const { demo, source } = this.props
-
+        
+        if(!demo && !source){ return null }
+        
         return (
             <div className="my-3 btn-group">
                 {

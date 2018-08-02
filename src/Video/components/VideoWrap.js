@@ -23,11 +23,11 @@ class VideoWrap extends React.Component{
             isLoggedIn,
             callMarkAsComplete
         } = this.props
+
+        if(videoSource === 'none') return null
         return (
             <div>
                 {
-                    videoSource === 'none'?
-                    null:
                     (!isEmpty(videoSource))?
                     <Video
                         callMarkAsComplete={callMarkAsComplete}

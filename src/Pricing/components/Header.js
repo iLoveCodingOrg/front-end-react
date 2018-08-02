@@ -22,7 +22,7 @@ class Header extends React.Component{
                             </span>
                         </h1>
                         <p className="alert alert-warning lead">
-                            Let’s be honest - Coding bootcamps are charging an arm and a leg - We give you <span className="strike">same</span> <Link to="/pages/how-it-works" className="u">better training</Link> for 2% of the cost.
+                            Let’s be honest - Coding bootcamps are charging an arm and a leg - We give you <span className="strike">same</span> <Link to="/lessons/how-better" className="u">better training</Link> for 2% of the cost.
                         </p>
                     </div>
                 </div>

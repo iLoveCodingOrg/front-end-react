@@ -23,7 +23,7 @@ const dataOriginal = {
             desc: 'Self-Paced Structured Learning',
             price: 24.79,
             terms: 'per month, paid yearly',
-            terms2: '($297.48/year after 33% discount)',
+            terms2: '($297.48/year - after 33% discount)',
             link: '/checkout/ilc-pro-297y',
         }
     },
@@ -61,7 +61,7 @@ const dataOriginal = {
             desc: 'Learn with 1:1 Mentor Support',
             price: 247.90,
             terms: 'per month, paid yearly',
-            terms2: '($2974.80/year after 33% discount)',
+            terms2: '($2974.80/year - after 33% discount)',
             link: '/checkout/ilc-premium-2403y',
             isClosed: true
         }

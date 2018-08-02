@@ -13,6 +13,18 @@ class View extends React.Component{
         super(props)
     }
 
+    getVideoHeaderCss(videoSource, of){
+        if(
+            videoSource === 'none'
+            || of === 'page'
+            || of === 'question'
+        ){
+            return 'col-12 col-lg-9 mx-auto'
+        }else{
+            return null
+        }
+    }
+
     componentWillReceiveProps(nextProps){
         const { slug } = this.props.match.params
         
@@ -62,6 +74,7 @@ class View extends React.Component{
                     <div>
                         <Helmet><title>{title}</title></Helmet>
                         <ViewHeader
+                            cssClass={this.getVideoHeaderCss(videoSource, of)}
                             of={of}
                             title={title}
                             subTitle={subTitle}

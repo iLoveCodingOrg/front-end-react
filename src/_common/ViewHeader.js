@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import { Access, Level, Duration, LessonCount } from './'
 
-function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount }){
+function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount, cssClass }){
     return (
-        <div className="d-flex flex-column align-items-center text-center mb-3">
+        <div className={`${cssClass} text-center`}>
             <h1>{title}</h1>
             {
                 subTitle?
@@ -35,6 +35,7 @@ function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount 
 }
 
 ViewHeader.propTypes = {
+    cssClass: PropTypes.string,
     duration: PropTypes.string,
     isFree: PropTypes.bool.isRequired,
     lessonCount: PropTypes.number,
