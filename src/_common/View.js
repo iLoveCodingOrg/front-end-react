@@ -98,7 +98,7 @@ class View extends React.Component{
                             {
                                 !bodyContent? null:
                                 <div
-                                    className="col-md-9 border-top pt-4 mx-auto"
+                                    className="col-12 col-lg-9 border-top pt-4 mx-auto"
                                     dangerouslySetInnerHTML={{ __html: bodyContent }} />
                             }
                         </main>

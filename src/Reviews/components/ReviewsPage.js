@@ -14,7 +14,7 @@ class ReviewsPage extends React.Component{
         return (
             <div className="d-flex flex-column">
                 <Helmet><title>Real Results | iLoveCoding</title></Helmet>
-                <div class="container text-center">
+                <div className="container text-center">
                     <h1>Real Results</h1>
                     <p className="lead">
                         I asked my students what changed for the better since learning from iLoveCoding. Here's what they had to say:

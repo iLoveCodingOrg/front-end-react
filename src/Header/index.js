@@ -135,9 +135,9 @@ class Header extends React.Component{
                 style: {}
             },
             {
-                label: 'Become a Member',
+                label: 'Pricing',
                 link: '/pricing',
-                className: 'btn btn-sm btn-primary',
+                className: 'nav-link btn btn-sm py-1',
                 style: {}
             },
             {
@@ -145,7 +145,13 @@ class Header extends React.Component{
                 link: '/login',
                 className: 'nav-link btn btn-sm py-1',
                 style: {}
-            }
+            },
+            {
+                label: 'Join Now',
+                link: '/pricing',
+                className: 'btn btn-sm btn-primary',
+                style: {}
+            },
         ]
 
         return this.renderLinks(links)

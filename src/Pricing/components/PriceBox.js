@@ -12,7 +12,7 @@ class PriceBox extends React.Component {
 
     renderPrice(number){
         const wholeNumber = Math.floor(number)
-        const decimal = number.toString().split('.')[1] || '00'
+        const decimal = number.toFixed(2).toString().split('.')[1] || '00'
         return (
             <div>
                 {wholeNumber}
@@ -33,8 +33,10 @@ class PriceBox extends React.Component {
     render(){
         const {
             name,
+            desc,
             price,
             terms,
+            terms2,
             planType,
             isPopular,
         } = this.props
@@ -49,14 +51,20 @@ class PriceBox extends React.Component {
                         </h5>
                         : null
                     }
-                    <div className="h4 my-2 text-center font-weight-light">
-                        {name}
+                    <div className="my-2 text-center font-weight-light">
+                        <span className="h4">{name}</span>
+                        <br/>
+                        <span className="lead em">{desc}</span>
                     </div>
                     <h1 className="headline card-title pricing-card-title text-center mb-0">
                         {this.renderPrice(price)}
                     </h1>
 
-                    <div className="text-muted text-center mb-3">{terms}</div>
+                    <div className="text-muted text-center mb-3">
+                        {terms}
+                        <br/>
+                        {terms2}
+                    </div>
 
                     {this.renderCTA()}
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class Header extends React.Component{
     constructor(props){
@@ -7,7 +8,7 @@ class Header extends React.Component{
     render(){
         return (
             <section className="d-flex justify-content-center">
-                <div className="col">
+                <div className="container">
                     <div className="text-center">
                         <h1 className="headline line-height-1">
                             Straight Forward Pricing
@@ -20,6 +21,9 @@ class Header extends React.Component{
                                 for a career changing training!
                             </span>
                         </h1>
+                        <p className="alert alert-warning lead">
+                            Let’s be honest - Coding bootcamps are charging an arm and a leg - We give you <span className="strike">same</span> <Link to="/pages/how-it-works" className="u">better training</Link> for 2% of the cost.
+                        </p>
                     </div>
                 </div>
             </section>

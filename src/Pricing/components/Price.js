@@ -11,52 +11,58 @@ const dataOriginal = {
     pro: {
         monthly: {
             planType: 'pro',
-            name: 'Pro Monthly',
+            name: 'Pro',
+            desc: 'Self-Paced Structured Learning',
             price: 37,
             terms: 'per month, paid monthly',
             link: '/checkout/ilc-pro-37m',
         },
         yearly: {
             planType: 'pro',
-            name: 'Pro Yearly',
+            name: 'Pro',
+            desc: 'Self-Paced Structured Learning',
             price: 24.79,
             terms: 'per month, paid yearly',
+            terms2: '($297.48/year after 33% discount)',
             link: '/checkout/ilc-pro-297y',
         }
     },
-    plus: {
-        monthly: {
-            planType: 'plus',
-            name: 'Plus Monthly',
-            price: 74,
-            terms: 'per month, paid monthly',
-            link: '/checkout/ilc-plus-74m',
-            isPopular: true
-        },
-        yearly: {
-            planType: 'plus',
-            name: 'Plus Yearly',
-            price: 49.58,
-            terms: 'per month, paid yearly',
-            link: '/checkout/ilc-plus-594y',
-            isPopular: true
-        }
-    },
+    // plus: {
+    //     monthly: {
+    //         planType: 'plus',
+    //         name: 'Plus Monthly',
+    //         price: 74,
+    //         terms: 'per month, paid monthly',
+    //         link: '/checkout/ilc-plus-74m',
+    //         isPopular: true
+    //     },
+    //     yearly: {
+    //         planType: 'plus',
+    //         name: 'Plus Yearly',
+    //         price: 49.58,
+    //         terms: 'per month, paid yearly',
+    //         link: '/checkout/ilc-plus-594y',
+    //         isPopular: true
+    //     }
+    // },
     premium: {
         monthly: {
             planType: 'premium',
-            name: 'Premium Monthly',
-            price: 148,
+            name: 'Premium',
+            desc: 'Learn with 1:1 Mentor Support',
+            price: 370,
             terms: 'per month, paid monthly',
-            link: '/checkout/ilc-premium-148m',
+            link: '/checkout/ilc-premium-299m',
             isClosed: true
         },
         yearly: {
             planType: 'premium',
-            name: 'Premium Yearly',
-            price: 99.16,
+            name: 'Premium',
+            desc: 'Learn with 1:1 Mentor Support',
+            price: 247.90,
             terms: 'per month, paid yearly',
-            link: '/checkout/ilc-premium-1189y',
+            terms2: '($2974.80/year after 33% discount)',
+            link: '/checkout/ilc-premium-2403y',
             isClosed: true
         }
     }
@@ -73,7 +79,7 @@ class Price extends React.Component {
         this.handleSwitch = this.handleSwitch.bind(this)
 
         this.state = {
-            selected: 'yearly'
+            selected: 'monthly'
         }
     }
     handleSwitch(event){
@@ -83,8 +89,10 @@ class Price extends React.Component {
     }
     renderPriceBox({
         name,
+        desc,
         price,
         terms,
+        terms2,
         link,
         planType,
         isPopular = false,
@@ -93,8 +101,10 @@ class Price extends React.Component {
         return (
             <PriceBox
                 name={name}
+                desc={desc}
                 price={price}
                 terms={terms}
+                terms2={terms2}
                 link={link}
                 planType={planType}
                 isPopular={isPopular}
@@ -128,9 +138,8 @@ class Price extends React.Component {
                         }
                     </div>
                     <div className="d-flex flex-wrap justify-content-center">
-                        {this.renderPriceBox(data.pro[this.state.selected])}
-                        {this.renderPriceBox(data.plus[this.state.selected])}
                         {this.renderPriceBox(data.premium[this.state.selected])}
+                        {this.renderPriceBox(data.pro[this.state.selected])}
 
                     </div>
                     <div className="d-flex flex-wrap my-4">
