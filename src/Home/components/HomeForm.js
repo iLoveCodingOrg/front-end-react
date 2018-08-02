@@ -15,7 +15,6 @@ class HomeForm extends React.Component{
                 >
                     <div className="input-group">
                         <input
-                            autoFocus
                             className="form-control form-control-lg border-primary"
                             placeholder="Enter your email address"
                             type="email"
