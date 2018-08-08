@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom'
 import { selectors } from '../../_user'
 
 import Hero from './Hero'
-import SevenDayCourse from './SevenDayCourse'
+// import SevenDayCourse from './SevenDayCourse'
 import AboutAziz from '../../AboutAziz/AboutAziz'
 import MyWorkLogos from '../../LogoList/MyWorkLogos'
 import StudentCompanies from '../../LogoList/StudentCompanies'
@@ -37,7 +37,7 @@ class Home extends React.Component{
                     <MyWorkLogos />
                     {/* <StudentCompanies /> */}
                 </div>
-                <SevenDayCourse />
+                {/* <SevenDayCourse /> */}
             </div>
         )
     }
