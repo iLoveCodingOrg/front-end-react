@@ -24,7 +24,7 @@ class Dashboard extends React.Component{
                         Dashboard
                     </h1>
                     <p className="lead text-muted">
-                        Here you will find quick links to resources which are included in your enrollment.
+                        Here you will find quick links to resources which are included in your membership.
                     </p>
                     <hr className="mb-1"/>
                     <div className="row">
@@ -47,11 +47,11 @@ class Dashboard extends React.Component{
                             <h4>Ask for support</h4>
                             <ul className="list-unstyled">
                                 <li><Link to="/officehours">Schedule a call with Aziz</Link></li>
-                                <li><Link to="/groupcalls">Join weekly group calls</Link></li>
+                                {/* <li><Link to="/groupcalls">Join weekly group calls</Link></li> */}
                                 <li><a target="_blank" href="mailto:support@ilovecoding.org">Email support</a></li>
                             </ul>
                             <p className="text-muted mb-0"><em>
-                                We have a "no student left behind" policy! and to support that we have the above ways you can keep in touch with us.</em>
+                                I have a <strong>"no student left behind"</strong> policy! and to support that I have the above ways for you to keep in touch with me.</em>
                             </p>
                         </div>
                     </div>
@@ -66,18 +66,18 @@ class Dashboard extends React.Component{
                         <div className="col-12 col-md-4 mt-5">
                             <h4>Additional</h4>
                             <ul className="list-unstyled">
-                                <li><a to="/">Tools &amp; Resources</a> (Coming soon)</li>
+                                <li><Link to="/pages/resources">Tools &amp; Resources</Link></li>
                                 <li><a target="_blank" href="https://ilovecoding.typeform.com/to/g6mTg8">Submit your success story</a></li>
                             </ul>
                         </div>
-                        <div className="col-12 col-md-4 mt-5">
+                        {/* <div className="col-12 col-md-4 mt-5">
                             <h4>Account Settings</h4>
                             <ul className="list-unstyled">
                                 <li><a to="/">Change Password</a></li>
                                 <li><a to="/">Active / Past Enrollments</a></li>
                                 <li><a to="/">Payments</a></li>
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
             </div>

@@ -8,8 +8,10 @@ export default () => (
         <div className="d-flex justify-content-around">
             <div className="">
                 <h5>Students</h5>
-                <ul className="list-unstyled text-small">
+                <ul className="list-unstyled">
                     <li><Link to="/courses" className="text-muted">All Courses</Link></li>
+                    <li><Link to="/curriculum" className="text-muted">Full Curriculum</Link></li>
+                    <li><Link to="/pages/resources" className="text-muted">Tools &amp; Resources</Link></li>
                     <li><a target="_blank" href="https://ilovecoding.typeform.com/to/g6mTg8" className="text-muted">Submit success story</a></li>
                     {/* <li><Link to="/" className="text-muted">Podcast</Link></li> */}
                 </ul>
