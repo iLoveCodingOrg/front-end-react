@@ -16,14 +16,14 @@ const data = [
   ,{
       title: 'Great hands-on experience',
       body: 'By following along with Aziz you not only get great hands on experience, but also insights into the thought process of a developer as they build out the types of solutions we see on the web everyday',
-      thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/Brand/robert-crocker.jpg',
+      thumbSrc: '//img.ilovecoding.org/brand/robert-crocker.jpg',
       credit1: 'Robert Crocker (Technology Consultant, Startup Founder)',
       credit2: 'San Francisco, CA USA'
   }
   ,{
       title: 'I am glad to having you as my mentor!',
       body: 'Wow! Amazing. I am going through your calculator tutorial at the moment and I must say its something like I have never seen with other JavaScript courses (Udemy/Youtube). Thank you for making these courses/tutorials. I am learning a lot and I am glad to having you as my mentor!',
-      thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/Brand/kevin-freeman.png',
+      thumbSrc: '//img.ilovecoding.org/brand/kevin-freeman.png',
       credit1: 'Kevin Freeman (Freelance Web Developer)',
   }
   ,{
@@ -64,7 +64,7 @@ const data = [
   ,{
       title: '',
       body: 'Awesome man, keep up a good work. I love what you do (For real). I think you do good as a pseudo coder. You are not only knowing your material, but the most, you can teach clearly . I am so lucky to find your site.',
-      thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/img/francis.jpg',
+      thumbSrc: '//img.ilovecoding.org/img/francis.jpg',
       credit1: 'Francis',
       credit2: ''
   }

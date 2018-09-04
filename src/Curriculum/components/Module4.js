@@ -6,7 +6,7 @@ const courses = [
     {
         name: 'Learn React Native & Build Mobile App (Android & iOS)',
         link: '/courses/react-native',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/react-native/0-intro.jpg'
+        thumbSrc: '//img.ilovecoding.org/thumb/react-native/0-intro.jpg'
     }
 ]
 
@@ -14,7 +14,7 @@ const practice = [
     {
         name: 'Project: Create a Cryptocurrency price checker app with React Native',
         link: '/courses/react-native-crypto-price',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/react-native/44-crypro-intro.jpg'
+        thumbSrc: '//img.ilovecoding.org/thumb/react-native/44-crypro-intro.jpg'
     }
 ]
 

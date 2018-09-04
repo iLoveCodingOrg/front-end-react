@@ -6,17 +6,17 @@ const courses = [
     {
         name: 'Learn Node JS in a Week',
         link: '/courses/nodejs',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-1-intro.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/nodeWk-1-intro.png'
     },
     {
         name: 'Learn Express.js in 14 days',
         link: '/courses/expressjs',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/express/express-0-intro.jpg'
+        thumbSrc: '//img.ilovecoding.org/thumb/express/express-0-intro.jpg'
     },
     {
         name: 'Crash Course to Databases & MongoDB',
         link: '/courses/mongodb',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/mongodb/mongodb-0-intro.jpg'
+        thumbSrc: '//img.ilovecoding.org/thumb/mongodb/mongodb-0-intro.jpg'
     }
 ]
 
@@ -24,22 +24,22 @@ const practice = [
     {
         name: 'Create a Simple HTTP Server with Node.js',
         link: '/courses/nodejs/lessons/create-a-simple-http-server-with-nodejs',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-8-httpServer.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/nodeWk-8-httpServer.png'
     },
     {
         name: 'Project: Create a Web Scraper to Gather Information from the web',
         link: '/courses/nodejs/lessons/project-create-a-web-scraper-to-gather-information-from-the-web',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-10-scraper.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/nodeWk-10-scraper.png'
     },
     {
         name: 'Creating a Simple Web App with Node.js',
         link: '/courses/nodejs/lessons/creating-a-simple-web-app-with-nodejs',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/nodeWk-11-webapp.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/nodeWk-11-webapp.png'
     },
     {
         name: 'Project: Build a Note Taking App with Express.js',
         link: 'courses/expressjs-notes-app',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/express-p/express-p1-setup.jpg'
+        thumbSrc: '//img.ilovecoding.org/thumb/express-p/express-p1-setup.jpg'
     }
 ]
 

@@ -7,7 +7,7 @@ class SourceDemo extends React.Component{
         this.getFullLink = this.getFullLink.bind(this)
     }
     getFullLink(linkString){
-        const URL = 'https://ilovecoding-assets.s3.amazonaws.com/'
+        const URL = '//img.ilovecoding.org/'
 
         if(linkString.substring(0,4) === 'http'){
             return linkString

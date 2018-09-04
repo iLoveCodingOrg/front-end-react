@@ -6,17 +6,17 @@ const courses = [
     {
         name: 'Learn HTML & CSS in 14 days',
         link: '/courses/htmlcss',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/HTMLCSS14-1-intro.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/HTMLCSS14-1-intro.png'
     },
     {
         name: 'Learn JavaScript in 14 Days',
         link: '/courses/js',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/learnJSin14.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/learnJSin14.png'
     },
     {
         name: 'Going Live: Putting Your Website Live',
         link: '/courses/going-live-putting-your-website-live',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/goingLive-part1.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/goingLive-part1.png'
     }
 ]
 
@@ -24,27 +24,27 @@ const practice = [
     {
         name: 'Project: Create a blog design from scratch using HTML and CSS',
         link: '/courses/blog-design',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/HTMLCSS14-9-myBlogDesign-part1.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/HTMLCSS14-9-myBlogDesign-part1.png'
     },
     {
         name: 'Build a stopwatch app with pure JavaScript',
         link: '/lessons/stopwatch-app-with-pure-javascript',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/stopWatch.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/stopWatch.png'
     },
     {
         name: 'Build a simple To-Do App with pure JavaScript',
         link: '/lessons/simple-to-do-app-with-pure-javascript',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/todoApp.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/todoApp.png'
     },
     {
         name: 'Build a Rock Paper Scissor app with pure JavaScript',
         link: '/lessons/rock-paper-scissor-app-with-pure-javascript',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/rockPaperScissor.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/rockPaperScissor.png'
     },
     {
         name: 'Project: Build Your Own Snake Game with JavaScript',
         link: '/courses/snake-game',
-        thumbSrc: 'https://ilovecoding-assets.s3.amazonaws.com/thumb/snakegame1.png'
+        thumbSrc: '//img.ilovecoding.org/thumb/snakegame1.png'
     },
 ]
 
