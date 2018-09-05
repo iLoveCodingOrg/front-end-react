@@ -60,6 +60,12 @@ export default withRouter(connect(
         name: 'topic',
         type: 'array'
     }, {
+        name: 'sourceUrl',
+        type: 'text'
+    }, {
+        name: 'demoUrl',
+        type: 'text'
+    }, {
         name: 'bodyContent',
         type: 'textarea'
     }]
