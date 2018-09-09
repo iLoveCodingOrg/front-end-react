@@ -9,6 +9,7 @@ import Access from './Access'
 import Level from './Level'
 import Duration from './Duration'
 import LessonCount from './LessonCount'
+import RedirectAlert from './RedirectAlert'
 
 export {
   List,
@@ -21,5 +22,6 @@ export {
   Access,
   Level,
   Duration,
-  LessonCount
+  LessonCount,
+  RedirectAlert
 }

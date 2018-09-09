@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { actions } from '../'
-import { View } from '../../_common'
+import { View, RedirectAlert } from '../../_common'
 import { CourseNav } from '../'
 
 function mapStateToProps(state){
@@ -32,6 +32,11 @@ export default connect(
     mapDispatchToProps)
 ((props)=>{
     return (<View {...props} of="course">
+        <RedirectAlert
+            slug={props.view.slug}
+            fromSlug="htmlcss"
+            toUrl="/courses/htmlcss2"
+        />
         <CourseNav course={props.view} />
     </View>)
 })

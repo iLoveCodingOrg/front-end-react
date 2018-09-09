@@ -5,8 +5,8 @@ import { PrintTraining } from '../'
 const courses = [
     {
         name: 'Learn HTML & CSS in 14 days',
-        link: '/courses/htmlcss',
-        thumbSrc: '//img.ilovecoding.org/thumb/HTMLCSS14-1-intro.png'
+        link: '/courses/htmlcss2',
+        thumbSrc: '//img.ilovecoding.org/thumb/htmlcss2.gif'
     },
     {
         name: 'Learn JavaScript in 14 Days',
@@ -23,7 +23,7 @@ const courses = [
 const practice = [
     {
         name: 'Project: Create a blog design from scratch using HTML and CSS',
-        link: '/courses/blog-design',
+        link: '/courses/htmlcss2/lessons/blog-design',
         thumbSrc: '//img.ilovecoding.org/thumb/HTMLCSS14-9-myBlogDesign-part1.png'
     },
     {

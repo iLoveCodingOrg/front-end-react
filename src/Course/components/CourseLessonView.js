@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
-import { ViewHeader } from '../../_common/'
+import { ViewHeader, RedirectAlert } from '../../_common/'
 import { VideoWrap } from '../../Video'
 import { actions as courseActions } from '../'
 import { actions as lessonActions } from '../../Lesson'
@@ -94,6 +94,11 @@ class CourseLessonView extends React.Component{
                             of="courseLesson"
                         />
                         <main>
+                            <RedirectAlert
+                                slug={courseView.slug}
+                                fromSlug="htmlcss"
+                                toUrl="/courses/htmlcss2"
+                            />
                             <VideoWrap
                                 callMarkAsComplete={()=>callMarkAsComplete(id)}
                                 title={title}
