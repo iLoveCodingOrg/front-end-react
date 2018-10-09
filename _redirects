@@ -45,17 +45,17 @@
 /playlists/562092d577eef33c1aebc737   /courses/learn-master-bootstrap-in-a-week   301
 /playlists/learn-master-bootstrap-in-a-week   /courses/learn-master-bootstrap-in-a-week   301
 
-/playlists/562713af12c48c71055037fe   /courses/learn-html-css-in-14-days   301
-/playlists/learn-html-css-in-14-days   /courses/learn-html-css-in-14-days   301
+/playlists/562713af12c48c71055037fe   /courses/htmlcss   301
+/playlists/learn-html-css-in-14-days   /courses/htmlcss   301
 
-/playlists/5627138212c48c71055037fd   /courses/learn-javascript-in-14-days   301
-/playlists/learn-javascript-in-14-days   /courses/learn-javascript-in-14-days   301
+/playlists/5627138212c48c71055037fd   /courses/js   301
+/playlists/learn-javascript-in-14-days   /courses/js   301
 
-/playlists/5627134d12c48c71055037fc   /courses/learn-jquery-in-14-days   301
-/playlists/learn-jquery-in-14-days   /courses/learn-jquery-in-14-days   301
+/playlists/5627134d12c48c71055037fc   /courses/jquery   301
+/playlists/learn-jquery-in-14-days   /courses/jquery   301
 
-/playlists/562713e912c48c71055037ff   /courses/learn-node-js-in-a-week   301
-/playlists/learn-node-js-in-a-week   /courses/learn-node-js-in-a-week   301
+/playlists/562713e912c48c71055037ff   /courses/nodejs   301
+/playlists/learn-node-js-in-a-week   /courses/nodejs   301
 
 
 # LESSON 1.0 > 2.2
@@ -305,6 +305,13 @@
 /courses/learn-javascript-in-14-days  /courses/js 301
 /courses/learn-jquery-in-14-days  /courses/jquery 301
 /courses/learn-node-js-in-a-week  /courses/nodejs 301
+
+# Angular > React lessons
+/lessons/* course=:course /courses/:course/lessons/:splat 301
+/courses/learn-html-css-in-14-days/lessons/*    /courses/htmlcss/lessons/:splat 301
+/courses/learn-javascript-in-14-days/lessons/*  /courses/js/lessons/:splat 301
+/courses/learn-jquery-in-14-days/lessons/*      /courses/jquery/lessons/:splat 301
+/courses/learn-node-js-in-a-week/lessons/*      /courses/nodejs/lessons/:splat 301
 
 # Single Page Application Redirect
 /*      /index.html   200
