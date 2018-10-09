@@ -29,6 +29,7 @@ class Pricing extends React.Component{
                 <div className="pt-3"><Price /></div>
                 <div className="py-5 bg-gray-200"><Testimonials /></div>
                 <div className="py-5"><FAQs /></div>
+                <div className="py-5"><Guarantee /></div>
             </div>
         )
     }

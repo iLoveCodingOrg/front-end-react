@@ -45,27 +45,27 @@ const dataOriginal = {
     //         isPopular: true
     //     }
     // },
-    premium: {
-        monthly: {
-            planType: 'premium',
-            name: 'Premium',
-            desc: 'Learn with 1:1 Mentor Support',
-            price: 370,
-            terms: 'per month, paid monthly',
-            link: '/checkout/ilc-premium-299m',
-            isClosed: true
-        },
-        yearly: {
-            planType: 'premium',
-            name: 'Premium',
-            desc: 'Learn with 1:1 Mentor Support',
-            price: 247.90,
-            terms: 'per month, paid yearly',
-            terms2: '($2974.80/year - after 33% discount)',
-            link: '/checkout/ilc-premium-2403y',
-            isClosed: true
-        }
-    }
+    // premium: {
+    //     monthly: {
+    //         planType: 'premium',
+    //         name: 'Premium',
+    //         desc: 'Learn with 1:1 Mentor Support',
+    //         price: 370,
+    //         terms: 'per month, paid monthly',
+    //         link: '/checkout/ilc-premium-299m',
+    //         isClosed: true
+    //     },
+    //     yearly: {
+    //         planType: 'premium',
+    //         name: 'Premium',
+    //         desc: 'Learn with 1:1 Mentor Support',
+    //         price: 247.90,
+    //         terms: 'per month, paid yearly',
+    //         terms2: '($2974.80/year - after 33% discount)',
+    //         link: '/checkout/ilc-premium-2403y',
+    //         isClosed: true
+    //     }
+    // }
 }
 
 const data30 = {
@@ -79,7 +79,7 @@ class Price extends React.Component {
         this.handleSwitch = this.handleSwitch.bind(this)
 
         this.state = {
-            selected: 'monthly'
+            selected: 'yearly'
         }
     }
     handleSwitch(event){
@@ -138,12 +138,10 @@ class Price extends React.Component {
                         }
                     </div>
                     <div className="d-flex flex-wrap justify-content-center">
-                        {this.renderPriceBox(data.premium[this.state.selected])}
                         {this.renderPriceBox(data.pro[this.state.selected])}
 
                     </div>
                     <div className="d-flex flex-wrap my-4">
-                        <p className="m-2">👌 30-day unconditional money-back guarantee!</p>
                         <p className="m-2">⚡️ Cancel Anytime.</p>
                     </div>
                 </div>
