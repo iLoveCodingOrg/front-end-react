@@ -12,6 +12,7 @@ import { CourseNav } from '../'
 import SourceDemo from '../../SourceDemo'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
+import Comments from '../../Comments'
 
 class CourseLessonView extends React.Component{
     constructor(props){
@@ -113,6 +114,7 @@ class CourseLessonView extends React.Component{
                                 course={courseView}
                             />
                             <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
+                            <Comments />
                         </main>
                     </div>
                 }
