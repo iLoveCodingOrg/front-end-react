@@ -7,7 +7,7 @@ import facebook from '../_app/images/companies/used-by/facebook.png'
 import ibm from '../_app/images/companies/used-by/ibm.png'
 import instagram from '../_app/images/companies/used-by/instagram.png'
 import microsoft from '../_app/images/companies/used-by/microsoft.png'
-import skype from '../_app/images/companies/used-by/skype.jpg'
+import skype from '../_app/images/companies/used-by/skype.png'
 import tesla from '../_app/images/companies/used-by/tesla.png'
 import walmart from '../_app/images/companies/used-by/walmart.png'
 
