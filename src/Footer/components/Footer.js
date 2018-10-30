@@ -22,6 +22,8 @@ export default () => (
                     <li><a href="https://blog.ilovecoding.org" className="text-muted">Blog</a></li>
                     {/* <li><Link to="/" className="text-muted">Affiliates</Link></li> */}
                     <li><Link to="/pages/about" className="text-muted">About us</Link></li>
+                    <li><a className="text-muted" href="https://www.facebook.com/pg/ilovecodingorg">Facebook</a></li>
+                    <li><a className="text-muted" href="https://twitter.com/ilovecodingorg">@iLoveCodingOrg</a></li>
                 </ul>
             </div>
         </div>
