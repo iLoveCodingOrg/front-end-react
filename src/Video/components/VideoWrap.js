@@ -13,7 +13,15 @@ import { IMG_URL } from '../../_app/constants'
 class VideoWrap extends React.Component{
     constructor(props){
         super(props)
-
+    }
+    renderThumb(thumbnail, title){
+        if(!thumbnail) return null;
+        return <img
+            style={{ maxWidth: 300, maxHeight: 169 }}
+            className="mr-md-3 mb-md-0 mb-3 rounded"
+            src={`${IMG_URL}${thumbnail}`}
+            alt={title}
+        />
     }
     render(){
         const {
@@ -34,12 +42,7 @@ class VideoWrap extends React.Component{
                         videoSource={videoSource}
                     />:
                     <div className="d-flex flex-md-row flex-column alert alert-warning ">
-                        <img
-                            style={{ maxWidth: 300, maxHeight: 169 }}
-                            className="mr-md-3 mb-md-0 mb-3 rounded"
-                            src={`${IMG_URL}${thumbnail}`}
-                            alt={title}
-                        />
+                        {this.renderThumb(thumbnail, title)}
                         <div>
                             <div className="h3 font-weight-light">
                                 You do not have access to this lesson!
