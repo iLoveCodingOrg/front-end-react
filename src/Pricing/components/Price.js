@@ -11,20 +11,22 @@ const dataOriginal = {
     pro: {
         monthly: {
             planType: 'pro',
-            name: 'Pro',
-            desc: 'Self-Paced Structured Learning',
+            name: 'Pro - Monthly',
+            // desc: 'Self-Paced Structured Learning',
             price: 37,
-            terms: 'per month, paid monthly',
+            terms: 'per month/paid monthly',
+            terms2: '(Its like paying $1.23/day)',
             link: '/checkout/ilc-pro-37m',
         },
         yearly: {
             planType: 'pro',
-            name: 'Pro',
-            desc: 'Self-Paced Structured Learning',
-            price: 24.79,
-            terms: 'per month, paid yearly',
-            terms2: '($297.48/year - after 33% discount)',
-            link: '/checkout/ilc-pro-297y',
+            name: 'Pro - Yearly',
+            // desc: 'Self-Paced Structured Learning',
+            price: 370,
+            terms: '(Save 16.67%) per year/paid yearly',
+            terms2: '(Its like paying $1.01/day)',
+            link: '/checkout/ilc-pro-370y',
+            isPopular: true
         }
     },
     // plus: {
@@ -123,7 +125,7 @@ class Price extends React.Component {
         return (
             <section className="d-flex justify-content-center">
                 <div className="d-flex flex-column align-items-center">
-                    <div className="position-relative mb-3 mx-sm-auto mr-auto">
+                    {/* <div className="position-relative mb-3 mx-sm-auto mr-auto">
                         <Switch
                             style={{ maxWidth: '400px', minWidth: '320px' }}
                             onChange={this.handleSwitch}
@@ -136,10 +138,10 @@ class Price extends React.Component {
                             </h5>
                             : null
                         }
-                    </div>
+                    </div> */}
                     <div className="d-flex flex-wrap justify-content-center">
-                        {this.renderPriceBox(data.pro[this.state.selected])}
-
+                        {this.renderPriceBox(data.pro['yearly'])}
+                        {this.renderPriceBox(data.pro['monthly'])}
                     </div>
                     <div className="d-flex flex-wrap my-4">
                         <p className="m-2">⚡️ Cancel Anytime.</p>

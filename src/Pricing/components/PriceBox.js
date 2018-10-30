@@ -12,11 +12,12 @@ class PriceBox extends React.Component {
 
     renderPrice(number){
         const wholeNumber = Math.floor(number)
-        const decimal = number.toFixed(2).toString().split('.')[1] || '00'
+        // const decimal = number.toFixed(2).toString().split('.')[1] || '00'
         return (
             <div>
+                <sup className="h3 ">$</sup>
                 {wholeNumber}
-                <sup className="decimal h2">.{decimal}</sup>
+                {/* <sup className="decimal h2">.{decimal}</sup> */}
             </div>
         )
     }
@@ -43,11 +44,11 @@ class PriceBox extends React.Component {
         return (
             <div style={{ maxWidth: '500px', minWidth: '320px' }}
                 className="card mx-2 mb-4 mb-md-0">
-                <div className="card-body align-self-center">
+                <div className="card-body align-self-center p-4">
                     { 
                         isPopular? 
                         <h5 className="position-absolute" style={{ top: "5px", right: "5px" }}>
-                            <span className="badge bg-gray-300">Most Popular</span>
+                            <span className="badge badge-warning">Most Popular</span>
                         </h5>
                         : null
                     }
@@ -66,7 +67,7 @@ class PriceBox extends React.Component {
                         {terms2}
                     </div>
 
-                    {this.renderCTA()}
+                    {/* {this.renderCTA()} */}
 
                     { planType === 'pro'? <ProDetails />: null}
                     { planType === 'plus'? <PlusDetails />: null}
