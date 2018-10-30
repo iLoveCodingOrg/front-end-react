@@ -32,11 +32,7 @@ export default connect(
     mapDispatchToProps)
 ((props)=>{
     return (<View {...props} of="course">
-        <RedirectAlert
-            slug={props.view.slug}
-            fromSlug="htmlcss"
-            toUrl="/courses/htmlcss2"
-        />
+        <RedirectAlert slug={props.view.slug} />
         <CourseNav course={props.view} />
     </View>)
 })

@@ -95,11 +95,7 @@ class CourseLessonView extends React.Component{
                             of="courseLesson"
                         />
                         <main>
-                            <RedirectAlert
-                                slug={courseView.slug}
-                                fromSlug="htmlcss"
-                                toUrl="/courses/htmlcss2"
-                            />
+                            <RedirectAlert slug={courseView.slug} />
                             <VideoWrap
                                 callMarkAsComplete={()=>callMarkAsComplete(id)}
                                 title={title}

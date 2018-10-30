@@ -9,9 +9,9 @@ const courses = [
         thumbSrc: '//img.ilovecoding.org/thumb/htmlcss2.gif'
     },
     {
-        name: 'Learn JavaScript in 14 Days',
-        link: '/courses/js',
-        thumbSrc: '//img.ilovecoding.org/thumb/learnJSin14.png'
+        name: 'Learn JavaScript Correctly',
+        link: '/courses/js2',
+        thumbSrc: '//img.ilovecoding.org/thumb/js2.gif'
     },
     {
         name: 'Going Live: Putting Your Website Live',
