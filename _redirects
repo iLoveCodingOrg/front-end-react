@@ -1,22 +1,21 @@
 # PAGE 1.0 > 2.2
-/about  /pages/about  301!
+/about            /pages/about      301!
 /about-aziz-ali/  /pages/aziz-ali   301
-/journey  /pages/journey  301
-/presskit   /pages/presskit   301
-/pages/pricing   /pricing    301
-/privacy-terms  /pages/privacy  301
-/resources  /pages/resources  301
-/reviews  /pages/review   301
+/journey          /pages/journey    301
+/presskit         /pages/presskit   301
+/pages/pricing    /pricing          301
+/privacy-terms    /pages/privacy    301
+/resources        /pages/resources  301
 
 # PAGE 2.0 > 2.2
-/pages/56217fb15e0ee48a2ad77a15   /pages/about  301
+/pages/56217fb15e0ee48a2ad77a15   /pages/about      301
 /pages/5622cbb98795649145fce177   /pages/aziz-ali   301
-/pages/5622cc0c8795649145fce178   /pages/journey  301
+/pages/5622cc0c8795649145fce178   /pages/journey    301
 /pages/5622cb198795649145fce176   /pages/presskit   301
-/pages/5622a130f6e8e7a52a47710f   /pages/pricing  301
-/pages/5622a3f8f6e8e7a52a477111   /pages/privacy  301
+/pages/5622a130f6e8e7a52a47710f   /pricing          301
+/pages/5622a3f8f6e8e7a52a477111   /pages/privacy    301
 /pages/5622caec8795649145fce175   /pages/resources  301
-/pages/5622cab38795649145fce174   /pages/review   301
+/pages/5622cab38795649145fce174   /reviews          301
 
 # BLOG
 /blog                       http://blog.ilovecoding.org/  301
@@ -306,12 +305,20 @@
 /courses/learn-jquery-in-14-days  /courses/jquery 301
 /courses/learn-node-js-in-a-week  /courses/nodejs 301
 
-# Angular > React lessons
+# Angular-LMS > React-LMS lessons
 /lessons/* course=:course /courses/:course/lessons/:splat 301
 /courses/learn-html-css-in-14-days/lessons/*    /courses/htmlcss/lessons/:splat 301
 /courses/learn-javascript-in-14-days/lessons/*  /courses/js/lessons/:splat 301
 /courses/learn-jquery-in-14-days/lessons/*      /courses/jquery/lessons/:splat 301
 /courses/learn-node-js-in-a-week/lessons/*      /courses/nodejs/lessons/:splat 301
+
+# Archived pages redirected
+/pages/pricing-old        /pricing      301
+/pages/review             /reviews      301
+/pages/success-stories    /reviews      301
+/pages/path               /curriculum   301
+/pages/path-front-end     /curriculum   301
+/pages/path-full-stack    /curriculum   301
 
 # Single Page Application Redirect
 /*      /index.html   200
