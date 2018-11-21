@@ -1,6 +1,6 @@
 {
   "name": "ilc-react",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "iLoveCoding Front-End React Application",
   "main": "src/index.js",
   "repository": {
