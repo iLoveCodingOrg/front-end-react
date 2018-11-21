@@ -10,7 +10,8 @@ class Comment extends React.Component{
             <div className="text-center mt-4">
                 <div className="alert">
                     🙌 Encourage me, share this:
-                    &nbsp;<a href="{window.location.href}">{window.location.href}</a>
+                    &nbsp;
+                    <a className="text-truncate" href="{window.location.href}">{window.location.href}</a>
                 </div>
                 <FacebookProvider appId="1707643756216146">
                     <Comments href={window.location.href} />
