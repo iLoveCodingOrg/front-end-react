@@ -8,6 +8,7 @@ import Routes from './components/Routes'
 import CourseNav from './components/CourseNav'
 import CourseLinks from './components/CourseLinks'
 import CourseLessonView from './components/CourseLessonView'
+import CourseContent from './components/CourseContent'
 
 export {
     reducer,
@@ -19,5 +20,6 @@ export {
     Routes,
     CourseNav,
     CourseLinks,
-    CourseLessonView
+    CourseLessonView,
+    CourseContent
 }

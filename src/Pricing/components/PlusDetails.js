@@ -1,53 +1,54 @@
 import React from 'react'
+import { CheckMark } from '../../_common'
 
 export default ()=>{
     return (
         <div className="my-3">
             <div className="mb-2 strong">Complete Training:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Full access to all courses, lessons
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Full access to source code
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Full access to Q &amp; A section
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Access to all future training
             </div>
 
             <br/>
             <div className="mb-2 strong">Community Access:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Connect with peers
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Access to private Slack channel
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Access to private Facebook group
             </div>
 
             <br/>
             <div className="mb-2 strong">Mentor Support:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access to mentor via email
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Get feedback on your code &amp; projects
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Get career guidance &amp; ask questions
             </div>
 

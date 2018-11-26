@@ -1,38 +1,39 @@
 import React from 'react'
+import { CheckMark } from '../../_common'
 
 export default ()=>{
     return (
         <div className="my-3">
             <div className="mb-2 strong">Unlimited Access To Training:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access to all courses &amp; lessons
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access to source code
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access to Q &amp; A section
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access to all future training
             </div>
 
             <br/>
             <div className="mb-2 strong">Private Community Access:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Connect with peers
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Private Slack channel
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Private Facebook group
             </div>
 
@@ -40,20 +41,20 @@ export default ()=>{
             <br/>
             <div className="mb-2 strong">1 on 1 Mentor Support:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Schedule live calls with mentor
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Live code review &amp; feedback
             </div>
 
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Ask questions &amp; code help via email
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Get feedback on your code &amp; projects
             </div>
 
@@ -61,19 +62,19 @@ export default ()=>{
             <br/>
             <div className="mb-2 strong">Career Support:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Resume improvement &amp; planning
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Live interview preparation
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Connect with job recruiters
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Insider hacks to salary negotiation
             </div>
         </div>

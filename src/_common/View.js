@@ -56,7 +56,8 @@ class View extends React.Component{
             bodyContent,
             lessonCount,
             sourceUrl,
-            demoUrl
+            demoUrl,
+            isComplete
         } = this.props.view
         const isFree = (access)? false : true
         const {
@@ -79,6 +80,7 @@ class View extends React.Component{
                             of={of}
                             title={title}
                             subTitle={subTitle}
+                            isComplete={isComplete}
                             isFree={isFree}
                             duration={ courseTotalDuration || duration }
                             level={level}

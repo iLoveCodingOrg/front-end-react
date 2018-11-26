@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import  { get } from 'lodash'
 
-import { Access } from '../../_common'
-import { CourseLinks } from '../index'
+import { CourseLinks, CourseContent } from '../index'
 
 class CourseNav extends React.Component{
     constructor(props){
@@ -39,29 +38,10 @@ class CourseNav extends React.Component{
         }
     }
 
-    renderItem(item, index, courseSlug){
-        const { title, slug, duration, access } = item
-        const isFree = (access)? false : true
-        const urlTo = `/courses/${courseSlug}/lessons/${slug}`
-        const activeClass = (this.state.activeLessonIndex === index)? 'list-group-item-success' : ''
-
-        return (
-            <Link key={index} to={urlTo}
-                className={`d-flex justify-content-between list-group-item ${activeClass}`}>
-                <div className="float-left">
-                    <span className="text-muted">
-                        Lessons #{index +1}:&nbsp;
-                    </span>
-                    {title}&nbsp;
-                    <Access isFree={isFree} />
-                </div>
-                <div className="float-right small text-secondary align-self-center">{duration} mins</div>
-            </Link>
-        )
-    }
-
     render(){
         const lessons = get(this.props.course, 'lessons')
+        const lessonCount = get(this.props.course, 'lessonCount')
+        const lessonCompletedCount = get(this.props.course, 'lessonCompletedCount')
         const courseSlug = get(this.props.course, 'slug')
 
         return (
@@ -75,12 +55,13 @@ class CourseNav extends React.Component{
                     />
                 </div>
 
-                <div className="list-group-item bg-gray-200">
-                    <span className="h5">Course content</span>
-                </div>
-                {lessons && lessons.map((item, index)=>{
-                    return (this.renderItem(item, index, courseSlug))
-                })}
+                <CourseContent
+                    activeLessonIndex={this.state.activeLessonIndex}
+                    courseSlug={courseSlug}
+                    lessons={lessons}
+                    lessonCount={lessonCount}
+                    lessonCompletedCount={lessonCompletedCount}
+                />
             </div>
         )
     }

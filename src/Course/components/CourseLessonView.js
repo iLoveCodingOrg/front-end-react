@@ -51,7 +51,8 @@ class CourseLessonView extends React.Component{
             thumbnail,
             bodyContent,
             sourceUrl,
-            demoUrl
+            demoUrl,
+            isComplete
         } = this.props.lessonView
         
         const isFree = (access)? false : true
@@ -92,6 +93,7 @@ class CourseLessonView extends React.Component{
                             isFree={isFree}
                             duration={duration}
                             level={level}
+                            isComplete={isComplete}
                             of="courseLesson"
                         />
                         <main>

@@ -10,6 +10,7 @@ import Level from './Level'
 import Duration from './Duration'
 import LessonCount from './LessonCount'
 import RedirectAlert from './RedirectAlert'
+import CheckMark from './CheckMark'
 
 export {
   List,
@@ -23,5 +24,6 @@ export {
   Level,
   Duration,
   LessonCount,
-  RedirectAlert
+  RedirectAlert,
+  CheckMark
 }

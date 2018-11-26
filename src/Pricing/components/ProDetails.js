@@ -1,34 +1,35 @@
 import React from 'react'
+import { CheckMark } from '../../_common'
 
 export default ()=>{
     return (
         <div className="my-3">
             <div className="mb-2 strong">Unlimited Access:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access to all courses &amp; lessons
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access  to source code
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access  to Q &amp; A section
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Unlimited access to all future training
             </div>
 
             <br/>
             <div className="mb-2 strong">➕ Support:</div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Mentor Moderated Private Facebook Group
             </div>
             <div>
-                <span className="oi oi-circle-check text-teal" title="circle-check" aria-hidden="true" />&nbsp;
+                <CheckMark />
                 Connect with peers
             </div>
         </div>
