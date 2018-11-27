@@ -18,7 +18,7 @@ class CourseContent extends React.Component{
         const isFree = (access)? false : true
         const urlTo = `/courses/${courseSlug}/lessons/${slug}`
         const activeClass = (this.props.activeLessonIndex === index)? 'list-group-item-success' : ''
-        const completeClass = (isComplete)? 'alert-light': ''
+        const completeClass = (isComplete)? 'bg-light': ''
 
         return (
             <Link key={index} to={urlTo}
@@ -31,7 +31,7 @@ class CourseContent extends React.Component{
                     {title}&nbsp;
                     <Access isFree={isFree} />
                 </div>
-                <div className="float-right small text-secondary align-self-center">{duration} mins</div>
+                <div className="float-right small text-secondary align-self-center text-right">{duration} mins</div>
             </Link>
         )
     }
@@ -54,7 +54,11 @@ class CourseContent extends React.Component{
     render(){
         const { lessons } = this.props
         return (
-            <div>
+            <div style={{
+                overflowY: 'scroll',
+                maxHeight: '312px',
+                border: '3px solid #dee2e6'
+            }}>
                 <div className="list-group-item bg-gray-200 clearfix">
                     <div className="h5 mb-0 float-left">Course content</div>
                     {this.renderProgressIndicator()}

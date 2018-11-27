@@ -12,7 +12,7 @@ class CourseLinks extends React.Component{
         if(activeLessonIndex > 0){
             const lesson = lessons[activeLessonIndex-1]
             const urlTo = `/courses/${courseSlug}/lessons/${lesson.slug}`
-            return <Link to={urlTo} className="btn btn-dark">&lt;&lt; Previous Lesson</Link>
+            return <Link to={urlTo} className="btn btn-dark">&lt; Previous</Link>
         }
     }
 
@@ -32,7 +32,7 @@ class CourseLinks extends React.Component{
         ){
             const lesson = lessons[activeLessonIndex+1]
             const urlTo = `/courses/${courseSlug}/lessons/${lesson.slug}`
-            return <Link to={urlTo} className="btn btn-dark">Next Lesson &gt;&gt;</Link>
+            return <Link to={urlTo} className="btn btn-dark">Next &gt;</Link>
         }else {
             return null
         }

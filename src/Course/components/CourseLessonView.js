@@ -108,10 +108,14 @@ class CourseLessonView extends React.Component{
                                 source={sourceUrl}
                                 demo={demoUrl}
                             />
-                            <CourseNav
-                                course={courseView}
-                            />
-                            <div dangerouslySetInnerHTML={{ __html: bodyContent }} />
+                            <CourseNav course={courseView} />
+                            {
+                                !bodyContent? null:
+                                <div
+                                    className="col-12 col-lg-9 border-top pt-4 mx-auto"
+                                    dangerouslySetInnerHTML={{ __html: bodyContent }}
+                                />
+                            }
                             <Comments />
                         </main>
                     </div>

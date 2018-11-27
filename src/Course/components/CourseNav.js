@@ -45,7 +45,7 @@ class CourseNav extends React.Component{
         const courseSlug = get(this.props.course, 'slug')
 
         return (
-            <div className="list-group">
+            <div>
                 <div className="d-flex my-2 justify-content-center">
                     <CourseLinks
                         isMainBtnHidden={this.state.activeLessonIndex < 0}

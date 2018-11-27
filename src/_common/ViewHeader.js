@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Access, Level, Duration, LessonCount, CheckMark } from './'
 
-function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount, cssClass, isComplete }){
+function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount, cssClass='', isComplete }){
     return (
         <div className={`${cssClass} text-center`}>
             <h1>{title}</h1>
