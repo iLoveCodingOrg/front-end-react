@@ -11,6 +11,23 @@ class CourseContent extends React.Component{
         super(props)
         this.renderItem = this.renderItem.bind(this)
         this.renderProgressIndicator = this.renderProgressIndicator.bind(this)
+        
+        this.listNode = null
+        this.assignListNode = this.assignListNode.bind(this)
+        this.handleScroll = this.handleScroll.bind(this)
+    }
+    assignListNode(target){
+        this.listNode = target
+        console.dir(this.listNode)
+    }
+    handleScroll(direction){
+        const node = this.listNode
+        
+        if(direction === 'up'){
+            node.scroll(0, node.scrollTop-50)
+        }else if(direction === 'down'){
+            node.scroll(0, node.scrollTop+50)
+        }
     }
     renderItem(item, index){
         const { courseSlug } = this.props
@@ -54,18 +71,29 @@ class CourseContent extends React.Component{
     render(){
         const { lessons } = this.props
         return (
-            <div style={{
-                overflowY: 'scroll',
-                maxHeight: '312px',
-                border: '3px solid #dee2e6'
-            }}>
+            <div>
                 <div className="list-group-item bg-gray-200 clearfix">
                     <div className="h5 mb-0 float-left">Course content</div>
                     {this.renderProgressIndicator()}
                 </div>
-                {lessons && lessons.map((item, index)=>{
-                    return this.renderItem(item, index)
-                })}
+                <div ref={this.assignListNode}
+                    style={{
+                    overflowY: 'scroll',
+                    maxHeight: '300px',
+                    border: '3px solid #dee2e6'
+                }}>
+                    {lessons && lessons.map((item, index)=>{
+                        return this.renderItem(item, index)
+                    })}
+                </div>
+                <div class="btn-group d-flex">
+                    <button
+                        class="btn btn-outline-secondary border-gray-400 flex-fill"
+                        onClickCapture={()=>this.handleScroll('up')}>Scroll Up ⬆</button>
+                    <button
+                        class="btn btn-outline-secondary border-gray-400 flex-fill"
+                        onClick={()=>this.handleScroll('down')}>Scroll Down ⬇</button>
+                </div>
             </div>
         )
     }
