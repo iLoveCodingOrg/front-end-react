@@ -38,7 +38,7 @@ export default function (){
                             <h4>Additional</h4>
                             <ul className="list-unstyled">
                                 <li><Link to="/pages/resources">Tools &amp; Resources</Link></li>
-                                <li><a target="_blank" href="https://ilovecoding.typeform.com/to/g6mTg8">Submit your success story</a></li>
+                                <li><a target="_blank" rel="noopener" href="https://ilovecoding.typeform.com/to/g6mTg8">Submit your success story</a></li>
                             </ul>
                         </div>
                     </div>
