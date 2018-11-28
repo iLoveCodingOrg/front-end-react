@@ -79,19 +79,19 @@ class CourseContent extends React.Component{
                 <div ref={this.assignListNode}
                     style={{
                     overflowY: 'scroll',
-                    maxHeight: '300px',
+                    maxHeight: '330px',
                     border: '3px solid #dee2e6'
                 }}>
                     {lessons && lessons.map((item, index)=>{
                         return this.renderItem(item, index)
                     })}
                 </div>
-                <div class="btn-group d-flex">
+                <div className="btn-group d-flex">
                     <button
-                        class="btn btn-outline-secondary border-gray-400 flex-fill"
+                        className="btn btn-outline-secondary border-gray-400 flex-fill"
                         onClickCapture={()=>this.handleScroll('up')}>Scroll Up ⬆</button>
                     <button
-                        class="btn btn-outline-secondary border-gray-400 flex-fill"
+                        className="btn btn-outline-secondary border-gray-400 flex-fill"
                         onClick={()=>this.handleScroll('down')}>Scroll Down ⬇</button>
                 </div>
             </div>
