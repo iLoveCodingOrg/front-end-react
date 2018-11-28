@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 
-import { EditForm } from './'
+import { AsyncEditForm as EditForm } from './'
 
 class Edit extends React.Component{
     constructor(props){
@@ -23,7 +23,15 @@ class Edit extends React.Component{
     }
 
     componentWillMount(){
-      this.props.getView(this.props.match.params.slug)
+        this.props.getView(this.props.match.params.slug)
+    
+        // Add jQuery to page for react-trumbowyg
+        if(!document.querySelector('#jquery')){
+            const script = document.createElement("script")
+            script.id='jquery'
+            script.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            document.body.appendChild(script);
+        }
     }
 
     handelFormSubmit(payload){

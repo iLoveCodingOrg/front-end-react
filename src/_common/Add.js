@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { withRouter } from 'react-router-dom'
 
-import { EditForm } from './'
+import { AsyncEditForm as EditForm } from './'
 
 class Add extends React.Component{
     constructor(props){
@@ -18,6 +18,16 @@ class Add extends React.Component{
         
         if(nextProps.match.params.slug !== slug){
             this.props.getView(nextProps.match.params.slug)
+        }
+    }
+
+    componentWillMount(){
+        // Add jQuery to page for react-trumbowyg
+        if(!document.querySelector('#jquery')){
+            const script = document.createElement("script")
+            script.id='jquery'
+            script.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            document.body.appendChild(script);
         }
     }
 

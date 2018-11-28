@@ -1,7 +1,3 @@
-// import '../../node_modules/react-quill/dist/quill.snow.css'
-// import ReactQuill from 'react-quill'
-// import './editForm.scss'
-
 import '../../node_modules/react-trumbowyg/dist/trumbowyg.min.css'
 import Editor from 'react-trumbowyg'
 
@@ -103,10 +99,6 @@ class EditForm extends React.Component{
                             onChange={(editor)=>{ this.handleChange(field, editor.target.innerHTML) }}
                             ref="trumbowyg"
                         />
-                        // <ReactQuill
-                        //     value={this.state[field]}
-                        //     onChange={(value)=>{ this.handleChange(field, value) }}
-                        // />
                     }
                 </div>
             </div>
