@@ -88,9 +88,7 @@ export function getUser(){
         .then((json) => {
             dispatch(setUser(false, json))
         })
-        .catch((error)=>{
-            console.log('User is not logged in', error)
-        })
+        .catch((error)=>{})
     }
 }
 

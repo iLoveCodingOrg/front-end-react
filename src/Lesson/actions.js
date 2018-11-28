@@ -139,7 +139,6 @@ export function callMarkLessonComplete(id){
                     dispatch(setLessonAsComplete())
                 })
                 .catch((error) => {
-                    console.log(error)
                 })
         }
     }
@@ -175,7 +174,6 @@ export function updateLessonById(id, payload){
         .catch((error) => {
             return parseJSON(error)
             .then((error) => {
-                console.log('error', error)
                 toast.error(error.error.message)
                 return { isSuccess: false }
             })
@@ -209,7 +207,6 @@ export function addLesson(payload){
         .catch((error) => {
             return parseJSON(error)
             .then((error) => {
-                console.log('error', error)
                 toast.error(error.error.message)
                 return { isSuccess: false }
             })

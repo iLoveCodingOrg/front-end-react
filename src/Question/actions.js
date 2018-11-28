@@ -139,7 +139,6 @@ export function callMarkQuestionComplete(id){
                     dispatch(setQuestionAsComplete())
                 })
                 .catch((error) => {
-                    console.log(error)
                 })
         }
     }
@@ -175,7 +174,6 @@ export function updateQuestionById(id, payload){
         .catch((error) => {
             return parseJSON(error)
             .then((error) => {
-                console.log('error', error)
                 toast.error(error.error.message)
                 return { isSuccess: false }
             })
@@ -214,7 +212,6 @@ export function addQuestion(payload){
         .catch((error) => {
             return parseJSON(error)
             .then((error) => {
-                console.log('error', error)
                 toast.error(error.error.message)
                 return { isSuccess: false }
             })

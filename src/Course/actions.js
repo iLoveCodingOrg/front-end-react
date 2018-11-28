@@ -135,10 +135,8 @@ export function callMarkCourseComplete(id){
         .then(checkStatus)
         .then(parseJSON)
         .then((json) => {
-            console.log(json)
         })
         .catch((error) => {
-            console.log(error)
         })
     }
 }
@@ -166,7 +164,6 @@ export function updateCourseById(id, payload){
         .catch((error) => {
             return parseJSON(error)
             .then((error) => {
-                console.log('error', error)
                 toast.error(error.error.message)
                 return { isSuccess: false }
             })
@@ -200,7 +197,6 @@ export function addCourse(payload){
         .catch((error) => {
             return parseJSON(error)
             .then((error) => {
-                console.log('error', error)
                 toast.error(error.error.message)
                 return { isSuccess: false }
             })

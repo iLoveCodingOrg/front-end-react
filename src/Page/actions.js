@@ -147,7 +147,6 @@ export function updatePageById(id, payload){
         .catch((error) => {
             return parseJSON(error)
             .then((error) => {
-                console.log('error', error)
                 toast.error(error.error.message)
                 return { isSuccess: false }
             })
@@ -181,7 +180,6 @@ export function addPage(payload){
         .catch((error) => {
             return parseJSON(error)
             .then((error) => {
-                console.log('error', error)
                 toast.error(error.error.message)
                 return { isSuccess: false }
             })

@@ -218,7 +218,6 @@ function mapDispatchToProps(dispatch){
             dispatch(actions.getProductBySlug(slug))
         },
         buy: (slug, payload)=>{
-            console.log('payload aziz', payload)
             return dispatch(actions.buy(slug, payload))
         }
     }
