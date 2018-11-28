@@ -4,8 +4,14 @@ import Add from './components/Add'
 import View from './components/View'
 import Edit from './components/Edit'
 import List from './components/List'
-import Routes from './components/Routes'
-import NotFound from './components/NotFound'
+
+import AsyncLoader from '../_common/AsyncLoader'
+const AsyncRoutes = AsyncLoader({
+    loader: () => import('./components/Routes')
+})
+const AsyncNotFound = AsyncLoader({
+    loader: () => import('./components/NotFound')
+})
 
 export {
     reducer,
@@ -14,6 +20,6 @@ export {
     View,
     Edit,
     List,
-    Routes,
-    NotFound
+    AsyncRoutes,
+    AsyncNotFound
 }

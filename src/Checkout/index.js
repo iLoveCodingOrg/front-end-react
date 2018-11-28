@@ -1,6 +1,5 @@
 import * as actions from './actions'
 import reducer from './reducer'
-import Checkout from './components/Checkout'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import UserForm from './components/UserForm'
@@ -9,15 +8,20 @@ import Testimonials from './components/Testimonials'
 import WhatYouGet from './components/WhatYouGet'
 import Due from './components/Due'
 
+import AsyncLoader from '../_common/AsyncLoader'
+const AsyncCheckout = AsyncLoader({
+    loader: () => import('./components/Checkout')
+})
+
 export {
     reducer,
     actions,
-    Checkout,
     Header,
     Footer,
     UserForm,
     CreditCard,
     Testimonials,
     WhatYouGet,
-    Due
+    Due,
+    AsyncCheckout
 }

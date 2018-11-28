@@ -21,20 +21,26 @@ import Wrap from './Wrap'
 import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
 import { Home } from './Home'
-import { Dashboard } from './Dashboard'
-import { Routes as QuestionRoutes } from './Question'
-import { Routes as LessonRoutes } from './Lesson'
-import { Routes as CourseRoutes } from './Course'
-import { Routes as PageRoutes, NotFound } from './Page'
-import { Login } from './Login'
-import { Checkout } from './Checkout'
-import { VerifyEmail } from './VerifyEmail'
-import { ResetPassword, ForgotPassword } from './ForgotPassword'
-import { ReviewsPage as Reviews } from './Reviews'
-import { Curriculum } from './Curriculum'
-import { Pricing } from './Pricing'
-import OfficeHours from './OfficeHours'
-import GroupCalls from './GroupCalls'
+import { AsyncDashboard as Dashboard } from './Dashboard'
+import { AsyncRoutes as QuestionRoutes } from './Question'
+import { AsyncRoutes as LessonRoutes } from './Lesson'
+import { AsyncRoutes as CourseRoutes } from './Course'
+import {
+    AsyncRoutes as PageRoutes,
+    AsyncNotFound as NotFound
+} from './Page'
+import { AsyncLogin as Login } from './Login'
+import { AsyncCheckout as Checkout } from './Checkout'
+import { AsyncVerifyEmail as VerifyEmail } from './VerifyEmail'
+import {
+    AsyncResetPassword as ResetPassword,
+    AsyncForgotPassword as ForgotPassword
+} from './ForgotPassword'
+import { AsyncReviewsPage as Reviews } from './Reviews'
+import { AsyncCurriculum as Curriculum } from './Curriculum'
+import { AsyncPricing as Pricing } from './Pricing'
+import { AsyncOfficeHours as OfficeHours } from './OfficeHours'
+import { AsyncGroupCalls as GroupCalls } from './GroupCalls'
 
 const RemoveTrailingSlash = ({ location }) => {
     const { pathname } = location

@@ -1,4 +1,3 @@
-import Pricing from './components/PricingPage'
 import Price from './components/Price'
 import PriceBox from './components/PriceBox'
 import Testimonials from './components/Testimonials'
@@ -15,9 +14,13 @@ import ProDetails from './components/ProDetails'
 import PlusDetails from './components/PlusDetails'
 import PremiumDetails from './components/PremiumDetails'
 
+import AsyncLoader from '../_common/AsyncLoader'
+const AsyncPricing = AsyncLoader({
+    loader: () => import('./components/PricingPage')
+})
 
 export {
-    Pricing,
+    AsyncPricing,
     Price,
     PriceBox,
     Testimonials,

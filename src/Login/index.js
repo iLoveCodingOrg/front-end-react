@@ -1,5 +1,8 @@
-import Login from './components/Login'
+import AsyncLoader from '../_common/AsyncLoader'
+const AsyncLogin = AsyncLoader({
+    loader: () => import('./components/Login')
+})
 
 export {
-    Login
+    AsyncLogin
 }
