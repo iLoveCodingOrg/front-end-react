@@ -1,0 +1,21 @@
+{
+  "short_name": "iLoveCoding",
+  "name": "iLoveCoding",
+  "icons": [
+    {
+      "src": "_app/images/logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "_app/images/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?utm_source=pwa",
+  "background_color": "#1772f2",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#1772f2"
+}
