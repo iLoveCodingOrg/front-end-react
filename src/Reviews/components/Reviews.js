@@ -1,5 +1,6 @@
 import React from 'react'
-import { PrintReviews, data } from '../'
+import PrintReviews from './PrintReviews'
+import data from '../data'
 
 class Reviews extends React.Component{
     constructor(props){
@@ -17,6 +18,5 @@ class Reviews extends React.Component{
         )
     }
 }
-
 
 export default Reviews

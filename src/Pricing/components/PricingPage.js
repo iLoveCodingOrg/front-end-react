@@ -3,12 +3,12 @@ import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import {
     Header,
-    Testimonials,
     Price,
     Guarantee,
     FAQs
 } from '../'
 
+import Testimonials from './Testimonials'
 
 class Pricing extends React.Component{
     constructor(props){

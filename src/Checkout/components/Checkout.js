@@ -14,11 +14,12 @@ import {
     CreditCard,
     Footer,
     Header,
-    Testimonials,
     UserForm,
     WhatYouGet,
     Due
 } from '../'
+
+import Testimonials from './Testimonials'
 
 import { CountDown } from '../../Offer'
 import { selectors } from '../../Offer'

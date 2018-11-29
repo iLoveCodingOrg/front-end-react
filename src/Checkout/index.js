@@ -4,7 +4,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import UserForm from './components/UserForm'
 import CreditCard from './components/CreditCard'
-import Testimonials from './components/Testimonials'
 import WhatYouGet from './components/WhatYouGet'
 import Due from './components/Due'
 
@@ -20,7 +19,6 @@ export {
     Footer,
     UserForm,
     CreditCard,
-    Testimonials,
     WhatYouGet,
     Due,
     AsyncCheckout

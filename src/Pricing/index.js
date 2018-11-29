@@ -1,6 +1,5 @@
 import Price from './components/Price'
 import PriceBox from './components/PriceBox'
-import Testimonials from './components/Testimonials'
 import Header from './components/Header'
 import Switch from './components/Switch'
 import Guarantee from './components/Guarantee'
@@ -23,7 +22,6 @@ export {
     AsyncPricing,
     Price,
     PriceBox,
-    Testimonials,
     Header,
     Switch,
     Guarantee,

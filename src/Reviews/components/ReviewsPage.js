@@ -1,10 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import {
-    Reviews,
-} from '../'
-
+import Reviews from './Reviews'
 
 class ReviewsPage extends React.Component{
     constructor(props){
