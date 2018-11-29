@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import  { get } from 'lodash'
 
-import { CourseLinks, CourseContent } from '../index'
+import CourseLinks from './CourseLinks'
+import CourseContent from './CourseContent'
 
 class CourseNav extends React.Component{
     constructor(props){
