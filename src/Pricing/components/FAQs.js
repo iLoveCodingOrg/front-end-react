@@ -1,5 +1,5 @@
 import React from 'react'
-import { PrintFAQ } from '../'
+import PrintFAQ from './PrintFAQ'
 
 const data=[
     {

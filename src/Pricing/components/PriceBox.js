@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import { ProDetails, PlusDetails, PremiumDetails } from '../index'
+import ProDetails from './ProDetails'
+// import PlusDetails from './PlusDetails'
+// import PremiumDetails from './PremiumDetails'
 
 class PriceBox extends React.Component {
     constructor(props){
@@ -70,8 +72,8 @@ class PriceBox extends React.Component {
                     {/* {this.renderCTA()} */}
 
                     { planType === 'pro'? <ProDetails />: null}
-                    { planType === 'plus'? <PlusDetails />: null}
-                    { planType === 'premium'? <PremiumDetails />: null}
+                    {/* { planType === 'plus'? <PlusDetails />: null} */}
+                    {/* { planType === 'premium'? <PremiumDetails />: null} */}
 
                     {this.renderCTA()}
 

@@ -1,12 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
-import {
-    Header,
-    Price,
-    Guarantee,
-    FAQs
-} from '../'
+
+import Header from './Header'
+import Price from './Price'
+import Guarantee from './Guarantee'
+import FAQs from './FAQs'
 
 import Testimonials from './Testimonials'
 

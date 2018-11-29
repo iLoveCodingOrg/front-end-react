@@ -5,13 +5,9 @@ import { Offer, CountDown } from '../../Offer'
 import {
     Header,
     Testimonials,
-    WhatsIncluded,
-    WhosItFor,
-    WhosItNotFor,
     Price,
     Guarantee,
-    FAQs,
-    Outcomes,
+    FAQs
 } from '../'
 
 import { Curriculum } from '../../Curriculum'

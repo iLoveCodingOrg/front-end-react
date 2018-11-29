@@ -2,10 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { selectors } from '../../Offer'
-import {
-    Switch,
-    PriceBox,
-} from '../'
+import PriceBox from './PriceBox'
 
 const dataOriginal = {
     pro: {
