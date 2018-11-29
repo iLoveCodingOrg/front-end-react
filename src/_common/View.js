@@ -7,7 +7,7 @@ import { VideoWrap } from '../Video'
 import SourceDemo from '../SourceDemo'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
-import Comments from '../Comments'
+import { AsyncComments as Comments } from '../Comments'
 
 class View extends React.Component{
     constructor(props){

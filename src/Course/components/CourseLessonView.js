@@ -12,7 +12,7 @@ import { CourseNav } from '../'
 import SourceDemo from '../../SourceDemo'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
-import Comments from '../../Comments'
+import { AsyncComments as Comments } from '../../Comments'
 
 class CourseLessonView extends React.Component{
     constructor(props){

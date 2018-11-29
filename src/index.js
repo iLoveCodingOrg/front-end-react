@@ -20,7 +20,7 @@ import Wrap from './Wrap'
 
 import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
-import { Home } from './Home'
+import { AsyncHome as Home } from './Home'
 import { AsyncDashboard as Dashboard } from './Dashboard'
 import { AsyncRoutes as QuestionRoutes } from './Question'
 import { AsyncRoutes as LessonRoutes } from './Lesson'
