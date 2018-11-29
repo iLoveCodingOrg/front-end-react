@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function (props) {
+export default function () {
     return (
         <div>
             <h4 className="mb-3 text-center">Here's What You Get:</h4>

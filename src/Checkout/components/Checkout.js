@@ -9,16 +9,14 @@ import { isLoggedIn } from '../../_user/selectors'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
 import { actions as userActions } from '../../_user'
-import {
-    actions,
-    CreditCard,
-    Footer,
-    Header,
-    UserForm,
-    WhatYouGet,
-    Due
-} from '../'
+import { getProductBySlug, buy } from '../actions'
 
+import CreditCard from './CreditCard'
+import Header from './Header'
+import Footer from './Footer'
+import UserForm from './UserForm'
+import WhatYouGet from './WhatYouGet'
+import Due from './Due'
 import Testimonials from './Testimonials'
 
 import { CountDown } from '../../Offer'
@@ -216,10 +214,10 @@ function mapDispatchToProps(dispatch){
             })
         },
         getProduct: (slug)=>{
-            dispatch(actions.getProductBySlug(slug))
+            dispatch(getProductBySlug(slug))
         },
         buy: (slug, payload)=>{
-            return dispatch(actions.buy(slug, payload))
+            return dispatch(buy(slug, payload))
         }
     }
 }

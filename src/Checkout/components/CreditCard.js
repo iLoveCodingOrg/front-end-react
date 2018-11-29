@@ -6,9 +6,7 @@ import DropIn from "braintree-web-drop-in-react"
 
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
-import {
-    actions,
-} from '../'
+import { getBraintreeClientToken } from '../actions'
 
 class CreditCard extends React.Component{
     constructor(props){
@@ -61,7 +59,7 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         getBraintreeClientToken: ()=>{
-            dispatch(actions.getBraintreeClientToken())
+            dispatch(getBraintreeClientToken())
         }
     }
 }
