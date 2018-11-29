@@ -1,6 +1,6 @@
-import ("../node_modules/open-iconic/font/css/open-iconic-bootstrap.css")
+import "../node_modules/open-iconic/font/css/open-iconic-bootstrap.css"
 import './_app/styles/'
-import('react-toastify/dist/ReactToastify.min.css')
+import 'react-toastify/dist/ReactToastify.min.css'
 
 import React from 'react'
 import { render } from 'react-dom'
