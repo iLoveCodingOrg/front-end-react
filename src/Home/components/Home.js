@@ -9,7 +9,7 @@ import Hero from './Hero'
 // import SevenDayCourse from './SevenDayCourse'
 import AboutAziz from '../../AboutAziz/AboutAziz'
 import MyWorkLogos from '../../LogoList/MyWorkLogos'
-import StudentCompanies from '../../LogoList/StudentCompanies'
+// import StudentCompanies from '../../LogoList/StudentCompanies'
 import UsedBy from '../../LogoList/UsedBy'
 
 class Home extends React.Component{
