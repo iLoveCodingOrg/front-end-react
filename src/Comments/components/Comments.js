@@ -1,5 +1,6 @@
 import React from 'react'
 import { FacebookProvider, Comments } from 'react-facebook'
+import { FB_APP_ID } from '../../_app/constants';
 
 class Comment extends React.Component{
     constructor(props){
@@ -13,7 +14,7 @@ class Comment extends React.Component{
                     &nbsp;
                     <a className="text-truncate" href="{window.location.href}">{window.location.href}</a>
                 </div>
-                <FacebookProvider appId="1707643756216146">
+                <FacebookProvider appId={FB_APP_ID}>
                     <Comments href={window.location.href} />
                 </FacebookProvider>
             </div>
