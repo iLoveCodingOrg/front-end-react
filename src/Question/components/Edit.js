@@ -37,7 +37,7 @@ export default withRouter(connect(
         type: 'text'
     }, {
         name: 'subTitle',
-        type: 'text'
+        type: 'textarea'
     }, {
         name: 'videoSource',
         type: 'text'
@@ -61,7 +61,7 @@ export default withRouter(connect(
         type: 'array'
     }, {
         name: 'bodyContent',
-        type: 'textarea'
+        type: 'wysiwyg'
     }]
 
     return (<Edit

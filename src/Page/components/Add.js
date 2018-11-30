@@ -30,10 +30,10 @@ export default withRouter(connect(
         type: 'text'
     }, {
         name: 'subTitle',
-        type: 'text'
+        type: 'textarea'
     }, {
         name: 'bodyContent',
-        type: 'textarea'
+        type: 'wysiwyg'
     }]
 
     return (<Add

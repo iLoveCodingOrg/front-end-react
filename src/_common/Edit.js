@@ -49,7 +49,6 @@ class Edit extends React.Component{
     }
 
     render(){
-        const { title } = this.props.view
         const {
             of,
             isLoading,

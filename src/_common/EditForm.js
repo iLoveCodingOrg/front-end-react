@@ -19,6 +19,8 @@ class EditForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this)
         this.renderViewSourceCheckbox = this.renderViewSourceCheckbox.bind(this)
         this.renderTextFields = this.renderTextFields.bind(this)
+        this.renderTextarea = this.renderTextarea.bind(this)
+        this.renderWysiwyg = this.renderWysiwyg.bind(this)
     }
 
     componentWillReceiveProps(nextProps){
@@ -57,7 +59,7 @@ class EditForm extends React.Component{
         this.props.onSubmitForm(preparedPayload)
     }
 
-    renderTextareaFields(field){
+    renderWysiwyg(field){
         return (
             <div key={field} className="form-group row">
                 <label
@@ -141,6 +143,23 @@ class EditForm extends React.Component{
             </div>
         )
     }
+    renderTextarea(field){
+        return (
+            <div key={field} className="form-group row">
+                <label
+                    className="col-sm-2 col-form-label float-right"
+                    htmlFor={field}>{field}</label>
+                <div className="col-sm-10">
+                    <textarea
+                        className="form-control"
+                        name={field}
+                        value={this.state[field]}
+                        onChange={(e)=>{ this.handleChange(field, e.target.value) }}
+                    />
+                </div>
+            </div>
+        )
+    }
 
     render(){
         return (
@@ -154,7 +173,9 @@ class EditForm extends React.Component{
                         ){
                             return this.renderTextFields(field.name, field.type)
                         } else if(field.type === 'textarea') {
-                            return this.renderTextareaFields(field.name)
+                            return this.renderTextarea(field.name)
+                        } else if(field.type === 'wysiwyg') {
+                            return this.renderWysiwyg(field.name, field.type)
                         }
                     })
                 }
