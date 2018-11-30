@@ -10,7 +10,10 @@ class ReviewsPage extends React.Component{
     render(){
         return (
             <div className="d-flex flex-column">
-                <Helmet><title>Real Results | iLoveCoding</title></Helmet>
+                <Helmet>
+                    <title>Real Results - iLoveCoding</title>
+                    <meta name="description" content="Read what some of the successful students have to say about iLoveCoding. Read their testimonials and full reviews" />
+                </Helmet>
                 <div className="container text-center">
                     <h1>Real Results</h1>
                     <p className="lead">

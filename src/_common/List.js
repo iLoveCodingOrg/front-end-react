@@ -42,7 +42,7 @@ class List extends React.Component{
                     (this.props.error) ? <ErrorBox />
                     :
                     <div>
-                        <Helmet><title>{this.getTitle()}</title></Helmet>
+                        <Helmet><title>{this.getTitle()} - iLoveCoding</title></Helmet>
                         <ListHeaderComponent />
                         {
                             this.props.list.map((item, index)=>{

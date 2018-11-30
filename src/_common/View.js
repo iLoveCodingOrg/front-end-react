@@ -74,7 +74,10 @@ class View extends React.Component{
                     (error) ? <ErrorBox />
                     :
                     <div>
-                        <Helmet><title>{title}</title></Helmet>
+                        <Helmet>
+                            <title>{title} - iLoveCoding</title>
+                            <meta name="description" content={subTitle} />
+                        </Helmet>
                         <ViewHeader
                             cssClass={this.getVideoHeaderCss(videoSource, of)}
                             of={of}

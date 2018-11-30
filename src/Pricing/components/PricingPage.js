@@ -17,7 +17,7 @@ class Pricing extends React.Component{
         return (
             <div className="d-flex flex-column">
                 <Helmet>
-                    <title>Pricing | iLoveCoding</title>
+                    <title>Pricing - iLoveCoding</title>
                 </Helmet>
                 <div className="pt-5"><Header /></div>
                 <div className="pt-3"><Price /></div>

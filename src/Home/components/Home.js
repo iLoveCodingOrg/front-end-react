@@ -21,9 +21,8 @@ class Home extends React.Component{
         return (
             <div className="d-flex flex-column">
                 <Helmet>
-                    <title>
-                        iLoveCoding: Master JavaScript, Learn via Video Screencasts
-                    </title>
+                    <title>iLoveCoding: Master JavaScript, Learn via Video Screencasts</title>
+                    <meta name="description" content="iLoveCoding teaches you how to think and build like a software developer focusing on Full-Stack JavaScript development."/>
                 </Helmet>
                 <Hero />
                 <UsedBy />

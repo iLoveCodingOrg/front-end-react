@@ -12,7 +12,10 @@ import {
 export default ()=>{
     return (
         <div className="d-flex flex-column">
-            <Helmet><title>Curriculum</title></Helmet>
+            <Helmet>
+                <title>The perfect curriculum to become a full-stack JavaScript Developer - iLoveCoding</title>
+                <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
+            </Helmet>
             <div className="align-self-center col-md-10 col-lg-8 mt-3">
                 <h1>The Perfect Curriculum</h1>
                 <p className="lead">

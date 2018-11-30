@@ -6,9 +6,7 @@ export default function (){
     return (
         <div className="d-flex flex-column">
             <Helmet>
-                <title>
-                    Dashboard | iLoveCoding
-                </title>
+                <title>Dashboard - iLoveCoding</title>
             </Helmet>
             <section className="
                 align-self-center

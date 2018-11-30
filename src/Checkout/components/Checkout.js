@@ -131,7 +131,7 @@ class Checkout extends React.Component{
                         (this.props.error) ? <ErrorBox />
                         :
                         <div>
-                            <Helmet><title>{productName}</title></Helmet>
+                            <Helmet><title>{productName} - iLoveCoding</title></Helmet>
                             <Header
                                 productName={productName}
                                 productDesc={productDesc}

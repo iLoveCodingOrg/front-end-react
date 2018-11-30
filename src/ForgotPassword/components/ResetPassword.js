@@ -101,7 +101,7 @@ class ResetPassword extends React.Component {
     render(){
         return (
             <WrapMini>
-                <Helmet><title>Reset new password for iLoveCoding</title></Helmet>
+                <Helmet><title>Reset password - iLoveCoding</title></Helmet>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">

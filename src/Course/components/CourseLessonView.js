@@ -71,7 +71,10 @@ class CourseLessonView extends React.Component{
                     (error) ? <ErrorBox />
                     :
                     <div>
-                        <Helmet><title>{title}</title></Helmet>
+                        <Helmet>
+                            <title>{title} - iLoveCoding</title>
+                            <meta name="description" content={subTitle} />
+                        </Helmet>
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
                                 {/* <li className="breadcrumb-item" aria-current="page">

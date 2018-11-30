@@ -24,7 +24,7 @@ class Pricing extends React.Component{
                 <Helmet>
                     <title>
                         Pricing | iLoveCoding
-                    </title>
+                     - iLoveCoding</title>
                 </Helmet>
                 <Offer />
                 <CountDown title="30% Off expires in:" />

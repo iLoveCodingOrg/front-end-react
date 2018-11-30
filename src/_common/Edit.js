@@ -64,7 +64,7 @@ class Edit extends React.Component{
                     (error) ? <ErrorBox />
                     :
                     <div>
-                        <Helmet><title>{pageTitle}</title></Helmet>
+                        <Helmet><title>{pageTitle} - iLoveCoding</title></Helmet>
                         <main>
                             <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
                             {this.props.children}

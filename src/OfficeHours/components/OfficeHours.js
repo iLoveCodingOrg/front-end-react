@@ -17,7 +17,7 @@ export default class OfficeHours extends React.Component{
         return (
             <div className="d-flex flex-column">
                 <Helmet>
-                    <title>Schedule office hours with Aziz Ali</title>
+                    <title>Schedule office hours with Aziz Ali - iLoveCoding</title>
                 </Helmet>
                 <div className="align-self-center col-md-10 col-lg-8 mt-3">
                     <h1>

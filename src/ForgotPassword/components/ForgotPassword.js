@@ -87,7 +87,7 @@ class ForgotPassword extends React.Component{
     render(){
         return (
             <WrapMini>
-                <Helmet><title>Forgot Password of iLoveCoding?</title></Helmet>
+                <Helmet><title>Forgot password? - iLoveCoding</title></Helmet>
                 <form className="form-forgot-password" onSubmit={this.handleSubmit} noValidate>
                     <h2 className="text-center">Forgot Password?</h2>
                     <p>Please enter your email to search for your account.</p>
