@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { get } from 'lodash'
 
 import { Access, CheckMark } from '../../_common'
 import { isLoggedIn } from '../../_user/selectors'
@@ -11,22 +12,36 @@ class CourseContent extends React.Component{
         super(props)
         this.renderItem = this.renderItem.bind(this)
         this.renderProgressIndicator = this.renderProgressIndicator.bind(this)
-        
-        this.listNode = null
+
         this.assignListNode = this.assignListNode.bind(this)
         this.handleScroll = this.handleScroll.bind(this)
+        this.scrollToActiveLesson = this.scrollToActiveLesson.bind(this)
+        this.renderScrollButtons = this.renderScrollButtons.bind(this)
+
+        this.state = {
+            listNode: null
+        }
     }
     assignListNode(target){
-        this.listNode = target
-        console.dir(this.listNode)
+        this.setState({ listNode: target }, ()=>{
+            this.scrollToActiveLesson()
+        })
+    }
+    scrollToActiveLesson(){
+        const { activeLessonIndex } = this.props
+        const { listNode } = this.state
+        if(listNode && activeLessonIndex > 0){
+            const activeNode = listNode.children[activeLessonIndex]
+            listNode.scrollTop = activeNode.offsetTop - listNode.offsetTop - 60
+        }
     }
     handleScroll(direction){
-        const node = this.listNode
+        const { listNode } = this.state
         
         if(direction === 'up'){
-            node.scroll(0, node.scrollTop-50)
+            listNode.scroll(0, listNode.scrollTop-50)
         }else if(direction === 'down'){
-            node.scroll(0, node.scrollTop+50)
+            listNode.scroll(0, listNode.scrollTop+50)
         }
     }
     renderItem(item, index){
@@ -68,8 +83,27 @@ class CourseContent extends React.Component{
             </div>
         )
     }
+    renderScrollButtons(){
+        const { maxScrollHeight } = this.props
+        const { listNode } = this.state
+        if(
+            get(listNode, 'offsetHeight', false) &&
+            maxScrollHeight <= listNode.offsetHeight
+        ){
+            return (
+                <div className="btn-group d-flex">
+                    <button
+                        className="btn btn-outline-secondary border-gray-400 flex-fill"
+                        onClickCapture={()=>this.handleScroll('up')}>Scroll Up ⬆</button>
+                    <button
+                        className="btn btn-outline-secondary border-gray-400 flex-fill"
+                        onClick={()=>this.handleScroll('down')}>Scroll Down ⬇</button>
+                </div>
+            )
+        }
+    }
     render(){
-        const { lessons } = this.props
+        const { lessons, maxScrollHeight } = this.props
         return (
             <div>
                 <div className="list-group-item bg-gray-200 clearfix">
@@ -79,21 +113,14 @@ class CourseContent extends React.Component{
                 <div ref={this.assignListNode}
                     style={{
                     overflowY: 'scroll',
-                    maxHeight: '330px',
+                    maxHeight: `${maxScrollHeight}px`,
                     border: '3px solid #dee2e6'
                 }}>
                     {lessons && lessons.map((item, index)=>{
                         return this.renderItem(item, index)
                     })}
                 </div>
-                <div className="btn-group d-flex">
-                    <button
-                        className="btn btn-outline-secondary border-gray-400 flex-fill"
-                        onClickCapture={()=>this.handleScroll('up')}>Scroll Up ⬆</button>
-                    <button
-                        className="btn btn-outline-secondary border-gray-400 flex-fill"
-                        onClick={()=>this.handleScroll('down')}>Scroll Down ⬇</button>
-                </div>
+                {this.renderScrollButtons()}
             </div>
         )
     }
@@ -106,7 +133,11 @@ CourseContent.propTypes = {
     lessons: PropTypes.array.isRequired,
     lessonCount: PropTypes.number.isRequired,
     lessonCompletedCount: PropTypes.number,
+    maxScrollHeight: PropTypes.number.isRequired
+}
 
+CourseContent.defaultProps = {
+    maxScrollHeight: 400
 }
 
 function mapStateToProps(state){
