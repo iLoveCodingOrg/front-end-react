@@ -6,17 +6,17 @@ const courses = [
     {
         name: 'Learn HTML & CSS in 14 days',
         link: '/courses/htmlcss2',
-        thumbSrc: '//img.ilovecoding.org/thumb/htmlcss2.gif'
+        thumbSrc: '//a.ilovecoding.org/thumb/htmlcss2.gif'
     },
     {
         name: 'Learn JavaScript Correctly',
         link: '/courses/js2',
-        thumbSrc: '//img.ilovecoding.org/thumb/js2.gif'
+        thumbSrc: '//a.ilovecoding.org/thumb/js2.gif'
     },
     {
         name: 'Going Live: Putting Your Website Live',
         link: '/courses/going-live-putting-your-website-live',
-        thumbSrc: '//img.ilovecoding.org/thumb/goingLive-part1.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/goingLive-part1.png'
     }
 ]
 
@@ -24,27 +24,27 @@ const practice = [
     {
         name: 'Project: Create a blog design from scratch using HTML and CSS',
         link: '/courses/htmlcss2/lessons/blog-design',
-        thumbSrc: '//img.ilovecoding.org/thumb/HTMLCSS14-9-myBlogDesign-part1.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/HTMLCSS14-9-myBlogDesign-part1.png'
     },
     {
         name: 'Build a stopwatch app with pure JavaScript',
         link: '/lessons/stopwatch-app-with-pure-javascript',
-        thumbSrc: '//img.ilovecoding.org/thumb/stopWatch.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/stopWatch.png'
     },
     {
         name: 'Build a simple To-Do App with pure JavaScript',
         link: '/lessons/simple-to-do-app-with-pure-javascript',
-        thumbSrc: '//img.ilovecoding.org/thumb/todoApp.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/todoApp.png'
     },
     {
         name: 'Build a Rock Paper Scissor app with pure JavaScript',
         link: '/lessons/rock-paper-scissor-app-with-pure-javascript',
-        thumbSrc: '//img.ilovecoding.org/thumb/rockPaperScissor.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/rockPaperScissor.png'
     },
     {
         name: 'Project: Build Your Own Snake Game with JavaScript',
         link: '/courses/snake-game',
-        thumbSrc: '//img.ilovecoding.org/thumb/snakegame1.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/snakegame1.png'
     },
 ]
 

@@ -9,7 +9,7 @@ class AboutAziz extends React.Component{
             <div className="flex-row">
                 <img
                     className="float-left rounded-circle mb-2 mr-3"
-                    src="//img.ilovecoding.org/images/azizali-150.jpg" alt="Aziz Ali Profile Picture"
+                    src="//a.ilovecoding.org/img/_aziz/azizali-150.jpg" alt="Aziz Ali Profile Picture"
                 />
                 <div>
                     <h3>Hi, I’m your instructor Aziz Ali</h3>

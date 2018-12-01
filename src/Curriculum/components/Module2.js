@@ -6,17 +6,17 @@ const courses = [
     {
         name: 'Learn jQuery in 14 days',
         link: '/courses/jquery',
-        thumbSrc: '//img.ilovecoding.org/thumb/jQuery14-0-Intro.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-0-Intro.png'
     },
     {
         name: 'Learn & Master Bootstrap in a Week',
         link: '/courses/learn-master-bootstrap-in-a-week',
-        thumbSrc: '//img.ilovecoding.org/thumb/bootstrap-1-intro.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/bootstrap-1-intro.png'
     },
     {
         name: 'Learn React JS in 14 Days',
         link: '/courses/react',
-        thumbSrc: '//img.ilovecoding.org/thumb/react/react0-intro.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/react/react0-intro.png'
     }
 ]
 
@@ -24,53 +24,53 @@ const practice = [
     {
         name: 'Project: Create a Top Bar Widget with jQuery',
         link: '/courses/jquery/lessons/project-create-a-top-bar-widget-with-jquery',
-        thumbSrc: '//img.ilovecoding.org/thumb/jQuery14-7-1-projectTopBar.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-7-1-projectTopBar.png'
     },
     {
         name: 'Project: Create Tabs functionality with jQuery',
         link: '/courses/jquery/lessons/project-create-tabs-functionality-with-jquery',
-        thumbSrc: '//img.ilovecoding.org/thumb/jQuery14-7-2-projectTabs.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-7-2-projectTabs.png'
     },
     {
         name: 'Animate: Animating elements with jQuery',
         link: '/courses/jquery/lessons/animate-animating-elements-with-jquery',
-        thumbSrc: '//img.ilovecoding.org/thumb/jQuery14-8-animate.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-8-animate.png'
     },
     {
         name: 'Project: Create your own Image Carousel Slider with jQuery',
         link: '/courses/jquery/lessons/project-create-your-own-image-carousel-slider-with-jquery',
-        thumbSrc: '//img.ilovecoding.org/thumb/jQuery14-12-projectSlider.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-12-projectSlider.png'
     },
     {
         name: 'Ajax: Create a Single Page App with jQuery',
         link: '/courses/jquery/lessons/ajax-create-a-single-page-app-with-jquery',
-        thumbSrc: '//img.ilovecoding.org/thumb/jQuery14-13-ajaxSinglePage.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-13-ajaxSinglePage.png'
     },
     {
         name: 'Ajax: Create a Location Finder App using jQuery & Google Maps API',
         link: '/courses/jquery/lessons/ajax-create-a-location-finder-app-using-jquery-google-maps-api-part-1',
-        thumbSrc: '//img.ilovecoding.org/thumb/jQuery-14-14-googleMapsAPI-part1.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/jQuery-14-14-googleMapsAPI-part1.png'
     },
     {
         name: 'Build a Calculator App with jQuery',
         link: '/lessons/building-calculator-app-with-jquery',
-        thumbSrc: '//img.ilovecoding.org/thumb/calculator.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/calculator.png'
         
     },
     {
         name: 'Project: Building a Todo List App with React',
         link: '/courses/react/lessons/project-building-a-todo-list-app-with-react',
-        thumbSrc: '//img.ilovecoding.org/thumb/react/react15-project-todolist.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/react/react15-project-todolist.png'
     },
     {
         name: 'Project: Building a Timer App with React',
         link: '/courses/react-timer-app',
-        thumbSrc: '//img.ilovecoding.org/thumb/react/react18-project-timer.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/react/react18-project-timer.png'
     },
     {
         name: 'Project: Building a Song Search App with React',
         link: '/courses/react-song-search-app',
-        thumbSrc: '//img.ilovecoding.org/thumb/react/react21-project-song-search.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/react/react21-project-song-search.png'
     },
 ]
 
