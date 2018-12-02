@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { actions } from '../'
+import { getBlogs, clearBlogs } from '../actions'
 import { List } from '../../_common'
 
 function ListHeader(){
@@ -26,10 +26,10 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         getList: ()=>{
-            dispatch(actions.getBlogs())
+            dispatch(getBlogs())
         },
         clearList: ()=>{
-            dispatch(actions.clearBlogs())
+            dispatch(clearBlogs())
         }
     }
 }

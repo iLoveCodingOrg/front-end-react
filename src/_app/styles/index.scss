@@ -3,3 +3,7 @@
 @import "./utils";
 @import "./loading-spinner";
 @import "./nav";
+
+main{
+  -webkit-font-smoothing: antialiased;
+}

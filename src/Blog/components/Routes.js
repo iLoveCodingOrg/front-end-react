@@ -1,9 +1,13 @@
+import '../style.scss'
 import React from 'react'
 import {
   Route,
   Switch
 } from 'react-router-dom'
-import { Add, View, Edit, List } from '../'
+import Add from './Add'
+import View from './View'
+import Edit from './Edit'
+import List from './List'
 import NotFound from './NotFound'
 import isPrivate from '../../isPrivate'
 

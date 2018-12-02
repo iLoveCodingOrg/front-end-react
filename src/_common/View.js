@@ -67,7 +67,7 @@ class View extends React.Component{
             callMarkAsComplete
         } = this.props
         return (
-            <div className="container">
+            <div className={`container ${of}`}>
                 {
                     (isLoading)? <Loading />
                     :

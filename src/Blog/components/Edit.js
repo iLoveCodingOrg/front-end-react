@@ -2,7 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
-import { actions } from '../'
+import {
+    getBlogBySlug,
+    updateBlogById
+} from '../actions'
 import { Edit } from '../../_common'
 
 function mapStateToProps(state){
@@ -16,10 +19,10 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         getView: (slug)=>{
-            dispatch(actions.getBlogBySlug(slug))
+            dispatch(getBlogBySlug(slug))
         },
         update: (id, payload)=>{
-            return dispatch(actions.updateBlogById(id, payload))
+            return dispatch(updateBlogById(id, payload))
         }
     }
 }
