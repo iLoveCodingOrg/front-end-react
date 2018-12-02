@@ -1,5 +1,5 @@
 import React from 'react'
-import { isNil } from 'lodash'
+import isNil from 'lodash/isNil'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 

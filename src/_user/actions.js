@@ -1,5 +1,5 @@
 import 'whatwg-fetch'
-import { get } from 'lodash'
+import get from 'lodash/get'
 import {
     SET_USER_LOADING,
     SET_USER,

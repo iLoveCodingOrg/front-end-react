@@ -1,5 +1,5 @@
 import 'whatwg-fetch'
-import { get } from 'lodash'
+import get from 'lodash/get'
 import { toast } from 'react-toastify'
 import { API_URL } from '../_app/constants'
 import {

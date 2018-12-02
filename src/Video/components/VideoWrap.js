@@ -3,7 +3,7 @@ import './video.scss'
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { isEmpty } from 'lodash'
+import isEmpty from 'lodash/isEmpty'
 import { Link } from 'react-router-dom'
 
 import { isLoggedIn } from '../../_user/selectors'

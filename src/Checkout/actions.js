@@ -1,5 +1,5 @@
 import 'whatwg-fetch'
-import { get } from 'lodash'
+import get from 'lodash/get'
 import { toast } from 'react-toastify'
 import {
     SET_PRODUCT,

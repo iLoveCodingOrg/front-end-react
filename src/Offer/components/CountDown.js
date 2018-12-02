@@ -1,6 +1,6 @@
 import React from 'react'
 import Countdown from 'react-countdown-now'
-import { isNil } from 'lodash'
+import isNil from 'lodash/isNil'
 import { connect } from 'react-redux'
 
 function CountDown({ title, timeFrom, timeLeft }) {

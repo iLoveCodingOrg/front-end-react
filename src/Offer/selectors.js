@@ -1,4 +1,4 @@
-import { isNil } from 'lodash'
+import isNil from 'lodash/isNil'
 import { getTimeDifference } from 'react-countdown-now'
 import { createSelector } from 'reselect'
 

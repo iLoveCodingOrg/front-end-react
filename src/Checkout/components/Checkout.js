@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import { withRouter } from 'react-router-dom'
-import { get } from 'lodash'
+import get from 'lodash/get'
 
 import { isLoggedIn } from '../../_user/selectors'
 import Loading from '../../Loading'
