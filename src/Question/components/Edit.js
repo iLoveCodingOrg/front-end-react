@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
-import { actions } from '../'
+import { getQuestionBySlug, updateQuestionById } from '../actions'
 import { Edit } from '../../_common'
 
 function mapStateToProps(state){
@@ -16,10 +16,10 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         getView: (slug)=>{
-            dispatch(actions.getQuestionBySlug(slug))
+            dispatch(getQuestionBySlug(slug))
         },
         update: (id, payload)=>{
-            return dispatch(actions.updateQuestionById(id, payload))
+            return dispatch(updateQuestionById(id, payload))
         }
     }
 }

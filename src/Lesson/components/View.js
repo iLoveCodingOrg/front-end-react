@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { actions } from '../'
+import { callMarkLessonComplete, getLessonBySlug, clearLesson } from '../actions'
 import { View } from '../../_common'
 
 function mapStateToProps(state){
@@ -15,13 +15,13 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         callMarkAsComplete: (id)=>{
-            dispatch(actions.callMarkLessonComplete(id))
+            dispatch(callMarkLessonComplete(id))
         },
         getView: (slug)=>{
-            dispatch(actions.getLessonBySlug(slug))
+            dispatch(getLessonBySlug(slug))
         },
         clearView: ()=>{
-            dispatch(actions.clearLesson())
+            dispatch(clearLesson())
         }
     }
 }

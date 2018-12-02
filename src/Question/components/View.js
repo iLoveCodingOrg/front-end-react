@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { actions } from '../'
+import { callMarkQuestionComplete, getQuestionBySlug, clearQuestion } from '../actions'
 import { View } from '../../_common'
 
 function mapStateToProps(state){
@@ -15,13 +15,13 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         callMarkAsComplete: (id)=>{
-            dispatch(actions.callMarkQuestionComplete(id))
+            dispatch(callMarkQuestionComplete(id))
         },
         getView: (slug)=>{
-            dispatch(actions.getQuestionBySlug(slug))
+            dispatch(getQuestionBySlug(slug))
         },
         clearView: ()=>{
-            dispatch(actions.clearQuestion())
+            dispatch(clearQuestion())
         }
     }
 }
