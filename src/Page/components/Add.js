@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
-import { actions } from '../'
+import { addPage } from '../actions'
 import { Add } from '../../_common'
 
 function mapStateToProps(){
@@ -12,7 +12,7 @@ function mapStateToProps(){
 function mapDispatchToProps(dispatch){
     return {
         add: (payload)=>{
-            return dispatch(actions.addPage(payload))
+            return dispatch(addPage(payload))
         }
     }
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { actions } from '../'
+import { getPages, clearPages } from '../actions'
 import { List } from '../../_common'
 
-function ListHeader(props){
+function ListHeader(){
     return (
         <div className="d-flex flex-column align-items-center text-center mb-5">
             <h1>All Pages</h1>
@@ -26,10 +26,10 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         getList: ()=>{
-            dispatch(actions.getPages())
+            dispatch(getPages())
         },
         clearList: ()=>{
-            dispatch(actions.clearPages())
+            dispatch(clearPages())
         }
     }
 }

@@ -3,10 +3,12 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import {
-    Add, View, Edit, List, CourseLessonView
-} from '../'
-import { NotFound } from '../../Page'
+import Add from './Add'
+import View from './View'
+import Edit from './Edit'
+import List from './List'
+import CourseLessonView from './CourseLessonView'
+import { AsyncNotFound as NotFound } from '../../Page'
 import isPrivate from '../../isPrivate'
 
 class Routes extends React.Component{

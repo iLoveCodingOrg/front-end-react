@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { actions } from '../'
+import { getPageBySlug, clearPage } from '../actions'
 import { View } from '../../_common'
 
 function mapStateToProps(state){
@@ -15,10 +15,10 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         getView: (slug)=>{
-            dispatch(actions.getPageBySlug(slug))
+            dispatch(getPageBySlug(slug))
         },
         clearView: ()=>{
-            dispatch(actions.clearPage())
+            dispatch(clearPage())
         }
     }
 }

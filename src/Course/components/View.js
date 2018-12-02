@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { actions } from '../'
+import { callMarkCourseComplete, getCourseBySlug, clearCourse } from '../actions'
 import { View, RedirectAlert } from '../../_common'
-import { CourseNav } from '../'
+import CourseNav from './CourseNav'
 
 function mapStateToProps(state){
     return {
@@ -16,13 +16,13 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         callMarkAsComplete: (id)=>{
-            dispatch(actions.callMarkCourseComplete(id))
+            dispatch(callMarkCourseComplete(id))
         },
         getView: (slug)=>{
-            dispatch(actions.getCourseBySlug(slug))
+            dispatch(getCourseBySlug(slug))
         },
         clearView: ()=>{
-            dispatch(actions.clearCourse())
+            dispatch(clearCourse())
         }
     }
 }

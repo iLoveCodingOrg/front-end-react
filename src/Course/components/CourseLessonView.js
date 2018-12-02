@@ -6,9 +6,9 @@ import { Helmet } from 'react-helmet'
 
 import { ViewHeader, RedirectAlert } from '../../_common/'
 import { VideoWrap } from '../../Video'
-import { actions as courseActions } from '../'
+import { getCourseBySlug } from '../actions'
 import { actions as lessonActions } from '../../Lesson'
-import { CourseNav } from '../'
+import CourseNav from './CourseNav'
 import SourceDemo from '../../SourceDemo'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
@@ -154,7 +154,7 @@ function mapDispatchToProps(dispatch){
             dispatch(lessonActions.getLessonBySlug(slug))
         },
         getCourse: (slug)=>{
-            dispatch(courseActions.getCourseBySlug(slug))
+            dispatch(getCourseBySlug(slug))
         }
     }
 }
