@@ -7,6 +7,15 @@ export const SET_PAGE = 'SET_PAGE'
 export const CLEAR_PAGE = 'CLEAR_PAGE'
 export const SET_PAGE_LOADING = 'SET_PAGE_LOADING'
 
+// BLOGS
+export const SET_BLOGS = 'SET_BLOGS'
+export const CLEAR_BLOGS = 'CLEAR_BLOGS'
+export const SET_BLOGS_LIST_LOADING = 'SET_BLOGS_LIST_LOADING'
+
+export const SET_BLOG = 'SET_BLOG'
+export const CLEAR_BLOG = 'CLEAR_BLOG'
+export const SET_BLOG_LOADING = 'SET_BLOG_LOADING'
+
 // QUESTIONS
 export const SET_QUESTIONS = 'SET_QUESTIONS'
 export const CLEAR_QUESTIONS = 'CLEAR_QUESTIONS'

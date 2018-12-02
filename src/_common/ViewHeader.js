@@ -13,7 +13,8 @@ function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount,
                 : null
             }
             {
-                of !== 'page'?
+                // TODO: optimize these multiple conditions
+                (of !== 'page' && of !== 'blog')?
                 <div className="mb-3">
                     <div className="d-inline">
                         {(isComplete)? <CheckMark /> : null}
@@ -42,7 +43,7 @@ ViewHeader.propTypes = {
     isComplete: PropTypes.bool,
     lessonCount: PropTypes.number,
     level: PropTypes.oneOf([0, 1, 2]),
-    of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page']).isRequired,
+    of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page', 'blog']).isRequired,
     subTitle: PropTypes.string,
     title: PropTypes.string.isRequired
 }

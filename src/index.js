@@ -25,6 +25,7 @@ import { AsyncDashboard as Dashboard } from './Dashboard'
 import { AsyncRoutes as QuestionRoutes } from './Question'
 import { AsyncRoutes as LessonRoutes } from './Lesson'
 import { AsyncRoutes as CourseRoutes } from './Course'
+import { AsyncRoutes as BlogRoutes } from './Blog'
 import {
     AsyncRoutes as PageRoutes,
     AsyncNotFound as NotFound
@@ -138,6 +139,11 @@ function renderApp(){
                                             strict
                                             path="/courses"
                                             component={CourseRoutes} />
+
+                                        <Route
+                                            strict
+                                            path="/blog"
+                                            component={BlogRoutes} />
 
                                         <Route
                                             strict

@@ -87,7 +87,7 @@ class Edit extends React.Component{
 Edit.propTypes = {
     editableFields: PropTypes.array.isRequired,
     getView: PropTypes.func.isRequired,
-    of: PropTypes.oneOf(['question', 'lesson', 'course', 'page']).isRequired,
+    of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']).isRequired,
     update: PropTypes.func.isRequired,
     view: PropTypes.object.isRequired
 }

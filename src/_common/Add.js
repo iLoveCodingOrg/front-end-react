@@ -47,7 +47,14 @@ class Add extends React.Component{
         add(preparedPayload)
             .then(({ isSuccess, slug })=>{
                 if(isSuccess){
-                    history.push(`/${of}s/${slug}`)
+                    // All routes are plural accept 'blog'
+                    // i.e:
+                    // /pages/:slug
+                    // /courses/:slug
+                    // /blog/:slug   << notice blog not blogs
+                    const route = (of === 'blog')? of : `${of}s`
+
+                    history.push(`/${route}/${slug}`)
                 }
             })
     }
@@ -91,7 +98,7 @@ Add.propTypes = {
     add: PropTypes.func.isRequired,
     editableFields: PropTypes.array.isRequired,
     history: PropTypes.object.isRequired,
-    of: PropTypes.oneOf(['question', 'lesson', 'course', 'page']).isRequired
+    of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']).isRequired
 }
 
 export default withRouter(Add)

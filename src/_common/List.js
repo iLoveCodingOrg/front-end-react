@@ -17,10 +17,6 @@ class List extends React.Component{
         this.props.getList()
     }
 
-    componentWillUnmount(){
-        // this.props.clearList()
-    }
-
     getTitle(){
         switch(this.props.of){
             case 'lessons':
@@ -29,6 +25,8 @@ class List extends React.Component{
                 return 'All Courses'
             case 'pages':
                 return 'All Pages'
+            case 'blog':
+                return 'All Blogs'
         }
     }
 
@@ -66,7 +64,7 @@ List.propTypes = {
     isLoading: PropTypes.bool.isRequired,
     list: PropTypes.array.isRequired,
     listHeader: PropTypes.func.isRequired,
-    of: PropTypes.oneOf(['questions', 'lessons', 'courses', 'pages']).isRequired
+    of: PropTypes.oneOf(['questions', 'lessons', 'courses', 'pages', 'blog']).isRequired
 }
 
 export default List

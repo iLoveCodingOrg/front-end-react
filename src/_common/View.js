@@ -91,7 +91,8 @@ class View extends React.Component{
                         />
                         <main>
                             {
-                                of !== 'page'?
+                                // TODO: optimize these multiple conditions
+                                (of !== 'page' && of !== 'blog')?
                                 <VideoWrap
                                     callMarkAsComplete={()=>{
                                         // Do not mark course as complete when video complete
@@ -107,7 +108,8 @@ class View extends React.Component{
 
                             }
                             {
-                                of !== 'page'?
+                                // TODO: optimize these multiple conditions
+                                (of !== 'page' && of !== 'blog')?
                                 <SourceDemo
                                     source={sourceUrl}
                                     demo={demoUrl}
@@ -136,7 +138,7 @@ View.propTypes = {
     callMarkAsComplete: PropTypes.func,
     clearView: PropTypes.func.isRequired,
     getView: PropTypes.func.isRequired,
-    of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page']).isRequired,
+    of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page', 'blog']).isRequired,
     view: PropTypes.object.isRequired
 }
 

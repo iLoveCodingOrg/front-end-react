@@ -46,9 +46,9 @@ class Card extends React.Component{
                 <div>
                     <h3><Link to={urlTo}>{title}</Link></h3>
                     <div className="mb-2">
-                        <Access isFree={isFree}/>
-                        <Level level={level}/>
-                        <Duration duration={ courseTotalDuration || duration} />
+                        { access ? <Access isFree={isFree}/> : null }
+                        { level ? <Level level={level}/> : null}
+                        { (courseTotalDuration || duration) ? <Duration duration={ courseTotalDuration || duration} /> : null }
                         {
                             of === 'courses'?
                             <LessonCount lessonCount={lessonCount} />
@@ -64,7 +64,7 @@ class Card extends React.Component{
 
 Card.propTypes = {
     item: PropTypes.object.isRequired,
-    of: PropTypes.oneOf(['questions', 'lessons', 'courses', 'pages']).isRequired
+    of: PropTypes.oneOf(['questions', 'lessons', 'courses', 'pages', 'blog']).isRequired
 }
 
 export default Card
