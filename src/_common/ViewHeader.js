@@ -5,7 +5,7 @@ import { Access, Level, Duration, LessonCount, CheckMark } from './'
 
 function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount, cssClass='', isComplete }){
     return (
-        <div className={`${cssClass} text-center`}>
+        <div className={`${cssClass} view-header`} >
             <h1>{title}</h1>
             {
                 subTitle?

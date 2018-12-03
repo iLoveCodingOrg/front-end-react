@@ -18,11 +18,12 @@ class View extends React.Component{
         if(
             videoSource === 'none'
             || of === 'page'
+            || of === 'blog'
             || of === 'question'
         ){
             return 'col-12 col-lg-9 mx-auto'
         }else{
-            return null
+            return ''
         }
     }
 

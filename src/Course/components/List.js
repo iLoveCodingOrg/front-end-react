@@ -6,7 +6,7 @@ import { List } from '../../_common'
 
 function ListHeader(){
     return (
-        <div className="d-flex flex-column align-items-center mb-5">
+        <div className="d-flex flex-column align-items-center">
             <h1>Courses</h1>
             <p className="lead col-lg-9 align-self-center">
                 Select from a topic you want to learn: You can learn JavaScript, jQuery, React, Node.js and other technologies by selecting a course below. Build simple to advance websites and mobile apps.

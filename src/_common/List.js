@@ -42,15 +42,17 @@ class List extends React.Component{
                     <div>
                         <Helmet><title>{this.getTitle()} - iLoveCoding</title></Helmet>
                         <ListHeaderComponent />
+                        <div className="col-12 col-lg-9 border-top pt-4 mx-auto">
                         {
                             this.props.list.map((item, index)=>{
-                            return <Card
+                                return <Card
                                 key={index}
                                 item={item}
                                 of={this.props.of}
-                            />
+                                />
                             })
                         }
+                        </div>
                     </div>
                 }
             </div>
