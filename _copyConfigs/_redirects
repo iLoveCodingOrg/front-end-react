@@ -17,16 +17,6 @@
 /pages/5622caec8795649145fce175   /pages/resources  301
 /pages/5622cab38795649145fce174   /reviews          301
 
-# BLOG
-/blog                       http://blog.ilovecoding.org/  301
-/category/startup-journey   http://blog.ilovecoding.org/  301
-/6-figure-developer-job     http://blog.ilovecoding.org/6-figure-developer-job  301
-/how-ilovecoding-started    http://blog.ilovecoding.org/how-ilovecoding-started   301
-/why-javascript             http://blog.ilovecoding.org/why-javascript  301
-/1000-customers             http://blog.ilovecoding.org/my-startup-journey-to-our-first-1000-customers  301
-/1000-customers             http://blog.ilovecoding.org/my-startup-journey-to-our-first-1000-customers  301
-/6-figure-developer-job     http://blog.ilovecoding.org/6-figure-developer-job  301
-
 # GENERAL
 /author/azizali   /pages/aziz-ali   301
 
@@ -319,6 +309,11 @@
 /pages/path               /curriculum   301
 /pages/path-front-end     /curriculum   301
 /pages/path-full-stack    /curriculum   301
+
+# BLOG REDIRECT
+/6-figure-developer-job     /blog/6-figure-developer-job  301
+/how-ilovecoding-started    /blog/how-ilovecoding-started   301
+/1000-customers             /blog/my-startup-journey-to-our-first-1000-customers  301
 
 # Single Page Application Redirect
 /*      /index.html   200
