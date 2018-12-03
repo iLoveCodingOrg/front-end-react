@@ -63,6 +63,8 @@ class CourseLessonView extends React.Component{
             error
         } = this.props
         const urlToCourse = `/courses/${courseView.slug}`
+        const { lessonSlug } = this.props.match.params
+        const absUrlCourseLesson = `https://ilovecoding.org${urlToCourse}/lessons/${lessonSlug}`
         return (
             <div className="container">
                 {
@@ -119,7 +121,11 @@ class CourseLessonView extends React.Component{
                                     dangerouslySetInnerHTML={{ __html: bodyContent }}
                                 />
                             }
-                            <Comments />
+                            <Comments
+                                id={id}
+                                title={title}
+                                url={absUrlCourseLesson}
+                            />
                         </main>
                     </div>
                 }

@@ -67,6 +67,11 @@ class View extends React.Component{
             error,
             callMarkAsComplete
         } = this.props
+        const { slug } = this.props.match.params
+        const getAbsUrl = (of)=> {
+            const route = (of === 'blog')? of : `${of}s`
+            return `https://ilovecoding.org/${route}/${slug}`
+        }
         return (
             <div className={`container ${of}`}>
                 {
@@ -125,7 +130,13 @@ class View extends React.Component{
                                 />
                             }
                             {
-                                of !== 'page'? <Comments />: null
+                                of !== 'page'? 
+                                <Comments
+                                    id={id}
+                                    title={title}
+                                    url={getAbsUrl(of)}
+                                />
+                                : null
                             }
                         </main>
                     </div>
