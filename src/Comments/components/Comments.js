@@ -6,6 +6,10 @@ class Comment extends React.Component{
         super(props)
     }
     render(){
+        const { of, id, title, url } = this.props
+        // Fortunately we have two disqus installation.
+        // These are tthe two corresponding shortnames for them
+        const shortname = (of === 'blog')? 'blogilovecodingorg' : 'ilovecoding'
         return (
             <div className="text-center mt-4">
                 <div className="alert">
@@ -13,14 +17,17 @@ class Comment extends React.Component{
                     &nbsp;
                     <a className="text-truncate" href="{window.location.href}">{window.location.href}</a>
                 </div>
-                <DiscussionEmbed shortname='iLoveCoding' config={{
-                    url: this.props.url,
-                    identifier: this.props.id,
-                    title: this.props.title,
+                <DiscussionEmbed shortname={shortname} config={{
+                    identifier: id,
+                    title,
+                    url
                 }} />
             </div>
         )
     }
 }
 
+Comment.defaultProps = {
+    of: '' // random character. Default of can be blank
+}
 export default Comment

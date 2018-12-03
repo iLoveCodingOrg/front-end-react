@@ -132,6 +132,7 @@ class View extends React.Component{
                             {
                                 of !== 'page'? 
                                 <Comments
+                                    of={of}
                                     id={id}
                                     title={title}
                                     url={getAbsUrl(of)}
