@@ -1,7 +1,5 @@
 import React from 'react'
 import { DiscussionEmbed } from 'disqus-react'
-import { FacebookProvider, Comments } from 'react-facebook'
-import { FB_APP_ID } from '../../_app/constants';
 
 class Comment extends React.Component{
     constructor(props){
@@ -20,9 +18,6 @@ class Comment extends React.Component{
                     identifier: this.props.id,
                     title: this.props.title,
                 }} />
-                <FacebookProvider appId={FB_APP_ID}>
-                    <Comments href={window.location.href} />
-                </FacebookProvider>
             </div>
         )
     }
