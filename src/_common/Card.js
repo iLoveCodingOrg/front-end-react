@@ -46,7 +46,7 @@ class Card extends React.Component{
                 <div>
                     <h3><Link to={urlTo}>{title}</Link></h3>
                     <div className="mb-2">
-                        { access ? <Access isFree={isFree}/> : null }
+                        <Access of={of} isFree={isFree}/>
                         { level ? <Level level={level}/> : null}
                         { (courseTotalDuration || duration) ? <Duration duration={ courseTotalDuration || duration} /> : null }
                         {

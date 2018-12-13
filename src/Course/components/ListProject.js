@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
 
 import { getCourses, clearCourses } from '../actions'
 import { List } from '../../_common'
@@ -7,9 +9,10 @@ import { List } from '../../_common'
 function ListHeader(){
     return (
         <div className="d-flex flex-column align-items-center">
-            <h1>Courses</h1>
+            <Helmet><title>Practice Projects - iLoveCoding</title></Helmet>
+            <h1>Practice Projects</h1>
             <p className="lead col-lg-9 align-self-center">
-                Courses are organized into targeted technological topics. Pick a course and get started. Remember! Each course uses simple terminology, and gives you ample practice so your learning sinks in on a deeper level.
+                In this section you will build real-world projects. Here you get ample practice on applying your skills that you got from the <Link to="/courses/core">Core Training</Link>. With practice, your knowledge will sink in on a deeper level and your confidence will grow.
             </p>
         </div>
     )
@@ -26,7 +29,7 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return {
         getList: ()=>{
-            dispatch(getCourses())
+            dispatch(getCourses('project'))
         },
         clearList: ()=>{
             dispatch(clearCourses())

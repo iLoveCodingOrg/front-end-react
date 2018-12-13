@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function Access({isFree = true}){
+export default function Access({isFree = true, of}){
+    if(of==='blog' || of==='pages') return null
     return (
         <span>
             {

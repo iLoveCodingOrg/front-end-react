@@ -22,11 +22,13 @@ class List extends React.Component{
             case 'lessons':
                 return 'All Lessons'
             case 'courses':
-                return 'All Courses'
+                return 'Courses'
             case 'pages':
-                return 'All Pages'
+                return 'Pages'
+            case 'questions':
+                return 'Questions/Answers'
             case 'blog':
-                return 'All Blogs'
+                return 'iLoveCoding Blog'
         }
     }
 

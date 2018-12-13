@@ -6,9 +6,9 @@ import { List } from '../../_common'
 
 function ListHeader(){
     return (
-        <div className="d-flex flex-column align-items-center mb-5">
+        <div className="d-flex flex-column align-items-center">
             <h1>Questions &amp; Answers</h1>
-            <p className="lead col-lg-9 align-self-center">
+            <p className="lead col-lg-9 align-self-center text-center">
                 To the point answers for every step of the way of your journey!
             </p>
         </div>

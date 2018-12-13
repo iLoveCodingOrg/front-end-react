@@ -32,8 +32,16 @@ export function setLoadingList(isLoading=true) {
     }
 }
 
-export function getCourses(){
-    const url = `${API_URL}courses/all`
+export function getCourses(type){
+    let filter = {};
+
+    if(type === 'project'){
+        filter = { where: { topic: 'Project' } }
+    }else if(type === 'core'){
+        filter = { where: { topic: 'Core Training' } }
+    }
+
+    const url = `${API_URL}courses/all?filter=${JSON.stringify(filter)}`
     
     return (dispatch) => {
         dispatch(setLoadingList(true))

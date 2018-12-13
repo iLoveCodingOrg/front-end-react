@@ -46,16 +46,22 @@ class Header extends React.Component{
 
     renderUserLeft(){
         const links = [
-            // {
-            //     label: 'Dashboard',
-            //     link: '/dashboard',
-            //     className: 'btn btn-sm btn-outline-primary mr-3',
-            //     style: {}
-            // },
             {
-                label: 'Full Curriculum',
-                link: '/curriculum',
-                className: 'btn btn-sm btn-outline-primary mr-3',
+                label: 'Core Training',
+                link: '/courses/core',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'Practice Projects',
+                link: '/courses/projects',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'Questions/Answers',
+                link: '/questions',
+                className: 'nav-link btn btn-sm py-1',
                 style: {}
             }
         ]
@@ -65,36 +71,30 @@ class Header extends React.Component{
 
     renderGuestLeft(){
         const links = [
-            {
-                label: 'Full Curriculum', // QUIZ
-                link: '/curriculum',
-                className: 'btn btn-sm btn-outline-primary',
-                style: {}
-            },
             // {
-            //     label: 'Start Here', // QUIZ
-            //     link: '/start',
+            //     label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
+            //     link: '/curriculum',
             //     className: 'btn btn-sm btn-outline-primary',
             //     style: {}
             // },
-            // {
-            //     label: 'Courses',
-            //     link: '/courses',
-            //     className: 'nav-link btn btn-sm py-1',
-            //     style: {}
-            // },
-            // {
-            //     label: 'Practice Projects',
-            //     link: '/projects',
-            //     className: 'nav-link btn btn-sm py-1',
-            //     style: {}
-            // },
-            // {
-            //     label: 'Questions/Answers',
-            //     link: '/questions',
-            //     className: 'nav-link btn btn-sm py-1',
-            //     style: {}
-            // }
+            {
+                label: 'Core Training',
+                link: '/courses/core',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'Practice Projects',
+                link: '/courses/projects',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            },
+            {
+                label: 'Questions/Answers',
+                link: '/questions',
+                className: 'nav-link btn btn-sm py-1',
+                style: {}
+            }
         ]
 
         return this.renderLinks(links)

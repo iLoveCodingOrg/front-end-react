@@ -6,7 +6,7 @@ import { List } from '../../_common'
 
 function ListHeader(){
     return (
-        <div className="d-flex flex-column align-items-center text-center mb-5">
+        <div className="d-flex flex-column align-items-center">
             <h1>All Pages</h1>
             <p className="lead col-lg-9 align-self-center">
                 List of all the pages

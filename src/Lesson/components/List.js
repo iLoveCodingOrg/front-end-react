@@ -6,10 +6,10 @@ import { List } from '../../_common'
 
 function ListHeader(){
     return (
-        <div className="d-flex flex-column align-items-center mb-5">
+        <div className="d-flex flex-column align-items-center">
             <h1>All Lessons</h1>
             <p className="lead col-lg-9 align-self-center">
-                Individual lessons
+                Individual lessons that roll-up to courses.
             </p>
         </div>
     )
