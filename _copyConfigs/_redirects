@@ -315,5 +315,16 @@
 /how-ilovecoding-started    /blog/how-ilovecoding-started   301
 /1000-customers             /blog/my-startup-journey-to-our-first-1000-customers  301
 
+# Practice Project Courses Created
+/courses/javacript-practice  /courses/projects  301
+/courses/javacript-practice/lessons/rock-paper-scissor-app-with-pure-javascript   /courses/rock-paper-scissor/lessons/rock-paper-scissor-app-with-pure-javascript  301
+/courses/javacript-practice/lessons/simple-to-do-app-with-pure-javascript  /courses/todo-js/lessons/simple-to-do-app-with-pure-javascript  301
+/courses/javacript-practice/lessons/stopwatch-app-with-pure-javascript  /courses/stopwatch/lessons/stopwatch-app-with-pure-javascript  301
+/courses/random/lessons/build-your-own-snake-game-with-javascript-part-1-of-3  /courses/snake-game  301
+/courses/random/lessons/building-calculator-app-with-jquery  /courses/calculator  301
+/courses/random/lessons/load-page-elements-when-scrolled-to-that-area  /courses/wow-js  301
+/courses/random/lessons/full-cover-background-image  /courses/full-cover-background-image  301
+/courses/random/lessons/fullscreen-video-in-background  /courses/fullscreen-video-in-background  301
+
 # Single Page Application Redirect
 /*      /index.html   200
