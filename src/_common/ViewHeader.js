@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import { Access, Level, Duration, LessonCount, CheckMark } from './'
 
 function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount, cssClass='', isComplete }){
     return (
         <div className={`${cssClass} view-header`} >
+            {(of === 'blog')? <Link className="lead mb-4 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link>: null}
             <h1>{title}</h1>
             {
                 subTitle?

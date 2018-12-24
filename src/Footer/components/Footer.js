@@ -9,7 +9,6 @@ export default () => (
             <div className="">
                 <h5>Students</h5>
                 <ul className="list-unstyled">
-                    <li><Link to="/courses" className="text-muted">All Courses</Link></li>
                     <li><Link to="/curriculum" className="text-muted">Full Curriculum</Link></li>
                     <li><Link to="/reviews" className="text-muted">Reviews</Link></li>
                     <li><Link to="/pages/resources" className="text-muted">Tools &amp; Resources</Link></li>
@@ -24,7 +23,7 @@ export default () => (
                     {/* <li><Link to="/" className="text-muted">Affiliates</Link></li> */}
                     <li><Link to="/pages/about" className="text-muted">About us</Link></li>
                     <li><a className="text-muted" href="https://www.facebook.com/pg/ilovecodingorg">Facebook</a></li>
-                    <li><a className="text-muted" href="https://twitter.com/ilovecodingorg">@iLoveCodingOrg</a></li>
+                    <li><a className="text-muted" href="https://twitter.com/ilovecodingorg">Twitter</a></li>
                 </ul>
             </div>
         </div>
