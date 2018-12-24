@@ -81,7 +81,7 @@ export default ()=>{
                 <small className="d-block text-muted">
                     Module 2:
                 </small>
-                Front-End Development
+                Modern Front-End Development
             </h2>
             <p className="lead text-muted">
                 Learn how to make traditional and modern front-end applications. Learn the JavaScript frameworks which are in demand today, and learn the techniques used by high-tech companies to build modern websites. It's all within reach here.
