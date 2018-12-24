@@ -30,17 +30,17 @@ const courses = [
     },
     {
         name: 'How to set a full cover background image on your website',
-        link: '/lessons/full-cover-background-image',
+        link: '/courses/full-cover-background-image',
         thumbSrc: '//a.ilovecoding.org/thumb/fullCoverBackgroundImage.png'
     },
     {
         name: 'How to set fullscreen video in the background on your website',
-        link: '/lessons/fullscreen-video-in-background',
+        link: '/courses/fullscreen-video-in-background',
         thumbSrc: '//a.ilovecoding.org/thumb/fullCoverBackgroundVideo.png'
     },
     {
         name: 'Load Page Elements when Scrolled to that Area',
-        link: '/lessons/load-page-elements-when-scrolled-to-that-area',
+        link: '/courses/wow-js',
         thumbSrc: '//a.ilovecoding.org/thumb/showOnScroll.png'
     },
 ]

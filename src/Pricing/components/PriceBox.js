@@ -50,7 +50,7 @@ class PriceBox extends React.Component {
                     { 
                         isPopular? 
                         <h5 className="position-absolute" style={{ top: "5px", right: "5px" }}>
-                            <span className="badge badge-warning">Most Popular</span>
+                            <span className="badge badge-warning">Recommended</span>
                         </h5>
                         : null
                     }

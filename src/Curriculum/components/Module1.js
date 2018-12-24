@@ -28,17 +28,17 @@ const practice = [
     },
     {
         name: 'Build a stopwatch app with pure JavaScript',
-        link: '/lessons/stopwatch-app-with-pure-javascript',
+        link: '/courses/stopwatch',
         thumbSrc: '//a.ilovecoding.org/thumb/stopWatch.png'
     },
     {
         name: 'Build a simple To-Do App with pure JavaScript',
-        link: '/lessons/simple-to-do-app-with-pure-javascript',
+        link: '/courses/todo-js',
         thumbSrc: '//a.ilovecoding.org/thumb/todoApp.png'
     },
     {
         name: 'Build a Rock Paper Scissor app with pure JavaScript',
-        link: '/lessons/rock-paper-scissor-app-with-pure-javascript',
+        link: '/courses/rock-paper-scissor',
         thumbSrc: '//a.ilovecoding.org/thumb/rockPaperScissor.png'
     },
     {
@@ -68,8 +68,9 @@ export default ()=>{
                 data={courses} />
 
             <PrintTraining
-                title="Projects for Practice"
-                data={practice} />
+                title="Practice Projects"
+                data={practice}
+                maxWidth={190} />
 
             <hr/>
             <h5>Module Outcomes:</h5>

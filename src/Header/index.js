@@ -47,23 +47,29 @@ class Header extends React.Component{
     renderUserLeft(){
         const links = [
             {
-                label: 'Core Training',
-                link: '/courses/core',
-                className: 'nav-link btn btn-sm py-1',
+                label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
+                link: '/curriculum',
+                className: 'btn btn-sm btn-outline-primary',
                 style: {}
             },
-            {
-                label: 'Practice Projects',
-                link: '/courses/projects',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            },
-            {
-                label: 'Questions/Answers',
-                link: '/questions',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            }
+            // {
+            //     label: 'Core Training',
+            //     link: '/courses/core',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Practice Projects',
+            //     link: '/courses/projects',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Questions/Answers',
+            //     link: '/questions',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // }
         ]
 
         return this.renderLinks(links)
@@ -71,30 +77,30 @@ class Header extends React.Component{
 
     renderGuestLeft(){
         const links = [
+            {
+                label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
+                link: '/curriculum',
+                className: 'btn btn-sm btn-outline-primary',
+                style: {}
+            },
             // {
-            //     label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
-            //     link: '/curriculum',
-            //     className: 'btn btn-sm btn-outline-primary',
+            //     label: 'Core Training',
+            //     link: '/courses/core',
+            //     className: 'nav-link btn btn-sm py-1',
             //     style: {}
             // },
-            {
-                label: 'Core Training',
-                link: '/courses/core',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            },
-            {
-                label: 'Practice Projects',
-                link: '/courses/projects',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            },
-            {
-                label: 'Questions/Answers',
-                link: '/questions',
-                className: 'nav-link btn btn-sm py-1',
-                style: {}
-            }
+            // {
+            //     label: 'Practice Projects',
+            //     link: '/courses/projects',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // },
+            // {
+            //     label: 'Questions/Answers',
+            //     link: '/questions',
+            //     className: 'nav-link btn btn-sm py-1',
+            //     style: {}
+            // }
         ]
 
         return this.renderLinks(links)

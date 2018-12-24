@@ -53,7 +53,7 @@ const practice = [
     },
     {
         name: 'Build a Calculator App with jQuery',
-        link: '/lessons/building-calculator-app-with-jquery',
+        link: '/courses/calculator',
         thumbSrc: '//a.ilovecoding.org/thumb/calculator.png'
         
     },
@@ -84,7 +84,7 @@ export default ()=>{
                 Front-End Development
             </h2>
             <p className="lead text-muted">
-                Learn how to make traditional and modern front-end applications. Learn the JavaScript frameworks which are in demand today, and learn the techniques used by high-tech companies to build modern websites. Its all within reach here.
+                Learn how to make traditional and modern front-end applications. Learn the JavaScript frameworks which are in demand today, and learn the techniques used by high-tech companies to build modern websites. It's all within reach here.
             </p>
             <p className="mb-0">
                 <strong>Time to completion:</strong> 6 weeks (Focus for week number 7-12)
@@ -94,8 +94,9 @@ export default ()=>{
                 data={courses} />
 
             <PrintTraining
-                title="Projects for Practice"
-                data={practice} />
+                title="Practice Projects"
+                data={practice}
+                maxWidth={190} />
 
             <hr/>
             <h5>Module Outcomes:</h5>

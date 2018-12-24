@@ -13,13 +13,13 @@ export default ()=>{
     return (
         <div className="d-flex flex-column">
             <Helmet>
-                <title>The perfect curriculum to become a full-stack JavaScript Developer - iLoveCoding</title>
+                <title>The Perfect Curriculum to become a Front-End/Full-Stack JavaScript Developer - iLoveCoding</title>
                 <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
             </Helmet>
             <div className="align-self-center col-md-10 col-lg-8 mt-3">
                 <h1>The Perfect Curriculum</h1>
                 <p className="lead">
-                    Follow this curriculum to go from zero to a professional software developer.
+                    Follow this curriculum to go from zero to a professional Front-End and/or Full-Stack JavaScript developer.
                 </p>
                 <div className="row mb-3">
                     <div className="col-sm-12 d-flex mb-4 mb-sm-0">
@@ -46,7 +46,7 @@ export default ()=>{
                     We'll do all of this while focusing on one programming language, which is JavaScript. JavaScript is currently the most popular and versatile programing language on planet internet. In fact 95% of all top websites use JavaScript, and all the tech giants use it to build their websites and mobile apps: Facebook, Paypal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.
                 </p>
                 <p className="lead">
-                    <strong>Trust the process - follow the modules: </strong>
+                    <strong>Trust the process - follow the modules:</strong>
                     Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
                 </p>
 

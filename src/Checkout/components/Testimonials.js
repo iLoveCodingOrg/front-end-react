@@ -4,7 +4,7 @@ const data = [
     // '../../Reviews/data' [3]
     {
         title: 'I am glad to having you as my mentor!',
-        body: 'Wow! Amazing. I am going through your calculator tutorial at the moment and I must say its something like I have never seen with other JavaScript courses (Udemy/Youtube). Thank you for making these courses/tutorials. I am learning a lot and I am glad to having you as my mentor!',
+        body: 'Wow! Amazing. I am going through your calculator tutorial at the moment and I must say it\'s something like I have never seen with other JavaScript courses (Udemy/Youtube). Thank you for making these courses/tutorials. I am learning a lot and I am glad to having you as my mentor!',
         thumbSrc: '//a.ilovecoding.org/img/_reviews/kevin-freeman.png',
         credit1: 'Kevin Freeman (Freelance Web Developer)',
     }

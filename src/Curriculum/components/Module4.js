@@ -38,8 +38,9 @@ export default ()=>{
                 data={courses} />
 
             <PrintTraining
-                title="Project for Practice"
-                data={practice} />
+                title="Practice Projects"
+                data={practice}
+                maxWidth={190} />
 
             <hr/>
             <h5>Module Outcomes:</h5>
