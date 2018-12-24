@@ -7,6 +7,7 @@ import fnf from '../_app/images/companies/students/fidelity-national-financial.j
 import sony from '../_app/images/companies/students/sony.png'
 import twitter from '../_app/images/companies/students/twitter.png'
 import fortune500 from '../_app/images/companies/students/fortune-500.png'
+import cvs from '../_app/images/companies/my-clients/cvs-health.png'
 
 const data = [
     {
@@ -30,6 +31,12 @@ const data = [
     {
         altText: 'Twitter',
         imgSrc: twitter,
+        margin: '',
+        padding: '5px 0'
+    },
+    {
+        altText: 'CVS Health',
+        imgSrc: cvs,
         margin: '',
         padding: '5px 0'
     },

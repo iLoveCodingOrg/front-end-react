@@ -27,8 +27,9 @@ export default function (){
                             <h4>Start Training</h4>
                             <ul className="list-unstyled">
                                 <li><Link to="/curriculum">Full Curriculum</Link></li>
-                                <li><Link to="/courses?tag=front-end">All Courses</Link></li>
-                                <li><a to="/qa">Questions &amp; Answers</a> (Coming soon)</li>
+                                <li><Link to="/courses/core">Core Training</Link></li>
+                                <li><Link to="/courses/projects">Practice Projects</Link></li>
+                                <li><Link to="/questions">Questions/Answers</Link></li>
                             </ul>
                         </div>
 

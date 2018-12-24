@@ -6,11 +6,10 @@ import { Redirect } from 'react-router-dom'
 import { selectors } from '../../_user'
 
 import Hero from './Hero'
-// import SevenDayCourse from './SevenDayCourse'
 import AboutAziz from '../../AboutAziz/AboutAziz'
 import MyWorkLogos from '../../LogoList/MyWorkLogos'
-// import StudentCompanies from '../../LogoList/StudentCompanies'
 import UsedBy from '../../LogoList/UsedBy'
+import SocialProof from './SocialProof'
 
 class Home extends React.Component{
     constructor(props){
@@ -25,8 +24,8 @@ class Home extends React.Component{
                     <meta name="description" content="iLoveCoding teaches you how to think and build like a software developer focusing on Full-Stack JavaScript development."/>
                 </Helmet>
                 <Hero />
+                <SocialProof />
                 <UsedBy />
-                {/* <SevenDayCourse /> */}
                 <div className="bg-gray-200 mt-5">
                     <div className="col-md-10 col-lg-8 mr-auto ml-auto py-5">
                         <AboutAziz />
@@ -34,9 +33,7 @@ class Home extends React.Component{
                 </div>
                 <div className="mt-1">
                     <MyWorkLogos />
-                    {/* <StudentCompanies /> */}
                 </div>
-                {/* <SevenDayCourse /> */}
             </div>
         )
     }
