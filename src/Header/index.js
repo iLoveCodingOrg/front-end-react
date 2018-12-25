@@ -49,7 +49,7 @@ class Header extends React.Component{
             {
                 label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
                 link: '/curriculum',
-                className: 'btn btn-sm btn-outline-primary',
+                className: 'btn btn-outline-primary',
                 style: {}
             },
             // {
@@ -80,7 +80,7 @@ class Header extends React.Component{
             {
                 label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
                 link: '/curriculum',
-                className: 'btn btn-sm btn-outline-primary',
+                className: 'btn btn-outline-primary',
                 style: {}
             },
             // {
@@ -125,37 +125,37 @@ class Header extends React.Component{
             {
                 label: 'Why JavaScript?',
                 link: '/pages/why-javascript',
-                className: 'nav-link btn btn-sm py-1',
+                className: 'nav-link btn py-1',
                 style: {}
             },
             {
                 label: 'How it works',
                 link: '/pages/how-it-works',
-                className: 'nav-link btn btn-sm py-1',
+                className: 'nav-link btn py-1',
                 style: {}
             },
             {
                 label: 'Real Results',
                 link: '/reviews',
-                className: 'nav-link btn btn-sm py-1',
+                className: 'nav-link btn py-1',
                 style: {}
             },
             {
                 label: 'Pricing',
                 link: '/pricing',
-                className: 'nav-link btn btn-sm py-1',
+                className: 'nav-link btn py-1',
                 style: {}
             },
             {
                 label: 'Student Login',
                 link: '/login',
-                className: 'nav-link btn btn-sm py-1',
+                className: 'nav-link btn py-1',
                 style: {}
             },
             {
                 label: 'Join Now',
                 link: '/pricing',
-                className: 'btn btn-sm btn-primary',
+                className: 'btn btn-primary',
                 style: {}
             },
         ]
