@@ -198,7 +198,7 @@ class Header extends React.Component{
 
     render(){
         return (
-            <nav className="d-flex flex-column flex-md-row align-items-center navbar-expand p-2 navbar-light">
+            <nav id="header" className="d-flex flex-column flex-md-row align-items-center navbar-expand p-2 navbar-light">
                 <div className="navbar-brand p-0">
                     <Link to="/" className="img-wrap img-wrap-hover">
                         <img src={logo} alt="iLoveCoding.org Logo" />
