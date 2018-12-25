@@ -50,39 +50,44 @@ const practice = [
 
 export default ()=>{
     return (
-        <section className="bg-light card p-4 p-md-5 mt-4">
-            <h2>
-                <small className="d-block text-muted">
-                    Module 1:
-                </small>
-                Fundamentals
-            </h2>
-            <p className="lead text-muted">
-                Learn the fundamentals of the HTML, CSS and JavaScript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
-            </p>
-            <p className="mb-0">
-                <strong>Time to completion:</strong> 6 weeks (Focus for the first 6 weeks)
-            </p>
-            <PrintTraining
-                title="Core Training"
-                data={courses} />
+        <section className="bg-light p-4 p-md-5 my-5 row border-top">
+            <div className="col-xl-4">
+                <h2>
+                    <small className="d-block text-muted">
+                        Module 1:
+                    </small>
+                    Fundamentals
+                </h2>
+                <p className="lead text-muted">
+                    Learn the fundamentals of the HTML, CSS and JavaScript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
+                </p>
+                <p>
+                    <strong>Time to completion:</strong><br/>
+                    6 weeks (Focus for the first 6 weeks)
+                </p>
+            </div>
+            <div className="pl-xl-5 col-xl-8">
+                <PrintTraining
+                    title="Core Training"
+                    data={courses} />
+                <hr/>
+                <PrintTraining
+                    title="Practice Projects"
+                    data={practice}
+                    maxWidth={190} />
 
-            <PrintTraining
-                title="Practice Projects"
-                data={practice}
-                maxWidth={190} />
-
-            <hr/>
-            <h5>Module Outcomes:</h5>
-            <p>Once you are done with this module you will be able to:</p>
-            <ol>
-                <li>Build simple websites</li>
-                <li>Launch your own website yourname.com</li>
-                <li>Start Freelancing: Make websites for small businesses and non-profits</li>
-                <li>Build simple mini applications</li>
-                <li>Start thinking like a software engineer</li>
-                <li>Call yourself a web designer</li>
-            </ol>
+                <hr/>
+                <h5>Module Outcomes:</h5>
+                <p>Once you are done with this module you will be able to:</p>
+                <ol>
+                    <li>Build simple websites</li>
+                    <li>Launch your own website yourname.com</li>
+                    <li>Start Freelancing: Make websites for small businesses and non-profits</li>
+                    <li>Build simple mini applications</li>
+                    <li>Start thinking like a software engineer</li>
+                    <li>Call yourself a web designer</li>
+                </ol>
+            </div>
         </section>
     )
 }

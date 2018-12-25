@@ -76,39 +76,44 @@ const practice = [
 
 export default ()=>{
     return (
-        <section className="bg-light card p-4 p-md-5 mt-5">
-            <h2>
-                <small className="d-block text-muted">
-                    Module 2:
-                </small>
-                Modern Front-End Development
-            </h2>
-            <p className="lead text-muted">
-                Learn how to make traditional and modern front-end applications. Learn the JavaScript frameworks which are in demand today, and learn the techniques used by high-tech companies to build modern websites. It's all within reach here.
-            </p>
-            <p className="mb-0">
-                <strong>Time to completion:</strong> 6 weeks (Focus for week number 7-12)
-            </p>
-            <PrintTraining
-                title="Core Training"
-                data={courses} />
+        <section className="bg-light p-4 p-md-5 my-5 row border-top">
+            <div className="col-xl-4">
+                <h2>
+                    <small className="d-block text-muted">
+                        Module 2:
+                    </small>
+                    Modern Front-End Development
+                </h2>
+                <p className="lead text-muted">
+                    Learn how to make traditional and modern front-end applications. Learn the JavaScript frameworks which are in demand today, and learn the techniques used by high-tech companies to build modern websites. It's all within reach here.
+                </p>
+                <p>
+                    <strong>Time to completion:</strong><br/>
+                    6 weeks (Focus for week number 7-12)
+                </p>
+            </div>
+            <div className="pl-xl-5 col-xl-8">
+                <PrintTraining
+                    title="Core Training"
+                    data={courses} />
+                <hr/>
+                <PrintTraining
+                    title="Practice Projects"
+                    data={practice}
+                    maxWidth={190} />
 
-            <PrintTraining
-                title="Practice Projects"
-                data={practice}
-                maxWidth={190} />
-
-            <hr/>
-            <h5>Module Outcomes:</h5>
-            <p>Once you are done with this module you will be able to:</p>
-            <ol>
-                <li>Build modern and flashy websites</li>
-                <li>Build interactive web app front-end</li>
-                <li>Integrate your app with any sort of back-end</li>
-                <li>Connect your app with any third-party API (whether it be Google, Facebook, etc.</li>
-                <li>Call yourself a Front-End Developer</li>
-                <li>Market yourself as a Professional Developer and command a respectable salary</li>
-            </ol>
+                <hr/>
+                <h5>Module Outcomes:</h5>
+                <p>Once you are done with this module you will be able to:</p>
+                <ol>
+                    <li>Build modern and flashy websites</li>
+                    <li>Build interactive web app front-end</li>
+                    <li>Integrate your app with any sort of back-end</li>
+                    <li>Connect your app with any third-party API (whether it be Google, Facebook, etc.</li>
+                    <li>Call yourself a Front-End Developer</li>
+                    <li>Market yourself as a Professional Developer and command a respectable salary</li>
+                </ol>
+            </div>
         </section>
     )
 }

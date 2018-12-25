@@ -20,34 +20,39 @@ const practice = [
 
 export default ()=>{
     return (
-        <section className="bg-light card p-4 p-md-5 mt-5">
-            <h2>
-                <small className="d-block text-muted">
-                    Module 4:
-                </small>
-                Mobile Development
-            </h2>
-            <p className="lead text-muted">
-                Learn how to build Mobile Applications for iPhone and Android with JavaScript. Use the same technology used to build Instagram, Facebook, Airbnb and Walmart mobile apps.
-            </p>
-            <p className="mb-0">
-                <strong>Time to completion:</strong> 2 weeks (Focus for week number 17 and 18)
-            </p>
-            <PrintTraining
-                title="Core Training"
-                data={courses} />
+        <section className="bg-light p-4 p-md-5 my-5 row border-top">
+            <div className="col-xl-4">
+                <h2>
+                    <small className="d-block text-muted">
+                        Module 4:
+                    </small>
+                    Mobile Development
+                </h2>
+                <p className="lead text-muted">
+                    Learn how to build Mobile Applications for iPhone and Android with JavaScript. Use the same technology used to build Instagram, Facebook, Airbnb and Walmart mobile apps.
+                </p>
+                <p>
+                    <strong>Time to completion:</strong><br/>
+                    2 weeks (Focus for week number 17 and 18)
+                </p>
+            </div>
+            <div className="pl-xl-5 col-xl-8">
+                <PrintTraining
+                    title="Core Training"
+                    data={courses} />
+                <hr/>
+                <PrintTraining
+                    title="Practice Projects"
+                    data={practice}
+                    maxWidth={190} />
 
-            <PrintTraining
-                title="Practice Projects"
-                data={practice}
-                maxWidth={190} />
-
-            <hr/>
-            <h5>Module Outcomes:</h5>
-            <p>Once you are done with this module you will be able to:</p>
-            <ol>
-                <li>Learn to build Mobile apps for Android &amp; iOS devices</li>
-            </ol>
+                <hr/>
+                <h5>Module Outcomes:</h5>
+                <p>Once you are done with this module you will be able to:</p>
+                <ol>
+                    <li>Learn to build Mobile apps for Android &amp; iOS devices</li>
+                </ol>
+            </div>
         </section>
     )
 }

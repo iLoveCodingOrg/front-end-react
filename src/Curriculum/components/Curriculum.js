@@ -16,7 +16,7 @@ export default ()=>{
                 <title>The Perfect Curriculum to become a Front-End/Full-Stack JavaScript Developer - iLoveCoding</title>
                 <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
             </Helmet>
-            <div className="align-self-center col-md-10 col-lg-8 mt-3">
+            <div className="container mt-3">
                 <h1>The Perfect Curriculum</h1>
                 <p className="lead">
                     Follow this curriculum to go from zero to a professional Front-End and/or Full-Stack JavaScript developer.

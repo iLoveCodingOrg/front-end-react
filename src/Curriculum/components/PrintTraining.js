@@ -8,7 +8,6 @@ export default function ({
 }) {
     return (
         <div>
-            <hr/>
             <h5>{title}</h5>
             <div className="d-flex flex-wrap">
                 {data.map(({ name, link, thumbSrc }, index) => {

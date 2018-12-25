@@ -47,25 +47,28 @@ const courses = [
 
 export default ()=>{
     return (
-        <section className="bg-light card p-4 p-md-5 mt-5">
-            <h2>
-                <small className="d-block text-muted">
-                    Electives:
-                </small>
-                Additional Training
-            </h2>
-            <p className="lead text-muted">
-                These are additional supplementary training. Choose the topic that spark your interest in any order.
-            </p>
-            <p className="">
-                <strong>Time investment</strong> Use 2 weeks to pickup additional skills by choosing from a training below (Focus for week number 19 and 20)
-            </p>
-            <p className="alert alert-info mb-0"><strong>Note:</strong> Be sure to read the prerequisite section under each training before starting the training.</p>
-
-            <PrintTraining
-                title="Core Training"
-                data={courses} />
-
+        <section className="bg-light p-4 p-md-5 my-5 row border-top">
+            <div className="col-xl-4">
+                <h2>
+                    <small className="d-block text-muted">
+                        Electives:
+                    </small>
+                    Additional Training
+                </h2>
+                <p className="lead text-muted">
+                    These are additional supplementary training. Choose the topic that spark your interest in any order.
+                </p>
+                <p>
+                    <strong>Time investment</strong><br/>
+                    Use 2 weeks to pickup additional skills by choosing from a training below (Focus for week number 19 and 20)
+                </p>
+                <p className="alert alert-info mb-0"><strong>Note:</strong> Be sure to read the prerequisite section under each training before starting the training.</p>
+            </div>
+            <div className="pl-xl-5 col-xl-8">
+                <PrintTraining
+                    title="Core Training"
+                    data={courses} />
+            </div>
         </section>
     )
 }
