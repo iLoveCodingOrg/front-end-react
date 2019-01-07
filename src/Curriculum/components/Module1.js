@@ -33,8 +33,8 @@ const practice = [
     },
     {
         name: 'Build a simple To-Do App with pure JavaScript',
-        link: '/courses/todo-js',
-        thumbSrc: '//a.ilovecoding.org/thumb/todoApp.png'
+        link: '/courses/js2/lessons/todolist-app',
+        thumbSrc: '//a.ilovecoding.org/thumb/todolist-app.jpg'
     },
     {
         name: 'Build a Rock Paper Scissor app with pure JavaScript',
@@ -44,7 +44,7 @@ const practice = [
     {
         name: 'Project: Build Your Own Snake Game with JavaScript',
         link: '/courses/snake-game',
-        thumbSrc: '//a.ilovecoding.org/thumb/snakegame1.png'
+        thumbSrc: '//a.ilovecoding.org/thumb/snakegame.jpg'
     },
 ]
 

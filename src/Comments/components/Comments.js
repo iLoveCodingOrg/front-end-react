@@ -8,14 +8,15 @@ class Comment extends React.Component{
     render(){
         const { of, id, title, url } = this.props
         // Fortunately we have two disqus installation.
-        // These are tthe two corresponding shortnames for them
+        // These are the two corresponding shortnames for them
         const shortname = (of === 'blog')? 'blogilovecodingorg' : 'ilovecoding'
+        const currentURL = window.location.href
         return (
             <div className="text-center mt-4">
                 <div className="alert">
                     🙌 Encourage me, share this:
                     &nbsp;
-                    <a className="text-truncate" href="{window.location.href}">{window.location.href}</a>
+                    <a className="text-truncate" href={currentURL}>{currentURL}</a>
                 </div>
                 <DiscussionEmbed shortname={shortname} config={{
                     identifier: id,
