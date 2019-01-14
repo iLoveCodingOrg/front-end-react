@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
+import PremiumSection from './PremiumSection'
 
 export default function (){
     return (
@@ -43,24 +44,17 @@ export default function (){
                     </div>
                     <div className="col-12 col-md-6 mt-5">
                         <div>
-                            <h4>Get Support / Get Answers</h4>
-                            <p className="text-muted">
-                                <a target="_blank"  href="https://www.facebook.com/groups/ilovecodingpro/">Join the mentor-moderated private facebook group</a>.
-                            </p>
-                            <p className="text-muted">
+                            <h4>Private Student Community</h4>
+                            <p>
+                                <a target="_blank"  href="https://join.slack.com/t/ilovecoding/shared_invite/enQtNTIzNTI3MDIyNTY1LWE2Njc4YmU0MDkyN2EzYzA0YWU1YTE5ODU1OTA1OWNlNWE3ZGE1ZTg2MjQ0MDIzMmM4MWMxM2NiNmVjYjQyZmY">Join the Mentor-Moderated Private Student Community (on Slack)</a>.
+                                <br/><br/>
                                 Ask questions and get help. Make a point to help others, this will not only help your peers, it will actually exercise your ability to solve problems.
-                            </p>
-                            <p className="text-muted">
-                                I have a <strong>"no student left behind"</strong> policy! and to support that, I have created this <a target="_blank"  href="https://www.facebook.com/groups/ilovecodingpro/">Private Facebook group</a> for you to keep in touch with me.
+                                <br/><br/>
+                                I have a <strong>"no-student left behind"</strong> policy! and to support that, I have created this <a target="_blank"  href="https://join.slack.com/t/ilovecoding/shared_invite/enQtNTIzNTI3MDIyNTY1LWE2Njc4YmU0MDkyN2EzYzA0YWU1YTE5ODU1OTA1OWNlNWE3ZGE1ZTg2MjQ0MDIzMmM4MWMxM2NiNmVjYjQyZmY">Private Student Community</a> for you to keep in touch with me.
                             </p>
                         </div>
 
-                        <div className="mt-5">
-                            <h4>Premium Support</h4>
-                            <ul className="list-unstyled">
-                                <li><Link to="/officehours">Schedule a call with Aziz</Link> <span className="badge badge-success">Premium</span></li>
-                            </ul>
-                        </div>
+                        <PremiumSection />
                     </div>
                 </div>
                 <div className="row">
