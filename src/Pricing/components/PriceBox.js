@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import ProDetails from './ProDetails'
 // import PlusDetails from './PlusDetails'
-// import PremiumDetails from './PremiumDetails'
+import PremiumDetails from './PremiumDetails'
 
 class PriceBox extends React.Component {
     constructor(props){
@@ -16,10 +16,11 @@ class PriceBox extends React.Component {
         const wholeNumber = Math.floor(number)
         // const decimal = number.toFixed(2).toString().split('.')[1] || '00'
         return (
-            <div>
-                <sup className="h3 ">$</sup>
-                {wholeNumber}
+            <div className="h4">
+                <sup className="h3">$</sup>
+                <span className="h1">{wholeNumber}</span>
                 {/* <sup className="decimal h2">.{decimal}</sup> */}
+                <span className="text-secondary">/mo</span>
             </div>
         )
     }
@@ -48,32 +49,32 @@ class PriceBox extends React.Component {
                 className="card mx-2 mb-4 mb-md-0">
                 <div className="card-body align-self-center p-4">
                     { 
-                        isPopular? 
+                        isPopular?
                         <h5 className="position-absolute" style={{ top: "5px", right: "5px" }}>
                             <span className="badge badge-warning">Recommended</span>
                         </h5>
                         : null
                     }
-                    <div className="my-2 text-center font-weight-light">
-                        <span className="h4">{name}</span>
-                        <br/>
-                        <span className="lead em">{desc}</span>
+                    <div className="h4">
+                        <span className="badge badge-pill badge-light">{name}</span>
                     </div>
-                    <h1 className="headline card-title pricing-card-title text-center mb-0">
+                    {/* <br/>
+                    <span className="lead em">{desc}</span> */}
+                    <div className="card-title pricing-card-title mb-0">
                         {this.renderPrice(price)}
-                    </h1>
+                    </div>
 
-                    <div className="text-muted text-center mb-3">
+                    <div className="text-muted mb-3">
                         {terms}
                         <br/>
                         {terms2}
                     </div>
 
-                    {/* {this.renderCTA()} */}
+                    {this.renderCTA()}
 
                     { planType === 'pro'? <ProDetails />: null}
                     {/* { planType === 'plus'? <PlusDetails />: null} */}
-                    {/* { planType === 'premium'? <PremiumDetails />: null} */}
+                    { planType === 'premium'? <PremiumDetails />: null}
 
                     {this.renderCTA()}
 
