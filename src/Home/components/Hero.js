@@ -4,6 +4,8 @@ import HomeForm from './HomeForm'
 
 import homePageImage from '../../_app/images/home-page-people.jpg'
 import homePageImage2 from '../../_app/images/skill-path.png'
+import { Video } from '../../Video'
+
 class Hero extends React.Component{
     constructor(props){
         super(props)
@@ -18,10 +20,9 @@ class Hero extends React.Component{
                 >
                 <div className="row flex-md-row-reverse">
                     <div className="col-12 col-md-5 col-lg-5">
-                        {/* <img className="w-100" src={homePageImage} alt="People"/> */}
-                        <img className="w-100" src={homePageImage2} alt="People"/>
+                        <Video videoSource="308929498"/>
                     </div>
-                    <div className="col-12 col-md-7">
+                    <div className="col-12 col-md-7 justify-content-center">
                         {/* <h1 className="">Let me guide you!</h1> */}
                         {/* <h1 className="">Want to become a developer?</h1> */}
                         {/* <h1 className="">Let me guide you!</h1> */}
@@ -30,6 +31,8 @@ class Hero extends React.Component{
                         <p className="mt-4 lead">
                             Let me give you a complete step-by-step guide to becoming a confident, job-ready Front-End and/or Full-Stack Developer.
                         </p>
+                    </div>
+                    <div className="col-12">
                         <p className="lead">
                             <strong>Get started with my FREE course:</strong>
                         </p>
