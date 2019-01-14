@@ -147,7 +147,7 @@ class Checkout extends React.Component{
                                             isDisabled={this.props.isLoggedIn}
                                             userInfo={this.state.userInfo}
                                             setUserInfo={this.setUserInfo}
-                                            />
+                                        />
 
                                         <hr className="mb-4" />
                                         <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
@@ -155,11 +155,11 @@ class Checkout extends React.Component{
                                             price={price}
                                             billingDuration={billingDuration}
                                             billingCycles={billingCycles}
-                                            />
+                                        />
                                         <button
                                             className="btn btn-primary btn-lg btn-block"
                                             type="submit"
-                                            >
+                                        >
                                             Complete My Purchase
                                         </button>
                                         <div className="d-block text-center small mt-1">
