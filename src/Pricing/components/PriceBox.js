@@ -55,19 +55,21 @@ class PriceBox extends React.Component {
                         </h5>
                         : null
                     }
-                    <div className="h4">
-                        <span className="badge badge-pill badge-light">{name}</span>
-                    </div>
-                    {/* <br/>
-                    <span className="lead em">{desc}</span> */}
-                    <div className="card-title pricing-card-title mb-0">
-                        {this.renderPrice(price)}
-                    </div>
+                    <div className="text-center">
+                        <div className="h4">
+                            <span className="badge badge-pill badge-light border">{name}</span>
+                        </div>
+                        {/* <br/>
+                        <span className="lead em">{desc}</span> */}
+                        <div className="card-title pricing-card-title mb-0">
+                            {this.renderPrice(price)}
+                        </div>
 
-                    <div className="text-muted mb-3">
-                        {terms}
-                        <br/>
-                        {terms2}
+                        <div className="text-muted mb-3">
+                            {terms}
+                            <br/>
+                            {terms2}
+                        </div>
                     </div>
 
                     {this.renderCTA()}
