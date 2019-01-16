@@ -34,10 +34,16 @@ export default function() {
                 
                 <h3 className="mt-5">Can I get a trial or see sample training?</h3>
                 <p>
-                    Two of our courses are completely free <Link to="/courses/perfect-path">The Perfect Path to Becoming a Job-Ready Developer</Link>, and <Link to="/courses/htmlcss2">Learn HTML &amp; CSS Correctly</Link>
+                    Two of our courses are completely free <Link to="/courses/perfect-path">The Perfect Path to Becoming a Job-Ready Developer</Link>, and <Link to="/courses/htmlcss2">Learn HTML &amp; CSS Correctly</Link>.
                     <br/><br/>
                     Try these courses, if you like my way of teaching and the topics covered, then we think you'll like and benefit from the complete training.
                 </p>
+
+                <h3 className="mt-5">I have no programming experience or CS degree, will it work for me?</h3>
+                <p>
+                    Yes! iLoveCoding is built for people with no-programming background or a CS degree (like me). iLoveCoding works best for 4 kinds of people (1) Beginners, (2) Junior and Senior Developers, (3) Developers from a different domain and (4) Entrepreneurs.
+                </p>
+
 
                 <h3 className="mt-5">Why is the cost so low?</h3>
                 <p>
@@ -45,7 +51,9 @@ export default function() {
                 </p>
 
                 <h3 className="mt-5">How can I get lifetime access to the content?</h3>
-                <p>We do not offer lifetime subscription. As long as your subscription is active, you will get unlimited access to your member privileges.</p>
+                <p>
+                    We do not offer lifetime subscription. As long as your subscription is active, you will get unlimited access to your member privileges.
+                </p>
 
                 <h3 className="mt-5">Will I be able to get a job?</h3>
                 <p>
@@ -61,14 +69,20 @@ export default function() {
 
                 <h3 className="mt-5">How is iLoveCoding better than a bootcamp/other courses?</h3>
                 <p>
-                    iLoveCoding brings the best of both worlds - Professional mentor-ship of a bootcamp, and affordability of online courses.
+                    iLoveCoding brings the best of both worlds - Professional mentorship of a bootcamp, and affordability of online courses.
                 </p>
 
                 <h3 className="mt-5">Why should I pay when so much information is free online?</h3>
                 <p>
-                    You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, real-world projects and professional mentor-ship. iLoveCoding puts everything together in a systematic
+                    You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, real-world projects and professional mentor-ship. iLoveCoding puts everything together in a systematic.
                 </p>
 
+                <h3 className="mt-5">How much time will it take?</h3>
+                <p>
+                    If you are a total beginner, it will take you 8 months of part-time learning (90 minutes a day), or 4 months of full-time learning (4 hours a day). The learning time should be quality focused work, which means you should deliberately consume the content and apply what is taught by building.
+                    <br/><br/>
+                    For best results, ask a bunch of questions, follow the path, and write a lot of code, no-matter how bad. Your initial work will be horrible. That is totally normal.
+                </p>
             </div>
         </div>
     )
