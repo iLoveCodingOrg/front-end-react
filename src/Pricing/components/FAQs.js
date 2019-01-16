@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 export default function() {
     return (
         <div className="faqs d-flex flex-column align-items-center">
-            <div className="col-md-5 mr-5">
-                <h2 className="h1 mb-4 text-center">Common Questions</h2>
+            <div className="col-sm-9 col-md-6 col-lg-6 col-xl-5">
+                <h2 className="mb-4 text-center">Common Questions</h2>
                 <hr/>
 
                 <h3 className="mt-5">Can I get a discount?</h3>

@@ -31,7 +31,7 @@ export default ()=>{
             <div className="mb-2 strong">Premium Support:</div>
             
             <div>
-                <CheckMark />  Weekly live group call (with mentor)
+                <CheckMark /> Weekly live group call (with mentor)
             </div>
         </div>
     )

@@ -16,7 +16,7 @@ class PriceBox extends React.Component {
         const wholeNumber = Math.floor(number)
         // const decimal = number.toFixed(2).toString().split('.')[1] || '00'
         return (
-            <div className="h4">
+            <div className="h4x">
                 <sup className="h3">$</sup>
                 <span className="h1">{wholeNumber}</span>
                 {/* <sup className="decimal h2">.{decimal}</sup> */}

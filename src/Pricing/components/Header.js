@@ -9,17 +9,14 @@ class Header extends React.Component{
             <section className="d-flex justify-content-center">
                 <div className="container">
                     <div className="text-center">
-                        <h1 className="headline line-height-1">
-                            Straight Forward Pricing
-                            <br/>
-                            <span className="
-                                small
-                                em
-                                font-weight-light
-                                text-muted">
-                                for a career changing training!
-                            </span>
+                        <h1>
+                            Get the Complete Training &amp; Mentor Support.
                         </h1>
+                        <p className="lead">
+                            Become a <u>Job-Ready</u> Front-End and Full-Stack JavaScript Developer with Confidence.
+                            <br/>
+                            No more confusing explanations and boring theory. Learn while building real-world projects.
+                        </p>
                     </div>
                 </div>
             </section>
