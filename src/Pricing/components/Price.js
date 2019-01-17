@@ -137,7 +137,11 @@ class Price extends React.Component {
                         {this.renderPriceBox(data.premium[selected])}
                     </div>
                     <div className="d-flex flex-wrap my-4">
-                        <p className="m-2">⚡️ Cancel Anytime.</p>
+                        <p>
+                            ⚡️ Cancel Anytime.
+                            &nbsp; &nbsp;
+                            🛡️ 7-Day Full Refund Policy.
+                        </p>
                     </div>
                 </div>
             </section>

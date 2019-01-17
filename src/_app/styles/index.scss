@@ -4,6 +4,10 @@
 @import "./loading-spinner";
 @import "./nav";
 
+#pricing-page{
+  scroll-behavior: smooth;
+}
+
 main{
   -webkit-font-smoothing: antialiased;
 }

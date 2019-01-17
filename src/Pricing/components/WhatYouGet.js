@@ -4,25 +4,31 @@ import community from '../../_app/images/get/community.jpg'
 import mentorship from '../../_app/images/get/mentorship.jpg'
 import { CheckMark } from '../../_common'
 import { Link } from 'react-router-dom'
+import Video from '../../Video/components/Video'
 
 export default function (){
     return (
     <div className="d-flex flex-column align-items-center">
-        <div className="col-md-10 col-lg-9 col-xl-6 text-center mb-4">
-            <h2>What do you get?</h2>
-            <p className="lead">
-                With any iLoveCoding membership you get access to Complete Training, and Mentor-Moderated Private Student Community
-            </p>
+        <div className="col-md-10 col-lg-8 row mb-4">
+            <div className="col-md-4">
+                <Video videoSource="311500556" />
+            </div>
+            <div className="col-md-8">
+                <h2>What do you get?</h2>
+                <p className="lead">
+                    With any iLoveCoding membership you get access to Complete Training, and Mentor-Moderated Private Student Community
+                </p>
+            </div>
         </div>
 
         <div className="col-md-10 col-lg-9 flex-column align-items-center">
-            <div className="bg-white rounded p-5">
-                <div className="row mb-5">
+            <div className="bg-white rounded p-6">
+                <div className="row mb-7">
                     <div className="col-lg-4 text-center mb-4 mb-lg-0">
                         <img src={modules} alt="All Modules" className="w-100" style={{maxWidth: '300px'}} />
                     </div>
                     <div className="col-lg-8 pl-lg-5">
-                        <h4>1. Complete Step-by-Step Training (<Link to="curriculum">See Full Curriculum</Link>)</h4>
+                        <h4>(A) Complete Step-by-Step Training (<Link to="curriculum">See Full Curriculum</Link>)</h4>
                         <p>
                             40+ hours of video training organized such that it is easy to make progress.  
                         </p>
@@ -38,12 +44,12 @@ export default function (){
                     </div>
                 </div>
 
-                <div className="row mb-5">
+                <div className="row mb-7">
                     <div className="col-lg-4 text-center mb-4 mb-lg-0">
                         <img src={community} alt="Slack Student Community" className="border w-100" style={{maxWidth: '300px'}} />
                     </div>
                     <div className="col-lg-8 pl-lg-5">
-                        <h4>2. Mentor-Moderated Student Community</h4>
+                        <h4>(B) Mentor-Moderated Student Community</h4>
                         <p>Never get stuck again! Get answers to your specific questions from your peers and mentor in the member-only slack channel.</p>
                         
                         <CheckMark /> Get solution to your problem<br/>
@@ -57,7 +63,7 @@ export default function (){
                         <img src={mentorship} alt="Live Mentorship" className="border w-100" style={{maxWidth: '300px'}} />
                     </div>
                     <div className="col-lg-8 pl-lg-5">
-                        <h4>3. Weekly Group Calls with Mentor <span className="badge badge-success">Premium</span></h4>
+                        <h4>(C) Weekly Group Calls with Mentor <span className="badge badge-success">Premium</span></h4>
                         <p>Every week you join a live group call with your mentor.</p>
                         
                         <CheckMark /> Work on your code problems live<br/>
