@@ -27,4 +27,8 @@ Video.propTypes = {
     videoSource: PropTypes.string.isRequired
 }
 
+Video.defaultProps = {
+    callMarkAsComplete: ()=>{}
+}
+
 export default Video

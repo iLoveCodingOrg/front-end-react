@@ -4,33 +4,34 @@ import { CheckMark } from '../../_common'
 export default ()=>{
     return (
         <div className="my-3">
-            <div className="mb-2 strong">Unlimited Access:</div>
+            <div className="mb-2 strong">Unlimited Access to Training:</div>
             <div>
-                <CheckMark />
-                Unlimited access to all courses &amp; lessons
+                <CheckMark /> Access to all Courses and Practice Projects
             </div>
             <div>
-                <CheckMark />
-                Unlimited access  to source code
+                <CheckMark /> Downloadable Source Code
             </div>
             <div>
-                <CheckMark />
-                Unlimited access  to Q &amp; A section
+                <CheckMark /> Downloadable Cheat Sheets
             </div>
             <div>
-                <CheckMark />
-                Unlimited access to all future training
+                <CheckMark /> Access to Homework
             </div>
 
             <br/>
-            <div className="mb-2 strong">➕ Support:</div>
+            <div className="mb-2 strong">Private Student Community:</div>
             <div>
-                <CheckMark />
-                Mentor Moderated Private Facebook Group
+                <CheckMark /> Get help from peers and mentors
             </div>
             <div>
-                <CheckMark />
-                Connect with peers
+                <CheckMark /> All questions answered
+            </div>
+            
+            <br/>
+            <div className="mb-2 strong">Premium Support:</div>
+            
+            <div>
+                <span className="oi oi-x text-danger" title="x" aria-hidden="true" /> Weekly live group call (with mentor)
             </div>
         </div>
     )

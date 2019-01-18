@@ -33,3 +33,42 @@ a{
 .repeat-box-pattern {
   background: url('../images/box-pattern.gif')
 }
+
+.m-6{
+  margin: 4em !important;
+}
+.m-7{
+  margin: 5em !important;
+}
+.mt-6, .my-6{
+  margin-top: 4em !important;
+}
+.mt-7, .my-7{
+  margin-top: 5em !important;
+}
+.mb-6, .my-6{
+  margin-bottom: 4em !important;
+}
+.mb-7, .my-7{
+  margin-bottom: 5em !important;
+}
+
+
+.p-6{
+  padding: 4em !important;
+}
+.p-7{
+  padding: 5em !important;
+}
+.pt-6, .py-6{
+  padding-top: 4em !important;
+}
+.pt-7, .py-7{
+  padding-top: 5em !important;
+}
+.pb-6, .py-6{
+  padding-bottom: 4em !important;
+}
+.pb-7, .py-7{
+  padding-bottom: 5em !important;
+}

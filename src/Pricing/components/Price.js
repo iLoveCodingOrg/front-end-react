@@ -3,68 +3,51 @@ import { connect } from 'react-redux'
 
 import { selectors } from '../../Offer'
 import PriceBox from './PriceBox'
+import Switch from './Switch'
 
 const dataOriginal = {
     pro: {
         monthly: {
             planType: 'pro',
-            name: 'Pro - Monthly',
+            name: 'PRO',
             // desc: 'Self-Paced Structured Learning',
             price: 37,
-            terms: 'per month/paid monthly',
-            terms2: '(Its like paying $1.23/day)',
+            terms: 'Paid Monthly',
+            // terms2: 'Complete training to job-ready',
             link: '/checkout/ilc-pro-37m',
         },
-        yearly: {
+        "6-month": {
             planType: 'pro',
-            name: 'Pro - Yearly',
+            name: 'PRO',
             // desc: 'Self-Paced Structured Learning',
-            price: 370,
-            terms: '(Save 16.67%) per year/paid yearly',
-            terms2: '(Its like paying $1.01/day)',
-            link: '/checkout/ilc-pro-370y',
-            isPopular: true
+            price: 25,
+            terms: 'Billed $150 Every 6 Months',
+            // terms2: 'Complete training to job-ready',
+            link: '/checkout/ilc-pro-150sixm',
+            isPopular: false
         }
     },
-    // plus: {
-    //     monthly: {
-    //         planType: 'plus',
-    //         name: 'Plus Monthly',
-    //         price: 74,
-    //         terms: 'per month, paid monthly',
-    //         link: '/checkout/ilc-plus-74m',
-    //         isPopular: true
-    //     },
-    //     yearly: {
-    //         planType: 'plus',
-    //         name: 'Plus Yearly',
-    //         price: 49.58,
-    //         terms: 'per month, paid yearly',
-    //         link: '/checkout/ilc-plus-594y',
-    //         isPopular: true
-    //     }
-    // },
-    // premium: {
-    //     monthly: {
-    //         planType: 'premium',
-    //         name: 'Premium',
-    //         desc: 'Learn with 1:1 Mentor Support',
-    //         price: 370,
-    //         terms: 'per month, paid monthly',
-    //         link: '/checkout/ilc-premium-299m',
-    //         isClosed: true
-    //     },
-    //     yearly: {
-    //         planType: 'premium',
-    //         name: 'Premium',
-    //         desc: 'Learn with 1:1 Mentor Support',
-    //         price: 247.90,
-    //         terms: 'per month, paid yearly',
-    //         terms2: '($2974.80/year - after 33% discount)',
-    //         link: '/checkout/ilc-premium-2403y',
-    //         isClosed: true
-    //     }
-    // }
+    premium: {
+        monthly: {
+            planType: 'premium',
+            name: 'PREMIUM',
+            // desc: 'Self-Paced Structured Learning',
+            price: 99,
+            terms: 'Paid Monthly',
+            // terms2: 'Complete training + weekly group calls',
+            link: '/checkout/ilc-premium-99m',
+        },
+        "6-month": {
+            planType: 'premium',
+            name: 'PREMIUM',
+            // desc: 'Self-Paced Structured Learning',
+            price: 67,
+            terms: 'Billed $400 Every 6 Months',
+            // terms2: 'Complete training + weekly group calls',
+            link: '/checkout/ilc-premium-400sixm',
+            isPopular: false
+        }
+    }
 }
 
 const data30 = {
@@ -78,7 +61,7 @@ class Price extends React.Component {
         this.handleSwitch = this.handleSwitch.bind(this)
 
         this.state = {
-            selected: 'yearly'
+            selected: 'monthly'
         }
     }
     handleSwitch(event){
@@ -112,6 +95,7 @@ class Price extends React.Component {
         )
     }
     render(){
+        const { selected } = this.state
         let data
         if(this.props.isOfferValid){
             data = data30
@@ -122,26 +106,42 @@ class Price extends React.Component {
         return (
             <section className="d-flex justify-content-center">
                 <div className="d-flex flex-column align-items-center">
-                    {/* <div className="position-relative mb-3 mx-sm-auto mr-auto">
+                    <div className="position-relative mb-3 mx-sm-auto mr-auto">
                         <Switch
                             style={{ maxWidth: '400px', minWidth: '320px' }}
                             onChange={this.handleSwitch}
-                            selected={this.state.selected}
+                            selected={selected}
+                            options={[{
+                                name: "monthly",
+                                label: "Monthly",
+                                css: {
+                                    width: "72px",
+                                    left: "2px",
+                                }
+                            },
+                            {
+                                name: "6-month",
+                                label: "6 Month (Save 32%)",
+                                css: {
+                                    width: "155px",
+                                    left: "80px",
+                                }
+                            }]}
                         />
-                        {
-                            this.state.selected === 'yearly'?
-                            <h5 className="position-absolute" style={{ right: "-127px", bottom: 0 }}>
-                                <div className="badge badge-orange"><span className="oi oi-arrow-thick-left" /> 4 Months Free</div>
-                            </h5>
-                            : null
-                        }
-                    </div> */}
+                        <h5 className="position-absolute" style={{ right: "-133px", bottom: 0 }}>
+                            <div className="badge badge-orange"><span className="oi oi-arrow-thick-left" /> Save up to 32%</div>
+                        </h5>
+                    </div>
                     <div className="d-flex flex-wrap justify-content-center">
-                        {this.renderPriceBox(data.pro['yearly'])}
-                        {this.renderPriceBox(data.pro['monthly'])}
+                        {this.renderPriceBox(data.pro[selected])}
+                        {this.renderPriceBox(data.premium[selected])}
                     </div>
                     <div className="d-flex flex-wrap my-4">
-                        <p className="m-2">⚡️ Cancel Anytime.</p>
+                        <p>
+                            ⚡️ Cancel Anytime.
+                            &nbsp; &nbsp;
+                            🛡️ 7-Day Full Refund Policy.
+                        </p>
                     </div>
                 </div>
             </section>

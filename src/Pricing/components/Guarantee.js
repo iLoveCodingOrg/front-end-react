@@ -3,17 +3,15 @@ import React from 'react'
 export default function (){
     return (
     <div className="d-flex justify-content-center">
-        <div className="col-md-10 col-lg-8">
+        <div className="col-md-6 col-lg-6 col-xl-5">
             <div className="card p-3 alert-warning">
-                <h3 className="text-center text-dark">“What if this doesn't work for me?”</h3>
+                <h3 className="text-center text-dark">🛡️ 7-Day Full-Refund Policy</h3>
                 <p>
-                    If you follow the instructions and put in honest time and effort, we guarantee you will become a respectable software developer.
-                </p>
-                <p>
-                    If you are not happy with the training program for any reason what so ever, please request a refund within the first 30 days of your purchase.
-                </p>
-                <p>
-                    We’ll always ask what we could’ve done better so we don't make that mistake again.
+                    If you are not happy with your purchase for any reason whatsoever, please request a refund by emailing <u>support@ilovecoding.org</u> within the first 7-days of your purchase, and we will prompty issue a full-refund.
+                    <br/><br/>
+                    We only want to keep your money if you think we have earned it.
+                    <br/><br/>
+                    If you cancel after the first 7-days, you will continue to have access for the current month, and you will not be billed any further.
                 </p>
             </div>
         </div>

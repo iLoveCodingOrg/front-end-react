@@ -17,7 +17,7 @@ export default function () {
                     <div>
                         <h6 className="my-0">🚀 Connect with Mentor</h6>
                         <small className="text-muted">
-                            Access to a private mentor-moderated Facebook Group. Ask question and get help when you are stuck.
+                            Access to a private Mentor-Moderated Student Community. Ask question and get help when you are stuck.
                         </small>
                     </div>
                 </li>
@@ -25,7 +25,7 @@ export default function () {
                     <div>
                         <h6 className="my-0">🙌 Student Community</h6>
                         <small className="text-muted">
-                            Connect &amp; learn from a community of students who share your learn-to-code journey. Talk to them them via the Member-only Facebook Group.
+                            Connect &amp; learn from a community of students who share your learn-to-code journey. Talk to them them via the Private Student Community.
                         </small>
                     </div>
                 </li>

@@ -66,7 +66,7 @@ Switch.defaultProps = {
     },
     {
         name: "yearly",
-        label: "Yearly (Save 33%)",
+        label: "Yearly (Save 32%)",
         css: {
             width: "139px",
             left: "80px",
