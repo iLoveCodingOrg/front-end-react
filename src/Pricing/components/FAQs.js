@@ -1,5 +1,5 @@
 import React from 'react'
-import './FAQS.scss'
+import './FAQs.scss'
 
 import { Link } from 'react-router-dom'
 
