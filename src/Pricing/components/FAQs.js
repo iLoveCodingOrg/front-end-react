@@ -12,7 +12,7 @@ export default function() {
 
                 <h3 className="mt-5">Can I get a discount?</h3>
                 <p>
-                    No! Sorry about that. The price of iLoveCoding is kept low so anyone can afford it. The cost of this training is less than the price of coffee per day. ☕. Remember! An alternative training at a bootcamp would cost way more.
+                    No! Sorry about that. The price of iLoveCoding is kept low so anyone can afford it. The cost of this training is less than the price of a coffee per day. ☕. Remember! An alternative training at a bootcamp would cost way more.
                 </p>
 
 
@@ -20,7 +20,7 @@ export default function() {
                 <p>
                     <strong>All plans are backed by a 7-day full refund policy</strong>. Try iLoveCoding, and if for any reason you are not satisfied, email us and request a refund within the first 7-days of your subscription. We only want to keep your money if you think we have earned it.
                     <br/><br/>
-                    If you prepaid for an year or 6-months, we'll refund any unused months.
+                    If you prepaid for a year or 6-months, we'll refund any unused months.
                 </p>
 
                 <h3 className="mt-5">Can I cancel anytime?</h3>
@@ -29,12 +29,12 @@ export default function() {
                     <br/><br/>
                     If you cancel after the first 7-days, you'll continue to have access for the current month, and you will not be billed any further.
                     <br/><br/>
-                    If you prepaid for an year or 6-months, we'll refund any unused months.
+                    If you prepaid for a year or 6-months, we'll refund any unused months.
                 </p>
                 
                 <h3 className="mt-5">Can I get a trial or see sample training?</h3>
                 <p>
-                    Two of our courses are completely free <Link to="/courses/perfect-path">The Perfect Path to Becoming a Job-Ready Developer</Link>, and <Link to="/courses/htmlcss2">Learn HTML &amp; CSS Correctly</Link>.
+                    Two of our courses are completely free: <Link to="/courses/perfect-path">The Perfect Path to Becoming a Job-Ready Developer</Link>, and <Link to="/courses/htmlcss2">Learn HTML &amp; CSS Correctly</Link>.
                     <br/><br/>
                     Try these courses, if you like my way of teaching and the topics covered, then we think you'll like and benefit from the complete training.
                 </p>
@@ -74,7 +74,7 @@ export default function() {
 
                 <h3 className="mt-5">Why should I pay when so much information is free online?</h3>
                 <p>
-                    You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, real-world projects and professional mentor-ship. iLoveCoding puts everything together in a systematic.
+                    You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, real-world projects and professional mentor-ship. iLoveCoding puts everything together in a systematic way.
                 </p>
 
                 <h3 className="mt-5">How much time will it take?</h3>

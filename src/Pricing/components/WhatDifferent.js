@@ -55,7 +55,7 @@ export default function (){
                             ❓ Maybe <br/>
                             Some bootcamps focus on the wrong technologies like Ruby, Rails, Python and the like, and only lightly touch the important topics.
                         </td>
-                        <td>❓ Maybe<br/> Student has to find the right material constantly.</td>
+                        <td>❓ Maybe<br/> Students have to find the right material by themselves constantly.</td>
                     </tr>
                     <tr className="bg-light">
                         <td className="text-right"><strong>Live mentor support</strong></td>

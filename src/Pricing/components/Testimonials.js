@@ -3,7 +3,7 @@ import PrintReviews from '../../Reviews/components/PrintReviews'
 const data = [
     {
         title: 'You’re hands down the best teacher I’ve found (in 3–4 years)',
-        body: 'I REALLY — want to learn more stuff from you The best thing about iLoveCoding is how great a teacher Aziz is. You know how some people are just natural teachers? That’s what you get on this site. He’s articulate, doesn’t assume you’re coming in knowing anything, and builds your knowledge from the ground up.',
+        body: 'I REALLY — want to learn more stuff from you. The best thing about iLoveCoding is how great a teacher Aziz is. You know how some people are just natural teachers? That’s what you get on this site. He’s articulate, doesn’t assume you’re coming in knowing anything, and builds your knowledge from the ground up.',
         thumbSrc: '//a.ilovecoding.org/img/_reviews/kevin-b.jpeg',
         credit1: 'Kevin B. (Currently a User Interface Developer) ',
         credit2: 'from St. Louis, MO'

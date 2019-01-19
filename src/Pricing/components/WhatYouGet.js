@@ -37,7 +37,7 @@ export default function (){
                         <CheckMark /> Module 2: Modern Front-End Development<br/>
                         <CheckMark /> Module 3: Back-end Development and Databases<br/>
                         <CheckMark /> Module 4: Mobile Development (iOS and Android)<br/>
-                        <CheckMark /> Module 5: Electives (Git, Working with API, etc)<br/>
+                        <CheckMark /> Module 5: Electives (Git, Working with API, etc.)<br/>
                         <CheckMark /> Downloadable Cheat Sheets<br/>
                         <CheckMark /> Access to Homework<br/>
                         <Link to="curriculum">See Full Curriculum</Link>
