@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import HomeForm from './HomeForm'
 
 import homePageImage from '../../_app/images/home-page-people.jpg'
+import homePageImage2 from '../../_app/images/skill-path.png'
+import { Video } from '../../Video'
+
 class Hero extends React.Component{
     constructor(props){
         super(props)
@@ -15,7 +18,28 @@ class Hero extends React.Component{
                     mt-md-5
                     "
                 >
-                <div className="row flex-lg-row-reverse">
+                <div className="row flex-md-row-reverse">
+                    <div className="col-12 col-md-5 col-lg-5">
+                        <Video videoSource="308929498"/>
+                    </div>
+                    <div className="col-12 col-md-7 justify-content-center">
+                        {/* <h1 className="">Let me guide you!</h1> */}
+                        {/* <h1 className="">Want to become a developer?</h1> */}
+                        {/* <h1 className="">Let me guide you!</h1> */}
+                        {/* <h1 className="strong">Sick of cheap courses and expensive bootcamps?</h1> */}
+                        <h1 className="strong">Skip the cheap courses and the expensive bootcamps.</h1>
+                        <p className="mt-4 lead">
+                            Let me give you a complete step-by-step guide to becoming a confident, job-ready Front-End and/or Full-Stack Developer.
+                        </p>
+                    </div>
+                    <div className="col-12">
+                        <p className="lead">
+                            <strong>Get started with my FREE course:</strong>
+                        </p>
+                        <HomeForm />
+                    </div>
+                </div>
+                {/* <div className="row flex-lg-row-reverse">
                     <div className="col-12 col-md-7 col-lg-6">
                         <img className="w-100" src={homePageImage} alt="People"/>
                     </div>
@@ -38,7 +62,7 @@ class Hero extends React.Component{
                             The good news? <Link to="/pages/how-it-works" className="u">iLoveCoding is different</Link>
                         </p>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
