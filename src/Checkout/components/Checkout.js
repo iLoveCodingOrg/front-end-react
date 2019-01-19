@@ -163,9 +163,14 @@ class Checkout extends React.Component{
                                             Complete My Purchase
                                         </button>
                                         <div className="d-block text-center small mt-1">
-                                            Payment powered by Braintree (a Paypal company) - 🔒 Your information is secure
+                                            Payment powered by Braintree (a PayPal company) - 🔒 Your information is secure
                                         </div>
                                     </form>
+                                    <div class="text-center mt-3 mb-5">
+                                        ⚡️ Cancel Anytime.
+                                        &nbsp; &nbsp;
+                                        🛡️ 7-Day Full Refund Policy.
+                                    </div>
                                 </div>
                                 <div className="col-md-4 order-md-2 mb-4 px-4">
                                     <WhatYouGet />
