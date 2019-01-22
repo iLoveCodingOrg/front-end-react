@@ -10,13 +10,13 @@ export default function (){
     return (
     <div className="d-flex flex-column align-items-center">
         <div className="col-md-10 col-lg-8 row mb-4">
-            <div className="col-md-4">
+            <div className="col-md-5">
                 <Video videoSource="311500556" />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
                 <h2>What do you get?</h2>
                 <p className="lead">
-                    With any iLoveCoding membership you get access to Complete Training, and Mentor-Moderated Private Student Community
+                    With any iLoveCoding paid membership you get access to Complete Training, and Mentor-Moderated Private Student Community
                 </p>
             </div>
         </div>

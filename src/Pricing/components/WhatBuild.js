@@ -6,10 +6,10 @@ export default function (){
     return (
     <div className="d-flex flex-column align-items-center">
         <div className="col-md-10 col-lg-8 row mb-4">
-            <div className="col-md-4">
+            <div className="col-md-6">
                 <Video videoSource="311500669" />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-6">
                 <h2>What will you build?</h2>
                 <p className="lead">
                     With iLoveCoding your focus will be to apply your knowledge; For that we will build a bunch of projects so you learn and build your portfolio in the process.

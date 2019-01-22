@@ -6,13 +6,13 @@ export default function (){
     return (
     <div className="d-flex flex-column align-items-center">
         <div className="col-md-10 col-lg-8 row mb-4">
-            <div className="col-md-4">
+            <div className="col-md-5">
                 <Video videoSource="311500900" />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
                 <h2>How is iLoveCoding Different?</h2>
                 <p className="lead">
-                    iLoveCoding gives more value for your money than anyone else we know. See the value comparision chart below:
+                    iLoveCoding gives more value for your money than anyone else we know. See the value comparison chart below:
                 </p>
             </div>
         </div>
@@ -22,7 +22,11 @@ export default function (){
                 <thead className="bg-gray-200 bold strong">
                     <tr>
                         <th width="20%" className=""></th>
-                        <th width="27%" className="h5 align-middle border-right border-left border-primary alert-primary">iLoveCoding</th>
+                        <th width="27%" className="h5 align-middle border-right border-left border-primary alert-primary">
+                            iLoveCoding
+                            <br/>
+                            <small>(Pro - Premium)</small>
+                        </th>
                         <th width="27%" className="h5 align-middle">
                             Expensive Bootcamps
                             <br/>
