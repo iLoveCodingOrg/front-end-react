@@ -29,7 +29,7 @@ class Hero extends React.Component{
                         {/* <h1 className="strong">Sick of cheap courses and expensive bootcamps?</h1> */}
                         <h1 className="strong">Skip the cheap courses and the expensive bootcamps.</h1>
                         <p className="mt-4 lead">
-                            Let me give you a complete step-by-step guide to becoming a confident, job-ready Front-End and/or Full-Stack Developer.
+                            Let me give you a complete step-by-step guide to becoming a confident, job-ready Front-End and/or Full-Stack JavaScript Developer.
                         </p>
                     </div>
                     <div className="col-12">
