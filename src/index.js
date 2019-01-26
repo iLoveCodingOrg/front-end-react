@@ -31,6 +31,7 @@ import {
     AsyncNotFound as NotFound
 } from './Page'
 import { AsyncLogin as Login } from './Login'
+import { AsyncSignup as Signup } from './Signup'
 import { AsyncCheckout as Checkout } from './Checkout'
 import { AsyncVerifyEmail as VerifyEmail } from './VerifyEmail'
 import {
@@ -93,6 +94,11 @@ function renderApp(){
                                     strict
                                     path="/login"
                                     component={Login} />
+                                <Route
+                                    exact
+                                    strict
+                                    path="/signup"
+                                    component={Signup} />
                                 <Route
                                     exact
                                     strict
