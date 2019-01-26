@@ -29,18 +29,14 @@ class SocialProof extends React.Component {
     }
     render() {
         return (
-            <div className="my-5 py-5 container-fluid border-top">
-                <div className="row">
-                    <div className="col-12">
-                        <h3 className="text-center mb-4"><u>4744 students</u> learned from iLoveCoding last month;
+                    <div className="">
+                        <h3 className="text-center mb-4"><u>5263 students</u> learned coding from iLoveCoding last month;
                         <br/> Here's what some of them had to say:</h3>
                         <PrintReviews
                             containerClasses=""
                             itemClasses="col-md-3 mr-2"
                             data={data} />
                     </div>
-                </div>
-            </div>
         )
     }
 }

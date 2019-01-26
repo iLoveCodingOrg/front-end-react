@@ -10,7 +10,7 @@ class Header extends React.Component{
                 <div className="container">
                     <div className="text-center">
                         <h1>
-                            Get the Complete Training &amp; Mentor Support.
+                            Complete Video Training &amp; Mentor Support.
                         </h1>
                         <p className="lead">
                             Become a <u>Job-Ready</u> Front-End and Full-Stack JavaScript Developer with Confidence.

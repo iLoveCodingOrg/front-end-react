@@ -65,7 +65,7 @@ const data = [
 export default ()=>{
     return (
         <div>
-            <div className="my-5 text-center text-uppercase text-muted">
+            <div className="text-center text-uppercase text-muted">
                 <span>
                     Learn the same tools and tricks used by:
                 </span>
