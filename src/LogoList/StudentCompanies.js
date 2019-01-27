@@ -52,9 +52,7 @@ export default ()=>{
     return (
         <div>
             <div className="my-5 text-center text-uppercase text-muted">
-                <span>
-                    Where iLoveCoding students work at:
-                </span>
+                Where iLoveCoding students work at:
             </div>
             <LogoList
                 data={data}

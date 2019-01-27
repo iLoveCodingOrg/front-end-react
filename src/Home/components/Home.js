@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 
 import Hero from './Hero'
 import AboutAziz from '../../AboutAziz/AboutAziz'
-import StudentCompanies from '../../LogoList/StudentCompanies'
 import MyWorkLogos from '../../LogoList/MyWorkLogos'
 import UsedBy from '../../LogoList/UsedBy'
 import SocialProof from './SocialProof'
@@ -59,7 +58,6 @@ class Home extends React.Component{
                         </p>
                     </div>
                 </div>
-                <StudentCompanies />
                 {/* <div className="bg-gray-100 border-top mt-5">
                     <div className="col-md-10 col-lg-8 mr-auto ml-auto py-5">
                         <AboutAziz />
