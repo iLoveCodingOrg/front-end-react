@@ -21,6 +21,63 @@ export function setLoading(isLoading=true) {
     }
 }
 
+function checkInvalidFields({firstName, lastName, email, password}){
+    const fields = []
+    if (!firstName){
+        fields.push('First Name')
+    }
+    if (!lastName){
+        fields.push('Last Name')
+    }
+    if (!email){
+        fields.push('Email')
+    }
+    if (!password){
+        fields.push('Password')
+    }
+
+    return fields
+}
+
+export function signup(payload){
+    const fields = checkInvalidFields(payload)
+    
+    if(fields.length > 0){
+        const message = `${fields.join(', ')} are required`
+        return setUser(message)
+    }
+
+    const url = `${API_URL}users`
+
+    return (dispatch) => {
+        dispatch(setLoading(true))
+
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(() => {
+            return { isSuccess: true }
+        })
+        .catch((error) => {
+            parseJSON(error)
+            .then((error) => {
+                dispatch(setUser(error))
+            })
+            return { isSuccess: false }
+        })
+        .then((res)=>{
+            dispatch(setLoading(false))
+            return res
+        })
+    }
+}
+
 export function login(email, password){
     const url = `${API_URL}users/login`
     

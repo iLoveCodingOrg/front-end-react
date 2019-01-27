@@ -5,6 +5,7 @@ import { withRouter, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import WrapMini from '../../WrapMini'
+import { signup } from '../../_user/actions'
 
 class Signup extends React.Component{
     constructor(props){
@@ -17,6 +18,33 @@ class Signup extends React.Component{
         }
 
         this.renderError = this.renderError.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    handleSubmit(e){
+        e.preventDefault()
+
+        const { history, signup } = this.props
+        const {
+            firstName,
+            lastName,
+            email,
+            password
+        } = this.state
+        
+        signup({firstName, lastName, email, password})
+        .then(({ isSuccess })=>{
+            if(isSuccess){
+                history.push('/pages/confirm')
+            }
+        })
+    }
+
+    handleChange(e){
+        this.setState({
+            [e.target.name]: e.target.value
+        })
     }
 
     renderError(){
@@ -37,19 +65,19 @@ class Signup extends React.Component{
                     Get access to the first two courses FREE. <Link to="/pricing">Upgrade for full-access anytime</Link>.
                 </p>
 
-                {this.renderError()}
-
-                <form className="mt-5 col-lg-6 col-md-8 mx-auto">
+                <form onSubmit={this.handleSubmit} className="mt-5 col-lg-6 col-md-8 mx-auto">
+                    {this.renderError()}
                     <div className="form-group row">
                         <label htmlFor="firstName" className="col-md-3 col-form-label strong">First Name</label>
                         <div className="col-md-9">
                             <input
+                                onChange={this.handleChange}
                                 name="firstName"
                                 type="firstName"
                                 className="form-control form-control-lg"
                                 placeholder="First Name"
                                 autoFocus
-                                required
+                                
                             />
                         </div>
                     </div>
@@ -58,11 +86,12 @@ class Signup extends React.Component{
                         <label htmlFor="lastName" className="col-md-3 col-form-label strong">Last Name</label>
                         <div className="col-md-9">
                             <input
+                                onChange={this.handleChange}
                                 name="lastName"
                                 type="lastName"
                                 className="form-control form-control-lg"
                                 placeholder="Last Name"
-                                required
+                                
                             />
                         </div>
                     </div>
@@ -71,11 +100,12 @@ class Signup extends React.Component{
                         <label htmlFor="email" className="col-md-3 col-form-label strong">Email address</label>
                         <div className="col-md-9">
                             <input
+                                onChange={this.handleChange}
                                 name="email"
                                 type="email"
                                 className="form-control form-control-lg"
                                 placeholder="Email address"
-                                required
+                                
                             />
                         </div>
                     </div>
@@ -84,11 +114,12 @@ class Signup extends React.Component{
                         <label htmlFor="password" className="col-md-3 col-form-label strong">Password</label>
                         <div className="col-md-9">
                             <input
+                                onChange={this.handleChange}
                                 name="password"
                                 type="password"
                                 className="form-control form-control-lg"
                                 placeholder="Password"
-                                required
+                                
                             />
                         </div>
                     </div>
@@ -101,10 +132,11 @@ class Signup extends React.Component{
                             className="my-3 btn btn-lg btn-primary btn-block"
                         />
                     </div>
-                    <div className="text-center">
-                        Already have an account? <Link to="/login">Login here</Link>
-                    </div>
                 </form>
+
+                <div className="text-center">
+                    Already have an account? <Link to="/login">Login here</Link>
+                </div>
             </WrapMini>
         )
     }
@@ -125,8 +157,8 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
-        signup: (firstName, lastName, email, password)=>{
-            return dispatch(actions.signup(firstName, lastName, email, password))
+        signup: (payload)=>{
+            return dispatch(signup(payload))
         },
     }
 }
