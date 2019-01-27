@@ -86,7 +86,6 @@ export function login(email, password){
 
         return fetch(url, {
             method: 'POST',
-            credentials: 'include',
             headers: {
                 'content-Type': 'application/json'
             },

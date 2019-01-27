@@ -136,7 +136,6 @@ class Login extends React.Component{
 Login.propTypes = {
     error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     isLoading: PropTypes.bool.isRequired,
-    isLoggedIn: PropTypes.bool.isRequired,
     login: PropTypes.func.isRequired,
     verifyEmailStatus: PropTypes.string.isRequired
 }
@@ -145,7 +144,6 @@ function mapStateToProps(state){
     return {
         error: state.user.error,
         isLoading: state.user.isLoading,
-        isLoggedIn: selectors.isLoggedIn(state),
         verifyEmailStatus: state.user.verifyEmailStatus
     }
 }
