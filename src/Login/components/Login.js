@@ -7,7 +7,6 @@ import { qsParse } from '../../_app/utils'
 
 import WrapMini from '../../WrapMini'
 import { actions } from '../../_user'
-import { selectors } from '../../_user'
 
 class Login extends React.Component{
     constructor(props){
@@ -63,7 +62,7 @@ class Login extends React.Component{
     }
     renderError(){
         const { error } = this.props
-        const isEmailToBeVerified = (error === 'login failed as the email has not been verified')
+        const isEmailToBeVerified = (error === 'Login failed as the email has not been verified')
         if(error){
             return (
                 <div className="alert alert-danger">
@@ -86,9 +85,9 @@ class Login extends React.Component{
             <WrapMini>
                 <Helmet><title>Login - iLoveCoding</title></Helmet>
                 <form className="form-login" onSubmit={this.handleSubmit}>
-                    <h2 className="text-center">Please Login</h2>
-                    <p>
-                        This login is only for students who are enrolled in one of iLoveCoding's <Link to="/pricing">Paid Programs.</Link>
+                    <h2 className="text-center">Log in to iLoveCoding</h2>
+                    <p className="text-center">
+                        Don't have an account? <Link to="/signup">Get started Free</Link> or enrolled in <Link to="/pricing">iLoveCoding's Paid Programs.</Link>
                     </p>
                     {this.renderVerifyEmailStatus()}
                     {this.renderError()}
@@ -124,9 +123,9 @@ class Login extends React.Component{
                             className="my-3 btn btn-lg btn-primary btn-block"
                         />
                     </div>
-                    <div className="text-center">
+                    <p className="text-center">
                         <Link to="/forgot-password">Forgot Password?</Link>
-                    </div>
+                    </p>
                 </form>
             </WrapMini>
         )

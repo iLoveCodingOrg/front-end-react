@@ -7,8 +7,6 @@ import { selectors } from '../../_user'
 import { Link } from 'react-router-dom'
 
 import Hero from './Hero'
-import AboutAziz from '../../AboutAziz/AboutAziz'
-import MyWorkLogos from '../../LogoList/MyWorkLogos'
 import UsedBy from '../../LogoList/UsedBy'
 import SocialProof from './SocialProof'
 
@@ -54,16 +52,11 @@ class Home extends React.Component{
                             <strong>Have more questions?</strong> email <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>, and we'd be happy to answer them.
                         </p>
                         <p className="text-center">
-                            <Link to="pricing" className="btn btn-lg btn-primary">Get Started Now</Link>
+                            <Link to="/signup" className="btn btn-lg btn-primary">Get Started Free Now</Link>
                         </p>
                     </div>
                 </div>
-                {/* <div className="bg-gray-100 border-top mt-5">
-                    <div className="col-md-10 col-lg-8 mr-auto ml-auto py-5">
-                        <AboutAziz />
-                        <MyWorkLogos />
-                    </div>
-                </div> */}
+                <UsedBy />
             </div>
         )
     }

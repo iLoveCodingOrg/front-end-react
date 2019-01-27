@@ -147,7 +147,7 @@ class Header extends React.Component{
                 style: {}
             },
             {
-                label: 'Student Login',
+                label: 'Login',
                 link: '/login',
                 className: 'nav-link btn py-1',
                 style: {}
