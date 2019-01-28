@@ -25,11 +25,10 @@ class WrapMini extends React.Component{
                 {
                     isLoggedIn?
                     <div className="text-center">
-                        <h2>
-                            Hi {firstName}! <br/>
-                        </h2>
+                        <h2>Hi {firstName}! <br/></h2>
                         <p>
-                            You are already logged in.
+                            You are already logged in, <Link to="/dashboard">continue to dashboard</Link>.
+                            <br/>
                             Not you? <button className="border-0 btn-link p-0" onClick={logout}>Log out</button>
                         </p>
                     </div>

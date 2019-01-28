@@ -154,12 +154,16 @@ export function setUser(error=false, user) {
         type: SET_USER
     }
     let errorMessage
-    
+
     if(error){
-        if(typeof  error === 'string'){
+        if(typeof error === 'string'){
             errorMessage = error
         } else if (get(error, 'error.message')){
-            errorMessage = get(error, 'error.message')
+            if(get(error, 'error.message').indexOf('Email already exists') > -1){
+                errorMessage = 'Email is already registered'
+            } else{
+                errorMessage = get(error, 'error.message')
+            }
         } else {
             errorMessage = 'Something went wrong! could not complete request'
         }
@@ -225,7 +229,6 @@ export function setSendVerifyEmail(error=false) {
         type: SET_SEND_VERIFY_EMAIL
     }
     let errorMessage
-    
     if(error){
         if(typeof  error === 'string'){
             errorMessage = error

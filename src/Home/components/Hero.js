@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import HomeForm from './HomeForm'
-
 import homePageImage from '../../_app/images/home-page-people.jpg'
-import homePageImage2 from '../../_app/images/skill-path.png'
-import { Video } from '../../Video'
 
 class Hero extends React.Component{
     constructor(props){

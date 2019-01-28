@@ -107,7 +107,7 @@ class Header extends React.Component{
     }
 
     renderUserRight(){
-        const { user, logout } = this.props
+        const { user, logout, accountLevel } = this.props
         const { firstName, emailHash } = user
         const gravatarUrl = this.getGravatarUrl(emailHash)
 
@@ -115,9 +115,20 @@ class Header extends React.Component{
             <div className="d-flex flex-row align-items-center">
                 <img className="rounded-circle mr-2" src={gravatarUrl} />
                 <div>{firstName}</div>
+                {renderLevel(accountLevel)}
                 <button className="border-0 btn-link" onClick={logout}>(Log out)</button>
             </div>
         )
+
+        function renderLevel(level){
+            if(level === 'free'){
+                return (
+                    <Link to="/pricing" className="btn btn-success ml-2">Upgrade</Link>
+                )
+            }else{
+                return <span className="badge badge-success badge-pill text-uppercase ml-2">{level}</span>
+            }
+        }
     }
 
     renderGuestRight(){
@@ -223,6 +234,7 @@ class Header extends React.Component{
 function mapStateToProps(state){
     return {
         isLoggedIn: selectors.isLoggedIn(state),
+        accountLevel: selectors.getLevel(state),
         user: state.user
     }
 }

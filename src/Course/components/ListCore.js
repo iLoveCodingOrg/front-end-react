@@ -14,7 +14,7 @@ function ListHeader(){
             <p className="lead col-lg-9 align-self-center">
                 Here you will learn the foundation of modern software development.
                 <br/><br/>
-                This is your curriculum to become a modern <strong><i>Job-ready</i></strong> Front-End and/or Full-Stack Developer - Someone who can build modern web, mobile and desktop apps.
+                This is your curriculum to become a modern <strong><i>Job-ready</i></strong> Front-End and/or Full-Stack JavaScript Developer - Someone who can build modern web, mobile and desktop apps.
                 <br/><br/>
                 Each course has at least 2 practical projects, so you apply what you learn in the course. For additional practice go to the <Link to="/courses/projects">Practice Projects</Link> section.
             </p>
