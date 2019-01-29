@@ -2,7 +2,8 @@ import {
     SET_USER,
     CLEAR_USER,
     SET_USER_LOADING,
-    SET_SEND_VERIFY_EMAIL
+    SET_SEND_VERIFY_EMAIL,
+    CLEAR_USER_ERROR
 } from '../_app/actionTypes'
 const initialState = {
     firstName: '',
@@ -38,6 +39,11 @@ export default function (state = initialState, { type, payload }) {
                 error: payload.error,
                 isLoading: false,
                 verifyEmailStatus: payload.verifyEmailStatus
+            }
+        case CLEAR_USER_ERROR:
+            return {
+                ...state,
+                error: false
             }
         default:
             return state

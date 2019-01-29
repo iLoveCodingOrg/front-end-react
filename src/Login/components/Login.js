@@ -22,6 +22,9 @@ class Login extends React.Component{
         this.renderVerifyEmailStatus = this.renderVerifyEmailStatus.bind(this)
         this.handleVerifyEmail = this.handleVerifyEmail.bind(this)
     }
+    componentDidMount(){
+        this.props.clearError()
+    }
     handleSubmit(event){
         event.preventDefault()
         
@@ -149,6 +152,9 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
+        clearError: ()=>{
+            return dispatch(actions.clearError())
+        },
         login: (email, password)=>{
             return dispatch(actions.login(email, password))
         },

@@ -5,7 +5,7 @@ import { withRouter, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import WrapMini from '../../WrapMini'
-import { signup } from '../../_user/actions'
+import { signup, clearError } from '../../_user/actions'
 
 class Signup extends React.Component{
     constructor(props){
@@ -20,6 +20,10 @@ class Signup extends React.Component{
         this.renderError = this.renderError.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    componentDidMount(){
+        this.props.clearError()
     }
 
     handleSubmit(e){
@@ -56,6 +60,7 @@ class Signup extends React.Component{
             </div>
         )
     }
+
     render(){
         return (
             <WrapMini>
@@ -157,6 +162,9 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
+        clearError: ()=>{
+            return dispatch(clearError())
+        },
         signup: (payload)=>{
             return dispatch(signup(payload))
         },

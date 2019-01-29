@@ -4,7 +4,8 @@ import {
     SET_USER_LOADING,
     SET_USER,
     CLEAR_USER,
-    SET_SEND_VERIFY_EMAIL
+    SET_SEND_VERIFY_EMAIL,
+    CLEAR_USER_ERROR,
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -262,4 +263,10 @@ export function setSendVerifyEmail(error=false) {
     }
 
     return action
+}
+
+export function clearError(){
+    return {
+        type: CLEAR_USER_ERROR
+    }
 }
