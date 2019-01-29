@@ -154,16 +154,20 @@ export function setUser(error=false, user) {
         type: SET_USER
     }
     let errorMessage
-
+    const deepErrorMessage = get(error, 'error.message')
+    
     if(error){
         if(typeof error === 'string'){
             errorMessage = error
-        } else if (get(error, 'error.message')){
-            if(get(error, 'error.message').indexOf('Email already exists') > -1){
+
+        } else if (deepErrorMessage){
+            
+            if(deepErrorMessage.indexOf('Email already exists') > -1){
                 errorMessage = 'Email is already registered'
             } else{
-                errorMessage = get(error, 'error.message')
+                errorMessage = deepErrorMessage
             }
+
         } else {
             errorMessage = 'Something went wrong! could not complete request'
         }
