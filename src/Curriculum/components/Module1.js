@@ -4,6 +4,11 @@ import { PrintTraining } from '../'
 
 const courses = [
     {
+        name: 'The Perfect Path to becoming a job-ready developer',
+        link: '/courses/perfect-path',
+        thumbSrc: '//a.ilovecoding.org/thumb/perfect-path.jpg'
+    },
+    {
         name: 'Learn HTML & CSS in 14 days',
         link: '/courses/htmlcss2',
         thumbSrc: '//a.ilovecoding.org/thumb/htmlcss2.gif'
