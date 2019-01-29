@@ -39,19 +39,26 @@ function checkInvalidFields({firstName, lastName, email, password}){
     return fields
 }
 
-export function signup(payload){
-    const fields = checkInvalidFields(payload)
+export function signup(payload){   
     
-    if(fields.length > 0){
-        const message = `${fields.join(', ')} are required`
-        return setUser(message)
-    }
-
-    const url = `${API_URL}users`
-
     return (dispatch) => {
+        // Validate fields
+        const fields = checkInvalidFields(payload)
+        
+        if(fields.length > 0){
+            const message = `${fields.join(', ')} are required`
+    
+            const p = new Promise((resolve)=>{ resolve()})
+            return p.then(()=>{
+                dispatch(setUser(message))
+                return { isSuccess: false }
+            })
+        }
+
+        // Call signup
         dispatch(setLoading(true))
 
+        const url = `${API_URL}users`
         return fetch(url, {
             method: 'POST',
             headers: {
