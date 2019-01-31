@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 
 import Reviews from './Reviews'
 import StudentCompanies from '../../LogoList/StudentCompanies'
+import Cta from '../../Cta'
 
 class ReviewsPage extends React.Component{
     constructor(props){
@@ -26,6 +27,7 @@ class ReviewsPage extends React.Component{
                         <Reviews />
                     </div>
                 </div>
+                <Cta />
                 <StudentCompanies />
             </div>
         )

@@ -8,6 +8,7 @@ import SourceDemo from '../SourceDemo'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 import { AsyncComments as Comments } from '../Comments'
+import Cta from '../Cta'
 
 class View extends React.Component{
     constructor(props){
@@ -97,38 +98,36 @@ class View extends React.Component{
                         />
                         <main>
                             {
-                                // TODO: optimize these multiple conditions
                                 (of !== 'page' && of !== 'blog')?
-                                <VideoWrap
-                                    callMarkAsComplete={()=>{
-                                        // Do not mark course as complete when video complete
-                                        // This feature should only work for lessons
-                                        if(of!=='course'){
-                                            callMarkAsComplete(id)
-                                        }
-                                    }}
-                                    title={title}
-                                    thumbnail={thumbnail}
-                                    videoSource={videoSource}
-                                />: null
-
-                            }
-                            {
-                                // TODO: optimize these multiple conditions
-                                (of !== 'page' && of !== 'blog')?
-                                <SourceDemo
-                                    source={sourceUrl}
-                                    demo={demoUrl}
-                                />: null
+                                <div>
+                                    <VideoWrap
+                                        callMarkAsComplete={()=>{
+                                            // Do not mark course as complete when video complete
+                                            // This feature should only work for lessons
+                                            if(of!=='course'){
+                                                callMarkAsComplete(id)
+                                            }
+                                        }}
+                                        title={title}
+                                        thumbnail={thumbnail}
+                                        videoSource={videoSource}
+                                    />
+                                    <SourceDemo
+                                        source={sourceUrl}
+                                        demo={demoUrl}
+                                    />
+                                </div>
+                                : null
                             }
                             {this.props.children}
                             {
                                 !bodyContent? null:
                                 <div
-                                    className="col-12 col-lg-9 border-top pt-4 mx-auto"
-                                    dangerouslySetInnerHTML={{ __html: bodyContent }}
+                                className="col-12 col-lg-9 border-top pt-4 mx-auto"
+                                dangerouslySetInnerHTML={{ __html: bodyContent }}
                                 />
                             }
+                            <Cta />
                             {
                                 of !== 'page'? 
                                 <Comments

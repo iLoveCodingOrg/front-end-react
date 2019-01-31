@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import Cta from '../../Cta'
 
 import {
     Module1,
@@ -26,7 +27,7 @@ export default ()=>{
                         <div className="alert bg-gray-100 py-4 border text-center mb-0 w-100">
                             <h5>Time to completion - 5 months</h5>
                             <p className="mb-0">
-                                Study 10 hrs/week and complete within 5 months.
+                                Study 15 hrs/week and complete within 5 months.
                             </p>
                         </div>
                     </div>
@@ -51,10 +52,15 @@ export default ()=>{
                 </p>
 
                 <Module1 />
+                <Cta />
                 <Module2 />
+                <Cta />
                 <Module3 />
+                <Cta />
                 <Module4 />
+                <Cta />
                 <Electives />
+                <Cta />
             </div>
         </div>
     )
