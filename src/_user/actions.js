@@ -4,7 +4,8 @@ import {
     SET_USER_LOADING,
     SET_USER,
     CLEAR_USER,
-    SET_SEND_VERIFY_EMAIL
+    SET_SEND_VERIFY_EMAIL,
+    CLEAR_USER_ERROR,
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -18,6 +19,70 @@ export function setLoading(isLoading=true) {
         payload: {
             isLoading
         }
+    }
+}
+
+function checkInvalidFields({firstName, lastName, email, password}){
+    const fields = []
+    if (!firstName){
+        fields.push('First Name')
+    }
+    if (!lastName){
+        fields.push('Last Name')
+    }
+    if (!email){
+        fields.push('Email')
+    }
+    if (!password){
+        fields.push('Password')
+    }
+
+    return fields
+}
+
+export function signup(payload){   
+    
+    return (dispatch) => {
+        // Validate fields
+        const fields = checkInvalidFields(payload)
+        
+        if(fields.length > 0){
+            const message = `${fields.join(', ')} are required`
+    
+            const p = new Promise((resolve)=>{ resolve()})
+            return p.then(()=>{
+                dispatch(setUser(message))
+                return { isSuccess: false }
+            })
+        }
+
+        // Call signup
+        dispatch(setLoading(true))
+
+        const url = `${API_URL}users`
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(checkStatus)
+        .then(parseJSON)
+        .then(() => {
+            return { isSuccess: true }
+        })
+        .catch((error) => {
+            parseJSON(error)
+            .then((error) => {
+                dispatch(setUser(error))
+            })
+            return { isSuccess: false }
+        })
+        .then((res)=>{
+            dispatch(setLoading(false))
+            return res
+        })
     }
 }
 
@@ -97,12 +162,20 @@ export function setUser(error=false, user) {
         type: SET_USER
     }
     let errorMessage
+    const deepErrorMessage = get(error, 'error.message')
     
     if(error){
-        if(typeof  error === 'string'){
+        if(typeof error === 'string'){
             errorMessage = error
-        } else if (get(error, 'error.message')){
-            errorMessage = get(error, 'error.message')
+
+        } else if (deepErrorMessage){
+            
+            if(deepErrorMessage.indexOf('Email already exists') > -1){
+                errorMessage = 'Email is already registered'
+            } else{
+                errorMessage = deepErrorMessage
+            }
+
         } else {
             errorMessage = 'Something went wrong! could not complete request'
         }
@@ -168,7 +241,6 @@ export function setSendVerifyEmail(error=false) {
         type: SET_SEND_VERIFY_EMAIL
     }
     let errorMessage
-    
     if(error){
         if(typeof  error === 'string'){
             errorMessage = error
@@ -191,4 +263,10 @@ export function setSendVerifyEmail(error=false) {
     }
 
     return action
+}
+
+export function clearError(){
+    return {
+        type: CLEAR_USER_ERROR
+    }
 }

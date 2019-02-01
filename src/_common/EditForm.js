@@ -63,11 +63,11 @@ class EditForm extends React.Component{
         return (
             <div key={field} className="form-group row">
                 <label
-                    className="col-sm-2 col-form-label float-right"
+                    className="col-md-2 col-form-label float-right"
                     htmlFor={field}>
                     {field}
                 </label>
-                <div className="col-sm-10">
+                <div className="col-md-10">
                     {this.renderViewSourceCheckbox()}
                     {
                         (this.state.isViewSource)?
@@ -129,9 +129,9 @@ class EditForm extends React.Component{
         return (
             <div key={field} className="form-group row">
                 <label
-                    className="col-sm-2 col-form-label float-right"
+                    className="col-md-2 col-form-label float-right"
                     htmlFor={field}>{field}</label>
-                <div className="col-sm-10">
+                <div className="col-md-10">
                     <input
                         className="form-control"
                         type={type}
@@ -147,9 +147,9 @@ class EditForm extends React.Component{
         return (
             <div key={field} className="form-group row">
                 <label
-                    className="col-sm-2 col-form-label float-right"
+                    className="col-md-2 col-form-label float-right"
                     htmlFor={field}>{field}</label>
-                <div className="col-sm-10">
+                <div className="col-md-10">
                     <textarea
                         className="form-control"
                         name={field}

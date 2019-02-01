@@ -50,6 +50,7 @@ export const SET_USER = 'SET_USER'
 export const CLEAR_USER = 'CLEAR_USER'
 export const SET_USER_LOADING = 'SET_USER_LOADING'
 export const SET_SEND_VERIFY_EMAIL = 'SET_SEND_VERIFY_EMAIL'
+export const CLEAR_USER_ERROR = 'CLEAR_USER_ERROR'
 
 // CHECKOUT
 export const SET_PRODUCT = 'SET_PRODUCT'

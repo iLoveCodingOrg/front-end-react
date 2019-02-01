@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { isPremium } from '../../_user/selectors'
 
 function PremiumSupport({ isPremium }) {
     return (
@@ -11,11 +12,12 @@ function PremiumSupport({ isPremium }) {
                 isPremium?
                 (<li>
                     <Link to="/groupcalls">Weekly Group Call with Aziz</Link>
-                    &nbsp;<span className="badge badge-success">Premium</span>
+                    &nbsp;<span className="badge badge-pill badge-success">PREMIUM</span>
                 </li>)
                 :
                 (<li>
-                    <Link to="pricing">Upgrade to iLoveCoding Premium</Link> to unlock Weekly Live Group Calls with Aziz <span className="badge badge-success">Premium</span>
+                    <Link to="pricing">Upgrade to iLoveCoding Premium</Link> to unlock Weekly Live Group Calls with Aziz.
+                    <Link to="pricing" className="badge badge-pill badge-success">Upgrade to PREMIUM</Link>
                 </li>)
             }
             </ul>
@@ -24,11 +26,8 @@ function PremiumSupport({ isPremium }) {
 }
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
-        isPremium: state.user.activePlans.some((item) => {
-            return item.isGroupCall
-        })
+        isPremium: isPremium(state)
     }
 }
 

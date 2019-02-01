@@ -13,6 +13,7 @@ import SourceDemo from '../../SourceDemo'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
 import { AsyncComments as Comments } from '../../Comments'
+import Cta from '../../Cta'
 
 class CourseLessonView extends React.Component{
     constructor(props){
@@ -117,10 +118,11 @@ class CourseLessonView extends React.Component{
                             {
                                 !bodyContent? null:
                                 <div
-                                    className="col-12 col-lg-9 border-top pt-4 mx-auto"
-                                    dangerouslySetInnerHTML={{ __html: bodyContent }}
+                                className="col-12 col-lg-9 border-top pt-4 mx-auto"
+                                dangerouslySetInnerHTML={{ __html: bodyContent }}
                                 />
                             }
+                            <Cta />
                             <Comments
                                 id={id}
                                 title={title}

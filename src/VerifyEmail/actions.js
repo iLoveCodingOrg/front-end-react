@@ -55,8 +55,8 @@ export function setVerifyEmail(error=false) {
     if(error){
         if(typeof  error === 'string'){
             errorMessage = error
-        } else if (get(error, 'error.message')){
-            errorMessage = get(error, 'error.message')
+        } else if (get(error, 'error.message').indexOf('Invalid token') > -1){
+            errorMessage = 'This link has expired. Your account is either already verified or this link is invalid.'
         } else {
             errorMessage = 'Something went wrong! Could not verify your email'
         }
