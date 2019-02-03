@@ -127,7 +127,7 @@ class View extends React.Component{
                                 dangerouslySetInnerHTML={{ __html: bodyContent }}
                                 />
                             }
-                            <Cta />
+                            <Cta of={of} slug={slug} />
                             {
                                 of !== 'page'? 
                                 <Comments

@@ -1,9 +1,18 @@
 import React from 'react'
+import PropType from 'prop-types'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { isLoggedIn, isPaid, isPro } from '../_user/selectors'
 
-const Cta = ({isLoggedIn, isPaid, isPro}) => {
+const Cta = ({isLoggedIn, isPaid, isPro, of, slug}) => {
+    if (
+        of === 'page'
+        &&
+        (slug === 'confirm' || slug === 'welcome')
+    ){
+        return (<span></span>)
+    }
+
     if (!isLoggedIn){
         return (
             <div className="alert alert-warning text-center my-4">
@@ -37,8 +46,16 @@ const Cta = ({isLoggedIn, isPaid, isPro}) => {
     return (<span></span>)
 }
 
+Cta.propType ={
+    isLoggedIn: PropType.bool.isRequired,
+    isPaid: PropType.bool.isRequired,
+    isPro: PropType.bool.isRequired,
+    of: PropType.string,
+    slug: PropType.string
+}
+
 function mapStateToProps(state){
-return {
+    return {
         isLoggedIn: isLoggedIn(state),
         isPaid: isPaid(state),
         isPro: isPro(state)
