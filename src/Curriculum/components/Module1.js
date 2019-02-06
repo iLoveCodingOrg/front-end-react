@@ -20,7 +20,7 @@ const courses = [
     },
     {
         name: 'Going Live: Putting Your Website Live',
-        link: '/courses/going-live-putting-your-website-live',
+        link: '/courses/going-live',
         thumbSrc: '//a.ilovecoding.org/thumb/goingLive-part1.png'
     }
 ]
