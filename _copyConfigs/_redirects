@@ -23,9 +23,8 @@
 # PLAYLIST
 /playlists  /courses  301
 
-/courses/going-live   /courses/going-live-putting-your-website-live   301
-/playlists/5627130212c48c71055037fb   /courses/going-live-putting-your-website-live   301
-/playlists/going-live-putting-your-website-live   /courses/going-live-putting-your-website-live   301
+/playlists/5627130212c48c71055037fb   /courses/going-live   301
+/playlists/going-live-putting-your-website-live   /courses/going-live   301
 
 /playlists/560724c769c23a4b56604572   /courses/learn-angular-js-in-14-days   301
 /playlists/learn-angular-js-in-14-days   /courses/learn-angular-js-in-14-days   301
@@ -129,6 +128,7 @@
 /courses/going-live/lessons/choosing-domain-registrar-and-web-hosting-provider   /courses/going-live/choosing-domain-registrar-web-hosting   301
 /courses/going-live/syncing-your-domain-webhost   /courses/going-live/lessons/syncing-your-domain-web-host   301
 /courses/going-live/ftp-upload  /courses/going-live/lessons/upload-your-website-using-ftp  301
+/courses/going-live-putting-your-website-live  /courses/going-live
 /courses/going-live-putting-your-website-live/lessons/*  /courses/going-live/lessons/:splat
 
 /courses/learn-node-js-in-a-week/command-line   /courses/nodejs/lessons/command-line-basics  301
