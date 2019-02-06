@@ -34,8 +34,8 @@
 /playlists/562092d577eef33c1aebc737   /courses/learn-master-bootstrap-in-a-week   301
 /playlists/learn-master-bootstrap-in-a-week   /courses/learn-master-bootstrap-in-a-week   301
 
-/playlists/562713af12c48c71055037fe   /courses/htmlcss   301
-/playlists/learn-html-css-in-14-days   /courses/htmlcss   301
+/playlists/562713af12c48c71055037fe   /courses/htmlcss2   301
+/playlists/learn-html-css-in-14-days   /courses/htmlcss2   301
 
 /playlists/5627138212c48c71055037fd   /courses/js   301
 /playlists/learn-javascript-in-14-days   /courses/js   301
@@ -49,6 +49,7 @@
 
 # LESSON 1.0 > 2.2
 /tutorials  /lessons  301
+
 /courses/learn-jquery-in-14-days/ajax-google-maps-api   /lessons/ajax-create-a-location-finder-app-using-jquery-google-maps-api-part-1  301
 /courses/learn-jquery-in-14-days/ajax-google-maps-api-part2   /lessons/ajax-create-a-location-finder-app-using-jquery-google-maps-api-part-2  301
 /courses/learn-jquery-in-14-days/ajax-single-page   /lessons/ajax-create-a-single-page-app-with-jquery  301
@@ -290,7 +291,7 @@
 
 /lessons/building-calculator-app-with-pure-javascript   /lessons/building-calculator-app-with-jquery    301
 
-/courses/learn-html-css-in-14-days  /courses/htmlcss 301
+/courses/learn-html-css-in-14-days  /courses/htmlcss2 301
 /courses/learn-javascript-in-14-days  /courses/js 301
 /courses/learn-jquery-in-14-days  /courses/jquery 301
 /courses/learn-node-js-in-a-week  /courses/nodejs 301
