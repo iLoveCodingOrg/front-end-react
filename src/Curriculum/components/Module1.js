@@ -9,7 +9,7 @@ const courses = [
         thumbSrc: '//a.ilovecoding.org/thumb/perfect-path.jpg'
     },
     {
-        name: 'Learn HTML & CSS in 14 days',
+        name: 'Learn HTML & CSS Correctly',
         link: '/courses/htmlcss2',
         thumbSrc: '//a.ilovecoding.org/thumb/htmlcss2.gif'
     },
