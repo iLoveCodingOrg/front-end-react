@@ -60,6 +60,10 @@ class Checkout extends React.Component{
         })
             .then(({ isSubscribed })=>{
                 if(isSubscribed){
+                    $FPROM.trackSignup({
+                        email: this.state.userInfo.email.value
+                    }, ()=>{console.log('Callback received!')})
+                    
                     this.props.history.push('/pages/welcome')
                 }
             })
