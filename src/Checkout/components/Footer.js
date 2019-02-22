@@ -1,10 +1,10 @@
 import React from 'react'
 import { Copyrights } from '../../Footer'
 
-export default function (props) {
+export default function () {
     return (
         <footer>
-            <Copyrights />
+            <Copyrights className="text-center" />
         </footer>
     )
 }

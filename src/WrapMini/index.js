@@ -36,7 +36,7 @@ class WrapMini extends React.Component{
                     this.props.children
                 }
 
-                <Copyrights />
+                <Copyrights className="text-center" />
             </div>
         )
     }

@@ -12,7 +12,7 @@ export default function (){
             </Helmet>
             <section className="
                 align-self-center
-                col-md-8
+                container
                 mt-3
                 mb-5"
             >
