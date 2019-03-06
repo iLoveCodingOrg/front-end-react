@@ -14,11 +14,11 @@ class Add extends React.Component{
         this.prepareData = this.prepareData.bind(this)
     }
 
-    componentWillReceiveProps(nextProps){
+    componentDidUpdate(prevProps){
         const { slug } = this.props.match.params
         
-        if(nextProps.match.params.slug !== slug){
-            this.props.getView(nextProps.match.params.slug)
+        if(prevProps.match.params.slug !== slug){
+            this.props.getView(slug)
         }
     }
 

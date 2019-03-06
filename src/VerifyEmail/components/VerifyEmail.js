@@ -20,9 +20,9 @@ class VerifyEmail extends React.Component {
             })
     }
 
-    componentWillReceiveProps(nextProps){
-        const prevQueryString = qsParse(this.props.location.search)
-        const queryString = qsParse(nextProps.location.search)
+    componentDidUpdate(prevProps){
+        const queryString = qsParse(this.props.location.search)
+        const prevQueryString = qsParse(prevProps.location.search)
 
         if(
             prevQueryString.uid !== queryString.uid

@@ -20,14 +20,14 @@ class CourseLessonView extends React.Component{
         super(props)
     }
 
-    componentWillReceiveProps(nextProps){
+    componentDidUpdate(prevProps){
         const { lessonSlug, courseSlug } = this.props.match.params
         if(
-            lessonSlug !== nextProps.match.params.lessonSlug ||
-            courseSlug !== nextProps.match.params.courseSlug
+            lessonSlug !== prevProps.match.params.lessonSlug ||
+            courseSlug !== prevProps.match.params.courseSlug
         ){
-            this.props.getLesson(nextProps.match.params.lessonSlug)
-            this.props.getCourse(nextProps.match.params.courseSlug)
+            this.props.getLesson(lessonSlug)
+            this.props.getCourse(courseSlug)
         }
     }
 
