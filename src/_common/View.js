@@ -40,10 +40,6 @@ class View extends React.Component{
       this.props.getView(this.props.match.params.slug)
     }
 
-    componentWillUnmount(){
-        // this.props.clearView()
-    }
-
     render(){
         const {
             id,

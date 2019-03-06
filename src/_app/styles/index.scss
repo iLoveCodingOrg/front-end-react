@@ -15,3 +15,14 @@ main{
 .view-header{
   text-align: center;
 }
+
+
+code, .precode > code{
+  color: #e83e8c;
+}
+
+.precode{
+  padding: 25px;
+  tab-size: 4;
+  background-color: #f0f0f0
+}

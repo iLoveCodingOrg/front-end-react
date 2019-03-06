@@ -36,10 +36,6 @@ class CourseLessonView extends React.Component{
         this.props.getCourse(this.props.match.params.courseSlug)
     }
 
-    componentWillUnmount(){
-        // this.props.clearView()
-    }
-
     render(){
         const {
             id,
