@@ -28,9 +28,9 @@ class Checkout extends React.Component{
 
         this.state = {
             userInfo: {
-                firstName: { value: props.firstName || '' },
-                lastName: { value: props.lastName || '' },
-                email: { value: props.email || '' }
+                firstName: { value: props.firstName },
+                lastName: { value: props.lastName },
+                email: { value: props.email }
             }
         }
         this.setUserInfo = this.setUserInfo.bind(this)
@@ -46,6 +46,7 @@ class Checkout extends React.Component{
     }
     
     async buy(event){
+        // TODO: IF NO FORM ERRORS THEN ALLOW BUY
         event.preventDefault()
 
         const { slug } = this.props.match.params
@@ -75,24 +76,16 @@ class Checkout extends React.Component{
         })
     }
 
-    componentWillReceiveProps(nextProps){
+    componentDidUpdate(prevProps){
         const { slug } = this.props.match.params
         
-        if(nextProps.match.params.slug !== slug){
-            this.props.getProduct(nextProps.match.params.slug)
-        }
-
-        if(nextProps.firstName !== this.props.firstName){
-            this.setUserInfo({
-                firstName: { value: nextProps.firstName },
-                lastName: { value: nextProps.lastName },
-                email: { value: nextProps.email }
-            })
+        if(prevProps.match.params.slug !== slug){
+            this.props.getProduct(slug)
         }
     }
 
     componentDidMount(){
-      this.props.getProduct(this.props.match.params.slug)
+        this.props.getProduct(this.props.match.params.slug)
     }
 
     renderBuyError(){
@@ -170,7 +163,7 @@ class Checkout extends React.Component{
                                             Payment powered by Braintree (a PayPal company) - 🔒 Your information is secure
                                         </div>
                                     </form>
-                                    <div class="text-center mt-3 mb-5">
+                                    <div className="text-center mt-3 mb-5">
                                         ⚡️ Cancel Anytime.
                                         &nbsp; &nbsp;
                                         🛡️ 7-Day Full Refund Policy.
@@ -199,15 +192,16 @@ Checkout.propTypes = {
 }
 
 function mapStateToProps(state){
+    const isLoggedInCache = isLoggedIn(state) 
     return {
-        isLoggedIn: isLoggedIn(state),
+        isLoggedIn: isLoggedInCache,
+        firstName: (isLoggedInCache)? state.user.firstName : '',
+        lastName: (isLoggedInCache)? state.user.lastName : '',
+        email: (isLoggedInCache)? state.user.email: '',
         error: state.checkout.error,
         isLoading: state.checkout.isLoading,
         product: state.checkout.product,
         buyError: state.checkout.buy.error,
-        firstName: state.user.firstName,
-        lastName: state.user.lastName,
-        email: state.user.email,
         isOfferValid: selectors.isOfferValid(state)
     }
 }
