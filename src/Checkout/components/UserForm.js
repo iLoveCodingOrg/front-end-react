@@ -1,5 +1,4 @@
 import React from 'react'
-import { isEmailValid } from '../../_app/utils'
 import { validateField } from '../../_app/utils'
 
 class UserForm extends React.Component{

@@ -79,6 +79,7 @@ class Add extends React.Component{
                         <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
                         {this.props.children}
                         <EditForm
+                            key="new-edit-form"
                             data={this.prepareData()}
                             editableFields={editableFields}
                             onSubmitForm={this.handelFormSubmit}

@@ -49,6 +49,7 @@ class Edit extends React.Component{
     }
 
     render(){
+        const { slug } = this.props.match.params
         const {
             of,
             isLoading,
@@ -69,6 +70,7 @@ class Edit extends React.Component{
                             <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
                             {this.props.children}
                             <EditForm
+                                key={slug}
                                 editableFields={editableFields}
                                 data={this.props.view}
                                 onSubmitForm={this.handelFormSubmit}

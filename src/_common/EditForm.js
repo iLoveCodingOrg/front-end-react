@@ -23,13 +23,6 @@ class EditForm extends React.Component{
         this.renderWysiwyg = this.renderWysiwyg.bind(this)
     }
 
-    componentWillReceiveProps(nextProps){
-        if(nextProps.data !== this.props.data){
-            this.setState({
-                ...nextProps.data
-            })
-        }
-    }
     
     handleChange(field, value){
         this.setState({
