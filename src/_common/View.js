@@ -37,7 +37,7 @@ class View extends React.Component{
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
       this.props.getView(this.props.match.params.slug)
     }
 

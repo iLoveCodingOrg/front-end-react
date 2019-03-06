@@ -22,7 +22,7 @@ class Edit extends React.Component{
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.props.getView(this.props.match.params.slug)
     
         // Add jQuery to page for react-trumbowyg

@@ -11,7 +11,7 @@ class Offer extends React.Component{
         super(props)
     }
 
-    componentWillMount(){
+    componentDidMount(){
         const query = qsParse(location.search)
         if(isNil(query.t)) return
 

@@ -13,7 +13,7 @@ class List extends React.Component{
         this.getTitle = this.getTitle.bind(this)
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.props.getList()
     }
 

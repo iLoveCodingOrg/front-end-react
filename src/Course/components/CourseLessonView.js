@@ -31,7 +31,7 @@ class CourseLessonView extends React.Component{
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.props.getLesson(this.props.match.params.lessonSlug)
         this.props.getCourse(this.props.match.params.courseSlug)
     }

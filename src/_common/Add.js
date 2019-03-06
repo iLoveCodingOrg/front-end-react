@@ -22,7 +22,7 @@ class Add extends React.Component{
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
         // Add jQuery to page for react-trumbowyg
         if(!document.querySelector('#jquery')){
             const script = document.createElement("script")

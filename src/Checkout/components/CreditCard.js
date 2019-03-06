@@ -13,7 +13,7 @@ class CreditCard extends React.Component{
         super(props)
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.props.getBraintreeClientToken()
     }
 

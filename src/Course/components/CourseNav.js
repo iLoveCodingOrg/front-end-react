@@ -21,7 +21,7 @@ class CourseNav extends React.Component{
         this.setActiveLesson(nextProps)
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.setActiveLesson(this.props)
     }
 

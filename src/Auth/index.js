@@ -8,7 +8,7 @@ class Auth extends React.Component{
     constructor(props){
         super(props)
     }
-    componentWillMount(){
+    componentDidMount(){
         this.props.getUser()
     }
     render(){

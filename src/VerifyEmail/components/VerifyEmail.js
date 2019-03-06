@@ -10,7 +10,7 @@ class VerifyEmail extends React.Component {
         super(props)
     }
 
-    componentWillMount(){
+    componentDidMount(){
         const queryString = qsParse(this.props.location.search)
         this.props.callVerifyEmail(queryString.uid, queryString.token)
             .then((response)=>{

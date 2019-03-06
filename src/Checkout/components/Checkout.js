@@ -91,7 +91,7 @@ class Checkout extends React.Component{
         }
     }
 
-    componentWillMount(){
+    componentDidMount(){
       this.props.getProduct(this.props.match.params.slug)
     }
 
