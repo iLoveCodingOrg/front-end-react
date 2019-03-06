@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import { isEmpty } from 'lodash'
 
 import { ViewHeader, RedirectAlert } from '../../_common/'
 import { VideoWrap } from '../../Video'
@@ -36,6 +37,14 @@ class CourseLessonView extends React.Component{
         this.props.getCourse(this.props.match.params.courseSlug)
     }
 
+    getActiveLessonIndex(course, lessonSlug){
+        if(isEmpty(course.lessons)) return -1
+        
+        return course.lessons.findIndex(({slug})=>{
+            return slug === lessonSlug
+        })
+    }
+
     render(){
         const {
             id,
@@ -62,6 +71,8 @@ class CourseLessonView extends React.Component{
         const urlToCourse = `/courses/${courseView.slug}`
         const { lessonSlug } = this.props.match.params
         const absUrlCourseLesson = `https://ilovecoding.org${urlToCourse}/lessons/${lessonSlug}`
+        const activeLessonIndex = this.getActiveLessonIndex(courseView, lessonSlug)
+
         return (
             <div className="container">
                 {
@@ -76,11 +87,6 @@ class CourseLessonView extends React.Component{
                         </Helmet>
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb">
-                                {/* <li className="breadcrumb-item" aria-current="page">
-                                    <Link to="/courses">
-                                        Courses
-                                    </Link>
-                                </li> */}
                                 <li className="breadcrumb-item">
                                     <Link to={urlToCourse}>
                                         {courseView.title}
@@ -110,7 +116,10 @@ class CourseLessonView extends React.Component{
                                 source={sourceUrl}
                                 demo={demoUrl}
                             />
-                            <CourseNav course={courseView} />
+                            <CourseNav
+                                activeLessonIndex={activeLessonIndex}
+                                course={courseView}
+                            />
                             {
                                 !bodyContent? null:
                                 <div

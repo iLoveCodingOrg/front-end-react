@@ -33,6 +33,8 @@ export default connect(
 ((props)=>{
     return (<View {...props} of="course">
         <RedirectAlert slug={props.view.slug} />
-        <CourseNav course={props.view} />
+        <CourseNav
+            activeLessonIndex={-1}
+            course={props.view} />
     </View>)
 })
