@@ -30,7 +30,7 @@ class SocialProof extends React.Component {
     render() {
         return (
                     <div className="">
-                        <h3 className="text-center mb-4"><u>5917 students</u> learned coding from iLoveCoding last month;
+                        <h3 className="text-center mb-4"><u>8028 students</u> learned coding from iLoveCoding last month (Feb 2019);
                         <br/> Here's what some of them had to say:</h3>
                         <PrintReviews
                             containerClasses=""

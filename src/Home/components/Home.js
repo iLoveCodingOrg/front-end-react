@@ -29,7 +29,6 @@ class Home extends React.Component{
                 <div className="mt-4 d-flex justify-content-center">
                     <div className="col-12 col-md-5">
                         <h3 className="h2 text-center mb-4">Skip the cheap courses and the expensive bootcamps!</h3>
-                        {/* <h3 className="h2 text-center mb-4">Learn to code so well, that you can confidently build real-world apps, build an impressive portfolio and pass that tricky interview!</h3> */}
                         <p className="lead mb-5">
                             I get it! Learning how to code can be a confusing process. With dozens of expensive coding bootcamps and thousands of cheap courses, its tough to make a decision on <u>what to learn</u>, <u>where to learn it from</u>, and <u>how to go about it all</u>.
                         </p>
@@ -51,6 +50,7 @@ class Home extends React.Component{
                         <p className="lead mb-5">
                             <strong>Have more questions?</strong> email <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>, and we'd be happy to answer them.
                         </p>
+                        <p className="lead border-top pt-5 mb-4">Learn to code <strong>so well</strong>, that you can confidently build real-world apps, build an impressive portfolio and pass that tricky interview!</p>
                         <p className="text-center">
                             <Link to="/signup" className="btn btn-lg btn-primary">Get Started Free Now</Link>
                         </p>

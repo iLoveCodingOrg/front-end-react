@@ -13,6 +13,11 @@ export default () => (
                 <Link to="/reviews" className="text-muted u px-1">Reviews</Link>
             </div>
             <div className="my-2">
+                <span className="strong pr-1">Cheat sheets:</span>
+                <Link className="text-muted u px-1" to="/blog/htmlcss-cheatsheet">HTML &amp; CSS Cheatsheet</Link>
+                <Link className="text-muted u px-1" to="/blog/js-cheatsheet">JavaScript Cheatsheet</Link>
+            </div>
+            <div className="my-2">
                 <span className="strong pr-1">Company</span>
                 <Link to="/blog" className="text-muted u px-1">Blog</Link>
                 <Link to="/pages/about" className="text-muted u px-1">About us</Link>

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import PremiumSection from './PremiumSection'
 import StudentCommunity from './StudentCommunity'
+import { Video } from '../../Video'
 
 export default function (){
     return (
@@ -16,12 +17,17 @@ export default function (){
                 mt-3
                 mb-5"
             >
-                <h1 className="headline">
-                    Dashboard
-                </h1>
-                <p className="lead text-muted">
-                    Here you will find quick links to resources which are included in your membership.
-                </p>
+                <div className="row">
+                    <div className="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9">
+                        <h1 className="headline">Dashboard</h1>
+                        <p className="lead text-muted">
+                            Here you will find quick links to resources which are included in your membership.
+                        </p>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                        <Video videoSource="314907971" />
+                    </div>
+                </div>
                 <hr className="mb-1"/>
                 <div className="row">
                     <div className="col-12 col-md-6 mt-5">
