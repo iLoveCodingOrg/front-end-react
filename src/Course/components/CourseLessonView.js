@@ -114,6 +114,7 @@ class CourseLessonView extends React.Component{
                             {
                                 !bodyContent? null:
                                 <div
+                                id="html-content"
                                 className="col-12 col-lg-9 border-top pt-4 mx-auto"
                                 dangerouslySetInnerHTML={{ __html: bodyContent }}
                                 />
