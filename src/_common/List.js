@@ -19,13 +19,13 @@ class List extends React.Component{
 
     getTitle(){
         switch(this.props.of){
-            case 'lessons':
+            case 'lesson':
                 return 'All Lessons'
-            case 'courses':
+            case 'course':
                 return 'Courses'
-            case 'pages':
+            case 'page':
                 return 'Pages'
-            case 'questions':
+            case 'question':
                 return 'Questions/Answers'
             case 'blog':
                 return 'iLoveCoding Blog'
@@ -68,7 +68,7 @@ List.propTypes = {
     isLoading: PropTypes.bool.isRequired,
     list: PropTypes.array.isRequired,
     listHeader: PropTypes.func.isRequired,
-    of: PropTypes.oneOf(['questions', 'lessons', 'courses', 'pages', 'blog']).isRequired
+    of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']).isRequired
 }
 
 export default List

@@ -83,8 +83,17 @@ export default function() {
 
                 <h3 className="mt-5">Why should I pay when so much information is free online?</h3>
                 <p>
-                    You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, real-world projects and professional mentorship. iLoveCoding puts everything together in a systematic way.
+                    You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, lack of real-world projects and no professional mentorship.
                 </p>
+                <p>
+                    iLoveCoding puts everything together in a systematic way
+                </p>
+                <ul>
+                    <li>✅ Simple explanations</li>
+                    <li>✅ Ton of Examples</li>
+                    <li>✅ Ton of real-world projects</li>
+                    <li>✅ Professional mentorship.</li>
+                </ul>
 
                 <h3 className="mt-5">How much time will it take?</h3>
                 <p>

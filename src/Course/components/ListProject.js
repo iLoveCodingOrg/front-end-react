@@ -43,7 +43,7 @@ export default connect(
 ((props)=>{
     return <List
         {...props}
-        of="courses"
+        of="course"
         listHeader={ListHeader}
     />
 })

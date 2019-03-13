@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Access({isFree = true, of}){
-    if(of==='blog' || of==='pages') return null
+    if(of==='blog' || of==='page') return null
     return (
         <span>
             {

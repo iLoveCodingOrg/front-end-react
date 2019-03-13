@@ -55,9 +55,9 @@ export function qsParse(location){
 }
 
 export const contentTypeToRoute = {
-    'blog' : 'blog',
-    'question' : 'q',
-    'lesson' : 'lessons',
-    'course' : 'courses',
-    'page' : 'pages'
+    blog : 'blog',
+    question : 'q',
+    lesson : 'lessons',
+    course : 'courses',
+    page : 'pages'
 }
