@@ -41,7 +41,7 @@ export default function() {
 
                 <h3 className="mt-5">I have no programming experience or CS degree, will it work for me?</h3>
                 <p>
-                    Yes! iLoveCoding is built for people with no-programming background or a CS degree (like me). iLoveCoding works best for 4 kinds of people (1) Beginners, (2) Junior and Senior Developers, (3) Developers from a different domain and (4) Entrepreneurs.
+                    Yes! iLoveCoding is built for people with no programming background or a CS degree (like me). iLoveCoding works best for 4 kinds of people (1) Beginners, (2) Junior and Senior Developers, (3) Developers from a different domain and (4) Entrepreneurs.
                 </p>
 
 
@@ -71,17 +71,26 @@ export default function() {
                 <p>
                     iLoveCoding brings the best of both worlds - Professional mentorship of a bootcamp, and affordability of online courses.
                 </p>
+                <p>
+                    There are thousands of online courses, and it difficult to find good ones. When you find a good teacher its often that the content is targeted on one topic and you are left with only partial knowledge. You constantly have to search for answers and jump from course to course. iLoveCoding is your one-stop-shop to take you through the full journey.
+                </p>
+                <p>
+                    Online courses often do not have any support. With iLoveCoding, you get professional mentorship to reach your goals (Job / Project / Interview / Resume).
+                </p>
+                <p>
+                    iLoveCoding gives you the value of a coding bootcamp at 2% of the cost.
+                </p>
 
                 <h3 className="mt-5">Why should I pay when so much information is free online?</h3>
                 <p>
-                    You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, real-world projects and professional mentor-ship. iLoveCoding puts everything together in a systematic way.
+                    You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, real-world projects and professional mentorship. iLoveCoding puts everything together in a systematic way.
                 </p>
 
                 <h3 className="mt-5">How much time will it take?</h3>
                 <p>
                     If you are a total beginner, it will take you 8 months of part-time learning (90 minutes a day), or 4 months of full-time learning (4 hours a day). The learning time should be quality focused work, which means you should deliberately consume the content and apply what is taught by building.
                     <br/><br/>
-                    For best results, ask a bunch of questions, follow the path, and write a lot of code, no-matter how bad. Your initial work will be horrible. That is totally normal.
+                    For best results, ask a bunch of questions, follow the path, and write a lot of code, no matter how bad. Your initial work will be horrible. That is totally normal.
                 </p>
             </div>
         </div>

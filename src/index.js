@@ -133,7 +133,7 @@ function renderApp(){
 
                                         <Route
                                             strict
-                                            path="/questions"
+                                            path="/q"
                                             component={QuestionRoutes} />
 
                                         <Route

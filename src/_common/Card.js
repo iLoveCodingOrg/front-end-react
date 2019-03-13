@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 import { IMG_URL } from '../_app/constants'
 import { Access, Level, Duration, LessonCount } from './'
+import { contentTypeToRoute } from '../_app/utils'
 
 class Card extends React.Component{
     constructor(props){
@@ -24,8 +25,9 @@ class Card extends React.Component{
             lessonCount
         } = this.props.item
         const { of } = this.props
+        const route = contentTypeToRoute[of]
         const isFree = (access)? false : true
-        const urlTo = `/${of}/${slug}`
+        const urlTo = `/${route}/${slug}`
  
         return (
             <div

@@ -9,6 +9,7 @@ import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 import { AsyncComments as Comments } from '../Comments'
 import Cta from '../Cta'
+import { contentTypeToRoute } from '../_app/utils'
 
 class View extends React.Component{
     constructor(props){
@@ -66,7 +67,7 @@ class View extends React.Component{
         } = this.props
         const { slug } = this.props.match.params
         const getAbsUrl = (of)=> {
-            const route = (of === 'blog')? of : `${of}s`
+            const route = contentTypeToRoute[of]
             return `https://ilovecoding.org/${route}/${slug}`
         }
         return (

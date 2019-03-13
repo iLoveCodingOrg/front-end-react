@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { withRouter } from 'react-router-dom'
+import { contentTypeToRoute } from '../_app/utils'
 
 import { AsyncEditForm as EditForm } from './'
 
@@ -47,12 +48,7 @@ class Add extends React.Component{
         add(preparedPayload)
             .then(({ isSuccess, slug })=>{
                 if(isSuccess){
-                    // All routes are plural accept 'blog'
-                    // i.e:
-                    // /pages/:slug
-                    // /courses/:slug
-                    // /blog/:slug   << notice blog not blogs
-                    const route = (of === 'blog')? of : `${of}s`
+                    const route = contentTypeToRoute[of]
 
                     history.push(`/${route}/${slug}`)
                 }

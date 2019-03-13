@@ -25,7 +25,7 @@ class Pricing extends React.Component{
                     <title>Pricing - iLoveCoding</title>
                 </Helmet>
                 {/* <p className="alert alert-warning lead text-center">
-                    <strong>Let’s be honest</strong> - Coding bootcamps are charging an arm and a leg - We give you <span className="strike">same</span> <Link to="/questions/how-better" className="u">better training</Link> for 2% of the cost.
+                    <strong>Let’s be honest</strong> - Coding bootcamps are charging an arm and a leg - We give you <span className="strike">same</span> <Link to="/q/how-better" className="u">better training</Link> for 2% of the cost.
                 </p> */}
 
                 {/* <div className="py-5 bg-gray-200"><Testimonials /></div> */}

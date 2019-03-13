@@ -33,7 +33,7 @@ export function setLoadingList(isLoading=true) {
 }
 
 export function getCourses(type){
-    let filter = {};
+    let filter = {}
 
     if(type === 'project'){
         filter = { where: { topic: 'Project' } }

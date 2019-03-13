@@ -20,22 +20,22 @@ class Routes extends React.Component{
                 <Route
                     exact
                     strict
-                    path="/questions"
+                    path="/q"
                     component={List} />
                 <Route
                     exact
                     strict
-                    path="/questions/add"
+                    path="/q/add"
                     component={Add} />
                 <Route
                     exact
                     strict
-                    path="/questions/:slug"
+                    path="/q/:slug"
                     component={View} />
                 <Route
                     exact
                     strict
-                    path="/questions/:slug/edit"
+                    path="/q/:slug/edit"
                     component={isPrivate(Edit)} />
                 <Route
                     component={NotFound} />

@@ -187,10 +187,11 @@ class Header extends React.Component{
     renderAddButtons(){
         return (
             <div className="d-inline">
-                <Link to="/pages/add" className="btn">Add Page</Link>
-                <Link to="/lessons/add" className="btn">Add Lesson</Link>
-                <Link to="/courses/add" className="btn">Add Course</Link>
-                <Link to="/questions/add" className="btn">Add Question</Link>
+                <Link to="/pages/add" className="btn">+ Page</Link>
+                <Link to="/lessons/add" className="btn">+ Lesson</Link>
+                <Link to="/courses/add" className="btn">+ Course</Link>
+                <Link to="/q/add" className="btn">+ Question</Link>
+                <Link to="/blog/add" className="btn">+ Blog</Link>
             </div>
         )
     }
