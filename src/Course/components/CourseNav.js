@@ -48,12 +48,13 @@ class CourseNav extends React.Component{
         return (
             <div>
                 <div className="d-flex my-2 justify-content-center">
+                    {lessons.length && 
                     <CourseLinks
                         isMainBtnHidden={this.state.activeLessonIndex < 0}
                         activeLessonIndex={this.state.activeLessonIndex}
                         courseSlug={courseSlug}
                         lessons={lessons}
-                    />
+                    />}
                 </div>
 
                 <CourseContent
