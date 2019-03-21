@@ -10,7 +10,7 @@ const dataOriginal = {
         monthly: {
             planType: 'pro',
             name: 'PRO',
-            // desc: 'Self-Paced Structured Learning',
+            desc: <span>Best suited for self-learners who need some support</span>,
             price: 37,
             terms: 'Paid Monthly',
             // terms2: 'Complete training to job-ready',
@@ -19,7 +19,7 @@ const dataOriginal = {
         "6-month": {
             planType: 'pro',
             name: 'PRO',
-            // desc: 'Self-Paced Structured Learning',
+            desc: <span>Best suited for self-learners who need some support</span>,
             price: 25,
             terms: 'Billed $150 Every 6 Months',
             // terms2: 'Complete training to job-ready',
@@ -31,7 +31,7 @@ const dataOriginal = {
         monthly: {
             planType: 'premium',
             name: 'PREMIUM',
-            // desc: 'Self-Paced Structured Learning',
+            desc: <span>Best suited for learners who need more hands-on-support <span className="text-success">(Weekly mentor group calls)</span></span>,
             price: 99,
             terms: 'Paid Monthly',
             // terms2: 'Complete training + weekly group calls',
@@ -40,7 +40,7 @@ const dataOriginal = {
         "6-month": {
             planType: 'premium',
             name: 'PREMIUM',
-            // desc: 'Self-Paced Structured Learning',
+            desc: <span>Best suited for learners who need more hands-on-support <span className="text-success">(Weekly mentor group calls)</span></span>,
             price: 67,
             terms: 'Billed $400 Every 6 Months',
             // terms2: 'Complete training + weekly group calls',
@@ -106,7 +106,7 @@ class Price extends React.Component {
         return (
             <section className="d-flex justify-content-center">
                 <div className="d-flex flex-column align-items-center">
-                    <div className="position-relative mb-3 mx-sm-auto mr-auto">
+                    {/* <div className="position-relative mb-3 mx-sm-auto mr-auto">
                         <Switch
                             style={{ maxWidth: '400px', minWidth: '320px' }}
                             onChange={this.handleSwitch}
@@ -131,12 +131,12 @@ class Price extends React.Component {
                         <h5 className="position-absolute" style={{ right: "-133px", bottom: 0 }}>
                             <div className="badge badge-orange"><span className="oi oi-arrow-thick-left" /> Save up to 32%</div>
                         </h5>
-                    </div>
+                    </div> */}
                     <div className="d-flex flex-wrap justify-content-center">
                         {this.renderPriceBox(data.pro[selected])}
                         {this.renderPriceBox(data.premium[selected])}
                     </div>
-                    <div className="d-flex flex-wrap my-4">
+                    <div className="d-flex flex-wrap mt-4">
                         <p>
                             ⚡️ Cancel Anytime.
                             &nbsp; &nbsp;

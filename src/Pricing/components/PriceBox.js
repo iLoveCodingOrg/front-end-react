@@ -45,7 +45,7 @@ class PriceBox extends React.Component {
         } = this.props
         return (
             <div style={{ maxWidth: '500px', minWidth: '320px' }}
-                className="card mx-2 mb-4 mb-md-0">
+                className="card mx-2 mb-4 mb-lg-0 border-primary">
                 <div className="card-body align-self-center p-4">
                     { 
                         isPopular?
@@ -56,10 +56,10 @@ class PriceBox extends React.Component {
                     }
                     <div className="text-center">
                         <div className="h4">
-                            <span className="badge badge-pill badge-light border">{name}</span>
+                            <span className="px-3 badge badge-pill badge-dark border">{name}</span>
                         </div>
-                        {/* <br/>
-                        <span className="lead em">{desc}</span> */}
+                        <br/>
+                        <span className="lead em">{desc}</span>
                         <div className="card-title pricing-card-title mb-0">
                             {this.renderPrice(price)}
                         </div>
