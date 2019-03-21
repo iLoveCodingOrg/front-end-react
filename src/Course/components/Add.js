@@ -6,7 +6,7 @@ import { addCourse } from '../actions'
 import { Add } from '../../_common'
 
 function mapStateToProps(){
-    return
+    return {}
 }
 
 function mapDispatchToProps(dispatch){
