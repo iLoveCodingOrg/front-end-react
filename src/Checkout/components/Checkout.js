@@ -60,11 +60,7 @@ class Checkout extends React.Component{
             coupon: this.props.isOfferValid? '30percent' : undefined
         })
             .then(({ isSubscribed })=>{
-                if(isSubscribed){
-                    $FPROM.trackSignup({
-                        email: this.state.userInfo.email.value
-                    }, ()=>{console.log('Callback received!')})
-                    
+                if(isSubscribed){                    
                     this.props.history.push('/pages/welcome')
                 }
             })
