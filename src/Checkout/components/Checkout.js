@@ -39,6 +39,7 @@ class Checkout extends React.Component{
         this.renderBuyError = this.renderBuyError.bind(this)
         this.getPrice = this.getPrice.bind(this)
     }
+
     braintreeInstance;
     
     setBraintreeInstance(instance){
@@ -46,12 +47,11 @@ class Checkout extends React.Component{
     }
     
     async buy(event){
-        // TODO: IF NO FORM ERRORS THEN ALLOW BUY
         event.preventDefault()
-
+        
         const { slug } = this.props.match.params
         const { nonce } = await this.braintreeInstance.requestPaymentMethod()
-
+        
         this.props.buy(slug, {
             firstName: this.state.userInfo.firstName.value,
             lastName: this.state.userInfo.lastName.value,
@@ -60,8 +60,10 @@ class Checkout extends React.Component{
             coupon: this.props.isOfferValid? '30percent' : undefined
         })
             .then(({ isSubscribed })=>{
-                if(isSubscribed){                    
+                if(isSubscribed){
                     this.props.history.push('/pages/welcome')
+                } else {
+                    this.braintreeInstance.clearSelectedPaymentMethod()
                 }
             })
     }

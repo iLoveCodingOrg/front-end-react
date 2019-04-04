@@ -149,11 +149,10 @@ export function buy(slug, { firstName, lastName, email, nonce, coupon }){
                 return { isSubscribed: false }
             }
         })
-        .catch((error)=>{
-            parseJSON(error)
-            .then((error) => {
-                dispatch(setBuyStatus(error))
-            })
+        .catch(parseJSON)
+        .then((error) => {
+            dispatch(setBuyStatus(error))
+            return { isSubscribed: false }
         })
     }
 }
