@@ -149,10 +149,12 @@ export function buy(slug, { firstName, lastName, email, nonce, coupon }){
                 return { isSubscribed: false }
             }
         })
-        .catch(parseJSON)
-        .then((error) => {
-            dispatch(setBuyStatus(error))
-            return { isSubscribed: false }
+        .catch((error)=>{
+            return parseJSON(error)
+            .then((error) => {
+                dispatch(setBuyStatus(error))
+                return { isSubscribed: false }
+            })
         })
     }
 }
@@ -165,7 +167,7 @@ export function setBuyStatus(error=null, status = {}) {
     }
     let errorMessage
     if(error){
-        if(typeof  error === 'string'){
+        if(typeof error === 'string'){
             errorMessage = error
         } else if (get(error, 'error.message')){
             errorMessage = get(error, 'error.message')
