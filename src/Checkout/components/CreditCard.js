@@ -29,8 +29,13 @@ class CreditCard extends React.Component{
                     <DropIn
                         options={{ 
                             authorization: this.props.clientToken,
-                            paymentOptionPriority: ['card', 'paypal', 'paypalCredit', 'venmo', 'applePay']
-
+                            paymentOptionPriority: ['card', 'paypal', 'paypalCredit'],
+                            paypal: {
+                                flow: 'vault'
+                            },
+                            paypalCredit: {
+                                flow: 'vault'
+                            }
                         }}
                         onInstance={(instance) => (this.props.setBraintreeInstance(instance))}
                     />
