@@ -66,7 +66,7 @@ class Card extends React.Component{
 
 Card.propTypes = {
     item: PropTypes.object.isRequired,
-    of: PropTypes.oneOf(['question', 'lessons', 'courses', 'pages', 'blog']).isRequired
+    of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']).isRequired
 }
 
 export default Card

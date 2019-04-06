@@ -15,6 +15,7 @@ import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
 import { AsyncComments as Comments } from '../../Comments'
 import Cta from '../../Cta'
+import Breadcrumbs from '../../Breadcrumbs'
 
 class CourseLessonView extends React.Component{
     constructor(props){
@@ -85,16 +86,15 @@ class CourseLessonView extends React.Component{
                             <title>{title} - iLoveCoding</title>
                             <meta name="description" content={subTitle} />
                         </Helmet>
-                        <nav aria-label="breadcrumb">
-                            <ol className="breadcrumb">
-                                <li className="breadcrumb-item">
-                                    <Link to={urlToCourse}>
-                                        {courseView.title}
-                                    </Link>
-                                </li>
-                                <li className="breadcrumb-item active" aria-current="page">{title}</li>
-                            </ol>
-                        </nav>
+                        <Breadcrumbs nodes={[
+                            {
+                                label: courseView.title,
+                                link: urlToCourse,
+                            },
+                            {
+                                label: title,
+                            }
+                        ]}/>
                         <ViewHeader
                             title={title}
                             subTitle={subTitle}
