@@ -43,6 +43,8 @@ import { AsyncCurriculum as Curriculum } from './Curriculum'
 import { AsyncPricing as Pricing } from './Pricing'
 import { AsyncOfficeHours as OfficeHours } from './OfficeHours'
 import { AsyncGroupCalls as GroupCalls } from './GroupCalls'
+import { AsyncRoutes as SubscriptionRoutes } from './Subscription'
+import ChangePassword from './ChangePassword'
 
 const RemoveTrailingSlash = ({ location }) => {
     const { pathname } = location
@@ -165,6 +167,16 @@ function renderApp(){
                                             strict
                                             path="/groupcalls"
                                             component={isPrivate(GroupCalls)} />
+
+                                        <Route
+                                            strict
+                                            path="/subscriptions"
+                                            component={isPrivate(SubscriptionRoutes)} />
+                                        
+                                        <Route
+                                            strict
+                                            path="/change-password"
+                                            component={isPrivate(ChangePassword)} />
 
                                         <Route
                                             component={NotFound} />

@@ -37,31 +37,24 @@ export default function (){
                                 <li><Link to="/curriculum">Full Curriculum</Link></li>
                                 <li><Link to="/courses/core">Core Training</Link></li>
                                 <li><Link to="/courses/projects">Practice Projects</Link></li>
+                                <li className="d-inline-block pt-2 mt-2 border-top"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
                             </ul>
                         </div>
 
                         <div className="mt-5">
-                            <h4>Additional</h4>
+                            <h4>Account Settings</h4>
                             <ul className="list-unstyled">
-                                <li><Link to="/pages/resources">Tools &amp; Resources</Link></li>
-                                <li><a target="_blank" rel="noopener" href="https://ilovecoding.typeform.com/to/g6mTg8">Submit your success story</a></li>
+                                <li><Link to="/subscriptions">Subscription Info</Link></li>
+                                <li><Link to="/change-password">Change Password</Link></li>
+                                <li className="d-inline-block pt-2 mt-2 border-top">Contact: <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a></li>
                             </ul>
                         </div>
+
                     </div>
                     <div className="col-12 col-md-6 mt-5">
                         <StudentCommunity />
                         <PremiumSection />
                     </div>
-                </div>
-                <div className="row">
-                    {/* <div className="col-12 col-md-4 mt-5">
-                        <h4>Account Settings</h4>
-                        <ul className="list-unstyled">
-                            <li><a to="/">Change Password</a></li>
-                            <li><a to="/">Active / Past Enrollments</a></li>
-                            <li><a to="/">Payments</a></li>
-                        </ul>
-                    </div> */}
                 </div>
             </section>
         </div>

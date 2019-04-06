@@ -8,6 +8,7 @@ import { reducer as checkout } from '../Checkout'
 import { reducer as verifyEmail } from '../VerifyEmail'
 import { reducer as user } from '../_user'
 import { reducer as offer } from '../Offer'
+import { reducer as subscriptions } from '../Subscription'
 
 // Reducer is responsible to update the state in the store
 // based on the Actions that are applied to it
@@ -20,5 +21,6 @@ export default combineReducers({
     checkout,
     verifyEmail,
     user,
-    offer
+    offer,
+    subscriptions
 })

@@ -28,6 +28,7 @@
     "bootstrap": "^4.1.1",
     "braintree-web-drop-in-react": "^1.0.5",
     "disqus-react": "^1.0.5",
+    "lodash": "^4.17.11",
     "open-iconic": "^1.1.1",
     "prop-types": "^15.6.2",
     "qs": "^6.5.2",
