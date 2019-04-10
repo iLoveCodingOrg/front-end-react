@@ -6,7 +6,7 @@ import { selectors } from '../_user'
 export default function (WrappedComponent) {
     function PrivateComponent(props) {
         if(props.isLoggedIn){
-            return <WrappedComponent />
+            return <WrappedComponent {...props} />
         }else{
             return <div className="container d-flex justify-content-center">
                 <div className="col-md-8">

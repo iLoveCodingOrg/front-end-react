@@ -174,6 +174,7 @@ function renderApp(){
                                             component={isPrivate(SubscriptionRoutes)} />
                                         
                                         <Route
+                                            exact
                                             strict
                                             path="/change-password"
                                             component={isPrivate(ChangePassword)} />

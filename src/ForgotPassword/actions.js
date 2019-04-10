@@ -51,7 +51,7 @@ export function callResetPassword(accessToken, email, password){
         .then(checkStatus)
         .then(parseJSON)
         .then(() => {
-            toast.success('Password changed successfully, Login with your new password')
+            toast.success('Password changed successfully, Login with your new password.')
             return { isSuccess: true }
         })
         .catch((error) => {
