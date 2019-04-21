@@ -52,7 +52,7 @@ class Home extends React.Component{
                         </p>
                         <p className="lead border-top pt-5 mb-4">Learn to code <strong>so well</strong>, that you can confidently build real-world apps, build an impressive portfolio and pass that tricky interview!</p>
                         <p className="text-center">
-                            <Link to="/signup" className="btn btn-lg btn-primary">Get Started Free Now</Link>
+                            <Link to="/pricing" className="btn btn-lg btn-primary">Get Started Now</Link>
                         </p>
                     </div>
                 </div>

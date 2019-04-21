@@ -18,7 +18,7 @@ const Cta = ({isLoggedIn, isPaid, isPro, of, slug}) => {
             <div className="alert alert-warning text-center my-4">
                 <span className="lead">Become a confident software developer with guidance!</span>
                 <br/>
-                <Link to="/pricing" className="btn btn-lg btn-primary my-2">Get Started</Link>
+                <Link to="/signup" className="btn btn-lg btn-primary my-2">Get Started Free</Link>
                 <br/>
                 Already have an account, <Link to="/login" className="btn-link">Please Login</Link>
             </div>

@@ -90,7 +90,7 @@ class Login extends React.Component{
                 <form className="form-login" onSubmit={this.handleSubmit}>
                     <h2 className="text-center">Log in to iLoveCoding</h2>
                     <p className="text-center">
-                        Don't have an account? <Link to="/signup">Get started Free</Link> or enrolled in <Link to="/pricing">iLoveCoding's Paid Programs.</Link>
+                        Don't have an account? <Link to="/pricing">Get started</Link> or enrolled in <Link to="/pricing">iLoveCoding's Paid Programs.</Link>
                     </p>
                     {this.renderVerifyEmailStatus()}
                     {this.renderError()}
