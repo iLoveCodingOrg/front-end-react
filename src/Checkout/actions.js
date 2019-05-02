@@ -123,7 +123,7 @@ export function setBuyLoading(isLoading=true) {
     }
 }
 
-export function buy(slug, { firstName, lastName, email, nonce, coupon }){
+export function buy(slug, { firstName, lastName, email, nonce, coupon, recaptchaToken }){
     const url = `${API_URL}purchases/product/${slug}/buy`
     
     return (dispatch) => {
@@ -136,7 +136,7 @@ export function buy(slug, { firstName, lastName, email, nonce, coupon }){
               'Accept': 'application/json',
               'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: jsonToUrlEncoded({ firstName, lastName, email, nonce, coupon })
+            body: jsonToUrlEncoded({ firstName, lastName, email, nonce, coupon, recaptchaToken })
         })
         .then(checkStatus)
         .then(parseJSON)

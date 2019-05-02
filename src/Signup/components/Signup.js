@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
+import { Recaptcha2 } from '../../Recaptcha'
 import WrapMini from '../../WrapMini'
 import { signup, clearError } from '../../_user/actions'
 
@@ -11,6 +12,7 @@ class Signup extends React.Component{
     constructor(props){
         super(props)
         this.state = {
+            recaptchaToken: '',
             firstName: '',
             lastName: '',
             email: '',
@@ -20,6 +22,8 @@ class Signup extends React.Component{
         this.renderError = this.renderError.bind(this)
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.verifyRecaptchaCb = this.verifyRecaptchaCb.bind(this)
+        this.setRecaptchaElem = this.setRecaptchaElem.bind(this)
     }
 
     componentDidMount(){
@@ -34,13 +38,19 @@ class Signup extends React.Component{
             firstName,
             lastName,
             email,
-            password
+            password,
+            recaptchaToken
         } = this.state
         
-        signup({firstName, lastName, email, password})
+        signup({firstName, lastName, email, password, recaptchaToken})
         .then(({ isSuccess })=>{
             if(isSuccess){
                 history.push('/pages/confirm')
+            }else{
+                if(this.recaptchaElm){
+                    this.recaptchaElm.reset()
+                    this.setState({ recaptchaToken: '' })
+                }
             }
         })
     }
@@ -59,6 +69,14 @@ class Signup extends React.Component{
                 {this.props.error}
             </div>
         )
+    }
+
+    verifyRecaptchaCb(recaptchaToken) {
+        this.setState({ recaptchaToken })
+    }
+
+    setRecaptchaElem(recaptchaElm){
+        this.recaptchaElm = recaptchaElm
     }
 
     render(){
@@ -125,6 +143,15 @@ class Signup extends React.Component{
                                 className="form-control form-control-lg"
                                 placeholder="Password"
                                 
+                            />
+                        </div>
+                    </div>
+                    <div className="form-group row">
+                        <label htmlFor="password" className="col-md-3 col-form-label strong">Are you a human?</label>
+                        <div className="col-md-9">
+                            <Recaptcha2
+                                onLoadCb={this.setRecaptchaElem}
+                                verifyTokenCb={this.verifyRecaptchaCb}
                             />
                         </div>
                     </div>

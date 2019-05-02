@@ -5,6 +5,7 @@ import { withRouter, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import { qsParse } from '../../_app/utils'
 
+import { Recaptcha2 } from '../../Recaptcha'
 import WrapMini from '../../WrapMini'
 import { actions } from '../../_user'
 
@@ -12,6 +13,7 @@ class Login extends React.Component{
     constructor(props){
         super(props)
         this.state = {
+            recaptchaToken: '',
             email: '',
             password: ''
         }
@@ -21,6 +23,8 @@ class Login extends React.Component{
         this.renderError = this.renderError.bind(this)
         this.renderVerifyEmailStatus = this.renderVerifyEmailStatus.bind(this)
         this.handleVerifyEmail = this.handleVerifyEmail.bind(this)
+        this.verifyRecaptchaCb = this.verifyRecaptchaCb.bind(this)
+        this.setRecaptchaElem = this.setRecaptchaElem.bind(this)
     }
     componentDidMount(){
         this.props.clearError()
@@ -30,14 +34,19 @@ class Login extends React.Component{
         
         const { location, history, login } = this.props
         const redirect = qsParse(location.search).redirect
-
-        login(this.state.email, this.state.password)
+        const { email, password, recaptchaToken } = this.state
+        login(email, password, recaptchaToken)
         .then(({ isSuccess })=>{
             if(isSuccess){
                 if(redirect){
                     history.push(redirect)
                 }else{
                     history.push('/dashboard')
+                }
+            }else{
+                if(this.recaptchaElm){
+                    this.recaptchaElm.reset()
+                    this.setState({ recaptchaToken: '' })
                 }
             }
         })
@@ -83,6 +92,12 @@ class Login extends React.Component{
         }
         return null
     }
+    verifyRecaptchaCb(recaptchaToken) {
+        this.setState({ recaptchaToken })
+    }
+    setRecaptchaElem(recaptchaElm){
+        this.recaptchaElm = recaptchaElm
+    }
     render(){
         return (
             <WrapMini>
@@ -117,6 +132,10 @@ class Login extends React.Component{
                             onChange={(event)=>this.handleChange('password', event.target.value)}
                         />
                     </div>
+                    <Recaptcha2
+                        onLoadCb={this.setRecaptchaElem}
+                        verifyTokenCb={this.verifyRecaptchaCb}
+                    />
                     <div>
                         <input
                             disabled={this.props.isLoading}
@@ -155,8 +174,8 @@ function mapDispatchToProps(dispatch){
         clearError: ()=>{
             return dispatch(actions.clearError())
         },
-        login: (email, password)=>{
-            return dispatch(actions.login(email, password))
+        login: (email, password, recaptchaToken)=>{
+            return dispatch(actions.login(email, password, recaptchaToken))
         },
         callSendVerifyEmail: (email, )=>{
             return dispatch(actions.callSendVerifyEmail(email))

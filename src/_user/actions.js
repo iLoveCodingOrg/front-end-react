@@ -22,7 +22,7 @@ export function setLoading(isLoading=true) {
     }
 }
 
-function checkInvalidFields({firstName, lastName, email, password}){
+function checkInvalidFields({firstName, lastName, email, password, recaptchaToken}){
     const fields = []
     if (!firstName){
         fields.push('First Name')
@@ -36,18 +36,22 @@ function checkInvalidFields({firstName, lastName, email, password}){
     if (!password){
         fields.push('Password')
     }
+    if (!recaptchaToken){
+        fields.push('reCaptcha')
+    }
 
     return fields
 }
 
-export function signup(payload){   
+export function signup(payload){
     
     return (dispatch) => {
         // Validate fields
         const fields = checkInvalidFields(payload)
         
         if(fields.length > 0){
-            const message = `${fields.join(', ')} are required`
+            const pluralize = fields.length > 1? 'are' : 'is'
+            const message = `${fields.join(', ')} ${pluralize} required`
     
             const p = new Promise((resolve)=>{ resolve()})
             return p.then(()=>{
@@ -86,10 +90,41 @@ export function signup(payload){
     }
 }
 
-export function login(email, password){
+function checkInvalidFieldsLogin({email, password, recaptchaToken}){
+    const fields = []
+
+    if (!email){
+        fields.push('Email')
+    }
+    if (!password){
+        fields.push('Password')
+    }
+    if (!recaptchaToken){
+        fields.push('reCaptcha')
+    }
+
+    return fields
+}
+
+export function login(email, password, recaptchaToken){
     const url = `${API_URL}users/login`
     
     return (dispatch) => {
+        // Validate fields
+        const fields = checkInvalidFieldsLogin({email, password, recaptchaToken})
+
+        if(fields.length > 0){
+            const pluralize = fields.length > 1? 'are' : 'is'
+            const message = `${fields.join(', ')} ${pluralize} required`
+    
+            const p = new Promise((resolve)=>{ resolve()})
+            return p.then(()=>{
+                dispatch(setUser(message))
+                return { isSuccess: false }
+            })
+        }
+
+        // Login
         dispatch(setLoading(true))
 
         return fetch(url, {
@@ -99,7 +134,7 @@ export function login(email, password){
                 'content-Type': 'application/json'
             },
             body: JSON.stringify({
-                email, password
+                email, password, recaptchaToken
             })
         })
         .then(checkStatus)

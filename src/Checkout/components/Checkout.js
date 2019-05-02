@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { withRouter } from 'react-router-dom'
 import get from 'lodash/get'
 
+import { Recaptcha2 } from '../../Recaptcha'
 import { isLoggedIn } from '../../_user/selectors'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
@@ -27,6 +28,7 @@ class Checkout extends React.Component{
         super(props)
 
         this.state = {
+            recaptchaToken: '',
             userInfo: {
                 firstName: { value: props.firstName },
                 lastName: { value: props.lastName },
@@ -38,6 +40,8 @@ class Checkout extends React.Component{
         this.buy = this.buy.bind(this)
         this.renderBuyError = this.renderBuyError.bind(this)
         this.getPrice = this.getPrice.bind(this)
+        this.verifyRecaptchaCb = this.verifyRecaptchaCb.bind(this)
+        this.setRecaptchaElem = this.setRecaptchaElem.bind(this)
     }
 
     braintreeInstance;
@@ -57,13 +61,18 @@ class Checkout extends React.Component{
             lastName: this.state.userInfo.lastName.value,
             email: this.state.userInfo.email.value,
             nonce,
-            coupon: this.props.isOfferValid? '30percent' : undefined
+            coupon: this.props.isOfferValid? '30percent' : undefined,
+            recaptchaToken: this.state.recaptchaToken
         })
             .then(({ isSubscribed })=>{
                 if(isSubscribed){
                     this.props.history.push('/pages/welcome')
                 } else {
                     this.braintreeInstance.clearSelectedPaymentMethod()
+                    if(this.recaptchaElm){
+                        this.recaptchaElm.reset()
+                        this.setState({ recaptchaToken: '' })
+                    }
                 }
             })
     }
@@ -110,6 +119,14 @@ class Checkout extends React.Component{
         }
     }
 
+    verifyRecaptchaCb(recaptchaToken) {
+        this.setState({ recaptchaToken })
+    }
+
+    setRecaptchaElem(recaptchaElm){
+        this.recaptchaElm = recaptchaElm
+    }
+
     render(){
         const price = this.getPrice()
         const billingDuration = get(this.props.product, 'billingDuration')
@@ -150,6 +167,10 @@ class Checkout extends React.Component{
                                             price={price}
                                             billingDuration={billingDuration}
                                             billingCycles={billingCycles}
+                                        />
+                                        <Recaptcha2
+                                            onLoadCb={this.setRecaptchaElem}
+                                            verifyTokenCb={this.verifyRecaptchaCb}
                                         />
                                         <button
                                             className="btn btn-primary btn-lg btn-block"
