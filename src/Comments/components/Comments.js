@@ -1,34 +1,18 @@
-import React from 'react'
-import { DiscussionEmbed } from 'disqus-react'
+import React, { useEffect } from 'react'
 
-class Comment extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    render(){
-        const { of, id, title, url } = this.props
-        // Fortunately we have two disqus installation.
-        // These are the two corresponding shortnames for them
-        const shortname = (of === 'blog')? 'blogilovecodingorg' : 'ilovecoding'
-        const currentURL = window.location.href
-        return (
-            <div className="text-center mt-4">
-                <div className="alert">
-                    🙌 Encourage me, share this:
-                    &nbsp;
-                    <a className="text-truncate" href={currentURL}>{currentURL}</a>
-                </div>
-                <DiscussionEmbed shortname={shortname} config={{
-                    identifier: id,
-                    title,
-                    url
-                }} />
-            </div>
-        )
-    }
-}
+export default function() {
+  useEffect(() => {
+    const script = document.createElement('script')
 
-Comment.defaultProps = {
-    of: '' // random character. Default of can be blank
+    script.src = 'https://cdn.commento.io/js/commento.js'
+    script.async = true
+
+    document.body.appendChild(script)
+  }, [])
+
+  return (
+    <>
+      <div id="commento"></div>
+    </>
+  )
 }
-export default Comment
