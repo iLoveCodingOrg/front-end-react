@@ -10,9 +10,5 @@ export default function() {
     document.body.appendChild(script)
   }, [])
 
-  return (
-    <>
-      <div id="commento"></div>
-    </>
-  )
+  return <div id="commento"></div>
 }
