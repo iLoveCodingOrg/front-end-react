@@ -23,30 +23,25 @@ const data = [{
   credit2: '',
 }]
 
-class SocialProof extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <div className="">
-        <h3 className="text-center mb-4">
-          <u>10,751 students</u>
-          {' '}
-learned coding from iLoveCoding last month (Mar 2019);
-          <br />
-          {' '}
-Here's what some of them had to say:
-        </h3>
-        <PrintReviews
-          containerClasses=""
-          itemClasses="col-md-3 mr-2"
-          data={data}
-        />
-      </div>
-    )
-  }
+function SocialProof() {
+  return (
+    <div className="">
+      <h3 className="text-center mb-4">
+        <u>10,436 students</u>
+        {' '}
+          learned coding from iLoveCoding last month (Apr 2019);
+        <br />
+        {' '}
+        Here&apos;s what some of them had to say:
+      </h3>
+      <PrintReviews
+        containerClasses=""
+        itemClasses="col-md-3 mr-2"
+        data={data}
+      />
+    </div>
+  )
 }
+
 
 export default SocialProof

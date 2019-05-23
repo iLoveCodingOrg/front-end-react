@@ -4,6 +4,4 @@ const AsyncHome = AsyncLoader({
   loader: () => import('./components/Home'),
 })
 
-export {
-  AsyncHome,
-}
+export default AsyncHome

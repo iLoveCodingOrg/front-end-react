@@ -93,6 +93,7 @@ class ForgotPassword extends React.Component {
           <div>
             <label htmlFor="email" className="sr-only">Email address</label>
             <input
+              id="email"
               name="email"
               type="email"
               className="form-control form-control-lg"
@@ -112,7 +113,11 @@ class ForgotPassword extends React.Component {
             />
           </div>
           <div className="text-center">
-            <Link to="/login"> 🔙 Back to login</Link>
+            <Link to="/login">
+              <span role="img" aria-label="Back arrow emoji"> 🔙</span>
+              {' '}
+              Back to login
+            </Link>
           </div>
         </form>
       </WrapMini>

@@ -21,7 +21,7 @@ export default function () {
           <div className="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9">
             <h1 className="headline">Dashboard</h1>
             <p className="lead text-muted">
-                            Here you will find quick links to resources which are included in your membership.
+              Here you will find quick links to resources which are included in your membership.
             </p>
           </div>
           <div className="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
@@ -47,7 +47,8 @@ export default function () {
                 <li><Link to="/subscriptions">Subscription Info</Link></li>
                 <li><Link to="/change-password">Change Password</Link></li>
                 <li className="d-inline-block pt-2 mt-2 border-top">
-Contact:
+                  Contact:
+                  {' '}
                   <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>
                 </li>
               </ul>

@@ -4,6 +4,4 @@ const AsyncDashboard = AsyncLoader({
   loader: () => import('./components/Dashboard'),
 })
 
-export {
-  AsyncDashboard,
-}
+export default AsyncDashboard

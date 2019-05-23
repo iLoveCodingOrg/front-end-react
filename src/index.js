@@ -20,8 +20,8 @@ import Wrap from './Wrap'
 
 import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
-import { AsyncHome as Home } from './Home'
-import { AsyncDashboard as Dashboard } from './Dashboard'
+import Home from './Home'
+import Dashboard from './Dashboard'
 import { AsyncRoutes as QuestionRoutes } from './Question'
 import { AsyncRoutes as LessonRoutes } from './Lesson'
 import { AsyncRoutes as CourseRoutes } from './Course'
@@ -114,93 +114,93 @@ function renderApp() {
                 <Wrap>
                   <Switch>
                     <Route
-                        exact
-                        path="/"
-                        component={Home}
-                      />
+                      exact
+                      path="/"
+                      component={Home}
+                    />
 
                     <Route
-                        exact
-                        path="/pricing"
-                        component={Pricing}
-                      />
+                      exact
+                      path="/pricing"
+                      component={Pricing}
+                    />
 
                     <Route
-                        exact
-                        path="/reviews"
-                        component={Reviews}
-                      />
+                      exact
+                      path="/reviews"
+                      component={Reviews}
+                    />
 
                     <Route
-                        exact
-                        path="/curriculum"
-                        component={Curriculum}
-                      />
+                      exact
+                      path="/curriculum"
+                      component={Curriculum}
+                    />
 
                     <Route
-                        exact
-                        path="/dashboard"
-                        component={isPrivate(Dashboard)}
-                      />
+                      exact
+                      path="/dashboard"
+                      component={isPrivate(Dashboard)}
+                    />
 
                     <Route
-                        strict
-                        path="/q"
-                        component={QuestionRoutes}
-                      />
+                      strict
+                      path="/q"
+                      component={QuestionRoutes}
+                    />
 
                     <Route
-                        strict
-                        path="/lessons"
-                        component={LessonRoutes}
-                      />
+                      strict
+                      path="/lessons"
+                      component={LessonRoutes}
+                    />
 
                     <Route
-                        strict
-                        path="/courses"
-                        component={CourseRoutes}
-                      />
+                      strict
+                      path="/courses"
+                      component={CourseRoutes}
+                    />
 
                     <Route
-                        strict
-                        path="/blog"
-                        component={BlogRoutes}
-                      />
+                      strict
+                      path="/blog"
+                      component={BlogRoutes}
+                    />
 
                     <Route
-                        strict
-                        path="/pages"
-                        component={PageRoutes}
-                      />
+                      strict
+                      path="/pages"
+                      component={PageRoutes}
+                    />
 
                     <Route
-                        strict
-                        path="/officehours"
-                        component={isPrivate(OfficeHours)}
-                      />
+                      strict
+                      path="/officehours"
+                      component={isPrivate(OfficeHours)}
+                    />
 
                     <Route
-                        strict
-                        path="/groupcalls"
-                        component={isPrivate(GroupCalls)}
-                      />
+                      strict
+                      path="/groupcalls"
+                      component={isPrivate(GroupCalls)}
+                    />
 
                     <Route
-                        strict
-                        path="/subscriptions"
-                        component={isPrivate(SubscriptionRoutes)}
-                      />
+                      strict
+                      path="/subscriptions"
+                      component={isPrivate(SubscriptionRoutes)}
+                    />
 
                     <Route
-                        exact
-                        strict
-                        path="/change-password"
-                        component={isPrivate(ChangePassword)}
-                      />
+                      exact
+                      strict
+                      path="/change-password"
+                      component={isPrivate(ChangePassword)}
+                    />
 
                     <Route
-                        component={NotFound}
-                      />
+                      component={NotFound}
+                    />
                   </Switch>
                 </Wrap>
               </Switch>

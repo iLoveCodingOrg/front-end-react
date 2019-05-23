@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { Copyrights } from '..'
+import Copyrights from './Copyrights'
 
 export default () => (
   <footer className="d-flex flex-column mt-5 py-4 pt-md-5 border-top">

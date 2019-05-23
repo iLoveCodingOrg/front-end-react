@@ -79,7 +79,7 @@ class ResetPassword extends React.Component {
     if (!this.state.isPasswordMatch) {
       return (
         <div className="invalid-feedback" style={{ display: 'block' }}>
-                    Password does not match.
+          Password does not match.
         </div>
       )
     }
@@ -98,6 +98,7 @@ class ResetPassword extends React.Component {
   }
 
   render() {
+    const { isLoading, isPasswordMatch } = this.state
     return (
       <WrapMini>
         <Helmet><title>Reset password - iLoveCoding</title></Helmet>
@@ -112,6 +113,7 @@ class ResetPassword extends React.Component {
                   <label className="col-md-3" htmlFor="email">Confirm Email</label>
                   <div className="col-md-9">
                     <input
+                      id="email"
                       className="form-control"
                       type="email"
                       name="email"
@@ -125,6 +127,7 @@ class ResetPassword extends React.Component {
                   <label className="col-md-3" htmlFor="password">New Password</label>
                   <div className="col-md-9">
                     <input
+                      id="password"
                       className="form-control"
                       type="password"
                       name="password"
@@ -136,10 +139,11 @@ class ResetPassword extends React.Component {
                 </div>
                 <div className="form-group row">
                   <label className="col-md-3" htmlFor="confirmPassword">
-                                        Confirm New Password
+                    Confirm New Password
                   </label>
                   <div className="col-md-9">
                     <input
+                      id="confirmPassword"
                       className="form-control"
                       type="password"
                       name="confirmPassword"
@@ -151,10 +155,10 @@ class ResetPassword extends React.Component {
                   </div>
                 </div>
                 <input
-                  disabled={this.state.isLoading || !this.state.isPasswordMatch}
+                  disabled={isLoading || !isPasswordMatch}
                   className="btn btn-lg btn-primary btn-block"
                   type="submit"
-                  value={(this.state.isLoading) ? 'Loading...' : 'Set New Password'}
+                  value={(isLoading) ? 'Loading...' : 'Set New Password'}
                 />
               </form>
             </div>
