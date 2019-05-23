@@ -1,22 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class Duration extends React.Component{
-    constructor(props){
-        super(props)
-    }
+class Duration extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-    render(){
-        return (
-            <small className="mr-3">
-                {this.props.duration} mins
-            </small>
-        )
-    }
+  render() {
+    return (
+      <small className="mr-3">
+        {this.props.duration}
+        {' '}
+mins
+      </small>
+    )
+  }
 }
 
 Duration.propTypes = {
-    duration: PropTypes.string.isRequired
+  duration: PropTypes.string.isRequired,
 }
 
 export default Duration

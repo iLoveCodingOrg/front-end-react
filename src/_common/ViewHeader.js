@@ -2,52 +2,60 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import { Access, Level, Duration, LessonCount, CheckMark } from './'
+import {
+  Access, Level, Duration, LessonCount, CheckMark,
+} from '.'
 
-function ViewHeader({ title, subTitle, isFree, level, duration, of, lessonCount, cssClass='', isComplete }){
-    return (
-        <div className={`${cssClass} view-header`} >
-            {(of === 'blog')? <Link className="lead mb-4 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link>: null}
-            <h1>{title}</h1>
-            {
-                subTitle?
-                <p className="lead">{subTitle}</p>
-                : null
+function ViewHeader({
+  title, subTitle, isFree, level, duration, of, lessonCount, cssClass = '', isComplete,
+}) {
+  return (
+    <div className={`${cssClass} view-header`}>
+      {(of === 'blog') ? <Link className="lead mb-4 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link> : null}
+      <h1>{title}</h1>
+      {
+                subTitle
+                  ? <p className="lead">{subTitle}</p>
+                  : null
             }
-            {
+      {
                 // TODO: optimize these multiple conditions
-                (of !== 'page' && of !== 'blog')?
-                <div className="mb-3">
-                    <div className="d-inline">
-                        {(isComplete)? <CheckMark /> : null}
+                (of !== 'page' && of !== 'blog')
+                  ? (
+                    <div className="mb-3">
+                      <div className="d-inline">
+                        {(isComplete) ? <CheckMark /> : null}
                         <Access isFree={isFree} />
                         <Level level={level} />
                         <Duration duration={duration} />
-                    </div>
-                    {
-                        of === 'course'?
-                        <div className="d-inline">
-                            <LessonCount lessonCount={lessonCount} />
-                        </div>
-                        : null
+                      </div>
+                      {
+                        of === 'course'
+                          ? (
+                            <div className="d-inline">
+                              <LessonCount lessonCount={lessonCount} />
+                            </div>
+                          )
+                          : null
                     }
-                </div>
-                : null
+                    </div>
+                  )
+                  : null
             }
-        </div>
-    )
+    </div>
+  )
 }
 
 ViewHeader.propTypes = {
-    cssClass: PropTypes.string,
-    duration: PropTypes.string,
-    isFree: PropTypes.bool.isRequired,
-    isComplete: PropTypes.bool,
-    lessonCount: PropTypes.number,
-    level: PropTypes.oneOf([0, 1, 2]),
-    of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page', 'blog']).isRequired,
-    subTitle: PropTypes.string,
-    title: PropTypes.string.isRequired
+  cssClass: PropTypes.string,
+  duration: PropTypes.string,
+  isFree: PropTypes.bool.isRequired,
+  isComplete: PropTypes.bool,
+  lessonCount: PropTypes.number,
+  level: PropTypes.oneOf([0, 1, 2]),
+  of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page', 'blog']).isRequired,
+  subTitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
 }
 
 export default ViewHeader

@@ -13,14 +13,14 @@ import { reducer as subscriptions } from '../Subscription'
 // Reducer is responsible to update the state in the store
 // based on the Actions that are applied to it
 export default combineReducers({
-    pages,
-    blogs,
-    questions,
-    lessons,
-    courses,
-    checkout,
-    verifyEmail,
-    user,
-    offer,
-    subscriptions
+  pages,
+  blogs,
+  questions,
+  lessons,
+  courses,
+  checkout,
+  verifyEmail,
+  user,
+  offer,
+  subscriptions,
 })

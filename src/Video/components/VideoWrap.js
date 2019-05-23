@@ -7,79 +7,97 @@ import isEmpty from 'lodash/isEmpty'
 import { Link } from 'react-router-dom'
 
 import { isLoggedIn } from '../../_user/selectors'
-import { Video } from '../'
+import { Video } from '..'
 import { IMG_URL } from '../../_app/constants'
 
-class VideoWrap extends React.Component{
-    constructor(props){
-        super(props)
-    }
-    renderThumb(thumbnail, title){
-        if(!thumbnail) return null;
-        return <img
-            style={{ maxWidth: 300, maxHeight: 169 }}
-            className="mr-md-3 mb-md-0 mb-3 rounded"
-            src={`${IMG_URL}${thumbnail}`}
-            alt={title}
-        />
-    }
-    render(){
-        const {
-            thumbnail,
-            title,
-            videoSource,
-            isLoggedIn,
-            callMarkAsComplete
-        } = this.props
+class VideoWrap extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-        if(videoSource === 'none') return null
-        return (
-            <div>
-                {
-                    (!isEmpty(videoSource))?
-                    <Video
-                        callMarkAsComplete={callMarkAsComplete}
-                        videoSource={videoSource}
-                    />:
-                    <div className="d-flex flex-md-row flex-column alert alert-warning ">
-                        {this.renderThumb(thumbnail, title)}
-                        <div>
+  renderThumb(thumbnail, title) {
+    if (!thumbnail) return null
+    return (
+      <img
+        style={{ maxWidth: 300, maxHeight: 169 }}
+        className="mr-md-3 mb-md-0 mb-3 rounded"
+        src={`${IMG_URL}${thumbnail}`}
+        alt={title}
+      />
+    )
+  }
+
+  render() {
+    const {
+      thumbnail,
+      title,
+      videoSource,
+      isLoggedIn,
+      callMarkAsComplete,
+    } = this.props
+
+    if (videoSource === 'none') return null
+    return (
+      <div>
+        {
+                    (!isEmpty(videoSource))
+                      ? (
+                        <Video
+                          callMarkAsComplete={callMarkAsComplete}
+                          videoSource={videoSource}
+                        />
+                      )
+                      : (
+                        <div className="d-flex flex-md-row flex-column alert alert-warning ">
+                          {this.renderThumb(thumbnail, title)}
+                          <div>
                             <div className="h3 font-weight-light">
                                 You do not have access to this lesson!
                             </div>
                             {
-                                (isLoggedIn)?
-                                <p>
-                                    <Link to="/pricing" className="btn-link p-0 border-0">Upgrade your membership</Link> to get access to this lesson along with hundreds of other lessons and complete courses.
-                                </p>:
-                                <div>
+                                (isLoggedIn)
+                                  ? (
                                     <p>
-                                        <Link to="/pricing" className="btn-link p-0 border-0">Enroll in the training</Link> to get access to this lesson along with hundreds of other lessons and complete courses.
+                                      <Link to="/pricing" className="btn-link p-0 border-0">Upgrade your membership</Link>
+                                      {' '}
+to get access to this lesson along with hundreds of other lessons and complete courses.
                                     </p>
-                                    <p>
-                                        Already enrolled? <Link to="/login" className="btn-link p-0 border-0">Login</Link>
-                                    </p>
-                                </div>
+                                  )
+                                  : (
+                                    <div>
+                                      <p>
+                                        <Link to="/pricing" className="btn-link p-0 border-0">Enroll in the training</Link>
+                                        {' '}
+to get access to this lesson along with hundreds of other lessons and complete courses.
+                                      </p>
+                                      <p>
+                                        Already enrolled?
+                                        {' '}
+                                        <Link to="/login" className="btn-link p-0 border-0">Login</Link>
+                                      </p>
+                                    </div>
+                                  )
                             }
+                          </div>
                         </div>
-                    </div>
+                      )
                 }
-            </div>
-        )
-    }
+      </div>
+    )
+  }
 }
 
 VideoWrap.propTypes = {
-    callMarkAsComplete: PropTypes.func.isRequired,
-    isLoggedIn: PropTypes.bool.isRequired,
-    thumbnail: PropTypes.string,
-    videoSource: PropTypes.string
+  callMarkAsComplete: PropTypes.func.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
+  thumbnail: PropTypes.string,
+  videoSource: PropTypes.string,
 }
 
-function mapStateToProps(state){
-    return {
-        isLoggedIn: isLoggedIn(state)
-    }
+function mapStateToProps(state) {
+  return {
+    isLoggedIn: isLoggedIn(state),
+  }
 }
 
 export default connect(mapStateToProps)(VideoWrap)

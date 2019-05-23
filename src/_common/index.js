@@ -14,7 +14,7 @@ import CheckMark from './CheckMark'
 import AsyncLoader from './AsyncLoader'
 
 const AsyncEditForm = AsyncLoader({
-    loader: () => import('./EditForm'),
+  loader: () => import('./EditForm'),
 })
 
 
@@ -31,5 +31,5 @@ export {
   LessonCount,
   RedirectAlert,
   CheckMark,
-  AsyncEditForm
+  AsyncEditForm,
 }

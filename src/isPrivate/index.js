@@ -4,26 +4,27 @@ import { connect } from 'react-redux'
 import { selectors } from '../_user'
 
 export default function (WrappedComponent) {
-    function PrivateComponent(props) {
-        if(props.isLoggedIn){
-            return <WrappedComponent {...props} />
-        }else{
-            return <div className="container d-flex justify-content-center">
-                <div className="col-md-8">
-                    <div className="alert alert-info">
+  function PrivateComponent(props) {
+    if (props.isLoggedIn) {
+      return <WrappedComponent {...props} />
+    }
+    return (
+      <div className="container d-flex justify-content-center">
+        <div className="col-md-8">
+          <div className="alert alert-info">
                         You must be logged in to view this page!
-                        &nbsp;<Link to="/login">Login</Link>
-                    </div>
-                </div>
-            </div>
-        }
-    }
+            <Link to="/login">Login</Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
-    function mapStateToProps(state){
-        return {
-            isLoggedIn: selectors.isLoggedIn(state)
-        }
+  function mapStateToProps(state) {
+    return {
+      isLoggedIn: selectors.isLoggedIn(state),
     }
-    
-    return connect(mapStateToProps)(PrivateComponent)
+  }
+
+  return connect(mapStateToProps)(PrivateComponent)
 }

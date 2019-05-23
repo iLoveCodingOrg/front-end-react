@@ -9,180 +9,194 @@ import { Recaptcha2 } from '../../Recaptcha'
 import WrapMini from '../../WrapMini'
 import { actions } from '../../_user'
 
-class Login extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            recaptchaToken: '',
-            email: '',
-            password: ''
-        }
+class Login extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      recaptchaToken: '',
+      email: '',
+      password: '',
+    }
 
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-        this.renderError = this.renderError.bind(this)
-        this.renderVerifyEmailStatus = this.renderVerifyEmailStatus.bind(this)
-        this.handleVerifyEmail = this.handleVerifyEmail.bind(this)
-        this.verifyRecaptchaCb = this.verifyRecaptchaCb.bind(this)
-        this.setRecaptchaElem = this.setRecaptchaElem.bind(this)
-    }
-    componentDidMount(){
-        this.props.clearError()
-    }
-    handleSubmit(event){
-        event.preventDefault()
-        
-        const { location, history, login } = this.props
-        const redirect = qsParse(location.search).redirect
-        const { email, password, recaptchaToken } = this.state
-        login(email, password, recaptchaToken)
-        .then(({ isSuccess })=>{
-            if(isSuccess){
-                if(redirect){
-                    history.push(redirect)
-                }else{
-                    history.push('/dashboard')
-                }
-            }else{
-                if(this.recaptchaElm){
-                    this.recaptchaElm.reset()
-                    this.setState({ recaptchaToken: '' })
-                }
-            }
-        })
-    }
-    handleChange(fieldName, newValue){
-        this.setState({
-            [fieldName]: newValue
-        })
-    }
-    handleVerifyEmail(event){
-        event.preventDefault()
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.renderError = this.renderError.bind(this)
+    this.renderVerifyEmailStatus = this.renderVerifyEmailStatus.bind(this)
+    this.handleVerifyEmail = this.handleVerifyEmail.bind(this)
+    this.verifyRecaptchaCb = this.verifyRecaptchaCb.bind(this)
+    this.setRecaptchaElem = this.setRecaptchaElem.bind(this)
+  }
 
-        this.props.callSendVerifyEmail(this.state.email)
-    }
-    renderVerifyEmailStatus(){
-        const { verifyEmailStatus } = this.props
-        if(verifyEmailStatus){
-            return (
-                <div className="alert alert-success">
-                    {this.props.verifyEmailStatus}
-                </div>
-            )
+  componentDidMount() {
+    this.props.clearError()
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+
+    const { location, history, login } = this.props
+    const redirect = qsParse(location.search).redirect
+    const { email, password, recaptchaToken } = this.state
+    login(email, password, recaptchaToken)
+      .then(({ isSuccess }) => {
+        if (isSuccess) {
+          if (redirect) {
+            history.push(redirect)
+          } else {
+            history.push('/dashboard')
+          }
+        } else if (this.recaptchaElm) {
+          this.recaptchaElm.reset()
+          this.setState({ recaptchaToken: '' })
         }
-        return null
+      })
+  }
+
+  handleChange(fieldName, newValue) {
+    this.setState({
+      [fieldName]: newValue,
+    })
+  }
+
+  handleVerifyEmail(event) {
+    event.preventDefault()
+
+    this.props.callSendVerifyEmail(this.state.email)
+  }
+
+  renderVerifyEmailStatus() {
+    const { verifyEmailStatus } = this.props
+    if (verifyEmailStatus) {
+      return (
+        <div className="alert alert-success">
+          {this.props.verifyEmailStatus}
+        </div>
+      )
     }
-    renderError(){
-        const { error } = this.props
-        const isEmailToBeVerified = (error === 'Login failed as the email has not been verified')
-        if(error){
-            return (
-                <div className="alert alert-danger">
-                    {this.props.error} &nbsp;
-                    {
-                        isEmailToBeVerified?
-                        <button
-                            onClick={this.handleVerifyEmail}
-                            className="btn-link p-0 border-0">Resend verification email</button>
-                        :
-                        null
+    return null
+  }
+
+  renderError() {
+    const { error } = this.props
+    const isEmailToBeVerified = (error === 'Login failed as the email has not been verified')
+    if (error) {
+      return (
+        <div className="alert alert-danger">
+          {this.props.error}
+          {' '}
+&nbsp;
+          {
+                        isEmailToBeVerified
+                          ? (
+                            <button
+                              onClick={this.handleVerifyEmail}
+                              className="btn-link p-0 border-0"
+                            >
+Resend verification email
+                            </button>
+                          )
+                          : null
                     }
-                </div>
-            )
-        }
-        return null
+        </div>
+      )
     }
-    verifyRecaptchaCb(recaptchaToken) {
-        this.setState({ recaptchaToken })
-    }
-    setRecaptchaElem(recaptchaElm){
-        this.recaptchaElm = recaptchaElm
-    }
-    render(){
-        return (
-            <WrapMini>
-                <Helmet><title>Login - iLoveCoding</title></Helmet>
-                <form className="form-login" onSubmit={this.handleSubmit}>
-                    <h2 className="text-center">Log in to iLoveCoding</h2>
-                    <p className="text-center">
-                        Don't have an account? <Link to="/pricing">Get started</Link> or enrolled in <Link to="/pricing">iLoveCoding's Paid Programs.</Link>
-                    </p>
-                    {this.renderVerifyEmailStatus()}
-                    {this.renderError()}
-                    <div>
-                        <label htmlFor="email" className="sr-only">Email address</label>
-                        <input
-                            name="email"
-                            type="email"
-                            className="form-control form-control-lg"
-                            placeholder="Email address"
-                            autoFocus
-                            required
-                            onChange={(event)=>this.handleChange('email', event.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="password" className="sr-only">Password</label>
-                        <input
-                            name="password"
-                            type="password"
-                            className="form-control form-control-lg"
-                            placeholder="Password"
-                            required
-                            onChange={(event)=>this.handleChange('password', event.target.value)}
-                        />
-                    </div>
-                    <Recaptcha2
-                        onLoadCb={this.setRecaptchaElem}
-                        verifyTokenCb={this.verifyRecaptchaCb}
-                    />
-                    <div>
-                        <input
-                            disabled={this.props.isLoading}
-                            type="submit"
-                            name="Login"
-                            value={this.props.isLoading? 'Logging in ...' : 'Login'}
-                            className="my-3 btn btn-lg btn-primary btn-block"
-                        />
-                    </div>
-                    <p className="text-center">
-                        <Link to="/forgot-password">Forgot Password?</Link>
-                    </p>
-                </form>
-            </WrapMini>
-        )
-    }
+    return null
+  }
+
+  verifyRecaptchaCb(recaptchaToken) {
+    this.setState({ recaptchaToken })
+  }
+
+  setRecaptchaElem(recaptchaElm) {
+    this.recaptchaElm = recaptchaElm
+  }
+
+  render() {
+    return (
+      <WrapMini>
+        <Helmet><title>Login - iLoveCoding</title></Helmet>
+        <form className="form-login" onSubmit={this.handleSubmit}>
+          <h2 className="text-center">Log in to iLoveCoding</h2>
+          <p className="text-center">
+                        Don't have an account?
+            {' '}
+            <Link to="/pricing">Get started</Link>
+            {' '}
+or enrolled in
+            {' '}
+            <Link to="/pricing">iLoveCoding's Paid Programs.</Link>
+          </p>
+          {this.renderVerifyEmailStatus()}
+          {this.renderError()}
+          <div>
+            <label htmlFor="email" className="sr-only">Email address</label>
+            <input
+              name="email"
+              type="email"
+              className="form-control form-control-lg"
+              placeholder="Email address"
+              autoFocus
+              required
+              onChange={event => this.handleChange('email', event.target.value)}
+            />
+          </div>
+          <div>
+            <label htmlFor="password" className="sr-only">Password</label>
+            <input
+              name="password"
+              type="password"
+              className="form-control form-control-lg"
+              placeholder="Password"
+              required
+              onChange={event => this.handleChange('password', event.target.value)}
+            />
+          </div>
+          <Recaptcha2
+            onLoadCb={this.setRecaptchaElem}
+            verifyTokenCb={this.verifyRecaptchaCb}
+          />
+          <div>
+            <input
+              disabled={this.props.isLoading}
+              type="submit"
+              name="Login"
+              value={this.props.isLoading ? 'Logging in ...' : 'Login'}
+              className="my-3 btn btn-lg btn-primary btn-block"
+            />
+          </div>
+          <p className="text-center">
+            <Link to="/forgot-password">Forgot Password?</Link>
+          </p>
+        </form>
+      </WrapMini>
+    )
+  }
 }
 
 Login.propTypes = {
-    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-    isLoading: PropTypes.bool.isRequired,
-    login: PropTypes.func.isRequired,
-    verifyEmailStatus: PropTypes.string.isRequired
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  isLoading: PropTypes.bool.isRequired,
+  login: PropTypes.func.isRequired,
+  verifyEmailStatus: PropTypes.string.isRequired,
 }
 
-function mapStateToProps(state){
-    return {
-        error: state.user.error,
-        isLoading: state.user.isLoading,
-        verifyEmailStatus: state.user.verifyEmailStatus
-    }
+function mapStateToProps(state) {
+  return {
+    error: state.user.error,
+    isLoading: state.user.isLoading,
+    verifyEmailStatus: state.user.verifyEmailStatus,
+  }
 }
 
-function mapDispatchToProps(dispatch){
-    return {
-        clearError: ()=>{
-            return dispatch(actions.clearError())
-        },
-        login: (email, password, recaptchaToken)=>{
-            return dispatch(actions.login(email, password, recaptchaToken))
-        },
-        callSendVerifyEmail: (email, )=>{
-            return dispatch(actions.callSendVerifyEmail(email))
-        }
-    }
+function mapDispatchToProps(dispatch) {
+  return {
+    clearError: () => dispatch(actions.clearError()),
+    login: (email, password, recaptchaToken) => dispatch(actions.login(email, password, recaptchaToken)),
+    callSendVerifyEmail: email => dispatch(actions.callSendVerifyEmail(email)),
+  }
 }
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps)(withRouter(Login))
+  mapStateToProps,
+  mapDispatchToProps,
+)(withRouter(Login))

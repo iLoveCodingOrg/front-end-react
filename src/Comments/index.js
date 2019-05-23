@@ -1,8 +1,9 @@
 import AsyncLoader from '../_common/AsyncLoader'
+
 const AsyncComments = AsyncLoader({
-  loader: () => import('./components/Comments')
+  loader: () => import('./components/Comments'),
 })
 
 export {
-  AsyncComments
+  AsyncComments,
 }

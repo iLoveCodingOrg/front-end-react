@@ -20,231 +20,234 @@ import WhatYouGet from './WhatYouGet'
 import Due from './Due'
 import Testimonials from './Testimonials'
 
-import { CountDown } from '../../Offer'
-import { selectors } from '../../Offer'
+import { CountDown, selectors } from '../../Offer'
 
-class Checkout extends React.Component{
-    constructor(props){
-        super(props)
 
-        this.state = {
-            recaptchaToken: '',
-            userInfo: {
-                firstName: { value: props.firstName },
-                lastName: { value: props.lastName },
-                email: { value: props.email }
-            }
-        }
-        this.setUserInfo = this.setUserInfo.bind(this)
-        this.setBraintreeInstance = this.setBraintreeInstance.bind(this)
-        this.buy = this.buy.bind(this)
-        this.renderBuyError = this.renderBuyError.bind(this)
-        this.getPrice = this.getPrice.bind(this)
-        this.verifyRecaptchaCb = this.verifyRecaptchaCb.bind(this)
-        this.setRecaptchaElem = this.setRecaptchaElem.bind(this)
+class Checkout extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      recaptchaToken: '',
+      userInfo: {
+        firstName: { value: props.firstName },
+        lastName: { value: props.lastName },
+        email: { value: props.email },
+      },
     }
+    this.setUserInfo = this.setUserInfo.bind(this)
+    this.setBraintreeInstance = this.setBraintreeInstance.bind(this)
+    this.buy = this.buy.bind(this)
+    this.renderBuyError = this.renderBuyError.bind(this)
+    this.getPrice = this.getPrice.bind(this)
+    this.verifyRecaptchaCb = this.verifyRecaptchaCb.bind(this)
+    this.setRecaptchaElem = this.setRecaptchaElem.bind(this)
+  }
 
     braintreeInstance;
-    
-    setBraintreeInstance(instance){
-        this.braintreeInstance = instance
-    }
-    
-    async buy(event){
-        event.preventDefault()
-        
-        const { slug } = this.props.match.params
-        const { nonce } = await this.braintreeInstance.requestPaymentMethod()
-        
-        this.props.buy(slug, {
-            firstName: this.state.userInfo.firstName.value,
-            lastName: this.state.userInfo.lastName.value,
-            email: this.state.userInfo.email.value,
-            nonce,
-            coupon: this.props.isOfferValid? '30percent' : undefined,
-            recaptchaToken: this.state.recaptchaToken
-        })
-            .then(({ isSubscribed })=>{
-                if(isSubscribed){
-                    this.props.history.push('/pages/welcome')
-                } else {
-                    this.braintreeInstance.clearSelectedPaymentMethod()
-                    if(this.recaptchaElm){
-                        this.recaptchaElm.reset()
-                        this.setState({ recaptchaToken: '' })
-                    }
-                }
-            })
+
+    setBraintreeInstance(instance) {
+      this.braintreeInstance = instance
     }
 
-    setUserInfo(userInfo){
-        this.setState({
-            userInfo
+    async buy(event) {
+      event.preventDefault()
+
+      const { slug } = this.props.match.params
+      const { nonce } = await this.braintreeInstance.requestPaymentMethod()
+
+      this.props.buy(slug, {
+        firstName: this.state.userInfo.firstName.value,
+        lastName: this.state.userInfo.lastName.value,
+        email: this.state.userInfo.email.value,
+        nonce,
+        coupon: this.props.isOfferValid ? '30percent' : undefined,
+        recaptchaToken: this.state.recaptchaToken,
+      })
+        .then(({ isSubscribed }) => {
+          if (isSubscribed) {
+            this.props.history.push('/pages/welcome')
+          } else {
+            this.braintreeInstance.clearSelectedPaymentMethod()
+            if (this.recaptchaElm) {
+              this.recaptchaElm.reset()
+              this.setState({ recaptchaToken: '' })
+            }
+          }
         })
     }
 
-    componentDidUpdate(prevProps){
-        const { slug } = this.props.match.params
-        
-        if(prevProps.match.params.slug !== slug){
-            this.props.getProduct(slug)
-        }
+    setUserInfo(userInfo) {
+      this.setState({
+        userInfo,
+      })
     }
 
-    componentDidMount(){
-        this.props.getProduct(this.props.match.params.slug)
+    componentDidUpdate(prevProps) {
+      const { slug } = this.props.match.params
+
+      if (prevProps.match.params.slug !== slug) {
+        this.props.getProduct(slug)
+      }
     }
 
-    renderBuyError(){
-        const { buyError } = this.props
-        if(buyError){
-            return (
-                <div className="alert alert-danger">
-                    {this.props.buyError}
-                </div>
-            )
-        }
-        return null
+    componentDidMount() {
+      this.props.getProduct(this.props.match.params.slug)
     }
 
-    getPrice(){
-        if(this.props.isOfferValid){
-            return roundTwoDecimal(parseInt(get(this.props.product, 'price'))*.7)
-        } else{
-            return get(this.props.product, 'price')
-        }
+    renderBuyError() {
+      const { buyError } = this.props
+      if (buyError) {
+        return (
+          <div className="alert alert-danger">
+            {this.props.buyError}
+          </div>
+        )
+      }
+      return null
+    }
 
-        function roundTwoDecimal(number){
-            return (Math.round(number * 100)/100).toFixed(2)
-        }
+    getPrice() {
+      if (this.props.isOfferValid) {
+        return roundTwoDecimal(parseInt(get(this.props.product, 'price')) * 0.7)
+      }
+      return get(this.props.product, 'price')
+
+
+      function roundTwoDecimal(number) {
+        return (Math.round(number * 100) / 100).toFixed(2)
+      }
     }
 
     verifyRecaptchaCb(recaptchaToken) {
-        this.setState({ recaptchaToken })
+      this.setState({ recaptchaToken })
     }
 
-    setRecaptchaElem(recaptchaElm){
-        this.recaptchaElm = recaptchaElm
+    setRecaptchaElem(recaptchaElm) {
+      this.recaptchaElm = recaptchaElm
     }
 
-    render(){
-        const price = this.getPrice()
-        const billingDuration = get(this.props.product, 'billingDuration')
-        const billingCycles = get(this.props.product, 'billingCycles')
-        const productName = get(this.props.product, 'name')
-        const productDesc = get(this.props.product, 'description')
-        return(
-            <div>
-                <CountDown title="30% Off expires in:" />
-                <div className="container">
-                    {
-                        (this.props.isLoading)? <Loading />
-                        :
-                        (this.props.error) ? <ErrorBox />
-                        :
-                        <div>
-                            <Helmet><title>{productName} - iLoveCoding</title></Helmet>
-                            <Header
-                                productName={productName}
-                                productDesc={productDesc}
-                            />
-                            <div className="row">
-                                <div className="p-0 col-md-8 order-md-1">
+    render() {
+      const price = this.getPrice()
+      const billingDuration = get(this.props.product, 'billingDuration')
+      const billingCycles = get(this.props.product, 'billingCycles')
+      const productName = get(this.props.product, 'name')
+      const productDesc = get(this.props.product, 'description')
+      return (
+        <div>
+          <CountDown title="30% Off expires in:" />
+          <div className="container">
+            {
+                        (this.props.isLoading) ? <Loading />
+                          : (this.props.error) ? <ErrorBox />
+                            : (
+                              <div>
+                                <Helmet>
+                                  <title>
+                                    {productName}
+                                    {' '}
+- iLoveCoding
+                                  </title>
+                                </Helmet>
+                                <Header
+                                  productName={productName}
+                                  productDesc={productDesc}
+                                />
+                                <div className="row">
+                                  <div className="p-0 col-md-8 order-md-1">
                                     <form
-                                        onSubmit={this.buy}
-                                        className="bg-light border p-4">
-                                        {this.renderBuyError()}
-                                        <UserForm
-                                            logout={this.props.logout}
-                                            isDisabled={this.props.isLoggedIn}
-                                            userInfo={this.state.userInfo}
-                                            setUserInfo={this.setUserInfo}
-                                        />
+                                      onSubmit={this.buy}
+                                      className="bg-light border p-4"
+                                    >
+                                      {this.renderBuyError()}
+                                      <UserForm
+                                        logout={this.props.logout}
+                                        isDisabled={this.props.isLoggedIn}
+                                        userInfo={this.state.userInfo}
+                                        setUserInfo={this.setUserInfo}
+                                      />
 
-                                        <hr className="mb-4" />
-                                        <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
-                                        <Due
-                                            price={price}
-                                            billingDuration={billingDuration}
-                                            billingCycles={billingCycles}
-                                        />
-                                        <Recaptcha2
-                                            onLoadCb={this.setRecaptchaElem}
-                                            verifyTokenCb={this.verifyRecaptchaCb}
-                                        />
-                                        <button
-                                            className="btn btn-primary btn-lg btn-block"
-                                            type="submit"
-                                        >
+                                      <hr className="mb-4" />
+                                      <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
+                                      <Due
+                                        price={price}
+                                        billingDuration={billingDuration}
+                                        billingCycles={billingCycles}
+                                      />
+                                      <Recaptcha2
+                                        onLoadCb={this.setRecaptchaElem}
+                                        verifyTokenCb={this.verifyRecaptchaCb}
+                                      />
+                                      <button
+                                        className="btn btn-primary btn-lg btn-block"
+                                        type="submit"
+                                      >
                                             Complete My Purchase
-                                        </button>
-                                        <div className="d-block text-center small mt-1">
+                                      </button>
+                                      <div className="d-block text-center small mt-1">
                                             Payment powered by Braintree (a PayPal company) - 🔒 Your information is secure
-                                        </div>
+                                      </div>
                                     </form>
                                     <div className="text-center mt-3 mb-5">
                                         ⚡️ Cancel Anytime.
                                         &nbsp; &nbsp;
                                         🛡️ 7-Day Full Refund Policy.
                                     </div>
-                                </div>
-                                <div className="col-md-4 order-md-2 mb-4 px-4">
+                                  </div>
+                                  <div className="col-md-4 order-md-2 mb-4 px-4">
                                     <WhatYouGet />
                                     <Testimonials />
+                                  </div>
                                 </div>
-                            </div>
-                            <Footer />
-                        </div>
+                                <Footer />
+                              </div>
+                            )
                     }
-                </div>
-            </div>
-        )
+          </div>
+        </div>
+      )
     }
 }
 
 Checkout.propTypes = {
-    buyError: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-    isLoading: PropTypes.bool.isRequired,
-    isLoggedIn: PropTypes.bool.isRequired,
-    product: PropTypes.object.isRequired
+  buyError: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  isLoading: PropTypes.bool.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
+  product: PropTypes.object.isRequired,
 }
 
-function mapStateToProps(state){
-    const isLoggedInCache = isLoggedIn(state) 
-    return {
-        isLoggedIn: isLoggedInCache,
-        firstName: (isLoggedInCache)? state.user.firstName : '',
-        lastName: (isLoggedInCache)? state.user.lastName : '',
-        email: (isLoggedInCache)? state.user.email: '',
-        error: state.checkout.error,
-        isLoading: state.checkout.isLoading,
-        product: state.checkout.product,
-        buyError: state.checkout.buy.error,
-        isOfferValid: selectors.isOfferValid(state)
-    }
+function mapStateToProps(state) {
+  const isLoggedInCache = isLoggedIn(state)
+  return {
+    isLoggedIn: isLoggedInCache,
+    firstName: (isLoggedInCache) ? state.user.firstName : '',
+    lastName: (isLoggedInCache) ? state.user.lastName : '',
+    email: (isLoggedInCache) ? state.user.email : '',
+    error: state.checkout.error,
+    isLoading: state.checkout.isLoading,
+    product: state.checkout.product,
+    buyError: state.checkout.buy.error,
+    isOfferValid: selectors.isOfferValid(state),
+  }
 }
 
-function mapDispatchToProps(dispatch){
-    return {
-        logout: ()=>{
-            return dispatch(userActions.logout())
-            .then(({ isSuccess })=>{
-                if(isSuccess){
-                    window.location.reload()
-                }
-            })
-        },
-        getProduct: (slug)=>{
-            dispatch(getProductBySlug(slug))
-        },
-        buy: (slug, payload)=>{
-            return dispatch(buy(slug, payload))
+function mapDispatchToProps(dispatch) {
+  return {
+    logout: () => dispatch(userActions.logout())
+      .then(({ isSuccess }) => {
+        if (isSuccess) {
+          window.location.reload()
         }
-    }
+      }),
+    getProduct: (slug) => {
+      dispatch(getProductBySlug(slug))
+    },
+    buy: (slug, payload) => dispatch(buy(slug, payload)),
+  }
 }
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps)
-(withRouter(Checkout))
+  mapStateToProps,
+  mapDispatchToProps,
+)(withRouter(Checkout))

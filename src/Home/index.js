@@ -1,8 +1,9 @@
 import AsyncLoader from '../_common/AsyncLoader'
+
 const AsyncHome = AsyncLoader({
-    loader: () => import('./components/Home')
+  loader: () => import('./components/Home'),
 })
 
 export {
-    AsyncHome
+  AsyncHome,
 }

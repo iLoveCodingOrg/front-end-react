@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-export default function() {
+export default function () {
   useEffect(() => {
     const script = document.createElement('script')
 
@@ -10,5 +10,5 @@ export default function() {
     document.body.appendChild(script)
   }, [])
 
-  return <div id="commento"></div>
+  return <div id="commento" />
 }

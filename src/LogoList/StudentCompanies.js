@@ -10,54 +10,52 @@ import fortune500 from '../_app/images/companies/students/fortune-500.png'
 import cvs from '../_app/images/companies/my-clients/cvs-health.png'
 
 const data = [
-    {
-        altText: 'Citi',
-        imgSrc: citi,
-        margin: '',
-        padding: '10px 0'
-    },
-    {
-        altText: 'Fidelity National Financial',
-        imgSrc: fnf,
-        margin: '',
-        padding: '0px 0'
-    },
-    {
-        altText: 'Sony',
-        imgSrc: sony,
-        margin: '',
-        padding: '17px 0'
-    },
-    {
-        altText: 'Twitter',
-        imgSrc: twitter,
-        margin: '',
-        padding: '5px 0'
-    },
-    {
-        altText: 'CVS Health',
-        imgSrc: cvs,
-        margin: '',
-        padding: '5px 0'
-    },
-    {
-        altText: 'Fortune 500',
-        imgSrc: fortune500,
-        margin: '',
-        padding: '0px 0'
-    }
+  {
+    altText: 'Citi',
+    imgSrc: citi,
+    margin: '',
+    padding: '10px 0',
+  },
+  {
+    altText: 'Fidelity National Financial',
+    imgSrc: fnf,
+    margin: '',
+    padding: '0px 0',
+  },
+  {
+    altText: 'Sony',
+    imgSrc: sony,
+    margin: '',
+    padding: '17px 0',
+  },
+  {
+    altText: 'Twitter',
+    imgSrc: twitter,
+    margin: '',
+    padding: '5px 0',
+  },
+  {
+    altText: 'CVS Health',
+    imgSrc: cvs,
+    margin: '',
+    padding: '5px 0',
+  },
+  {
+    altText: 'Fortune 500',
+    imgSrc: fortune500,
+    margin: '',
+    padding: '0px 0',
+  },
 ]
 
-export default ()=>{
-    return (
-        <div>
-            <div className="my-5 text-center text-uppercase text-muted">
+export default () => (
+  <div>
+    <div className="my-5 text-center text-uppercase text-muted">
                 Where iLoveCoding students work at:
-            </div>
-            <LogoList
-                data={data}
-                height={60}
-            />
-        </div>
-    )
-}
+    </div>
+    <LogoList
+      data={data}
+      height={60}
+    />
+  </div>
+)

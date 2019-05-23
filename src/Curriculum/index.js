@@ -6,16 +6,17 @@ import Electives from './components/Electives'
 import PrintTraining from './components/PrintTraining'
 
 import AsyncLoader from '../_common/AsyncLoader'
+
 const AsyncCurriculum = AsyncLoader({
-    loader: () => import('./components/Curriculum')
+  loader: () => import('./components/Curriculum'),
 })
 
 export {
-    AsyncCurriculum,
-    Module1,
-    Module2,
-    Module3,
-    Module4,
-    Electives,
-    PrintTraining
+  AsyncCurriculum,
+  Module1,
+  Module2,
+  Module3,
+  Module4,
+  Electives,
+  PrintTraining,
 }

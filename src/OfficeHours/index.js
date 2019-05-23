@@ -1,8 +1,9 @@
 import AsyncLoader from '../_common/AsyncLoader'
+
 const AsyncOfficeHours = AsyncLoader({
-    loader: () => import('./components/OfficeHours')
+  loader: () => import('./components/OfficeHours'),
 })
 
 export {
-    AsyncOfficeHours
+  AsyncOfficeHours,
 }

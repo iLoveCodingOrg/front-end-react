@@ -4,48 +4,54 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import { qsParse } from '../../_app/utils'
-import { actions, selectors } from '../'
+import { actions, selectors } from '..'
 
-class Offer extends React.Component{
-    constructor(props){
-        super(props)
-    }
+class Offer extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-    componentDidMount(){
-        const query = qsParse(location.search)
-        if(isNil(query.t)) return
+  componentDidMount() {
+    const query = qsParse(location.search)
+    if (isNil(query.t)) return
 
-        const timeFrom = parseInt(query.t)
-        const timeLeft = query.l ? parseInt(query.l) : undefined
+    const timeFrom = parseInt(query.t)
+    const timeLeft = query.l ? parseInt(query.l) : undefined
 
-        this.props.setTimes(timeFrom, timeLeft)
-    }
+    this.props.setTimes(timeFrom, timeLeft)
+  }
 
-    render(){
-        return null
-        return (<div>
+  render() {
+    return null
+    return (
+      <div>
             I am Offer component
-            {this.props.timeFrom}, {this.props.timeLeft}, {this.props.isOfferValid}
-        </div>)
-    }
+        {this.props.timeFrom}
+,
+        {this.props.timeLeft}
+,
+        {this.props.isOfferValid}
+      </div>
+    )
+  }
 }
 
 function mapStateToProps(state) {
-    return {
-        timeFrom: state.offer.timeFrom,
-        timeLeft: state.offer.timeLeft,
-        isOfferValid: selectors.isOfferValid(state)
-    }
+  return {
+    timeFrom: state.offer.timeFrom,
+    timeLeft: state.offer.timeLeft,
+    isOfferValid: selectors.isOfferValid(state),
+  }
 }
 
 function mapDispatchToProps(dispatch) {
-    return {
-        setTimes: (timeFrom, timeLeft)=>{
-            dispatch(actions.setOfferTimes(timeFrom, timeLeft))
-        }
-    }
+  return {
+    setTimes: (timeFrom, timeLeft) => {
+      dispatch(actions.setOfferTimes(timeFrom, timeLeft))
+    },
+  }
 }
 export default withRouter(connect(
-    mapStateToProps,
-    mapDispatchToProps)
-(Offer))
+  mapStateToProps,
+  mapDispatchToProps,
+)(Offer))

@@ -1,14 +1,14 @@
 import '../node_modules/open-iconic/font/css/open-iconic-bootstrap.css'
-import './_app/styles/'
+import './_app/styles'
 import 'react-toastify/dist/ReactToastify.min.css'
 
 import React from 'react'
 import { render } from 'react-dom'
 import {
-    BrowserRouter,
-    Route,
-    Switch,
-    Redirect
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
 } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
@@ -27,16 +27,16 @@ import { AsyncRoutes as LessonRoutes } from './Lesson'
 import { AsyncRoutes as CourseRoutes } from './Course'
 import { AsyncRoutes as BlogRoutes } from './Blog'
 import {
-    AsyncRoutes as PageRoutes,
-    AsyncNotFound as NotFound
+  AsyncRoutes as PageRoutes,
+  AsyncNotFound as NotFound,
 } from './Page'
 import { AsyncLogin as Login } from './Login'
 import { AsyncSignup as Signup } from './Signup'
 import { AsyncCheckout as Checkout } from './Checkout'
 import { AsyncVerifyEmail as VerifyEmail } from './VerifyEmail'
 import {
-    AsyncResetPassword as ResetPassword,
-    AsyncForgotPassword as ForgotPassword
+  AsyncResetPassword as ResetPassword,
+  AsyncForgotPassword as ForgotPassword,
 } from './ForgotPassword'
 import { AsyncReviewsPage as Reviews } from './Reviews'
 import { AsyncCurriculum as Curriculum } from './Curriculum'
@@ -47,151 +47,170 @@ import { AsyncRoutes as SubscriptionRoutes } from './Subscription'
 import ChangePassword from './ChangePassword'
 
 const RemoveTrailingSlash = ({ location }) => {
-    const { pathname } = location
-      
-    if (pathname.substr(-1) === '/') {
-      return <Redirect to={pathname.substr(0, pathname.length - 1)} />
-    } else {
-      return null
-    }
+  const { pathname } = location
+
+  if (pathname.substr(-1) === '/') {
+    return <Redirect to={pathname.substr(0, pathname.length - 1)} />
+  }
+  return null
 }
 
-function renderApp(){
-    render(
-        <Provider store={store}>
-            <BrowserRouter>
-                <ScrollToTop>
-                    <ErrorBoundary>
-                        <Route path="/" render={RemoveTrailingSlash} />
-                        <ToastContainer
-                            position="top-center"
-                            autoClose={5000}
-                            hideProgressBar={false}
-                            newestOnTop={true}
-                            closeOnClick
-                            rtl={false}
-                            pauseOnVisibilityChange
-                            draggable
-                            pauseOnHover
-                        />
-                        <Auth>
-                            <Switch>
-                                <Route
-                                    exact
-                                    strict
-                                    path="/verify-email"
-                                    component={VerifyEmail} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/forgot-password"
-                                    component={ForgotPassword} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/reset-password/:accessToken"
-                                    component={ResetPassword} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/login"
-                                    component={Login} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/signup"
-                                    component={Signup} />
-                                <Route
-                                    exact
-                                    strict
-                                    path="/checkout/:slug"
-                                    component={Checkout} />
-                                <Wrap>
-                                    <Switch>
-                                        <Route
-                                            exact
-                                            path="/"
-                                            component={Home} />
+function renderApp() {
+  render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <ScrollToTop>
+          <ErrorBoundary>
+            <Route path="/" render={RemoveTrailingSlash} />
+            <ToastContainer
+              position="top-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnVisibilityChange
+              draggable
+              pauseOnHover
+            />
+            <Auth>
+              <Switch>
+                <Route
+                  exact
+                  strict
+                  path="/verify-email"
+                  component={VerifyEmail}
+                />
+                <Route
+                  exact
+                  strict
+                  path="/forgot-password"
+                  component={ForgotPassword}
+                />
+                <Route
+                  exact
+                  strict
+                  path="/reset-password/:accessToken"
+                  component={ResetPassword}
+                />
+                <Route
+                  exact
+                  strict
+                  path="/login"
+                  component={Login}
+                />
+                <Route
+                  exact
+                  strict
+                  path="/signup"
+                  component={Signup}
+                />
+                <Route
+                  exact
+                  strict
+                  path="/checkout/:slug"
+                  component={Checkout}
+                />
+                <Wrap>
+                  <Switch>
+                    <Route
+                        exact
+                        path="/"
+                        component={Home}
+                      />
 
-                                        <Route
-                                            exact
-                                            path="/pricing"
-                                            component={Pricing} />
+                    <Route
+                        exact
+                        path="/pricing"
+                        component={Pricing}
+                      />
 
-                                        <Route
-                                            exact
-                                            path="/reviews"
-                                            component={Reviews} />
+                    <Route
+                        exact
+                        path="/reviews"
+                        component={Reviews}
+                      />
 
-                                        <Route
-                                            exact
-                                            path="/curriculum"
-                                            component={Curriculum} />
+                    <Route
+                        exact
+                        path="/curriculum"
+                        component={Curriculum}
+                      />
 
-                                        <Route
-                                            exact
-                                            path="/dashboard"
-                                            component={isPrivate(Dashboard)} />
+                    <Route
+                        exact
+                        path="/dashboard"
+                        component={isPrivate(Dashboard)}
+                      />
 
-                                        <Route
-                                            strict
-                                            path="/q"
-                                            component={QuestionRoutes} />
+                    <Route
+                        strict
+                        path="/q"
+                        component={QuestionRoutes}
+                      />
 
-                                        <Route
-                                            strict
-                                            path="/lessons"
-                                            component={LessonRoutes} />
+                    <Route
+                        strict
+                        path="/lessons"
+                        component={LessonRoutes}
+                      />
 
-                                        <Route
-                                            strict
-                                            path="/courses"
-                                            component={CourseRoutes} />
+                    <Route
+                        strict
+                        path="/courses"
+                        component={CourseRoutes}
+                      />
 
-                                        <Route
-                                            strict
-                                            path="/blog"
-                                            component={BlogRoutes} />
+                    <Route
+                        strict
+                        path="/blog"
+                        component={BlogRoutes}
+                      />
 
-                                        <Route
-                                            strict
-                                            path="/pages"
-                                            component={PageRoutes} />
-                                        
-                                        <Route
-                                            strict
-                                            path="/officehours"
-                                            component={isPrivate(OfficeHours)} />
+                    <Route
+                        strict
+                        path="/pages"
+                        component={PageRoutes}
+                      />
 
-                                        <Route
-                                            strict
-                                            path="/groupcalls"
-                                            component={isPrivate(GroupCalls)} />
+                    <Route
+                        strict
+                        path="/officehours"
+                        component={isPrivate(OfficeHours)}
+                      />
 
-                                        <Route
-                                            strict
-                                            path="/subscriptions"
-                                            component={isPrivate(SubscriptionRoutes)} />
-                                        
-                                        <Route
-                                            exact
-                                            strict
-                                            path="/change-password"
-                                            component={isPrivate(ChangePassword)} />
+                    <Route
+                        strict
+                        path="/groupcalls"
+                        component={isPrivate(GroupCalls)}
+                      />
 
-                                        <Route
-                                            component={NotFound} />
-                                    </Switch>
-                                </Wrap>
-                            </Switch>
-                        </Auth>
-                    </ErrorBoundary>
-                </ScrollToTop>
-            </BrowserRouter>
-        </Provider>
-        ,
-        document.getElementById('app')
-    )
+                    <Route
+                        strict
+                        path="/subscriptions"
+                        component={isPrivate(SubscriptionRoutes)}
+                      />
+
+                    <Route
+                        exact
+                        strict
+                        path="/change-password"
+                        component={isPrivate(ChangePassword)}
+                      />
+
+                    <Route
+                        component={NotFound}
+                      />
+                  </Switch>
+                </Wrap>
+              </Switch>
+            </Auth>
+          </ErrorBoundary>
+        </ScrollToTop>
+      </BrowserRouter>
+    </Provider>,
+    document.getElementById('app'),
+  )
 }
 
 renderApp()

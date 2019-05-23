@@ -5,9 +5,9 @@ import Offer from './components/Offer'
 import CountDown from './components/CountDown'
 
 export {
-    actions,
-    reducer,
-    selectors,
-    Offer,
-    CountDown
+  actions,
+  reducer,
+  selectors,
+  Offer,
+  CountDown,
 }

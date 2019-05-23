@@ -4,43 +4,43 @@ import { connect } from 'react-redux'
 import { getPages, clearPages } from '../actions'
 import { List } from '../../_common'
 
-function ListHeader(){
-    return (
-        <div className="d-flex flex-column align-items-center">
-            <h1>All Pages</h1>
-            <p className="lead col-lg-9 align-self-center">
+function ListHeader() {
+  return (
+    <div className="d-flex flex-column align-items-center">
+      <h1>All Pages</h1>
+      <p className="lead col-lg-9 align-self-center">
                 List of all the pages
-            </p>
-        </div>
-    )
+      </p>
+    </div>
+  )
 }
 
-function mapStateToProps(state){
-    return {
-        error: state.pages.list.error,
-        isLoading: state.pages.list.isLoading,
-        list: state.pages.list.data
-    }
+function mapStateToProps(state) {
+  return {
+    error: state.pages.list.error,
+    isLoading: state.pages.list.isLoading,
+    list: state.pages.list.data,
+  }
 }
 
-function mapDispatchToProps(dispatch){
-    return {
-        getList: ()=>{
-            dispatch(getPages())
-        },
-        clearList: ()=>{
-            dispatch(clearPages())
-        }
-    }
+function mapDispatchToProps(dispatch) {
+  return {
+    getList: () => {
+      dispatch(getPages())
+    },
+    clearList: () => {
+      dispatch(clearPages())
+    },
+  }
 }
 
 export default connect(
-    mapStateToProps,
-    mapDispatchToProps)
-((props)=>{
-    return <List
-        {...props}
-        of="page"
-        listHeader={ListHeader}
-    />
-})
+  mapStateToProps,
+  mapDispatchToProps,
+)(props => (
+  <List
+    {...props}
+    of="page"
+    listHeader={ListHeader}
+  />
+))
