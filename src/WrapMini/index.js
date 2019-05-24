@@ -8,52 +8,43 @@ import { actions, selectors } from '../_user'
 import logo from '../_app/images/ilovecoding-logo.svg'
 import { Copyrights } from '../Footer'
 
-class WrapMini extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    const {
-      isLoggedIn, firstName, lastName, logout,
-    } = this.props
-    return (
-      <div className="bg-light full-screen">
-        <div className="d-flex justify-content-center navbar-brand py-3">
-          <Link to="/" className="img-wrap">
-            <img src={logo} alt="iLoveCoding.org Logo" />
-          </Link>
-        </div>
-
-        {
-                    isLoggedIn
-                      ? (
-                        <div className="text-center">
-                          <h2>
-Hi
-                            {firstName}
-!
-                            <br />
-                          </h2>
-                          <p>
-                            You are already logged in,
-                            {' '}
-                            <Link to="/dashboard">continue to dashboard</Link>
-.
-                            <br />
-                            Not you?
-                            {' '}
-                            <button className="border-0 btn-link p-0" onClick={logout}>Log out</button>
-                          </p>
-                        </div>
-                      )
-                      : this.props.children
-                }
-
-        <Copyrights className="text-center" />
+function WrapMini({
+  isLoggedIn, firstName, lastName, logout, children,
+}) {
+  return (
+    <div className="bg-light full-screen">
+      <div className="d-flex justify-content-center navbar-brand py-3">
+        <Link to="/" className="img-wrap">
+          <img src={logo} alt="iLoveCoding.org Logo" />
+        </Link>
       </div>
-    )
-  }
+      {
+        isLoggedIn
+          ? (
+            <div className="text-center">
+              <h2>
+                Hi
+                {firstName}
+                !
+                <br />
+              </h2>
+              <p>
+                You are already logged in,
+                {' '}
+                <Link to="/dashboard">continue to dashboard</Link>
+                .
+                <br />
+                Not you?
+                {' '}
+                <button type="button" className="border-0 btn-link p-0" onClick={logout}>Log out</button>
+              </p>
+            </div>
+          )
+          : children
+      }
+      <Copyrights className="text-center" />
+    </div>
+  )
 }
 
 function mapStateToProps(state) {
