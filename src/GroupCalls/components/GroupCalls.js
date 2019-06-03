@@ -2,10 +2,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 export default class GroupCall extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     const script = document.createElement('script')
 
@@ -26,17 +22,15 @@ export default class GroupCall extends React.Component {
 
           <p className="lead">Register to the next upcoming weekly group call</p>
 
-
           <div className="alert alert-info pb-0">
             <h5 className="alert-heading">
-                            Please come to the call prepared
+              Please come to the call prepared
             </h5>
             <ol>
               <li>Write all your questions down.</li>
               <li>If you need to discuss some code challenges, have your computer and project ready.</li>
             </ol>
           </div>
-
 
           <div className="widget_wrapper">
             <div

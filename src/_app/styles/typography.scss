@@ -55,3 +55,20 @@ strong, .strong {
   text-overflow: ellipsis;
   display: block;
 }
+
+ul.checkmark {
+  list-style: none;
+  padding-left: 0;
+
+  li{
+    position: relative;
+    padding-left: 30px;
+    
+    &:before{
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      content: '✅'
+    }
+  }
+}
