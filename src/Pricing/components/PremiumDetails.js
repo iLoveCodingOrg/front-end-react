@@ -7,22 +7,22 @@ export default () => (
     <div>
       <CheckMark />
       {' '}
-Access to all Courses and Practice Projects
+      Access to all Courses and Practice Projects
     </div>
     <div>
       <CheckMark />
       {' '}
-Downloadable Source Code
+      Downloadable Source Code
     </div>
     <div>
       <CheckMark />
       {' '}
-Downloadable Cheat Sheets
+      Downloadable Cheat Sheets
     </div>
     <div>
       <CheckMark />
       {' '}
-Access to Homework
+      Access to Homework
     </div>
 
     <br />
@@ -30,12 +30,12 @@ Access to Homework
     <div>
       <CheckMark />
       {' '}
-Get help from peers and mentors
+      Get help from peers and mentors
     </div>
     <div>
       <CheckMark />
       {' '}
-All questions answered
+      All questions answered
     </div>
 
     <br />
@@ -44,7 +44,7 @@ All questions answered
     <div>
       <CheckMark />
       {' '}
-Weekly live group call (with mentor)
+      Weekly live group call (with mentor)
     </div>
   </div>
 )

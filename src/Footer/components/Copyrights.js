@@ -28,6 +28,7 @@ export default ({ className }) => (
     <Link to="/pages/terms" className="pl-1 text-muted"><u>Terms</u></Link>
     <div>
       Have a great
+      {' '}
       {getDay()}
       {' '}
       <span role="img" aria-label="Okay Emoji">👌</span>

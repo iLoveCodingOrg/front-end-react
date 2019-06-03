@@ -1,5 +1,5 @@
 import '../node_modules/open-iconic/font/css/open-iconic-bootstrap.css'
-import './_app/styles'
+import './_app/styles/index.scss'
 import 'react-toastify/dist/ReactToastify.min.css'
 
 import React from 'react'
@@ -45,6 +45,7 @@ import { AsyncOfficeHours as OfficeHours } from './OfficeHours'
 import { AsyncGroupCalls as GroupCalls } from './GroupCalls'
 import { AsyncRoutes as SubscriptionRoutes } from './Subscription'
 import ChangePassword from './ChangePassword'
+import Webinar from './Webinar'
 
 const RemoveTrailingSlash = ({ location }) => {
   const { pathname } = location
@@ -110,6 +111,11 @@ function renderApp() {
                   strict
                   path="/checkout/:slug"
                   component={Checkout}
+                />
+                <Route
+                  strict
+                  path="/webinar"
+                  component={Webinar}
                 />
                 <Wrap>
                   <Switch>

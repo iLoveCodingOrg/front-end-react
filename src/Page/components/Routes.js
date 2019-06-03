@@ -10,44 +10,36 @@ import List from './List'
 import { AsyncNotFound as NotFound } from '..'
 import isPrivate from '../../isPrivate'
 
-class Routes extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <Switch>
-        <Route
-          exact
-          strict
-          path="/pages"
-          component={List}
-        />
-        <Route
-          exact
-          strict
-          path="/pages/add"
-          component={Add}
-        />
-        <Route
-          exact
-          strict
-          path="/pages/:slug"
-          component={View}
-        />
-        <Route
-          exact
-          strict
-          path="/pages/:slug/edit"
-          component={isPrivate(Edit)}
-        />
-        <Route
-          component={NotFound}
-        />
-      </Switch>
-    )
-  }
+export default function Routes() {
+  return (
+    <Switch>
+      <Route
+        exact
+        strict
+        path="/pages"
+        component={List}
+      />
+      <Route
+        exact
+        strict
+        path="/pages/add"
+        component={Add}
+      />
+      <Route
+        exact
+        strict
+        path="/pages/:slug"
+        component={View}
+      />
+      <Route
+        exact
+        strict
+        path="/pages/:slug/edit"
+        component={isPrivate(Edit)}
+      />
+      <Route
+        component={NotFound}
+      />
+    </Switch>
+  )
 }
-
-export default Routes
