@@ -1,30 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 
-import { EditForm } from './index'
+import EditForm from './AsyncEditForm'
 
-class Edit extends React.Component {
-  constructor(props) {
-    super(props)
+export default function Edit({
+  of,
+  isLoading,
+  error,
+  editableFields,
+  match,
+  update,
+  getView,
+  view,
+  children,
+}) {
+  const { slug } = match.params
+  const pageTitle = `Edit ${of}`
 
-    this.handelFormSubmit = this.handelFormSubmit.bind(this)
-  }
+  useEffect(() => {
+    getView(slug)
+  }, [match, getView])
 
-  componentDidUpdate(prevProps) {
-    const { slug } = this.props.match.params
-
-    if (prevProps.match.params.slug !== slug) {
-      this.props.getView(slug)
-    }
-  }
-
-  componentDidMount() {
-    this.props.getView(this.props.match.params.slug)
-
+  useEffect(() => {
     // Add jQuery to page for react-trumbowyg
     if (!document.querySelector('#jquery')) {
       const script = document.createElement('script')
@@ -32,15 +33,15 @@ class Edit extends React.Component {
       script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
       document.body.appendChild(script)
     }
-  }
+  }, [])
 
-  handelFormSubmit(payload) {
+  const handelFormSubmit = (payload) => {
     const preparedPayload = {}
-    this.props.editableFields.forEach((field) => {
+    editableFields.forEach((field) => {
       preparedPayload[field.name] = payload[field.name]
     })
 
-    this.props.update(this.props.view.id, preparedPayload)
+    update(view.id, preparedPayload)
       .then(({ isSuccess }) => {
         if (isSuccess) {
           window.location.reload()
@@ -48,47 +49,30 @@ class Edit extends React.Component {
       })
   }
 
-  render() {
-    const { slug } = this.props.match.params
-    const {
-      of,
-      isLoading,
-      error,
-      editableFields,
-    } = this.props
-    const pageTitle = `Edit ${of}`
-    return (
-      <div className="container">
-        { isLoading && <Loading /> }
-        { !isLoading && error && <ErrorBox /> }
-        { !isLoading && !error && (
+  return (
+    <div className="container">
+      { isLoading && <Loading /> }
+      { !isLoading && error && <ErrorBox /> }
+      { !isLoading && !error && (
         <div>
-          <Helmet>
-            <title>
-              {pageTitle}
-              {' '}
-              - iLoveCoding
-            </title>
-          </Helmet>
+          <Helmet title={`${pageTitle} - iLoveCoding`} />
           <main>
             <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
-            {this.props.children}
+            {children}
             <EditForm
               key={slug}
               editableFields={editableFields}
-              data={this.props.view}
-              onSubmitForm={this.handelFormSubmit}
+              data={view}
+              onSubmitForm={handelFormSubmit}
             />
             <pre>
-              {JSON.stringify(this.props.view, null, 2)}
+              {JSON.stringify(view, null, 2)}
             </pre>
           </main>
         </div>
-        )
-        }
-      </div>
-    )
-  }
+      )}
+    </div>
+  )
 }
 
 Edit.propTypes = {
@@ -98,5 +82,3 @@ Edit.propTypes = {
   update: PropTypes.func.isRequired,
   view: PropTypes.object.isRequired,
 }
-
-export default Edit

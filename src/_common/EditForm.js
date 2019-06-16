@@ -4,7 +4,6 @@ import Editor from 'react-trumbowyg'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-
 class EditForm extends React.Component {
   constructor(props) {
     super(props)

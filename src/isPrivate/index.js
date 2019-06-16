@@ -12,7 +12,8 @@ export default function (WrappedComponent) {
       <div className="container d-flex justify-content-center">
         <div className="col-md-8">
           <div className="alert alert-info">
-                        You must be logged in to view this page!
+            You must be logged in to view this page!
+            {' '}
             <Link to="/login">Login</Link>
           </div>
         </div>
