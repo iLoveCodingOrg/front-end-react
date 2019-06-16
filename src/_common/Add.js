@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import { withRouter } from 'react-router-dom'
 import { contentTypeToRoute } from '../_app/utils'
 
-import { AsyncEditForm as EditForm } from '.'
+import { EditForm } from './index'
 
 class Add extends React.Component {
   constructor(props) {

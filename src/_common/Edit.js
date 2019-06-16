@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 
-import { AsyncEditForm as EditForm } from '.'
+import { EditForm } from './index'
 
 class Edit extends React.Component {
   constructor(props) {

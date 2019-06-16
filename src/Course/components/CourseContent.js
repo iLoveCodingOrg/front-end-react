@@ -67,18 +67,18 @@ class CourseContent extends React.Component {
         <div className="float-left">
           {(isComplete) ? <CheckMark /> : null}
           <span className="text-muted">
-                        Lessons #
+            Lessons #
             {index + 1}
-:&nbsp;
+            :&nbsp;
           </span>
           {title}
-&nbsp;
+          &nbsp;
           <Access isFree={isFree} />
         </div>
         <div className="float-right small text-secondary align-self-center text-right">
           {duration}
           {' '}
-mins
+          mins
         </div>
       </Link>
     )
@@ -91,11 +91,11 @@ mins
 
     return (
       <div className="float-right">
-                Your progress:&nbsp;
+        Your progress:&nbsp;
         <span className="h5">
           <span className="badge badge-warning">
             {Math.round(lessonCompletedCount / lessonCount * 100)}
-% complete
+            % complete
           </span>
         </span>
       </div>
@@ -107,21 +107,23 @@ mins
     const { listNode } = this.state
     if (
       get(listNode, 'offsetHeight', false)
-            && maxScrollHeight <= listNode.offsetHeight
+        && maxScrollHeight <= listNode.offsetHeight
     ) {
       return (
         <div className="btn-group d-flex">
           <button
+            type="button"
             className="btn btn-outline-secondary border-gray-400 flex-fill"
             onClickCapture={() => this.handleScroll('up')}
           >
-Scroll Up ⬆
+            Scroll Up ⬆
           </button>
           <button
+            type="button"
             className="btn btn-outline-secondary border-gray-400 flex-fill"
             onClick={() => this.handleScroll('down')}
           >
-Scroll Down ⬇
+            Scroll Down ⬇
           </button>
         </div>
       )
@@ -159,11 +161,12 @@ CourseContent.propTypes = {
   lessons: PropTypes.array.isRequired,
   lessonCount: PropTypes.number.isRequired,
   lessonCompletedCount: PropTypes.number,
-  maxScrollHeight: PropTypes.number.isRequired,
+  maxScrollHeight: PropTypes.number,
 }
 
 CourseContent.defaultProps = {
   maxScrollHeight: 400,
+  lessonCompletedCount: 0,
 }
 
 function mapStateToProps(state) {
