@@ -54,7 +54,7 @@ export default function Edit({
       { isLoading && <Loading /> }
       { !isLoading && error && <ErrorBox /> }
       { !isLoading && !error && (
-        <div>
+        <>
           <Helmet title={`${pageTitle} - iLoveCoding`} />
           <main>
             <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
@@ -65,11 +65,8 @@ export default function Edit({
               data={view}
               onSubmitForm={handelFormSubmit}
             />
-            <pre>
-              {JSON.stringify(view, null, 2)}
-            </pre>
           </main>
-        </div>
+        </>
       )}
     </div>
   )

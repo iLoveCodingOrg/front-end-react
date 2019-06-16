@@ -22,7 +22,6 @@ class EditForm extends React.Component {
     this.renderWysiwyg = this.renderWysiwyg.bind(this)
   }
 
-
   handleChange(field, value) {
     this.setState({
       [field]: value,
@@ -62,43 +61,42 @@ class EditForm extends React.Component {
         </label>
         <div className="col-md-10">
           {this.renderViewSourceCheckbox()}
-          {
-                        (this.state.isViewSource)
-                          ? (
-                            <textarea
-                              rows="13"
-                              className="form-control"
-                              name={field}
-                              value={this.state[field]}
-                              onChange={(e) => { this.handleChange(field, e.target.value) }}
-                            />
-                          )
-                          : (
-                            <Editor
-                              id="react-trumbowyg"
-                              buttons={
-                                [
-                                  ['viewHTML'],
-                                  ['formatting'],
-                                  'btnGrp-semantic',
-                                  ['link'],
-                                  ['insertImage'],
-                                  'btnGrp-justify',
-                                  'btnGrp-lists',
-                                  ['table'], // I ADDED THIS FOR THE TABLE PLUGIN BUTTON
-                                  ['fullscreen'],
-                                ]
-                            }
-                              resetCss={false}
-                              autogrow
-                              semantic={false}
-                              data={this.props.data[field]}
-                              placeholder="Type your text!"
-                              onChange={(editor) => { this.handleChange(field, editor.target.innerHTML) }}
-                              ref="trumbowyg"
-                            />
-                          )
-                    }
+          { this.state.isViewSource
+            ? (
+              <textarea
+                rows="13"
+                className="form-control"
+                name={field}
+                value={this.state[field]}
+                onChange={(e) => { this.handleChange(field, e.target.value) }}
+              />
+            )
+            : (
+              <Editor
+                id="react-trumbowyg"
+                buttons={
+                  [
+                    ['viewHTML'],
+                    ['formatting'],
+                    'btnGrp-semantic',
+                    ['link'],
+                    ['insertImage'],
+                    'btnGrp-justify',
+                    'btnGrp-lists',
+                    ['table'], // I ADDED THIS FOR THE TABLE PLUGIN BUTTON
+                    ['fullscreen'],
+                  ]
+              }
+                resetCss={false}
+                autogrow
+                semantic={false}
+                data={this.props.data[field]}
+                placeholder="Type your text!"
+                onChange={(editor) => { this.handleChange(field, editor.target.innerHTML) }}
+                ref="trumbowyg"
+              />
+            )
+          }
         </div>
       </div>
     )
@@ -118,7 +116,7 @@ class EditForm extends React.Component {
           className="form-check-input"
           htmlFor="view-source"
         >
-                    View Source
+          View Source
         </label>
       </div>
     )
@@ -171,25 +169,25 @@ class EditForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         {
-                    this.props.editableFields.map((field) => {
-                      if (
-                        field.type === 'text'
-                            || field.type === 'number'
-                            || field.type === 'array'
-                      ) {
-                        return this.renderTextFields(field.name, field.type)
-                      } if (field.type === 'textarea') {
-                        return this.renderTextarea(field.name)
-                      } if (field.type === 'wysiwyg') {
-                        return this.renderWysiwyg(field.name, field.type)
-                      }
-                    })
-                }
+          this.props.editableFields.map((field) => {
+            if (
+              field.type === 'text'
+              || field.type === 'number'
+              || field.type === 'array'
+            ) {
+              return this.renderTextFields(field.name, field.type)
+            } if (field.type === 'textarea') {
+              return this.renderTextarea(field.name)
+            } if (field.type === 'wysiwyg') {
+              return this.renderWysiwyg(field.name, field.type)
+            }
+          })
+        }
         <button
           type="submit"
           className="btn btn-primary btn-lg btn-block"
         >
-                    Save
+          Save
         </button>
       </form>
     )
