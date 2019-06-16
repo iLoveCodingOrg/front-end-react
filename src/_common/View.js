@@ -12,16 +12,12 @@ import Cta from '../Cta'
 import { contentTypeToRoute } from '../_app/utils'
 
 class View extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   getVideoHeaderCss(videoSource, of) {
     if (
       videoSource === 'none'
-            || of === 'page'
-            || of === 'blog'
-            || of === 'question'
+      || of === 'page'
+      || of === 'blog'
+      || of === 'question'
     ) {
       return 'col-12 col-lg-9 mx-auto'
     }
@@ -69,6 +65,7 @@ class View extends React.Component {
       const route = contentTypeToRoute[of]
       return `https://ilovecoding.org/${route}/${slug}`
     }
+
     return (
       <div className={`container ${of}`}>
         {
@@ -80,7 +77,7 @@ class View extends React.Component {
                               <title>
                                 {title}
                                 {' '}
-- iLoveCoding
+                                - iLoveCoding
                               </title>
                               <meta name="description" content={subTitle} />
                             </Helmet>
@@ -89,8 +86,8 @@ class View extends React.Component {
                               of={of}
                               title={title}
                               subTitle={subTitle}
-                              isComplete={isComplete}
-                              isFree={isFree}
+                              isComplete={!!isComplete}
+                              isFree={!!isFree}
                               duration={courseTotalDuration || duration}
                               level={level}
                               lessonCount={lessonCount}

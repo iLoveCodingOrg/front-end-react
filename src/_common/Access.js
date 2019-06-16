@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Access({ isFree = true, of = 'lesson' }) {
+export default function Access({ isFree, of }) {
   if (of === 'blog' || of === 'page') return null
 
   return isFree
@@ -10,6 +10,11 @@ export default function Access({ isFree = true, of = 'lesson' }) {
 }
 
 Access.propTypes = {
-  isFree: PropTypes.bool.isRequired,
-  of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']).isRequired,
+  isFree: PropTypes.bool,
+  of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']),
+}
+
+Access.defaultProps = {
+  isFree: true,
+  of: 'lesson',
 }

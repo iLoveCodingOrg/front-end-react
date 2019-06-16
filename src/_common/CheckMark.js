@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function CheckMark({ title = 'Complete' }) {
+export default function CheckMark({ title }) {
   return (
     <span
       className="oi oi-circle-check text-teal"
@@ -13,5 +13,9 @@ export default function CheckMark({ title = 'Complete' }) {
 }
 
 CheckMark.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+}
+
+CheckMark.defaultProps = {
+  title: 'Complete',
 }

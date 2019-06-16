@@ -9,15 +9,15 @@ import LessonCount from './LessonCount'
 import CheckMark from './CheckMark'
 
 export default function ViewHeader({
-  cssClass = '',
-  duration = '0:0',
-  isFree = true,
-  isComplete = false,
-  lessonCount = 0,
-  level = 0,
-  of = 'lesson',
-  subTitle = '',
-  title = '',
+  cssClass,
+  duration,
+  isFree,
+  isComplete,
+  lessonCount,
+  level,
+  of,
+  subTitle,
+  title,
 }) {
   const renderBlogHeader = () => {
     if (of === 'blog') {
@@ -54,13 +54,24 @@ export default function ViewHeader({
 }
 
 ViewHeader.propTypes = {
-  cssClass: PropTypes.string.isRequired,
-  duration: PropTypes.string.isRequired,
-  isFree: PropTypes.bool.isRequired,
-  isComplete: PropTypes.bool.isRequired,
-  lessonCount: PropTypes.number.isRequired,
-  level: PropTypes.oneOf([0, 1, 2]).isRequired,
-  of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page', 'blog']).isRequired,
-  subTitle: PropTypes.string.isRequired,
+  cssClass: PropTypes.string,
+  duration: PropTypes.string,
+  isFree: PropTypes.bool,
+  isComplete: PropTypes.bool,
+  lessonCount: PropTypes.number,
+  level: PropTypes.oneOf([0, 1, 2]),
+  of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page', 'blog']),
+  subTitle: PropTypes.string,
   title: PropTypes.string.isRequired,
+}
+
+ViewHeader.defaultProps = {
+  cssClass: '',
+  duration: '',
+  isFree: true,
+  isComplete: false,
+  lessonCount: 0,
+  level: 0,
+  of: 'lesson',
+  subTitle: '',
 }

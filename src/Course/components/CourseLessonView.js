@@ -18,10 +18,6 @@ import Cta from '../../Cta'
 import Breadcrumbs from '../../Breadcrumbs'
 
 class CourseLessonView extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidUpdate(prevProps) {
     const { lessonSlug, courseSlug } = this.props.match.params
     if (
@@ -104,7 +100,7 @@ class CourseLessonView extends React.Component {
                               duration={duration}
                               level={level}
                               isComplete={isComplete}
-                              of="courseLesson"
+                              of="lesson"
                             />
                             <main>
                               <RedirectAlert slug={courseView.slug} />
