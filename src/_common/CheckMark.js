@@ -1,10 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default ({ title = 'Complete' }) => (
-  <span
-    className="oi oi-circle-check text-teal"
-    title={title}
-    aria-hidden="true"
-    style={{ paddingRight: '5px' }}
-  />
-)
+export default function CheckMark({ title = 'Complete' }) {
+  return (
+    <span
+      className="oi oi-circle-check text-teal"
+      title={title}
+      aria-hidden="true"
+      style={{ paddingRight: '5px' }}
+    />
+  )
+}
+
+CheckMark.propTypes = {
+  title: PropTypes.string.isRequired,
+}

@@ -4,24 +4,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Vimeo from '@u-wave/react-vimeo'
 
-class Video extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+function Video({ videoSource, callMarkAsComplete }) {
+  const getId = () => videoSource.split('//player.vimeo.com/video/').pop()
 
-  getId(videoSource) {
-    return videoSource.split('//player.vimeo.com/video/').pop()
-  }
-
-  render() {
-    return (
-      <Vimeo
-        className="video"
-        video={this.getId(this.props.videoSource)}
-        onEnd={() => this.props.callMarkAsComplete()}
-      />
-    )
-  }
+  return (
+    <Vimeo
+      className="video"
+      video={getId()}
+      onEnd={() => callMarkAsComplete()}
+    />
+  )
 }
 
 Video.propTypes = {

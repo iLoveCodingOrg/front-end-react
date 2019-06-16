@@ -1,3 +1,3 @@
-export function logError(error, errorInfo) {
+export default function logError(error, errorInfo) {
   Raven.captureException(error, { extra: errorInfo })
 }

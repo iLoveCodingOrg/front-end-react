@@ -31,11 +31,19 @@ class Login extends React.Component {
     this.props.clearError()
   }
 
+  setRecaptchaElem(recaptchaElm) {
+    this.recaptchaElm = recaptchaElm
+  }
+
+  verifyRecaptchaCb(recaptchaToken) {
+    this.setState({ recaptchaToken })
+  }
+
   handleSubmit(event) {
     event.preventDefault()
 
     const { location, history, login } = this.props
-    const redirect = qsParse(location.search).redirect
+    const { redirect } = qsParse(location.search)
     const { email, password, recaptchaToken } = this.state
     login(email, password, recaptchaToken)
       .then(({ isSuccess }) => {
@@ -84,31 +92,21 @@ class Login extends React.Component {
         <div className="alert alert-danger">
           {this.props.error}
           {' '}
-&nbsp;
           {
-                        isEmailToBeVerified
-                          ? (
-                            <button
-                              onClick={this.handleVerifyEmail}
-                              className="btn-link p-0 border-0"
-                            >
-Resend verification email
-                            </button>
-                          )
-                          : null
-                    }
+            isEmailToBeVerified && (
+              <button
+                type="button"
+                onClick={this.handleVerifyEmail}
+                className="btn-link p-0 border-0"
+              >
+                Resend verification email
+              </button>
+            )
+          }
         </div>
       )
     }
     return null
-  }
-
-  verifyRecaptchaCb(recaptchaToken) {
-    this.setState({ recaptchaToken })
-  }
-
-  setRecaptchaElem(recaptchaElm) {
-    this.recaptchaElm = recaptchaElm
   }
 
   render() {
@@ -118,13 +116,13 @@ Resend verification email
         <form className="form-login" onSubmit={this.handleSubmit}>
           <h2 className="text-center">Log in to iLoveCoding</h2>
           <p className="text-center">
-                        Don't have an account?
+            Don&apos;t have an account?
             {' '}
             <Link to="/pricing">Get started</Link>
             {' '}
-or enrolled in
+            or enrolled in
             {' '}
-            <Link to="/pricing">iLoveCoding's Paid Programs.</Link>
+            <Link to="/pricing">iLoveCoding&apos;s Paid Programs.</Link>
           </p>
           {this.renderVerifyEmailStatus()}
           {this.renderError()}

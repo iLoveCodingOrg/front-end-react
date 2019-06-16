@@ -1,5 +1,5 @@
 import React from 'react'
-import { logError } from '../_app/logService'
+import logError from '../_app/logService'
 
 export default class ErrorBoundary extends React.Component {
   constructor(props) {

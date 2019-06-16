@@ -59,34 +59,33 @@ class Edit extends React.Component {
     const pageTitle = `Edit ${of}`
     return (
       <div className="container">
-        {
-                    (isLoading) ? <Loading />
-                      : (error) ? <ErrorBox />
-                        : (
-                          <div>
-                            <Helmet>
-                              <title>
-                                {pageTitle}
-                                {' '}
-- iLoveCoding
-                              </title>
-                            </Helmet>
-                            <main>
-                              <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
-                              {this.props.children}
-                              <EditForm
-                                key={slug}
-                                editableFields={editableFields}
-                                data={this.props.view}
-                                onSubmitForm={this.handelFormSubmit}
-                              />
-                              <pre>
-                                {JSON.stringify(this.props.view, null, 2)}
-                              </pre>
-                            </main>
-                          </div>
-                        )
-                }
+        { isLoading && <Loading /> }
+        { !isLoading && error && <ErrorBox /> }
+        { !isLoading && !error && (
+        <div>
+          <Helmet>
+            <title>
+              {pageTitle}
+              {' '}
+              - iLoveCoding
+            </title>
+          </Helmet>
+          <main>
+            <h1 className="my-4 text-center text-capitalize">{pageTitle}</h1>
+            {this.props.children}
+            <EditForm
+              key={slug}
+              editableFields={editableFields}
+              data={this.props.view}
+              onSubmitForm={this.handelFormSubmit}
+            />
+            <pre>
+              {JSON.stringify(this.props.view, null, 2)}
+            </pre>
+          </main>
+        </div>
+        )
+        }
       </div>
     )
   }

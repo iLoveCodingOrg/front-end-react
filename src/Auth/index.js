@@ -5,10 +5,6 @@ import { withRouter } from 'react-router-dom'
 import { actions } from '../_user'
 
 class Auth extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     this.props.getUser()
   }

@@ -30,6 +30,14 @@ class Signup extends React.Component {
     this.props.clearError()
   }
 
+  setRecaptchaElem(recaptchaElm) {
+    this.recaptchaElm = recaptchaElm
+  }
+
+  verifyRecaptchaCb(recaptchaToken) {
+    this.setState({ recaptchaToken })
+  }
+
   handleSubmit(e) {
     e.preventDefault()
 
@@ -71,14 +79,6 @@ class Signup extends React.Component {
     )
   }
 
-  verifyRecaptchaCb(recaptchaToken) {
-    this.setState({ recaptchaToken })
-  }
-
-  setRecaptchaElem(recaptchaElm) {
-    this.recaptchaElm = recaptchaElm
-  }
-
   render() {
     return (
       <WrapMini>
@@ -88,7 +88,7 @@ class Signup extends React.Component {
                     Get access to the first two courses FREE.
           {' '}
           <Link to="/pricing">Upgrade for full-access anytime</Link>
-.
+          .
         </p>
 
         <form onSubmit={this.handleSubmit} className="mt-5 col-lg-6 col-md-8 mx-auto">
@@ -166,7 +166,7 @@ class Signup extends React.Component {
         </form>
 
         <div className="text-center">
-                    Already have an account?
+          Already have an account?
           {' '}
           <Link to="/login">Login here</Link>
         </div>

@@ -2,60 +2,65 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import {
-  Access, Level, Duration, LessonCount, CheckMark,
-} from '.'
+import Access from './Access'
+import Level from './Level'
+import Duration from './Duration'
+import LessonCount from './LessonCount'
+import CheckMark from './CheckMark'
 
-function ViewHeader({
-  title, subTitle, isFree, level, duration, of, lessonCount, cssClass = '', isComplete,
+export default function ViewHeader({
+  cssClass = '',
+  duration = '0:0',
+  isFree = true,
+  isComplete = false,
+  lessonCount = 0,
+  level = 0,
+  of = 'lesson',
+  subTitle = '',
+  title = '',
 }) {
+  const renderBlogHeader = () => {
+    if (of === 'blog') {
+      return <Link className="lead mb-4 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link>
+    }
+    return null
+  }
+
+  const renderCourseLessonMeta = () => {
+    if (of !== 'page' && of !== 'blog') {
+      return (
+        <div className="mb-3">
+          <div className="d-inline">
+            {(isComplete) && <CheckMark />}
+            <Access of={of} isFree={isFree} />
+            <Level level={level} />
+            <Duration duration={duration} />
+            { of === 'course' && <LessonCount lessonCount={lessonCount} /> }
+          </div>
+        </div>
+      )
+    }
+    return null
+  }
+
   return (
     <div className={`${cssClass} view-header`}>
-      {(of === 'blog') ? <Link className="lead mb-4 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link> : null}
+      {renderBlogHeader()}
       <h1>{title}</h1>
-      {
-                subTitle
-                  ? <p className="lead">{subTitle}</p>
-                  : null
-            }
-      {
-                // TODO: optimize these multiple conditions
-                (of !== 'page' && of !== 'blog')
-                  ? (
-                    <div className="mb-3">
-                      <div className="d-inline">
-                        {(isComplete) ? <CheckMark /> : null}
-                        <Access isFree={isFree} />
-                        <Level level={level} />
-                        <Duration duration={duration} />
-                      </div>
-                      {
-                        of === 'course'
-                          ? (
-                            <div className="d-inline">
-                              <LessonCount lessonCount={lessonCount} />
-                            </div>
-                          )
-                          : null
-                    }
-                    </div>
-                  )
-                  : null
-            }
+      <p className="lead">{subTitle}</p>
+      {renderCourseLessonMeta()}
     </div>
   )
 }
 
 ViewHeader.propTypes = {
-  cssClass: PropTypes.string,
-  duration: PropTypes.string,
+  cssClass: PropTypes.string.isRequired,
+  duration: PropTypes.string.isRequired,
   isFree: PropTypes.bool.isRequired,
-  isComplete: PropTypes.bool,
-  lessonCount: PropTypes.number,
-  level: PropTypes.oneOf([0, 1, 2]),
+  isComplete: PropTypes.bool.isRequired,
+  lessonCount: PropTypes.number.isRequired,
+  level: PropTypes.oneOf([0, 1, 2]).isRequired,
   of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page', 'blog']).isRequired,
-  subTitle: PropTypes.string,
+  subTitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }
-
-export default ViewHeader

@@ -1,71 +1,66 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
-import { Card } from '.'
+import Card from './Card'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 
-class List extends React.Component {
-  constructor(props) {
-    super(props)
+export default function List({
+  getList,
+  of,
+  list,
+  listHeader: ListHeaderComponent,
+  isLoading,
+  error,
+}) {
+  useEffect(() => { getList() }, [])
 
-    this.getTitle = this.getTitle.bind(this)
-  }
-
-  componentDidMount() {
-    this.props.getList()
-  }
-
-  getTitle() {
-    switch (this.props.of) {
+  const getTitle = () => {
+    let title
+    switch (of) {
       case 'lesson':
-        return 'All Lessons'
+        title = 'All Lessons'
+        break
       case 'course':
-        return 'Courses'
+        title = 'Courses'
+        break
       case 'page':
-        return 'Pages'
+        title = 'Pages'
+        break
       case 'question':
-        return 'Questions/Answers'
+        title = 'Questions/Answers'
+        break
       case 'blog':
-        return 'iLoveCoding Blog'
+        title = 'iLoveCoding Blog'
+        break
+      default:
+        title = 'iLoveCoding'
     }
+    return `${title} - iLoveCoding`
   }
 
-  render() {
-    const ListHeaderComponent = this.props.listHeader
-    return (
-      <div className="container">
-        {
-                    (this.props.isLoading) ? <Loading />
-                      : (this.props.error) ? <ErrorBox />
-                        : (
-                          <div>
-                            <Helmet>
-                              <title>
-                                {this.getTitle()}
-                                {' '}
-- iLoveCoding
-                              </title>
-                            </Helmet>
-                            <ListHeaderComponent />
-                            <div className="col-12 col-lg-9 border-top pt-4 mx-auto">
-                              {
-                            this.props.list.map((item, index) => (
-                              <Card
-                                key={index}
-                                item={item}
-                                of={this.props.of}
-                              />
-                            ))
-                        }
-                            </div>
-                          </div>
-                        )
-                }
-      </div>
-    )
-  }
+  return (
+    <div className="container">
+      { isLoading && <Loading /> }
+      { !isLoading && error && <ErrorBox /> }
+      { !isLoading && !error && (
+        <div>
+          <Helmet title={getTitle()} />
+          <ListHeaderComponent />
+          <div className="col-12 col-lg-9 border-top pt-4 mx-auto">
+            { list.map(item => (
+              <Card
+                key={item.slug}
+                item={item}
+                of={of}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
 }
 
 List.propTypes = {
@@ -76,5 +71,3 @@ List.propTypes = {
   listHeader: PropTypes.func.isRequired,
   of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']).isRequired,
 }
-
-export default List

@@ -47,7 +47,8 @@ export default function Signup() {
             alt="Aziz"
           />
           <p className="mt-3 p-3 border">
-            <span className="strong">Aziz Ali is the founder of iLoveCoding.org. </span>
+            <span className="strong">Aziz Ali is the founder of iLoveCoding.org.</span>
+            {' '}
             He has worked for United Airlines, CVS Health and a few other companies as a Senior Software Engineer. Aziz is routinely invited by big firms to the likes of Starbucks, Intuit and SalesForce.com to teach their employees modern software development. Aziz has also taught software development to dozens of students around the world who now work at Citibank, Twitter, Sony, and the like. Some have established their own startups and freelancing businesses.
           </p>
         </div>

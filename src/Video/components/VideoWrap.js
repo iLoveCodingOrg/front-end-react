@@ -7,14 +7,10 @@ import isEmpty from 'lodash/isEmpty'
 import { Link } from 'react-router-dom'
 
 import { isLoggedIn } from '../../_user/selectors'
-import { Video } from '..'
+import Video from './Video'
 import { IMG_URL } from '../../_app/constants'
 
 class VideoWrap extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   renderThumb(thumbnail, title) {
     if (!thumbnail) return null
     return (
@@ -37,51 +33,52 @@ class VideoWrap extends React.Component {
     } = this.props
 
     if (videoSource === 'none') return null
+
     return (
       <div>
         {
-                    (!isEmpty(videoSource))
+          (!isEmpty(videoSource))
+            ? (
+              <Video
+                callMarkAsComplete={callMarkAsComplete}
+                videoSource={videoSource}
+              />
+            )
+            : (
+              <div className="d-flex flex-md-row flex-column alert alert-warning ">
+                {this.renderThumb(thumbnail, title)}
+                <div>
+                  <div className="h3 font-weight-light">
+                    You do not have access to this lesson!
+                  </div>
+                  {
+                    (isLoggedIn)
                       ? (
-                        <Video
-                          callMarkAsComplete={callMarkAsComplete}
-                          videoSource={videoSource}
-                        />
+                        <p>
+                          <Link to="/pricing" className="btn-link p-0 border-0">Upgrade your membership</Link>
+                          {' '}
+                          to get access to this lesson along with hundreds of other lessons and complete courses.
+                        </p>
                       )
                       : (
-                        <div className="d-flex flex-md-row flex-column alert alert-warning ">
-                          {this.renderThumb(thumbnail, title)}
-                          <div>
-                            <div className="h3 font-weight-light">
-                                You do not have access to this lesson!
-                            </div>
-                            {
-                                (isLoggedIn)
-                                  ? (
-                                    <p>
-                                      <Link to="/pricing" className="btn-link p-0 border-0">Upgrade your membership</Link>
-                                      {' '}
-to get access to this lesson along with hundreds of other lessons and complete courses.
-                                    </p>
-                                  )
-                                  : (
-                                    <div>
-                                      <p>
-                                        <Link to="/pricing" className="btn-link p-0 border-0">Enroll in the training</Link>
-                                        {' '}
-to get access to this lesson along with hundreds of other lessons and complete courses.
-                                      </p>
-                                      <p>
-                                        Already enrolled?
-                                        {' '}
-                                        <Link to="/login" className="btn-link p-0 border-0">Login</Link>
-                                      </p>
-                                    </div>
-                                  )
-                            }
-                          </div>
+                        <div>
+                          <p>
+                            <Link to="/pricing" className="btn-link p-0 border-0">Enroll in the training</Link>
+                            {' '}
+                            to get access to this lesson along with hundreds of other lessons and complete courses.
+                          </p>
+                          <p>
+                            Already enrolled?
+                            {' '}
+                            <Link to="/login" className="btn-link p-0 border-0">Login</Link>
+                          </p>
                         </div>
                       )
-                }
+                  }
+                </div>
+              </div>
+            )
+          }
       </div>
     )
   }

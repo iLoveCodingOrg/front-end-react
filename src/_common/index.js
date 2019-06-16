@@ -17,7 +17,6 @@ const AsyncEditForm = AsyncLoader({
   loader: () => import('./EditForm'),
 })
 
-
 export {
   List,
   Card,

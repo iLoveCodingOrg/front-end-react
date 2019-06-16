@@ -4,68 +4,57 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 import { IMG_URL } from '../_app/constants'
-import {
-  Access, Level, Duration, LessonCount,
-} from '.'
+import Access from './Access'
+import Level from './Level'
+import Duration from './Duration'
+import LessonCount from './LessonCount'
 import { contentTypeToRoute } from '../_app/utils'
 
-class Card extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+function Card({ item, of }) {
+  const {
+    thumbnail,
+    title,
+    subTitle,
+    access,
+    level,
+    courseTotalDuration,
+    duration,
+    slug,
+    lessonCount,
+  } = item
 
-  render() {
-    const {
-      thumbnail,
-      title,
-      subTitle,
-      access,
-      level,
-      courseTotalDuration,
-      duration,
-      slug,
-      lessonCount,
-    } = this.props.item
-    const { of } = this.props
-    const route = contentTypeToRoute[of]
-    const isFree = !(access)
-    const urlTo = `/${route}/${slug}`
+  const route = contentTypeToRoute[of]
+  const isFree = !(access)
+  const urlTo = `/${route}/${slug}`
+  const durationVal = courseTotalDuration || duration
 
-    return (
-      <div
-        className="d-flex flex-column flex-md-row mb-5 card border-0"
-      >
-        <div>
-          {
-                        (thumbnail)
-                          ? (
-                            <Link to={urlTo}>
-                              <img
-                                className="mr-md-3 mb-md-0 mb-3 rounded"
-                                src={`${IMG_URL}${thumbnail}`}
-                              />
-                            </Link>
-                          )
-                          : null
-                    }
-        </div>
-        <div>
-          <h3><Link to={urlTo}>{title}</Link></h3>
-          <div className="mb-2">
-            <Access of={of} isFree={isFree} />
-            { level ? <Level level={level} /> : null}
-            { (courseTotalDuration || duration) ? <Duration duration={courseTotalDuration || duration} /> : null }
-            {
-                            of === 'courses'
-                              ? <LessonCount lessonCount={lessonCount} />
-                              : null
-                        }
-          </div>
-          <p>{subTitle}</p>
-        </div>
+  return (
+    <div className="d-flex flex-column flex-md-row mb-5 card border-0">
+      <div>
+        {
+          thumbnail && (
+          <Link to={urlTo}>
+            <img
+              className="mr-md-3 mb-md-0 mb-3 rounded"
+              src={`${IMG_URL}${thumbnail}`}
+              alt="Thumbnail"
+            />
+          </Link>
+          )
+        }
       </div>
-    )
-  }
+      <div>
+        <h3><Link to={urlTo}>{title}</Link></h3>
+        <div className="mb-2">
+          <Access of={of} isFree={isFree} />
+          { !!level && <Level level={level} /> }
+          { !!durationVal && <Duration duration={durationVal} /> }
+          { (of === 'courses') && <LessonCount lessonCount={lessonCount} /> }
+        </div>
+        <p>{subTitle}</p>
+      </div>
+    </div>
+  )
 }
 
 Card.propTypes = {

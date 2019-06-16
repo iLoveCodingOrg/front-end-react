@@ -1,12 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-class Level extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  renderSwitch(level) {
+export default function Level({ level }) {
+  const renderSwitch = () => {
     switch (level) {
       case 0:
         return 'Beginner'
@@ -19,19 +15,15 @@ class Level extends React.Component {
     }
   }
 
-  render() {
-    return (
-      <small className="mr-3">
-                Level:
-        {' '}
-        {this.renderSwitch(this.props.level)}
-      </small>
-    )
-  }
+  return (
+    <small className="mr-3">
+      Level:
+      {' '}
+      {renderSwitch()}
+    </small>
+  )
 }
 
 Level.propTypes = {
   level: PropTypes.oneOf([0, 1, 2]).isRequired,
 }
-
-export default Level

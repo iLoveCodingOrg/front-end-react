@@ -9,7 +9,7 @@ function ListHeader() {
     <div className="d-flex flex-column align-items-center">
       <h1>Courses</h1>
       <p className="lead col-lg-9 align-self-center">
-                Courses are organized into targeted technological topics. Pick a course and get started. Remember! Each course uses simple terminology, and gives you ample practice so your learning sinks in on a deeper level.
+        Courses are organized into targeted technological topics. Pick a course and get started. Remember! Each course uses simple terminology, and gives you ample practice so your learning sinks in on a deeper level.
       </p>
     </div>
   )
