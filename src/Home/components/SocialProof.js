@@ -27,9 +27,9 @@ function SocialProof() {
   return (
     <div className="">
       <h3 className="text-center mb-4">
-        <u>10,436 students</u>
+        <u>8,938 students</u>
         {' '}
-          learned coding from iLoveCoding last month (Apr 2019);
+          learned coding from iLoveCoding last month (May 2019);
         <br />
         {' '}
         Here&apos;s what some of them had to say:

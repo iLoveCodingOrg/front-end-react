@@ -6,7 +6,7 @@ export default function Access({ isFree, of }) {
 
   return isFree
     ? <span className="badge badge-pill badge-dark mr-3">FREE</span>
-    : <span className="badge badge-pill badge-success mr-3">PRO</span>
+    : <span className="badge badge-pill badge-success mr-3">PAID</span>
 }
 
 Access.propTypes = {
