@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../../_app/images/ilovecoding-logo.svg'
 
-export default function ({ productName, productDesc }) {
+export default function Header({ productName, productDesc }) {
   return (
     <div>
       <div className="d-flex justify-content-between flex-column-reverse flex-md-row align-items-center">
@@ -13,7 +13,7 @@ export default function ({ productName, productDesc }) {
           </div>
           <div className="d-flex flex-column">
             <div className="h6 text-muted text-uppercase m-0">
-                            You are about to buy:
+              You are about to buy:
             </div>
             <h1 className="h2">
               {productName}
@@ -21,17 +21,19 @@ export default function ({ productName, productDesc }) {
           </div>
         </div>
         <div className="alert-light alert my-2 border">
-                    Need help? support@ilovecoding.org
+          Need help? support@ilovecoding.org
         </div>
       </div>
       <div className="row">
         <div className="alert alert-success">
           <h4>🔒 Secure Checkout:</h4>
           <p className="">
-                        Congratulations! Once you complete this secure registration form, you'll have instant access to
+            Congratulations! Once you complete this secure registration form, you'll have instant access to
             {' '}
-            <strong>{productName}</strong>
-.
+            <strong>
+              {productName}
+            </strong>
+            .
           </p>
           <p className="mb-0">{productDesc}</p>
         </div>

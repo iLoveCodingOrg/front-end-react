@@ -4,6 +4,4 @@ const AsyncReviewsPage = AsyncLoader({
   loader: () => import('./components/ReviewsPage'),
 })
 
-export {
-  AsyncReviewsPage,
-}
+export default AsyncReviewsPage

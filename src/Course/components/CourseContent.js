@@ -133,7 +133,7 @@ class CourseContent extends React.Component {
   render() {
     const { lessons, maxScrollHeight } = this.props
     return (
-      <div>
+      <>
         <div className="list-group-item bg-gray-200 clearfix">
           <div className="h5 mb-0 float-left">Course content</div>
           {this.renderProgressIndicator()}
@@ -149,7 +149,7 @@ class CourseContent extends React.Component {
           {lessons && lessons.map((item, index) => this.renderItem(item, index))}
         </div>
         {this.renderScrollButtons()}
-      </div>
+      </>
     )
   }
 }

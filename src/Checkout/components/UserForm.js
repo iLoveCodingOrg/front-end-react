@@ -63,10 +63,10 @@ class UserForm extends React.Component {
     if (isDisabled) {
       return (
         <div className="mb-3">
-                    Not
+          Not
           {' '}
           {userInfo.firstName.value}
-?
+          ?
           <button className="border-0 btn-link" onClick={logout}>Log out</button>
         </div>
       )

@@ -4,6 +4,4 @@ const AsyncComments = AsyncLoader({
   loader: () => import('./components/Comments'),
 })
 
-export {
-  AsyncComments,
-}
+export default AsyncComments

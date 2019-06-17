@@ -7,7 +7,7 @@ import { VideoWrap } from '../Video'
 import SourceDemo from '../SourceDemo'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
-import { AsyncComments as Comments } from '../Comments'
+import Comments from '../Comments'
 import Cta from '../Cta'
 import { contentTypeToRoute } from '../_app/utils'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PrintTraining } from '..'
+import PrintTraining from './PrintTraining'
 
 const courses = [
   {
@@ -79,17 +79,17 @@ export default () => (
     <div className="col-xl-4">
       <h2>
         <small className="d-block text-muted">
-                        Module 2:
+          Module 2:
         </small>
-                    Modern Front-End Development
+        Modern Front-End Development
       </h2>
       <p className="lead text-muted">
-                    Learn how to make traditional and modern front-end applications. Learn the JavaScript frameworks which are in demand today, and learn the techniques used by high-tech companies to build modern websites. It's all within reach here.
+        Learn how to make traditional and modern front-end applications. Learn the JavaScript frameworks which are in demand today, and learn the techniques used by high-tech companies to build modern websites. It's all within reach here.
       </p>
       <p>
         <strong>Time to completion:</strong>
         <br />
-                    6 weeks (Focus for week number 7-12)
+        6 weeks (Focus for week number 7-12)
       </p>
     </div>
     <div className="pl-xl-5 col-xl-8">

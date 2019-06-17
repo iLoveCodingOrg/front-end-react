@@ -7,8 +7,8 @@ const AsyncRoutes = AsyncLoader({
   loader: () => import('./components/Routes'),
 })
 
+export default AsyncRoutes
 export {
   reducer,
   actions,
-  AsyncRoutes,
 }

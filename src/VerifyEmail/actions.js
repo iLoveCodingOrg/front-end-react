@@ -21,32 +21,6 @@ export function setLoading(isLoading = true) {
   }
 }
 
-export function callVerifyEmail(uid, token) {
-  const url = `${API_URL}users/confirm?uid=${uid}&token=${token}`
-
-  return (dispatch) => {
-    dispatch(setLoading(true))
-
-    return fetch(url)
-      .then(checkStatus)
-      .then(() => {
-        dispatch(setVerifyEmail(false))
-        return { isSuccess: true }
-      })
-      .catch((error) => {
-        parseJSON(error)
-          .then((error) => {
-            dispatch(setVerifyEmail(error))
-          })
-        return { isSuccess: false }
-      })
-      .then((res) => {
-        dispatch(setLoading(false))
-        return res
-      })
-  }
-}
-
 export function setVerifyEmail(error = false) {
   const action = {
     type: SET_VERIFY_EMAIL,
@@ -73,4 +47,30 @@ export function setVerifyEmail(error = false) {
   }
 
   return action
+}
+
+export function callVerifyEmail(uid, token) {
+  const url = `${API_URL}users/confirm?uid=${uid}&token=${token}`
+
+  return (dispatch) => {
+    dispatch(setLoading(true))
+
+    return fetch(url)
+      .then(checkStatus)
+      .then(() => {
+        dispatch(setVerifyEmail(false))
+        return { isSuccess: true }
+      })
+      .catch((error) => {
+        parseJSON(error)
+          .then((error) => {
+            dispatch(setVerifyEmail(error))
+          })
+        return { isSuccess: false }
+      })
+      .then((res) => {
+        dispatch(setLoading(false))
+        return res
+      })
+  }
 }

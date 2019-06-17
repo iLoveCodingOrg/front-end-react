@@ -8,45 +8,30 @@ import logo from '../_app/images/ilovecoding-logo.svg'
 
 import { actions, selectors } from '../_user'
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props)
-    this.renderLinks = this.renderLinks.bind(this)
-
-    this.renderUserLeft = this.renderUserLeft.bind(this)
-    this.renderGuestLeft = this.renderGuestLeft.bind(this)
-
-    this.renderUserRight = this.renderUserRight.bind(this)
-    this.renderGuestRight = this.renderGuestRight.bind(this)
-
-    this.renderAdminLinks = this.renderAdminLinks.bind(this)
-    this.renderAddButtons = this.renderAddButtons.bind(this)
-    this.renderEditButton = this.renderEditButton.bind(this)
-  }
-
-  getGravatarUrl(emailHash) {
+function Header({
+  isLoggedIn, user, logout, accountLevel, location,
+}) {
+  const getGravatarUrl = (emailHash) => {
     const defaultImageType = 'retro'
     const size = 30
 
     return `https://www.gravatar.com/avatar/${emailHash}.jpg?s=${size}&d=${defaultImageType}`
   }
 
-  renderLinks(links) {
-    return links.map(({
-      label, link, className, style,
-    }, index) => (
-      <Link
-        key={index}
-        style={style}
-        className={`${className}`}
-        to={link}
-      >
-        {label}
-      </Link>
-    ))
-  }
+  const renderLinks = links => links.map(({
+    label, link, className, style,
+  }) => (
+    <Link
+      key={label}
+      style={style}
+      className={`${className}`}
+      to={link}
+    >
+      {label}
+    </Link>
+  ))
 
-  renderUserLeft() {
+  const renderUserLeft = () => {
     const links = [
       {
         label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
@@ -74,10 +59,10 @@ class Header extends React.Component {
       // }
     ]
 
-    return this.renderLinks(links)
+    return renderLinks(links)
   }
 
-  renderGuestLeft() {
+  const renderGuestLeft = () => {
     const links = [
       {
         label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
@@ -105,22 +90,12 @@ class Header extends React.Component {
       // }
     ]
 
-    return this.renderLinks(links)
+    return renderLinks(links)
   }
 
-  renderUserRight() {
-    const { user, logout, accountLevel } = this.props
+  const renderUserRight = () => {
     const { firstName, emailHash } = user
-    const gravatarUrl = this.getGravatarUrl(emailHash)
-
-    return (
-      <div className="d-flex flex-row align-items-center">
-        <img className="rounded-circle mr-2" src={gravatarUrl} />
-        <div>{firstName}</div>
-        {renderLevel(accountLevel)}
-        <button className="border-0 btn-link" onClick={logout}>(Log out)</button>
-      </div>
-    )
+    const gravatarUrl = getGravatarUrl(emailHash)
 
     function renderLevel(level) {
       if (level === 'free') {
@@ -130,9 +105,18 @@ class Header extends React.Component {
       }
       return <span className="badge badge-success badge-pill text-uppercase ml-2">{level}</span>
     }
+
+    return (
+      <div className="d-flex flex-row align-items-center">
+        <img className="rounded-circle mr-2" src={gravatarUrl} alt="User Gravatar" />
+        <div>{firstName}</div>
+        {renderLevel(accountLevel)}
+        <button type="button" className="border-0 btn-link" onClick={logout}>(Log out)</button>
+      </div>
+    )
   }
 
-  renderGuestRight() {
+  const renderGuestRight = () => {
     const links = [
       {
         label: 'Why JavaScript?',
@@ -172,65 +156,57 @@ class Header extends React.Component {
       },
     ]
 
-    return this.renderLinks(links)
+    return renderLinks(links)
   }
 
-  renderEditButton() {
-    const { pathname } = this.props.location
+  const renderEditButton = () => {
+    const { pathname } = location
     const pathParts = pathname.split('/')
-    const length = pathParts.length
+    const { length } = pathParts
     const editLink = `/${pathParts[length - 2]}/${pathParts[length - 1]}/edit`
     return (
       <Link to={editLink} className="btn">Edit</Link>
     )
   }
 
-  renderAddButtons() {
-    return (
-      <div className="d-inline">
-        <Link to="/pages/add" className="btn">+ Page</Link>
-        <Link to="/lessons/add" className="btn">+ Lesson</Link>
-        <Link to="/courses/add" className="btn">+ Course</Link>
-        <Link to="/q/add" className="btn">+ Question</Link>
-        <Link to="/blog/add" className="btn">+ Blog</Link>
-      </div>
-    )
-  }
+  const renderAddButtons = () => (
+    <div className="d-inline">
+      <Link to="/pages/add" className="btn">+ Page</Link>
+      <Link to="/lessons/add" className="btn">+ Lesson</Link>
+      <Link to="/courses/add" className="btn">+ Course</Link>
+      <Link to="/q/add" className="btn">+ Question</Link>
+      <Link to="/blog/add" className="btn">+ Blog</Link>
+    </div>
+  )
 
-  renderAdminLinks() {
-    const { roles } = this.props.user
-    if (isEmpty(roles) || roles[0] !== 'admin') return
+  const renderAdminLinks = () => {
+    const { roles } = user
+    if (isEmpty(roles) || roles[0] !== 'admin') return null
 
     return (
       <div>
-        {this.renderEditButton()}
-        {this.renderAddButtons()}
+        {renderEditButton()}
+        {renderAddButtons()}
       </div>
     )
   }
 
-  render() {
-    return (
-      <nav id="header" className="d-flex flex-column flex-md-row align-items-center navbar-expand p-2 navbar-light">
-        <div className="navbar-brand p-0">
-          <Link to="/" className="img-wrap img-wrap-hover">
-            <img src={logo} alt="iLoveCoding.org Logo" />
-          </Link>
-        </div>
-        <nav className="my-2 my-md-0 ml-md-3 mr-md-auto navbar-nav">
-          {
-                        this.props.isLoggedIn ? this.renderUserLeft() : this.renderGuestLeft()
-                    }
-        </nav>
-        {this.renderAdminLinks()}
-        <nav className="my-2 my-md-0 navbar-nav flex-wrap justify-content-center">
-          {
-                        this.props.isLoggedIn ? this.renderUserRight() : this.renderGuestRight()
-                    }
-        </nav>
+  return (
+    <nav id="header" className="d-flex flex-column flex-md-row align-items-center navbar-expand p-2 navbar-light">
+      <div className="navbar-brand p-0">
+        <Link to="/" className="img-wrap img-wrap-hover">
+          <img src={logo} alt="iLoveCoding.org Logo" />
+        </Link>
+      </div>
+      <nav className="my-2 my-md-0 ml-md-3 mr-md-auto navbar-nav">
+        { isLoggedIn ? renderUserLeft() : renderGuestLeft() }
       </nav>
-    )
-  }
+      {renderAdminLinks()}
+      <nav className="my-2 my-md-0 navbar-nav flex-wrap justify-content-center">
+        { isLoggedIn ? renderUserRight() : renderGuestRight() }
+      </nav>
+    </nav>
+  )
 }
 
 function mapStateToProps(state) {

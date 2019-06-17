@@ -6,7 +6,5 @@ const AsyncCheckout = AsyncLoader({
   loader: () => import('./components/Checkout'),
 })
 
-export {
-  reducer,
-  AsyncCheckout,
-}
+export default AsyncCheckout
+export { reducer }

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import isEmpty from 'lodash/isEmpty'
 
@@ -13,25 +12,27 @@ import CourseNav from './CourseNav'
 import SourceDemo from '../../SourceDemo'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
-import { AsyncComments as Comments } from '../../Comments'
+import Comments from '../../Comments'
 import Cta from '../../Cta'
 import Breadcrumbs from '../../Breadcrumbs'
 
 class CourseLessonView extends React.Component {
-  componentDidUpdate(prevProps) {
-    const { lessonSlug, courseSlug } = this.props.match.params
-    if (
-      lessonSlug !== prevProps.match.params.lessonSlug
-            || courseSlug !== prevProps.match.params.courseSlug
-    ) {
-      this.props.getLesson(lessonSlug)
-      this.props.getCourse(courseSlug)
-    }
+  componentDidMount() {
+    const { getLesson, getCourse, match } = this.props
+    getLesson(match.params.lessonSlug)
+    getCourse(match.params.courseSlug)
   }
 
-  componentDidMount() {
-    this.props.getLesson(this.props.match.params.lessonSlug)
-    this.props.getCourse(this.props.match.params.courseSlug)
+  componentDidUpdate(prevProps) {
+    const { getLesson, getCourse, match } = this.props
+    const { lessonSlug, courseSlug } = match.params
+    if (
+      lessonSlug !== prevProps.match.params.lessonSlug
+      || courseSlug !== prevProps.match.params.courseSlug
+    ) {
+      getLesson(lessonSlug)
+      getCourse(courseSlug)
+    }
   }
 
   getActiveLessonIndex(course, lessonSlug) {
@@ -41,6 +42,14 @@ class CourseLessonView extends React.Component {
   }
 
   render() {
+    const {
+      courseView,
+      callMarkAsComplete,
+      isLoading,
+      error,
+      lessonView,
+      match,
+    } = this.props
     const {
       id,
       title,
@@ -54,90 +63,80 @@ class CourseLessonView extends React.Component {
       sourceUrl,
       demoUrl,
       isComplete,
-    } = this.props.lessonView
+    } = lessonView
 
     const isFree = !(access)
-    const {
-      courseView,
-      callMarkAsComplete,
-      isLoading,
-      error,
-    } = this.props
     const urlToCourse = `/courses/${courseView.slug}`
-    const { lessonSlug } = this.props.match.params
+    const { lessonSlug } = match.params
     const absUrlCourseLesson = `https://ilovecoding.org${urlToCourse}/lessons/${lessonSlug}`
     const activeLessonIndex = this.getActiveLessonIndex(courseView, lessonSlug)
 
     return (
       <div className="container">
-        {
-                    (isLoading) ? <Loading />
-                      : (error) ? <ErrorBox />
-                        : (
-                          <div>
-                            <Helmet>
-                              <title>
-                                {title}
-                                {' '}
-- iLoveCoding
-                              </title>
-                              <meta name="description" content={subTitle} />
-                            </Helmet>
-                            <Breadcrumbs nodes={[
-                              {
-                                label: courseView.title,
-                                link: urlToCourse,
-                              },
-                              {
-                                label: title,
-                              },
-                            ]}
-                            />
-                            <ViewHeader
-                              title={title}
-                              subTitle={subTitle}
-                              isFree={isFree}
-                              duration={duration}
-                              level={level}
-                              isComplete={isComplete}
-                              of="lesson"
-                            />
-                            <main>
-                              <RedirectAlert slug={courseView.slug} />
-                              <VideoWrap
-                                callMarkAsComplete={() => callMarkAsComplete(id)}
-                                title={title}
-                                thumbnail={thumbnail}
-                                videoSource={videoSource}
-                              />
-                              <SourceDemo
-                                source={sourceUrl}
-                                demo={demoUrl}
-                              />
-                              <CourseNav
-                                activeLessonIndex={activeLessonIndex}
-                                course={courseView}
-                              />
-                              {
-                                !bodyContent ? null
-                                  : (
-                                    <div
-                                      id="html-content"
-                                      className="col-12 col-lg-9 border-top pt-4 mx-auto"
-                                      dangerouslySetInnerHTML={{ __html: bodyContent }}
-                                    />
-                                  )
-                            }
-                              <Cta />
-                              <Comments
-                                id={id}
-                                title={title}
-                                url={absUrlCourseLesson}
-                              />
-                            </main>
-                          </div>
-                        )
-                }
+        { isLoading && <Loading /> }
+        { !isLoading && error && <ErrorBox /> }
+        { !isLoading && !error && (
+        <div>
+          <Helmet>
+            <title>
+              {`${title} - iLoveCoding`}
+            </title>
+            <meta name="description" content={subTitle} />
+          </Helmet>
+          <Breadcrumbs nodes={[
+            {
+              label: courseView.title,
+              link: urlToCourse,
+            },
+            {
+              label: title,
+            },
+          ]}
+          />
+          <ViewHeader
+            title={title}
+            subTitle={subTitle}
+            isFree={isFree}
+            duration={duration}
+            level={level}
+            isComplete={isComplete}
+            of="lesson"
+          />
+          <main>
+            <RedirectAlert slug={courseView.slug} />
+            <VideoWrap
+              callMarkAsComplete={() => callMarkAsComplete(id)}
+              title={title}
+              thumbnail={thumbnail}
+              videoSource={videoSource}
+            />
+            <SourceDemo
+              source={sourceUrl}
+              demo={demoUrl}
+            />
+            <CourseNav
+              activeLessonIndex={activeLessonIndex}
+              course={courseView}
+            />
+            {
+                bodyContent && (
+                <div
+                  id="html-content"
+                  className="col-12 col-lg-9 border-top pt-4 mx-auto"
+                  dangerouslySetInnerHTML={{ __html: bodyContent }}
+                />
+                )
+            }
+            <Cta />
+            <Comments
+              id={id}
+              title={title}
+              url={absUrlCourseLesson}
+            />
+          </main>
+        </div>
+        )
+        }
       </div>
     )
   }

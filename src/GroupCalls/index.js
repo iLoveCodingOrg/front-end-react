@@ -4,6 +4,4 @@ const AsyncGroupCalls = AsyncLoader({
   loader: () => import('./components/GroupCalls'),
 })
 
-export {
-  AsyncGroupCalls,
-}
+export default AsyncGroupCalls

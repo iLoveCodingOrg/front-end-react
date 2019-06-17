@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function ({
+export default function PrintTraining({
   data,
   maxWidth = '261px',
   title = 'Training List',

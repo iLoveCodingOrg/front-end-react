@@ -1,61 +1,61 @@
 import React from 'react'
 
-export default function ({ price, billingDuration, billingCycles }) {
+export default function Due({ price, billingDuration, billingCycles }) {
+  const getBillingDurationText = () => {
+    switch (billingDuration) {
+      case 'month':
+        return '/month'
+      case 'year':
+        return '/year'
+      case '6-month':
+        return '/six-month'
+      default:
+        return ''
+    }
+  }
+
+  const getBillingCyclesText = () => {
+    if (billingCycles > 1) {
+      return ` for ${billingCycles} ${billingDuration}s`
+    }
+    return null
+  }
+
   return (
     <div>
       {/* // Payment plans and limited durations and all */}
-      {billingCycles > 1 ? (
+      {billingCycles > 1 && (
         <div className="card p-3 d-flex flex-row justify-content-between mb-3">
           <div className="h5 mb-0">Payment Terms</div>
           <div className="h5 mb-0">
-                        $
+            $
             {price}
-            {getBillingDurationText(billingDuration)}
-            {getBillingCyclesText(billingCycles, billingDuration)}
+            {getBillingDurationText()}
+            {getBillingCyclesText()}
           </div>
         </div>
-      ) : null
-            }
+      )
+      }
       {/* // Simple Subscriptions */}
       <div className="card p-3 d-flex flex-row justify-content-between mb-3">
         <div className="h4 mb-0">Due Today</div>
         <div className="h4 text-success mb-0 text-right">
-                    $
+          $
           {price}
-          {getBillingDurationText(billingDuration)}
+          {getBillingDurationText()}
 
           {/* // 6-month subscription only */}
-          {(billingDuration === '6-month') ? (
+          {(billingDuration === '6-month') && (
             <div className="small">
-                            auto-renews every
+              auto-renews every
               {' '}
               {billingDuration}
-s
+              s
             </div>
-          ) : null
-                    }
+          )
+          }
         </div>
       </div>
     </div>
   )
-}
-
-function getBillingDurationText(billingDuration) {
-  switch (billingDuration) {
-    case 'month':
-      return '/month'
-    case 'year':
-      return '/year'
-    case '6-month':
-      return '/six-month'
-    default:
-      return ''
-  }
-}
-
-function getBillingCyclesText(billingCycles, billingDuration) {
-  if (billingCycles > 1) {
-    return ` for ${billingCycles} ${billingDuration}s`
-  }
-  return null
 }

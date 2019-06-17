@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PrintTraining } from '..'
+import PrintTraining from './PrintTraining'
 
 const courses = [
   {
@@ -48,17 +48,17 @@ export default () => (
     <div className="col-xl-4">
       <h2>
         <small className="d-block text-muted">
-                        Module 3:
+          Module 3:
         </small>
-                    Back-End Development
+        Back-End Development
       </h2>
       <p className="lead text-muted">
-                    Learn how to make web application back-ends. Build Web APIs, security and authentication (i.e. Login Feature) and connect your app with the database
+        Learn how to make web application back-ends. Build Web APIs, security and authentication (i.e. Login Feature) and connect your app with the database
       </p>
       <p>
         <strong>Time to completion:</strong>
         <br />
-                    4 weeks (Focus for week number 13-16)
+        4 weeks (Focus for week number 13-16)
       </p>
     </div>
     <div className="pl-xl-5 col-xl-8">

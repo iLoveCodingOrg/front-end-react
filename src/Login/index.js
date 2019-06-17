@@ -4,6 +4,4 @@ const AsyncLogin = AsyncLoader({
   loader: () => import('./components/Login'),
 })
 
-export {
-  AsyncLogin,
-}
+export default AsyncLogin

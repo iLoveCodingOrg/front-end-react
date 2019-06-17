@@ -45,7 +45,7 @@ export default function List({
       { isLoading && <Loading /> }
       { !isLoading && error && <ErrorBox /> }
       { !isLoading && !error && (
-        <div>
+        <>
           <Helmet title={getTitle()} />
           <ListHeaderComponent />
           <div className="col-12 col-lg-9 border-top pt-4 mx-auto">
@@ -57,7 +57,7 @@ export default function List({
               />
             ))}
           </div>
-        </div>
+        </>
       )}
     </div>
   )

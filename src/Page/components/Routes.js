@@ -7,7 +7,7 @@ import Add from './Add'
 import View from './View'
 import Edit from './Edit'
 import List from './List'
-import { AsyncNotFound as NotFound } from '..'
+import NotFound from './AsyncNotFound'
 import isPrivate from '../../isPrivate'
 
 export default function Routes() {

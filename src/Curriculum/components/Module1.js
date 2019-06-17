@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PrintTraining } from '..'
+import PrintTraining from './PrintTraining'
 
 const courses = [
   {
@@ -58,17 +58,17 @@ export default () => (
     <div className="col-xl-4">
       <h2>
         <small className="d-block text-muted">
-                        Module 1:
+          Module 1:
         </small>
-                    Fundamentals
+        Fundamentals
       </h2>
       <p className="lead text-muted">
-                    Learn the fundamentals of the HTML, CSS and JavaScript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
+        Learn the fundamentals of the HTML, CSS and JavaScript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
       </p>
       <p>
         <strong>Time to completion:</strong>
         <br />
-                    6 weeks (Focus for the first 6 weeks)
+        6 weeks (Focus for the first 6 weeks)
       </p>
     </div>
     <div className="pl-xl-5 col-xl-8">

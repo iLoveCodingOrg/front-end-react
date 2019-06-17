@@ -19,25 +19,16 @@ const data = [
   },
 ]
 
-class Testimonials extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <section className="d-flex justify-content-center">
-        <div className="">
-          <PrintReviews
-            containerClasses="flex-column"
-            itemClasses="mb-3"
-            data={data}
-          />
-        </div>
-      </section>
-    )
-  }
+export default function Testimonials() {
+  return (
+    <section className="d-flex justify-content-center">
+      <div className="">
+        <PrintReviews
+          containerClasses="flex-column"
+          itemClasses="mb-3"
+          data={data}
+        />
+      </div>
+    </section>
+  )
 }
-
-
-export default Testimonials

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PrintTraining } from '..'
+import PrintTraining from './PrintTraining'
 
 const courses = [
   {
@@ -23,17 +23,17 @@ export default () => (
     <div className="col-xl-4">
       <h2>
         <small className="d-block text-muted">
-                        Module 4:
+          Module 4:
         </small>
-                    Mobile Development
+        Mobile Development
       </h2>
       <p className="lead text-muted">
-                    Learn how to build Mobile Applications for iPhone and Android with JavaScript. Use the same technology used to build Instagram, Facebook, Airbnb and Walmart mobile apps.
+        Learn how to build Mobile Applications for iPhone and Android with JavaScript. Use the same technology used to build Instagram, Facebook, Airbnb and Walmart mobile apps.
       </p>
       <p>
         <strong>Time to completion:</strong>
         <br />
-                    2 weeks (Focus for week number 17 and 18)
+        2 weeks (Focus for week number 17 and 18)
       </p>
     </div>
     <div className="pl-xl-5 col-xl-8">

@@ -4,6 +4,4 @@ const AsyncOfficeHours = AsyncLoader({
   loader: () => import('./components/OfficeHours'),
 })
 
-export {
-  AsyncOfficeHours,
-}
+export default AsyncOfficeHours

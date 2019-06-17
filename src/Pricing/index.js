@@ -4,6 +4,4 @@ const AsyncPricing = AsyncLoader({
   loader: () => import('./components/PricingPageHolder'),
 })
 
-export {
-  AsyncPricing,
-}
+export default AsyncPricing

@@ -21,7 +21,7 @@ const Cta = ({
         <br />
         <Link to="/signup" className="btn btn-lg btn-primary my-2">Get Started Free</Link>
         <br />
-                Already have an account,
+          Already have an account,
         {' '}
         <Link to="/login" className="btn-link">Please Login</Link>
       </div>
@@ -31,7 +31,7 @@ const Cta = ({
   if (isLoggedIn && !isPaid) {
     return (
       <div className="alert alert-warning lead text-center my-4">
-                Unlock the complete video training + mentor support with iLoveCoding Pro / Premium membership
+        Unlock the complete video training + mentor support with iLoveCoding Pro / Premium membership
         <br />
         <Link to="/pricing" className="btn btn-lg btn-success mt-2">Upgrade Now</Link>
       </div>
@@ -43,12 +43,12 @@ const Cta = ({
       <div className="alert alert-warning lead text-center my-4">
         <Link to="/pricing" className="btn btn-lg btn-success my-2">Upgrade to iLoveCoding Premium</Link>
         {' '}
-to unlock live weekly group calls with your mentor.
+        to unlock live weekly group calls with your mentor.
       </div>
     )
   }
 
-  return (<span />)
+  return (<></>)
 }
 
 Cta.propType = {

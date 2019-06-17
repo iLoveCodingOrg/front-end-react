@@ -9,7 +9,7 @@ import {
 } from '../_app/utils'
 import { logout } from '../_user/actions'
 
-export function callChangePassword(currentPassword, newPassword) {
+export default function callChangePassword(currentPassword, newPassword) {
   const url = `${API_URL}users/change-password`
 
   return dispatch => fetch(url, {
@@ -33,7 +33,7 @@ export function callChangePassword(currentPassword, newPassword) {
         return dispatch(logout())
       }
       return {
-        message: error.message || 'Something went wrong, could not change the password',
+        message: json.error.message || 'Something went wrong, could not change the password',
       }
     })
     .then((json) => {
@@ -41,7 +41,7 @@ export function callChangePassword(currentPassword, newPassword) {
         return dispatch(logout())
       }
       return {
-        message: error.message || 'Something went wrong, could not change the password',
+        message: json.error.message || 'Something went wrong, could not change the password',
       }
     })
     .catch(error => parseJSON(error)

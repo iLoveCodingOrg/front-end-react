@@ -9,34 +9,32 @@ import ErrorBox from '../../ErrorBox'
 import { getBraintreeClientToken } from '../actions'
 
 class CreditCard extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     this.props.getBraintreeClientToken()
   }
 
   render() {
+    const {
+      isLoading, error, clientToken, setBraintreeInstance,
+    } = this.props
     return (
       <div>
         <h4 className="mb-3">Payment Information</h4>
-        {
-                    (this.props.isLoading) ? <Loading />
-                      : (this.props.error) ? <ErrorBox />
-                        : (
-                          <DropIn
-                            options={{
-                              authorization: this.props.clientToken,
-                              paymentOptionPriority: ['card', 'paypal'],
-                              paypal: {
-                                flow: 'vault',
-                              },
-                            }}
-                            onInstance={instance => (this.props.setBraintreeInstance(instance))}
-                          />
-                        )
-                }
+        { isLoading && <Loading /> }
+        { !isLoading && error && <ErrorBox /> }
+        { !isLoading && !error && (
+          <DropIn
+            options={{
+              authorization: clientToken,
+              paymentOptionPriority: ['card', 'paypal'],
+              paypal: {
+                flow: 'vault',
+              },
+            }}
+            onInstance={instance => (setBraintreeInstance(instance))}
+          />
+        )
+        }
       </div>
     )
   }

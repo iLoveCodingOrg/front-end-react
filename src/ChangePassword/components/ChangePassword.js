@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import Breadcrumbs from '../../Breadcrumbs'
 
-import { callChangePassword } from '../actions'
+import callChangePassword from '../actions'
 
 class ChangePassword extends React.Component {
   constructor(props) {
@@ -80,7 +80,7 @@ class ChangePassword extends React.Component {
     if (!this.state.isPasswordMatch) {
       return (
         <div className="invalid-feedback" style={{ display: 'block' }}>
-                    Password does not match.
+          Password does not match.
         </div>
       )
     }
@@ -102,11 +102,7 @@ class ChangePassword extends React.Component {
     const title = 'Change Password'
     return (
       <div className="d-flex flex-column">
-        <Helmet>
-          {title}
-          {' '}
-- iLoveCoding
-        </Helmet>
+        <Helmet title={`${title} - iLoveCoding`} />
         <section className="
                     align-self-center
                     container
@@ -160,7 +156,7 @@ class ChangePassword extends React.Component {
               </div>
               <div className="form-group row">
                 <label className="col-md-3" htmlFor="confirmPassword">
-                                    Confirm New Password
+                  Confirm New Password
                 </label>
                 <div className="col-md-9">
                   <input
