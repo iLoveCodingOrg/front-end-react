@@ -19,9 +19,6 @@ export default function () {
         <p>
           <strong>All plans are backed by a 7-day full refund policy</strong>
           . Try iLoveCoding, and if for any reason you are not satisfied, email us and request a refund within the first 7-days of your subscription. We only want to keep your money if you think we have earned it.
-          <br />
-          <br />
-          If you prepaid for a year or 6-months, we'll refund any unused months.
         </p>
 
         <h3 className="mt-5">Can I cancel anytime?</h3>
@@ -33,9 +30,6 @@ export default function () {
           <br />
           <br />
           If you cancel after the first 7-days, you'll continue to have access for the current month, and you will not be billed any further.
-          <br />
-          <br />
-          If you prepaid for a year or 6-months, we'll refund any unused months.
         </p>
 
         <h3 className="mt-5">Can I get a trial or see sample training?</h3>

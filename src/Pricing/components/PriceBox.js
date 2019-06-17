@@ -49,14 +49,12 @@ class PriceBox extends React.Component {
       >
         <div className="card-body align-self-center p-4">
           {
-                        isPopular
-                          ? (
-                            <h5 className="position-absolute" style={{ top: '5px', right: '5px' }}>
-                              <span className="badge badge-warning">Recommended</span>
-                            </h5>
-                          )
-                          : null
-                    }
+            isPopular && (
+              <h5 className="position-absolute" style={{ top: '5px', right: '5px' }}>
+                <span className="badge badge-warning">Recommended</span>
+              </h5>
+            )
+          }
           <div className="text-center">
             <div className="h4">
               <span className="px-3 badge badge-pill badge-dark border">{name}</span>
@@ -76,8 +74,8 @@ class PriceBox extends React.Component {
 
           {this.renderCTA()}
 
-          { planType === 'pro' ? <ProDetails /> : null}
-          { planType === 'premium' ? <PremiumDetails /> : null}
+          { planType === 'pro' && <ProDetails />}
+          { planType === 'premium' && <PremiumDetails />}
 
           {this.renderCTA()}
 

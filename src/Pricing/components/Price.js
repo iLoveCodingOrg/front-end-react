@@ -6,47 +6,53 @@ import PriceBox from './PriceBox'
 import Switch from './Switch'
 
 const dataOriginal = {
-  pro: {
-    monthly: {
-      planType: 'pro',
-      name: 'PRO',
-      desc: <span>Best suited for self-learners who need some support</span>,
-      price: 37,
-      terms: 'Paid Monthly',
-      // terms2: 'Complete training to job-ready',
-      link: '/checkout/ilc-pro-37m',
-    },
-    '6-month': {
-      planType: 'pro',
-      name: 'PRO',
-      desc: <span>Best suited for self-learners who need some support</span>,
-      price: 25,
-      terms: 'Billed $150 Every 6 Months',
-      // terms2: 'Complete training to job-ready',
-      link: '/checkout/ilc-pro-150sixm',
-      isPopular: false,
-    },
-  },
+  // pro: {
+  //   monthly: {
+  //     planType: 'pro',
+  //     name: 'PRO',
+  //     desc: <span>Best suited for self-learners who need some support</span>,
+  //     price: 37,
+  //     terms: 'Paid Monthly',
+  //     // terms2: 'Complete training to job-ready',
+  //     link: '/checkout/ilc-pro-37m',
+  //   },
+  //   '6-month': {
+  //     planType: 'pro',
+  //     name: 'PRO',
+  //     desc: <span>Best suited for self-learners who need some support</span>,
+  //     price: 25,
+  //     terms: 'Billed $150 Every 6 Months',
+  //     // terms2: 'Complete training to job-ready',
+  //     link: '/checkout/ilc-pro-150sixm',
+  //     isPopular: false,
+  //   },
+  // },
   premium: {
     monthly: {
       planType: 'premium',
       name: 'PREMIUM',
-      desc: <span>
-Best suited for learners who need more hands-on-support
-        <span className="text-success">(Weekly mentor group calls)</span>
-      </span>,
-      price: 99,
+      desc: (
+        <span>
+          Best suited for learners who need more hands-on-support
+          {' '}
+          <span className="text-success">(Weekly mentor group calls)</span>
+        </span>
+      ),
+      price: 199,
       terms: 'Paid Monthly',
       // terms2: 'Complete training + weekly group calls',
-      link: '/checkout/ilc-premium-99m',
+      link: '/checkout/ilc-premium-199m',
     },
     '6-month': {
       planType: 'premium',
       name: 'PREMIUM',
-      desc: <span>
-Best suited for learners who need more hands-on-support
-        <span className="text-success">(Weekly mentor group calls)</span>
-      </span>,
+      desc: (
+        <span>
+          Best suited for learners who need more hands-on-support
+          {' '}
+          <span className="text-success">(Weekly mentor group calls)</span>
+        </span>
+      ),
       price: 67,
       terms: 'Billed $400 Every 6 Months',
       // terms2: 'Complete training + weekly group calls',
@@ -142,14 +148,14 @@ class Price extends React.Component {
                         </h5>
                     </div> */}
           <div className="d-flex flex-wrap justify-content-center">
-            {this.renderPriceBox(data.pro[selected])}
+            {/* {this.renderPriceBox(data.pro[selected])} */}
             {this.renderPriceBox(data.premium[selected])}
           </div>
           <div className="d-flex flex-wrap mt-4">
             <p>
-                            ⚡️ Cancel Anytime.
-                            &nbsp; &nbsp;
-                            🛡️ 7-Day Full Refund Policy.
+              ⚡️ Cancel Anytime.
+              &nbsp; &nbsp;
+              🛡️ 7-Day Full Refund Policy.
             </p>
           </div>
         </div>

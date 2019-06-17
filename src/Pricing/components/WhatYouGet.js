@@ -16,7 +16,7 @@ export default function () {
         <div className="col-md-7">
           <h2>What do you get?</h2>
           <p className="lead">
-                    With any iLoveCoding paid membership you get access to Complete Training, and Mentor-Moderated Private Student Community
+            With any iLoveCoding paid membership you get access to Complete Training, and Mentor-Moderated Private Student Community
           </p>
         </div>
       </div>
@@ -29,44 +29,44 @@ export default function () {
             </div>
             <div className="col-lg-8 pl-lg-5">
               <h4>
-(A) Complete Step-by-Step Training (
+                (A) Complete Step-by-Step Training (
                 <Link to="curriculum">See Full Curriculum</Link>
-)
+                )
               </h4>
               <p>
-                            40+ hours of video training organized such that it is easy to make progress.
+                40+ hours of video training organized such that it is easy to make progress.
               </p>
               <CheckMark />
               {' '}
-5 Modules (11+ Courses, 20+ practice projects)
+              5 Modules (11+ Courses, 20+ practice projects)
               <br />
               <CheckMark />
               {' '}
-Module 1: Fundamentals of Programming and Web
+              Module 1: Fundamentals of Programming and Web
               <br />
               <CheckMark />
               {' '}
-Module 2: Modern Front-End Development
+              Module 2: Modern Front-End Development
               <br />
               <CheckMark />
               {' '}
-Module 3: Back-end Development and Databases
+              Module 3: Back-end Development and Databases
               <br />
               <CheckMark />
               {' '}
-Module 4: Mobile Development (iOS and Android)
+              Module 4: Mobile Development (iOS and Android)
               <br />
               <CheckMark />
               {' '}
-Module 5: Electives (Git, Working with API, etc.)
+              Module 5: Electives (Git, Working with API, etc.)
               <br />
               <CheckMark />
               {' '}
-Downloadable Cheat Sheets
+              Downloadable Cheat Sheets
               <br />
               <CheckMark />
               {' '}
-Access to Homework
+              Access to Homework
               <br />
               <Link to="curriculum">See Full Curriculum</Link>
             </div>
@@ -79,18 +79,17 @@ Access to Homework
             <div className="col-lg-8 pl-lg-5">
               <h4>(B) Mentor-Moderated Student Community</h4>
               <p>Never get stuck again! Get answers to your specific questions from your peers and mentor in the member-only slack channel.</p>
-
               <CheckMark />
               {' '}
-Get solution to your problem
+              Get solution to your problem
               <br />
               <CheckMark />
               {' '}
-Learn from your peers
+              Learn from your peers
               <br />
               <CheckMark />
               {' '}
-Get career, code, and project help
+              Get career, code, and project help
             </div>
           </div>
 
@@ -100,42 +99,42 @@ Get career, code, and project help
             </div>
             <div className="col-lg-8 pl-lg-5">
               <h4>
-(C) Weekly Group Calls with Mentor
+                (C) Weekly Group Calls with Mentor
+                {' '}
                 <span className="badge badge-success">Premium</span>
               </h4>
               <p>Every week you join a live group call with your mentor.</p>
 
               <CheckMark />
               {' '}
-Work on your code problems live
+              Work on your code problems live
               <br />
               <CheckMark />
               {' '}
-See how your mentor troubleshoots problems
+              See how your mentor troubleshoots problems
               <br />
               <CheckMark />
               {' '}
-Share your screen with your mentor
+              Share your screen with your mentor
               <br />
               <CheckMark />
               {' '}
-Live code reviews
+              Live code reviews
               <br />
               <CheckMark />
               {' '}
-Live career guidance
+              Live career guidance
               <br />
               <CheckMark />
               {' '}
-Live resume, code and portfolio feedback
+              Live resume, code and portfolio feedback
               <br />
 
               <br />
-
               <p>
                 <strong>Important:</strong>
                 {' '}
-Weekly Group Calls are for iLoveCoding Premium members only. iLoveCoding Pro members can always get help from mentor in the Mentor-Moderated Private Student Community.
+                Weekly Group Calls are for iLoveCoding Premium members only. iLoveCoding Pro members can always get help from mentor in the Mentor-Moderated Private Student Community.
               </p>
             </div>
           </div>

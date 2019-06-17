@@ -22,7 +22,7 @@ function Pricing() {
         <title>Pricing - iLoveCoding</title>
       </Helmet>
 
-      {/* <p className="alert alert-warning lead text-center">
+      <p className="alert alert-warning lead text-center">
         <strong>Let’s be honest </strong>
         - Coding bootcamps are charging an arm and a leg - We give you
         {' '}
@@ -31,24 +31,26 @@ function Pricing() {
         <Link to="/q/how-better" className="u">better training</Link>
         {' '}
         for 2% of the cost.
-      </p> */}
+      </p>
 
-      <p className="alert alert-warning lead text-center">
+      {/* <p className="alert alert-warning lead text-center">
         <strong>Join Today and Lock in Your Low Price for Life!</strong>
         {' '}
         - We are doubling our membership price this week, but if you join today, your membership price will remain the same. Any new content we add to iLoveCoding
+        {' '}
         <u>will be made available to you for no additional cost</u>
+        {' '}
         . As long as you remain a member, you will always have your current price.
-      </p>
+      </p> */}
       <div className="py-5"><Header /></div>
       <div id="payment" className="py-5 bg-gray-200">
-        <div className="text-center mb-3">
+        {/* <div className="text-center mb-3">
           <span className="h2">
             Current Price:
           </span>
           <br />
           (These prices increase at the end of this week)
-        </div>
+        </div> */}
         <Price />
       </div>
       <div className="pt-5"><Testimonials itemNum="1" /></div>

@@ -12,28 +12,27 @@ export default function () {
         <div className="col-md-7">
           <h2>How is iLoveCoding Different?</h2>
           <p className="lead">
-                    iLoveCoding gives more value for your money than anyone else we know. See the value comparison chart below:
+            iLoveCoding gives more value for your money than anyone else we know. See the value comparison chart below:
           </p>
         </div>
       </div>
-
       <div>
         <table className="table text-center">
           <thead className="bg-gray-200 bold strong">
             <tr>
               <th width="20%" className="" />
               <th width="27%" className="h5 align-middle border-right border-left border-primary alert-primary">
-                            iLoveCoding
-                <br />
-                <small>(Pro - Premium)</small>
+                iLoveCoding Premium
+                {/* <br />
+                <small>Premium)</small> */}
               </th>
               <th width="27%" className="h5 align-middle">
-                            Expensive Bootcamps
+                Expensive Bootcamps
                 <br />
                 <small>(Thinkful, General Assembly, Hack Reactor, etc.)</small>
               </th>
               <th width="27%" className="h5 align-middle">
-                            Cheap Courses
+                Cheap Courses
                 <br />
                 <small>(Udemy, Codecademy, Lynda, etc.)</small>
               </th>
@@ -42,7 +41,7 @@ export default function () {
           <tbody className="bg-white">
             <tr>
               <td className="text-right"><strong>Cost</strong></td>
-              <td className="border-right border-left border-primary border-top-0">$37/mo - $99/mo</td>
+              <td className="border-right border-left border-primary border-top-0">$199/mo</td>
               <td>$9500 - $19000</td>
               <td>$12-$1000</td>
             </tr>
@@ -51,17 +50,17 @@ export default function () {
               <td className="border-right border-left border-primary border-top-0">
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
                 {' '}
-No, you'll have to buy multiple courses to get the full information
+                No, you'll have to buy multiple courses to get the full information
               </td>
             </tr>
             <tr>
@@ -69,38 +68,38 @@ No, you'll have to buy multiple courses to get the full information
               <td className="border-right border-left border-primary border-top-0">
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
-                            ❓ Maybe
+                ❓ Maybe
                 {' '}
                 <br />
-                            Some bootcamps focus on the wrong technologies like Ruby, Rails, Python and the like, and only lightly touch the important topics.
+                Some bootcamps focus on the wrong technologies like Ruby, Rails, Python and the like, and only lightly touch the important topics.
               </td>
               <td>
-❓ Maybe
+                ❓ Maybe
                 <br />
                 {' '}
-Students have to find the right material by themselves constantly.
+                Students have to find the right material by themselves constantly.
               </td>
             </tr>
             <tr className="bg-light">
               <td className="text-right"><strong>Live mentor support</strong></td>
               <td className="border-right border-left border-primary border-top-0">
                 <CheckMark />
-Yes
+                Yes
                 <br />
-                        (Premium: Live Video Call + Slack Chat; Pro: Slack Chat only)
+                (Premium: Live Video Call + Slack Chat; Pro: Slack Chat only)
               </td>
               <td>
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
                 {' '}
-No
+                No
               </td>
             </tr>
             <tr>
@@ -108,17 +107,17 @@ No
               <td className="border-right border-left border-primary border-top-0">
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
                 {' '}
-No
+                No
               </td>
               <td>
-❓ Maybe
+                ❓ Maybe
                 <br />
-(depends on the course author)
+                (depends on the course author)
               </td>
             </tr>
             <tr className="bg-light">
@@ -126,17 +125,17 @@ No
               <td className="border-right border-left border-primary border-top-0">
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
                 {' '}
-No
+                No
               </td>
               <td>
                 <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
                 {' '}
-No
+                No
               </td>
             </tr>
             <tr>
@@ -144,12 +143,12 @@ No
               <td className="border-right border-left border-primary border-top-0">
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>❓ Maybe</td>
             </tr>
@@ -158,17 +157,17 @@ Yes
               <td className="border-right border-left border-primary border-top-0">
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
                 {' '}
-No
+                No
               </td>
             </tr>
             <tr>
@@ -176,17 +175,17 @@ No
               <td className="border-right border-left border-primary border-top-0">
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <CheckMark />
                 {' '}
-Yes
+                Yes
               </td>
               <td>
                 <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
                 {' '}
-No
+                No
               </td>
             </tr>
             <tr className="bg-light">
@@ -194,23 +193,23 @@ No
               <td className="text-left border-right border-left border-primary border-top-0 border-bottom">
                 <CheckMark />
                 {' '}
-Simple Explanations
+                Simple Explanations
                 <br />
                 <CheckMark />
                 {' '}
-Focus on fundamentals
+                Focus on fundamentals
                 <br />
                 <CheckMark />
                 {' '}
-Real-world examples
+                Real-world examples
                 <br />
                 <CheckMark />
                 {' '}
-Practice Projects
+                Practice Projects
                 <br />
                 <CheckMark />
                 {' '}
-Practical advice vs Generic advice
+                Practical advice vs generic advice
               </td>
               <td>❓ Maybe</td>
               <td>❓ Maybe</td>

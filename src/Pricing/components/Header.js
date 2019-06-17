@@ -6,7 +6,7 @@ function Header() {
       <div className="container">
         <div className="text-center">
           <h1>
-            Complete Video Training &amp; Mentor Support.
+            Complete Video Training + Live Mentor Support.
           </h1>
           <p className="lead">
             Become a

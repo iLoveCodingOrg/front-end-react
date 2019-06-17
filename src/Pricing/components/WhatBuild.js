@@ -12,96 +12,81 @@ export default function () {
         <div className="col-md-6">
           <h2>What will you build?</h2>
           <p className="lead">
-                    With iLoveCoding your focus will be to apply your knowledge; For that we will build a bunch of projects so you learn and build your portfolio in the process.
+            With iLoveCoding your focus will be to apply your knowledge; For that we will build a bunch of projects so you learn and build your portfolio in the process.
           </p>
           <div className="d-flex flex-wrap justify-space-around">
-            <div className="mx-2">
+            <div className="">
               <CheckMark />
               {' '}
-Blog Design
-            </div>
-            <div className="mx-2">
+              Blog Design
+              <br />
               <CheckMark />
               {' '}
-Simple Todo List App
-            </div>
-            <div className="mx-2">
+              Simple Todo List App
+              <br />
               <CheckMark />
               {' '}
-Snake game
-            </div>
-            <div className="mx-2">
+              Snake game
+              <br />
               <CheckMark />
               {' '}
-Calculator App
-            </div>
-            <div className="mx-2">
+              Calculator App
+              <br />
               <CheckMark />
               {' '}
-Photo Slider
-            </div>
-            <div className="mx-2">
+              Photo Slider
+              <br />
               <CheckMark />
               {' '}
-Stop Watch
-            </div>
-            <div className="mx-2">
+              Stop Watch
+              <br />
               <CheckMark />
               {' '}
-Accordion Feature
-            </div>
-            <div className="mx-2">
+              Accordion Feature
+              <br />
               <CheckMark />
               {' '}
-Tab Feature
-            </div>
-            <div className="mx-2">
+              Tab Feature
+              <br />
               <CheckMark />
               {' '}
-Location Finder
+              Location Finder
               {' '}
               <small>(Powered by Google Maps)</small>
-            </div>
-            <div className="mx-2">
+              <br />
               <CheckMark />
               {' '}
-Song Search App
+              Song Search App
               {' '}
               <small>(Powered by iTunes API)</small>
-            </div>
-            <div className="mx-2">
+              <br />
               <CheckMark />
               {' '}
-Book Search App
+              Book Search App
               {' '}
               <small>(Powered by Google Books)</small>
-            </div>
-            <div className="mx-2">
+              <br />
               <CheckMark />
               {' '}
-Note Taking API
+              Note Taking API
               {' '}
               <small>(with password protection)</small>
-            </div>
-            <div className="mx-2">
+              <br />
               <CheckMark />
               {' '}
-Timer App
-            </div>
-            <div className="mx-2">
+              Timer App
+              <br />
               <CheckMark />
               {' '}
-Web Scraper
-            </div>
-            <div className="mx-2">
+              Web Scraper
+              <br />
               <CheckMark />
               {' '}
-Cryptocurrency Price Checker
-            </div>
-            <div className="mx-2">
+              Cryptocurrency Price Checker
+              <br />
               <CheckMark />
               {' '}
-Scroll animation, and more
+              Scroll animation, and more
             </div>
           </div>
         </div>

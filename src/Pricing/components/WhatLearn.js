@@ -12,60 +12,60 @@ export default function () {
         <div className="col-md-6">
           <h2>What will you learn?</h2>
           <p className="lead">
-                    You will learn all the technical skills so you can call yourself a competent Front-End and Full-Stack JavaScript developer - who is job-ready and can build any kind of app.
+            You will learn all the technical skills so you can call yourself a competent Front-End and Full-Stack JavaScript developer - who is job-ready and can build any kind of app.
           </p>
           <div className="">
             <CheckMark />
             {' '}
-Build simple and advanced websites
+            Build simple and advanced websites
             <br />
             <CheckMark />
             {' '}
-Build responsive-design websites
+            Build responsive-design websites
             <br />
             <CheckMark />
             {' '}
-Build Modern Front-End Applications
+            Build Modern Front-End Applications
             <br />
             <CheckMark />
             {' '}
-Think like a developer
+            Think like a developer
             <br />
             <CheckMark />
             {' '}
-Problem-solving
+            Problem-solving
             <br />
             <CheckMark />
             {' '}
-Backend Development
+            Backend Development
             <br />
             <CheckMark />
             {' '}
-Working with databases
+            Working with databases
             <br />
             <CheckMark />
             {' '}
-Collaborate code with Git
+            Collaborate code with Git
             <br />
             <CheckMark />
             {' '}
-Breaking features down into functions
+            Breaking features down into functions
             <br />
             <CheckMark />
             {' '}
-Writing reusable code
+            Writing reusable code
             <br />
             <CheckMark />
             {' '}
-Build mobile apps
+            Build mobile apps
             <br />
             <CheckMark />
             {' '}
-Build password-protected websites
+            Build password-protected websites
             <br />
             <CheckMark />
             {' '}
-Working with third-party APIs (Twitter, Facebook, etc.)
+            Working with third-party APIs (Twitter, Facebook, etc.)
             <br />
           </div>
         </div>
