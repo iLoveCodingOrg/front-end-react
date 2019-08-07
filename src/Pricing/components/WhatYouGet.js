@@ -131,11 +131,11 @@ export default function () {
               <br />
 
               <br />
-              <p>
+              {/* <p>
                 <strong>Important:</strong>
                 {' '}
                 Weekly Group Calls are for iLoveCoding Premium members only. iLoveCoding Pro members can always get help from mentor in the Mentor-Moderated Private Student Community.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

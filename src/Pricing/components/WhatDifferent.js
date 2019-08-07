@@ -89,7 +89,7 @@ export default function () {
                 <CheckMark />
                 Yes
                 <br />
-                (Premium: Live Video Call + Slack Chat; Pro: Slack Chat only)
+                Live Weekly Video Calls + Slack Chat
               </td>
               <td>
                 <CheckMark />
@@ -115,7 +115,9 @@ export default function () {
                 No
               </td>
               <td>
-                ❓ Maybe
+                <span role="img" aria-label="Question mark">❓</span>
+                {' '}
+                Maybe
                 <br />
                 (depends on the course author)
               </td>
@@ -150,7 +152,11 @@ export default function () {
                 {' '}
                 Yes
               </td>
-              <td>❓ Maybe</td>
+              <td>
+                <span role="img" aria-label="Question mark">❓</span>
+                {' '}
+                Maybe
+              </td>
             </tr>
             <tr className="bg-light">
               <td className="text-right"><strong>Mentor: Portfolio Help</strong></td>
@@ -211,8 +217,16 @@ export default function () {
                 {' '}
                 Practical advice vs generic advice
               </td>
-              <td>❓ Maybe</td>
-              <td>❓ Maybe</td>
+              <td>
+                <span role="img" aria-label="Question mark">❓</span>
+                {' '}
+                Maybe
+              </td>
+              <td>
+                <span role="img" aria-label="Question mark">❓</span>
+                {' '}
+                Maybe
+              </td>
             </tr>
           </tbody>
         </table>

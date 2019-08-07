@@ -29,10 +29,10 @@ function StudentCommunity({ isPaid }) {
             </p>
           ) : (
             <p>
-              <Link to="pricing">Upgrade to iLoveCoding PRO / PREMIUM</Link>
+              <Link to="pricing">Upgrade to iLoveCoding PREMIUM</Link>
               {' '}
                 to unlock the private student community.
-              <Link to="pricing" className="badge badge-pill badge-success">Upgrade to PRO / PREMIUM</Link>
+              <Link to="pricing" className="badge badge-pill badge-success">Upgrade to PREMIUM</Link>
             </p>
           )
         }

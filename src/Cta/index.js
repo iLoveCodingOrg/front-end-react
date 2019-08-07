@@ -31,7 +31,7 @@ const Cta = ({
   if (isLoggedIn && !isPaid) {
     return (
       <div className="alert alert-warning lead text-center my-4">
-        Unlock the complete video training + mentor support with iLoveCoding Pro / Premium membership
+        Unlock the complete video training + mentor support with iLoveCoding Premium membership
         <br />
         <Link to="/pricing" className="btn btn-lg btn-success mt-2">Upgrade Now</Link>
       </div>
