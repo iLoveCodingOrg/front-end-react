@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom'
 import View from './View'
 import List from './List'
+import UpdateCard from './UpdateCard'
 import { AsyncNotFound as NotFound } from '../../Page'
 
 export default () => (
@@ -16,7 +17,6 @@ export default () => (
       component={List}
     />
     <Route
-      exact
       strict
       path="/subscriptions/:id"
       component={View}

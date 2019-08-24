@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default ({ data }) => (
   <table className="table table-responsive w-100 table-striped table-hover">
-    { header() }
+    { renderHeader() }
     <tbody>
       { data.map(({
         startDate, subscriptionId, productName, isActive,
@@ -19,7 +19,7 @@ export default ({ data }) => (
   </table>
 )
 
-function header() {
+function renderHeader() {
   return (
     <thead>
       <tr>

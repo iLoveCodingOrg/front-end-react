@@ -2,7 +2,9 @@ import React from 'react'
 import isEmpty from 'lodash/isEmpty'
 import { Link } from 'react-router-dom'
 
-export default function PaymentMethodInfo({ creditCard, paypal, showUpdateBtn }) {
+export default function PaymentMethodInfo({
+  subscriptionId, creditCard, paypal, showUpdateBtn,
+}) {
   if (isEmpty(paypal)) {
     const { cardType, last4, expirationDate } = creditCard
     return (
@@ -10,26 +12,34 @@ export default function PaymentMethodInfo({ creditCard, paypal, showUpdateBtn })
         <p>
           {cardType}
           {' '}
-ending in
+          ending in
+          {' '}
           {last4}
           {' '}
           <br />
-                    Expiry:
+          Expiry:
           {' '}
           {expirationDate}
         </p>
-        {showUpdateBtn && <Link to="/update-card" className="btn btn-primary">Update Card</Link>}
+        {showUpdateBtn && (
+        <Link
+          to={`/subscriptions/${subscriptionId}/update-card`}
+          className="btn btn-primary"
+        >
+          Update Card
+        </Link>
+        )}
       </div>
     )
   }
   const { payerEmail, paymentId } = paypal
   return (
     <div>
-                PayPal Email:
+      PayPal Email:
       {' '}
       {payerEmail}
       <br />
-                PayPay payment Id:
+      PayPay payment Id:
       {' '}
       {paymentId}
     </div>

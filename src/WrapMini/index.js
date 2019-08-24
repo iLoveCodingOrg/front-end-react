@@ -9,7 +9,7 @@ import logo from '../_app/images/ilovecoding-logo.svg'
 import { Copyrights } from '../Footer'
 
 function WrapMini({
-  isLoggedIn, firstName, lastName, logout, children,
+  isLoggedIn, firstName, logout, children,
 }) {
   return (
     <div className="bg-light full-screen">
@@ -18,30 +18,35 @@ function WrapMini({
           <img src={logo} alt="iLoveCoding.org Logo" />
         </Link>
       </div>
-      {
-        isLoggedIn
-          ? (
-            <div className="text-center">
-              <h2>
-                Hi
-                {firstName}
-                !
-                <br />
-              </h2>
-              <p>
-                You are already logged in,
-                {' '}
-                <Link to="/dashboard">continue to dashboard</Link>
-                .
-                <br />
-                Not you?
-                {' '}
-                <button type="button" className="border-0 btn-link p-0" onClick={logout}>Log out</button>
-              </p>
-            </div>
-          )
-          : children
-      }
+      {isLoggedIn ? (
+        <div className="text-center">
+          <h2>
+            Hi
+            {' '}
+            {firstName}
+            !
+            <br />
+          </h2>
+          <p>
+            You are already logged in,
+            {' '}
+            <Link to="/dashboard">continue to dashboard</Link>
+            .
+            <br />
+            Not you?
+            {' '}
+            <button
+              type="button"
+              className="border-0 btn-link p-0"
+              onClick={logout}
+            >
+              Log out
+            </button>
+          </p>
+        </div>
+      ) : (
+        children
+      )}
       <Copyrights className="text-center" />
     </div>
   )
@@ -57,12 +62,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    logout: () => dispatch(actions.logout())
-      .then(({ isSuccess }) => {
-        if (isSuccess) {
-          window.location.reload()
-        }
-      }),
+    logout: () => dispatch(actions.logout()).then(({ isSuccess }) => {
+      if (isSuccess) {
+        window.location.reload()
+      }
+    }),
   }
 }
 

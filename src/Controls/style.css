@@ -1,0 +1,103 @@
+form, input, select, textarea{
+  display: block;
+  width: 100%;
+}
+
+label.checkbox, label.radio {
+  padding: 0px;
+}
+input[type=checkbox],
+input[type=radio]{
+  padding: 0px;
+  width: auto;
+  display: inline-block;
+  margin-right: 7px;
+}
+label.select{
+    position: relative;
+    &:after{
+      padding: 0;
+      position: absolute;
+      content: "^";
+      right: 6px;
+      top: 15px;
+      pointer-events: none;
+      font-size: 2em;
+      transform: rotate(180deg);
+    }
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input, select, textarea{
+  padding: 16px;
+  font-size: 1em;
+  border-radius: var(--border-radius-light);
+  border: 1px solid var(--gray-light);
+  background-color: white;
+  font-family: regular-font;
+}
+
+label{
+  line-height: 1em;
+  display: block;
+  position: relative;
+  padding-top: 6px;
+}
+
+label > span{
+  color: var(--gray);
+  position: absolute;
+  padding: 0px 3px;
+  display: inline-block;
+  font-size: 0.67em;
+  background-color: white;
+  white-space: nowrap;
+  top: 0px;
+  left: 7px;
+}
+
+input[type=button], input[type=submit], button, .btn{
+  color: white;
+  font-weight: 500;
+  font-size: 1em;
+  width: auto;
+  padding: 10px 30px;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  border-radius: var(--border-radius-light);
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+input[type=button]:hover, input[type=submit]:hover, button:hover, .btn:hover{
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.btn-light{
+  border: solid 1px var(--primary);
+  background-color: #ffffff;
+  color: var(--primary);
+}
+
+.btn-light:hover{
+  background-color: var(--bray-light);
+}
+
+.btn-round{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  box-shadow: 0 5px 15px -5px rgba(46, 91, 255, 0.15);
+  border-width: 0px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}

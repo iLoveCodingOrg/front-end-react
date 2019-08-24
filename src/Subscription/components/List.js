@@ -10,10 +10,6 @@ import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
 
 class SubscriptionList extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     this.props.getList()
   }
@@ -27,15 +23,10 @@ class SubscriptionList extends React.Component {
           <title>
             {title}
             {' '}
-- iLoveCoding
+            - iLoveCoding
           </title>
         </Helmet>
-        <section className="
-                    align-self-center
-                    container
-                    mt-3
-                    mb-5"
-        >
+        <section className="align-self-center container mt-3 mb-5">
           <Breadcrumbs nodes={[
             {
               label: 'Back to Dashboard',
@@ -53,11 +44,9 @@ class SubscriptionList extends React.Component {
           </div>
           <div className="row">
             <div className="col-12">
-              {
-                                (isLoading) ? <Loading />
-                                  : (error) ? <ErrorBox />
-                                    : <Subscriptions data={list} />
-                            }
+              { isLoading && <Loading />}
+              { !isLoading && error && <ErrorBox /> }
+              { !isLoading && !error && <Subscriptions data={list} /> }
             </div>
           </div>
         </section>
