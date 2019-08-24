@@ -60,7 +60,7 @@ label > span{
   left: 7px;
 }
 
-input[type=button], input[type=submit], button, .btn{
+input[type=button], input[type=submit], button, .X_btn{
   color: white;
   font-weight: 500;
   font-size: 1em;
@@ -74,22 +74,22 @@ input[type=button], input[type=submit], button, .btn{
   cursor: pointer;
 }
 
-input[type=button]:hover, input[type=submit]:hover, button:hover, .btn:hover{
+input[type=button]:hover, input[type=submit]:hover, button:hover, .X_btn:hover{
   background-color: var(--primary-dark);
   color: var(--white);
 }
 
-.btn-light{
+.X_btn-light{
   border: solid 1px var(--primary);
   background-color: #ffffff;
   color: var(--primary);
 }
 
-.btn-light:hover{
+.X_btn-light:hover{
   background-color: var(--bray-light);
 }
 
-.btn-round{
+.X_btn-round{
   border-radius: 50%;
   width: 40px;
   height: 40px;

@@ -1,38 +1,16 @@
 import React from 'react'
+import { Input, useInput } from '../Controls'
 
 function CreditCardForm() {
   return (
     <div>
-      <div className="firstName">
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-      </div>
-      <div className="lastName">
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-      </div>
-      <div className="card">
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-      </div>
-      <div className="expiration">
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-      </div>
-      <div className="cvv">
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-      </div>
-      <div className="zip">
-        <label htmlFor="">
-          <input type="text" />
-        </label>
-      </div>
+      <Input name="firstName" label="First Name" />
+      <Input name="lastName" label="Last Name" />
+      <Input name="creditCard" label="Credit Card" />
+
+      <Input name="expiration" label="Expiration" />
+      <Input name="cvv" label="CVV" />
+      <Input name="zippostalcode" label="Zip Code / Postal Code" />
     </div>
   )
 }

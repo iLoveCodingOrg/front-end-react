@@ -2,7 +2,8 @@ import '../style.css'
 import React from 'react'
 
 export default function Textarea({
-  name, label, type, placeholder, value, onChange, className, required, pattern, maxLength,
+  name, label, type, placeholder, value,
+  onChange, className, required, pattern, maxLength,
 }) {
   const classNames = className || 'mb-2'
 

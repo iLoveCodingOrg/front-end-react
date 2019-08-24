@@ -45,12 +45,12 @@ Input.propTypes = {
 
 Input.defaultProps = {
   type: 'text',
-  placeholder: this.name,
+  placeholder: undefined,
   value: '',
   onChange: undefined,
   className: undefined,
   required: false,
-  label: this.name,
+  label: undefined,
   pattern: undefined,
   maxLength: undefined,
   disabled: false,
