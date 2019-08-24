@@ -6,36 +6,36 @@ function CreditCardForm({ onSubmit }) {
     <form onSubmit={onSubmit}>
       <div className="flex">
         <Input
-          className="w-100 mb-2 mr-2"
+          className="w-100 mb--5 mr--5"
           name="firstName"
           label="First Name"
         />
         <Input
-          className="w-100 mb-2"
+          className="w-100 mb--5"
           name="lastName"
           label="Last Name"
         />
       </div>
       <div className="flex">
         <Input
-          className="w-100 mb-2"
+          className="w-100 mb--5"
           name="creditCard"
           label="Credit Card"
         />
       </div>
       <div className="flex">
         <Input
-          className="w-100 mb-2 mr-2"
+          className="w-100 mb--5 mr--5"
           name="expiration"
           label="Expiration"
         />
         <Input
-          className="w-100 mb-2 mr-2"
+          className="w-100 mb--5 mr--5"
           name="cvv"
           label="CVV"
         />
         <Input
-          className="w-100 mb-2"
+          className="w-100 mb--5"
           name="zippostalcode"
           label="Zip Code / Postal Code"
         />

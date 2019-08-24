@@ -45,9 +45,9 @@ class PriceBox extends React.Component {
     return (
       <div
         style={{ maxWidth: '500px', minWidth: '320px' }}
-        className="card mx-2 mb-4 mb-lg-0 border-primary"
+        className="card mx--5 mb-2 mb-lg-0 border-primary"
       >
-        <div className="card-body align-self-center p-4">
+        <div className="card-body align-self-center p-2">
           {
             isPopular && (
               <h5 className="position-absolute" style={{ top: '5px', right: '5px' }}>
@@ -57,7 +57,7 @@ class PriceBox extends React.Component {
           }
           <div className="text-center">
             <div className="h4">
-              <span className="px-3 badge badge-pill badge-dark border">{name}</span>
+              <span className="px-1 badge badge-pill badge-dark border">{name}</span>
             </div>
             <br />
             <span className="lead em">{desc}</span>
@@ -65,7 +65,7 @@ class PriceBox extends React.Component {
               {this.renderPrice(price)}
             </div>
 
-            <div className="text-muted mb-3">
+            <div className="text-muted mb-1">
               {terms}
               <br />
               {terms2}

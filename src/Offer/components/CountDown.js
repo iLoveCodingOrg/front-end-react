@@ -11,7 +11,7 @@ function CountDown({ title, timeFrom, timeLeft }) {
       <div
         style={{ minWidth: '76px' }}
         className="d-flex flex-column align-items-center
-                p-1 p-md-3
+                p--25 p-md-3
                 rounded bg-white"
       >
         <span className="h2">{time}</span>
@@ -35,7 +35,7 @@ function CountDown({ title, timeFrom, timeLeft }) {
                         d-flex justify-content-center align-items-center
                     "
             >
-              <span className="h2 p-3 text-muted">
+              <span className="h2 p-1 text-muted">
                             The offer has expired
               </span>
             </div>
@@ -44,22 +44,22 @@ function CountDown({ title, timeFrom, timeLeft }) {
         // Render a countdown
         return (
           <div className="bg-danger d-flex flex-column">
-            <div className="h5 mt-3 text-center">
+            <div className="h5 mt-1 text-center">
               <span className="badge badge-light text-uppercase">
                 {title}
               </span>
             </div>
             <div className="
-                            my-3
+                            my-1
                             d-flex justify-content-center align-items-center
                         "
             >
               {renderTimeUnit(days, 'DAYS')}
-              <div className="h2 text-white p-1 p-md-2">:</div>
+              <div className="h2 text-white p--25 p-md-2">:</div>
               {renderTimeUnit(hours, 'HOURS')}
-              <div className="h2 text-white p-1 p-md-2">:</div>
+              <div className="h2 text-white p--25 p-md-2">:</div>
               {renderTimeUnit(minutes, 'MINS')}
-              <div className="h2 text-white p-1 p-md-2">:</div>
+              <div className="h2 text-white p--25 p-md-2">:</div>
               {renderTimeUnit(seconds, 'SECS')}
             </div>
           </div>

@@ -36,7 +36,7 @@ const data = [
 
 export default () => (
   <div>
-    <div className="my-5 text-center text-uppercase text-muted">
+    <div className="my-3 text-center text-uppercase text-muted">
       <span>
                     Some clients I have built websites and apps for:
       </span>

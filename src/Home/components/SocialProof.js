@@ -26,7 +26,7 @@ const data = [{
 function SocialProof() {
   return (
     <div className="">
-      <h3 className="text-center mb-4">
+      <h3 className="text-center mb-2">
         <u>8,803 students</u>
         {' '}
           learned coding from iLoveCoding last month (July 2019);
@@ -36,7 +36,7 @@ function SocialProof() {
       </h3>
       <PrintReviews
         containerClasses=""
-        itemClasses="col-md-3 mr-2"
+        itemClasses="col-md-3 mr--5"
         data={data}
       />
     </div>

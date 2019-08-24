@@ -18,7 +18,7 @@ function ReviewsPage() {
           I asked my students what changed for the better since learning from iLoveCoding. Here's what they had to say:
         </p>
       </div>
-      <div className="bg-gray-lighter p-4">
+      <div className="bg-gray-lighter p-2">
         <div className="container">
           <Reviews />
         </div>

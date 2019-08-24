@@ -42,9 +42,9 @@ function Pricing() {
         {' '}
         . As long as you remain a member, you will always have your current price.
       </p> */}
-      <div className="py-5"><Header /></div>
-      <div id="payment" className="py-5 bg-gray-lighter">
-        {/* <div className="text-center mb-3">
+      <div className="py-3"><Header /></div>
+      <div id="payment" className="py-3 bg-gray-lighter">
+        {/* <div className="text-center mb-1">
           <span className="h2">
             Current Price:
           </span>
@@ -53,44 +53,44 @@ function Pricing() {
         </div> */}
         <Price />
       </div>
-      <div className="pt-5"><Testimonials itemNum="1" /></div>
-      <div className="pb-4 text-center">
-        <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
+      <div className="pt-3"><Testimonials itemNum="1" /></div>
+      <div className="pb-2 text-center">
+        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
 
-      <div className="py-5 bg-gray-lighter"><WhatYouGet /></div>
-      <div className="pt-5"><Testimonials itemNum="0" /></div>
+      <div className="py-3 bg-gray-lighter"><WhatYouGet /></div>
+      <div className="pt-3"><Testimonials itemNum="0" /></div>
       <div className="text-center">
-        <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
+        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
 
-      <div className="py-5"><WhatDifferent /></div>
+      <div className="py-3"><WhatDifferent /></div>
       <div className=""><Testimonials itemNum="3" /></div>
 
-      <div className="pb-5 text-center">
-        <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
+      <div className="pb-3 text-center">
+        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
 
-      <div className="py-5"><WhatBuild /></div>
-      <div className="py-5"><WhatLearn /></div>
-      <div className="py-5"><WhoFor /></div>
+      <div className="py-3"><WhatBuild /></div>
+      <div className="py-3"><WhatLearn /></div>
+      <div className="py-3"><WhoFor /></div>
       <div className=""><Testimonials itemNum="4" /></div>
-      <div className="pb-5 text-center">
-        <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
+      <div className="pb-3 text-center">
+        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
-      <div className="py-5 bg-gray-lightest"><Guarantee /></div>
-      <div className="py-5 bg-gray-lighter">
+      <div className="py-3 bg-gray-lightest"><Guarantee /></div>
+      <div className="py-3 bg-gray-lighter">
         <div className="col-md-10 col-lg-8 mr-auto ml-auto">
           <AboutAziz />
         </div>
       </div>
-      <div className="pt-5"><Testimonials itemNum="5" /></div>
+      <div className="pt-3"><Testimonials itemNum="5" /></div>
       <div className="text-center">
-        <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
+        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
-      <div className="pt-5"><FAQs /></div>
-      <div className="pb-5 text-center">
-        <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
+      <div className="pt-3"><FAQs /></div>
+      <div className="pb-3 text-center">
+        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
     </div>
   )

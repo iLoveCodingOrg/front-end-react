@@ -27,12 +27,12 @@ function ViewGeneral({
         { !isLoading && error && <ErrorBox /> }
         { !isLoading && !error && (
         <div>
-          <div className="my-3 h4">
+          <div className="my-1 h4">
             Your subscription is
             {' '}
             {
-              active ? <span className="badge badge-pill badge-success mr-3">Active</span>
-                : <span className="badge badge-pill badge-danger mr-3">Inactive</span>
+              active ? <span className="badge badge-pill badge-success mr-1">Active</span>
+                : <span className="badge badge-pill badge-danger mr-1">Inactive</span>
             }
           </div>
           <div className="row">

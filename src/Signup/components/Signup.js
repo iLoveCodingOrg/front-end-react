@@ -91,7 +91,7 @@ class Signup extends React.Component {
           .
         </p>
 
-        <form onSubmit={this.handleSubmit} className="mt-5 col-lg-6 col-md-8 mx-auto">
+        <form onSubmit={this.handleSubmit} className="mt-3 col-lg-6 col-md-8 mx-auto">
           {this.renderError()}
           <div className="form-group row">
             <label htmlFor="firstName" className="col-md-3 col-form-label strong">First Name</label>
@@ -160,7 +160,7 @@ class Signup extends React.Component {
               type="submit"
               name="signup"
               value={this.props.isLoading ? 'Creating account...' : 'Create Your Account'}
-              className="my-3 btn btn-lg btn-primary btn-block"
+              className="my-1 btn btn-lg btn-primary btn-block"
             />
           </div>
         </form>

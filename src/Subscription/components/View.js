@@ -22,7 +22,7 @@ function SubscriptionView({ match }) {
           - iLoveCoding
         </title>
       </Helmet>
-      <section className=" align-self-center container mt-3 mb-5">
+      <section className=" align-self-center container mt-1 mb-3">
         <Breadcrumbs nodes={[
           {
             label: 'Back to Dashboard',
@@ -42,7 +42,7 @@ function SubscriptionView({ match }) {
             <h1>{title}</h1>
           </div>
         </div>
-        <hr className="mb-1" />
+        <hr className="mb--25" />
         <Route
           exact
           strict

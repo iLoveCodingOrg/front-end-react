@@ -8,11 +8,11 @@ export default function ({ data, containerClasses, itemClasses }) {
       }, index) => (
         <div
           key={index}
-          className={`p-3 bg-white border rounded ${itemClasses}`}
+          className={`p-1 bg-white border rounded ${itemClasses}`}
         >
           {
                     !thumbSrc ? null
-                      : <img className="rounded-circle mr-3 float-left" src={thumbSrc} alt={title} width="100" height="100" />
+                      : <img className="rounded-circle mr-1 float-left" src={thumbSrc} alt={title} width="100" height="100" />
 
                 }
           <p><strong>{title}</strong></p>

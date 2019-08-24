@@ -86,7 +86,7 @@ for you if:
 export default function () {
   return (
     <div className="d-flex flex-column align-items-center">
-      <h2 className="mb-4">Common Questions</h2>
+      <h2 className="mb-2">Common Questions</h2>
       <div className="col-md-10 col-lg-8">
         <PrintFAQ data={data} />
       </div>

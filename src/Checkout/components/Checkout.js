@@ -153,7 +153,7 @@ class Checkout extends React.Component {
                 <div className="p-0 col-md-8 order-md-1">
                   <form
                     onSubmit={this.buy}
-                    className="bg-light border p-4"
+                    className="bg-light border p-2"
                   >
                     {this.renderBuyError()}
                     <UserForm
@@ -163,7 +163,7 @@ class Checkout extends React.Component {
                       setUserInfo={this.setUserInfo}
                     />
 
-                    <hr className="mb-4" />
+                    <hr className="mb-2" />
                     <CreditCard setBraintreeInstance={this.setBraintreeInstance} />
                     <Due
                       price={price}
@@ -180,17 +180,17 @@ class Checkout extends React.Component {
                     >
                       Complete My Purchase
                     </button>
-                    <div className="d-block text-center small mt-1">
+                    <div className="d-block text-center small mt--25">
                       Payment powered by Braintree (a PayPal company) - 🔒 Your information is secure
                     </div>
                   </form>
-                  <div className="text-center mt-3 mb-5">
+                  <div className="text-center mt-1 mb-3">
                     ⚡️ Cancel Anytime.
                     &nbsp; &nbsp;
                     🛡️ 7-Day Full Refund Policy.
                   </div>
                 </div>
-                <div className="col-md-4 order-md-2 mb-4 px-4">
+                <div className="col-md-4 order-md-2 mb-2 px-2">
                   <WhatYouGet />
                   <Testimonials />
                 </div>

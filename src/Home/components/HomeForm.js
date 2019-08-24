@@ -47,7 +47,7 @@ function HomeForm() {
       >
         <input
           autoFocus
-          className="form-control form-control-lg border-primary mb-3"
+          className="form-control form-control-lg border-primary mb-1"
           placeholder="Enter your email address"
           required
           type="email"
@@ -97,7 +97,7 @@ function HomeForm() {
     >
         <input
           autoFocus
-          className="form-control form-control-lg border-primary mb-3"
+          className="form-control form-control-lg border-primary mb-1"
           placeholder="Enter your email address"
           type="email"
           id="drip-email"

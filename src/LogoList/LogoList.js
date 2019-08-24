@@ -6,7 +6,7 @@ export default function ({ data, height }) {
       {data.map(({
         imgSrc, altText, margin, padding,
       }, index) => (
-        <div key={index} className="mx-3 mb-3">
+        <div key={index} className="mx-1 mb-1">
           <img
             className=""
             src={imgSrc}

@@ -106,8 +106,8 @@ class ChangePassword extends React.Component {
         <section className="
                     align-self-center
                     container
-                    mt-3
-                    mb-5"
+                    mt-1
+                    mb-3"
         >
           <Breadcrumbs nodes={[
             {
@@ -124,9 +124,9 @@ class ChangePassword extends React.Component {
               <h1>{title}</h1>
             </div>
           </div>
-          <hr className="mb-1" />
+          <hr className="mb--25" />
           <div className="row">
-            <form className="mt-4 col-12 col-lg-8" onSubmit={this.handleSubmit}>
+            <form className="mt-2 col-12 col-lg-8" onSubmit={this.handleSubmit}>
               {this.renderError()}
               <div className="form-group row">
                 <label className="col-md-3" htmlFor="email">Current Password</label>

@@ -121,7 +121,7 @@ class Price extends React.Component {
     return (
       <section className="d-flex justify-content-center">
         <div className="d-flex flex-column align-items-center">
-          {/* <div className="position-relative mb-3 mx-sm-auto mr-auto">
+          {/* <div className="position-relative mb-1 mx-sm-auto mr-auto">
                         <Switch
                             style={{ maxWidth: '400px', minWidth: '320px' }}
                             onChange={this.handleSwitch}
@@ -151,7 +151,7 @@ class Price extends React.Component {
             {/* {this.renderPriceBox(data.pro[selected])} */}
             {this.renderPriceBox(data.premium[selected])}
           </div>
-          <div className="d-flex flex-wrap mt-4">
+          <div className="d-flex flex-wrap mt-2">
             <p>
               ⚡️ Cancel Anytime.
               &nbsp; &nbsp;

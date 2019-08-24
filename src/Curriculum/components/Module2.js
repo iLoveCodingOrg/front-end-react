@@ -11,7 +11,7 @@ const courses = [
   {
     name: 'Learn & Master Bootstrap in a Week',
     link: '/courses/learn-master-bootstrap-in-a-week',
-    thumbSrc: '//a.ilovecoding.org/thumb/bootstrap-1-intro.png',
+    thumbSrc: '//a.ilovecoding.org/thumb/bootstrap--25-intro.png',
   },
   {
     name: 'Learn React JS in 14 Days',
@@ -75,7 +75,7 @@ const practice = [
 ]
 
 export default () => (
-  <section className="bg-light p-4 p-md-5 my-5 row border-top">
+  <section className="bg-light p-2 p-md-5 my-3 row border-top">
     <div className="col-xl-4">
       <h2>
         <small className="d-block text-muted">

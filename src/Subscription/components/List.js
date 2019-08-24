@@ -26,7 +26,7 @@ class SubscriptionList extends React.Component {
             - iLoveCoding
           </title>
         </Helmet>
-        <section className="align-self-center container mt-3 mb-5">
+        <section className="align-self-center container mt-1 mb-3">
           <Breadcrumbs nodes={[
             {
               label: 'Back to Dashboard',

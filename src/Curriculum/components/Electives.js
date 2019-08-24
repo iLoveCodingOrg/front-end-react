@@ -46,7 +46,7 @@ const courses = [
 ]
 
 export default () => (
-  <section className="bg-light p-4 p-md-5 my-5 row border-top">
+  <section className="bg-light p-2 p-md-5 my-3 row border-top">
     <div className="col-xl-4">
       <h2>
         <small className="d-block text-muted">

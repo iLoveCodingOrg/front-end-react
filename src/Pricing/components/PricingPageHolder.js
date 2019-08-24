@@ -15,7 +15,7 @@ export default function Pricing() {
       </p>
       <h1 className="text-center">Get on the waitlist</h1>
       <form
-        className="mt-5 col-lg-6 col-md-8 mx-auto"
+        className="mt-3 col-lg-6 col-md-8 mx-auto"
         action="https://ilovecoding.us3.list-manage.com/subscribe/post?u=0bf351e3ad180589cd43cdefb&amp;id=2555c81382"
         method="post"
         id="mc-embedded-subscribe-form"
@@ -47,7 +47,7 @@ export default function Pricing() {
             value="Get me on the wait list"
             name="subscribe"
             id="mc-embedded-subscribe"
-            className="my-3 btn btn-lg btn-primary btn-block"
+            className="my-1 btn btn-lg btn-primary btn-block"
           />
         </div>
       </form>

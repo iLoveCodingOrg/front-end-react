@@ -24,25 +24,25 @@ function Pricing() {
       </Helmet>
       <Offer />
       <CountDown title="30% Off expires in:" />
-      <div className="pt-5"><Header /></div>
-      <div className="pb-5">
+      <div className="pt-3"><Header /></div>
+      <div className="pb-3">
         <Curriculum />
       </div>
-      <div className="bg-gray-lighter mt-4">
-        <div className="py-5 d-flex justify-content-center">
+      <div className="bg-gray-lighter mt-2">
+        <div className="py-3 d-flex justify-content-center">
           <div className="col-md-10 col-lg-8">
             <AboutAziz />
           </div>
         </div>
       </div>
-      <div className="py-5 bg-light"><Testimonials /></div>
-      {/* <div className="py-5 bg-light"><Testimonials /></div>
-      <div className="py-5"><Outcomes /></div>
-      <div className="py-5 bg-light"><WhatsIncluded /></div>
-      <div className="py-5"><WhosItFor /></div>
-      <div className="py-5 bg-light"><WhosItNotFor /></div>
-      <div className="py-5"><Price /></div> */}
-      <div className="py-5 bg-secondary">
+      <div className="py-3 bg-light"><Testimonials /></div>
+      {/* <div className="py-3 bg-light"><Testimonials /></div>
+      <div className="py-3"><Outcomes /></div>
+      <div className="py-3 bg-light"><WhatsIncluded /></div>
+      <div className="py-3"><WhosItFor /></div>
+      <div className="py-3 bg-light"><WhosItNotFor /></div>
+      <div className="py-3"><Price /></div> */}
+      <div className="py-3 bg-secondary">
         <div className="d-flex justify-content-center">
           <div className="col-12 col-md-10 col-lg-8">
             <h2 className="text-center text-white">
@@ -64,9 +64,9 @@ function Pricing() {
         </div>
         <Price />
       </div>
-      <div className="py-5 bg-dark"><Guarantee /></div>
-      <div className="py-5"><FAQs /></div>
-      <div className="py-5 bg-secondary"><Price /></div>
+      <div className="py-3 bg-dark"><Guarantee /></div>
+      <div className="py-3"><FAQs /></div>
+      <div className="py-3 bg-secondary"><Price /></div>
     </div>
   )
 }

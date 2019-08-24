@@ -14,8 +14,8 @@ export default function () {
       <section className="
                 align-self-center
                 container
-                mt-3
-                mb-5"
+                mt-1
+                mb-3"
       >
         <div className="row">
           <div className="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9">
@@ -28,25 +28,25 @@ export default function () {
             <Video videoSource="314907971" />
           </div>
         </div>
-        <hr className="mb-1" />
+        <hr className="mb--25" />
         <div className="row">
-          <div className="col-12 col-md-6 mt-5">
+          <div className="col-12 col-md-6 mt-3">
             <div>
               <h4>Start Training</h4>
               <ul className="list-unstyled">
                 <li><Link to="/curriculum">Full Curriculum</Link></li>
                 <li><Link to="/courses/core">Core Training</Link></li>
                 <li><Link to="/courses/projects">Practice Projects</Link></li>
-                <li className="d-inline-block pt-2 mt-2 border-top"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
+                <li className="d-inline-block pt--5 mt--5 border-top"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
               </ul>
             </div>
 
-            <div className="mt-5">
+            <div className="mt-3">
               <h4>Account Settings</h4>
               <ul className="list-unstyled">
                 <li><Link to="/subscriptions">Subscription Info</Link></li>
                 <li><Link to="/change-password">Change Password</Link></li>
-                <li className="d-inline-block pt-2 mt-2 border-top">
+                <li className="d-inline-block pt--5 mt--5 border-top">
                   Contact:
                   {' '}
                   <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>
@@ -55,7 +55,7 @@ export default function () {
             </div>
 
           </div>
-          <div className="col-12 col-md-6 mt-5">
+          <div className="col-12 col-md-6 mt-3">
             <StudentCommunity />
             <PremiumSection />
           </div>

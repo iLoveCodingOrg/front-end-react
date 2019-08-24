@@ -159,7 +159,7 @@ class Login extends React.Component {
               type="submit"
               name="Login"
               value={this.props.isLoading ? 'Logging in ...' : 'Login'}
-              className="my-3 btn btn-lg btn-primary btn-block"
+              className="my-1 btn btn-lg btn-primary btn-block"
             />
           </div>
           <p className="text-center">

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default function Select({
   name, placeholder, selectedOptionIndex, onChange, options, className,
 }) {
-  const classNames = className || 'mb-2'
+  const classNames = className || 'mb--5'
 
   return (
     <label

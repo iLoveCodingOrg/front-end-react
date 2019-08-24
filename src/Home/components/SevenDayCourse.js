@@ -4,7 +4,7 @@ import HomeForm from './HomeForm'
 function SevenDayCourse() {
   return (
     <div
-      className="mx-2 mx-sm-0 my-3 align-self-center card p-4 border-primary bg-gray-lightest"
+      className="mx--5 mx-sm-0 my-1 align-self-center card p-2 border-primary bg-gray-lightest"
       style={{ maxWidth: '640px' }}
     >
       <div className="h4">
@@ -32,7 +32,7 @@ function SevenDayCourse() {
         No spam. Easy unsubscribe if you hate it.
       </p>
       <HomeForm />
-      <p className="small mt-2 mb-0">
+      <p className="small mt--5 mb-0">
         Plus: Along the way in the course, I'll also show you two little known yet Free tools used by top developers to do great work - I use the same tools on this site.
       </p>
       {/* <p className="mt-mb-0">

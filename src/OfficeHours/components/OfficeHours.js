@@ -21,7 +21,7 @@ export default class OfficeHours extends React.Component {
         <Helmet>
           <title>Schedule office hours with Aziz Ali - iLoveCoding</title>
         </Helmet>
-        <div className="align-self-center col-md-10 col-lg-8 mt-3">
+        <div className="align-self-center col-md-10 col-lg-8 mt-1">
           <h1>
                         Schedule office hours with Aziz Ali
           </h1>

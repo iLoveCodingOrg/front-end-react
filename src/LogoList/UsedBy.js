@@ -63,8 +63,8 @@ const data = [
 ]
 
 export default () => (
-  <div className="mt-5 pt-5 border-top">
-    <div className="mb-4 text-center text-uppercase text-muted">
+  <div className="mt-3 pt-3 border-top">
+    <div className="mb-2 text-center text-uppercase text-muted">
       <span>
                     Learn the same tools and tricks used by:
       </span>

@@ -19,7 +19,7 @@ class CreditCard extends React.Component {
     } = this.props
     return (
       <div>
-        <h4 className="mb-3">Payment Information</h4>
+        <h4 className="mb-1">Payment Information</h4>
         { isLoading && <Loading /> }
         { !isLoading && error && <ErrorBox /> }
         { !isLoading && !error && (

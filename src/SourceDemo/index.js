@@ -14,7 +14,7 @@ export default function SourceDemo({ demo, source }) {
   if (!demo && !source) { return null }
 
   return (
-    <div className="my-3 btn-group">
+    <div className="my-1 btn-group">
       {
         demo && (
         <a

@@ -9,7 +9,7 @@ export default function ErrorBox() {
       onClick={() => Raven.lastEventId() && Raven.showReportDialog()}
       onKeyPress={() => Raven.lastEventId() && Raven.showReportDialog()}
     >
-      <div className="alert alert-danger d-inline-block mt-3">
+      <div className="alert alert-danger d-inline-block mt-1">
         We're sorry — something's gone wrong.
         {' '}
         <br />

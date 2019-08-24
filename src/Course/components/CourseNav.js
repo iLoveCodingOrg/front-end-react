@@ -12,7 +12,7 @@ export default function CourseNav({ activeLessonIndex = -1, course }) {
 
   return (
     <div>
-      <div className="d-flex my-2 justify-content-center">
+      <div className="d-flex my--5 justify-content-center">
         <CourseLinks
           isMainBtnHidden={activeLessonIndex < 0}
           activeLessonIndex={activeLessonIndex}

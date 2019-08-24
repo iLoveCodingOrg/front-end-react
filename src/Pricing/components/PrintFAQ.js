@@ -29,9 +29,9 @@ class PrintFAQs extends React.Component {
     return (
       <div className="d-flex flex-wrap">
         {data.map(({ question, Answer }, index) => (
-          <div className="card mb-3 border-dark" key={index}>
+          <div className="card mb-1 border-dark" key={index}>
             <button
-              className="p-4 btn btn-light btn-block text-left"
+              className="p-2 btn btn-light btn-block text-left"
               onClick={() => this.toggleQuestion(index)}
             >
                             ➕

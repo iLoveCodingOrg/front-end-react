@@ -16,7 +16,7 @@ class VideoWrap extends React.Component {
     return (
       <img
         style={{ maxWidth: 300, maxHeight: 169 }}
-        className="mr-md-3 mb-md-0 mb-3 rounded"
+        className="mr-md-3 mb-md-0 mb-1 rounded"
         src={`${IMG_URL}${thumbnail}`}
         alt={title}
       />

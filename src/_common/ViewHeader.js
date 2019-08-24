@@ -21,7 +21,7 @@ export default function ViewHeader({
 }) {
   const renderBlogHeader = () => {
     if (of === 'blog') {
-      return <Link className="lead mb-4 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link>
+      return <Link className="lead mb-2 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link>
     }
     return null
   }
@@ -29,7 +29,7 @@ export default function ViewHeader({
   const renderCourseLessonMeta = () => {
     if (of !== 'page' && of !== 'blog') {
       return (
-        <div className="mb-3">
+        <div className="mb-1">
           <div className="d-inline">
             {(isComplete) && <CheckMark />}
             <Access of={of} isFree={isFree} />

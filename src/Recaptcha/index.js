@@ -15,7 +15,7 @@ export function Recaptcha2({ verifyTokenCb, onLoadCb }) {
   }
 
   return (
-    <div className="mb-3">
+    <div className="mb-1">
       <Recaptcha
         sitekey="6Ld6SaEUAAAAACia7EGSf_4zcjigJVYj9X4UYoX-"
         ref={el}

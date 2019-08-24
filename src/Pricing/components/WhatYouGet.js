@@ -9,7 +9,7 @@ import Video from '../../Video/components/Video'
 export default function () {
   return (
     <div className="d-flex flex-column align-items-center">
-      <div className="col-md-10 col-lg-8 row mb-4">
+      <div className="col-md-10 col-lg-8 row mb-2">
         <div className="col-md-5">
           <Video videoSource="311500556" />
         </div>
@@ -22,9 +22,9 @@ export default function () {
       </div>
 
       <div className="col-md-10 col-lg-9 flex-column align-items-center">
-        <div className="bg-white rounded p-4">
-          <div className="row mb-5">
-            <div className="col-lg-4 text-center mb-4 mb-lg-0">
+        <div className="bg-white rounded p-2">
+          <div className="row mb-3">
+            <div className="col-lg-4 text-center mb-2 mb-lg-0">
               <img src={modules} alt="All Modules" className="w-100" style={{ maxWidth: '300px' }} />
             </div>
             <div className="col-lg-8 pl-lg-5">
@@ -72,8 +72,8 @@ export default function () {
             </div>
           </div>
 
-          <div className="row mb-5">
-            <div className="col-lg-4 text-center mb-4 mb-lg-0">
+          <div className="row mb-3">
+            <div className="col-lg-4 text-center mb-2 mb-lg-0">
               <img src={community} alt="Slack Student Community" className="border w-100" style={{ maxWidth: '300px' }} />
             </div>
             <div className="col-lg-8 pl-lg-5">
@@ -94,7 +94,7 @@ export default function () {
           </div>
 
           <div className="row">
-            <div className="col-lg-4 text-center mb-4 mb-lg-0">
+            <div className="col-lg-4 text-center mb-2 mb-lg-0">
               <img src={mentorship} alt="Live Mentorship" className="border w-100" style={{ maxWidth: '300px' }} />
             </div>
             <div className="col-lg-8 pl-lg-5">

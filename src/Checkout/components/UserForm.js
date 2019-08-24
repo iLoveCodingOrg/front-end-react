@@ -62,7 +62,7 @@ class UserForm extends React.Component {
 
     if (isDisabled) {
       return (
-        <div className="mb-3">
+        <div className="mb-1">
           Not
           {' '}
           {userInfo.firstName.value}
@@ -92,10 +92,10 @@ class UserForm extends React.Component {
     const { firstName, lastName, email } = userInfo
     return (
       <div>
-        <h4 className="mb-3">Contact Information</h4>
+        <h4 className="mb-1">Contact Information</h4>
         {this.renderLogoutOption()}
         <div className="row">
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 mb-1">
             <label htmlFor="firstName">First name</label>
             <input
               type="text"
@@ -110,7 +110,7 @@ class UserForm extends React.Component {
             {this.renderInlineError('firstName')}
           </div>
 
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 mb-1">
             <label htmlFor="lastName">Last name</label>
             <input
               type="text"
@@ -126,7 +126,7 @@ class UserForm extends React.Component {
           </div>
         </div>
 
-        <div className="mb-3">
+        <div className="mb-1">
           <label htmlFor="email">Email</label>
           <input
             type="email"

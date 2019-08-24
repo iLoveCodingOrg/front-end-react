@@ -29,13 +29,13 @@ function Card({ item, of }) {
   const durationVal = courseTotalDuration || duration
 
   return (
-    <div className="d-flex flex-column flex-md-row mb-5 card border-0">
+    <div className="d-flex flex-column flex-md-row mb-3 card border-0">
       <div>
         {
           thumbnail && (
           <Link to={urlTo}>
             <img
-              className="mr-md-3 mb-md-0 mb-3 rounded"
+              className="mr-md-3 mb-md-0 mb-1 rounded"
               src={`${IMG_URL}${thumbnail}`}
               alt="Thumbnail"
             />
@@ -45,7 +45,7 @@ function Card({ item, of }) {
       </div>
       <div>
         <h3><Link to={urlTo}>{title}</Link></h3>
-        <div className="mb-2">
+        <div className="mb--5">
           <Access of={of} isFree={isFree} />
           { !!level && <Level level={level} /> }
           { !!durationVal && <Duration duration={durationVal} /> }

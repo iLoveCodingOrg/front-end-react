@@ -16,7 +16,7 @@ export default function Level({ level }) {
   }
 
   return (
-    <small className="mr-3">
+    <small className="mr-1">
       Level:
       {' '}
       {renderSwitch()}

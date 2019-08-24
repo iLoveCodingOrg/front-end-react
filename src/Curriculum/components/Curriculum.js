@@ -15,12 +15,12 @@ export default () => (
       <title>The Perfect Curriculum to become a Front-End/Full-Stack JavaScript Developer - iLoveCoding</title>
       <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
     </Helmet>
-    <div className="container mt-3">
+    <div className="container mt-1">
       <h1 className="text-center">The Perfect Curriculum</h1>
-      <p className="lead text-center mb-4">
+      <p className="lead text-center mb-2">
         Go from zero to a professional Front-End and/or Full-Stack JavaScript developer.
       </p>
-      <div className="row border-top pt-4">
+      <div className="row border-top pt-2">
         <div className="col-md-4">
           <p className="lead alert alert-warning text-dark">
             <strong>Important:</strong>
@@ -29,9 +29,9 @@ export default () => (
             <strong>Watch the video to get a proper walk through.</strong>
           </p>
         </div>
-        <div className="col-md-8 text-center p-0 mb-3">
+        <div className="col-md-8 text-center p-0 mb-1">
           <Video videoSource="315031967" />
-          <h5 className="py-3">VIDEO: How to get the most out of The Perfect Curriculum</h5>
+          <h5 className="py-1">VIDEO: How to get the most out of The Perfect Curriculum</h5>
         </div>
       </div>
       <p className="">
@@ -45,9 +45,9 @@ export default () => (
         <br />
         Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
       </p>
-      <div className="row my-5">
-        <div className="col-sm-12 d-flex mb-4 mb-sm-0">
-          <div className="alert bg-gray-lightest py-4 border text-center mb-0 w-100">
+      <div className="row my-3">
+        <div className="col-sm-12 d-flex mb-2 mb-sm-0">
+          <div className="alert bg-gray-lightest py-2 border text-center mb-0 w-100">
             <h5>Time to completion - 5 months</h5>
             <p className="mb-0">
               Study 15 hrs/week and complete within 5 months.

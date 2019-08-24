@@ -2,8 +2,8 @@ import React from 'react'
 import { CheckMark } from '../../_common'
 
 export default () => (
-  <div className="my-3">
-    <div className="mb-2 strong">Unlimited Access to Training:</div>
+  <div className="my-1">
+    <div className="mb--5 strong">Unlimited Access to Training:</div>
     <div>
       <CheckMark />
       {' '}
@@ -26,7 +26,7 @@ Access to Homework
     </div>
 
     <br />
-    <div className="mb-2 strong">Private Student Community:</div>
+    <div className="mb--5 strong">Private Student Community:</div>
     <div>
       <CheckMark />
       {' '}
@@ -39,7 +39,7 @@ All questions answered
     </div>
 
     <br />
-    <div className="mb-2 strong">Premium Support:</div>
+    <div className="mb--5 strong">Premium Support:</div>
 
     <div>
       <span className="oi oi-x text-danger" title="x" aria-hidden="true" />

@@ -5,7 +5,7 @@ export default function Textarea({
   name, label, type, placeholder, value,
   onChange, className, required, pattern, maxLength,
 }) {
-  const classNames = className || 'mb-2'
+  const classNames = className || 'mb--5'
 
   return (
     <label

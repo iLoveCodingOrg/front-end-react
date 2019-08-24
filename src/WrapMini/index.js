@@ -13,7 +13,7 @@ function WrapMini({
 }) {
   return (
     <div className="bg-light full-screen">
-      <div className="d-flex justify-content-center navbar-brand py-3">
+      <div className="d-flex justify-content-center navbar-brand py-1">
         <Link to="/" className="img-wrap">
           <img src={logo} alt="iLoveCoding.org Logo" />
         </Link>

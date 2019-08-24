@@ -6,7 +6,7 @@ export default function Header({ productName, productDesc }) {
     <div>
       <div className="d-flex justify-content-between flex-column-reverse flex-md-row align-items-center">
         <div className="d-flex align-items-center justify-content-center">
-          <div className="navbar-brand mr-3 py-5 text-center">
+          <div className="navbar-brand mr-1 py-3 text-center">
             <div className="img-wrap">
               <img src={logo} alt="iLoveCoding.org Logo" />
             </div>
@@ -20,7 +20,7 @@ export default function Header({ productName, productDesc }) {
             </h1>
           </div>
         </div>
-        <div className="alert-light alert my-2 border">
+        <div className="alert-light alert my--5 border">
           Need help? support@ilovecoding.org
         </div>
       </div>

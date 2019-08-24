@@ -107,7 +107,7 @@ class ForgotPassword extends React.Component {
           <div>
             <input
               disabled={this.state.isLoading || this.state.email.error}
-              className="my-3 btn btn-lg btn-primary btn-block"
+              className="my-1 btn btn-lg btn-primary btn-block"
               type="submit"
               value={(this.state.isLoading) ? 'Loading...' : 'Get new password'}
             />

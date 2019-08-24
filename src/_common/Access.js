@@ -5,8 +5,8 @@ export default function Access({ isFree, of }) {
   if (of === 'blog' || of === 'page') return null
 
   return isFree
-    ? <span className="badge badge-pill badge-dark mr-3">FREE</span>
-    : <span className="badge badge-pill badge-success mr-3">PAID</span>
+    ? <span className="badge badge-pill badge-dark mr-1">FREE</span>
+    : <span className="badge badge-pill badge-success mr-1">PAID</span>
 }
 
 Access.propTypes = {

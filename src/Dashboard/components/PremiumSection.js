@@ -5,7 +5,7 @@ import { isPremium } from '../../_user/selectors'
 
 function PremiumSupport({ isPremium }) {
   return (
-    <div className="mt-5">
+    <div className="mt-3">
       <h4>Premium Support</h4>
       <ul className="list-unstyled">
         {

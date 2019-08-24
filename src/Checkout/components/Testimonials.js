@@ -25,7 +25,7 @@ export default function Testimonials() {
       <div className="">
         <PrintReviews
           containerClasses="flex-column"
-          itemClasses="mb-3"
+          itemClasses="mb-1"
           data={data}
         />
       </div>

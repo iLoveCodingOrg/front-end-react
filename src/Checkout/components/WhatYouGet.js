@@ -3,8 +3,8 @@ import React from 'react'
 export default function WhatYouGet() {
   return (
     <div>
-      <h4 className="mb-3 text-center">Here's What You Get:</h4>
-      <ul className="list-group mb-3">
+      <h4 className="mb-1 text-center">Here's What You Get:</h4>
+      <ul className="list-group mb-1">
         <li className="list-group-item d-flex justify-content-between text-success">
           <div>
             <h6 className="my-0">💪 Complete Developer Training</h6>

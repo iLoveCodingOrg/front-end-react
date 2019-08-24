@@ -14,7 +14,7 @@ export default function PrintTraining({
           <div
             key={index}
             style={{ maxWidth }}
-            className="mb-3 mr-3 text-center"
+            className="mb-1 mr-1 text-center"
           >
             <Link className="d-block" to={link}>
               <img

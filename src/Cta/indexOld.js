@@ -16,10 +16,10 @@ const Cta = ({
 
   if (!isLoggedIn) {
     return (
-      <div className="alert alert-warning text-center my-4">
+      <div className="alert alert-warning text-center my-2">
         <span className="lead">Become a confident software developer with guidance!</span>
         <br />
-        <Link to="/signup" className="btn btn-lg btn-primary my-2">Get Started Free</Link>
+        <Link to="/signup" className="btn btn-lg btn-primary my--5">Get Started Free</Link>
         <br />
           Already have an account,
         {' '}
@@ -30,18 +30,18 @@ const Cta = ({
 
   if (isLoggedIn && !isPaid) {
     return (
-      <div className="alert alert-warning lead text-center my-4">
+      <div className="alert alert-warning lead text-center my-2">
         Unlock the complete video training + mentor support with iLoveCoding Pro / Premium membership
         <br />
-        <Link to="/pricing" className="btn btn-lg btn-success mt-2">Upgrade Now</Link>
+        <Link to="/pricing" className="btn btn-lg btn-success mt--5">Upgrade Now</Link>
       </div>
     )
   }
 
   if (isLoggedIn && isPro) {
     return (
-      <div className="alert alert-warning lead text-center my-4">
-        <Link to="/pricing" className="btn btn-lg btn-success my-2">Upgrade to iLoveCoding Premium</Link>
+      <div className="alert alert-warning lead text-center my-2">
+        <Link to="/pricing" className="btn btn-lg btn-success my--5">Upgrade to iLoveCoding Premium</Link>
         {' '}
         to unlock live weekly group calls with your mentor.
       </div>
