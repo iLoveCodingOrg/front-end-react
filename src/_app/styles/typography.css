@@ -72,3 +72,11 @@ ul.checkmark {
     }
   }
 }
+
+a{
+  &.bg-light{
+    &:hover, &:focus{
+      background-color: var(--gray-lightest) !important;
+    }
+  }
+}

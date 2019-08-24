@@ -54,32 +54,32 @@ function Pricing() {
         <Price />
       </div>
       <div className="pt-5"><Testimonials itemNum="1" /></div>
-      <div className="pb-6 text-center">
+      <div className="pb-4 text-center">
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
 
-      <div className="py-7 bg-gray-lighter"><WhatYouGet /></div>
+      <div className="py-5 bg-gray-lighter"><WhatYouGet /></div>
       <div className="pt-5"><Testimonials itemNum="0" /></div>
       <div className="text-center">
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
 
-      <div className="py-7"><WhatDifferent /></div>
+      <div className="py-5"><WhatDifferent /></div>
       <div className=""><Testimonials itemNum="3" /></div>
 
       <div className="pb-5 text-center">
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
 
-      <div className="py-7"><WhatBuild /></div>
-      <div className="py-7"><WhatLearn /></div>
-      <div className="py-7"><WhoFor /></div>
+      <div className="py-5"><WhatBuild /></div>
+      <div className="py-5"><WhatLearn /></div>
+      <div className="py-5"><WhoFor /></div>
       <div className=""><Testimonials itemNum="4" /></div>
       <div className="pb-5 text-center">
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
-      <div className="py-7 bg-gray-lightest"><Guarantee /></div>
-      <div className="py-7 bg-gray-lighter">
+      <div className="py-5 bg-gray-lightest"><Guarantee /></div>
+      <div className="py-5 bg-gray-lighter">
         <div className="col-md-10 col-lg-8 mr-auto ml-auto">
           <AboutAziz />
         </div>
@@ -88,8 +88,8 @@ function Pricing() {
       <div className="text-center">
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
-      <div className="pt-7"><FAQs /></div>
-      <div className="pb-7 text-center">
+      <div className="pt-5"><FAQs /></div>
+      <div className="pb-5 text-center">
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
     </div>

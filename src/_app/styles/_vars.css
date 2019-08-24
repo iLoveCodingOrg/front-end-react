@@ -2,8 +2,8 @@
   --white: #ffffff;
   --black: #000000;
 
-  --gray-lighest: #ced4da;
-  --gray-ligher: #ced4da;
+  --gray-lightest: #ced4da;
+  --gray-lighter: #ced4da;
   --gray-light: #adb5bd;
   --gray: #6c757d;
   --gray-dark: #495057;
@@ -21,9 +21,14 @@
   --teal: #20c997;
   --cyan: #17a2b8;
 
+  --border-radius: .25em;
+
   --xs: 0;
   --sm: 576px;
   --md: 768px;
   --lg: 992px;
   --xl: 1200px;
+
+  --from: 0;
+  --to: 10
 }

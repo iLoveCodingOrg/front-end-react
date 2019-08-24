@@ -35,10 +35,9 @@ select{
 input, select, textarea{
   padding: 16px;
   font-size: 1em;
-  border-radius: var(--border-radius-light);
-  border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-lighter);
   background-color: white;
-  font-family: regular-font;
 }
 
 label{
@@ -68,7 +67,7 @@ input[type=button], input[type=submit], button, .X_btn{
   padding: 10px 30px;
   background-color: var(--primary);
   border-color: var(--primary);
-  border-radius: var(--border-radius-light);
+  border-radius: var(--border-radius);
   display: inline-flex;
   justify-content: center;
   cursor: pointer;
@@ -96,8 +95,4 @@ input[type=button]:hover, input[type=submit]:hover, button:hover, .X_btn:hover{
   padding: 0px;
   box-shadow: 0 5px 15px -5px rgba(46, 91, 255, 0.15);
   border-width: 0px;
-}
-
-.cursor-pointer{
-  cursor: pointer;
 }

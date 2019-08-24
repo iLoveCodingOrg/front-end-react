@@ -1,0 +1,23 @@
+.d-block{
+  display: block;
+}
+
+.d-inline-block{
+  display: inline-block;
+}
+
+.d-inline{
+  display: inline;
+}
+
+.p-relative{
+  position: relative;
+}
+
+.p-absolute{
+  position: absolute;
+}
+
+.p-fixed{
+  position: fixed;
+}

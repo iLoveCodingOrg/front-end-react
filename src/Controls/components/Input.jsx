@@ -13,11 +13,11 @@ export default function Input({
       className={classNames}
       htmlFor={name}
     >
-      <span>{label}</span>
+      <span>{label || name}</span>
       <input
         name={name}
         type={type}
-        placeholder={placeholder}
+        placeholder={placeholder || label || name}
         value={value}
         pattern={pattern}
         maxLength={maxLength}
@@ -46,7 +46,7 @@ Input.propTypes = {
 Input.defaultProps = {
   type: 'text',
   placeholder: undefined,
-  value: '',
+  value: undefined,
   onChange: undefined,
   className: undefined,
   required: false,

@@ -1,5 +1,10 @@
-@import "./_vars.css";
 @import "./bootstrap/bootstrap.scss";
+
+@import "./_vars.css";
+@import "./flex.css";
+@import "./grid.css";
+@import "./margin-padding.css";
+
 @import "./typography.css";
 @import "./utils.css";
 @import "./nav.css";

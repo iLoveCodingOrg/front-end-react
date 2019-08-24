@@ -22,8 +22,8 @@ export default function () {
       </div>
 
       <div className="col-md-10 col-lg-9 flex-column align-items-center">
-        <div className="bg-white rounded p-6">
-          <div className="row mb-7">
+        <div className="bg-white rounded p-4">
+          <div className="row mb-5">
             <div className="col-lg-4 text-center mb-4 mb-lg-0">
               <img src={modules} alt="All Modules" className="w-100" style={{ maxWidth: '300px' }} />
             </div>
@@ -72,7 +72,7 @@ export default function () {
             </div>
           </div>
 
-          <div className="row mb-7">
+          <div className="row mb-5">
             <div className="col-lg-4 text-center mb-4 mb-lg-0">
               <img src={community} alt="Slack Student Community" className="border w-100" style={{ maxWidth: '300px' }} />
             </div>

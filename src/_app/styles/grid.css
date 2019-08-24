@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+}
+
+.grid-wrap {
+  height: 100%;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: auto;
+}
+
+.full-row {
+  grid-column: 1 / -1;
+}
