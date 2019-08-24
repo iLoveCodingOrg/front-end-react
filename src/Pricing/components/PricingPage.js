@@ -43,7 +43,7 @@ function Pricing() {
         . As long as you remain a member, you will always have your current price.
       </p> */}
       <div className="py-5"><Header /></div>
-      <div id="payment" className="py-5 bg-gray-200">
+      <div id="payment" className="py-5 bg-gray-lighter">
         {/* <div className="text-center mb-3">
           <span className="h2">
             Current Price:
@@ -58,7 +58,7 @@ function Pricing() {
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
 
-      <div className="py-7 bg-gray-200"><WhatYouGet /></div>
+      <div className="py-7 bg-gray-lighter"><WhatYouGet /></div>
       <div className="pt-5"><Testimonials itemNum="0" /></div>
       <div className="text-center">
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
@@ -78,8 +78,8 @@ function Pricing() {
       <div className="pb-5 text-center">
         <a className="mt-4 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
-      <div className="py-7 bg-gray-100"><Guarantee /></div>
-      <div className="py-7 bg-gray-200">
+      <div className="py-7 bg-gray-lightest"><Guarantee /></div>
+      <div className="py-7 bg-gray-lighter">
         <div className="col-md-10 col-lg-8 mr-auto ml-auto">
           <AboutAziz />
         </div>

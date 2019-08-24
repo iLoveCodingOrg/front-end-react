@@ -47,7 +47,7 @@ export default () => (
       </p>
       <div className="row my-5">
         <div className="col-sm-12 d-flex mb-4 mb-sm-0">
-          <div className="alert bg-gray-100 py-4 border text-center mb-0 w-100">
+          <div className="alert bg-gray-lightest py-4 border text-center mb-0 w-100">
             <h5>Time to completion - 5 months</h5>
             <p className="mb-0">
               Study 15 hrs/week and complete within 5 months.

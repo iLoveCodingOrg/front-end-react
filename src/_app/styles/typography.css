@@ -17,13 +17,13 @@ strong, .strong {
   line-height: 1em;
 }
 
-@include media-breakpoint-up(sm) {
+@media (min-width: 576px) {
   .h1, h1 {
     font-size: 3.3em;
   }
 }
 
-@include media-breakpoint-up(sm) {
+@media (min-width: 576px) {
   .lead{
     margin-bottom: 1rem;
     font-size: 1.3rem;
@@ -31,20 +31,20 @@ strong, .strong {
 }
 
 .text-teal{
-  color: $teal
+  color: var(--teal)
 }
 
 .text-orange{
-  color: $orange
+  color: var(--orange)
 }
 
 .badge-teal{
-  background-color: $teal;
+  background-color: var(--teal);
   color: #ffffff;
 }
 
 .badge-orange{
-  background-color: $orange;
+  background-color: var(--orange);
   color: #ffffff;
 }
 

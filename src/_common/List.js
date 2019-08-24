@@ -42,6 +42,7 @@ export default function List({
 
   return (
     <div className="container">
+      <Loading />
       { isLoading && <Loading /> }
       { !isLoading && error && <ErrorBox /> }
       { !isLoading && !error && (

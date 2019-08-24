@@ -1,6 +1,7 @@
+import './style.css'
 import React from 'react'
 
-export default function () {
+export default function Loading() {
   return (
     <div className="d-flex d-flex flex-column">
       <div className="loading-spinner spinner-sm align-self-center" />

@@ -1,8 +1,8 @@
-@import "./bootstrap";
-@import "./typography";
-@import "./utils";
-@import "./loading-spinner";
-@import "./nav";
+@import "./_vars.css";
+@import "./bootstrap/bootstrap.scss";
+@import "./typography.css";
+@import "./utils.css";
+@import "./nav.css";
 
 #pricing-page{
   scroll-behavior: smooth;

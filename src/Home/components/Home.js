@@ -18,7 +18,7 @@ function Home({ isLoggedIn }) {
         <meta name="description" content="iLoveCoding teaches you how to think and build like a software developer focusing on Full-Stack JavaScript development." />
       </Helmet>
       <Hero />
-      <div className="my-5 bg-gray-100 py-5 container-fluid border-top">
+      <div className="my-5 bg-gray-lightest py-5 container-fluid border-top">
         <SocialProof />
       </div>
       <div className="mt-4 d-flex justify-content-center">

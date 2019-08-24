@@ -28,7 +28,7 @@ function Pricing() {
       <div className="pb-5">
         <Curriculum />
       </div>
-      <div className="bg-gray-200 mt-4">
+      <div className="bg-gray-lighter mt-4">
         <div className="py-5 d-flex justify-content-center">
           <div className="col-md-10 col-lg-8">
             <AboutAziz />

@@ -1,5 +1,5 @@
 import '../node_modules/open-iconic/font/css/open-iconic-bootstrap.css'
-import './_app/styles/index.scss'
+import './_app/styles/index.css'
 import 'react-toastify/dist/ReactToastify.min.css'
 
 import React from 'react'

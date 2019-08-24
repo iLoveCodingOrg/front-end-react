@@ -1,4 +1,4 @@
-import './video.scss'
+import './video.css'
 
 import React from 'react'
 import PropTypes from 'prop-types'

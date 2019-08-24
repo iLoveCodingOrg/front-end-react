@@ -1,5 +1,5 @@
 .loading-spinner {
-  border: 10px solid $blue;
+  border: 10px solid var(--blue);
   border-top: 10px solid white;
   width: 100px;
   height: 100px;

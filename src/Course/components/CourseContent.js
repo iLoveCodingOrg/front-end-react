@@ -113,14 +113,14 @@ class CourseContent extends React.Component {
         <div className="btn-group d-flex">
           <button
             type="button"
-            className="btn btn-outline-secondary border-gray-400 flex-fill"
+            className="btn btn-outline-secondary border-gray flex-fill"
             onClickCapture={() => this.handleScroll('up')}
           >
             Scroll Up ⬆
           </button>
           <button
             type="button"
-            className="btn btn-outline-secondary border-gray-400 flex-fill"
+            className="btn btn-outline-secondary border-gray flex-fill"
             onClick={() => this.handleScroll('down')}
           >
             Scroll Down ⬇
@@ -134,7 +134,7 @@ class CourseContent extends React.Component {
     const { lessons, maxScrollHeight } = this.props
     return (
       <>
-        <div className="list-group-item bg-gray-200 clearfix">
+        <div className="list-group-item bg-gray-ligher clearfix">
           <div className="h5 mb-0 float-left">Course content</div>
           {this.renderProgressIndicator()}
         </div>

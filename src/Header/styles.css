@@ -23,7 +23,7 @@
   img {
     width: 250px;
     padding: 16px 7px;
-    background-color: #1772f2;
+    background-color: var(--blue);
     vertical-align: top;
     
   }

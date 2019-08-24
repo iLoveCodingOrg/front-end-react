@@ -18,7 +18,7 @@ export default function () {
       </div>
       <div>
         <table className="table text-center">
-          <thead className="bg-gray-200 bold strong">
+          <thead className="bg-gray-lighter bold strong">
             <tr>
               <th width="20%" className="" />
               <th width="27%" className="h5 align-middle border-right border-left border-primary alert-primary">

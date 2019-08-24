@@ -1,4 +1,4 @@
-import './styles'
+import './styles.css'
 import isEmpty from 'lodash/isEmpty'
 import React from 'react'
 import { connect } from 'react-redux'
