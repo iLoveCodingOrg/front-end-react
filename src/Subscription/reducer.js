@@ -35,7 +35,7 @@ export default (state = initialState, { payload, type }) => {
         view: {
           isLoading: false,
           error: payload.error,
-          data: payload.data,
+          data: payload.data || initialState.view.data,
         },
       }
     case SET_SUBSCRIPTION_LOADING:

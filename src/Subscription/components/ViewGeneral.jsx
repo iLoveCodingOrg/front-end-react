@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { getSubscriptionById } from '../actions'
 import Transactions from './Transactions'
 import Loading from '../../Loading'
-import ErrorBox from '../../ErrorBox'
 import PaymentMethodInfo from './PaymentMethodInfo'
 
 function ViewGeneral({
@@ -20,11 +19,17 @@ function ViewGeneral({
     getSubscription(subscriptionId)
   }, [subscriptionId])
 
+  const renderError = () => (
+    <div className="alert alert-danger">
+      {error}
+    </div>
+  )
+
   return (
     <div className="row">
       <div className="col-12">
         { isLoading && <Loading />}
-        { !isLoading && error && <ErrorBox /> }
+        { !isLoading && error && renderError() }
         { !isLoading && !error && (
         <div>
           <div className="my-1 h4">
@@ -41,29 +46,31 @@ function ViewGeneral({
               <p>
                 <strong>Plan Name</strong>
                 <br />
-                {plan.name}
+                {plan && plan.name}
               </p>
               <p>
                 <strong>Plan Description</strong>
                 <br />
-                {plan.description}
+                {plan && plan.description}
               </p>
             </div>
 
             <div className="col-12 col-md-6">
               <h3>Payment Method on file</h3>
+              {subscriptionId && paymentMethod && (
               <PaymentMethodInfo
                 subscriptionId={subscriptionId}
                 creditCard={paymentMethod.creditCard}
                 paypal={paymentMethod.paypal}
                 showUpdateBtn
               />
+              )}
             </div>
           </div>
           <div className="row">
             <div className="col-12">
               <h3>Transactions</h3>
-              <Transactions data={transactions} />
+              {transactions && <Transactions data={transactions} />}
             </div>
           </div>
         </div>
@@ -71,10 +78,6 @@ function ViewGeneral({
       </div>
     </div>
   )
-}
-
-ViewGeneral.defaultProps = {
-  error: '',
 }
 
 ViewGeneral.propTypes = {

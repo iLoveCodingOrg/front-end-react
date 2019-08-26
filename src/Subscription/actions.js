@@ -88,9 +88,11 @@ export function getSubscriptionById(id) {
       .then((json) => {
         dispatch(setSubscription(null, json))
       })
-      .catch((err) => {
-        dispatch(setSubscription(err))
-      })
+      .catch(err => parseJSON(err)
+        .then((err) => {
+          const erroMessage = err && err.error && err.error.message
+          dispatch(setSubscription(erroMessage))
+        }))
   }
 }
 
