@@ -8,6 +8,8 @@ import {
   SET_CLIENT_TOKEN_LOADING,
   SET_BUY_STATUS,
   SET_BUY_LOADING,
+  SET_UPDATE_CREDITCARD,
+  SET_UPDATE_CREDITCARD_LOADING,
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import {
@@ -68,6 +70,15 @@ export function setProduct(error = null, data) {
 export function setClientTokenLoading(isLoading = true) {
   return {
     type: SET_CLIENT_TOKEN_LOADING,
+    payload: {
+      isLoading,
+    },
+  }
+}
+
+export function setUpdateCreditCardLoading(isLoading = true) {
+  return {
+    type: SET_UPDATE_CREDITCARD_LOADING,
     payload: {
       isLoading,
     },
@@ -190,4 +201,40 @@ export function setBuyStatus(error = null, status = {}) {
   }
 
   return action
+}
+
+function setUpdateCreditCard(error = null, data = {}) {
+  return {
+    type: SET_UPDATE_CREDITCARD,
+    payload: {
+      error,
+      data,
+    },
+  }
+}
+
+export function updateBraintreeCreditCard(subscriptionId, nonce) {
+  console.log('updateBraintreeCreditCard', subscriptionId, nonce)
+  const url = `${API_URL}payments/subscriptions/${subscriptionId}/update-card?paymentMethodNonce=${nonce}`
+
+  return (dispatch) => {
+    dispatch(setUpdateCreditCardLoading(true))
+
+    return fetch(url, {
+      credentials: 'include',
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    })
+      .then(checkStatus)
+      .then(parseJSON)
+      .then((json) => {
+        dispatch(setUpdateCreditCard(null, json))
+      })
+      .catch((error) => {
+        dispatch(setUpdateCreditCard(error))
+      })
+  }
 }

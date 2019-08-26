@@ -5,6 +5,8 @@ import {
   SET_CLIENT_TOKEN_LOADING,
   SET_BUY_STATUS,
   SET_BUY_LOADING,
+  SET_UPDATE_CREDITCARD,
+  SET_UPDATE_CREDITCARD_LOADING,
 } from '../_app/actionTypes'
 
 const initialState = {
@@ -21,6 +23,11 @@ const initialState = {
     error: false,
     isEmailVerified: false,
     isSubscribed: false,
+  },
+  updateCreditCard: {
+    isLoading: true,
+    error: false,
+    data: '',
   },
 }
 
@@ -71,6 +78,23 @@ export default function (state = initialState, { type, payload }) {
         buy: {
           ...state.buy,
           isLoading: payload.isLoading,
+        },
+      }
+    case SET_UPDATE_CREDITCARD:
+      return {
+        ...state,
+        updateCreditCard: {
+          error: payload.error,
+          data: payload.data,
+          isLoading: false,
+        },
+      }
+    case SET_UPDATE_CREDITCARD_LOADING:
+      return {
+        ...state,
+        updateCreditCard: {
+          ...state.updateCreditCard,
+          isLoading: true,
         },
       }
     default:
