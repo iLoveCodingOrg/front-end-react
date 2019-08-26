@@ -62,9 +62,9 @@ export default () => (
         </small>
         Fundamentals
       </h2>
-      <p className="lead text-muted">
+      <h3 className="f-300 text-muted">
         Learn the fundamentals of the HTML, CSS and JavaScript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
-      </p>
+      </h3>
       <p>
         <strong>Time to completion:</strong>
         <br />

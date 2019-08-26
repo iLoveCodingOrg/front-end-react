@@ -11,25 +11,25 @@ export default function () {
         </div>
         <div className="col-md-6">
           <h2>Who is iLoveCoding for?</h2>
-          <p className="lead">
-                    Designed for beginners, designers and entrepreneurs (Like me - Aziz). However I constantly get experienced developers from large companies join as well.
-          </p>
+          <h3 className="f-300">
+            Designed for beginners, designers and entrepreneurs (Like me - Aziz). However I constantly get experienced developers from large companies join as well.
+          </h3>
           <div>
             <CheckMark />
             {' '}
-Beginners
+            Beginners
             <br />
             <CheckMark />
             {' '}
-Junior/Senior developers
+            Junior/Senior developers
             <br />
             <CheckMark />
             {' '}
-Developers from a different domain
+            Developers from a different domain
             <br />
             <CheckMark />
             {' '}
-Entrepreneurs
+            Entrepreneurs
             <br />
           </div>
         </div>

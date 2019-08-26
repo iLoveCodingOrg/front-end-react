@@ -11,9 +11,9 @@ export default function () {
         </div>
         <div className="col-md-7">
           <h2>How is iLoveCoding Different?</h2>
-          <p className="lead">
+          <h3 className="f-300">
             iLoveCoding gives more value for your money than anyone else we know. See the value comparison chart below:
-          </p>
+          </h3>
         </div>
       </div>
       <div>

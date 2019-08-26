@@ -83,9 +83,9 @@ export default () => (
         </small>
         Modern Front-End Development
       </h2>
-      <p className="lead text-muted">
+      <h3 className="f-300 text-muted">
         Learn how to make traditional and modern front-end applications. Learn the JavaScript frameworks which are in demand today, and learn the techniques used by high-tech companies to build modern websites. It's all within reach here.
-      </p>
+      </h3>
       <p>
         <strong>Time to completion:</strong>
         <br />

@@ -11,9 +11,9 @@ export default function () {
         </div>
         <div className="col-md-6">
           <h2>What will you build?</h2>
-          <p className="lead">
+          <h3 className="f-300">
             With iLoveCoding your focus will be to apply your knowledge; For that we will build a bunch of projects so you learn and build your portfolio in the process.
-          </p>
+          </h3>
           <div className="d-flex flex-wrap justify-space-around">
             <div className="">
               <CheckMark />

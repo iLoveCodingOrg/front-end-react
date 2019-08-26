@@ -11,12 +11,12 @@ function ListHeader() {
     <div className="d-flex flex-column align-items-center">
       <Helmet><title>Practice Projects - iLoveCoding</title></Helmet>
       <h1>Practice Projects</h1>
-      <p className="lead col-lg-9 align-self-center">
-                In this section you will build real-world projects. Here you get ample practice on applying your skills that you got from the
+      <h3 className="f-300 col-lg-9 align-self-center">
+        In this section you will build real-world projects. Here you get ample practice on applying your skills that you got from the
         {' '}
         <Link to="/courses/core">Core Training</Link>
-. With practice, your knowledge will sink in on a deeper level and your confidence will grow.
-      </p>
+        . With practice, your knowledge will sink in on a deeper level and your confidence will grow.
+      </h3>
     </div>
   )
 }

@@ -2,10 +2,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 export default class OfficeHours extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     const script = document.createElement('script')
 
@@ -23,19 +19,19 @@ export default class OfficeHours extends React.Component {
         </Helmet>
         <div className="align-self-center col-md-10 col-lg-8 mt-1">
           <h1>
-                        Schedule office hours with Aziz Ali
+            Schedule office hours with Aziz Ali
           </h1>
 
-          <p className="lead">
-                        Pick a date and time from the options below and schedule one-on-one time with me.
-          </p>
-          <p className="lead">
-                        Take advantage of the time that I have available. Pick my brain, take advantage of my expertise while I am available. As I start getting busy I will no longer be able to offer this personalized service.
-          </p>
+          <h3 className="f-300">
+            Pick a date and time from the options below and schedule one-on-one time with me.
+          </h3>
+          <h3 className="f-300">
+            Take advantage of the time that I have available. Pick my brain, take advantage of my expertise while I am available. As I start getting busy I will no longer be able to offer this personalized service.
+          </h3>
 
           <div className="alert alert-info pb-0">
             <h5 className="alert-heading">
-                            Please come to the call prepared
+              Please come to the call prepared
             </h5>
             <ol>
               <li>Write all your questions down.</li>
@@ -46,7 +42,7 @@ export default class OfficeHours extends React.Component {
             <p>
               <strong>Note:</strong>
               {' '}
-All sessions happen on Google Hangout. This way we can see each other and even share our screens to discuss any code problems you want addressed.
+              All sessions happen on Google Hangout. This way we can see each other and even share our screens to discuss any code problems you want addressed.
             </p>
           </div>
         </div>

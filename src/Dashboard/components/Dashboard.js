@@ -20,9 +20,9 @@ export default function () {
         <div className="row">
           <div className="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9">
             <h1 className="headline">Dashboard</h1>
-            <p className="lead text-muted">
+            <h3 className="f-300 text-muted">
               Here you will find quick links to resources which are included in your membership.
-            </p>
+            </h3>
           </div>
           <div className="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
             <Video videoSource="314907971" />

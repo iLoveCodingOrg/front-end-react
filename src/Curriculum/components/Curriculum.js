@@ -17,17 +17,17 @@ export default () => (
     </Helmet>
     <div className="container mt-1">
       <h1 className="text-center">The Perfect Curriculum</h1>
-      <p className="lead text-center mb-2">
+      <h3 className="f-300 text-center mb-2">
         Go from zero to a professional Front-End and/or Full-Stack JavaScript developer.
-      </p>
+      </h3>
       <div className="row border-top pt-2">
         <div className="col-md-4">
-          <p className="lead alert alert-warning text-dark">
+          <h3 className="f-300 alert alert-warning text-dark">
             <strong>Important:</strong>
             {' '}
             This curriculum will give you the complete training of the deep technical concepts, homework, cheatsheets and practice projects so become a highly-skilled software developer.&nbsp;
             <strong>Watch the video to get a proper walk through.</strong>
-          </p>
+          </h3>
         </div>
         <div className="col-md-8 text-center p-0 mb-1">
           <Video videoSource="315031967" />

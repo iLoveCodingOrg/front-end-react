@@ -54,9 +54,9 @@ export default () => (
         </small>
         Additional Training
       </h2>
-      <p className="lead text-muted">
+      <h3 className="f-300 text-muted">
         These are additional supplementary training. Choose the topic that spark your interest in any order.
-      </p>
+      </h3>
       <p>
         <strong>Time investment</strong>
         <br />

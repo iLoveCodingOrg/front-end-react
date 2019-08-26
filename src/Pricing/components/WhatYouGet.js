@@ -15,9 +15,9 @@ export default function () {
         </div>
         <div className="col-md-7">
           <h2>What do you get?</h2>
-          <p className="lead">
+          <h3 className="f-300">
             With any iLoveCoding paid membership you get access to Complete Training, and Mentor-Moderated Private Student Community
-          </p>
+          </h3>
         </div>
       </div>
 

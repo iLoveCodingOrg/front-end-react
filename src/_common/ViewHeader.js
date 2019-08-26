@@ -21,7 +21,7 @@ export default function ViewHeader({
 }) {
   const renderBlogHeader = () => {
     if (of === 'blog') {
-      return <Link className="lead mb-2 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link>
+      return <Link className="h3 f-300 mb-2 d-block" to="/blog">&lt; iLoveCoding Blog &gt;</Link>
     }
     return null
   }
@@ -47,7 +47,7 @@ export default function ViewHeader({
     <div className={`${cssClass} view-header`}>
       {renderBlogHeader()}
       <h1>{title}</h1>
-      <p className="lead">{subTitle}</p>
+      <h3 className="f-300">{subTitle}</h3>
       {renderCourseLessonMeta()}
     </div>
   )

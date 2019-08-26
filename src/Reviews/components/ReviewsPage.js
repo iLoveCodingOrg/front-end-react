@@ -14,9 +14,9 @@ function ReviewsPage() {
       </Helmet>
       <div className="container text-center">
         <h1>Real Results</h1>
-        <p className="lead">
+        <h3 className="f-300">
           I asked my students what changed for the better since learning from iLoveCoding. Here's what they had to say:
-        </p>
+        </h3>
       </div>
       <div className="bg-gray-lighter p-2">
         <div className="container">

@@ -8,7 +8,7 @@ function Header() {
           <h1>
             Complete Video Training + Live Mentor Support.
           </h1>
-          <p className="lead">
+          <h3 className="f-300">
             Become a
             {' '}
             <u>Job-Ready</u>
@@ -16,7 +16,7 @@ function Header() {
             Front-End and Full-Stack JavaScript Developer with Confidence.
             <br />
             No more confusing explanations and boring theory. Learn while building real-world projects.
-          </p>
+          </h3>
         </div>
       </div>
     </section>

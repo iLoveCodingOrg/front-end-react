@@ -27,9 +27,9 @@ export default () => (
         </small>
         Mobile Development
       </h2>
-      <p className="lead text-muted">
+      <h3 className="f-300 text-muted">
         Learn how to build Mobile Applications for iPhone and Android with JavaScript. Use the same technology used to build Instagram, Facebook, Airbnb and Walmart mobile apps.
-      </p>
+      </h3>
       <p>
         <strong>Time to completion:</strong>
         <br />

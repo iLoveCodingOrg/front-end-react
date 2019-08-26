@@ -19,9 +19,7 @@ export default class GroupCall extends React.Component {
         </Helmet>
         <div className="align-self-center col-md-10 col-lg-8 mt-1">
           <h1>Weekly Group Calls</h1>
-
-          <p className="lead">Register to the next upcoming weekly group call</p>
-
+          <h3 className="f-300">Register to the next upcoming weekly group call</h3>
           <div className="alert alert-info pb-0">
             <h5 className="alert-heading">
               Please come to the call prepared

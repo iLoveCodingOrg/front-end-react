@@ -12,7 +12,7 @@ function Hero() {
         <div className="col-12 col-md-7 justify-content-center">
           <p className="h3">Learn to Code with Confidence</p>
           <h1 className="strong mb-2">Complete Video Training + Mentor Support</h1>
-          <p className="lead mb-3 line-height-2">
+          <h3 className="f-300 mb-3">
             Get everything you need to become a
             {' '}
             <u>job-ready</u>
@@ -27,7 +27,7 @@ function Hero() {
             <u>launch-your-idea-ready</u>
             {' '}
             Front-End and/or Full-Stack JavaScript Developer.
-          </p>
+          </h3>
           <Link to="/pricing" className="btn btn-lg btn-primary">Get Started Now</Link>
           <Link to="/pages/how-it-works" className="btn-link btn-lg">Or see How it works</Link>
         </div>

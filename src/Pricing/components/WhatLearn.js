@@ -11,9 +11,9 @@ export default function () {
         </div>
         <div className="col-md-6">
           <h2>What will you learn?</h2>
-          <p className="lead">
+          <h3 className="f-300">
             You will learn all the technical skills so you can call yourself a competent Front-End and Full-Stack JavaScript developer - who is job-ready and can build any kind of app.
-          </p>
+          </h3>
           <div className="">
             <CheckMark />
             {' '}

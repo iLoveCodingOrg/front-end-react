@@ -52,9 +52,9 @@ export default () => (
         </small>
         Back-End Development
       </h2>
-      <p className="lead text-muted">
+      <h3 className="f-300 text-muted">
         Learn how to make web application back-ends. Build Web APIs, security and authentication (i.e. Login Feature) and connect your app with the database
-      </p>
+      </h3>
       <p>
         <strong>Time to completion:</strong>
         <br />

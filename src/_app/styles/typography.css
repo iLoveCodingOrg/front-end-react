@@ -1,20 +1,89 @@
-.u{
+:root{
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+body {
+  font-family: var(--font-family-sans-serif);
+  line-height: 1.6em;
+  color: var(--gray-darkest);
+  font-size: 16px;
+  /* font-size: @1920 var(--medium-px) @1440 var(--medium-px) @1024 var(--small-px); */
+}
+
+p, ul, ol {
+  margin: 0 0 1em 0;
+}
+ul, ol {
+  padding-left: 2em;
+}
+
+a{
+  cursor: pointer;
+  color: var(--blue);
+  text-decoration: none;
+  &:hover{
+    color: var(--blue-dark);
+    background-color: inherit;
+  }
+  &.bg-light{
+    &:hover, &:focus{
+      background-color: var(--gray-lightest) !important;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  line-height: 1.6em;
+}
+
+h1, .h1 { 
+  font-size: 2.2em;
+  line-height: 1.2em;
+}
+h2, .h2 { font-size: 1.8; }
+h3, .h3 { font-size: 1.4em; }
+h4, .h4 { font-size: 1em; }
+h5, .h5 { font-size: 0.8em; }
+h6, .h6 { font-size: 0.6em; }
+
+b, strong, .strong, .f-700 {
+  font-weight: bold
+}
+.f-500 {
+  font-weight: 500;
+}
+.f-400 {
+  font-weight: 400;
+}
+.f-300 {
+  font-weight: 300;
+}
+
+.small {
+  font-size: smaller;
+}
+
+i, em, .em {
+  font-style: italic 
+}
+
+u, .u{
   text-decoration: underline
 }
+
 .strike {
   text-decoration: line-through
 }
 
-strong, .strong {
-  font-weight: bold
-}
-
-.em {
-  font-style: italic 
-}
 
 .line-height-1{
   line-height: 1em;
+}
+.line-height-2{
+  line-height: 2em;
 }
 
 @media (min-width: 576px) {
@@ -23,20 +92,10 @@ strong, .strong {
   }
 }
 
-@media (min-width: 576px) {
-  .lead{
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-  }
-}
 
-.text-teal{
-  color: var(--teal)
-}
+.text-teal{ color: var(--teal) }
 
-.text-orange{
-  color: var(--orange)
-}
+.text-orange{ color: var(--orange) }
 
 .badge-teal{
   background-color: var(--teal);
@@ -73,10 +132,72 @@ ul.checkmark {
   }
 }
 
-a{
-  &.bg-light{
-    &:hover, &:focus{
-      background-color: var(--gray-lightest) !important;
-    }
+
+
+
+
+
+/*  */
+
+
+.t-right {
+  text-align: right;
+}
+.t-center {
+  text-align: center;
+}
+.t-uppercase {
+  text-transform: uppercase;
+}
+.t-capitalize {
+  text-transform: capitalize;
+}
+.t-capitalize-force {
+  text-transform: lowercase;
+  &::first-letter{
+      text-transform: uppercase;
   }
+}  
+.color-white {
+  color: var(--white);
+}
+.color-red {
+  color: var(--red);
+}
+.color-green {
+  color: var(--green);
+}
+.color-gray {
+  color: var(--gray)
+}
+.color-light-gray {
+  color: var(--gray-light)
+}
+.color-bray {
+  color: var(--bray)
+}
+.color-bray-dark {
+  color: var(--bray-dark)
+}
+.color-bray-medium {
+  color: var(--bray-medium)
+}
+.color-bray-light {
+  color: var(--bray-light)
+}
+.color-whitish {
+  color: var(--whitish)
+}
+.color-primary {
+  color: var(--primary)
+}
+
+.t-ellipsis{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.break-word{
+  overflow-wrap: break-word;
 }

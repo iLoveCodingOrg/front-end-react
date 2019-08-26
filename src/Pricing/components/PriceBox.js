@@ -60,7 +60,7 @@ class PriceBox extends React.Component {
               <span className="px-1 badge badge-pill badge-dark border">{name}</span>
             </div>
             <br />
-            <span className="lead em">{desc}</span>
+            <span className="h3 f-300 em">{desc}</span>
             <div className="card-title pricing-card-title mb-0">
               {this.renderPrice(price)}
             </div>

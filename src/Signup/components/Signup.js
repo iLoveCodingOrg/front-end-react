@@ -84,12 +84,12 @@ class Signup extends React.Component {
       <WrapMini>
         <Helmet><title>Signup - iLoveCoding</title></Helmet>
         <h1 className="h2 text-center">Get started with iLoveCoding</h1>
-        <p className="lead text-center">
-                    Get access to the first two courses FREE.
+        <h3 className="f-300 text-center">
+          Get access to the first two courses FREE.
           {' '}
           <Link to="/pricing">Upgrade for full-access anytime</Link>
           .
-        </p>
+        </h3>
 
         <form onSubmit={this.handleSubmit} className="mt-3 col-lg-6 col-md-8 mx-auto">
           {this.renderError()}

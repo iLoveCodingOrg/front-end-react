@@ -1,6 +1,7 @@
 @import "./bootstrap/bootstrap.scss";
 
 @import "./_vars.css";
+@import "./reboot.css";
 @import "./flex.css";
 @import "./grid.css";
 @import "./margin-padding.css";
