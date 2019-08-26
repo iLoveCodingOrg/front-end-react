@@ -232,9 +232,11 @@ export function updateBraintreeCreditCard(subscriptionId, nonce) {
       .then(parseJSON)
       .then((json) => {
         dispatch(setUpdateCreditCard(null, json))
+        return { isSuccess: true }
       })
       .catch((error) => {
         dispatch(setUpdateCreditCard(error))
+        return { isSuccess: false }
       })
   }
 }

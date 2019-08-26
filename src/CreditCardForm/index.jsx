@@ -15,14 +15,16 @@ function CreditCardForm({
 
   const getCreditCardObj = useRef()
 
-  const handleFormClick = () => {
+  const handleFormClick = async () => {
     // 1. Grab the nonce
     // 2. Make call with the new API
-    getCreditCardObj.current()
-      .then((token) => { console.log(token); return token })
-      .then(({ nonce }) => updateCreditCard(subscriptionId, nonce))
-      .then(({ isSuccess }) => { if (isSuccess) { onSuccessCb() } })
-      .catch(err => console.log(err))
+    const token = await getCreditCardObj.current()
+    console.log(token)
+
+    const { isSuccess } = await updateCreditCard(subscriptionId, token.nonce)
+    if (isSuccess) {
+      onSuccessCb()
+    }
   }
 
   return (
@@ -50,6 +52,7 @@ function CreditCardForm({
               className="form-control"
               type="number"
               placeholder="4111 1111 1111 1111"
+              prefill="4111 1111 1111 1112"
             />
           </div>
         </div>
@@ -64,6 +67,7 @@ function CreditCardForm({
               className="form-control"
               type="expirationDate"
               placeholder="MM/YYYY"
+              prefill="0220"
             />
           </div>
           <div className="w-100 mb-2 mr-1">
@@ -76,6 +80,7 @@ function CreditCardForm({
               className="form-control"
               type="cvv"
               placeholder="123"
+              prefill="123"
             />
           </div>
           <div className="w-100 mb-2">
@@ -88,6 +93,7 @@ function CreditCardForm({
               className="form-control"
               type="postalCode"
               placeholder="11111"
+              prefill="123456"
             />
           </div>
         </div>
@@ -117,9 +123,7 @@ function mapDispatchToProps(dispatch) {
     getClientToken: () => {
       dispatch(getBraintreeClientToken())
     },
-    updateCreditCard: (subscriptionId, nonce) => {
-      dispatch(updateBraintreeCreditCard(subscriptionId, nonce))
-    },
+    updateCreditCard: (subscriptionId, nonce) => dispatch(updateBraintreeCreditCard(subscriptionId, nonce)),
   }
 }
 
