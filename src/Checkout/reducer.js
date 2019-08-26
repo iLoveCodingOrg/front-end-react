@@ -25,7 +25,7 @@ const initialState = {
     isSubscribed: false,
   },
   updateCreditCard: {
-    isLoading: true,
+    isLoading: false,
     error: false,
     data: '',
   },
