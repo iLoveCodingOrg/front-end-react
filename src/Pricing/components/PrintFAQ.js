@@ -27,18 +27,18 @@ class PrintFAQs extends React.Component {
     }
     const { data } = this.props
     return (
-      <div className="d-flex flex-wrap">
+      <div className="flex flex-wrap">
         {data.map(({ question, Answer }, index) => (
-          <div className="card mb-1 border-dark" key={index}>
+          <div className="bg-white mb-1 border-dark" key={index}>
             <button
               className="p-2 btn btn-light btn-block text-left"
               onClick={() => this.toggleQuestion(index)}
             >
-                            ➕
+              ➕
               {' '}
               {question}
             </button>
-            <div className="card-body" style={this.state.isVisible[index] ? null : hide}>
+            <div style={this.state.isVisible[index] ? null : hide}>
               <Answer />
             </div>
           </div>

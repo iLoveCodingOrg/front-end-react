@@ -4,7 +4,7 @@ import HomeForm from './HomeForm'
 function SevenDayCourse() {
   return (
     <div
-      className="mx--5 mx-sm-0 my-1 align-self-center card p-2 border-primary bg-gray-lightest"
+      className="mx--5 mx-sm-0 my-1 align-self-center bg-white p-2 border-primary bg-gray-lightest"
       style={{ maxWidth: '640px' }}
     >
       <div className="h4">

@@ -45,7 +45,7 @@ class VideoWrap extends React.Component {
               />
             )
             : (
-              <div className="d-flex flex-md-row flex-column alert alert-warning ">
+              <div className="flex flex-md-row flex-column alert alert-warning ">
                 {this.renderThumb(thumbnail, title)}
                 <div>
                   <div className="h3 font-weight-light">

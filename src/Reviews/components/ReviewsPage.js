@@ -7,7 +7,7 @@ import Cta from '../../Cta'
 
 function ReviewsPage() {
   return (
-    <div className="d-flex flex-column">
+    <div className="flex flex-column">
       <Helmet>
         <title>Real Results - iLoveCoding</title>
         <meta name="description" content="Read what some of the successful students have to say about iLoveCoding. Read their testimonials and full reviews" />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Copyrights from './Copyrights'
 
 export default () => (
-  <footer className="d-flex flex-column mt-3 py-2 pt-md-5 border-top">
+  <footer className="flex flex-column mt-3 py-2 pt-md-5 bt-1">
     <div className="align-self-center container">
       <div className="my--5">
         <span className="strong pr--25">Students</span>

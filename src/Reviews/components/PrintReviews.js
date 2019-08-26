@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ({ data, containerClasses, itemClasses }) {
   return (
-    <div className={`d-flex flex-wrap justify-content-center ${containerClasses}`}>
+    <div className={`flex flex-wrap justify-content-center ${containerClasses}`}>
       {data.map(({
         title, body, thumbSrc, credit1, credit2,
       }, index) => (

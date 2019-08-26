@@ -9,7 +9,7 @@ export default function PrintTraining({
   return (
     <div>
       <h5>{title}</h5>
-      <div className="d-flex flex-wrap">
+      <div className="flex flex-wrap">
         {data.map(({ name, link, thumbSrc }, index) => (
           <div
             key={index}

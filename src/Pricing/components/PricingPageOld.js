@@ -16,7 +16,7 @@ import AboutAziz from '../../AboutAziz/AboutAziz'
 
 function Pricing() {
   return (
-    <div className="d-flex flex-column">
+    <div className="flex flex-column">
       <Helmet>
         <title>
           Pricing | iLoveCoding - iLoveCoding
@@ -29,7 +29,7 @@ function Pricing() {
         <Curriculum />
       </div>
       <div className="bg-gray-lighter mt-2">
-        <div className="py-3 d-flex justify-content-center">
+        <div className="py-3 flex justify-content-center">
           <div className="col-md-10 col-lg-8">
             <AboutAziz />
           </div>
@@ -43,7 +43,7 @@ function Pricing() {
       <div className="py-3 bg-light"><WhosItNotFor /></div>
       <div className="py-3"><Price /></div> */}
       <div className="py-3 bg-secondary">
-        <div className="d-flex justify-content-center">
+        <div className="flex justify-content-center">
           <div className="col-12 col-md-10 col-lg-8">
             <h2 className="text-center text-white">
               Coding bootcamp level training for 2% of the cost!

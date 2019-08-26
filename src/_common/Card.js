@@ -29,7 +29,7 @@ function Card({ item, of }) {
   const durationVal = courseTotalDuration || duration
 
   return (
-    <div className="d-flex flex-column flex-md-row mb-3 card border-0">
+    <div className="flex flex-column flex-md-row mb-3 bg-white border-0">
       <div>
         {
           thumbnail && (

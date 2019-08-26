@@ -8,14 +8,14 @@ import { List } from '../../_common'
 
 function ListHeader() {
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="flex flex-column align-items-center">
       <Helmet><title>Core Training - iLoveCoding</title></Helmet>
       <h1>Core Training</h1>
-      <h3 className="f-300 col-lg-9 align-self-center">
+      <h3 className="f-300 align-self-center">
         Here you will learn the foundation of modern software development.
         <br />
         <br />
-                This is your curriculum to become a modern
+        This is your curriculum to become a modern
         {' '}
         <strong><i>Job-ready</i></strong>
         {' '}

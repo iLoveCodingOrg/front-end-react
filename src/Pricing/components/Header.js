@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <section className="d-flex justify-content-center">
+    <section className="flex justify-content-center">
       <div className="container">
         <div className="text-center">
           <h1>

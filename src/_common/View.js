@@ -51,7 +51,7 @@ export default function View({
       || of === 'blog'
       || of === 'question'
     ) {
-      return 'col-12 col-lg-9 mx-auto'
+      return 'mx-auto'
     }
     return ''
   }
@@ -103,11 +103,11 @@ export default function View({
             { bodyContent && (
               <div
                 id="html-content"
-                className="col-12 col-lg-9 border-top pt-2 mx-auto"
+                className="bt-1 pt-2 mx-auto"
                 dangerouslySetInnerHTML={{ __html: bodyContent }}
               />
             )}
-            <div className="col-12 col-lg-9 pt-2 mx-auto">
+            <div className="pt-2 mx-auto">
               <Cta of={of} slug={slug} />
             </div>
             { of !== 'page' && (

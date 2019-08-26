@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ({ data, height }) {
   return (
-    <div className="d-flex flex-wrap justify-content-around">
+    <div className="flex flex-wrap justify-content-around">
       {data.map(({
         imgSrc, altText, margin, padding,
       }, index) => (

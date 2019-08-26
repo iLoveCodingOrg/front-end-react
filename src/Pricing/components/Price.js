@@ -119,8 +119,8 @@ class Price extends React.Component {
     }
 
     return (
-      <section className="d-flex justify-content-center">
-        <div className="d-flex flex-column align-items-center">
+      <section className="flex justify-content-center">
+        <div className="flex flex-column align-items-center">
           {/* <div className="position-relative mb-1 mx-sm-auto mr-auto">
                         <Switch
                             style={{ maxWidth: '400px', minWidth: '320px' }}
@@ -147,11 +147,11 @@ class Price extends React.Component {
                             <div className="badge badge-orange"><span className="oi oi-arrow-thick-left" /> Save up to 32%</div>
                         </h5>
                     </div> */}
-          <div className="d-flex flex-wrap justify-content-center">
+          <div className="flex flex-wrap justify-content-center">
             {/* {this.renderPriceBox(data.pro[selected])} */}
             {this.renderPriceBox(data.premium[selected])}
           </div>
-          <div className="d-flex flex-wrap mt-2">
+          <div className="flex flex-wrap mt-2">
             <p>
               ⚡️ Cancel Anytime.
               &nbsp; &nbsp;

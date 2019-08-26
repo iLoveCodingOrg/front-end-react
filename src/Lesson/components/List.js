@@ -6,9 +6,9 @@ import { List } from '../../_common'
 
 function ListHeader() {
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="flex flex-column align-items-center">
       <h1>All Lessons</h1>
-      <h3 className="f-300 col-lg-9 align-self-center">
+      <h3 className="f-300 align-self-center">
         Individual lessons that roll-up to courses.
       </h3>
     </div>

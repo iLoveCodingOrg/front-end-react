@@ -12,16 +12,16 @@ import SocialProof from './SocialProof'
 function Home({ isLoggedIn }) {
   if (isLoggedIn) return <Redirect to="/dashboard" />
   return (
-    <div className="d-flex flex-column">
+    <div className="flex flex-column">
       <Helmet>
         <title>iLoveCoding: Master JavaScript, Learn via Video Screencasts</title>
         <meta name="description" content="iLoveCoding teaches you how to think and build like a software developer focusing on Full-Stack JavaScript development." />
       </Helmet>
       <Hero />
-      <div className="my-3 bg-gray-lightest py-3 container-fluid border-top">
+      <div className="my-3 bg-gray-lightest py-3 container-fluid bt-1">
         <SocialProof />
       </div>
-      <div className="mt-2 d-flex justify-content-center">
+      <div className="mt-2 flex justify-content-center">
         <div className="col-12 col-md-5">
           <h3 className="h2 text-center mb-2">Skip the cheap courses and the expensive bootcamps!</h3>
           <h3 className="f-300 mb-3">
@@ -77,7 +77,7 @@ function Home({ isLoggedIn }) {
             <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>
             , and we'd be happy to answer them.
           </h3>
-          <h3 className="f-300 border-top pt-3 mb-2">
+          <h3 className="f-300 bt-1 pt-3 mb-2">
             Learn to code
             {' '}
             <strong>so well</strong>

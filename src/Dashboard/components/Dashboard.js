@@ -7,7 +7,7 @@ import { Video } from '../../Video'
 
 export default function () {
   return (
-    <div className="d-flex flex-column">
+    <div className="flex flex-column">
       <Helmet>
         <title>Dashboard - iLoveCoding</title>
       </Helmet>
@@ -37,7 +37,7 @@ export default function () {
                 <li><Link to="/curriculum">Full Curriculum</Link></li>
                 <li><Link to="/courses/core">Core Training</Link></li>
                 <li><Link to="/courses/projects">Practice Projects</Link></li>
-                <li className="d-inline-block pt--5 mt--5 border-top"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
+                <li className="d-inline-block pt--5 mt--5 bt-1"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
               </ul>
             </div>
 
@@ -46,7 +46,7 @@ export default function () {
               <ul className="list-unstyled">
                 <li><Link to="/subscriptions">Subscription Info</Link></li>
                 <li><Link to="/change-password">Change Password</Link></li>
-                <li className="d-inline-block pt--5 mt--5 border-top">
+                <li className="d-inline-block pt--5 mt--5 bt-1">
                   Contact:
                   {' '}
                   <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>

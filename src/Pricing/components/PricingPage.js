@@ -17,7 +17,7 @@ import WhoFor from './WhoFor'
 
 function Pricing() {
   return (
-    <div id="pricing-page" className="d-flex flex-column">
+    <div id="pricing-page" className="flex flex-column">
       <Helmet>
         <title>Pricing - iLoveCoding</title>
       </Helmet>

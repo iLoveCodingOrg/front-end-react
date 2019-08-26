@@ -14,7 +14,7 @@ function SubscriptionView({ match }) {
   const title = `Subscription ID: ${id}`
 
   return (
-    <div className="d-flex flex-column">
+    <div className="flex flex-column">
       <Helmet>
         <title>
           {title}

@@ -101,7 +101,7 @@ class ChangePassword extends React.Component {
   render() {
     const title = 'Change Password'
     return (
-      <div className="d-flex flex-column">
+      <div className="flex flex-column">
         <Helmet title={`${title} - iLoveCoding`} />
         <section className="
                     align-self-center

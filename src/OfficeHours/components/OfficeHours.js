@@ -13,7 +13,7 @@ export default class OfficeHours extends React.Component {
 
   render() {
     return (
-      <div className="d-flex flex-column">
+      <div className="flex flex-column">
         <Helmet>
           <title>Schedule office hours with Aziz Ali - iLoveCoding</title>
         </Helmet>

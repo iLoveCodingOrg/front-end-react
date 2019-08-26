@@ -4,7 +4,7 @@ import { CheckMark } from '../../_common'
 
 export default function () {
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="flex flex-column align-items-center">
       <div className="col-md-10 col-lg-8 row mb-2">
         <div className="col-md-6">
           <Video videoSource="311500669" />
@@ -14,7 +14,7 @@ export default function () {
           <h3 className="f-300">
             With iLoveCoding your focus will be to apply your knowledge; For that we will build a bunch of projects so you learn and build your portfolio in the process.
           </h3>
-          <div className="d-flex flex-wrap justify-space-around">
+          <div className="flex flex-wrap justify-space-around">
             <div className="">
               <CheckMark />
               {' '}

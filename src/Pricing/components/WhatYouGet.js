@@ -8,7 +8,7 @@ import Video from '../../Video/components/Video'
 
 export default function () {
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="flex flex-column align-items-center">
       <div className="col-md-10 col-lg-8 row mb-2">
         <div className="col-md-5">
           <Video videoSource="311500556" />
@@ -21,7 +21,7 @@ export default function () {
         </div>
       </div>
 
-      <div className="col-md-10 col-lg-9 flex-column align-items-center">
+      <div className="col-md-10 flex-column align-items-center">
         <div className="bg-white rounded p-2">
           <div className="row mb-3">
             <div className="col-lg-4 text-center mb-2 mb-lg-0">

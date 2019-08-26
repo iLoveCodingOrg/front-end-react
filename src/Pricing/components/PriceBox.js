@@ -45,9 +45,9 @@ class PriceBox extends React.Component {
     return (
       <div
         style={{ maxWidth: '500px', minWidth: '320px' }}
-        className="card mx--5 mb-2 mb-lg-0 border-primary"
+        className="bg-white mx--5 mb-2 mb-lg-0 border-primary"
       >
-        <div className="card-body align-self-center p-2">
+        <div className="align-self-center p-2">
           {
             isPopular && (
               <h5 className="position-absolute" style={{ top: '5px', right: '5px' }}>

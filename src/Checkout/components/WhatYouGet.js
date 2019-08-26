@@ -5,7 +5,7 @@ export default function WhatYouGet() {
     <div>
       <h4 className="mb-1 text-center">Here's What You Get:</h4>
       <ul className="list-group mb-1">
-        <li className="list-group-item d-flex justify-content-between text-success">
+        <li className="list-group-item flex justify-content-between text-success">
           <div>
             <h6 className="my-0">💪 Complete Developer Training</h6>
             <small className="text-muted">
@@ -13,7 +13,7 @@ export default function WhatYouGet() {
             </small>
           </div>
         </li>
-        <li className="list-group-item d-flex justify-content-between text-success">
+        <li className="list-group-item flex justify-content-between text-success">
           <div>
             <h6 className="my-0">🚀 Connect with Mentor</h6>
             <small className="text-muted">
@@ -21,7 +21,7 @@ export default function WhatYouGet() {
             </small>
           </div>
         </li>
-        <li className="list-group-item d-flex justify-content-between text-success">
+        <li className="list-group-item flex justify-content-between text-success">
           <div>
             <h6 className="my-0">🙌 Student Community</h6>
             <small className="text-muted">

@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function () {
   return (
-    <div className="d-flex justify-content-center">
+    <div className="flex justify-content-center">
       <div className="col-md-6 col-lg-6 col-xl-5">
-        <div className="card p-1 alert-warning">
+        <div className="p-1 alert-warning">
           <h3 className="text-center text-dark">
             <span role="img" aria-label="Sheild Emoji">🛡️</span>
             {' '}

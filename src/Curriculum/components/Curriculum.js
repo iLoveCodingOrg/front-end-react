@@ -10,7 +10,7 @@ import Module4 from './Module4'
 import Electives from './Electives'
 
 export default () => (
-  <div className="d-flex flex-column">
+  <div className="flex flex-column">
     <Helmet>
       <title>The Perfect Curriculum to become a Front-End/Full-Stack JavaScript Developer - iLoveCoding</title>
       <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
@@ -20,7 +20,7 @@ export default () => (
       <h3 className="f-300 text-center mb-2">
         Go from zero to a professional Front-End and/or Full-Stack JavaScript developer.
       </h3>
-      <div className="row border-top pt-2">
+      <div className="row bt-1 pt-2">
         <div className="col-md-4">
           <h3 className="f-300 alert alert-warning text-dark">
             <strong>Important:</strong>
@@ -46,7 +46,7 @@ export default () => (
         Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
       </p>
       <div className="row my-3">
-        <div className="col-sm-12 d-flex mb-2 mb-sm-0">
+        <div className="col-sm-12 flex mb-2 mb-sm-0">
           <div className="alert bg-gray-lightest py-2 border text-center mb-0 w-100">
             <h5>Time to completion - 5 months</h5>
             <p className="mb-0">

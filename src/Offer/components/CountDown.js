@@ -10,7 +10,7 @@ function CountDown({ title, timeFrom, timeLeft }) {
     return (
       <div
         style={{ minWidth: '76px' }}
-        className="d-flex flex-column align-items-center
+        className="flex flex-column align-items-center
                 p--25 p-md-3
                 rounded bg-white"
       >
@@ -30,30 +30,22 @@ function CountDown({ title, timeFrom, timeLeft }) {
           // Render a completed state
           return null
           return (
-            <div className="
-                        bg-dark text-white
-                        d-flex justify-content-center align-items-center
-                    "
-            >
+            <div className="bg-dark text-white flex justify-content-center align-items-center">
               <span className="h2 p-1 text-muted">
-                            The offer has expired
+                The offer has expired
               </span>
             </div>
           )
         }
         // Render a countdown
         return (
-          <div className="bg-danger d-flex flex-column">
+          <div className="bg-danger flex flex-column">
             <div className="h5 mt-1 text-center">
               <span className="badge badge-light text-uppercase">
                 {title}
               </span>
             </div>
-            <div className="
-                            my-1
-                            d-flex justify-content-center align-items-center
-                        "
-            >
+            <div className="my-1 flex justify-content-center align-items-center">
               {renderTimeUnit(days, 'DAYS')}
               <div className="h2 text-white p--25 p-md-2">:</div>
               {renderTimeUnit(hours, 'HOURS')}

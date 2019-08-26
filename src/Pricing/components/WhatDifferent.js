@@ -4,7 +4,7 @@ import Video from '../../Video/components/Video'
 
 export default function () {
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="flex flex-column align-items-center">
       <div className="col-md-10 col-lg-8 row mb-2">
         <div className="col-md-5">
           <Video videoSource="311500900" />
@@ -41,13 +41,13 @@ export default function () {
           <tbody className="bg-white">
             <tr>
               <td className="text-right"><strong>Cost</strong></td>
-              <td className="border-right border-left border-primary border-top-0">$199/mo</td>
+              <td className="border-right border-left border-primary bt-1-0">$199/mo</td>
               <td>$9500 - $19000</td>
               <td>$12-$1000</td>
             </tr>
             <tr className="bg-light">
               <td className="text-right"><strong>Complete Training</strong></td>
-              <td className="border-right border-left border-primary border-top-0">
+              <td className="border-right border-left border-primary bt-1-0">
                 <CheckMark />
                 {' '}
                 Yes
@@ -65,7 +65,7 @@ export default function () {
             </tr>
             <tr>
               <td className="text-right"><strong>Focus on the right material</strong></td>
-              <td className="border-right border-left border-primary border-top-0">
+              <td className="border-right border-left border-primary bt-1-0">
                 <CheckMark />
                 {' '}
                 Yes
@@ -85,7 +85,7 @@ export default function () {
             </tr>
             <tr className="bg-light">
               <td className="text-right"><strong>Live mentor support</strong></td>
-              <td className="border-right border-left border-primary border-top-0">
+              <td className="border-right border-left border-primary bt-1-0">
                 <CheckMark />
                 Yes
                 <br />
@@ -104,7 +104,7 @@ export default function () {
             </tr>
             <tr>
               <td className="text-right"><strong>Bite-sized Training</strong></td>
-              <td className="border-right border-left border-primary border-top-0">
+              <td className="border-right border-left border-primary bt-1-0">
                 <CheckMark />
                 {' '}
                 Yes
@@ -124,7 +124,7 @@ export default function () {
             </tr>
             <tr className="bg-light">
               <td className="text-right"><strong>Cheat sheets</strong></td>
-              <td className="border-right border-left border-primary border-top-0">
+              <td className="border-right border-left border-primary bt-1-0">
                 <CheckMark />
                 {' '}
                 Yes
@@ -142,7 +142,7 @@ export default function () {
             </tr>
             <tr>
               <td className="text-right"><strong>Homework Assignments</strong></td>
-              <td className="border-right border-left border-primary border-top-0">
+              <td className="border-right border-left border-primary bt-1-0">
                 <CheckMark />
                 {' '}
                 Yes
@@ -160,7 +160,7 @@ export default function () {
             </tr>
             <tr className="bg-light">
               <td className="text-right"><strong>Mentor: Portfolio Help</strong></td>
-              <td className="border-right border-left border-primary border-top-0">
+              <td className="border-right border-left border-primary bt-1-0">
                 <CheckMark />
                 {' '}
                 Yes
@@ -178,7 +178,7 @@ export default function () {
             </tr>
             <tr>
               <td className="text-right"><strong>Mentor: Career Help</strong></td>
-              <td className="border-right border-left border-primary border-top-0">
+              <td className="border-right border-left border-primary bt-1-0">
                 <CheckMark />
                 {' '}
                 Yes
@@ -196,7 +196,7 @@ export default function () {
             </tr>
             <tr className="bg-light">
               <td className="text-right"><strong>Intangibles</strong></td>
-              <td className="text-left border-right border-left border-primary border-top-0 border-bottom">
+              <td className="text-left border-right border-left border-primary bt-1-0 border-bottom">
                 <CheckMark />
                 {' '}
                 Simple Explanations

@@ -1,0 +1,17 @@
+@for $i from 0 to 3 {
+  .b-$i {
+    border: 0px solid var(--gray-lighter);
+    border-width: $(i)px; }
+  .bt-$i {
+    border: 0px solid var(--gray-lighter);
+    border-top-width: $(i)px; }
+  .bb-$i {
+    border: 0px solid var(--gray-lighter);
+    border-bottom-width: $(i)px; }
+  .bl-$i {
+    border: 0px solid var(--gray-lighter);
+    border-left-width: $(i)px; }
+  .br-$i {
+    border: 0px solid var(--gray-lighter);
+    border-right-width: $(i)px; }
+}

@@ -54,7 +54,7 @@ const practice = [
 ]
 
 export default () => (
-  <section className="bg-light p-2 p-md-5 my-3 row border-top">
+  <section className="bg-light p-2 p-md-5 my-3 row bt-1">
     <div className="col-xl-4">
       <h2>
         <small className="d-block text-muted">

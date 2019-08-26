@@ -5,7 +5,7 @@ export default function ErrorBox() {
     <div
       role="button"
       tabIndex="0"
-      className="d-flex flex-column align-items-center"
+      className="flex flex-column align-items-center"
       onClick={() => Raven.lastEventId() && Raven.showReportDialog()}
       onKeyPress={() => Raven.lastEventId() && Raven.showReportDialog()}
     >

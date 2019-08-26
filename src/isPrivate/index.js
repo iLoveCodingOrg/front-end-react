@@ -9,7 +9,7 @@ export default function (WrappedComponent) {
       return <WrappedComponent {...props} />
     }
     return (
-      <div className="container d-flex justify-content-center">
+      <div className="container flex justify-content-center">
         <div className="col-md-8">
           <div className="alert alert-info">
             You must be logged in to view this page!

@@ -6,9 +6,9 @@ import { List } from '../../_common'
 
 function ListHeader() {
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="flex flex-column align-items-center">
       <h1>Courses</h1>
-      <h3 className="f-300 col-lg-9 align-self-center">
+      <h3 className="f-300 align-self-center">
         Courses are organized into targeted technological topics. Pick a course and get started. Remember! Each course uses simple terminology, and gives you ample practice so your learning sinks in on a deeper level.
       </h3>
     </div>

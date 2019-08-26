@@ -62,7 +62,7 @@ class CourseContent extends React.Component {
       <Link
         key={index}
         to={urlTo}
-        className={`d-flex justify-content-between list-group-item ${activeClass} ${completeClass}`}
+        className={`flex justify-content-between list-group-item ${activeClass} ${completeClass}`}
       >
         <div className="float-left">
           {(isComplete) ? <CheckMark /> : null}
@@ -110,7 +110,7 @@ class CourseContent extends React.Component {
         && maxScrollHeight <= listNode.offsetHeight
     ) {
       return (
-        <div className="btn-group d-flex">
+        <div className="btn-group flex">
           <button
             type="button"
             className="btn btn-outline-secondary border-gray flex-fill"

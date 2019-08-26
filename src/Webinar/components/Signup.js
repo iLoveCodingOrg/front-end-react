@@ -83,7 +83,7 @@ export default function Signup() {
           <div className="text-center strong small">100% Free Training</div>
         </div>
       </div>
-      <div className="small text-muted border-top pt-3" style={{ marginTop: '20em' }}>
+      <div className="small text-muted bt-1 pt-3" style={{ marginTop: '20em' }}>
         <p>
           DISCLAIMER: Aziz Ali can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.
         </p>

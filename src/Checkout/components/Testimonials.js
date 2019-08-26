@@ -21,7 +21,7 @@ const data = [
 
 export default function Testimonials() {
   return (
-    <section className="d-flex justify-content-center">
+    <section className="flex justify-content-center">
       <div className="">
         <PrintReviews
           containerClasses="flex-column"

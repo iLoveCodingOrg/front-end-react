@@ -47,7 +47,7 @@ const data = [
 
 function Testimonials({ itemNum }) {
   return (
-    <section className="d-flex justify-content-center">
+    <section className="flex justify-content-center">
       <div className="
                 col-md-10
                 col-lg-8"

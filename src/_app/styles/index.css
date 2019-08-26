@@ -9,6 +9,7 @@
 @import "./typography.css";
 @import "./utils.css";
 @import "./nav.css";
+@import "./border.css";
 
 #pricing-page{
   scroll-behavior: smooth;

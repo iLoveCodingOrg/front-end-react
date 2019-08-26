@@ -13,7 +13,7 @@ export default class GroupCall extends React.Component {
 
   render() {
     return (
-      <div className="d-flex flex-column">
+      <div className="flex flex-column">
         <Helmet>
           <title>Weekly Group Calls - iLoveCoding</title>
         </Helmet>

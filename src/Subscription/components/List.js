@@ -18,7 +18,7 @@ class SubscriptionList extends React.Component {
     const title = 'Subscriptions'
     const { isLoading, error, list } = this.props
     return (
-      <div className="d-flex flex-column">
+      <div className="flex flex-column">
         <Helmet>
           <title>
             {title}

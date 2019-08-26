@@ -63,7 +63,7 @@ const data = [
 ]
 
 export default () => (
-  <div className="mt-3 pt-3 border-top">
+  <div className="mt-3 pt-3 bt-1">
     <div className="mb-2 text-center text-uppercase text-muted">
       <span>
                     Learn the same tools and tricks used by:
