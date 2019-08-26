@@ -65,9 +65,9 @@ function CreditCardForm({
               className="form-control"
               type="number"
               placeholder="4111 1111 1111 1111"
-              // onValidityChange={(a) => { console.log(a); setIsNumberValid(a.isValid) }}
               onValidityChange={({ isValid }) => setIsNumberValid(isValid)}
-              prefill="4111 1111 1111 1111"
+              // onValidityChange={(a) => { console.log(a); setIsNumberValid(a.isValid) }}
+              // prefill="4111 1111 1111 1111"
             />
             {!isNumberValid && <small className="text-danger">Credit card number is invalid</small>}
           </div>
@@ -84,7 +84,7 @@ function CreditCardForm({
               type="expirationDate"
               placeholder="MM/YYYY"
               onBlur={({ isValid }) => setIsExpirationValid(isValid)}
-              prefill="0220"
+              // prefill="0220"
             />
             {!isExpirationValid && <small className="text-danger">Expiration date is invalid</small>}
           </div>
@@ -99,7 +99,7 @@ function CreditCardForm({
               type="cvv"
               placeholder="123"
               onBlur={({ isValid }) => setIsCvvValid(isValid)}
-              prefill="123"
+              // prefill="123"
             />
             {!isCvvValid && <small className="text-danger">CVV is invalid</small>}
           </div>
@@ -114,7 +114,7 @@ function CreditCardForm({
               type="postalCode"
               placeholder="11111"
               onBlur={({ isValid }) => setIsPostalCodeValid(isValid)}
-              prefill="123456"
+              // prefill="123456"
             />
             {!isPostalCodeValid && <small className="text-danger">Zip code / postal code is invalid</small>}
           </div>
