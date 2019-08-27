@@ -22,7 +22,7 @@ function Home({ isLoggedIn }) {
         <SocialProof />
       </div>
       <div className="mt-2 flex justify-content-center">
-        <div className="col-12 col-md-5">
+        <div>
           <h3 className="h2 text-center mb-2">Skip the cheap courses and the expensive bootcamps!</h3>
           <h3 className="f-300 mb-3">
             I get it! Learning how to code can be a confusing process. With dozens of expensive coding bootcamps and thousands of cheap courses, its tough to make a decision on

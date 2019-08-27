@@ -104,14 +104,14 @@ class ResetPassword extends React.Component {
         <Helmet><title>Reset password - iLoveCoding</title></Helmet>
         <div className="container">
           <div className="row">
-            <div className="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <div className="offset-md-2 offset-lg-3">
               <h2 className="text-center">Reset Password</h2>
               <hr />
               <form onSubmit={this.handleSubmit}>
                 {this.renderError()}
                 <div className="form-group row">
-                  <label className="col-md-3" htmlFor="email">Confirm Email</label>
-                  <div className="col-md-9">
+                  <label htmlFor="email">Confirm Email</label>
+                  <div>
                     <input
                       id="email"
                       className="form-control"
@@ -124,8 +124,8 @@ class ResetPassword extends React.Component {
                   </div>
                 </div>
                 <div className="form-group row">
-                  <label className="col-md-3" htmlFor="password">New Password</label>
-                  <div className="col-md-9">
+                  <label htmlFor="password">New Password</label>
+                  <div>
                     <input
                       id="password"
                       className="form-control"
@@ -138,10 +138,10 @@ class ResetPassword extends React.Component {
                   </div>
                 </div>
                 <div className="form-group row">
-                  <label className="col-md-3" htmlFor="confirmPassword">
+                  <label htmlFor="confirmPassword">
                     Confirm New Password
                   </label>
-                  <div className="col-md-9">
+                  <div>
                     <input
                       id="confirmPassword"
                       className="form-control"

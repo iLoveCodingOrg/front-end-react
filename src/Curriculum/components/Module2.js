@@ -76,7 +76,7 @@ const practice = [
 
 export default () => (
   <section className="bg-light p-2 p-md-5 my-3 row bt-1">
-    <div className="col-xl-4">
+    <div>
       <h2>
         <small className="d-block text-muted">
           Module 2:
@@ -92,7 +92,7 @@ export default () => (
         6 weeks (Focus for week number 7-12)
       </p>
     </div>
-    <div className="pl-xl-5 col-xl-8">
+    <div className="pl-xl-5 ">
       <PrintTraining
         title="Core Training"
         data={courses}

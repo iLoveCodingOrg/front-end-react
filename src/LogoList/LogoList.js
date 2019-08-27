@@ -8,7 +8,7 @@ export default function ({ data, height }) {
       }, index) => (
         <div key={index} className="mx-1 mb-1">
           <img
-            className=""
+           
             src={imgSrc}
             alt={altText}
             style={{

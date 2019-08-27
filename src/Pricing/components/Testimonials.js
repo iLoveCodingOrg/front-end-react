@@ -49,8 +49,8 @@ function Testimonials({ itemNum }) {
   return (
     <section className="flex justify-content-center">
       <div className="
-                col-md-10
-                col-lg-8"
+                
+                "
       >
         <PrintReviews
           containerClasses="flex-column"

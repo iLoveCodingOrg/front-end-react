@@ -27,7 +27,7 @@ function ViewGeneral({
 
   return (
     <div className="row">
-      <div className="col-12">
+      <div>
         { isLoading && <Loading />}
         { !isLoading && error && renderError() }
         { !isLoading && !error && (
@@ -41,7 +41,7 @@ function ViewGeneral({
             }
           </div>
           <div className="row">
-            <div className="col-12 col-md-6">
+            <div>
               <h3>Plan details</h3>
               <p>
                 <strong>Plan Name</strong>
@@ -55,7 +55,7 @@ function ViewGeneral({
               </p>
             </div>
 
-            <div className="col-12 col-md-6">
+            <div>
               <h3>Payment Method on file</h3>
               {subscriptionId && paymentMethod && (
               <PaymentMethodInfo
@@ -68,7 +68,7 @@ function ViewGeneral({
             </div>
           </div>
           <div className="row">
-            <div className="col-12">
+            <div>
               <h3>Transactions</h3>
               {transactions && <Transactions data={transactions} />}
             </div>

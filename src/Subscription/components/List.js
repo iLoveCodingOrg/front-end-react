@@ -38,12 +38,12 @@ class SubscriptionList extends React.Component {
           ]}
           />
           <div className="row">
-            <div className="col-12">
+            <div>
               <h1>{title}</h1>
             </div>
           </div>
           <div className="row">
-            <div className="col-12">
+            <div>
               { isLoading && <Loading />}
               { !isLoading && error && <ErrorBox /> }
               { !isLoading && !error && <Subscriptions data={list} /> }

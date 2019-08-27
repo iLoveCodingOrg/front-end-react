@@ -65,7 +65,7 @@ function Pricing() {
       </div>
 
       <div className="py-3"><WhatDifferent /></div>
-      <div className=""><Testimonials itemNum="3" /></div>
+      <div><Testimonials itemNum="3" /></div>
 
       <div className="pb-3 text-center">
         <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
@@ -74,13 +74,13 @@ function Pricing() {
       <div className="py-3"><WhatBuild /></div>
       <div className="py-3"><WhatLearn /></div>
       <div className="py-3"><WhoFor /></div>
-      <div className=""><Testimonials itemNum="4" /></div>
+      <div><Testimonials itemNum="4" /></div>
       <div className="pb-3 text-center">
         <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
       <div className="py-3 bg-gray-lightest"><Guarantee /></div>
       <div className="py-3 bg-gray-lighter">
-        <div className="col-md-10 col-lg-8 mr-auto ml-auto">
+        <div className="mr-auto ml-auto">
           <AboutAziz />
         </div>
       </div>

@@ -27,7 +27,7 @@ export default function Header({ productName, productDesc }) {
       <div className="row">
         <div className="alert alert-success">
           <h4>🔒 Secure Checkout:</h4>
-          <p className="">
+          <p>
             Congratulations! Once you complete this secure registration form, you'll have instant access to
             {' '}
             <strong>

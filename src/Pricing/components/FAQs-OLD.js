@@ -87,7 +87,7 @@ export default function () {
   return (
     <div className="flex flex-column align-items-center">
       <h2 className="mb-2">Common Questions</h2>
-      <div className="col-md-10 col-lg-8">
+      <div>
         <PrintFAQ data={data} />
       </div>
     </div>

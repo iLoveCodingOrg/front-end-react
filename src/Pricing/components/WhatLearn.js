@@ -5,16 +5,16 @@ import { CheckMark } from '../../_common'
 export default function () {
   return (
     <div className="flex flex-column align-items-center">
-      <div className="col-md-10 col-lg-8 row mb-2">
-        <div className="col-md-6">
+      <div className="row mb-2">
+        <div>
           <Video videoSource="311500783" />
         </div>
-        <div className="col-md-6">
+        <div>
           <h2>What will you learn?</h2>
           <h3 className="f-300">
             You will learn all the technical skills so you can call yourself a competent Front-End and Full-Stack JavaScript developer - who is job-ready and can build any kind of app.
           </h3>
-          <div className="">
+          <div>
             <CheckMark />
             {' '}
             Build simple and advanced websites

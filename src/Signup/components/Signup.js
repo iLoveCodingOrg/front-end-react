@@ -91,11 +91,11 @@ class Signup extends React.Component {
           .
         </h3>
 
-        <form onSubmit={this.handleSubmit} className="mt-3 col-lg-6 col-md-8 mx-auto">
+        <form onSubmit={this.handleSubmit} className="mt-3 mx-auto">
           {this.renderError()}
           <div className="form-group row">
-            <label htmlFor="firstName" className="col-md-3 col-form-label strong">First Name</label>
-            <div className="col-md-9">
+            <label htmlFor="firstName" className="col-form-label strong">First Name</label>
+            <div>
               <input
                 onChange={this.handleChange}
                 name="firstName"
@@ -108,8 +108,8 @@ class Signup extends React.Component {
           </div>
 
           <div className="form-group row">
-            <label htmlFor="lastName" className="col-md-3 col-form-label strong">Last Name</label>
-            <div className="col-md-9">
+            <label htmlFor="lastName" className="col-form-label strong">Last Name</label>
+            <div>
               <input
                 onChange={this.handleChange}
                 name="lastName"
@@ -121,8 +121,8 @@ class Signup extends React.Component {
           </div>
 
           <div className="form-group row">
-            <label htmlFor="email" className="col-md-3 col-form-label strong">Email address</label>
-            <div className="col-md-9">
+            <label htmlFor="email" className="col-form-label strong">Email address</label>
+            <div>
               <input
                 onChange={this.handleChange}
                 name="email"
@@ -134,8 +134,8 @@ class Signup extends React.Component {
           </div>
 
           <div className="form-group row">
-            <label htmlFor="password" className="col-md-3 col-form-label strong">Password</label>
-            <div className="col-md-9">
+            <label htmlFor="password" className="col-form-label strong">Password</label>
+            <div>
               <input
                 onChange={this.handleChange}
                 name="password"
@@ -146,8 +146,8 @@ class Signup extends React.Component {
             </div>
           </div>
           <div className="form-group row">
-            <label htmlFor="password" className="col-md-3 col-form-label strong">Are you a human?</label>
-            <div className="col-md-9">
+            <label htmlFor="password" className="col-form-label strong">Are you a human?</label>
+            <div>
               <Recaptcha2
                 onLoadCb={this.setRecaptchaElem}
                 verifyTokenCb={this.verifyRecaptchaCb}

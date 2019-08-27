@@ -22,7 +22,7 @@ const data = [
 export default function Testimonials() {
   return (
     <section className="flex justify-content-center">
-      <div className="">
+      <div>
         <PrintReviews
           containerClasses="flex-column"
           itemClasses="mb-1"

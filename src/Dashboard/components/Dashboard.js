@@ -18,19 +18,19 @@ export default function () {
                 mb-3"
       >
         <div className="row">
-          <div className="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-9">
+          <div>
             <h1 className="headline">Dashboard</h1>
             <h3 className="f-300 text-muted">
               Here you will find quick links to resources which are included in your membership.
             </h3>
           </div>
-          <div className="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+          <div>
             <Video videoSource="314907971" />
           </div>
         </div>
         <hr className="mb--25" />
         <div className="row">
-          <div className="col-12 col-md-6 mt-3">
+          <div className="mt-3">
             <div>
               <h4>Start Training</h4>
               <ul className="list-unstyled">
@@ -55,7 +55,7 @@ export default function () {
             </div>
 
           </div>
-          <div className="col-12 col-md-6 mt-3">
+          <div className="mt-3">
             <StudentCommunity />
             <PremiumSection />
           </div>

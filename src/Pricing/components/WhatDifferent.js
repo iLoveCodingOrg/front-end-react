@@ -5,11 +5,11 @@ import Video from '../../Video/components/Video'
 export default function () {
   return (
     <div className="flex flex-column align-items-center">
-      <div className="col-md-10 col-lg-8 row mb-2">
-        <div className="col-md-5">
+      <div className="row mb-2">
+        <div>
           <Video videoSource="311500900" />
         </div>
-        <div className="col-md-7">
+        <div>
           <h2>How is iLoveCoding Different?</h2>
           <h3 className="f-300">
             iLoveCoding gives more value for your money than anyone else we know. See the value comparison chart below:
@@ -20,7 +20,7 @@ export default function () {
         <table className="table text-center">
           <thead className="bg-gray-lighter bold strong">
             <tr>
-              <th width="20%" className="" />
+              <th width="20%" />
               <th width="27%" className="h5 align-middle border-right border-left border-primary alert-primary">
                 iLoveCoding Premium
                 {/* <br />

@@ -10,9 +10,9 @@ class Reviews extends React.Component {
   render() {
     return (
       <section className="flex justify-content-center">
-        <div className="">
+        <div>
           <PrintReviews
-            itemClasses="m-1 col-lg-4 col-12"
+            itemClasses="m-1 "
             data={data}
           />
         </div>

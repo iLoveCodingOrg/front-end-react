@@ -8,19 +8,13 @@ export default function ({ data, containerClasses, itemClasses }) {
       }, index) => (
         <div
           key={index}
-          className={`p-1 bg-white border rounded ${itemClasses}`}
+          className={`p-1 bg-white b-1 rounded ${itemClasses}`}
         >
-          {
-                    !thumbSrc ? null
-                      : <img className="rounded-circle mr-1 float-left" src={thumbSrc} alt={title} width="100" height="100" />
-
-                }
+          { thumbSrc && <img className="rounded-circle mr-1 float-left" src={thumbSrc} alt={title} width="100" height="100" /> }
           <p><strong>{title}</strong></p>
           <p>
             <em>
-"
-              {body}
-"
+              "{body}"
             </em>
           </p>
           <footer className="blockquote-footer">

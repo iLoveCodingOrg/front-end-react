@@ -38,7 +38,7 @@ function SubscriptionView({ match }) {
         ]}
         />
         <div className="row">
-          <div className="col-12 ">
+          <div>
             <h1>{title}</h1>
           </div>
         </div>

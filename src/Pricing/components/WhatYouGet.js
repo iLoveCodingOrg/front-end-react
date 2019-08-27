@@ -9,11 +9,11 @@ import Video from '../../Video/components/Video'
 export default function () {
   return (
     <div className="flex flex-column align-items-center">
-      <div className="col-md-10 col-lg-8 row mb-2">
-        <div className="col-md-5">
+      <div className="row mb-2">
+        <div>
           <Video videoSource="311500556" />
         </div>
-        <div className="col-md-7">
+        <div>
           <h2>What do you get?</h2>
           <h3 className="f-300">
             With any iLoveCoding paid membership you get access to Complete Training, and Mentor-Moderated Private Student Community
@@ -21,13 +21,13 @@ export default function () {
         </div>
       </div>
 
-      <div className="col-md-10 flex-column align-items-center">
+      <div className="flex-column align-items-center">
         <div className="bg-white rounded p-2">
           <div className="row mb-3">
-            <div className="col-lg-4 text-center mb-2 mb-lg-0">
+            <div className="text-center mb-2 mb-lg-0">
               <img src={modules} alt="All Modules" className="w-100" style={{ maxWidth: '300px' }} />
             </div>
-            <div className="col-lg-8 pl-lg-5">
+            <div className="pl-lg-5">
               <h4>
                 (A) Complete Step-by-Step Training (
                 <Link to="curriculum">See Full Curriculum</Link>
@@ -73,10 +73,10 @@ export default function () {
           </div>
 
           <div className="row mb-3">
-            <div className="col-lg-4 text-center mb-2 mb-lg-0">
-              <img src={community} alt="Slack Student Community" className="border w-100" style={{ maxWidth: '300px' }} />
+            <div className="text-center mb-2 mb-lg-0">
+              <img src={community} alt="Slack Student Community" className="b-1 w-100" style={{ maxWidth: '300px' }} />
             </div>
-            <div className="col-lg-8 pl-lg-5">
+            <div className="pl-lg-5">
               <h4>(B) Mentor-Moderated Student Community</h4>
               <p>Never get stuck again! Get answers to your specific questions from your peers and mentor in the member-only slack channel.</p>
               <CheckMark />
@@ -94,10 +94,10 @@ export default function () {
           </div>
 
           <div className="row">
-            <div className="col-lg-4 text-center mb-2 mb-lg-0">
-              <img src={mentorship} alt="Live Mentorship" className="border w-100" style={{ maxWidth: '300px' }} />
+            <div className="text-center mb-2 mb-lg-0">
+              <img src={mentorship} alt="Live Mentorship" className="b-1 w-100" style={{ maxWidth: '300px' }} />
             </div>
-            <div className="col-lg-8 pl-lg-5">
+            <div className="pl-lg-5">
               <h4>
                 (C) Weekly Group Calls with Mentor
                 {' '}

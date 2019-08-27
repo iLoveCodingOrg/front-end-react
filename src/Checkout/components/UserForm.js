@@ -95,7 +95,7 @@ class UserForm extends React.Component {
         <h4 className="mb-1">Contact Information</h4>
         {this.renderLogoutOption()}
         <div className="row">
-          <div className="col-md-6 mb-1">
+          <div className="mb-1">
             <label htmlFor="firstName">First name</label>
             <input
               type="text"
@@ -110,7 +110,7 @@ class UserForm extends React.Component {
             {this.renderInlineError('firstName')}
           </div>
 
-          <div className="col-md-6 mb-1">
+          <div className="mb-1">
             <label htmlFor="lastName">Last name</label>
             <input
               type="text"

@@ -23,7 +23,7 @@ class Switch extends React.Component {
           checked={selected === option.name}
           onChange={onChange}
         />
-        <label className="" htmlFor={`${randomName}-${option.name}`}>{option.label}</label>
+        <label htmlFor={`${randomName}-${option.name}`}>{option.label}</label>
         {
                     (selected === option.name)
                       ? (
@@ -43,7 +43,7 @@ class Switch extends React.Component {
   render() {
     return (
       <div className="flex flex-column align-items-center">
-        <p className="">Select payment option:</p>
+        <p>Select payment option:</p>
         <div className="switch">
           {this.renderOptions()}
         </div>

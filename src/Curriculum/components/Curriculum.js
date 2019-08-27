@@ -21,7 +21,7 @@ export default () => (
         Go from zero to a professional Front-End and/or Full-Stack JavaScript developer.
       </h3>
       <div className="row bt-1 pt-2">
-        <div className="col-md-4">
+        <div>
           <h3 className="f-300 alert alert-warning text-dark">
             <strong>Important:</strong>
             {' '}
@@ -29,25 +29,25 @@ export default () => (
             <strong>Watch the video to get a proper walk through.</strong>
           </h3>
         </div>
-        <div className="col-md-8 text-center p-0 mb-1">
+        <div className="text-center p-0 mb-1">
           <Video videoSource="315031967" />
           <h5 className="py-1">VIDEO: How to get the most out of The Perfect Curriculum</h5>
         </div>
       </div>
-      <p className="">
+      <p>
         By the time you are done with this curriculum you will have the complete skills to code and launch modern websites, web applications and even mobile apps from scratch. Plus you will have an impressive portfolio to land you a respectable job as a software developer.
       </p>
-      <p className="">
+      <p>
         We'll do all of this while focusing on one programming language, which is JavaScript. JavaScript is currently the most popular and versatile programing language on planet internet. In fact 99% (maybe even 100%) of all top websites use JavaScript, and all the tech giants use it to build their websites and mobile apps: Facebook, PayPal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.
       </p>
-      <p className="">
+      <p>
         <strong>Trust the process - follow the modules:</strong>
         <br />
         Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
       </p>
       <div className="row my-3">
-        <div className="col-sm-12 flex mb-2 mb-sm-0">
-          <div className="alert bg-gray-lightest py-2 border text-center mb-0 w-100">
+        <div className="flex mb-2 mb-sm-0">
+          <div className="alert bg-gray-lightest py-2 b-1 text-center mb-0 w-100">
             <h5>Time to completion - 5 months</h5>
             <p className="mb-0">
               Study 15 hrs/week and complete within 5 months.

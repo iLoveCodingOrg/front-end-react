@@ -15,7 +15,7 @@ export default function Pricing() {
       </h3>
       <h1 className="text-center">Get on the waitlist</h1>
       <form
-        className="mt-3 col-lg-6 col-md-8 mx-auto"
+        className="mt-3 mx-auto"
         action="https://ilovecoding.us3.list-manage.com/subscribe/post?u=0bf351e3ad180589cd43cdefb&amp;id=2555c81382"
         method="post"
         id="mc-embedded-subscribe-form"
@@ -24,20 +24,20 @@ export default function Pricing() {
         noValidate
       >
         <div className="form-group row">
-          <label className="col-md-3 col-form-label strong" htmlFor="mce-EMAIL">Email Address</label>
-          <div className="col-md-9">
+          <label className="col-form-label strong" htmlFor="mce-EMAIL">Email Address</label>
+          <div>
             <input type="email" name="EMAIL" className="form-control form-control-lg required email" id="mce-EMAIL" />
           </div>
         </div>
         <div className="form-group row">
-          <label className="col-md-3 col-form-label strong" htmlFor="mce-FNAME">First Name </label>
-          <div className="col-md-9">
+          <label className="col-form-label strong" htmlFor="mce-FNAME">First Name </label>
+          <div>
             <input type="text" name="FNAME" className="form-control form-control-lg" id="mce-FNAME" />
           </div>
         </div>
         <div className="form-group row">
-          <label className="col-md-3 col-form-label strong" htmlFor="mce-LNAME">Last Name </label>
-          <div className="col-md-9">
+          <label className="col-form-label strong" htmlFor="mce-LNAME">Last Name </label>
+          <div>
             <input type="text" name="LNAME" className="form-control form-control-lg" id="mce-LNAME" />
           </div>
         </div>

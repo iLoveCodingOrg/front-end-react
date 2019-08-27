@@ -29,13 +29,13 @@ function Card({ item, of }) {
   const durationVal = courseTotalDuration || duration
 
   return (
-    <div className="flex flex-column flex-md-row mb-3 bg-white border-0">
+    <div className="grid grid-list-item mb-1">
       <div>
         {
           thumbnail && (
           <Link to={urlTo}>
             <img
-              className="mr-md-3 mb-md-0 mb-1 rounded"
+              className="rounded w-100"
               src={`${IMG_URL}${thumbnail}`}
               alt="Thumbnail"
             />

@@ -10,20 +10,20 @@ function Hero() {
   return (
     <div className="container my-2 mt-md-5">
       <div className="row flex-md-row-reverse">
-        <div className="col-12 col-md-5 col-lg-5">
+        <div>
           <Video videoSource="308929498" />
         </div>
-        <div className="col-12 col-md-7 justify-content-center">
-          {/* <h1 className="">Let me guide you!</h1> */}
-          {/* <h1 className="">Want to become a developer?</h1> */}
-          {/* <h1 className="">Let me guide you!</h1> */}
+        <div className="justify-content-center">
+          {/* <h1>Let me guide you!</h1> */}
+          {/* <h1>Want to become a developer?</h1> */}
+          {/* <h1>Let me guide you!</h1> */}
           {/* <h1 className="strong">Sick of cheap courses and expensive bootcamps?</h1> */}
           <h1 className="strong">Skip the cheap courses and the expensive bootcamps.</h1>
           <h3 className="f-300 mt-2">
             Let me give you a complete step-by-step guide to becoming a confident, job-ready Front-End and/or Full-Stack JavaScript Developer.
           </h3>
         </div>
-        <div className="col-12">
+        <div>
           <h3 className="f-300">
             <strong>Get started with my FREE course:</strong>
           </h3>
@@ -31,11 +31,11 @@ function Hero() {
         </div>
       </div>
       {/* <div className="row flex-lg-row-reverse">
-        <div className="col-12 col-md-7 col-lg-6">
+        <div>
           <img className="w-100" src={homePageImage} alt="People"/>
         </div>
-        <div className="col-12 col-lg-6">
-          <h1 className="">
+        <div>
+          <h1>
             Become a skilled JavaScript developer.
           </h1>
           <p className="h3 font-weight-light text-muted mb-2">

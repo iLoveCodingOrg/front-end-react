@@ -6,10 +6,10 @@ function Hero() {
   return (
     <div className="container my-2 mt-md-5">
       <div className="row flex-md-row-reverse">
-        <div className="col-12 col-md-5 col-lg-5">
+        <div>
           <img className="w-100" src={homePageImage} alt="People" />
         </div>
-        <div className="col-12 col-md-7 justify-content-center">
+        <div className="justify-content-center">
           <p className="h3">Learn to Code with Confidence</p>
           <h1 className="strong mb-2">Complete Video Training + Mentor Support</h1>
           <h3 className="f-300 mb-3">

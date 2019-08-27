@@ -10,7 +10,7 @@ export default function (WrappedComponent) {
     }
     return (
       <div className="container flex justify-content-center">
-        <div className="col-md-8">
+        <div>
           <div className="alert alert-info">
             You must be logged in to view this page!
             {' '}

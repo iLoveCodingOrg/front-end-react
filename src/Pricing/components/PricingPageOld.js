@@ -30,7 +30,7 @@ function Pricing() {
       </div>
       <div className="bg-gray-lighter mt-2">
         <div className="py-3 flex justify-content-center">
-          <div className="col-md-10 col-lg-8">
+          <div>
             <AboutAziz />
           </div>
         </div>
@@ -44,7 +44,7 @@ function Pricing() {
       <div className="py-3"><Price /></div> */}
       <div className="py-3 bg-secondary">
         <div className="flex justify-content-center">
-          <div className="col-12 col-md-10 col-lg-8">
+          <div>
             <h2 className="text-center text-white">
               Coding bootcamp level training for 2% of the cost!
             </h2>
