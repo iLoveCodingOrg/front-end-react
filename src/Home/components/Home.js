@@ -18,10 +18,10 @@ function Home({ isLoggedIn }) {
         <meta name="description" content="iLoveCoding teaches you how to think and build like a software developer focusing on Full-Stack JavaScript development." />
       </Helmet>
       <Hero />
-      <div className="my-3 bg-gray-lightest py-3 container-fluid bt-1">
+      <div className="my-3 bg-gray-lightest p-3 bt-1">
         <SocialProof />
       </div>
-      <div className="mt-2 flex justify-content-center">
+      <div className="mt-2 container">
         <div>
           <h3 className="h2 text-center mb-2">Skip the cheap courses and the expensive bootcamps!</h3>
           <h3 className="f-300 mb-3">

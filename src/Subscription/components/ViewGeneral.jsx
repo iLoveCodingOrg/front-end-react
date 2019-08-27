@@ -26,7 +26,7 @@ function ViewGeneral({
   )
 
   return (
-    <div className="row">
+    <div>
       <div>
         { isLoading && <Loading />}
         { !isLoading && error && renderError() }
@@ -40,7 +40,7 @@ function ViewGeneral({
                 : <span className="badge badge-pill badge-danger mr-1">Inactive</span>
             }
           </div>
-          <div className="row">
+          <div>
             <div>
               <h3>Plan details</h3>
               <p>
@@ -67,7 +67,7 @@ function ViewGeneral({
               )}
             </div>
           </div>
-          <div className="row">
+          <div>
             <div>
               <h3>Transactions</h3>
               {transactions && <Transactions data={transactions} />}

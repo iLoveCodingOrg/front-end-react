@@ -52,7 +52,7 @@ class EditForm extends React.Component {
 
   renderWysiwyg(field) {
     return (
-      <div key={field} className="form-group row">
+      <div key={field} className="form-group">
         <label
           className="col-form-label float-right"
           htmlFor={field}
@@ -124,7 +124,7 @@ class EditForm extends React.Component {
 
   renderTextFields(field, type) {
     return (
-      <div key={field} className="form-group row">
+      <div key={field} className="form-group">
         <label
           className="col-form-label float-right"
           htmlFor={field}
@@ -146,7 +146,7 @@ class EditForm extends React.Component {
 
   renderTextarea(field) {
     return (
-      <div key={field} className="form-group row">
+      <div key={field} className="form-group">
         <label
           className="col-form-label float-right"
           htmlFor={field}

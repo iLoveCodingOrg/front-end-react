@@ -24,7 +24,7 @@ export default function Header({ productName, productDesc }) {
           Need help? support@ilovecoding.org
         </div>
       </div>
-      <div className="row">
+      <div>
         <div className="alert alert-success">
           <h4>🔒 Secure Checkout:</h4>
           <p>

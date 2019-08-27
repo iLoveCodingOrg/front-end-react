@@ -8,11 +8,9 @@ import Video from '../../Video/components/Video'
 
 export default function () {
   return (
-    <div className="flex flex-column align-items-center">
-      <div className="row mb-2">
-        <div>
-          <Video videoSource="311500556" />
-        </div>
+    <div className="container">
+      <div className="grid-list-item align-items-center mb-2">
+        <div><Video videoSource="311500556" /></div>
         <div>
           <h2>What do you get?</h2>
           <h3 className="f-300">
@@ -21,9 +19,8 @@ export default function () {
         </div>
       </div>
 
-      <div className="flex-column align-items-center">
-        <div className="bg-white rounded p-2">
-          <div className="row mb-3">
+      <div className=" align-items-center bg-white rounded p-2">
+          <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
             <div className="text-center mb-2 mb-lg-0">
               <img src={modules} alt="All Modules" className="w-100" style={{ maxWidth: '300px' }} />
             </div>
@@ -72,7 +69,7 @@ export default function () {
             </div>
           </div>
 
-          <div className="row mb-3">
+          <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
             <div className="text-center mb-2 mb-lg-0">
               <img src={community} alt="Slack Student Community" className="b-1 w-100" style={{ maxWidth: '300px' }} />
             </div>
@@ -93,7 +90,7 @@ export default function () {
             </div>
           </div>
 
-          <div className="row">
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
             <div className="text-center mb-2 mb-lg-0">
               <img src={mentorship} alt="Live Mentorship" className="b-1 w-100" style={{ maxWidth: '300px' }} />
             </div>
@@ -138,7 +135,6 @@ export default function () {
               </p> */}
             </div>
           </div>
-        </div>
       </div>
     </div>
   )

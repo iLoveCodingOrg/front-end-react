@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function () {
   return (
-    <div className="flex justify-content-center">
+    <div className="container flex justify-content-center">
       <div>
         <div className="p-1 alert-warning">
           <h3 className="text-center text-dark">

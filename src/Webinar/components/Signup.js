@@ -39,7 +39,7 @@ export default function Signup() {
         </h1>
         <h3 className="text-center em text-muted mb-3">Without having a CS degree, without attending a coding bootcamp or without using cheap courses.</h3>
       </div>
-      <div className="row">
+      <div>
         <div>
           <img
             className="w-100"

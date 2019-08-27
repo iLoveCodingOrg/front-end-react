@@ -103,13 +103,13 @@ class ResetPassword extends React.Component {
       <WrapMini>
         <Helmet><title>Reset password - iLoveCoding</title></Helmet>
         <div className="container">
-          <div className="row">
+          <div>
             <div className="offset-md-2 offset-lg-3">
               <h2 className="text-center">Reset Password</h2>
               <hr />
               <form onSubmit={this.handleSubmit}>
                 {this.renderError()}
-                <div className="form-group row">
+                <div className="form-group">
                   <label htmlFor="email">Confirm Email</label>
                   <div>
                     <input
@@ -123,7 +123,7 @@ class ResetPassword extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="form-group row">
+                <div className="form-group">
                   <label htmlFor="password">New Password</label>
                   <div>
                     <input
@@ -137,7 +137,7 @@ class ResetPassword extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="form-group row">
+                <div className="form-group">
                   <label htmlFor="confirmPassword">
                     Confirm New Password
                   </label>

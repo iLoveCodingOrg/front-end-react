@@ -19,7 +19,7 @@ const practice = [
 ]
 
 export default () => (
-  <section className="bg-light p-2 p-md-5 my-3 row bt-1">
+  <section className="bg-light p-2 p-md-5 my-3 bt-1">
     <div>
       <h2>
         <small className="d-block text-muted">

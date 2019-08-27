@@ -4,11 +4,9 @@ import Video from '../../Video/components/Video'
 
 export default function () {
   return (
-    <div className="flex flex-column align-items-center">
-      <div className="row mb-2">
-        <div>
-          <Video videoSource="311500900" />
-        </div>
+    <div className="container">
+      <div className="grid-list-item align-items-center mb-2">
+        <div><Video videoSource="311500900" /></div>
         <div>
           <h2>How is iLoveCoding Different?</h2>
           <h3 className="f-300">

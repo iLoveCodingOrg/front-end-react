@@ -20,7 +20,7 @@ export default () => (
       <h3 className="f-300 text-center mb-2">
         Go from zero to a professional Front-End and/or Full-Stack JavaScript developer.
       </h3>
-      <div className="row bt-1 pt-2">
+      <div className="bt-1 pt-2">
         <div>
           <h3 className="f-300 alert alert-warning text-dark">
             <strong>Important:</strong>
@@ -45,7 +45,7 @@ export default () => (
         <br />
         Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
       </p>
-      <div className="row my-3">
+      <div className="my-3">
         <div className="flex mb-2 mb-sm-0">
           <div className="alert bg-gray-lightest py-2 b-1 text-center mb-0 w-100">
             <h5>Time to completion - 5 months</h5>

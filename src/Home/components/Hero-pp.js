@@ -9,7 +9,7 @@ import { Video } from '../../Video'
 function Hero() {
   return (
     <div className="container my-2 mt-md-5">
-      <div className="row flex-md-row-reverse">
+      <div className="flex-md-row-reverse">
         <div>
           <Video videoSource="308929498" />
         </div>
@@ -30,7 +30,7 @@ function Hero() {
           <HomeForm />
         </div>
       </div>
-      {/* <div className="row flex-lg-row-reverse">
+      {/* <div className="flex-lg-row-reverse">
         <div>
           <img className="w-100" src={homePageImage} alt="People"/>
         </div>

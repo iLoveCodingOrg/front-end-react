@@ -94,7 +94,7 @@ class UserForm extends React.Component {
       <div>
         <h4 className="mb-1">Contact Information</h4>
         {this.renderLogoutOption()}
-        <div className="row">
+        <div>
           <div className="mb-1">
             <label htmlFor="firstName">First name</label>
             <input

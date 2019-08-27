@@ -17,7 +17,7 @@ export default function () {
                 mt-1
                 mb-3"
       >
-        <div className="row">
+        <div>
           <div>
             <h1 className="headline">Dashboard</h1>
             <h3 className="f-300 text-muted">
@@ -29,7 +29,7 @@ export default function () {
           </div>
         </div>
         <hr className="mb--25" />
-        <div className="row">
+        <div>
           <div className="mt-3">
             <div>
               <h4>Start Training</h4>

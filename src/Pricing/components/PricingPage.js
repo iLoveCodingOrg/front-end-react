@@ -53,7 +53,7 @@ function Pricing() {
         </div> */}
         <Price />
       </div>
-      <div className="pt-3"><Testimonials itemNum="1" /></div>
+      <div className="p-3"><Testimonials itemNum="1" /></div>
       <div className="pb-2 text-center">
         <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>

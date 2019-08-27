@@ -23,19 +23,19 @@ export default function Pricing() {
         target="_blank"
         noValidate
       >
-        <div className="form-group row">
+        <div className="form-group">
           <label className="col-form-label strong" htmlFor="mce-EMAIL">Email Address</label>
           <div>
             <input type="email" name="EMAIL" className="form-control form-control-lg required email" id="mce-EMAIL" />
           </div>
         </div>
-        <div className="form-group row">
+        <div className="form-group">
           <label className="col-form-label strong" htmlFor="mce-FNAME">First Name </label>
           <div>
             <input type="text" name="FNAME" className="form-control form-control-lg" id="mce-FNAME" />
           </div>
         </div>
-        <div className="form-group row">
+        <div className="form-group">
           <label className="col-form-label strong" htmlFor="mce-LNAME">Last Name </label>
           <div>
             <input type="text" name="LNAME" className="form-control form-control-lg" id="mce-LNAME" />

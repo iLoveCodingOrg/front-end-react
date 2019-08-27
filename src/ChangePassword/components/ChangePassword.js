@@ -119,16 +119,16 @@ class ChangePassword extends React.Component {
             },
           ]}
           />
-          <div className="row">
+          <div>
             <div>
               <h1>{title}</h1>
             </div>
           </div>
           <hr className="mb--25" />
-          <div className="row">
+          <div>
             <form className="mt-2 " onSubmit={this.handleSubmit}>
               {this.renderError()}
-              <div className="form-group row">
+              <div className="form-group">
                 <label htmlFor="email">Current Password</label>
                 <div>
                   <input
@@ -141,7 +141,7 @@ class ChangePassword extends React.Component {
                   />
                 </div>
               </div>
-              <div className="form-group row">
+              <div className="form-group">
                 <label htmlFor="password">New Password</label>
                 <div>
                   <input
@@ -154,7 +154,7 @@ class ChangePassword extends React.Component {
                   />
                 </div>
               </div>
-              <div className="form-group row">
+              <div className="form-group">
                 <label htmlFor="confirmPassword">
                   Confirm New Password
                 </label>

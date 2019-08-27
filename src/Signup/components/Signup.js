@@ -93,7 +93,7 @@ class Signup extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="mt-3 mx-auto">
           {this.renderError()}
-          <div className="form-group row">
+          <div className="form-group">
             <label htmlFor="firstName" className="col-form-label strong">First Name</label>
             <div>
               <input
@@ -107,7 +107,7 @@ class Signup extends React.Component {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group">
             <label htmlFor="lastName" className="col-form-label strong">Last Name</label>
             <div>
               <input
@@ -120,7 +120,7 @@ class Signup extends React.Component {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group">
             <label htmlFor="email" className="col-form-label strong">Email address</label>
             <div>
               <input
@@ -133,7 +133,7 @@ class Signup extends React.Component {
             </div>
           </div>
 
-          <div className="form-group row">
+          <div className="form-group">
             <label htmlFor="password" className="col-form-label strong">Password</label>
             <div>
               <input
@@ -145,7 +145,7 @@ class Signup extends React.Component {
               />
             </div>
           </div>
-          <div className="form-group row">
+          <div className="form-group">
             <label htmlFor="password" className="col-form-label strong">Are you a human?</label>
             <div>
               <Recaptcha2

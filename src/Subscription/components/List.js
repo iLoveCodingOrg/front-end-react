@@ -37,12 +37,12 @@ class SubscriptionList extends React.Component {
             },
           ]}
           />
-          <div className="row">
+          <div>
             <div>
               <h1>{title}</h1>
             </div>
           </div>
-          <div className="row">
+          <div>
             <div>
               { isLoading && <Loading />}
               { !isLoading && error && <ErrorBox /> }

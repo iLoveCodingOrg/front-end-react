@@ -149,8 +149,8 @@ class Checkout extends React.Component {
                 productName={productName}
                 productDesc={productDesc}
               />
-              <div className="row">
-                <div className="p-0 order-md-1">
+              <div className="flex">
+                <div className="flex-3 p-0">
                   <form
                     onSubmit={this.buy}
                     className="bg-light b-1 p-2"
@@ -190,7 +190,7 @@ class Checkout extends React.Component {
                     🛡️ 7-Day Full Refund Policy.
                   </div>
                 </div>
-                <div className="order-md-2 mb-2 px-2">
+                <div className="flex-1 mb-2 px-2">
                   <WhatYouGet />
                   <Testimonials />
                 </div>
