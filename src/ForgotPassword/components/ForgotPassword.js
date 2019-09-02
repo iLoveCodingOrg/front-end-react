@@ -87,7 +87,7 @@ class ForgotPassword extends React.Component {
       <WrapMini>
         <Helmet><title>Forgot password? - iLoveCoding</title></Helmet>
         <form className="form-forgot-password" onSubmit={this.handleSubmit} noValidate>
-          <h2 className="text-center">Forgot Password?</h2>
+          <h2 className="t-center">Forgot Password?</h2>
           <p>Please enter your email to search for your account.</p>
           {this.renderError()}
           <div>
@@ -112,7 +112,7 @@ class ForgotPassword extends React.Component {
               value={(this.state.isLoading) ? 'Loading...' : 'Get new password'}
             />
           </div>
-          <div className="text-center">
+          <div className="t-center">
             <Link to="/login">
               <span role="img" aria-label="Back arrow emoji"> 🔙</span>
               {' '}

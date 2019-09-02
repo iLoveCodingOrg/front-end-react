@@ -16,11 +16,11 @@ export default () => (
       <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
     </Helmet>
     <div className="container mt-1">
-      <h1 className="text-center">The Perfect Curriculum</h1>
-      <h3 className="f-300 text-center mb-2">
+      <h1 className="t-center">The Perfect Curriculum</h1>
+      <h3 className="f-300 t-center mb-2">
         Go from zero to a professional Front-End and/or Full-Stack JavaScript developer.
       </h3>
-      <div className="bt-1 pt-2">
+      <div className="b bt-1 pt-2">
         <div>
           <h3 className="f-300 alert alert-warning text-dark">
             <strong>Important:</strong>
@@ -29,7 +29,7 @@ export default () => (
             <strong>Watch the video to get a proper walk through.</strong>
           </h3>
         </div>
-        <div className="text-center p-0 mb-1">
+        <div className="t-center p-0 mb-1">
           <Video videoSource="315031967" />
           <h5 className="py-1">VIDEO: How to get the most out of The Perfect Curriculum</h5>
         </div>
@@ -47,7 +47,7 @@ export default () => (
       </p>
       <div className="my-3">
         <div className="flex mb-2 mb-sm-0">
-          <div className="alert bg-gray-lightest py-2 b-1 text-center mb-0 w-100">
+          <div className="alert bg-gray-lightest py-2 b-1 t-center mb-0 w-100">
             <h5>Time to completion - 5 months</h5>
             <p className="mb-0">
               Study 15 hrs/week and complete within 5 months.

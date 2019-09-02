@@ -39,7 +39,7 @@ export default function Due({ price, billingDuration, billingCycles }) {
       {/* // Simple Subscriptions */}
       <div className="bg-white b-1 p-1 flex flex-row justify-content-between mb-1">
         <div className="h4 mb-0">Due Today</div>
-        <div className="h4 text-success mb-0 text-right">
+        <div className="h4 color-green mb-0 text-right">
           $
           {price}
           {getBillingDurationText()}

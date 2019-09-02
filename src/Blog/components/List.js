@@ -8,7 +8,7 @@ function ListHeader() {
   return (
     <div className="flex flex-column align-items-center">
       <h1>iLoveCoding Blog</h1>
-      <h3 className="f-300 align-self-center text-center">
+      <h3 className="f-300 align-self-center t-center">
         Here I share my story, insights and experience on my path to becoming a self-taught software developer. Additionally I also share updates on iLoveCoding and food for thought for students.
       </h3>
     </div>

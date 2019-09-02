@@ -2,7 +2,7 @@
   .nav-link{
     color: var(--gray-darker);
     &:hover {
-      background-color: var(--gray-light)
+      background-color: var(--gray-lighter)
     }
   }
 }

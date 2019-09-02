@@ -27,9 +27,9 @@ class PriceBox extends React.Component {
   renderCTA() {
     const { isClosed, link } = this.props
     if (isClosed) {
-      return <Link to={link} className="btn btn-block btn-lg text-center btn-secondary disabled">Closed</Link>
+      return <Link to={link} className="btn btn-block btn-lg t-center btn-secondary disabled">Closed</Link>
     }
-    return <Link to={link} className="btn btn-block btn-lg text-center btn-primary">Get Instant Access</Link>
+    return <Link to={link} className="btn btn-block btn-lg t-center btn-primary">Get Instant Access</Link>
   }
 
   render() {
@@ -45,9 +45,9 @@ class PriceBox extends React.Component {
     return (
       <div
         style={{ maxWidth: '500px', minWidth: '320px' }}
-        className="bg-white mx--5 mb-2 mb-lg-0 border-primary"
+        className="card mb-2 b-primary"
       >
-        <div className="align-self-center p-2">
+        <div className="align-self-center">
           {
             isPopular && (
               <h5 className="position-absolute" style={{ top: '5px', right: '5px' }}>
@@ -55,7 +55,7 @@ class PriceBox extends React.Component {
               </h5>
             )
           }
-          <div className="text-center">
+          <div className="t-center">
             <div className="h4">
               <span className="px-1 badge badge-pill badge-dark border">{name}</span>
             </div>
@@ -65,7 +65,7 @@ class PriceBox extends React.Component {
               {this.renderPrice(price)}
             </div>
 
-            <div className="text-muted mb-1">
+            <div className="color-gray mb-1">
               {terms}
               <br />
               {terms2}

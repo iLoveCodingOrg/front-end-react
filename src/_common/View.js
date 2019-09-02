@@ -103,7 +103,7 @@ export default function View({
             { bodyContent && (
               <div
                 id="html-content"
-                className="bt-1 pt-2 mx-auto"
+                className="b bt-1 pt-2 mx-auto"
                 dangerouslySetInnerHTML={{ __html: bodyContent }}
               />
             )}

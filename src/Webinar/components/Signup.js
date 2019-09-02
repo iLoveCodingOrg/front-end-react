@@ -33,11 +33,11 @@ export default function Signup() {
   return (
     <div className="mx-auto">
       <div className="header my-3">
-        <p className="h5 text-primary text-center">NO COST TRAINING SESSION FOR ASPIRING SOFTWARE/WEB DEVELOPERS</p>
-        <h1 className="text-center mt-3">
+        <p className="h5 color-primary t-center">NO COST TRAINING SESSION FOR ASPIRING SOFTWARE/WEB DEVELOPERS</p>
+        <h1 className="t-center mt-3">
           &ldquo;How I went from a complete beginner to a highly-paid software developer in 5 months&rdquo;
         </h1>
-        <h3 className="text-center em text-muted mb-3">Without having a CS degree, without attending a coding bootcamp or without using cheap courses.</h3>
+        <h3 className="t-center em color-gray mb-3">Without having a CS degree, without attending a coding bootcamp or without using cheap courses.</h3>
       </div>
       <div>
         <div>
@@ -53,7 +53,7 @@ export default function Signup() {
           </p>
         </div>
         <div className="px-3">
-          <h3 className="text-primary text-center mb-1">
+          <h3 className="color-primary t-center mb-1">
             Here is What&apos;s Covered...
           </h3>
           <ul className="checkmark">
@@ -80,10 +80,10 @@ export default function Signup() {
             Yes! Reserve My Seat Now!
           </button>
 
-          <div className="text-center strong small">100% Free Training</div>
+          <div className="t-center strong small">100% Free Training</div>
         </div>
       </div>
-      <div className="small text-muted bt-1 pt-3" style={{ marginTop: '20em' }}>
+      <div className="small color-gray b bt-1 pt-3" style={{ marginTop: '20em' }}>
         <p>
           DISCLAIMER: Aziz Ali can not and does not make any guarantees about your ability to get results or earn any money with our ideas, information, tools, or strategies.
         </p>

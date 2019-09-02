@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default function CheckMark({ title }) {
   return (
     <span
-      className="oi oi-circle-check text-teal"
+      className="oi oi-circle-check color-teal"
       title={title}
       aria-hidden="true"
       style={{ paddingRight: '5px' }}

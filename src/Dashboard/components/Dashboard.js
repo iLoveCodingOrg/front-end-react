@@ -20,7 +20,7 @@ export default function () {
         <div>
           <div>
             <h1 className="headline">Dashboard</h1>
-            <h3 className="f-300 text-muted">
+            <h3 className="f-300 color-gray">
               Here you will find quick links to resources which are included in your membership.
             </h3>
           </div>
@@ -37,7 +37,7 @@ export default function () {
                 <li><Link to="/curriculum">Full Curriculum</Link></li>
                 <li><Link to="/courses/core">Core Training</Link></li>
                 <li><Link to="/courses/projects">Practice Projects</Link></li>
-                <li className="d-inline-block pt--5 mt--5 bt-1"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
+                <li className="d-inline-block pt--5 mt--5 b bt-1"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
               </ul>
             </div>
 
@@ -46,7 +46,7 @@ export default function () {
               <ul className="list-unstyled">
                 <li><Link to="/subscriptions">Subscription Info</Link></li>
                 <li><Link to="/change-password">Change Password</Link></li>
-                <li className="d-inline-block pt--5 mt--5 bt-1">
+                <li className="d-inline-block pt--5 mt--5 b bt-1">
                   Contact:
                   {' '}
                   <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>

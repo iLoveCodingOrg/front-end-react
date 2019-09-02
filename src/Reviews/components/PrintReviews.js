@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ({ data, containerClasses, itemClasses }) {
+export default function ({ data, containerClasses='', itemClasses }) {
   return (
     <div className={`grid grid-equal-wrap ${containerClasses}`}>
       {data.map(({
@@ -8,10 +8,10 @@ export default function ({ data, containerClasses, itemClasses }) {
       }, index) => (
         <div
           key={index}
-          className={`p-1 bg-white b-1 rounded ${itemClasses}`}
+          className={`card ${itemClasses}`}
         >
-          { thumbSrc && <img className="rounded-circle mr-1 float-left" src={thumbSrc} alt={title} width="100" height="100" /> }
-          <p><strong>{title}</strong></p>
+          { thumbSrc && <img className="mr-1 float-left" src={thumbSrc} alt={title} width="100" height="100" /> }
+          {title && <p><strong>{title}</strong></p>}
           <p>
             <em>
               "{body}"

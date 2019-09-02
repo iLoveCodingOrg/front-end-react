@@ -50,7 +50,7 @@ const data = [
 
 export default () => (
   <div>
-    <div className="my-3 text-center text-uppercase text-muted">
+    <div className="my-3 t-center t-uppercase color-gray">
                 Where iLoveCoding students work at:
     </div>
     <LogoList

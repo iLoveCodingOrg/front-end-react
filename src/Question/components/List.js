@@ -8,7 +8,7 @@ function ListHeader() {
   return (
     <div className="flex flex-column align-items-center">
       <h1>Questions &amp; Answers</h1>
-      <h3 className="f-300 align-self-center text-center">
+      <h3 className="f-300 align-self-center t-center">
         To the point answers for every step of the way of your journey!
       </h3>
     </div>

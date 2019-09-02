@@ -120,9 +120,9 @@ strong {
   font-weight: 700;
 }
 
-small {
+/* small {
   @include font-size(80%);
-}
+} */
 
 /* //
 // Prevent `sub` and `sup` elements from affecting the line height in

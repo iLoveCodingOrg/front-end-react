@@ -35,7 +35,7 @@ const dataOriginal = {
         <span>
           Best suited for learners who need more hands-on-support
           {' '}
-          <span className="text-success">(Weekly mentor group calls)</span>
+          <span className="color-green">(Weekly mentor group calls)</span>
         </span>
       ),
       price: 199,
@@ -50,7 +50,7 @@ const dataOriginal = {
         <span>
           Best suited for learners who need more hands-on-support
           {' '}
-          <span className="text-success">(Weekly mentor group calls)</span>
+          <span className="color-green">(Weekly mentor group calls)</span>
         </span>
       ),
       price: 67,
@@ -119,47 +119,48 @@ class Price extends React.Component {
     }
 
     return (
-      <section className="flex justify-content-center">
-        <div className="flex flex-column align-items-center">
-          {/* <div className="position-relative mb-1 mx-sm-auto mr-auto">
-                        <Switch
-                            style={{ maxWidth: '400px', minWidth: '320px' }}
-                            onChange={this.handleSwitch}
-                            selected={selected}
-                            options={[{
-                                name: "monthly",
-                                label: "Monthly",
-                                css: {
-                                    width: "72px",
-                                    left: "2px",
-                                }
-                            },
-                            {
-                                name: "6-month",
-                                label: "6 Month (Save 32%)",
-                                css: {
-                                    width: "155px",
-                                    left: "80px",
-                                }
-                            }]}
-                        />
-                        <h5 className="position-absolute" style={{ right: "-133px", bottom: 0 }}>
-                            <div className="badge badge-orange"><span className="oi oi-arrow-thick-left" /> Save up to 32%</div>
-                        </h5>
-                    </div> */}
-          <div className="flex flex-wrap justify-content-center">
-            {/* {this.renderPriceBox(data.pro[selected])} */}
-            {this.renderPriceBox(data.premium[selected])}
-          </div>
-          <div className="flex flex-wrap mt-2">
-            <p>
-              ⚡️ Cancel Anytime.
-              &nbsp; &nbsp;
-              🛡️ 7-Day Full Refund Policy.
-            </p>
-          </div>
+      <div className="flex flex-column align-items-center">
+        {/* <div className="position-relative mb-1 mx-sm-auto mr-auto">
+                      <Switch
+                          style={{ maxWidth: '400px', minWidth: '320px' }}
+                          onChange={this.handleSwitch}
+                          selected={selected}
+                          options={[{
+                              name: "monthly",
+                              label: "Monthly",
+                              css: {
+                                  width: "72px",
+                                  left: "2px",
+                              }
+                          },
+                          {
+                              name: "6-month",
+                              label: "6 Month (Save 32%)",
+                              css: {
+                                  width: "155px",
+                                  left: "80px",
+                              }
+                          }]}
+                      />
+                      <h5 className="position-absolute" style={{ right: "-133px", bottom: 0 }}>
+                          <div className="badge badge-orange"><span className="oi oi-arrow-thick-left" /> Save up to 32%</div>
+                      </h5>
+                  </div> */}
+        <div className="flex flex-wrap justify-content-center">
+          {/* {this.renderPriceBox(data.pro[selected])} */}
+          {this.renderPriceBox(data.premium[selected])}
         </div>
-      </section>
+        <div className="flex mt-2">
+          <p className="mr--5">
+            <span aria-label="thunder" role="img">⚡️</span>
+            Cancel Anytime.
+          </p>
+          <p>
+            <span aria-label="shield" role="img">🛡️</span>
+            7-Day Full Refund Policy.
+          </p>
+        </div>
+      </div>
     )
   }
 }

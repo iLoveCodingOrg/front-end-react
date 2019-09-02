@@ -5,7 +5,7 @@ export default function () {
     <div className="container flex justify-content-center">
       <div>
         <div className="p-1 alert-warning">
-          <h3 className="text-center text-dark">
+          <h3 className="t-center text-dark">
             <span role="img" aria-label="Sheild Emoji">🛡️</span>
             {' '}
             7-Day Full-Refund Policy

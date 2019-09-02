@@ -56,7 +56,7 @@ class CourseContent extends React.Component {
     const isFree = !(access)
     const urlTo = `/courses/${courseSlug}/lessons/${slug}`
     const activeClass = (this.props.activeLessonIndex === index) ? 'list-group-item-success' : ''
-    const completeClass = (isComplete) ? 'bg-light' : ''
+    const completeClass = (isComplete) ? 'bg-gray-lightest' : ''
 
     return (
       <Link
@@ -64,9 +64,9 @@ class CourseContent extends React.Component {
         to={urlTo}
         className={`flex justify-content-between list-group-item ${activeClass} ${completeClass}`}
       >
-        <div className="float-left">
+        <div>
           {(isComplete) ? <CheckMark /> : null}
-          <span className="text-muted">
+          <span className="color-gray">
             Lessons #
             {index + 1}
             :&nbsp;
@@ -75,7 +75,7 @@ class CourseContent extends React.Component {
           &nbsp;
           <Access isFree={isFree} />
         </div>
-        <div className="float-right small text-secondary align-self-center text-right">
+        <div className="small text-secondary align-self-center text-right">
           {duration}
           {' '}
           mins
@@ -90,7 +90,7 @@ class CourseContent extends React.Component {
     if (!isLoggedIn) { return null }
 
     return (
-      <div className="float-right">
+      <div>
         Your progress:&nbsp;
         <span className="h5">
           <span className="badge badge-warning">
@@ -135,7 +135,7 @@ class CourseContent extends React.Component {
     return (
       <>
         <div className="list-group-item bg-gray-ligher clearfix">
-          <div className="h5 mb-0 float-left">Course content</div>
+          <div className="h5 mb-0 ">Course content</div>
           {this.renderProgressIndicator()}
         </div>
         <div

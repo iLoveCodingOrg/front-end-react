@@ -114,8 +114,8 @@ class Login extends React.Component {
       <WrapMini>
         <Helmet><title>Login - iLoveCoding</title></Helmet>
         <form className="form-login" onSubmit={this.handleSubmit}>
-          <h2 className="text-center">Log in to iLoveCoding</h2>
-          <p className="text-center">
+          <h2 className="t-center">Log in to iLoveCoding</h2>
+          <p className="t-center">
             Don&apos;t have an account?
             {' '}
             <Link to="/pricing">Get started</Link>
@@ -162,7 +162,7 @@ class Login extends React.Component {
               className="my-1 btn btn-lg btn-primary btn-block"
             />
           </div>
-          <p className="text-center">
+          <p className="t-center">
             <Link to="/forgot-password">Forgot Password?</Link>
           </p>
         </form>

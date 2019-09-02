@@ -103,12 +103,12 @@ function Header({
           <Link to="/pricing" className="btn btn-success ml--5">Upgrade</Link>
         )
       }
-      return <span className="badge badge-success badge-pill text-uppercase ml--5">{level}</span>
+      return <span className="badge badge-success badge-pill t-uppercase ml--5">{level}</span>
     }
 
     return (
       <div className="flex flex-row align-items-center">
-        <img className="rounded-circle mr--5" src={gravatarUrl} alt="User Gravatar" />
+        <img className="mr--5" src={gravatarUrl} alt="User Gravatar" />
         <div>{firstName}</div>
         {renderLevel(accountLevel)}
         <button type="button" className="border-0 btn-link" onClick={logout}>(Log out)</button>
@@ -192,17 +192,17 @@ function Header({
   }
 
   return (
-    <nav id="header" className="flex flex-column flex-md-row align-items-center navbar-expand p--5 navbar-light">
+    <nav id="header" className="flex flex-column align-items-center navbar-expand p--5 navbar-light">
       <div className="navbar-brand p-0">
         <Link to="/" className="img-wrap img-wrap-hover">
           <img src={logo} alt="iLoveCoding.org Logo" />
         </Link>
       </div>
-      <nav className="my--5 my-md-0 ml-md-3 mr-md-auto navbar-nav">
+      <nav className="my--5 navbar-nav">
         { isLoggedIn ? renderUserLeft() : renderGuestLeft() }
       </nav>
       {renderAdminLinks()}
-      <nav className="my--5 my-md-0 navbar-nav flex-wrap justify-content-center">
+      <nav className="my--5 navbar-nav flex-wrap justify-content-center">
         { isLoggedIn ? renderUserRight() : renderGuestRight() }
       </nav>
     </nav>

@@ -6,11 +6,13 @@
 @import "./grid.css";
 @import "./container.css";
 @import "./margin-padding.css";
+@import "./position-display.css";
 
 @import "./typography.css";
-@import "./utils.css";
+@import "./background.css";
 @import "./nav.css";
 @import "./border.css";
+@import "./utils.css";
 
 #pricing-page{
   scroll-behavior: smooth;

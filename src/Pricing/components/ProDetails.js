@@ -42,7 +42,7 @@ All questions answered
     <div className="mb--5 strong">Premium Support:</div>
 
     <div>
-      <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
+      <span className="oi oi-x color-red" title="x" aria-hidden="true" />
       {' '}
 Weekly live group call (with mentor)
     </div>

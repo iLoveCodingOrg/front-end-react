@@ -19,12 +19,12 @@ export default function () {
         </div>
       </div>
 
-      <div className=" align-items-center bg-white rounded p-2">
+      <div className=" align-items-center card">
           <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-            <div className="text-center mb-2 mb-lg-0">
+            <div className="t-center mb-2">
               <img src={modules} alt="All Modules" className="w-100" style={{ maxWidth: '300px' }} />
             </div>
-            <div className="pl-lg-5">
+            <div>
               <h4>
                 (A) Complete Step-by-Step Training (
                 <Link to="curriculum">See Full Curriculum</Link>
@@ -70,10 +70,10 @@ export default function () {
           </div>
 
           <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-            <div className="text-center mb-2 mb-lg-0">
+            <div className="t-center mb-2">
               <img src={community} alt="Slack Student Community" className="b-1 w-100" style={{ maxWidth: '300px' }} />
             </div>
-            <div className="pl-lg-5">
+            <div>
               <h4>(B) Mentor-Moderated Student Community</h4>
               <p>Never get stuck again! Get answers to your specific questions from your peers and mentor in the member-only slack channel.</p>
               <CheckMark />
@@ -91,10 +91,10 @@ export default function () {
           </div>
 
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-            <div className="text-center mb-2 mb-lg-0">
+            <div className="t-center mb-2">
               <img src={mentorship} alt="Live Mentorship" className="b-1 w-100" style={{ maxWidth: '300px' }} />
             </div>
-            <div className="pl-lg-5">
+            <div>
               <h4>
                 (C) Weekly Group Calls with Mentor
                 {' '}

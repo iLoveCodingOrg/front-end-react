@@ -25,3 +25,10 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+.card{
+  padding: 1em;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-lighter)
+}

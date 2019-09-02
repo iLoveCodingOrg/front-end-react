@@ -96,11 +96,6 @@ u, .u{
   }
 }
 
-
-.text-teal{ color: var(--teal) }
-
-.text-orange{ color: var(--orange) }
-
 .badge-teal{
   background-color: var(--teal);
   color: #ffffff;
@@ -109,14 +104,6 @@ u, .u{
 .badge-orange{
   background-color: var(--orange);
   color: #ffffff;
-}
-
-.text-truncate{
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
 }
 
 ul.checkmark {
@@ -144,6 +131,9 @@ ul.checkmark {
 /*  */
 
 
+.t-left{
+  text-align: left;
+}
 .t-right {
   text-align: right;
 }
@@ -161,7 +151,20 @@ ul.checkmark {
   &::first-letter{
       text-transform: uppercase;
   }
-}  
+}
+.t-truncate{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.t-ellipsis{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .color-white {
   color: var(--white);
 }
@@ -195,11 +198,8 @@ ul.checkmark {
 .color-primary {
   color: var(--primary)
 }
-
-.t-ellipsis{
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+.color-teal {
+  color: var(--teal)
 }
 
 .break-word{

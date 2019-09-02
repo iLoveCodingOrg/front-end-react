@@ -8,8 +8,8 @@ import { Video } from '../../Video'
 
 function Hero() {
   return (
-    <div className="container my-2 mt-md-5">
-      <div className="flex-md-row-reverse">
+    <div className="container my-2">
+      <div>
         <div>
           <Video videoSource="308929498" />
         </div>
@@ -30,7 +30,7 @@ function Hero() {
           <HomeForm />
         </div>
       </div>
-      {/* <div className="flex-lg-row-reverse">
+      {/* <div>
         <div>
           <img className="w-100" src={homePageImage} alt="People"/>
         </div>
@@ -38,7 +38,7 @@ function Hero() {
           <h1>
             Become a skilled JavaScript developer.
           </h1>
-          <p className="h3 font-weight-light text-muted mb-2">
+          <p className="h3 font-weight-light color-gray mb-2">
             Learn to build real world apps and think like a software engineer - Yup finally!
           </p>
 

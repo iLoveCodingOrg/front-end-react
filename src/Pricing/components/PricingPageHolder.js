@@ -8,12 +8,12 @@ export default function Pricing() {
         <title>Pricing - iLoveCoding</title>
       </Helmet>
 
-      <h3 className="alert alert-info f-300 text-center">
+      <h3 className="alert alert-info f-300 t-center">
         <strong>Sorry, Training is closed!</strong>
         <br />
         iLoveCoding is currently not acceh3ting new students. Please get on the wait list, and we'll inform you when the training re-opens.
       </h3>
-      <h1 className="text-center">Get on the waitlist</h1>
+      <h1 className="t-center">Get on the waitlist</h1>
       <form
         className="mt-3 mx-auto"
         action="https://ilovecoding.us3.list-manage.com/subscribe/post?u=0bf351e3ad180589cd43cdefb&amp;id=2555c81382"

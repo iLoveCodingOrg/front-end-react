@@ -153,7 +153,7 @@ class Checkout extends React.Component {
                 <div className="flex-3 p-0">
                   <form
                     onSubmit={this.buy}
-                    className="bg-light b-1 p-2"
+                    className="bg-gray-lightest b-1 p-2"
                   >
                     {this.renderBuyError()}
                     <UserForm
@@ -180,14 +180,19 @@ class Checkout extends React.Component {
                     >
                       Complete My Purchase
                     </button>
-                    <div className="d-block text-center small mt--25">
+                    <div className="d-block t-center small mt--25">
                       Payment powered by Braintree (a PayPal company) - 🔒 Your information is secure
                     </div>
                   </form>
-                  <div className="text-center mt-1 mb-3">
-                    ⚡️ Cancel Anytime.
-                    &nbsp; &nbsp;
-                    🛡️ 7-Day Full Refund Policy.
+                  <div className="t-center mt-1 mb-3">
+                    <p className="mr--5">
+                      <span aria-label="thunder" role="img">⚡️</span>
+                      Cancel Anytime.
+                    </p>
+                    <p>
+                      <span aria-label="shield" role="img">🛡️</span>
+                      7-Day Full Refund Policy.
+                    </p>
                   </div>
                 </div>
                 <div className="flex-1 mb-2 px-2">

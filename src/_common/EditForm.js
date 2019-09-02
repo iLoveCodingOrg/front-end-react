@@ -54,7 +54,7 @@ class EditForm extends React.Component {
     return (
       <div key={field} className="form-group">
         <label
-          className="col-form-label float-right"
+          className="col-form-label"
           htmlFor={field}
         >
           {field}
@@ -126,7 +126,7 @@ class EditForm extends React.Component {
     return (
       <div key={field} className="form-group">
         <label
-          className="col-form-label float-right"
+          className="col-form-label"
           htmlFor={field}
         >
           {field}
@@ -148,7 +148,7 @@ class EditForm extends React.Component {
     return (
       <div key={field} className="form-group">
         <label
-          className="col-form-label float-right"
+          className="col-form-label"
           htmlFor={field}
         >
           {field}

@@ -3,6 +3,6 @@ import { Copyrights } from '../../Footer'
 
 export default function () {
   return (
-    <footer><Copyrights className="text-center" /></footer>
+    <footer><Copyrights className="t-center" /></footer>
   )
 }

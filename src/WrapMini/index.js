@@ -12,14 +12,14 @@ function WrapMini({
   isLoggedIn, firstName, logout, children,
 }) {
   return (
-    <div className="bg-light full-screen">
+    <div className="bg-gray-lightest full-screen">
       <div className="flex justify-content-center navbar-brand py-1">
         <Link to="/" className="img-wrap">
           <img src={logo} alt="iLoveCoding.org Logo" />
         </Link>
       </div>
       {isLoggedIn ? (
-        <div className="text-center">
+        <div className="t-center">
           <h2>
             Hi
             {' '}
@@ -47,7 +47,7 @@ function WrapMini({
       ) : (
         children
       )}
-      <Copyrights className="text-center" />
+      <Copyrights className="t-center" />
     </div>
   )
 }

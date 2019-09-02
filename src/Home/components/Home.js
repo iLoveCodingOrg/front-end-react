@@ -18,12 +18,12 @@ function Home({ isLoggedIn }) {
         <meta name="description" content="iLoveCoding teaches you how to think and build like a software developer focusing on Full-Stack JavaScript development." />
       </Helmet>
       <Hero />
-      <div className="my-3 bg-gray-lightest p-3 bt-1">
+      <div className="my-3 bg-gray-lightest p-3 b bt-1">
         <SocialProof />
       </div>
       <div className="mt-2 container">
         <div>
-          <h3 className="h2 text-center mb-2">Skip the cheap courses and the expensive bootcamps!</h3>
+          <h3 className="h2 t-center mb-2">Skip the cheap courses and the expensive bootcamps!</h3>
           <h3 className="f-300 mb-3">
             I get it! Learning how to code can be a confusing process. With dozens of expensive coding bootcamps and thousands of cheap courses, its tough to make a decision on
             {' '}
@@ -77,14 +77,14 @@ function Home({ isLoggedIn }) {
             <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>
             , and we'd be happy to answer them.
           </h3>
-          <h3 className="f-300 bt-1 pt-3 mb-2">
+          <h3 className="f-300 b bt-1 pt-3 mb-2">
             Learn to code
             {' '}
             <strong>so well</strong>
             {' '}
             , that you can confidently build real-world apps, build an impressive portfolio and pass that tricky interview!
           </h3>
-          <p className="text-center">
+          <p className="t-center">
             <Link to="/pricing" className="btn btn-lg btn-primary">Get Started Now</Link>
           </p>
         </div>

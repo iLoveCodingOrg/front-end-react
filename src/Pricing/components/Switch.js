@@ -14,7 +14,7 @@ class Switch extends React.Component {
     const randomName = Math.floor(Math.random() * 100)
 
     return options.map((option, index) => (
-      <div key={index} className="float-left">
+      <div key={index}>
         <input
           type="radio"
           name={randomName}

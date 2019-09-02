@@ -1,3 +1,8 @@
+.img-100{
+  width: 100%;
+  height: auto;
+}
+
 .w-s {
   max-width: 440px;
 }
@@ -56,8 +61,12 @@ hr {
   }
 }
 
-.rounded {
+.circle {
   border-radius: 50%
+}
+
+.rounded {
+  border-radius: var(--border-radius)
 }
 
 .full-screen{
@@ -82,4 +91,8 @@ hr {
 
 .repeat-box-pattern {
   background: url('../images/box-pattern.gif')
+}
+
+.align-middle{
+  vertical-align: middle !important;
 }

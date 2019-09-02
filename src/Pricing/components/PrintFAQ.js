@@ -31,7 +31,7 @@ class PrintFAQs extends React.Component {
         {data.map(({ question, Answer }, index) => (
           <div className="bg-white mb-1 border-dark" key={index}>
             <button
-              className="p-2 btn btn-light btn-block text-left"
+              className="p-2 btn btn-light btn-block t-left"
               onClick={() => this.toggleQuestion(index)}
             >
               ➕

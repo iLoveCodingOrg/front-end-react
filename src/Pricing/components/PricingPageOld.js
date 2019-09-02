@@ -35,17 +35,17 @@ function Pricing() {
           </div>
         </div>
       </div>
-      <div className="py-3 bg-light"><Testimonials /></div>
-      {/* <div className="py-3 bg-light"><Testimonials /></div>
+      <div className="py-3 bg-gray-lightest"><Testimonials /></div>
+      {/* <div className="py-3 bg-gray-lightest"><Testimonials /></div>
       <div className="py-3"><Outcomes /></div>
-      <div className="py-3 bg-light"><WhatsIncluded /></div>
+      <div className="py-3 bg-gray-lightest"><WhatsIncluded /></div>
       <div className="py-3"><WhosItFor /></div>
-      <div className="py-3 bg-light"><WhosItNotFor /></div>
+      <div className="py-3 bg-gray-lightest"><WhosItNotFor /></div>
       <div className="py-3"><Price /></div> */}
       <div className="py-3 bg-secondary">
         <div className="flex justify-content-center">
           <div>
-            <h2 className="text-center text-white">
+            <h2 className="t-center color-white">
               Coding bootcamp level training for 2% of the cost!
             </h2>
             <div className="alert alert-danger">

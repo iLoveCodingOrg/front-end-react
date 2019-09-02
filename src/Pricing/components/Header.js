@@ -4,7 +4,7 @@ function Header() {
   return (
     <section className="flex justify-content-center">
       <div className="container">
-        <div className="text-center">
+        <div className="t-center">
           <h1>
             Complete Video Training + Live Mentor Support.
           </h1>

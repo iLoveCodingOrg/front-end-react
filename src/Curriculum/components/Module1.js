@@ -54,15 +54,15 @@ const practice = [
 ]
 
 export default () => (
-  <section className="bg-light p-2 p-md-5 my-3 bt-1">
+  <section className="bg-gray-lightest p-2 my-3 b bt-1">
     <div>
       <h2>
-        <small className="d-block text-muted">
+        <small className="d-block color-gray">
           Module 1:
         </small>
         Fundamentals
       </h2>
-      <h3 className="f-300 text-muted">
+      <h3 className="f-300 color-gray">
         Learn the fundamentals of the HTML, CSS and JavaScript. This magic combination of three is the reason we enjoy using millions of beautiful websites.
       </h3>
       <p>

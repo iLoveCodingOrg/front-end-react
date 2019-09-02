@@ -18,14 +18,14 @@ function getDay() {
 }
 
 export default ({ className }) => (
-  <small className={`d-block mt-3 mb-1 text-muted ${className}`}>
+  <small className={`d-block mt-3 mb-1 color-gray ${className}`}>
     © 2014 -
     {' '}
     {CURRENT_YEAR}
     {' '}
     iLoveCoding Inc. ⚡ by drive and commitment.
-    <Link to="/pages/privacy" className="pl--25 text-muted"><u>Privacy</u></Link>
-    <Link to="/pages/terms" className="pl--25 text-muted"><u>Terms</u></Link>
+    <Link to="/pages/privacy" className="pl--25 color-gray"><u>Privacy</u></Link>
+    <Link to="/pages/terms" className="pl--25 color-gray"><u>Terms</u></Link>
     <div>
       Have a great
       {' '}

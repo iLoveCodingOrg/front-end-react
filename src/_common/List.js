@@ -48,7 +48,7 @@ export default function List({
         <>
           <Helmet title={getTitle()} />
           <ListHeaderComponent />
-          <div className="bt-1 pt-2 mx-auto">
+          <div className="b bt-1 pt-2 mx-auto">
             { list.map(item => (
               <Card
                 key={item.slug}

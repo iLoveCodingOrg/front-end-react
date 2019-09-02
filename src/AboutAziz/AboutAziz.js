@@ -4,7 +4,7 @@ export default function AboutAziz() {
   return (
     <div className="container flex-row">
       <img
-        className="float-left rounded-circle mb--5 mr-1"
+        className="mb--5 mr-1 float-left circle"
         src="//a.ilovecoding.org/img/_aziz/azizali-150.jpg"
         alt="Aziz Ali"
       />

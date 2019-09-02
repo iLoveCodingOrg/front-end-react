@@ -4,15 +4,15 @@ import logo from '../../_app/images/ilovecoding-logo.svg'
 export default function Header({ productName, productDesc }) {
   return (
     <div>
-      <div className="flex justify-content-between flex-column-reverse flex-md-row align-items-center">
-        <div className="flex align-items-center justify-content-center">
-          <div className="navbar-brand mr-1 py-3 text-center">
+      <div className="flex justify-content-between align-items-center">
+        <div className="flex align-justify-center">
+          <div className="navbar-brand mr-1 py-3 t-center">
             <div className="img-wrap">
               <img src={logo} alt="iLoveCoding.org Logo" />
             </div>
           </div>
           <div className="flex flex-column">
-            <div className="h6 text-muted text-uppercase m-0">
+            <div className="h6 color-gray t-uppercase m-0">
               You are about to buy:
             </div>
             <h1 className="h2">

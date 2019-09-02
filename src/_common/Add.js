@@ -54,7 +54,7 @@ export default function Add({
     <div className="container">
       <Helmet title={`${pageTitle} - iLoveCoding`} />
       <main>
-        <h1 className="my-2 text-center text-capitalize">{pageTitle}</h1>
+        <h1 className="my-2 t-center t-capitalize">{pageTitle}</h1>
         {children}
         <EditForm
           key="new"

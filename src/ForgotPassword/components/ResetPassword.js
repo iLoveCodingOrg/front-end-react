@@ -104,8 +104,8 @@ class ResetPassword extends React.Component {
         <Helmet><title>Reset password - iLoveCoding</title></Helmet>
         <div className="container">
           <div>
-            <div className="offset-md-2 offset-lg-3">
-              <h2 className="text-center">Reset Password</h2>
+            <div>
+              <h2 className="t-center">Reset Password</h2>
               <hr />
               <form onSubmit={this.handleSubmit}>
                 {this.renderError()}

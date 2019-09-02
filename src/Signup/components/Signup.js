@@ -83,8 +83,8 @@ class Signup extends React.Component {
     return (
       <WrapMini>
         <Helmet><title>Signup - iLoveCoding</title></Helmet>
-        <h1 className="h2 text-center">Get started with iLoveCoding</h1>
-        <h3 className="f-300 text-center">
+        <h1 className="h2 t-center">Get started with iLoveCoding</h1>
+        <h3 className="f-300 t-center">
           Get access to the first two courses FREE.
           {' '}
           <Link to="/pricing">Upgrade for full-access anytime</Link>
@@ -165,7 +165,7 @@ class Signup extends React.Component {
           </div>
         </form>
 
-        <div className="text-center">
+        <div className="t-center">
           Already have an account?
           {' '}
           <Link to="/login">Login here</Link>

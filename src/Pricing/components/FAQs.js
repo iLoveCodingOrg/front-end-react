@@ -7,7 +7,7 @@ export default function () {
   return (
     <div className="container faqs flex flex-column align-items-center">
       <div>
-        <h2 className="mb-2 text-center">Common Questions</h2>
+        <h2 className="mb-2 t-center">Common Questions</h2>
         <hr />
 
         <h3 className="mt-3">Can I get a discount?</h3>

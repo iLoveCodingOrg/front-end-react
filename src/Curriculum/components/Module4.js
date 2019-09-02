@@ -19,15 +19,15 @@ const practice = [
 ]
 
 export default () => (
-  <section className="bg-light p-2 p-md-5 my-3 bt-1">
+  <section className="bg-gray-lightest p-2 my-3 b bt-1">
     <div>
       <h2>
-        <small className="d-block text-muted">
+        <small className="d-block color-gray">
           Module 4:
         </small>
         Mobile Development
       </h2>
-      <h3 className="f-300 text-muted">
+      <h3 className="f-300 color-gray">
         Learn how to build Mobile Applications for iPhone and Android with JavaScript. Use the same technology used to build Instagram, Facebook, Airbnb and Walmart mobile apps.
       </h3>
       <p>

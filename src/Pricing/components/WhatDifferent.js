@@ -15,11 +15,11 @@ export default function () {
         </div>
       </div>
       <div>
-        <table className="table text-center">
-          <thead className="bg-gray-lighter bold strong">
+        <table className="table t-center">
+          <thead className="bg-gray-lighter strong">
             <tr>
               <th width="20%" />
-              <th width="27%" className="h5 align-middle border-right border-left border-primary alert-primary">
+              <th width="27%" className="h4 align-middle b bt-1 bb-0 bx-1 b-blue alert-primary">
                 iLoveCoding Premium
                 {/* <br />
                 <small>Premium)</small> */}
@@ -38,14 +38,14 @@ export default function () {
           </thead>
           <tbody className="bg-white">
             <tr>
-              <td className="text-right"><strong>Cost</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">$199/mo</td>
+              <td className="t-right"><strong>Cost</strong></td>
+              <td className="b by-0 bx-1 b-blue">$199/mo</td>
               <td>$9500 - $19000</td>
               <td>$12-$1000</td>
             </tr>
-            <tr className="bg-light">
-              <td className="text-right"><strong>Complete Training</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">
+            <tr className="bg-gray-lightest">
+              <td className="t-right"><strong>Complete Training</strong></td>
+              <td className="b by-0 bx-1 b-blue">
                 <CheckMark />
                 {' '}
                 Yes
@@ -56,14 +56,14 @@ export default function () {
                 Yes
               </td>
               <td>
-                <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
+                <span className="oi oi-x color-red" title="x" aria-hidden="true" />
                 {' '}
                 No, you'll have to buy multiple courses to get the full information
               </td>
             </tr>
             <tr>
-              <td className="text-right"><strong>Focus on the right material</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">
+              <td className="t-right"><strong>Focus on the right material</strong></td>
+              <td className="b by-0 bx-1 b-blue">
                 <CheckMark />
                 {' '}
                 Yes
@@ -81,9 +81,9 @@ export default function () {
                 Students have to find the right material by themselves constantly.
               </td>
             </tr>
-            <tr className="bg-light">
-              <td className="text-right"><strong>Live mentor support</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">
+            <tr className="bg-gray-lightest">
+              <td className="t-right"><strong>Live mentor support</strong></td>
+              <td className="b by-0 bx-1 b-blue">
                 <CheckMark />
                 Yes
                 <br />
@@ -95,20 +95,20 @@ export default function () {
                 Yes
               </td>
               <td>
-                <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
+                <span className="oi oi-x color-red" title="x" aria-hidden="true" />
                 {' '}
                 No
               </td>
             </tr>
             <tr>
-              <td className="text-right"><strong>Bite-sized Training</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">
+              <td className="t-right"><strong>Bite-sized Training</strong></td>
+              <td className="b by-0 bx-1 b-blue">
                 <CheckMark />
                 {' '}
                 Yes
               </td>
               <td>
-                <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
+                <span className="oi oi-x color-red" title="x" aria-hidden="true" />
                 {' '}
                 No
               </td>
@@ -120,27 +120,27 @@ export default function () {
                 (depends on the course author)
               </td>
             </tr>
-            <tr className="bg-light">
-              <td className="text-right"><strong>Cheat sheets</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">
+            <tr className="bg-gray-lightest">
+              <td className="t-right"><strong>Cheat sheets</strong></td>
+              <td className="b by-0 bx-1 b-blue">
                 <CheckMark />
                 {' '}
                 Yes
               </td>
               <td>
-                <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
+                <span className="oi oi-x color-red" title="x" aria-hidden="true" />
                 {' '}
                 No
               </td>
               <td>
-                <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
+                <span className="oi oi-x color-red" title="x" aria-hidden="true" />
                 {' '}
                 No
               </td>
             </tr>
             <tr>
-              <td className="text-right"><strong>Homework Assignments</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">
+              <td className="t-right"><strong>Homework Assignments</strong></td>
+              <td className="b by-0 bx-1 b-blue">
                 <CheckMark />
                 {' '}
                 Yes
@@ -156,9 +156,9 @@ export default function () {
                 Maybe
               </td>
             </tr>
-            <tr className="bg-light">
-              <td className="text-right"><strong>Mentor: Portfolio Help</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">
+            <tr className="bg-gray-lightest">
+              <td className="t-right"><strong>Mentor: Portfolio Help</strong></td>
+              <td className="b by-0 bx-1 b-blue">
                 <CheckMark />
                 {' '}
                 Yes
@@ -169,14 +169,14 @@ export default function () {
                 Yes
               </td>
               <td>
-                <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
+                <span className="oi oi-x color-red" title="x" aria-hidden="true" />
                 {' '}
                 No
               </td>
             </tr>
             <tr>
-              <td className="text-right"><strong>Mentor: Career Help</strong></td>
-              <td className="border-right border-left border-primary bt-1-0">
+              <td className="t-right"><strong>Mentor: Career Help</strong></td>
+              <td className="b by-0 bx-1 b-blue">
                 <CheckMark />
                 {' '}
                 Yes
@@ -187,14 +187,14 @@ export default function () {
                 Yes
               </td>
               <td>
-                <span className="oi oi-x text-danger" title="x" aria-hidden="true" />
+                <span className="oi oi-x color-red" title="x" aria-hidden="true" />
                 {' '}
                 No
               </td>
             </tr>
-            <tr className="bg-light">
-              <td className="text-right"><strong>Intangibles</strong></td>
-              <td className="text-left border-right border-left border-primary bt-1-0 border-bottom">
+            <tr className="bg-gray-lightest">
+              <td className="t-right"><strong>Intangibles</strong></td>
+              <td className="t-left b bt-0 bb-1 bx-1 b-blue">
                 <CheckMark />
                 {' '}
                 Simple Explanations
