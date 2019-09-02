@@ -179,11 +179,14 @@ ul.checkmark {
 .color-green {
   color: var(--green);
 }
+.color-gray-light {
+  color: var(--gray-light)
+}
 .color-gray {
   color: var(--gray)
 }
-.color-light-gray {
-  color: var(--gray-light)
+.color-gray-dark {
+  color: var(--gray-dark)
 }
 .color-bray {
   color: var(--bray)

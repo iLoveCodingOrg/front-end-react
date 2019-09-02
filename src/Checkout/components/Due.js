@@ -25,7 +25,7 @@ export default function Due({ price, billingDuration, billingCycles }) {
     <div>
       {/* // Payment plans and limited durations and all */}
       {billingCycles > 1 && (
-        <div className="bg-white b-1 p-1 flex flex-row justify-content-between mb-1">
+        <div className="bg-white b-1 p-1 flex flex-row space-between mb-1">
           <div className="h5 mb-0">Payment Terms</div>
           <div className="h5 mb-0">
             $
@@ -37,7 +37,7 @@ export default function Due({ price, billingDuration, billingCycles }) {
       )
       }
       {/* // Simple Subscriptions */}
-      <div className="bg-white b-1 p-1 flex flex-row justify-content-between mb-1">
+      <div className="bg-white b-1 p-1 flex flex-row space-between mb-1">
         <div className="h4 mb-0">Due Today</div>
         <div className="h4 color-green mb-0 text-right">
           $

@@ -5,7 +5,7 @@ export default function WhatYouGet() {
     <div>
       <h4 className="mb-1 t-center">Here's What You Get:</h4>
       <ul className="list-group mb-1">
-        <li className="list-group-item flex justify-content-between color-green">
+        <li className="list-group-item flex space-between color-green">
           <div>
             <h6 className="my-0">💪 Complete Developer Training</h6>
             <small className="color-gray">
@@ -13,7 +13,7 @@ export default function WhatYouGet() {
             </small>
           </div>
         </li>
-        <li className="list-group-item flex justify-content-between color-green">
+        <li className="list-group-item flex space-between color-green">
           <div>
             <h6 className="my-0">🚀 Connect with Mentor</h6>
             <small className="color-gray">
@@ -21,7 +21,7 @@ export default function WhatYouGet() {
             </small>
           </div>
         </li>
-        <li className="list-group-item flex justify-content-between color-green">
+        <li className="list-group-item flex space-between color-green">
           <div>
             <h6 className="my-0">🙌 Student Community</h6>
             <small className="color-gray">

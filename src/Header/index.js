@@ -36,7 +36,7 @@ function Header({
       {
         label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
         link: '/curriculum',
-        className: 'btn btn-outline-primary',
+        className: 'btn btn-light',
         style: {},
       },
       // {
@@ -67,7 +67,7 @@ function Header({
       {
         label: 'Full Curriculum', // QUIZ / Start Here <- Ideas
         link: '/curriculum',
-        className: 'btn btn-outline-primary',
+        className: 'btn btn-light',
         style: {},
       },
       // {

@@ -62,7 +62,7 @@ class CourseContent extends React.Component {
       <Link
         key={index}
         to={urlTo}
-        className={`flex justify-content-between list-group-item ${activeClass} ${completeClass}`}
+        className={`flex space-between list-group-item ${activeClass} ${completeClass}`}
       >
         <div>
           {(isComplete) ? <CheckMark /> : null}
@@ -75,7 +75,7 @@ class CourseContent extends React.Component {
           &nbsp;
           <Access isFree={isFree} />
         </div>
-        <div className="small text-secondary align-self-center text-right">
+        <div className="small color-gray-dark align-self-center text-right">
           {duration}
           {' '}
           mins

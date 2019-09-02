@@ -19,7 +19,7 @@ class PriceBox extends React.Component {
         <sup className="h3">$</sup>
         <span className="h1">{wholeNumber}</span>
         {/* <sup className="decimal h2">.{decimal}</sup> */}
-        <span className="text-secondary">/mo</span>
+        <span className="color-gray-dark">/mo</span>
       </div>
     )
   }
@@ -27,7 +27,7 @@ class PriceBox extends React.Component {
   renderCTA() {
     const { isClosed, link } = this.props
     if (isClosed) {
-      return <Link to={link} className="btn btn-block btn-lg t-center btn-secondary disabled">Closed</Link>
+      return <Link to={link} className="btn btn-block btn-lg t-center btn-gray disabled">Closed</Link>
     }
     return <Link to={link} className="btn btn-block btn-lg t-center btn-primary">Get Instant Access</Link>
   }

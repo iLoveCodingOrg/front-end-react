@@ -175,7 +175,7 @@ class Checkout extends React.Component {
                       verifyTokenCb={this.verifyRecaptchaCb}
                     />
                     <button
-                      className="btn btn-primary btn-lg btn-block"
+                      className="btn btn-primary btn-lg d-block"
                       type="submit"
                     >
                       Complete My Purchase

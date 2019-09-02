@@ -4,7 +4,7 @@ import logo from '../../_app/images/ilovecoding-logo.svg'
 export default function Header({ productName, productDesc }) {
   return (
     <div>
-      <div className="flex justify-content-between align-items-center">
+      <div className="flex space-between align-items-center">
         <div className="flex align-justify-center">
           <div className="navbar-brand mr-1 py-3 t-center">
             <div className="img-wrap">

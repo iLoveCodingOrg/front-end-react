@@ -12,7 +12,7 @@ class CourseLinks extends React.Component {
     if (activeLessonIndex > 0) {
       const lesson = lessons[activeLessonIndex - 1]
       const urlTo = `/courses/${courseSlug}/lessons/${lesson.slug}`
-      return <Link to={urlTo} className="btn btn-dark">&lt; Previous</Link>
+      return <Link to={urlTo} className="btn btn-gray-dark">&lt; Previous</Link>
     }
   }
 
@@ -20,7 +20,7 @@ class CourseLinks extends React.Component {
     const { isMainBtnHidden, courseSlug } = this.props
     if (!isMainBtnHidden) {
       const urlTo = `/courses/${courseSlug}`
-      return <Link to={urlTo} className="btn btn-secondary">Main Course Page</Link>
+      return <Link to={urlTo} className="btn btn-gray">Main Course Page</Link>
     }
   }
 
@@ -32,7 +32,7 @@ class CourseLinks extends React.Component {
     ) {
       const lesson = lessons[activeLessonIndex + 1]
       const urlTo = `/courses/${courseSlug}/lessons/${lesson.slug}`
-      return <Link to={urlTo} className="btn btn-dark">Next &gt;</Link>
+      return <Link to={urlTo} className="btn btn-gray-dark">Next &gt;</Link>
     }
     return null
   }

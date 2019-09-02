@@ -27,7 +27,7 @@ function Hero() {
             Front-End and/or Full-Stack JavaScript Developer.
           </h3>
           <Link to="/pricing" className="btn btn-lg btn-primary">Get Started Now</Link>
-          <Link to="/pages/how-it-works" className="btn-link btn-lg">Or see How it works</Link>
+          <Link to="/pages/how-it-works" className="btn btn-link btn-lg">Or see How it works</Link>
         </div>
         <div className="flex-1" style={{ flexBasis: '250px' }}>
           <img className="w-100" src={homePageImage} alt="People" />
