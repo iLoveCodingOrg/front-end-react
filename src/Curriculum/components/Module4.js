@@ -49,7 +49,7 @@ export default () => (
       />
 
       <hr />
-      <h5>Module Outcomes:</h5>
+      <h4>Module Outcomes:</h4>
       <p>Once you are done with this module you will be able to:</p>
       <ol>
         <li>Learn to build Mobile apps for Android &amp; iOS devices</li>

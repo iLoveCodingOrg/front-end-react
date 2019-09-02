@@ -84,7 +84,7 @@ export default () => (
       />
 
       <hr />
-      <h5>Module Outcomes:</h5>
+      <h4>Module Outcomes:</h4>
       <p>Once you are done with this module you will be able to:</p>
       <ol>
         <li>Build simple websites</li>

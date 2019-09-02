@@ -65,7 +65,7 @@ function Pricing() {
       </div>
 
       <div className="py-3"><WhatDifferent /></div>
-      <div><Testimonials itemNum="3" /></div>
+      <div className="p-3"><Testimonials itemNum="3" /></div>
 
       <div className="pb-3 t-center">
         <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>

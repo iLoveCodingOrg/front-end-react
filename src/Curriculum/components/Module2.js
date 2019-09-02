@@ -11,7 +11,7 @@ const courses = [
   {
     name: 'Learn & Master Bootstrap in a Week',
     link: '/courses/learn-master-bootstrap-in-a-week',
-    thumbSrc: '//a.ilovecoding.org/thumb/bootstrap--25-intro.png',
+    thumbSrc: '//a.ilovecoding.org/thumb/bootstrap-1-intro.png',
   },
   {
     name: 'Learn React JS in 14 Days',
@@ -105,7 +105,7 @@ export default () => (
       />
 
       <hr />
-      <h5>Module Outcomes:</h5>
+      <h4>Module Outcomes:</h4>
       <p>Once you are done with this module you will be able to:</p>
       <ol>
         <li>Build modern and flashy websites</li>

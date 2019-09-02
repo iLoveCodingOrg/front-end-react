@@ -46,13 +46,11 @@ export default () => (
         Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
       </p>
       <div className="my-3">
-        <div className="flex mb-2 mb-sm-0">
-          <div className="alert bg-gray-lightest py-2 b-1 t-center mb-0 w-100">
-            <h5>Time to completion - 5 months</h5>
-            <p className="mb-0">
-              Study 15 hrs/week and complete within 5 months.
-            </p>
-          </div>
+        <div className="flex flex-column card mb-2 align-items-center">
+          <h3>Time to completion - 5 months</h3>
+          <p className="mb-0">
+            Study 15 hrs/week and complete within 5 months.
+          </p>
         </div>
       </div>
 
