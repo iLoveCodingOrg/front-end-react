@@ -17,22 +17,22 @@ export default function () {
                 mt-1
                 mb-3"
       >
-        <div>
-          <div>
+        <div className="flex flex-wrap">
+          <div className="flex-3" style={{ flexBasis: '300px' }}>
             <h1 className="headline">Dashboard</h1>
             <h3 className="f-300 color-gray">
               Here you will find quick links to resources which are included in your membership.
             </h3>
           </div>
-          <div>
+          <div className="flex-1" style={{ flexBasis: '250px' }}>
             <Video videoSource="314907971" />
           </div>
         </div>
         <hr className="mb--25" />
         <div>
-          <div className="mt-3">
+          <div className="grid mt-3" style={{ gridTemplateColumns: '2fr 3fr' }}>
             <div>
-              <h4>Start Training</h4>
+              <h3>Start Training</h3>
               <ul className="list-unstyled">
                 <li><Link to="/curriculum">Full Curriculum</Link></li>
                 <li><Link to="/courses/core">Core Training</Link></li>
@@ -41,8 +41,12 @@ export default function () {
               </ul>
             </div>
 
-            <div className="mt-3">
-              <h4>Account Settings</h4>
+            <div>
+              <StudentCommunity />
+            </div>
+
+            <div>
+              <h3>Account Settings</h3>
               <ul className="list-unstyled">
                 <li><Link to="/subscriptions">Subscription Info</Link></li>
                 <li><Link to="/change-password">Change Password</Link></li>
@@ -53,11 +57,9 @@ export default function () {
                 </li>
               </ul>
             </div>
-
-          </div>
-          <div className="mt-3">
-            <StudentCommunity />
-            <PremiumSection />
+            <div>
+              <PremiumSection />
+            </div>
           </div>
         </div>
       </section>

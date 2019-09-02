@@ -67,7 +67,7 @@ class UserForm extends React.Component {
           {' '}
           {userInfo.firstName.value}
           ?
-          <button className="border-0 btn-link" onClick={logout}>Log out</button>
+          <button className="b-0 btn-link" onClick={logout}>Log out</button>
         </div>
       )
     }

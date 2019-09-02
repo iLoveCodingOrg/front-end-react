@@ -108,10 +108,10 @@ function Header({
 
     return (
       <div className="flex flex-row align-items-center">
-        <img className="mr--5" src={gravatarUrl} alt="User Gravatar" />
+        <img className="mr--5 circle" src={gravatarUrl} alt="User Gravatar" />
         <div>{firstName}</div>
         {renderLevel(accountLevel)}
-        <button type="button" className="border-0 btn-link" onClick={logout}>(Log out)</button>
+        <button type="button" className="b-0 btn-link" onClick={logout}>(Log out)</button>
       </div>
     )
   }

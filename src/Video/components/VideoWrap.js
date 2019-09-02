@@ -55,7 +55,7 @@ class VideoWrap extends React.Component {
                     (isLoggedIn)
                       ? (
                         <p>
-                          <Link to="/pricing" className="btn-link p-0 border-0">Upgrade your membership</Link>
+                          <Link to="/pricing" className="btn-link p-0 b-0">Upgrade your membership</Link>
                           {' '}
                           to get access to this lesson along with hundreds of other lessons and complete courses.
                         </p>
@@ -63,14 +63,14 @@ class VideoWrap extends React.Component {
                       : (
                         <div>
                           <p>
-                            <Link to="/pricing" className="btn-link p-0 border-0">Enroll in the training</Link>
+                            <Link to="/pricing" className="btn-link p-0 b-0">Enroll in the training</Link>
                             {' '}
                             to get access to this lesson along with hundreds of other lessons and complete courses.
                           </p>
                           <p>
                             Already enrolled?
                             {' '}
-                            <Link to="/login" className="btn-link p-0 border-0">Login</Link>
+                            <Link to="/login" className="btn-link p-0 b-0">Login</Link>
                           </p>
                         </div>
                       )

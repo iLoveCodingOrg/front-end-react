@@ -37,7 +37,7 @@ function WrapMini({
             {' '}
             <button
               type="button"
-              className="border-0 btn-link p-0"
+              className="b-0 btn-link p-0"
               onClick={logout}
             >
               Log out

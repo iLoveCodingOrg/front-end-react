@@ -92,7 +92,7 @@ class CourseContent extends React.Component {
     return (
       <div>
         Your progress:&nbsp;
-        <span className="h5">
+        <span className="h3">
           <span className="badge badge-warning">
             {Math.round(lessonCompletedCount / lessonCount * 100)}
             % complete
@@ -134,8 +134,8 @@ class CourseContent extends React.Component {
     const { lessons, maxScrollHeight } = this.props
     return (
       <>
-        <div className="list-group-item bg-gray-ligher clearfix">
-          <div className="h5 mb-0 ">Course content</div>
+        <div className="flex space-between bg-gray-lighter p-1 align-items-center">
+          <div className="h3 mb-0 ">Course content</div>
           {this.renderProgressIndicator()}
         </div>
         <div

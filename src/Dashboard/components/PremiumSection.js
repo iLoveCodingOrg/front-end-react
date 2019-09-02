@@ -5,8 +5,8 @@ import { isPremium } from '../../_user/selectors'
 
 function PremiumSupport({ isPremium }) {
   return (
-    <div className="mt-3">
-      <h4>Premium Support</h4>
+    <>
+      <h3>Premium Support</h3>
       <ul className="list-unstyled">
         {
           isPremium ? (
@@ -24,7 +24,7 @@ function PremiumSupport({ isPremium }) {
           )
         }
       </ul>
-    </div>
+    </>
   )
 }
 

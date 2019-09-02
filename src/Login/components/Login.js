@@ -97,7 +97,7 @@ class Login extends React.Component {
               <button
                 type="button"
                 onClick={this.handleVerifyEmail}
-                className="btn-link p-0 border-0"
+                className="btn-link p-0 b-0"
               >
                 Resend verification email
               </button>
