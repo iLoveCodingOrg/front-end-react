@@ -29,8 +29,8 @@ export default class OfficeHours extends React.Component {
             Take advantage of the time that I have available. Pick my brain, take advantage of my expertise while I am available. As I start getting busy I will no longer be able to offer this personalized service.
           </h3>
 
-          <div className="alert alert-info pb-0">
-            <h5 className="alert-heading">
+          <div className="card card-info pb-0">
+            <h5>
               Please come to the call prepared
             </h5>
             <ol>

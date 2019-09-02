@@ -48,7 +48,7 @@ function Pricing() {
             <h2 className="t-center color-white">
               Coding bootcamp level training for 2% of the cost!
             </h2>
-            <div className="alert alert-danger">
+            <div className="card card-danger">
               <p>
                 <strong>Note:</strong>
                 {' '}

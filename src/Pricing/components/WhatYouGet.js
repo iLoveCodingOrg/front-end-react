@@ -98,7 +98,7 @@ export default function () {
               <h4>
                 (C) Weekly Group Calls with Mentor
                 {' '}
-                <span className="badge badge-success">Premium</span>
+                <span className="badge bg-success">Premium</span>
               </h4>
               <p>Every week you join a live group call with your mentor.</p>
 

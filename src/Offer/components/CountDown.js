@@ -41,7 +41,7 @@ function CountDown({ title, timeFrom, timeLeft }) {
         return (
           <div className="bg-danger flex flex-column">
             <div className="h5 mt-1 t-center">
-              <span className="badge badge-light t-uppercase">
+              <span className="badge bg-gray">
                 {title}
               </span>
             </div>

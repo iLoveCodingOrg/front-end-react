@@ -69,7 +69,7 @@ function CreditCardForm({
               // onValidityChange={(a) => { console.log(a); setIsNumberValid(a.isValid) }}
               // prefill="4111 1111 1111 1111"
             />
-            {!isNumberValid && <small className="text-danger">Credit card number is invalid</small>}
+            {!isNumberValid && <small className="color-red">Credit card number is invalid</small>}
           </div>
         </div>
         <div className="flex">
@@ -86,7 +86,7 @@ function CreditCardForm({
               onBlur={({ isValid }) => setIsExpirationValid(isValid)}
               // prefill="0220"
             />
-            {!isExpirationValid && <small className="text-danger">Expiration date is invalid</small>}
+            {!isExpirationValid && <small className="color-red">Expiration date is invalid</small>}
           </div>
           <div className="w-100 mb-2 mr-1">
             <label
@@ -101,7 +101,7 @@ function CreditCardForm({
               onBlur={({ isValid }) => setIsCvvValid(isValid)}
               // prefill="123"
             />
-            {!isCvvValid && <small className="text-danger">CVV is invalid</small>}
+            {!isCvvValid && <small className="color-red">CVV is invalid</small>}
           </div>
           <div className="w-100 mb-2">
             <label
@@ -116,7 +116,7 @@ function CreditCardForm({
               onBlur={({ isValid }) => setIsPostalCodeValid(isValid)}
               // prefill="123456"
             />
-            {!isPostalCodeValid && <small className="text-danger">Zip code / postal code is invalid</small>}
+            {!isPostalCodeValid && <small className="color-red">Zip code / postal code is invalid</small>}
           </div>
         </div>
         <button
@@ -127,7 +127,7 @@ function CreditCardForm({
         >
           {isLoadingUpdateCard ? 'Updating...' : 'Update Card'}
         </button>
-        <div className="d-block text-center small mt--25">
+        <div className="d-block t-center small mt--25">
           Payment powered by Braintree (a PayPal company) - 🔒 Your information is secure
         </div>
       </Braintree>

@@ -4,7 +4,7 @@ export default function () {
   return (
     <div className="container flex justify-content-center">
       <div>
-        <div className="p-1 alert-warning">
+        <div className="card card-warning">
           <h3 className="t-center text-dark">
             <span role="img" aria-label="Sheild Emoji">🛡️</span>
             {' '}

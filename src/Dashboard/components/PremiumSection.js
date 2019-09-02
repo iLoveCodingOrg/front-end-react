@@ -12,14 +12,14 @@ function PremiumSupport({ isPremium }) {
           isPremium ? (
             <li>
               <Link to="/groupcalls">Weekly Group Call with Aziz</Link>
-              <span className="badge badge-pill badge-success">PREMIUM</span>
+              <span className="badge bg-success ml--5">PREMIUM</span>
             </li>
           ) : (
             <li>
               <Link to="pricing">Upgrade to iLoveCoding Premium</Link>
               {' '}
               to unlock Weekly Live Group Calls with Aziz.
-              <Link to="pricing" className="badge badge-pill badge-success">Upgrade to PREMIUM</Link>
+              <Link to="pricing" className="badge bg-success">Upgrade to PREMIUM</Link>
             </li>
           )
         }

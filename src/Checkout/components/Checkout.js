@@ -98,7 +98,7 @@ class Checkout extends React.Component {
     const { buyError } = this.props
     if (buyError) {
       return (
-        <div className="alert alert-danger">
+        <div className="card card-danger">
           {buyError}
         </div>
       )
@@ -153,7 +153,7 @@ class Checkout extends React.Component {
                 <div className="flex-3 p-0">
                   <form
                     onSubmit={this.buy}
-                    className="bg-gray-lightest b-1 p-2"
+                    className="card bg-gray-lightest p-2"
                   >
                     {this.renderBuyError()}
                     <UserForm
@@ -175,7 +175,7 @@ class Checkout extends React.Component {
                       verifyTokenCb={this.verifyRecaptchaCb}
                     />
                     <button
-                      className="btn btn-primary btn-lg d-block"
+                      className="btn btn-primary btn-lg btn-block"
                       type="submit"
                     >
                       Complete My Purchase
@@ -184,7 +184,7 @@ class Checkout extends React.Component {
                       Payment powered by Braintree (a PayPal company) - 🔒 Your information is secure
                     </div>
                   </form>
-                  <div className="t-center mt-1 mb-3">
+                  <div className="flex space-around m-1">
                     <p className="mr--5">
                       <span aria-label="thunder" role="img">⚡️</span>
                       Cancel Anytime.

@@ -3,12 +3,12 @@
 @import "./_vars.css";
 @import "./reboot.css";
 @import "./typography.css";
+@import "./container.css";
 @import "./button.css";
 @import "./flex.css";
 @import "./grid.css";
 @import "./margin-padding.css";
 @import "./position-display.css";
-@import "./container.css";
 @import "./background.css";
 @import "./nav.css";
 @import "./border.css";

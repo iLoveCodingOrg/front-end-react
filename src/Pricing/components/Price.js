@@ -143,7 +143,7 @@ class Price extends React.Component {
                           }]}
                       />
                       <h5 className="position-absolute" style={{ right: "-133px", bottom: 0 }}>
-                          <div className="badge badge-orange"><span className="oi oi-arrow-thick-left" /> Save up to 32%</div>
+                          <div className="badge bg-orange"><span className="oi oi-arrow-thick-left" /> Save up to 32%</div>
                       </h5>
                   </div> */}
         <div className="flex flex-wrap justify-content-center">

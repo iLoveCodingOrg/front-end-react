@@ -19,7 +19,7 @@ export default function () {
           <thead className="bg-gray-lighter strong">
             <tr>
               <th width="20%" />
-              <th width="27%" className="h4 align-middle b bt-1 bb-0 bx-1 b-blue alert-primary">
+              <th width="27%" className="h4 align-middle b bt-1 bb-0 bx-1 b-blue card-primary">
                 iLoveCoding Premium
                 {/* <br />
                 <small>Premium)</small> */}

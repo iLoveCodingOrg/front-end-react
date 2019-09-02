@@ -103,7 +103,7 @@ function Header({
           <Link to="/pricing" className="btn btn-success ml--5">Upgrade</Link>
         )
       }
-      return <span className="badge badge-success badge-pill t-uppercase ml--5">{level}</span>
+      return <span className="badge bg-success ml--5">{level}</span>
     }
 
     return (

@@ -51,13 +51,13 @@ class PriceBox extends React.Component {
           {
             isPopular && (
               <h5 className="position-absolute" style={{ top: '5px', right: '5px' }}>
-                <span className="badge badge-warning">Recommended</span>
+                <span className="badge bg-warning">Recommended</span>
               </h5>
             )
           }
           <div className="t-center">
             <div className="h4">
-              <span className="px-1 badge badge-pill badge-dark border">{name}</span>
+              <span className="badge bg-gray-dark">{name}</span>
             </div>
             <br />
             <span className="h3 f-300 em">{desc}</span>

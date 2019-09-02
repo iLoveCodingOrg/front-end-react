@@ -73,7 +73,7 @@ class Signup extends React.Component {
     if (!this.props.error) return
 
     return (
-      <div className="alert alert-danger">
+      <div className="card card-danger">
         {this.props.error}
       </div>
     )

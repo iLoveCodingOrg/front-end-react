@@ -16,7 +16,7 @@ export default function RedirectAlert({ slug }) {
 
   if (path) {
     return (
-      <div className="alert alert-danger">
+      <div className="card card-danger">
         <strong>IMPORTANT:</strong>
         {' '}
         <a href={path.to}>The new version of this course is available here</a>

@@ -8,7 +8,6 @@ input[type=button], input[type=submit], button, .btn{
   display: inline-flex;
   justify-content: center;
   cursor: pointer;
-  border-color: var(--blue);
   border-radius: var(--border-radius);
   &:hover{
     background-color: var(--gray-lighter);
@@ -96,6 +95,7 @@ input[type=button], input[type=submit], button, .btn{
 .btn-group {
   > .btn{
     border-radius: 0px;
+    flex: 1 1 auto;
   }
   > .btn:first-child{
     border-top-left-radius: var(--border-radius);
@@ -109,7 +109,7 @@ input[type=button], input[type=submit], button, .btn{
 
 
 
-/* form, input, select, textarea{
+form, input, select, textarea, .form-control{
   display: block;
   width: 100%;
 }
@@ -143,16 +143,22 @@ select{
   appearance: none;
 }
 
-input, select, textarea{
+input, select, textarea, .form-control{
+  height: calc(1.5em + .75rem + 2px);
   padding: 16px;
   font-size: 1em;
   border-radius: var(--border-radius);
   border: 1px solid var(--gray-lighter);
   background-color: white;
+  &:focus{
+    border-color: var(--blue-lighter);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem var(--blue-lighter);
+  }
 }
 
 label{
-  line-height: 1em;
+  /* line-height: 1em; */
   display: block;
   position: relative;
   padding-top: 6px;
@@ -168,4 +174,10 @@ label > span{
   white-space: nowrap;
   top: 0px;
   left: 7px;
-} */
+}
+
+.form-control{
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  line-height: 1.5;
+}

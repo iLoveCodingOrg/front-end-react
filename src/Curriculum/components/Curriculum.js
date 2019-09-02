@@ -22,7 +22,7 @@ export default () => (
       </h3>
       <div className="b bt-1 pt-2">
         <div>
-          <h3 className="f-300 alert alert-warning text-dark">
+          <h3 className="f-300 card card-warning text-dark">
             <strong>Important:</strong>
             {' '}
             This curriculum will give you the complete training of the deep technical concepts, homework, cheatsheets and practice projects so become a highly-skilled software developer.&nbsp;

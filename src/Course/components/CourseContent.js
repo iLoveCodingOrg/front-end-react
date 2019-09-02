@@ -55,7 +55,7 @@ class CourseContent extends React.Component {
     } = item
     const isFree = !(access)
     const urlTo = `/courses/${courseSlug}/lessons/${slug}`
-    const activeClass = (this.props.activeLessonIndex === index) ? 'list-group-item-success' : ''
+    const activeClass = (this.props.activeLessonIndex === index) ? 'card-success' : ''
     const completeClass = (isComplete) ? 'bg-gray-lightest' : ''
 
     return (
@@ -92,11 +92,9 @@ class CourseContent extends React.Component {
     return (
       <div>
         Your progress:&nbsp;
-        <span className="h3">
-          <span className="badge badge-warning">
-            {Math.round(lessonCompletedCount / lessonCount * 100)}
-            % complete
-          </span>
+        <span className="badge bg-warning">
+          {Math.round(lessonCompletedCount / lessonCount * 100)}
+          % complete
         </span>
       </div>
     )
@@ -113,14 +111,14 @@ class CourseContent extends React.Component {
         <div className="btn-group flex">
           <button
             type="button"
-            className="btn btn-outline-secondary border-gray flex-fill"
+            className="btn"
             onClickCapture={() => this.handleScroll('up')}
           >
             Scroll Up ⬆
           </button>
           <button
             type="button"
-            className="btn btn-outline-secondary border-gray flex-fill"
+            className="btn"
             onClick={() => this.handleScroll('down')}
           >
             Scroll Down ⬇

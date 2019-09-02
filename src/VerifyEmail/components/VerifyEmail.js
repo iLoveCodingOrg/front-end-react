@@ -40,7 +40,7 @@ class VerifyEmail extends React.Component {
     return (
       <div>
         { isLoading && <Loading /> }
-        { !isLoading && error && <div className="alert alert-danger">{error}</div> }
+        { !isLoading && error && <div className="card card-danger">{error}</div> }
         { !isLoading && !error && <div>Verifiying your email...</div>}
       </div>
     )

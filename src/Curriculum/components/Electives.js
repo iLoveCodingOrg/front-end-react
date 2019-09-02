@@ -62,7 +62,7 @@ export default () => (
         <br />
         Use 2 weeks to pickup additional skills by choosing from a training below (Focus for week number 19 and 20)
       </p>
-      <p className="alert alert-info mb-0">
+      <p className="card card-info mb-0">
         <strong>Note:</strong>
         {' '}
         Be sure to read the prerequisite section under each training before starting the training.

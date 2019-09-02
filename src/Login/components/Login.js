@@ -76,7 +76,7 @@ class Login extends React.Component {
     const { verifyEmailStatus } = this.props
     if (verifyEmailStatus) {
       return (
-        <div className="alert alert-success">
+        <div className="card card-success">
           {this.props.verifyEmailStatus}
         </div>
       )
@@ -89,7 +89,7 @@ class Login extends React.Component {
     const isEmailToBeVerified = (error === 'Login failed as the email has not been verified')
     if (error) {
       return (
-        <div className="alert alert-danger">
+        <div className="card card-danger">
           {this.props.error}
           {' '}
           {

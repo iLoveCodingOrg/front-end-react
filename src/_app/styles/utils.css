@@ -99,3 +99,23 @@ hr {
 .align-middle{
   vertical-align: middle !important;
 }
+
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+}
+
+.table{
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+  }
+  td, th {
+      padding: .75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+  }
+}

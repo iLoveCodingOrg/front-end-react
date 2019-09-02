@@ -22,7 +22,7 @@ function Pricing() {
         <title>Pricing - iLoveCoding</title>
       </Helmet>
 
-      <h3 className="f-300 alert alert-warning t-center">
+      <h3 className="f-300 card card-warning t-center">
         <strong>Let’s be honest </strong>
         - Coding bootcamps are charging an arm and a leg - We give you
         {' '}
@@ -33,7 +33,7 @@ function Pricing() {
         for 2% of the cost.
       </h3>
 
-      {/* <h3 className="f-300 alert alert-warning t-center">
+      {/* <h3 className="f-300 card card-warning t-center">
         <strong>Join Today and Lock in Your Low Price for Life!</strong>
         {' '}
         - We are doubling our membership price this week, but if you join today, your membership price will remain the same. Any new content we add to iLoveCoding

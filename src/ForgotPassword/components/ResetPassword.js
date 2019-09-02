@@ -89,7 +89,7 @@ class ResetPassword extends React.Component {
     const { error } = this.state
     if (error) {
       return (
-        <div className="alert alert-danger">
+        <div className="card card-danger">
           {error}
         </div>
       )
