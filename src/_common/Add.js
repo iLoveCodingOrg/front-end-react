@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 import { contentTypeToRoute } from '../_app/utils'
-import EditForm from './AsyncEditForm'
+import EditForm from './EditForm'
+// import EditForm from './AsyncEditForm'
 
 export default function Add({
   add,

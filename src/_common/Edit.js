@@ -5,7 +5,8 @@ import { Helmet } from 'react-helmet'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 
-import EditForm from './AsyncEditForm'
+import EditForm from './EditForm'
+// import EditForm from './AsyncEditForm'
 
 export default function Edit({
   of,
