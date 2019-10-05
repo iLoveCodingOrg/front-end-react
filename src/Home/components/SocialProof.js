@@ -1,5 +1,26 @@
 import React from 'react'
 import PrintReviews from '../../Reviews/components/PrintReviews'
+import { lastMonthViews } from '../../_app/constants'
+
+function getLastMonth() {
+  const lastMonthIndex = (new Date()).getMonth() - 1
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ]
+
+  return months[lastMonthIndex]
+}
 
 const data = [{
   title: 'I find your videos very informative',
@@ -27,9 +48,16 @@ function SocialProof() {
   return (
     <div>
       <h3 className="t-center mb-2">
-        <u>8,803 students</u>
+        <u>
+          {lastMonthViews}
+          {' '}
+          students
+        </u>
         {' '}
-          learned coding from iLoveCoding last month (July 2019);
+        learned coding from iLoveCoding last month (
+        {getLastMonth()}
+        {' '}
+        2019);
         <br />
         {' '}
         Here&apos;s what some of them had to say:
