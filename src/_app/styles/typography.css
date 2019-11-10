@@ -203,8 +203,8 @@ ul.checkmark {
 .color-whitish {
   color: var(--whitish)
 }
-.color-primary {
-  color: var(--primary)
+.color-blue {
+  color: var(--blue)
 }
 .color-teal {
   color: var(--teal)

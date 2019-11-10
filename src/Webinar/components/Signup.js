@@ -31,16 +31,16 @@ export default function Signup() {
   }
 
   return (
-    <div className="mx-auto">
+    <div className="container">
       <div className="header my-3">
-        <p className="h5 color-primary t-center">NO COST TRAINING SESSION FOR ASPIRING SOFTWARE/WEB DEVELOPERS</p>
-        <h1 className="t-center mt-3">
+        <p className="h54 color-blue t-center">NO COST TRAINING SESSION FOR ASPIRING SOFTWARE/WEB DEVELOPERS</p>
+        <h1 className="t-center mt--5 strong">
           &ldquo;How I went from a complete beginner to a highly-paid software developer in 5 months&rdquo;
         </h1>
         <h3 className="t-center em color-gray mb-3">Without having a CS degree, without attending a coding bootcamp or without using cheap courses.</h3>
       </div>
-      <div>
-        <div>
+      <div className="flex">
+        <div className="flex-3">
           <img
             className="w-100"
             src={img}
@@ -52,8 +52,8 @@ export default function Signup() {
             He has worked for United Airlines, CVS Health and a few other companies as a Senior Software Engineer. Aziz is routinely invited by big firms to the likes of Starbucks, Intuit and SalesForce.com to teach their employees modern software development. Aziz has also taught software development to dozens of students around the world who now work at Citibank, Twitter, Sony, and the like. Some have established their own startups and freelancing businesses.
           </p>
         </div>
-        <div className="px-3">
-          <h3 className="color-primary t-center mb-1">
+        <div className="flex-2 px-3">
+          <h3 className="color-blue t-center mb-1">
             Here is What&apos;s Covered...
           </h3>
           <ul className="checkmark">

@@ -73,137 +73,30 @@ function renderApp() {
             />
             <Auth>
               <Switch>
-                <Route
-                  exact
-                  strict
-                  path="/verify-email"
-                  component={VerifyEmail}
-                />
-                <Route
-                  exact
-                  strict
-                  path="/forgot-password"
-                  component={ForgotPassword}
-                />
-                <Route
-                  exact
-                  strict
-                  path="/reset-password/:accessToken"
-                  component={ResetPassword}
-                />
-                <Route
-                  exact
-                  strict
-                  path="/login"
-                  component={Login}
-                />
-                <Route
-                  exact
-                  strict
-                  path="/signup"
-                  component={Signup}
-                />
-                <Route
-                  exact
-                  strict
-                  path="/checkout/:slug"
-                  component={Checkout}
-                />
-                <Route
-                  strict
-                  path="/webinar"
-                  component={Webinar}
-                />
+                <Route exact strict path="/verify-email" component={VerifyEmail} />
+                <Route exact strict path="/forgot-password" component={ForgotPassword} />
+                <Route exact strict path="/reset-password/:accessToken" component={ResetPassword} />
+                <Route exact strict path="/login" component={Login} />
+                <Route exact strict path="/signup" component={Signup} />
+                <Route exact strict path="/checkout/:slug" component={Checkout} />
+                <Route strict path="/webinar" component={Webinar} />
                 <Wrap>
                   <Switch>
-                    <Route
-                      exact
-                      path="/"
-                      component={Home}
-                    />
-
-                    <Route
-                      exact
-                      path="/pricing"
-                      component={Pricing}
-                    />
-
-                    <Route
-                      exact
-                      path="/reviews"
-                      component={Reviews}
-                    />
-
-                    <Route
-                      exact
-                      path="/curriculum"
-                      component={Curriculum}
-                    />
-
-                    <Route
-                      exact
-                      path="/dashboard"
-                      component={isPrivate(Dashboard)}
-                    />
-
-                    <Route
-                      strict
-                      path="/q"
-                      component={QuestionRoutes}
-                    />
-
-                    <Route
-                      strict
-                      path="/lessons"
-                      component={LessonRoutes}
-                    />
-
-                    <Route
-                      strict
-                      path="/courses"
-                      component={CourseRoutes}
-                    />
-
-                    <Route
-                      strict
-                      path="/blog"
-                      component={BlogRoutes}
-                    />
-
-                    <Route
-                      strict
-                      path="/pages"
-                      component={PageRoutes}
-                    />
-
-                    <Route
-                      strict
-                      path="/officehours"
-                      component={isPrivate(OfficeHours)}
-                    />
-
-                    <Route
-                      strict
-                      path="/groupcalls"
-                      component={isPrivate(GroupCalls)}
-                    />
-
-                    <Route
-                      strict
-                      path="/subscriptions"
-                      component={isPrivate(SubscriptionRoutes)}
-                    />
-
-                    <Route
-                      exact
-                      strict
-                      path="/change-password"
-                      component={isPrivate(ChangePassword)}
-                    />
-
-                    <Route
-                      component={NotFound}
-                    />
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/pricing" component={Pricing} />
+                    <Route exact path="/reviews" component={Reviews} />
+                    <Route exact path="/curriculum" component={Curriculum} />
+                    <Route exact path="/dashboard" component={isPrivate(Dashboard)} />
+                    <Route strict path="/q" component={QuestionRoutes} />
+                    <Route strict path="/lessons" component={LessonRoutes} />
+                    <Route strict path="/courses" component={CourseRoutes} />
+                    <Route strict path="/blog" component={BlogRoutes} />
+                    <Route strict path="/pages" component={PageRoutes} />
+                    <Route strict path="/officehours" component={isPrivate(OfficeHours)} />
+                    <Route strict path="/groupcalls" component={isPrivate(GroupCalls)} />
+                    <Route strict path="/subscriptions" component={isPrivate(SubscriptionRoutes)} />
+                    <Route exact strict path="/change-password" component={isPrivate(ChangePassword)} />
+                    <Route component={NotFound} />
                   </Switch>
                 </Wrap>
               </Switch>
