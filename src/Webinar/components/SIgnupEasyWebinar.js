@@ -1,10 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import Modal from 'react-modal'
 import { Copyrights } from '../../Footer'
 import img from './aziz-pic-2.jpg'
-import SignupModal from './SignupModal'
 
 export default function Signup() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  Modal.setAppElement('#app')
+
+  useEffect(() => {
+    const script = document.createElement('script')
+
+    script.id = 'easyWebinar'
+    script.src = 'https://app.easywebinar.com/widget/js/ewp_widget.js?v=1.20.11'
+    script.async = true
+
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [isModalOpen])
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
@@ -23,20 +39,20 @@ export default function Signup() {
         </h1>
         <h3 className="t-center em color-gray mb-3">Without having a CS degree, without attending a coding bootcamp or without using cheap courses.</h3>
       </div>
-      <div className="flex flex-wrap">
-        <div className="flex-3" style={{ flexBasis: '250px' }}>
+      <div className="flex">
+        <div className="flex-3">
           <img
             className="w-100"
             src={img}
             alt="Aziz"
           />
           <p className="mt-1 p-1 border">
-            <strong>Presenter: Aziz Ali is the founder of iLoveCoding.org.</strong>
-            {/* {' '}
-            He has worked for United Airlines, CVS Health and a few other companies as a Senior Software Engineer. Aziz is routinely invited by big firms to the likes of Starbucks, Intuit and SalesForce.com to teach their employees modern software development. Aziz has also taught software development to dozens of students around the world who now work at Citibank, Twitter, Sony, and the like. Some have established their own startups and freelancing businesses. */}
+            <span className="strong">Aziz Ali is the founder of iLoveCoding.org.</span>
+            {' '}
+            He has worked for United Airlines, CVS Health and a few other companies as a Senior Software Engineer. Aziz is routinely invited by big firms to the likes of Starbucks, Intuit and SalesForce.com to teach their employees modern software development. Aziz has also taught software development to dozens of students around the world who now work at Citibank, Twitter, Sony, and the like. Some have established their own startups and freelancing businesses.
           </p>
         </div>
-        <div className="flex-2 px-3" style={{ flexBasis: '330px' }}>
+        <div className="flex-2 px-3">
           <h3 className="color-blue t-center mb-1">
             Here is What&apos;s Covered...
           </h3>
@@ -64,7 +80,7 @@ export default function Signup() {
             Yes! Reserve My Seat Now!
           </button>
 
-          <div className="t-center strong small">100% No Cost - Seating is limited</div>
+          <div className="t-center strong small">100% Free Training</div>
         </div>
       </div>
       <div className="small color-gray b bt-1 pt-3" style={{ marginTop: '20em' }}>
@@ -80,10 +96,32 @@ export default function Signup() {
       </div>
       <Copyrights />
 
-      <SignupModal
-        isModalOpen={isModalOpen}
-        closeModal={closeModal}
-      />
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        style={{
+          content: {
+            minWidth: '320px',
+            maxWidth: '700px',
+            padding: '0px',
+            top: '10px',
+            left: '0px',
+            right: '0px',
+            bottom: 'auto',
+            margin: '0px auto auto',
+            maxHeight: '500px',
+            overflow: 'scroll',
+          },
+          overlay: {
+            backgroundColor: 'rgba(0,0,0, 0.33)',
+          },
+        }}
+      >
+        <div className="widget_wrapper">
+          <div className="ewp_form_container ewp_widget_container" webinar_id="Z3aztSvVF5a8mDevXk7QGw==" />
+        </div>
+      </Modal>
     </div>
   )
 }

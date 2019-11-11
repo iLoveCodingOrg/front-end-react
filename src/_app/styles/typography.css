@@ -95,7 +95,7 @@ u, .u{
   line-height: 2em;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 700px) {
   .h1, h1 {
     font-size: 3.3em;
   }

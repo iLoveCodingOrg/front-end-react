@@ -34,10 +34,10 @@ input[type=button], input[type=submit], button, .btn{
     font-size: 0.8em;
   }
 
-
   &.btn-primary, &.btn-blue{
     background-color: var(--blue);
     color: var(--white);
+    border-color: var(--blue-dark);
     &:hover{
       background-color: var(--blue-dark);
       color: var(--white);
