@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Vimeo from '@u-wave/react-vimeo'
 
-function Video({ videoSource, callMarkAsComplete }) {
+function Video({ videoSource, callMarkAsComplete, ...props }) {
   const getId = () => videoSource.split('//player.vimeo.com/video/').pop()
 
   return (
@@ -12,6 +12,7 @@ function Video({ videoSource, callMarkAsComplete }) {
       className="video"
       video={getId()}
       onEnd={() => callMarkAsComplete()}
+      {...props}
     />
   )
 }

@@ -11,7 +11,7 @@ import Video from './Video'
 import { IMG_URL } from '../../_app/constants'
 
 class VideoWrap extends React.Component {
-  renderThumb(thumbnail, title) {
+  renderThumb = (thumbnail, title) => {
     if (!thumbnail) return null
     return (
       <img
