@@ -1,8 +1,10 @@
 import React from 'react'
 import Modal from 'react-modal'
 import ProgressBar from '../../ProgressBar'
+import MarketingForm from '../../MarketingForm'
+import withLocation from '../../_user/withLocation'
 
-export default function SignupModal({ isModalOpen, closeModal }) {
+function SignupModal({ isModalOpen, closeModal }) {
   Modal.setAppElement('#app')
   return (
     <Modal
@@ -38,26 +40,15 @@ export default function SignupModal({ isModalOpen, closeModal }) {
         </button>
         <ProgressBar percent={50} className="mb-2" />
         <h2>Where should we send a link to the training? Enter your best email so you get it!</h2>
-        <input
-          autoFocus
-          name="first_name"
-          type="text"
-          placeholder="First Name"
-          className="mb-1"
-        />
-        <input
-          name="email"
-          type="email"
-          placeholder="Email Address"
-          className="mb-1"
-        />
-        <input
-          type="submit"
-          value="Access the training Now >>"
-          className="btn btn-primary btn-block"
+        <MarketingForm
+          hasLastName={false}
+          submitButtonText="Access the Training Now >>"
         />
         <small className="color-gray">We DO NOT tolerate SPAM and will never share your email.</small>
       </div>
     </Modal>
   )
 }
+
+// export default SignupModal
+export default withLocation(SignupModal)

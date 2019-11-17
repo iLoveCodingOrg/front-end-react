@@ -3,11 +3,12 @@ import get from 'lodash/get'
 import {
   SET_USER_LOADING,
   SET_USER,
+  SET_USER_LOCATION,
   CLEAR_USER,
   SET_SEND_VERIFY_EMAIL,
   CLEAR_USER_ERROR,
 } from '../_app/actionTypes'
-import { API_URL } from '../_app/constants'
+import { API_URL, IP_DATA_API_KEY } from '../_app/constants'
 import {
   checkStatus,
   parseJSON,
@@ -295,5 +296,37 @@ export function setSendVerifyEmail(error = false) {
 export function clearError() {
   return {
     type: CLEAR_USER_ERROR,
+  }
+}
+
+export function setLocation(data) {
+  return {
+    type: SET_USER_LOCATION,
+    payload: { data },
+  }
+}
+
+export function getLocation() {
+  return (dispatch) => {
+    dispatch(setLoading(true))
+
+    const url = `https://api.ipdata.co?api-key=${IP_DATA_API_KEY}`
+    return fetch(url)
+      .then(checkStatus)
+      .then(parseJSON)
+      .then((data) => {
+        dispatch(setLocation({
+          ip: data.ip,
+          latitude: data.latitude,
+          longitude: data.longitude,
+          timezone: data.time_zone,
+          countryCode: data.country_code,
+          city: data.city,
+          region: data.region,
+          regionCode: data.region_code,
+        }))
+        dispatch(setLoading(false))
+        return { isSuccess: true }
+      })
   }
 }

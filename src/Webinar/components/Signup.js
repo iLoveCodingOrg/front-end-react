@@ -79,11 +79,12 @@ export default function Signup() {
         </p>
       </div>
       <Copyrights />
-
+      {isModalOpen && (
       <SignupModal
         isModalOpen={isModalOpen}
         closeModal={closeModal}
       />
+      )}
     </div>
   )
 }

@@ -4,6 +4,7 @@ import {
   SET_USER_LOADING,
   SET_SEND_VERIFY_EMAIL,
   CLEAR_USER_ERROR,
+  SET_USER_LOCATION,
 } from '../_app/actionTypes'
 
 const initialState = {
@@ -15,6 +16,16 @@ const initialState = {
   error: false,
   isLoading: false,
   verifyEmailStatus: '',
+  location: {
+    ip: null,
+    latitude: null,
+    longitude: null,
+    timezone: null,
+    countryCode: null,
+    city: null,
+    region: null,
+    regionCode: null,
+  },
 }
 
 export default function (state = initialState, { type, payload }) {
@@ -31,6 +42,20 @@ export default function (state = initialState, { type, payload }) {
         error: payload.error,
         isLoading: false,
         verifyEmailStatus: '',
+      }
+    case SET_USER_LOCATION:
+      return {
+        ...state,
+        location: {
+          ip: payload.data.ip,
+          latitude: payload.data.latitude,
+          longitude: payload.data.longitude,
+          timezone: payload.data.timezone,
+          countryCode: payload.data.countryCode,
+          city: payload.data.city,
+          region: payload.data.region,
+          regionCode: payload.data.regionCode,
+        },
       }
     case CLEAR_USER:
       return initialState
