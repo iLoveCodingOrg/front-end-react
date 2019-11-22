@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function MarketingForm({
   submitButtonText = 'Submit',
-  hasFirstName = true,
-  hasLastName = true,
+  enableFirstName = true,
+  enableLastName = true,
 }) {
   return (
     <form
@@ -26,7 +26,7 @@ export default function MarketingForm({
             id="mce-EMAIL"
           />
         </label>
-        { hasFirstName && (
+        { enableFirstName && (
         <label htmlFor="mce-FNAME">
           <input
             placeholder="First Name"
@@ -37,7 +37,7 @@ export default function MarketingForm({
           />
         </label>
         )}
-        { hasLastName && (
+        { enableLastName && (
         <label htmlFor="mce-LNAME">
           <input
             placeholder="Last Name"

@@ -1,7 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal'
 import ProgressBar from '../../ProgressBar'
-import MarketingForm from '../../MarketingForm'
+import { MarketingFormApi } from '../../MarketingForm'
 import withLocation from '../../_user/withLocation'
 
 function SignupModal({ isModalOpen, closeModal }) {
@@ -40,8 +40,8 @@ function SignupModal({ isModalOpen, closeModal }) {
         </button>
         <ProgressBar percent={50} className="mb-2" />
         <h2>Where should we send a link to the training? Enter your best email so you get it!</h2>
-        <MarketingForm
-          hasLastName={false}
+        <MarketingFormApi
+          enableLastName={false}
           submitButtonText="Access the Training Now >>"
         />
         <small className="color-gray">We DO NOT tolerate SPAM and will never share your email.</small>

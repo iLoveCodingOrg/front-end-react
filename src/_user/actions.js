@@ -1,5 +1,7 @@
 import 'whatwg-fetch'
 import get from 'lodash/get'
+import { toast } from 'react-toastify'
+
 import {
   SET_USER_LOADING,
   SET_USER,
@@ -319,7 +321,7 @@ export function getLocation() {
           ip: data.ip,
           latitude: data.latitude,
           longitude: data.longitude,
-          timezone: data.time_zone,
+          timeZone: data.time_zone,
           countryCode: data.country_code,
           city: data.city,
           region: data.region,
@@ -327,6 +329,64 @@ export function getLocation() {
         }))
         dispatch(setLoading(false))
         return { isSuccess: true }
+      })
+  }
+}
+
+export function callSubscribeToCRM({
+  email, firstName, lastName, location, tags,
+}) {
+  return (dispatch) => {
+    dispatch(setLoading(true))
+
+    const url = `${API_URL}users/crm/add`
+    return fetch(url, {
+      method: 'POST',
+      headers: { 'content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        firstName,
+        lastName,
+        signupUrl: window.location.href,
+        tags,
+        location: {
+          latitude: location.latitude,
+          longitude: location.longitude,
+          ip: location.ip,
+          timeZone: location.timeZone.name,
+        },
+      }),
+    })
+      .then(checkStatus)
+      .then(parseJSON)
+      .then(() => {
+        console.log('HI')
+        dispatch(setLoading(false))
+        return { isSuccess: true }
+      })
+      .catch((err) => {
+        console.log('bye', err)
+        dispatch(setLoading(false))
+        err.json()
+          .then(({ error }) => {
+            console.log('error', error)
+            if (error.title === 'Member Exists') {
+              toast.error('Your email is already in the list')
+              return {
+                isSuccess: false,
+                errorType: 'Your email is already in the list',
+              }
+            }
+            toast.error(error.message)
+            return {
+              isSuccess: false,
+              errorType: error.message,
+            }
+          })
+        return {
+          isSuccess: false,
+          errorType: 'EMAIL_EXIST' || 'EMAIL_FAKE',
+        }
       })
   }
 }

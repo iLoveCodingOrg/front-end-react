@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 
 export default function Input({
   name, type, placeholder, value, onChange, className,
-  required, label, pattern, maxLength, disabled,
+  required, label, pattern, maxLength, disabled, inlineMessage, ...props
+
 }) {
   const classNames = className || 'mb-2'
 
@@ -24,7 +25,9 @@ export default function Input({
         onChange={onChange}
         required={required}
         disabled={disabled}
+        {...props}
       />
+      {!!inlineMessage && <div className="small color-red t-left">{inlineMessage}</div>}
     </label>
   )
 }
@@ -34,13 +37,14 @@ Input.propTypes = {
   type: PropTypes.oneOf(['text', 'password', 'email']),
   placeholder: PropTypes.string,
   value: PropTypes.string,
-  onChange: PropTypes.string,
+  onChange: PropTypes.func,
   className: PropTypes.string,
   required: PropTypes.bool,
   label: PropTypes.string,
   pattern: PropTypes.string,
   maxLength: PropTypes.string,
   disabled: PropTypes.bool,
+  inlineMessage: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 }
 
 Input.defaultProps = {
@@ -54,6 +58,7 @@ Input.defaultProps = {
   pattern: undefined,
   maxLength: undefined,
   disabled: false,
+  inlineMessage: false,
 }
 
 export function useInput(defaultValue = '') {
