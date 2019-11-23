@@ -239,33 +239,6 @@ export function clearUser() {
   }
 }
 
-export function callSendVerifyEmail(email) {
-  const url = `${API_URL}users/resend-verification-mail`
-
-  return (dispatch) => {
-    dispatch(setLoading(true))
-
-    return fetch(url, {
-      method: 'POST',
-      headers: {
-        'content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email }),
-    })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setSendVerifyEmail(false, json))
-      })
-      .catch((error) => {
-        parseJSON(error)
-          .then((error) => {
-            dispatch(setSendVerifyEmail(error))
-          })
-      })
-  }
-}
-
 export function setSendVerifyEmail(error = false) {
   const action = {
     type: SET_SEND_VERIFY_EMAIL,
@@ -293,6 +266,33 @@ export function setSendVerifyEmail(error = false) {
   }
 
   return action
+}
+
+export function callSendVerifyEmail(email) {
+  const url = `${API_URL}users/resend-verification-mail`
+
+  return (dispatch) => {
+    dispatch(setLoading(true))
+
+    return fetch(url, {
+      method: 'POST',
+      headers: {
+        'content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    })
+      .then(checkStatus)
+      .then(parseJSON)
+      .then((json) => {
+        dispatch(setSendVerifyEmail(false, json))
+      })
+      .catch((error) => {
+        parseJSON(error)
+          .then((err) => {
+            dispatch(setSendVerifyEmail(err))
+          })
+      })
+  }
 }
 
 export function clearError() {
@@ -339,6 +339,9 @@ export function callSubscribeToCRM({
   return (dispatch) => {
     dispatch(setLoading(true))
 
+    const timestampMS = Date.now()
+    const timestampBase64 = btoa(timestampMS)
+
     const url = `${API_URL}users/crm/add`
     return fetch(url, {
       method: 'POST',
@@ -355,21 +358,28 @@ export function callSubscribeToCRM({
           ip: location.ip,
           timeZone: location.timeZone.name,
         },
+        mergeFields: {
+          SU_TS_MS: timestampMS, // signup timestamp milliseconds
+          SU_TS_EN: timestampBase64, // signup timestamp encrypted
+        },
       }),
     })
       .then(checkStatus)
       .then(parseJSON)
-      .then(() => {
-        console.log('HI')
+      // eslint-disable-next-line camelcase
+      .then(({ isUserNew, merge_fields }) => {
         dispatch(setLoading(false))
-        return { isSuccess: true }
+        return {
+          isSuccess: true,
+          isUserNew,
+          timestampMS: merge_fields.SU_TS_MS,
+          timestampBase64: merge_fields.SU_TS_EN,
+        }
       })
       .catch((err) => {
-        console.log('bye', err)
         dispatch(setLoading(false))
         err.json()
           .then(({ error }) => {
-            console.log('error', error)
             if (error.title === 'Member Exists') {
               toast.error('Your email is already in the list')
               return {

@@ -11,6 +11,8 @@ function MarketingFormApi({
   location,
   subscribeToCRM,
   history,
+  newSignupSuccessPage,
+  existingSignupSuccessPage,
 }) {
   const [email, setEmail] = useInput('')
   const [firstName, setFirstName] = useInput('')
@@ -18,17 +20,17 @@ function MarketingFormApi({
   const [didSubmit, setDidSubmit] = useState(false)
   // const [formError, setFormError] = useState(null)
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     e.preventDefault()
     setDidSubmit(true)
     if (email && firstName) {
-      subscribeToCRM({
+      const { isSuccess, isUserNew, timestampMS } = await subscribeToCRM({
         email, firstName, lastName, location,
-      }).then(({ isSuccess, message }) => {
-        if (isSuccess) {
-          history.push('/')
-        }
       })
+      if (isSuccess) {
+        const successPage = isUserNew ? newSignupSuccessPage : existingSignupSuccessPage
+        history.push(`${successPage}?ts=${timestampMS}`)
+      }
     }
   }
   return (
@@ -85,6 +87,11 @@ function MarketingFormApi({
       </div>
     </form>
   )
+}
+
+MarketingFormApi.defaultProps = {
+  newSignupSuccessPage: '/webinar/thanks',
+  existingSignupSuccessPage: '/webinar/play',
 }
 
 function mapStateToProps(state) {
