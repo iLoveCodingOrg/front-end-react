@@ -1,13 +1,14 @@
 import * as actions from './actions'
-import * as selectors from './selectors'
+import { isOfferValidSelector, isOfferValidUtil } from './selectors'
 import reducer from './reducer'
-import Offer from './components/Offer'
+import withOffer from './components/withOffer'
 import CountDown from './components/CountDown'
 
 export {
   actions,
   reducer,
-  selectors,
-  Offer,
+  isOfferValidSelector,
+  isOfferValidUtil,
+  withOffer,
   CountDown,
 }

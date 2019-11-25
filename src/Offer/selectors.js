@@ -5,7 +5,7 @@ import { createSelector } from 'reselect'
 const timeFrom = state => state.offer.timeFrom
 const timeLeft = state => state.offer.timeLeft
 
-export const isOfferValid = createSelector([timeFrom, timeLeft], (timeFrom, timeLeft) => {
+export const isOfferValidUtil = (timeFrom, timeLeft) => {
   let isValid = false
 
   if (isNil(timeLeft)) {
@@ -13,6 +13,10 @@ export const isOfferValid = createSelector([timeFrom, timeLeft], (timeFrom, time
   }
   isValid = !getTimeDifference(timeFrom + timeLeft).completed
 
-
   return isValid
-})
+}
+
+export const isOfferValidSelector = createSelector(
+  [timeFrom, timeLeft],
+  isOfferValidUtil,
+)

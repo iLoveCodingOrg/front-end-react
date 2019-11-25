@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
 import { Wistia } from '../../Video'
+import { CountDown, withOffer } from '../../Offer'
 
-export default function Play() {
+function Play({ timeFrom, timeLeft, isOfferValid }) {
+  const isTimeValid = !isNaN(timeFrom + timeLeft)
+
   useEffect(() => {
     const { backgroundColor } = document.body.style
     document.body.style.backgroundColor = 'black'
@@ -20,6 +23,13 @@ export default function Play() {
         Your webinar is in progress! Do not close the window or the presentation will send.
       </div>
       <Wistia sourceId="op37bgyfp2" />
+      {isTimeValid && (
+      <CountDown timeFrom={timeFrom} timeLeft={timeLeft}>
+        <button className="btn btn-primary">Hello</button>
+      </CountDown>
+      )}
     </div>
   )
 }
+
+export default withOffer(Play)

@@ -20,7 +20,7 @@ import WhatYouGet from './WhatYouGet'
 import Due from './Due'
 import Testimonials from './Testimonials'
 
-import { CountDown, selectors } from '../../Offer'
+import { CountDown, isOfferValidSelector } from '../../Offer'
 
 class Checkout extends React.Component {
   braintreeInstance;
@@ -229,7 +229,7 @@ function mapStateToProps(state) {
     isLoading: state.checkout.isLoading,
     product: state.checkout.product,
     buyError: state.checkout.buy.error,
-    isOfferValid: selectors.isOfferValid(state),
+    isOfferValid: isOfferValidSelector(state),
   }
 }
 

@@ -342,7 +342,7 @@ export function callSubscribeToCRM({
     const timestampMS = Date.now()
     const timestampBase64 = btoa(timestampMS)
 
-    const url = `${API_URL}users/crm/add`
+    const url = `${API_URL}users/crm/add-upsert`
     return fetch(url, {
       method: 'POST',
       headers: { 'content-Type': 'application/json' },
@@ -367,11 +367,15 @@ export function callSubscribeToCRM({
       .then(checkStatus)
       .then(parseJSON)
       // eslint-disable-next-line camelcase
-      .then(({ isUserNew, merge_fields }) => {
+      .then(({
+        isUserNew, merge_fields, timestamp_opt, status,
+      }) => {
         dispatch(setLoading(false))
         return {
           isSuccess: true,
           isUserNew,
+          status,
+          timestampOptin: (new Date(timestamp_opt)).getTime(),
           timestampMS: merge_fields.SU_TS_MS,
           timestampBase64: merge_fields.SU_TS_EN,
         }

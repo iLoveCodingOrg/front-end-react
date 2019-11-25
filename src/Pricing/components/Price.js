@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { selectors } from '../../Offer'
+import { isOfferValidSelector } from '../../Offer'
 import PriceBox from './PriceBox'
 import Switch from './Switch'
 
@@ -167,7 +167,7 @@ class Price extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    isOfferValid: selectors.isOfferValid(state),
+    isOfferValid: isOfferValidSelector(state),
   }
 }
 

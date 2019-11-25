@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import { Offer, CountDown } from '../../Offer'
+import { CountDown } from '../../Offer'
 import {
   Header,
   Testimonials,
@@ -22,7 +22,6 @@ function Pricing() {
           Pricing | iLoveCoding - iLoveCoding
         </title>
       </Helmet>
-      <Offer />
       <CountDown title="30% Off expires in:" />
       <div className="pt-3"><Header /></div>
       <div className="pb-3">

@@ -4,20 +4,20 @@ import {
 } from '../_app/actionTypes'
 
 const initialState = {
-  timeFrom: store.get('timeFrom'),
-  timeLeft: store.get('timeLeft'),
+  timeFrom: parseInt(store.get('timeFrom'), 10) || undefined,
+  timeLeft: parseInt(store.get('timeLeft'), 10) || undefined,
 }
 
 export default function (state = initialState, { type, payload }) {
   switch (type) {
     case SET_OFFER_TIMES:
-      store.set('timeFrom', payload.timeFrom)
-      store.set('timeLeft', payload.timeLeft)
+      store.set('timeFrom', parseInt(payload.timeFrom, 10) || undefined)
+      store.set('timeLeft', parseInt(payload.timeLeft, 10) || undefined)
 
       return {
         ...state,
-        timeFrom: payload.timeFrom,
-        timeLeft: payload.timeLeft,
+        timeFrom: parseInt(payload.timeFrom, 10) || undefined,
+        timeLeft: parseInt(payload.timeLeft, 10) || undefined,
       }
     default:
       return state

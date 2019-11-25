@@ -24,12 +24,15 @@ function MarketingFormApi({
     e.preventDefault()
     setDidSubmit(true)
     if (email && firstName) {
-      const { isSuccess, isUserNew, timestampMS } = await subscribeToCRM({
+      const {
+        isSuccess, isUserNew, status, timestampOptin,
+      } = await subscribeToCRM({
         email, firstName, lastName, location,
       })
       if (isSuccess) {
-        const successPage = isUserNew ? newSignupSuccessPage : existingSignupSuccessPage
-        history.push(`${successPage}?ts=${timestampMS}`)
+        const successPage = (status === 'pending') ? newSignupSuccessPage : existingSignupSuccessPage
+        const timeLeft = 48 * 60 * 60 * 1000 // 24 hours
+        history.push(`${successPage}?t=${timestampOptin}&l=${timeLeft}`)
       }
     }
   }
