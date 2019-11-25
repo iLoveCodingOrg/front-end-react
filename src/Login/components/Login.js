@@ -5,6 +5,7 @@ import { withRouter, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import { qsParse } from '../../_app/utils'
 
+import { Input } from '../../Controls'
 import { Recaptcha2 } from '../../Recaptcha'
 import WrapMini from '../../WrapMini'
 import { actions } from '../../_user'
@@ -76,7 +77,7 @@ class Login extends React.Component {
     const { verifyEmailStatus } = this.props
     if (verifyEmailStatus) {
       return (
-        <div className="card card-success">
+        <div className="card card-success mb-1">
           {this.props.verifyEmailStatus}
         </div>
       )
@@ -89,7 +90,7 @@ class Login extends React.Component {
     const isEmailToBeVerified = (error === 'Login failed as the email has not been verified')
     if (error) {
       return (
-        <div className="card card-danger">
+        <div className="card card-danger mb-1">
           {this.props.error}
           {' '}
           {
@@ -127,11 +128,10 @@ class Login extends React.Component {
           {this.renderVerifyEmailStatus()}
           {this.renderError()}
           <div>
-            <label htmlFor="email" className="sr-only">Email address</label>
-            <input
-              name="email"
+            <Input
+              className="mb-1"
+              name="Email address"
               type="email"
-              className="form-control form-control-lg"
               placeholder="Email address"
               autoFocus
               required
@@ -139,11 +139,10 @@ class Login extends React.Component {
             />
           </div>
           <div>
-            <label htmlFor="password" className="sr-only">Password</label>
-            <input
-              name="password"
+            <Input
+              className="mb-1"
+              name="Password"
               type="password"
-              className="form-control form-control-lg"
               placeholder="Password"
               required
               onChange={event => this.handleChange('password', event.target.value)}

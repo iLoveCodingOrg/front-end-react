@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import { withOffer } from '../Offer'
 
 import { actions } from '../_user'
 
-class Auth extends React.Component {
-  componentDidMount() {
-    this.props.getUser()
-  }
+function Auth({ getUser, children }) {
+  useEffect(() => {
+    getUser()
+  }, [])
 
-  render() {
-    return this.props.children
-  }
+  return children
 }
 
 function mapStateToProps() {
@@ -27,7 +26,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 // export default Auth
-export default withRouter(connect(
+export default withOffer(withRouter(connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Auth))
+)(Auth)))

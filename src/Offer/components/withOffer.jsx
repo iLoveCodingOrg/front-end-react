@@ -10,7 +10,7 @@ export default function withOffer(Component) {
     useEffect(() => {
       const query = qsParse(location.search)
       if (query.t) {
-        const timeFrom = parseInt(query.t, 10)
+        const timeFrom = parseInt(query.t, 10) || undefined
         const timeLeft = query.l ? parseInt(query.l, 10) : undefined
 
         setTimes(timeFrom, timeLeft)

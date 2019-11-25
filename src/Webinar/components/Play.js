@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 import { Wistia } from '../../Video'
-import { CountDown, withOffer } from '../../Offer'
+import { CountDown } from '../../Offer'
 
-function Play({ timeFrom, timeLeft, isOfferValid }) {
-  const isTimeValid = !isNaN(timeFrom + timeLeft)
+function Play({ timeFrom, timeLeft }) {
+  const isTimeValid = !Number.isNaN(timeFrom + timeLeft)
 
   useEffect(() => {
     const { backgroundColor } = document.body.style
@@ -12,6 +13,7 @@ function Play({ timeFrom, timeLeft, isOfferValid }) {
       document.body.style.backgroundColor = backgroundColor
     }
   }, [])
+
   return (
     <div className="container">
       <div
@@ -25,11 +27,18 @@ function Play({ timeFrom, timeLeft, isOfferValid }) {
       <Wistia sourceId="op37bgyfp2" />
       {isTimeValid && (
       <CountDown timeFrom={timeFrom} timeLeft={timeLeft}>
-        <button className="btn btn-primary">Hello</button>
+        <button type="button" className="btn btn-primary">Hello</button>
       </CountDown>
       )}
     </div>
   )
 }
 
-export default withOffer(Play)
+function mapStateToProps({ offer }) {
+  return {
+    timeFrom: offer.timeFrom,
+    timeLeft: offer.timeLeft,
+  }
+}
+
+export default connect(mapStateToProps)(Play)
