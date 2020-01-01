@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { Input, useInput } from '../../Controls'
 import { callSubscribeToCRM } from '../../_user/actions'
+import { LENGTH_OF_OFFER } from '../../_app/constants'
 
 function MarketingFormApi({
   submitButtonText = 'Submit',
@@ -13,6 +14,7 @@ function MarketingFormApi({
   history,
   newSignupSuccessPage,
   existingSignupSuccessPage,
+  offerLength,
 }) {
   const [email, setEmail] = useInput('')
   const [firstName, setFirstName] = useInput('')
@@ -31,8 +33,7 @@ function MarketingFormApi({
       })
       if (isSuccess) {
         const successPage = (status === 'pending') ? newSignupSuccessPage : existingSignupSuccessPage
-        const timeLeft = 48 * 60 * 60 * 1000 // 24 hours
-        history.push(`${successPage}?t=${timestampOptin}&l=${timeLeft}`)
+        history.push(`${successPage}?t=${timestampOptin}&l=${offerLength}`)
       }
     }
   }
@@ -93,8 +94,9 @@ function MarketingFormApi({
 }
 
 MarketingFormApi.defaultProps = {
-  newSignupSuccessPage: '/webinar/thanks',
+  newSignupSuccessPage: '/pages/thanks-webinar-signup',
   existingSignupSuccessPage: '/webinar/play',
+  offerLength: LENGTH_OF_OFFER,
 }
 
 function mapStateToProps(state) {

@@ -1,5 +1,5 @@
-import '../../node_modules/react-trumbowyg/dist/trumbowyg.min.css'
-import Editor from 'react-trumbowyg'
+// import '../../node_modules/react-trumbowyg/dist/trumbowyg.min.css'
+// import Editor from 'react-trumbowyg'
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -72,7 +72,7 @@ class EditForm extends React.Component {
               />
             )
             : (
-              <Editor
+              <editor
                 id="react-trumbowyg"
                 buttons={
                   [

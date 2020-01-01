@@ -3,15 +3,13 @@ import PropType from 'prop-types'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { isLoggedIn, isPaid, isPro } from '../_user/selectors'
+import { ROUTES_WITHOUT_CTA } from '../_app/constants'
 
 const Cta = ({
   isLoggedIn, isPaid, isPro, of, slug,
 }) => {
-  if (
-    of === 'page'
-    && (slug === 'confirm' || slug === 'welcome')
-  ) {
-    return (<span />)
+  if (ROUTES_WITHOUT_CTA.some(route => `pages/${slug}`.startsWith(route))) {
+    return (<></>)
   }
 
   if (!isLoggedIn) {
@@ -33,7 +31,7 @@ const Cta = ({
       <div className="card card-warning h3 f-300 t-center my-2">
         Unlock the complete video training + mentor support with iLoveCoding Premium membership
         <br />
-        <Link to="/pricing" className="btn btn-lg btn-success mt--5">Upgrade Now</Link>
+        <Link to="/pricing" className="btn btn-success mt--5">Upgrade Now</Link>
       </div>
     )
   }
@@ -41,7 +39,7 @@ const Cta = ({
   if (isLoggedIn && isPro) {
     return (
       <div className="card card-warning h3 f-300 t-center my-2">
-        <Link to="/pricing" className="btn btn-lg btn-success my--5">Upgrade to iLoveCoding Premium</Link>
+        <Link to="/pricing" className="btn btn-success my--5">Upgrade to iLoveCoding Premium</Link>
         {' '}
         to unlock live weekly group calls with your mentor.
       </div>

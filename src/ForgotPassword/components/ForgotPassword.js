@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 
+import { Input } from '../../Controls'
 import { validateField } from '../../_app/utils'
 import WrapMini from '../../WrapMini'
 import { actions } from '..'
@@ -58,7 +59,7 @@ class ForgotPassword extends React.Component {
   }
 
   renderInlineError(fieldName) {
-    const error = this.state[fieldName].error
+    const { error } = this.state[fieldName]
 
     if (error) {
       return (
@@ -91,12 +92,11 @@ class ForgotPassword extends React.Component {
           <p>Please enter your email to search for your account.</p>
           {this.renderError()}
           <div>
-            <label htmlFor="email" className="sr-only">Email address</label>
-            <input
+            <Input
+              label="Email address"
               id="email"
               name="email"
               type="email"
-              className="form-control form-control-lg"
               placeholder="Email address"
               autoFocus
               required

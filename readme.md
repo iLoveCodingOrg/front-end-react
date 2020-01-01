@@ -1,8 +1,13 @@
-# React Redux Simple Starter
+# iLoveCoding Front-End
 
-## Code splitting effectively
-- ONLY expose files via index which are referenced outside of the feature-group
-- Any file that is referenced more than once in two different trees go to the main src - even if its in a section.
+## To dos
+- Webinar Funnel
+- Sales
+
+## Page Slug Naming convention
+- `pages/thanks-xxx` when user successfully signs up to an option
+- `pages/confirmed-xxx` when user confirms an email or an action
+- `pages/welcome-xxx` when user purchases successfully
 
 ## Critical paths to test
 - Login 

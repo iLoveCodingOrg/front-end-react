@@ -43,6 +43,8 @@ function SignupModal({ isModalOpen, closeModal }) {
         <MarketingFormApi
           enableLastName={false}
           submitButtonText="Access the Training Now >>"
+          newSignupSuccessPage="/pages/thanks-webinar-signup"
+          existingSignupSuccessPage="/webinar/play"
         />
         <small className="color-gray">We DO NOT tolerate SPAM and will never share your email.</small>
       </div>
