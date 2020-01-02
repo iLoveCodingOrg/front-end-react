@@ -9,7 +9,7 @@ import View from './View'
 import Edit from './Edit'
 import List from './List'
 import NotFound from './NotFound'
-import isPrivate from '../../isPrivate'
+import withAuth from '../../withAuth'
 
 export default function Routes() {
   return (
@@ -36,7 +36,7 @@ export default function Routes() {
         exact
         strict
         path="/blog/:slug/edit"
-        component={isPrivate(Edit)}
+        component={withAuth(Edit)}
       />
       <Route
         component={NotFound}
