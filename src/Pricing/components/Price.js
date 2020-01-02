@@ -38,10 +38,11 @@ const dataOriginal = {
           <span className="color-green">(Weekly mentor group calls)</span>
         </span>
       ),
-      price: 199,
+      originalPrice: 199,
+      price: 159,
       terms: 'Paid Monthly',
       // terms2: 'Complete training + weekly group calls',
-      link: '/checkout/ilc-premium-199m',
+      link: '/checkout/ilc-premium-159m',
     },
     '6-month': {
       planType: 'premium',
@@ -86,6 +87,7 @@ class Price extends React.Component {
   renderPriceBox({
     name,
     desc,
+    originalPrice,
     price,
     terms,
     terms2,
@@ -98,6 +100,7 @@ class Price extends React.Component {
       <PriceBox
         name={name}
         desc={desc}
+        originalPrice={originalPrice}
         price={price}
         terms={terms}
         terms2={terms2}

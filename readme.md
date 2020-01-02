@@ -2,7 +2,12 @@
 
 ## To dos
 - Webinar Funnel
-- Sales
+
+# Todo Technical
+- Delete unused DB
+- Backup DB
+- Migrate to MongoDB Atlas
+- Upload source to git
 
 ## Page Slug Naming convention
 - `pages/thanks-xxx` when user successfully signs up to an option

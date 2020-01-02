@@ -11,11 +11,15 @@ class PriceBox extends React.Component {
     this.renderCTA = this.renderCTA.bind(this)
   }
 
-  renderPrice(number) {
+  renderPrice(number, isStrikethrough) {
     const wholeNumber = Math.floor(number)
     // const decimal = number.toFixed(2).toString().split('.')[1] || '00'
     return (
-      <div className="h4x">
+      <div
+        style={{
+          textDecoration: isStrikethrough && 'line-through',
+        }}
+      >
         <sup className="h3">$</sup>
         <span className="h1">{wholeNumber}</span>
         {/* <sup className="decimal h2">.{decimal}</sup> */}
@@ -36,6 +40,7 @@ class PriceBox extends React.Component {
     const {
       name,
       desc,
+      originalPrice,
       price,
       terms,
       terms2,
@@ -61,7 +66,8 @@ class PriceBox extends React.Component {
             </div>
             <br />
             <span className="h3 f-300 em">{desc}</span>
-            <div className="card-title pricing-card-title mb-0">
+            <div className="flex justify-content-center card-title pricing-card-title mb-0">
+              {this.renderPrice(originalPrice, true)}
               {this.renderPrice(price)}
             </div>
 
