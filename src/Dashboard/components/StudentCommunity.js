@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { isPaid } from '../../_user/selectors'
+import { JOIN_STUDENT_COMMUNITY_LINK } from '../../_app/constants'
 
 function StudentCommunity({ isPaid }) {
   return (
@@ -10,7 +11,7 @@ function StudentCommunity({ isPaid }) {
       {
         isPaid ? (
           <p>
-            <a target="_blank" rel="noopener noreferrer" href="https://join.slack.com/t/ilovecoding/shared_invite/enQtNTIzNTI3MDIyNTY1LWE2Njc4YmU0MDkyN2EzYzA0YWU1YTE5ODU1OTA1OWNlNWE3ZGE1ZTg2MjQ0MDIzMmM4MWMxM2NiNmVjYjQyZmY">Join the Mentor-Moderated Private Student Community (on Slack).</a>
+            <a target="_blank" rel="noopener noreferrer" href={JOIN_STUDENT_COMMUNITY_LINK}>Join the Mentor-Moderated Private Student Community (on Slack).</a>
             <br />
             <br />
               I have a
@@ -19,7 +20,7 @@ function StudentCommunity({ isPaid }) {
             {' '}
               policy! and to support that, I have created this
             {' '}
-            <a target="_blank" rel="noopener noreferrer" href="https://join.slack.com/t/ilovecoding/shared_invite/enQtNTIzNTI3MDIyNTY1LWE2Njc4YmU0MDkyN2EzYzA0YWU1YTE5ODU1OTA1OWNlNWE3ZGE1ZTg2MjQ0MDIzMmM4MWMxM2NiNmVjYjQyZmY">Private Student Community</a>
+            <a target="_blank" rel="noopener noreferrer" href={JOIN_STUDENT_COMMUNITY_LINK}>Private Student Community</a>
             {' '}
               for you to keep in touch with me.
             <br />
