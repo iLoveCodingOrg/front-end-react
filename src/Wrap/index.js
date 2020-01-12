@@ -6,10 +6,10 @@ import Banner from '../Banner'
 import withAuth from '../withAuth'
 
 export default function Wrap({ children }) {
-  const BannerHOC = withAuth(Banner, false, <></>)
+  // const BannerHOC = withAuth(Banner, false, <></>)
   return (
     <>
-      <BannerHOC />
+      {/* <BannerHOC /> */}
       <Header />
       {children}
       <Footer />

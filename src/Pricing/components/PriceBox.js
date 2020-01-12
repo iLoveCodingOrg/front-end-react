@@ -67,7 +67,7 @@ class PriceBox extends React.Component {
             <br />
             <span className="h3 f-300 em">{desc}</span>
             <div className="flex justify-content-center card-title pricing-card-title mb-0">
-              {this.renderPrice(originalPrice, true)}
+              {originalPrice && originalPrice !== price && this.renderPrice(originalPrice, true)}
               {this.renderPrice(price)}
             </div>
 

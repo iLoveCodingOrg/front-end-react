@@ -39,10 +39,10 @@ const dataOriginal = {
         </span>
       ),
       originalPrice: 199,
-      price: 159,
+      price: 199,
       terms: 'Paid Monthly',
       // terms2: 'Complete training + weekly group calls',
-      link: '/checkout/ilc-premium-159m',
+      link: '/checkout/ilc-premium-199m',
     },
     '6-month': {
       planType: 'premium',
