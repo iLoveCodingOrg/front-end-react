@@ -1,3 +1,5 @@
+export const EASY_WEBINAR_WIDGET_JS_OLD = 'https://app.easywebinar.com/widget/js/ewp_widget.js?v=1.1.95'
+export const EASY_WEBINAR_WIDGET_JS = 'https://ewpcdn.easywebinar.com/widget/js/ewp_widget.js?v=1.23.24'
 export const JOIN_STUDENT_COMMUNITY_LINK = 'https://join.slack.com/t/ilovecoding/shared_invite/enQtNTIzNTI3MDIyNTY1LWNjNWY4OWJkODNiODRlMTAxYTMyY2FlZjNkYTY3MGMyOTJkYzE5OGQ0ZjFlYTMyODVkOWMxZWE3ZDI5NjE0ZmU'
 export const API_URL = `${process.env.API_URL}`
 export const IMG_URL = '//a.ilovecoding.org/thumb/'

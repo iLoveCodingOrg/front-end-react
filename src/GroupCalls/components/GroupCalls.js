@@ -1,11 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { EASY_WEBINAR_WIDGET_JS } from '../../_app/constants'
 
 export default class GroupCall extends React.Component {
   componentDidMount() {
     const script = document.createElement('script')
 
-    script.src = 'https://app.easywebinar.com/widget/js/ewp_widget.js?v=1.1.95'
+    script.src = EASY_WEBINAR_WIDGET_JS
     script.async = true
 
     document.body.appendChild(script)

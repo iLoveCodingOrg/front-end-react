@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal'
+import { EASY_WEBINAR_WIDGET_JS } from '../../_app/constants'
 import { Copyrights } from '../../Footer'
 import img from './aziz-pic-2.jpg'
 
@@ -12,7 +13,7 @@ export default function Signup() {
     const script = document.createElement('script')
 
     script.id = 'easyWebinar'
-    script.src = 'https://app.easywebinar.com/widget/js/ewp_widget.js?v=1.20.11'
+    script.src = EASY_WEBINAR_WIDGET_JS
     script.async = true
 
     document.body.appendChild(script)
