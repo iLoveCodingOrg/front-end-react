@@ -18,19 +18,19 @@ export default function Routes() {
         exact
         strict
         path="/blog"
-        component={List}
+        component={withAuth(List, false)}
       />
       <Route
         exact
         strict
         path="/blog/add"
-        component={Add}
+        component={withAuth(Add, false)}
       />
       <Route
         exact
         strict
         path="/blog/:slug"
-        component={View}
+        component={withAuth(View, false)}
       />
       <Route
         exact
@@ -39,7 +39,7 @@ export default function Routes() {
         component={withAuth(Edit)}
       />
       <Route
-        component={NotFound}
+        component={withAuth(NotFound, false)}
       />
     </Switch>
   )

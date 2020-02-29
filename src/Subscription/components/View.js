@@ -8,6 +8,7 @@ import Breadcrumbs from '../../Breadcrumbs'
 import { getSubscriptionById } from '../actions'
 import ViewGeneral from './ViewGeneral'
 import UpdateCard from './UpdateCard'
+import withAuth from '../../withAuth'
 
 function SubscriptionView({ match }) {
   const { id } = match.params
@@ -47,13 +48,13 @@ function SubscriptionView({ match }) {
           exact
           strict
           path="/subscriptions/:id"
-          component={ViewGeneral}
+          component={withAuth(ViewGeneral, false)}
         />
         <Route
           exact
           strict
           path="/subscriptions/:id/update-card"
-          component={UpdateCard}
+          component={withAuth(UpdateCard, false)}
         />
       </section>
     </div>

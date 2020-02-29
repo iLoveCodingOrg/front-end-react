@@ -20,19 +20,19 @@ export default function Routes() {
         exact
         strict
         path="/courses"
-        component={List}
+        component={withAuth(List, false)}
       />
       <Route
         exact
         strict
         path="/courses/core"
-        component={ListCore}
+        component={withAuth(ListCore, false)}
       />
       <Route
         exact
         strict
         path="/courses/projects"
-        component={ListProject}
+        component={withAuth(ListProject, false)}
       />
       <Route
         exact
@@ -44,13 +44,13 @@ export default function Routes() {
         exact
         strict
         path="/courses/:courseSlug/lessons/:lessonSlug"
-        component={CourseLessonView}
+        component={withAuth(CourseLessonView, false)}
       />
       <Route
         exact
         strict
         path="/courses/:slug"
-        component={View}
+        component={withAuth(View, false)}
       />
       <Route
         exact
@@ -59,7 +59,7 @@ export default function Routes() {
         component={withAuth(Edit)}
       />
       <Route
-        component={NotFound}
+        component={withAuth(NotFound, false)}
       />
     </Switch>
   )

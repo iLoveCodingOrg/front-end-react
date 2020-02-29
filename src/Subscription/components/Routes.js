@@ -6,6 +6,7 @@ import {
 import View from './View'
 import List from './List'
 import { AsyncNotFound as NotFound } from '../../Page'
+import withAuth from '../../withAuth'
 
 export default () => (
   <Switch>
@@ -13,15 +14,15 @@ export default () => (
       exact
       strict
       path="/subscriptions"
-      component={List}
+      component={withAuth(List, false)}
     />
     <Route
       strict
       path="/subscriptions/:id"
-      component={View}
+      component={withAuth(View, false)}
     />
     <Route
-      component={NotFound}
+      component={withAuth(NotFound, false)}
     />
   </Switch>
 )

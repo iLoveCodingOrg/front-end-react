@@ -138,7 +138,7 @@ export function login(email, password, recaptchaToken) {
         'content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email, password, recaptchaToken, ttl: 1 * 60,
+        email, password, recaptchaToken, ttl: 60 * 60 * 24 * 7, // one week
       }),
     })
       .then(checkStatus)
@@ -189,7 +189,10 @@ export function getUser() {
     .then((json) => {
       dispatch(setUser(false, json))
     })
-    .catch((error) => {})
+    .catch((error) => {
+      dispatch(setUser(error))
+      dispatch(clearUser())
+    })
 }
 
 export function setUser(error = false, user) {

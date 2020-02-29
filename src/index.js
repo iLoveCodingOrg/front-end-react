@@ -71,36 +71,34 @@ function renderApp() {
               draggable
               pauseOnHover
             />
-            <Auth>
-              <Switch>
-                <Route exact strict path="/verify-email" component={VerifyEmail} />
-                <Route exact strict path="/forgot-password" component={ForgotPassword} />
-                <Route exact strict path="/reset-password/:accessToken" component={ResetPassword} />
-                <Route exact strict path="/login" component={Login} />
-                <Route exact strict path="/signup" component={Signup} />
-                <Route exact strict path="/checkout/:slug" component={Checkout} />
-                <Route strict path="/webinar" component={Webinar} />
-                <Wrap>
-                  <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/pricing" component={Pricing} />
-                    <Route exact path="/reviews" component={Reviews} />
-                    <Route exact path="/curriculum" component={Curriculum} />
-                    <Route exact path="/dashboard" component={withAuth(Dashboard)} />
-                    <Route strict path="/q" component={QuestionRoutes} />
-                    <Route strict path="/lessons" component={LessonRoutes} />
-                    <Route strict path="/courses" component={CourseRoutes} />
-                    <Route strict path="/blog" component={BlogRoutes} />
-                    <Route strict path="/pages" component={PageRoutes} />
-                    <Route strict path="/officehours" component={withAuth(OfficeHours)} />
-                    <Route strict path="/groupcalls" component={withAuth(GroupCalls)} />
-                    <Route strict path="/subscriptions" component={withAuth(SubscriptionRoutes)} />
-                    <Route exact strict path="/change-password" component={withAuth(ChangePassword)} />
-                    <Route component={NotFound} />
-                  </Switch>
-                </Wrap>
-              </Switch>
-            </Auth>
+            <Switch>
+              <Route exact strict path="/verify-email" component={withAuth(VerifyEmail, false)} />
+              <Route exact strict path="/forgot-password" component={withAuth(ForgotPassword, false)} />
+              <Route exact strict path="/reset-password/:accessToken" component={withAuth(ResetPassword, false)} />
+              <Route exact strict path="/login" component={withAuth(Login, false)} />
+              <Route exact strict path="/signup" component={withAuth(Signup, false)} />
+              <Route exact strict path="/checkout/:slug" component={withAuth(Checkout, false)} />
+              <Route strict path="/webinar" component={withAuth(Webinar, false)} />
+              <Wrap>
+                <Switch>
+                  <Route exact path="/" component={withAuth(Home, false)} />
+                  <Route exact path="/pricing" component={withAuth(Pricing, false)} />
+                  <Route exact path="/reviews" component={withAuth(Reviews, false)} />
+                  <Route exact path="/curriculum" component={withAuth(Curriculum, false)} />
+                  <Route exact path="/dashboard" component={withAuth(Dashboard)} />
+                  <Route strict path="/q" component={withAuth(QuestionRoutes, false)} />
+                  <Route strict path="/lessons" component={withAuth(LessonRoutes, false)} />
+                  <Route strict path="/courses" component={withAuth(CourseRoutes, false)} />
+                  <Route strict path="/blog" component={withAuth(BlogRoutes, false)} />
+                  <Route strict path="/pages" component={withAuth(PageRoutes, false)} />
+                  <Route strict path="/officehours" component={withAuth(OfficeHours)} />
+                  <Route strict path="/groupcalls" component={withAuth(GroupCalls)} />
+                  <Route strict path="/subscriptions" component={withAuth(SubscriptionRoutes)} />
+                  <Route exact strict path="/change-password" component={withAuth(ChangePassword)} />
+                  <Route component={withAuth(NotFound, false)} />
+                </Switch>
+              </Wrap>
+            </Switch>
           </ErrorBoundary>
         </ScrollToTop>
       </BrowserRouter>
