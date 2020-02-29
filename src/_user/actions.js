@@ -113,7 +113,9 @@ export function login(email, password, recaptchaToken) {
 
   return (dispatch) => {
     // Validate fields
-    const fields = checkInvalidFieldsLogin({ email, password, recaptchaToken })
+    const fields = checkInvalidFieldsLogin({
+      email, password, recaptchaToken,
+    })
 
     if (fields.length > 0) {
       const pluralize = fields.length > 1 ? 'are' : 'is'
@@ -136,7 +138,7 @@ export function login(email, password, recaptchaToken) {
         'content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email, password, recaptchaToken,
+        email, password, recaptchaToken, ttl: 1 * 60,
       }),
     })
       .then(checkStatus)
