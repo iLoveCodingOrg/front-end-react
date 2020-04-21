@@ -8,9 +8,8 @@ import Loading from '../../Loading'
 import PaymentMethodInfo from './PaymentMethodInfo'
 
 function ViewGeneral({
-  match, getSubscription, isLoading, error, view,
+  getSubscription, isLoading, error, view, subscriptionId,
 }) {
-  const subscriptionId = match.params.id
   const {
     plan, transactions, active, paymentMethod,
   } = view
@@ -31,16 +30,19 @@ function ViewGeneral({
         { isLoading && <Loading />}
         { !isLoading && error && renderError() }
         { !isLoading && !error && (
-        <div>
+        <>
           <div className="my-1 h4">
             Your subscription is
             {' '}
             {
-              active ? <span className="badge badge-pill badge-success mr-1">Active</span>
-                : <span className="badge badge-pill badge-danger mr-1">Inactive</span>
+              active ? <span className="badge badge-pill bg-success mr-1">Active</span>
+                : <span className="badge badge-pill bg-danger mr-1">Inactive</span>
             }
           </div>
-          <div>
+          <div
+            className="grid"
+            style={{ gridTemplateColumns: '1fr 1fr', gridGap: '10px;' }}
+          >
             <div>
               <h3>Plan details</h3>
               <p>
@@ -58,22 +60,20 @@ function ViewGeneral({
             <div>
               <h3>Payment Method on file</h3>
               {subscriptionId && paymentMethod && (
-              <PaymentMethodInfo
-                subscriptionId={subscriptionId}
-                creditCard={paymentMethod.creditCard}
-                paypal={paymentMethod.paypal}
-                showUpdateBtn
-              />
+                <PaymentMethodInfo
+                  subscriptionId={subscriptionId}
+                  creditCard={paymentMethod.creditCard}
+                  paypal={paymentMethod.paypal}
+                  showUpdateBtn
+                />
               )}
             </div>
           </div>
           <div>
-            <div>
-              <h3>Transactions</h3>
-              {transactions && <Transactions data={transactions} />}
-            </div>
+            <h3>Transactions</h3>
+            {transactions && <Transactions data={transactions} />}
           </div>
-        </div>
+        </>
         )}
       </div>
     </div>
@@ -81,11 +81,7 @@ function ViewGeneral({
 }
 
 ViewGeneral.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    }),
-  }).isRequired,
+  subscriptionId: PropTypes.string.isRequired,
   error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   getSubscription: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
@@ -97,11 +93,12 @@ ViewGeneral.propTypes = {
   }).isRequired,
 }
 
-function mapStateToProps({ subscriptions }) {
+function mapStateToProps({ subscriptions }, { match }) {
   return {
     error: subscriptions.view.error,
     isLoading: subscriptions.view.isLoading,
     view: subscriptions.view.data,
+    subscriptionId: match.params.id,
   }
 }
 

@@ -13,3 +13,4 @@
 
 .bg-green, .bg-success { background-color: var(--green) }
 .bg-orange, .bg-warning { background-color: var(--orange) }
+.bg-red, .bg-danger { background-color: var(--red) }

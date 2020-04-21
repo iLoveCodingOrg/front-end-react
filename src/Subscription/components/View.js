@@ -48,7 +48,7 @@ function SubscriptionView({ match }) {
           exact
           strict
           path="/subscriptions/:id"
-          component={withAuth(ViewGeneral, false)}
+          component={ViewGeneral}
         />
         <Route
           exact
