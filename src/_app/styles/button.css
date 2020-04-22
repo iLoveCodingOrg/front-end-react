@@ -1,7 +1,7 @@
 input[type=button], input[type=submit], button, .btn{
   color: var(--gray-dark);
   background-color: transparent;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1em;
   width: auto;
   padding: 0.4em 1.2em;
@@ -29,9 +29,11 @@ input[type=button], input[type=submit], button, .btn{
   &.btn-lg{
     font-size: 1.6em;
   }
-
   &.btn-sm{
     font-size: 0.8em;
+  }
+  &.btn-400{
+    font-weight: 400;
   }
 
   &.btn-primary, &.btn-blue{

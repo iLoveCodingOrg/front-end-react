@@ -121,31 +121,31 @@ function Header({
       {
         label: 'Why JavaScript?',
         link: '/pages/why-javascript',
-        className: 'nav-link btn py--25',
+        className: 'nav-link btn btn-400 py--25',
         style: {},
       },
       {
         label: 'How it works',
         link: '/pages/how-it-works',
-        className: 'nav-link btn py--25',
+        className: 'nav-link btn btn-400 py--25',
         style: {},
       },
       {
         label: 'Real Results',
         link: '/reviews',
-        className: 'nav-link btn py--25',
+        className: 'nav-link btn btn-400 py--25',
         style: {},
       },
       {
         label: 'Pricing',
         link: '/pricing',
-        className: 'nav-link btn py--25',
+        className: 'nav-link btn btn-400 py--25',
         style: {},
       },
       {
         label: 'Login',
         link: '/login',
-        className: 'nav-link btn py--25',
+        className: 'nav-link btn btn-400 py--25',
         style: {},
       },
       {
@@ -192,16 +192,18 @@ function Header({
   }
 
   return (
-    <nav id="header" className="flex flex-column align-items-center navbar-expand p--5 navbar-light">
-      <div className="navbar-brand p-0">
-        <Link to="/" className="img-wrap img-wrap-hover">
-          <img src={logo} alt="iLoveCoding.org Logo" />
-        </Link>
+    <nav id="header" className="flex space-between align-items-center navbar-expand p--5 navbar-light mb-4 b bb-1">
+      <div className="flex align-items-center">
+        <div className="navbar-brand p-0">
+          <Link to="/" className="img-wrap img-wrap-hover">
+            <img src={logo} alt="iLoveCoding.org Logo" />
+          </Link>
+        </div>
+        <nav className="ml-1 my--5 navbar-nav">
+          { isLoggedIn ? renderUserLeft() : renderGuestLeft() }
+        </nav>
+        {renderAdminLinks()}
       </div>
-      <nav className="my--5 navbar-nav">
-        { isLoggedIn ? renderUserLeft() : renderGuestLeft() }
-      </nav>
-      {renderAdminLinks()}
       <nav className="my--5 navbar-nav flex-wrap justify-content-center">
         { isLoggedIn ? renderUserRight() : renderGuestRight() }
       </nav>

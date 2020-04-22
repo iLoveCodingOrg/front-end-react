@@ -1,6 +1,12 @@
 :root{
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* --font-family-serif: Georgia, serif;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+  --font-family-serif: Merriweather, Georgia, serif;
+  --font-family-sans-serif: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
 body {
   font-family: var(--font-family-sans-serif);
   line-height: 1.6em;
@@ -40,7 +46,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 0;
   margin-bottom: 0.5em;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.6em;
 }
 
@@ -58,16 +64,19 @@ h4, .h4 { font-size: 1em; }
 h5, .h5 { font-size: 0.8em; }
 h6, .h6 { font-size: 0.6em; }
 
+.f-extra-bold, .f-900 {
+  font-weight: bold
+}
 b, strong, .strong, .f-700 {
   font-weight: bold
 }
 .f-500 {
   font-weight: 500;
 }
-.f-400 {
+.f-400, .f-normal {
   font-weight: 400;
 }
-.f-300 {
+.f-300, .f-light {
   font-weight: 300;
 }
 
@@ -127,13 +136,6 @@ ul.checkmark {
     }
   }
 }
-
-
-
-
-
-
-/*  */
 
 
 .t-left{

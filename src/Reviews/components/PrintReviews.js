@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ({ data, containerClasses='', itemClasses }) {
+export default function ({ data, containerClasses='', itemClasses='' }) {
   return (
     <div className={`grid grid-equal-wrap ${containerClasses}`}>
       {data.map(({

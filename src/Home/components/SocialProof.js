@@ -2,7 +2,7 @@ import React from 'react'
 import PrintReviews from '../../Reviews/components/PrintReviews'
 import { lastMonthViews } from '../../_app/constants'
 
-const add = (a, b) => a + b;
+const add = (a, b) => a + b
 
 function getMonthName(delta = 0) {
   const lastMonthIndex = add((new Date()).getMonth(), delta)
@@ -50,16 +50,9 @@ function SocialProof() {
   return (
     <div>
       <h3 className="t-center mb-2">
-        <u>
-          {lastMonthViews}
-          {' '}
-          students
-        </u>
+        <u>{lastMonthViews} students</u>
         {' '}
-        learned coding from iLoveCoding last month (
-        {getMonthName(-1)}
-        {' '}
-        {(new Date()).getFullYear()}
+        learned coding from iLoveCoding last month ({getMonthName(-1)} {(new Date()).getFullYear()})
         <br />
         {' '}
         Here&apos;s what some of them had to say:
