@@ -2,8 +2,10 @@ import React from 'react'
 import PrintReviews from '../../Reviews/components/PrintReviews'
 import { lastMonthViews } from '../../_app/constants'
 
-function getLastMonth() {
-  const lastMonthIndex = (new Date()).getMonth() - 1
+const add = (a, b) => a + b;
+
+function getMonthName(delta = 0) {
+  const lastMonthIndex = add((new Date()).getMonth(), delta)
   const months = [
     'January',
     'February',
@@ -55,9 +57,9 @@ function SocialProof() {
         </u>
         {' '}
         learned coding from iLoveCoding last month (
-        {getLastMonth()}
+        {getMonthName(-1)}
         {' '}
-        2019);
+        {(new Date()).getFullYear()}
         <br />
         {' '}
         Here&apos;s what some of them had to say:
