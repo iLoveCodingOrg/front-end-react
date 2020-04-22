@@ -192,8 +192,22 @@ function Header({
   }
 
   return (
-    <nav id="header" className="flex space-between align-items-center navbar-expand p--5 navbar-light mb-4 b bb-1">
-      <div className="flex align-items-center">
+    <nav
+      id="header"
+      className="
+        flex
+        flex-column
+        md-flex-row
+        md-space-between
+        align-items-center
+        navbar-expand
+        p--5
+        navbar-light
+        mb-4
+        b bb-1
+      "
+    >
+      <div className="flex flex-column md-flex-row align-items-center">
         <div className="navbar-brand p-0">
           <Link to="/" className="img-wrap img-wrap-hover">
             <img src={logo} alt="iLoveCoding.org Logo" />
@@ -204,7 +218,7 @@ function Header({
         </nav>
         {renderAdminLinks()}
       </div>
-      <nav className="my--5 navbar-nav flex-wrap justify-content-center">
+      <nav className="my--5 navbar-nav flex flex-wrap justify-content-center align-items-center md-justify-content-start">
         { isLoggedIn ? renderUserRight() : renderGuestRight() }
       </nav>
     </nav>

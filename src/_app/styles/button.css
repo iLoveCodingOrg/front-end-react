@@ -28,6 +28,7 @@ input[type=button], input[type=submit], button, .btn{
   }
   &.btn-lg{
     font-size: 1.6em;
+    padding: 0.8em 1.2em;
   }
   &.btn-sm{
     font-size: 0.8em;
