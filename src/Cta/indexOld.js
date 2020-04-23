@@ -43,7 +43,7 @@ const Cta = ({
       <div className="card card-warning h3 f-300 t-center my-2">
         <Link to="/pricing" className="btn btn-lg btn-success my--5">Upgrade to iLoveCoding Premium</Link>
         {' '}
-        to unlock live weekly group calls with your mentor.
+        to unlock live weekly group video-calls with your mentor.
       </div>
     )
   }

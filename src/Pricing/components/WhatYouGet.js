@@ -96,7 +96,7 @@ export default function () {
             </div>
             <div>
               <h4>
-                (C) Weekly Group Calls with Mentor
+                (C) Weekly Group Video-Calls with Mentor
                 {' '}
                 <span className="badge bg-success">Premium</span>
               </h4>
@@ -131,7 +131,7 @@ export default function () {
               {/* <p>
                 <strong>Important:</strong>
                 {' '}
-                Weekly Group Calls are for iLoveCoding Premium members only. iLoveCoding Pro members can always get help from mentor in the Mentor-Moderated Private Student Community.
+                Weekly Group Video-Calls are for iLoveCoding Premium members only. iLoveCoding Pro members can always get help from mentor in the Mentor-Moderated Private Student Community.
               </p> */}
             </div>
           </div>

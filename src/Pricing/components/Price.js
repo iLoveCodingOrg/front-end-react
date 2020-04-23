@@ -41,7 +41,7 @@ const dataOriginal = {
       originalPrice: 199,
       price: 199,
       terms: 'Paid Monthly',
-      // terms2: 'Complete training + weekly group calls',
+      // terms2: 'Complete training + weekly group video-calls',
       link: '/checkout/ilc-premium-199m',
     },
     '6-month': {
@@ -51,12 +51,12 @@ const dataOriginal = {
         <span>
           Best suited for learners who need more hands-on-support
           {' '}
-          <span className="color-green">(Weekly mentor group calls)</span>
+          <span className="color-green">(Weekly mentor group video-calls)</span>
         </span>
       ),
       price: 67,
       terms: 'Billed $400 Every 6 Months',
-      // terms2: 'Complete training + weekly group calls',
+      // terms2: 'Complete training + weekly group video-calls',
       link: '/checkout/ilc-premium-400sixm',
       isPopular: false,
     },

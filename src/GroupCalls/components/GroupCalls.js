@@ -16,11 +16,11 @@ export default class GroupCall extends React.Component {
     return (
       <div className="flex flex-column">
         <Helmet>
-          <title>Weekly Group Calls - iLoveCoding</title>
+          <title>Weekly Group Video-Calls - iLoveCoding</title>
         </Helmet>
-        <div className="align-self-center mt-1">
-          <h1>Weekly Group Calls</h1>
-          <h3 className="f-300">Register to the next upcoming weekly group call</h3>
+        <div className="container align-self-center mt-1 mb-3">
+          <h1>Weekly Group Video-Calls</h1>
+          <h3 className="f-300">Register to the next upcoming weekly group video-call</h3>
           <div className="card card-info pb-0">
             <h5>
               Please come to the call prepared

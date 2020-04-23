@@ -11,7 +11,7 @@ function PremiumSupport({ isPremium }) {
         {
           isPremium ? (
             <li>
-              <Link to="/groupcalls">Weekly Group Call with Aziz</Link>
+              <Link to="/groupcalls">Weekly Group Video-Call with Aziz</Link>
               <span className="badge bg-success ml--5">PREMIUM</span>
             </li>
           ) : (
