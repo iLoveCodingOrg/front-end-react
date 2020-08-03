@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import { addBlog } from '../actions'
-import { Add } from '../../_common'
+// import { Add } from '../../_common'
+const Add = React.lazy(() => import('../../_common/Add'))
 
 function mapStateToProps() {
   return {}
@@ -34,10 +35,12 @@ export default withRouter(connect(
   }]
 
   return (
-    <Add
-      {...props}
-      editableFields={editableFields}
-      of="blog"
-    />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Add
+        {...props}
+        editableFields={editableFields}
+        of="blog"
+      />
+    </Suspense>
   )
 }))

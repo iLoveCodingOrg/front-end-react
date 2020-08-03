@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
 import { contentTypeToRoute } from '../_app/utils'
 import EditForm from './EditForm'
-// import EditForm from './AsyncEditForm'
 
 export default function Add({
   add,
@@ -14,16 +13,6 @@ export default function Add({
   children,
 }) {
   const pageTitle = `Add ${of}`
-
-  useEffect(() => {
-    // Add jQuery to page for react-trumbowyg
-    if (!document.querySelector('#jquery')) {
-      const script = document.createElement('script')
-      script.id = 'jquery'
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
-      document.body.appendChild(script)
-    }
-  }, [])
 
   const handelFormSubmit = (payload) => {
     const preparedPayload = {}
@@ -70,6 +59,7 @@ export default function Add({
 
 Add.propTypes = {
   add: PropTypes.func.isRequired,
+  children: PropTypes.any,
   editableFields: PropTypes.array.isRequired,
   history: PropTypes.object.isRequired,
   of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']).isRequired,

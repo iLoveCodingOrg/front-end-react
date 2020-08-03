@@ -8,16 +8,17 @@ import Duration from './Duration'
 import LessonCount from './LessonCount'
 import RedirectAlert from './RedirectAlert'
 import CheckMark from './CheckMark'
+import Add from './Add'
+import Edit from './Edit'
+// import AsyncLoader from './AsyncLoader'
 
-import AsyncLoader from './AsyncLoader'
+// const Add = AsyncLoader({
+//   loader: () => import('./Add'),
+// })
 
-const Add = AsyncLoader({
-  loader: () => import('./Add'),
-})
-
-const Edit = AsyncLoader({
-  loader: () => import('./Edit'),
-})
+// const Edit = AsyncLoader({
+//   loader: () => import('./Edit'),
+// })
 
 export {
   List,
