@@ -26,16 +26,6 @@ export default function Edit({
     getView(slug)
   }, [match, getView])
 
-  useEffect(() => {
-    // Add jQuery to page for react-trumbowyg
-    if (!document.querySelector('#jquery')) {
-      const script = document.createElement('script')
-      script.id = 'jquery'
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
-      document.body.appendChild(script)
-    }
-  }, [])
-
   const handelFormSubmit = (payload) => {
     const preparedPayload = {}
     editableFields.forEach((field) => {
@@ -74,6 +64,7 @@ export default function Edit({
 }
 
 Edit.propTypes = {
+  children: PropTypes.any,
   editableFields: PropTypes.array.isRequired,
   getView: PropTypes.func.isRequired,
   of: PropTypes.oneOf(['question', 'lesson', 'course', 'page', 'blog']).isRequired,
