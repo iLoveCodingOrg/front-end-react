@@ -1,8 +1,7 @@
-// import '../../node_modules/react-trumbowyg/dist/trumbowyg.min.css'
-// import Editor from 'react-trumbowyg'
-
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import Rte from './Rte'
+// import Wysiwyg from './Wysiwyg'
 
 function EditForm({ data, editableFields, onSubmitForm }) {
   const [isViewSource, setIsViewSource] = useState(false)
@@ -35,21 +34,18 @@ function EditForm({ data, editableFields, onSubmitForm }) {
   }
 
   const renderViewSourceCheckbox = () => (
-    <div className="form-check form-check-inline">
+    <label
+      className="flex align-items-center"
+      htmlFor="view-source"
+    >
       <input
-        className="form-check-input"
         type="checkbox"
         id="view-source"
         onChange={handleViewSource}
         checked={isViewSource}
       />
-      <label
-        className="form-check-input"
-        htmlFor="view-source"
-      >
-          View Source
-      </label>
-    </div>
+        View Source
+    </label>
   )
 
   const renderTextFields = (field, type) => (
@@ -92,9 +88,8 @@ function EditForm({ data, editableFields, onSubmitForm }) {
   )
 
   const renderWysiwyg = field => (
-    <div key={field} className="form-group">
+    <div key={field}>
       <label
-        className="col-form-label"
         htmlFor={field}
       >
         {field}
@@ -105,14 +100,27 @@ function EditForm({ data, editableFields, onSubmitForm }) {
           ? (
             <textarea
               rows="13"
-              className="form-control"
+              className=""
               name={field}
               value={fields[field]}
               onChange={(e) => { handleChange(field, e.target.value) }}
             />
           )
           : (
-            <>editor</>
+            // <Wysiwyg
+            //   value={fields[field]}
+            //   updateValue={newValue => setFields({
+            //     ...fields,
+            //     [field]: newValue,
+            //   })}
+            // />
+            <Rte
+              value={fields[field]}
+              updateValue={newValue => setFields({
+                ...fields,
+                [field]: newValue,
+              })}
+            />
           )
           }
       </div>

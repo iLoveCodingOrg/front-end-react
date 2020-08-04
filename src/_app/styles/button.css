@@ -147,8 +147,10 @@ select{
   appearance: none;
 }
 
-input, select, textarea, .form-control{
+input, select, .form-control{
   height: calc(1.5em + .75rem + 2px);
+}
+input, select, textarea, .form-control{
   padding: 16px;
   font-size: 1em;
   border-radius: var(--border-radius);
