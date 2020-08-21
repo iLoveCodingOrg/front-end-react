@@ -8,14 +8,14 @@ export default function () {
           <h3 className="t-center text-dark">
             <span role="img" aria-label="Sheild Emoji">🛡️</span>
             {' '}
-            7-Day Full-Refund Policy
+            7-Day Full Refund Policy
           </h3>
           <p>
             If you are not happy with your purchase for any reason whatsoever, please request a refund by emailing
             {' '}
             <u>support@ilovecoding.org</u>
             {' '}
-            within the first 7-days of your purchase, and we will prompty issue a full-refund.
+            within the first 7-days of your purchase, and we will promptly issue a full refund.
             <br />
             <br />
             We only want to keep your money if you think we have earned it.

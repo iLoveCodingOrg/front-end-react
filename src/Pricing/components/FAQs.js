@@ -12,7 +12,7 @@ export default function () {
 
         <h3 className="mt-3">Can I get a discount?</h3>
         <p>
-          No! Sorry about that. The price of iLoveCoding is kept low so anyone can afford it. The cost of this training is less than the price of a coffee per day. ☕. Remember! An alternative training at a bootcamp would cost way more.
+          No! Sorry about that. The price of iLoveCoding has been kept low, so anyone can afford it. The cost of this training is less than the price of a coffee per day. <span role="img" aria-label="Coffee">☕</span>. Remember, An alternative training at a bootcamp would cost way more.
         </p>
 
         <h3 className="mt-3">What is the refund policy?</h3>
@@ -64,10 +64,10 @@ export default function () {
 
         <h3 className="mt-3">Will I be able to get a job?</h3>
         <p>
-          We don't guarantee any outcomes! However countless iLoveCoding students have ended up in large companies, started freelancing and have even launched their own ideas.
+          We don't guarantee any outcomes. However, countless iLoveCoding students have ended up in large companies, started freelancing, and even have launched their own ideas.
           <br />
           <br />
-          With that said, iLoveCoding does prepare you so you become job-ready, with proper training, preparation and guidance along the way.
+          With that said, iLoveCoding does prepare you, so you become job-ready; with proper training, preparation, and guidance along the way.
         </p>
 
         <h3 className="mt-3">Will I be able to make a website like Facebook?</h3>
@@ -94,28 +94,24 @@ export default function () {
           You can for sure piece together all the technical information from the internet. However this will take a long time and you will still struggle with poor explanations, lack of examples, lack of real-world projects and no professional mentorship.
         </p>
         <p>
-          iLoveCoding puts everything together in a systematic way
+          iLoveCoding puts everything together in a systematic way:
         </p>
         <ul>
           <li>
             <span role="img" aria-label="Check mark">✅</span>
-            {' '}
-            Simple explanations
+            &nbsp; Simple explanations
           </li>
           <li>
             <span role="img" aria-label="Check mark">✅</span>
-            {' '}
-            Ton of Examples
+            &nbsp; Tons of Examples
           </li>
           <li>
             <span role="img" aria-label="Check mark">✅</span>
-            {' '}
-            Ton of real-world projects
+            &nbsp; Tons of real-world projects
           </li>
           <li>
             <span role="img" aria-label="Check mark">✅</span>
-            {' '}
-            Professional mentorship.
+            &nbsp; Professional mentorship.
           </li>
         </ul>
 

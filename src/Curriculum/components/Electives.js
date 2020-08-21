@@ -55,12 +55,12 @@ export default () => (
         Additional Training
       </h2>
       <h3 className="f-300 color-gray">
-        These are additional supplementary training. Choose the topic that spark your interest in any order.
+        This is additional supplementary training. Choose the topic that spark your interest in any order.
       </h3>
       <p>
         <strong>Time investment</strong>
         <br />
-        Use 2 weeks to pickup additional skills by choosing from a training below (Focus for week number 19 and 20)
+        Use 2 weeks to pick up additional skills by choosing from the training below (Focus for week number 19 and 20)
       </p>
       <p className="card card-info mb-0">
         <strong>Note:</strong>

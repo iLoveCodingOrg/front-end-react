@@ -42,7 +42,7 @@ function Home({ isLoggedIn }) {
             we give you a complete roadmap, complete video training and mentor support every step of the way till you achieve your goal.
           </h3>
           <h3 className="f-300 mb-3">
-            Whether you want to become job-ready, start your freelancing business or launch your tech startup, iLoveCoding will give you the
+            Whether you want to become job-ready, start your freelancing business, or launch your tech startup, iLoveCoding will give you the
             {' '}
             <strong>complete technical skills</strong>
             {' '}
@@ -65,24 +65,19 @@ function Home({ isLoggedIn }) {
             {' '}
             <strong>highly-skilled</strong>
             {' '}
-            Front-End and Full-Stack JavaScript developer, who can build websites, web apps, mobile apps and even desktop apps. Yes our curriculum is that solid.
+            Front-End and Full-Stack JavaScript developer, who can build websites, web apps, mobile apps, and even desktop apps. Yes, our curriculum is that solid!
             {' '}
             <Link to="/curriculum">See the Full Curriculum</Link>
           </h3>
           <h3 className="f-300 mb-3">
-            <strong>Have more questions?</strong>
-            {' '}
-            email
-            {' '}
-            <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>
-            , and we'd be happy to answer them.
+            <strong>Have more questions?</strong> email <a href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>, and we'd be happy to answer them.
           </h3>
           <h3 className="f-300 b bt-1 pt-3 mb-2">
             Learn to code
             {' '}
             <strong>so well</strong>
             {' '}
-            , that you can confidently build real-world apps, build an impressive portfolio and pass that tricky interview!
+            , that you can confidently build real-world apps, build an impressive portfolio, and pass that tricky interview!
           </h3>
           <p className="t-center">
             <Link to="/pricing" className="btn btn-lg btn-primary">Get Started Now</Link>

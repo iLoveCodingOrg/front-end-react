@@ -20,7 +20,7 @@ export default function () {
               <br />
               <CheckMark />
               {' '}
-              Simple Todo List App
+              Simple To-do List App
               <br />
               <CheckMark />
               {' '}
