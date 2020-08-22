@@ -21,7 +21,7 @@ const Cta = ({
         <br />
         <Link to="/signup" className="btn btn-lg btn-primary my--5">Get Started Free</Link>
         <br />
-          Already have an account,
+          Already have an account?
         {' '}
         <Link to="/login" className="btn-link">Please Login</Link>
       </div>

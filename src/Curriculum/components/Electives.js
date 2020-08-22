@@ -55,7 +55,7 @@ export default () => (
         Additional Training
       </h2>
       <h3 className="f-300 color-gray">
-        This is additional supplementary training. Choose the topic that spark your interest in any order.
+        This is additional supplementary training. Choose the topic that sparks your interest in any order.
       </h3>
       <p>
         <strong>Time investment</strong>
