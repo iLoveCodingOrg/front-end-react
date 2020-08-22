@@ -43,7 +43,7 @@ input[type=button], input[type=submit], button, .btn{
     color: var(--white);
     border: 1px solid var(--blue-dark);
     &:hover{
-      background-color: var(--blue-dark);
+      background-color: var(--blue-light);
       color: var(--white);
     }
   }
