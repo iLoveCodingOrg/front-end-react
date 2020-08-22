@@ -151,7 +151,7 @@ function Header({
       {
         label: 'Join Now',
         link: '/pricing',
-        className: 'btn btn-primary',
+        className: 'btn btn-primary ml--5',
         style: {},
       },
     ]
@@ -213,7 +213,7 @@ function Header({
             <img src={logo} alt="iLoveCoding.org Logo" />
           </Link>
         </div>
-        <nav className="ml-1 my--5 navbar-nav">
+        <nav className="mx-1 my--5 navbar-nav">
           { isLoggedIn ? renderUserLeft() : renderGuestLeft() }
         </nav>
         {renderAdminLinks()}

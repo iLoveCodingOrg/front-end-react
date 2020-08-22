@@ -8,7 +8,7 @@ function Hero() {
       className="container flex flex-wrap my-2"
     >
       <div className="flex-2" style={{ flexBasis: '300px' }}>
-        <p className="h3">Learn to Code with Confidence</p>
+        <p className="h3 f-400">Learn to Code with Confidence</p>
         <h1 className="strong">Complete Video Training + Mentor Support</h1>
         <h3 className="f-300 mb-3">
             Get everything you need to become a

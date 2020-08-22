@@ -6,8 +6,7 @@ export default function () {
       <div>
         <div className="card card-warning">
           <h3 className="t-center text-dark">
-            <span role="img" aria-label="Sheild Emoji">🛡️</span>
-            {' '}
+            <span role="img" aria-label="Sheild Emoji">🛡️</span>&nbsp;
             7-Day Full Refund Policy
           </h3>
           <p>
