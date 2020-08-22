@@ -11,7 +11,7 @@ body {
   font-family: var(--font-family-sans-serif);
   line-height: 1.6em;
   color: var(--gray-darkest);
-  font-size: 16px;
+  font-size: 14px;
   /* font-size: @1920 var(--medium-px) @1440 var(--medium-px) @1024 var(--small-px); */
 }
 

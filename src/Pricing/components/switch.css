@@ -24,7 +24,7 @@
   }
   .switch-handle {
     transition: all .15s linear;
-    background-color: #1772f2;
+    background-color: var(--blue);
     border-radius: 50em;
     height: 33px;
     position: absolute;

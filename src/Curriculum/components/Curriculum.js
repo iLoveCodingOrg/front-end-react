@@ -25,8 +25,8 @@ export default () => (
           <h3 className="f-300 card card-warning text-dark">
             <strong>Important:</strong>
             {' '}
-            This curriculum will give you the complete training of the deep technical concepts, homework, cheatsheets and practice projects so become a highly-skilled software developer.&nbsp;
-            <strong>Watch the video to get a proper walk through.</strong>
+            This curriculum will give you the complete training of the deep technical concepts, homework, cheat sheets, and practice projects, so you become a highly-skilled software developer.&nbsp;
+            <strong>Watch the video to get a proper walkthrough.</strong>
           </h3>
         </div>
         <div className="t-center p-0 mb-1">
@@ -38,12 +38,12 @@ export default () => (
         By the time you are done with this curriculum you will have the complete skills to code and launch modern websites, web applications and even mobile apps from scratch. Plus you will have an impressive portfolio to land you a respectable job as a software developer.
       </p>
       <p>
-        We'll do all of this while focusing on one programming language, which is JavaScript. JavaScript is currently the most popular and versatile programing language on planet internet. In fact 99% (maybe even 100%) of all top websites use JavaScript, and all the tech giants use it to build their websites and mobile apps: Facebook, PayPal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.
+        We&apos;ll do all of this while focusing on one programming language, which is JavaScript. JavaScript is currently the most popular and versatile programing language on planet internet. In fact, 99% (maybe even 100%) of all top websites use JavaScript, and all the tech giants use it to build their websites and mobile apps such as Facebook, PayPal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.
       </p>
       <p>
         <strong>Trust the process - follow the modules:</strong>
         <br />
-        Each module has core training along with a ton of practice projects. These practice projects will give you real life training on how to think like a developer and go from a blank screen to a fully finished application.
+        Each module has core training along with a ton of practice projects. These practice projects will give you real-life training on how to think like a developer and go from a blank screen to a fully finished application.
       </p>
       <div className="my-3">
         <div className="flex flex-column card mb-2 align-items-center">
