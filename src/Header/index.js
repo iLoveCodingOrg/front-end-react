@@ -149,7 +149,7 @@ function Header({
         style: {},
       },
       {
-        label: 'Join Now',
+        label: 'Enroll Now',
         link: '/pricing',
         className: 'btn btn-primary ml--5',
         style: {},
