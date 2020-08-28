@@ -65,7 +65,7 @@ h5, .h5 { font-size: 0.8em; }
 h6, .h6 { font-size: 0.6em; }
 
 .f-extra-bold, .f-900 {
-  font-weight: bold
+  font-weight: 900;
 }
 b, strong, .strong, .f-700 {
   font-weight: bold
@@ -137,6 +137,29 @@ ul.checkmark {
   }
 }
 
+@media (min-width: 576px){
+  .sm-t-left{
+    text-align: left;
+  }
+  .sm-t-right {
+    text-align: right;
+  }
+  .sm-t-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px){
+  .md-t-left{
+    text-align: left;
+  }
+  .md-t-right {
+    text-align: right;
+  }
+  .md-t-center {
+    text-align: center;
+  }
+}
 
 .t-left{
   text-align: left;

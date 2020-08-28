@@ -14,8 +14,8 @@ function Home({ isLoggedIn }) {
   return (
     <div className="flex flex-column">
       <Helmet>
-        <title>iLoveCoding: Master JavaScript, Learn via Video Screencasts</title>
-        <meta name="description" content="iLoveCoding teaches you how to think and build like a software developer focusing on Full-Stack JavaScript development." />
+        <title>iLoveCoding: Front-End & Full-Stack JavaScript Training</title>
+        <meta name="description" content="iLoveCoding teaches you how to think and build like a software developer focusing on Front-End and Full-Stack JavaScript development." />
       </Helmet>
       <Hero />
       <div className="my-3 bg-gray-lightest p-3 b bt-1">
