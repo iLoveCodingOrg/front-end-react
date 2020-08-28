@@ -7,6 +7,7 @@ import { selectors } from '../../_user'
 
 import Hero from './Hero'
 import UsedBy from '../../LogoList/UsedBy'
+import StudentCompanies from '../../LogoList/StudentCompanies'
 import SocialProof from './SocialProof'
 
 function Home({ isLoggedIn }) {
@@ -20,6 +21,7 @@ function Home({ isLoggedIn }) {
       <Hero />
       <div className="my-3 bg-gray-lightest p-3 b bt-1">
         <SocialProof />
+        <StudentCompanies />
       </div>
       <div className="mt-2 container">
         <div>

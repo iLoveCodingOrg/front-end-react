@@ -29,9 +29,9 @@ function Hero() {
           software developers and reprogram your brain for superhuman ability.
         </h3> */}
         <div className="inline-flex flex-column">
-          <Link to="/pricing" className="btn btn-lg btn-primary">Get Started Free</Link>
+          <Link to="/pricing" className="btn btn-lg btn-primary">Get Started Now</Link>
           {/* <Link to="/pricing" className="btn btn-lg btn-primary">Give iLoveCoding a Try</Link> */}
-          <p className="mt--5">Free to start, upgrade anytime.</p>
+          {/* <p className="mt--5">Free to start, upgrade anytime.</p> */}
         </div>
         {/* <Link to="/pages/how-it-works" className="btn btn-link btn-lg">Or see How it works</Link> */}
       </div>
