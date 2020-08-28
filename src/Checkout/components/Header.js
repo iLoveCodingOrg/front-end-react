@@ -12,7 +12,7 @@ export default function Header({ productName, productDesc }) {
             </div>
           </div>
           <div className="flex flex-column">
-            <div className="h6 color-gray t-uppercase m-0">
+            <div className="h4 f-400 color-gray t-uppercase m-0">
               You are about to buy:
             </div>
             <h1 className="h2">

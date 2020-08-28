@@ -155,11 +155,11 @@ class Price extends React.Component {
         </div>
         <div className="flex mt-2">
           <p className="mr--5">
-            <span aria-label="thunder" role="img">⚡️</span>
+            <span aria-label="thunder" role="img">⚡️</span>&nbsp;
             Cancel Anytime.
           </p>
           <p>
-            <span aria-label="shield" role="img">🛡️</span>
+            <span aria-label="shield" role="img">🛡️</span>&nbsp;
             7-Day Full Refund Policy.
           </p>
         </div>
