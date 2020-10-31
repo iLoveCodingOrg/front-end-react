@@ -9,6 +9,7 @@ function EditForm({ data, editableFields, onSubmitForm }) {
 
   const handleChange = (field, value) => {
     setFields({
+      ...fields,
       [field]: value,
     })
   }
