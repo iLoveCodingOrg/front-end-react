@@ -36,7 +36,7 @@ function Hero() {
         {/* <Link to="/pages/how-it-works" className="btn btn-link btn-lg">Or see How it works</Link> */}
       </div>
       {/* <div className="flex-1" style={{ flexBasis: '250px' }}>
-        <img className="w-100" src={homePageImage} alt="People" />
+        <img loading="lazy" className="w-100" src={homePageImage} alt="People" />
       </div> */}
     </div>
   )

@@ -18,6 +18,7 @@ export default function PrintTraining({
           >
             <Link className="d-block" to={link}>
               <img
+                loading="lazy"
                 style={{ maxWidth }}
                 className="rounded border"
                 src={thumbSrc}

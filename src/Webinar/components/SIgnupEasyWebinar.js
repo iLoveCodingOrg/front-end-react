@@ -43,6 +43,7 @@ export default function Signup() {
       <div className="flex">
         <div className="flex-3">
           <img
+            loading="lazy"
             className="w-100"
             src={img}
             alt="Aziz"

@@ -108,7 +108,12 @@ function Header({
 
     return (
       <div className="flex flex-row align-items-center">
-        <img className="mr--5 circle" src={gravatarUrl} alt="User Gravatar" />
+        <img
+          loading="lazy"
+          className="mr--5 circle"
+          src={gravatarUrl}
+          alt="User Gravatar"
+        />
         <div>{firstName}</div>
         {renderLevel(accountLevel)}
         <button type="button" className="b-0 btn-link" onClick={logout}>(Log out)</button>
@@ -210,7 +215,11 @@ function Header({
       <div className="flex flex-column md-flex-row align-items-center">
         <div className="navbar-brand p-0">
           <Link to="/" className="img-wrap img-wrap-hover">
-            <img src={logo} alt="iLoveCoding.org Logo" />
+            <img
+              loading="lazy"
+              src={logo}
+              alt="iLoveCoding.org Logo"
+            />
           </Link>
         </div>
         <nav className="mx-1 my--5 navbar-nav">

@@ -20,121 +20,121 @@ export default function () {
       </div>
 
       <div className=" align-items-center card">
-          <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-            <div className="t-center mb-2">
-              <img src={modules} alt="All Modules" className="w-100" style={{ maxWidth: '300px' }} />
-            </div>
-            <div>
-              <h4>
+        <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+          <div className="t-center mb-2">
+            <img loading="lazy" src={modules} alt="All Modules" className="w-100" style={{ maxWidth: '300px' }} />
+          </div>
+          <div>
+            <h4>
                 (A) Complete Step-by-Step Training (
-                <Link to="curriculum">See Full Curriculum</Link>
-                )
-              </h4>
-              <p>
-                40+ hours of video training organized such that it is easy to make progress.
-              </p>
-              <CheckMark />
-              {' '}
-              5 Modules (11+ Courses, 20+ practice projects)
-              <br />
-              <CheckMark />
-              {' '}
-              Module 1: Fundamentals of Programming and Web
-              <br />
-              <CheckMark />
-              {' '}
-              Module 2: Modern Front-End Development
-              <br />
-              <CheckMark />
-              {' '}
-              Module 3: Back-end Development and Databases
-              <br />
-              <CheckMark />
-              {' '}
-              Module 4: Mobile Development (iOS and Android)
-              <br />
-              <CheckMark />
-              {' '}
-              Module 5: Electives (Git, Working with API, etc.)
-              <br />
-              <CheckMark />
-              {' '}
-              Downloadable Cheat Sheets
-              <br />
-              <CheckMark />
-              {' '}
-              Access to Homework
-              <br />
               <Link to="curriculum">See Full Curriculum</Link>
-            </div>
+                )
+            </h4>
+            <p>
+                40+ hours of video training organized such that it is easy to make progress.
+            </p>
+            <CheckMark />
+            {' '}
+              5 Modules (11+ Courses, 20+ practice projects)
+            <br />
+            <CheckMark />
+            {' '}
+              Module 1: Fundamentals of Programming and Web
+            <br />
+            <CheckMark />
+            {' '}
+              Module 2: Modern Front-End Development
+            <br />
+            <CheckMark />
+            {' '}
+              Module 3: Back-end Development and Databases
+            <br />
+            <CheckMark />
+            {' '}
+              Module 4: Mobile Development (iOS and Android)
+            <br />
+            <CheckMark />
+            {' '}
+              Module 5: Electives (Git, Working with API, etc.)
+            <br />
+            <CheckMark />
+            {' '}
+              Downloadable Cheat Sheets
+            <br />
+            <CheckMark />
+            {' '}
+              Access to Homework
+            <br />
+            <Link to="curriculum">See Full Curriculum</Link>
           </div>
+        </div>
 
-          <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-            <div className="t-center mb-2">
-              <img src={community} alt="Slack Student Community" className="b-1 w-100" style={{ maxWidth: '300px' }} />
-            </div>
-            <div>
-              <h4>(B) Mentor-Moderated Student Community</h4>
-              <p>Never get stuck again! Get answers to your specific questions from your peers and mentor in the member-only slack channel.</p>
-              <CheckMark />
-              {' '}
+        <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+          <div className="t-center mb-2">
+            <img loading="lazy" src={community} alt="Slack Student Community" className="b-1 w-100" style={{ maxWidth: '300px' }} />
+          </div>
+          <div>
+            <h4>(B) Mentor-Moderated Student Community</h4>
+            <p>Never get stuck again! Get answers to your specific questions from your peers and mentor in the member-only slack channel.</p>
+            <CheckMark />
+            {' '}
               Get solution to your problem
-              <br />
-              <CheckMark />
-              {' '}
+            <br />
+            <CheckMark />
+            {' '}
               Learn from your peers
-              <br />
-              <CheckMark />
-              {' '}
+            <br />
+            <CheckMark />
+            {' '}
               Get career, code, and project help
-            </div>
           </div>
+        </div>
 
-          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-            <div className="t-center mb-2">
-              <img src={mentorship} alt="Live Mentorship" className="b-1 w-100" style={{ maxWidth: '300px' }} />
-            </div>
-            <div>
-              <h4>
+        <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+          <div className="t-center mb-2">
+            <img loading="lazy" src={mentorship} alt="Live Mentorship" className="b-1 w-100" style={{ maxWidth: '300px' }} />
+          </div>
+          <div>
+            <h4>
                 (C) Weekly Group Video-Calls with Mentor
-                {' '}
-                <span className="badge bg-success">Premium</span>
-              </h4>
-              <p>Every week you join a live group call with your mentor.</p>
-
-              <CheckMark />
               {' '}
+              <span className="badge bg-success">Premium</span>
+            </h4>
+            <p>Every week you join a live group call with your mentor.</p>
+
+            <CheckMark />
+            {' '}
               Work on your code problems live
-              <br />
-              <CheckMark />
-              {' '}
+            <br />
+            <CheckMark />
+            {' '}
               See how your mentor troubleshoots problems
-              <br />
-              <CheckMark />
-              {' '}
+            <br />
+            <CheckMark />
+            {' '}
               Share your screen with your mentor
-              <br />
-              <CheckMark />
-              {' '}
+            <br />
+            <CheckMark />
+            {' '}
               Live code reviews
-              <br />
-              <CheckMark />
-              {' '}
+            <br />
+            <CheckMark />
+            {' '}
               Live career guidance
-              <br />
-              <CheckMark />
-              {' '}
+            <br />
+            <CheckMark />
+            {' '}
               Live resume, code and portfolio feedback
-              <br />
+            <br />
 
-              <br />
-              {/* <p>
+            <br />
+            {/* <p>
                 <strong>Important:</strong>
                 {' '}
                 Weekly Group Video-Calls are for iLoveCoding Premium members only. iLoveCoding Pro members can always get help from mentor in the Mentor-Moderated Private Student Community.
               </p> */}
-            </div>
           </div>
+        </div>
       </div>
     </div>
   )

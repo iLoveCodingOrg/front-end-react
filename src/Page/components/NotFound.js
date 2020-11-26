@@ -7,7 +7,7 @@ export default function NotFound() {
       <h3 className="f-300">
         Oops, you landed out of the internet! The page you are looking for does not exist
       </h3>
-      <img alt="Not Found" src="https://media.giphy.com/media/hEc4k5pN17GZq/giphy.gif" />
+      <img loading="lazy" alt="Not Found" src="https://media.giphy.com/media/hEc4k5pN17GZq/giphy.gif" />
     </div>
   )
 }

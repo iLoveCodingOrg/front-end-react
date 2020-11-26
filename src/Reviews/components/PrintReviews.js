@@ -10,7 +10,7 @@ export default function ({ data, containerClasses='', itemClasses='' }) {
           key={index}
           className={`card ${itemClasses}`}
         >
-          { thumbSrc && <img className="mr-1 float-left" src={thumbSrc} alt={title} width="100" height="100" /> }
+          { thumbSrc && <img loading="lazy" className="mr-1 float-left" src={thumbSrc} alt={title} width="100" height="100" /> }
           {title && <p><strong>{title}</strong></p>}
           <p>
             <em>

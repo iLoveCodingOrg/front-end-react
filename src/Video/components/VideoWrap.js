@@ -15,6 +15,7 @@ class VideoWrap extends React.Component {
     if (!thumbnail) return null
     return (
       <img
+        loading="lazy"
         style={{ maxWidth: 300, maxHeight: 169 }}
         className="mb-1 rounded"
         src={`${IMG_URL}${thumbnail}`}

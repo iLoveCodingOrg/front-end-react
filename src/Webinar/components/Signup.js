@@ -26,6 +26,7 @@ export default function Signup() {
       <div className="flex flex-wrap">
         <div className="flex-3" style={{ flexBasis: '250px' }}>
           <img
+            loading="lazy"
             className="w-100"
             src={img}
             alt="Aziz"
