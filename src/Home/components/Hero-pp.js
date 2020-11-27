@@ -32,7 +32,7 @@ function Hero() {
       </div>
       {/* <div>
         <div>
-          <img className="w-100" src={homePageImage} alt="People"/>
+          <img loading="lazy" className="w-100" src={homePageImage} alt="People"/>
         </div>
         <div>
           <h1>

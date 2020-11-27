@@ -2,8 +2,9 @@ import React from 'react'
 
 export default function AboutAziz() {
   return (
-    <div className="container flex-row">
+    <div className="container container-slim flex-row">
       <img
+        loading="lazy"
         className="mb--5 mr-1 float-left circle"
         src="//a.ilovecoding.org/img/_aziz/azizali-150.jpg"
         alt="Aziz Ali"

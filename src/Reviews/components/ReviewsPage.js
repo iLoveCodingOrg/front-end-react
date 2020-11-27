@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Reviews from './Reviews'
-import StudentCompanies from '../../LogoList/StudentCompanies'
+// import StudentCompanies from '../../LogoList/StudentCompanies'
 import Cta from '../../Cta'
 
 function ReviewsPage() {
@@ -24,7 +24,10 @@ function ReviewsPage() {
         </div>
       </div>
       <Cta />
-      <StudentCompanies />
+      {/* // This is causing some problem when opening
+      // Review pages directly
+      // The problem does not happen if you navigate from Home page */}
+      {/* <StudentCompanies /> */}
     </div>
   )
 }

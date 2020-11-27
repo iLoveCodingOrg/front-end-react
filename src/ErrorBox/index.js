@@ -16,6 +16,7 @@ export default function ErrorBox() {
         Our team has been notified, but click here fill out a report.
       </div>
       <img
+        loading="lazy"
         alt="Something went wrong on the computer"
         src="https://media.giphy.com/media/nVTa8D8zJUc2A/giphy.gif"
       />

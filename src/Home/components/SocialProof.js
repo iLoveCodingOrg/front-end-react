@@ -48,7 +48,7 @@ const data = [{
 
 function SocialProof() {
   return (
-    <div>
+    <div className="container">
       <h3 className="t-center mb-2">
         <u>{lastMonthViews} students</u>
         {' '}

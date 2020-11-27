@@ -20,6 +20,7 @@ export default function View({
   match,
   of,
   view,
+  className,
 }) {
   const {
     id,
@@ -61,7 +62,7 @@ export default function View({
   }, [getView, match])
 
   return (
-    <div className={`container ${of}`}>
+    <div className={`container ${of} ${className}`}>
       { isLoading && <Loading /> }
       { !isLoading && error && <ErrorBox /> }
       { !isLoading && !error && (
@@ -85,7 +86,7 @@ export default function View({
                   callMarkAsComplete={() => {
                     // Do not mark course as complete when video complete
                     // This feature should only work for lessons
-                    if (of !== 'course') {
+                    if (of !== 'course' && callMarkAsComplete) {
                       callMarkAsComplete(id)
                     }
                   }}
@@ -103,7 +104,7 @@ export default function View({
             { bodyContent && (
               <div
                 id="html-content"
-                className="b bt-1 pt-2 mx-auto"
+                className="container container-slim b bt-1 pt-2 mx-auto"
                 dangerouslySetInnerHTML={{ __html: bodyContent }}
               />
             )}
@@ -126,9 +127,21 @@ export default function View({
   )
 }
 
+View.defaultProps = {
+  className: '',
+  callMarkAsComplete: null,
+  children: null,
+  error: null,
+}
+
 View.propTypes = {
   callMarkAsComplete: PropTypes.func,
   getView: PropTypes.func.isRequired,
   of: PropTypes.oneOf(['question', 'lesson', 'course', 'courseLesson', 'page', 'blog']).isRequired,
+  className: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.element),
+  error: PropTypes.string,
+  isLoading: PropTypes.bool.isRequired,
   view: PropTypes.object.isRequired,
+  match: PropTypes.object,
 }

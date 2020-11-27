@@ -35,6 +35,7 @@ function Card({ item, of }) {
           thumbnail && (
           <Link to={urlTo}>
             <img
+              loading="lazy"
               className="rounded w-100"
               src={`${IMG_URL}${thumbnail}`}
               alt="Thumbnail"

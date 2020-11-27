@@ -5,9 +5,10 @@ export default function ({ data, height }) {
     <div className="flex flex-wrap space-around">
       {data.map(({
         imgSrc, altText, margin, padding,
-      }, index) => (
-        <div key={index} className="mx-1 mb-1">
+      }) => (
+        <div key={imgSrc} className="mx-1 mb-1">
           <img
+            loading="lazy"
             src={imgSrc}
             alt={altText}
             style={{
