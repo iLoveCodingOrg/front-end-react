@@ -26,4 +26,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(props => <View {...props} of="blog" />)
+)(props => <View {...props} of="blog" className="container-slim" />)

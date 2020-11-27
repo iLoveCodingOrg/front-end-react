@@ -9,12 +9,12 @@ import {
 const initialState = {
   list: {
     isLoading: true,
-    error: false,
+    error: null,
     data: [],
   },
   view: {
     isLoading: true,
-    error: false,
+    error: null,
     data: {},
   },
 }

@@ -9,7 +9,7 @@ import twitter from '../_app/images/companies/students/twitter.png'
 import fortune500 from '../_app/images/companies/students/fortune-500.png'
 import cvs from '../_app/images/companies/my-clients/cvs-health.png'
 import starbucks from '../_app/images/companies/students/starbucks.png'
-// import libertyMutual from '../_app/images/companies/students/liberty-mutual.png'
+import libertyMutual from '../_app/images/companies/students/liberty-mutual.png'
 import intuit from '../_app/images/companies/students/intuit.png'
 import carsDotCom from '../_app/images/companies/students/carsdotcom.png'
 import tsheets from '../_app/images/companies/students/tsheets.png'
@@ -82,12 +82,12 @@ const data = [
     margin: '',
     padding: '0px 0',
   },
-  // {
-  //   altText: 'Liberty Mutual',
-  //   imgSrc: liberty - mutual,
-  //   margin: '',
-  //   padding: '0px 0',
-  // },
+  {
+    altText: 'Liberty Mutual',
+    imgSrc: libertyMutual,
+    margin: '',
+    padding: '0px 0',
+  },
 ]
 
 export default () => (

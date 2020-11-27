@@ -119,65 +119,60 @@ class ChangePassword extends React.Component {
             },
           ]}
           />
-          <div>
-            <div>
-              <h1>{title}</h1>
-            </div>
-          </div>
+
+          <h1>{title}</h1>
           <hr className="mb--25" />
-          <div>
-            <form className="mt-2 " onSubmit={this.handleSubmit}>
-              {this.renderError()}
-              <div className="form-group">
-                <label htmlFor="email">Current Password</label>
-                <div>
-                  <input
-                    className="form-control"
-                    type="password"
-                    name="current-password"
-                    placeholder="Current Password"
-                    onChange={this.handleCurrentPassword}
-                    required
-                  />
-                </div>
+          <form className="mt-2 " onSubmit={this.handleSubmit}>
+            {this.renderError()}
+            <div className="form-group">
+              <label htmlFor="email">Current Password</label>
+              <div>
+                <input
+                  className="form-control"
+                  type="password"
+                  name="current-password"
+                  placeholder="Current Password"
+                  onChange={this.handleCurrentPassword}
+                  required
+                />
               </div>
-              <div className="form-group">
-                <label htmlFor="password">New Password</label>
-                <div>
-                  <input
-                    className="form-control"
-                    type="password"
-                    name="password"
-                    placeholder="Enter new password"
-                    onChange={this.handleNewPassword}
-                    required
-                  />
-                </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">New Password</label>
+              <div>
+                <input
+                  className="form-control"
+                  type="password"
+                  name="password"
+                  placeholder="Enter new password"
+                  onChange={this.handleNewPassword}
+                  required
+                />
               </div>
-              <div className="form-group">
-                <label htmlFor="confirmPassword">
-                  Confirm New Password
-                </label>
-                <div>
-                  <input
-                    className="form-control"
-                    type="password"
-                    name="confirmPassword"
-                    placeholder="Re-enter new password"
-                    onChange={this.handleConfirmPassword}
-                    required
-                  />
-                  {this.renderPasswordMatchError()}
-                </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="confirmPassword">
+                Confirm New Password
+              </label>
+              <div>
+                <input
+                  className="form-control"
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Re-enter new password"
+                  onChange={this.handleConfirmPassword}
+                  required
+                />
+                {this.renderPasswordMatchError()}
               </div>
-              <input
-                disabled={this.state.isLoading || !this.state.isPasswordMatch}
-                className="btn btn-lg btn-primary btn-block"
-                type="submit"
-                value={(this.state.isLoading) ? 'Loading...' : 'Set New Password'}
-              />
-            </form>
-          </div>
+            </div>
+            <input
+              disabled={this.state.isLoading || !this.state.isPasswordMatch}
+              className="btn btn-lg btn-primary btn-block"
+              type="submit"
+              value={(this.state.isLoading) ? 'Loading...' : 'Set New Password'}
+            />
+          </form>
         </section>
       </div>
     )

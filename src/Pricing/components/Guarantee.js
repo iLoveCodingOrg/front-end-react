@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function () {
   return (
-    <div className="container flex justify-content-center">
+    <div className="container container-slim flex justify-content-center">
       <div>
         <div className="card card-warning">
           <h3 className="t-center text-dark">

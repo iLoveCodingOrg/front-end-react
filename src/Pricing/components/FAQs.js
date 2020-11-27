@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function () {
   return (
-    <div className="container faqs flex flex-column align-items-center">
+    <div className="container container-slim faqs flex flex-column align-items-center">
       <div>
         <div className="b bb-1 mb-3">
           <h2 className="mb-1 t-center">Common Questions</h2>
