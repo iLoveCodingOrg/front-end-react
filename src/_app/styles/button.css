@@ -13,6 +13,7 @@ input[type=button], input[type=submit], button, .btn{
   &:hover{
     background-color: var(--gray-lighter);
     color: inherit;
+    text-decoration: none;
   }
   transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
 
@@ -186,4 +187,9 @@ label > span{
   height: calc(1.5em + .75rem + 2px);
   padding: .375rem .75rem;
   line-height: 1.5;
+  &-lg{
+    font-size: 1.3em;
+    height: calc(1.3em + 1.6rem + 2px);
+    padding: 0.8em 1.2em;
+  }
 }

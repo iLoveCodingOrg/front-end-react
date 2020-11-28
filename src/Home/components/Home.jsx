@@ -5,7 +5,7 @@ import { Redirect, Link } from 'react-router-dom'
 
 import { selectors } from '../../_user'
 
-import Hero from './Hero-complete'
+import Hero from './HeroOptin'
 import UsedBy from '../../LogoList/UsedBy'
 import StudentCompanies from '../../LogoList/StudentCompanies'
 import SocialProof from './SocialProof'
