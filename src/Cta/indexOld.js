@@ -31,22 +31,22 @@ const Cta = ({
   if (isLoggedIn && !isPaid) {
     return (
       <div className="card card-warning h3 f-300 t-center my-2">
-        Unlock the complete video training + mentor support with iLoveCoding Pro / Premium membership
+        Unlock the complete video training + mentor support with iLoveCoding Pro
         <br />
         <Link to="/pricing" className="btn btn-lg btn-success mt--5">Upgrade Now</Link>
       </div>
     )
   }
 
-  if (isLoggedIn && isPro) {
-    return (
-      <div className="card card-warning h3 f-300 t-center my-2">
-        <Link to="/pricing" className="btn btn-lg btn-success my--5">Upgrade to iLoveCoding Premium</Link>
-        {' '}
-        to unlock live weekly group video-calls with your mentor.
-      </div>
-    )
-  }
+  // if (isLoggedIn && isPro) {
+  //   return (
+  //     <div className="card card-warning h3 f-300 t-center my-2">
+  //       <Link to="/pricing" className="btn btn-lg btn-success my--5">Upgrade to iLoveCoding Premium</Link>
+  //       {' '}
+  //       to unlock live weekly group video-calls with your mentor.
+  //     </div>
+  //   )
+  // }
 
   return (<></>)
 }

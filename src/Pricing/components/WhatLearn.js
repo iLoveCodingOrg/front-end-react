@@ -5,7 +5,7 @@ import { CheckMark } from '../../_common'
 export default function () {
   return (
     <div className="container">
-      <div className="grid-list-item align-items-center mb-2">
+      <div className="grid-list-item align-items-start mb-2">
         <div><Video videoSource="311500783" /></div>
         <div>
           <h2>What will you learn?</h2>

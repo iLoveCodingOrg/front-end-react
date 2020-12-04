@@ -18,43 +18,35 @@ export default function () {
           }}
         >
           <div>
-            <h3 className="h3">Can I get a discount?</h3>
-            <p>
-          No! Sorry about that. The price of iLoveCoding has been kept low, so anyone can afford it. The cost of this training is less than the price of a coffee per day. <span role="img" aria-label="Coffee">☕</span>. Remember, An alternative training at a bootcamp would cost way more.
-            </p>
-          </div>
-          <div>
             <h3 className="h3">What is the refund policy?</h3>
             <p>
-              <strong>All plans are backed by a 7-day full refund policy</strong>
-          . Try iLoveCoding, and if for any reason you are not satisfied, email us and request a refund within the first 7-days of your subscription. We only want to keep your money if you think we have earned it.
+              All plans are backed by a 7-day full refund policy. Try iLoveCoding, and if for any reason you are not satisfied, email us at <u>support@ilovecoding.org</u> and request a refund within the first 7-days of your purchase. We only want to keep your money if you think we have earned it.
             </p>
           </div>
-          <div>
+          {/* <div>
             <h3 className="h3">Can I cancel anytime?</h3>
             <p>
-          Yes! There are no contracts or commitments. Request cancellation by emailing
+              Yes! There are no contracts or commitments. Request cancellation by emailing
               {' '}
               <u>support@ilovecoding.org</u>
-          , and we'll take care of it.
+              , and we'll take care of it.
               <br />
               <br />
-          If you cancel after the first 7-days, you'll continue to have access for the current month, and you will not be billed any further.
+              If you cancel after the first 7-days, you will continue to have access for the current month, and you will not be billed any further.
             </p>
-          </div>
+          </div> */}
           <div>
             <h3 className="h3">Can I get a trial or see sample training?</h3>
             <p>
-          Two of our courses are completely free:
+            Two of our courses are completely free:
               {' '}
               <Link to="/courses/perfect-path">The Perfect Path to Becoming a Job-Ready Developer</Link>
-          , and
+            , and
               {' '}
-              <Link to="/courses/htmlcss2">Learn HTML &amp; CSS Correctly</Link>
-          .
+              <Link to="/courses/htmlcss2">Learn HTML &amp; CSS Correctly</Link>.
               <br />
               <br />
-          Try these courses, if you like my way of teaching and the topics covered, then we think you'll like and benefit from the complete training.
+              Try these courses, if you like my way of teaching and the topics covered, then we think you will like and benefit from the paid training.
             </p>
           </div>
           <div>
@@ -66,13 +58,13 @@ export default function () {
           <div>
             <h3 className="h3">Why is the cost so low?</h3>
             <p>
-          We do not spend on expensive offices, staff and advertising, so we can keep the training affordable and pass the savings to you. Plus we really believe in keeping education affordable so everyone has a fair chance to lift themselves and do/build great things.
+              We do not spend on expensive offices, staff and advertising, so we can keep the training affordable and pass the savings to you. Plus we really believe in keeping education affordable so everyone has a fair chance to lift themselves and do/build great things.
             </p>
           </div>
           <div>
             <h3 className="h3">How can I get lifetime access to the content?</h3>
             <p>
-          We do not offer lifetime subscription. As long as your subscription is active, you will get unlimited access to your member privileges.
+              We do not offer lifetime subscription. As long as your subscription is active, you will get unlimited access to your member privileges.
             </p>
           </div>
           <div>
@@ -116,19 +108,19 @@ export default function () {
             <ul>
               <li>
                 <span role="img" aria-label="Check mark">✅</span>
-            &nbsp; Simple explanations
+                &nbsp; Simple explanations
               </li>
               <li>
                 <span role="img" aria-label="Check mark">✅</span>
-            &nbsp; Tons of Examples
+                &nbsp; Tons of examples
               </li>
               <li>
                 <span role="img" aria-label="Check mark">✅</span>
-            &nbsp; Tons of real-world projects
+                &nbsp; Tons of real-world projects
               </li>
               <li>
                 <span role="img" aria-label="Check mark">✅</span>
-            &nbsp; Professional mentorship.
+                &nbsp; Professional mentorship.
               </li>
             </ul>
           </div>

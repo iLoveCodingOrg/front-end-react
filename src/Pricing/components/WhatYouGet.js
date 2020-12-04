@@ -19,7 +19,7 @@ export default function () {
         </div>
       </div>
 
-      <div className=" align-items-center card">
+      <div className=" align-items-center card py-4">
         <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
           <div className="t-center mb-2">
             <img loading="lazy" src={modules} alt="All Modules" className="w-100" style={{ maxWidth: '300px' }} />
@@ -69,7 +69,7 @@ export default function () {
           </div>
         </div>
 
-        <div className="grid mb-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+        <div className="grid mb-0" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
           <div className="t-center mb-2">
             <img loading="lazy" src={community} alt="Slack Student Community" className="b-1 w-100" style={{ maxWidth: '300px' }} />
           </div>
@@ -90,7 +90,7 @@ export default function () {
           </div>
         </div>
 
-        <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+        {/* <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
           <div className="t-center mb-2">
             <img loading="lazy" src={mentorship} alt="Live Mentorship" className="b-1 w-100" style={{ maxWidth: '300px' }} />
           </div>
@@ -128,13 +128,13 @@ export default function () {
             <br />
 
             <br />
-            {/* <p>
+            <p>
                 <strong>Important:</strong>
                 {' '}
                 Weekly Group Video-Calls are for iLoveCoding Premium members only. iLoveCoding Pro members can always get help from mentor in the Mentor-Moderated Private Student Community.
-              </p> */}
+              </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

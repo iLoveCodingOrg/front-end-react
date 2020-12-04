@@ -36,15 +36,15 @@ const Cta = ({
     )
   }
 
-  if (isLoggedIn && isPro) {
-    return (
-      <div className="card card-warning h3 f-300 t-center my-2">
-        <Link to="/pricing" className="btn btn-success my--5">Upgrade to iLoveCoding Premium</Link>
-        {' '}
-        to unlock live weekly group video-calls with your mentor.
-      </div>
-    )
-  }
+  // if (isLoggedIn && isPro) {
+  //   return (
+  //     <div className="card card-warning h3 f-300 t-center my-2">
+  //       <Link to="/pricing" className="btn btn-success my--5">Upgrade to iLoveCoding Premium</Link>
+  //       {' '}
+  //       to unlock live weekly group video-calls with your mentor.
+  //     </div>
+  //   )
+  // }
 
   return (<></>)
 }
