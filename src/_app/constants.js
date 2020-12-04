@@ -15,3 +15,11 @@ export const ROUTES_WITHOUT_CTA = [
   'pages/thanks',
   'pages/verify',
 ]
+
+export const content = {
+  refundPolicy: '7-day',
+  numberOfProjects: 30,
+  hoursOfVideo: 40,
+  numberOfLessons: 500,
+  numberOfCourses: 12,
+}
