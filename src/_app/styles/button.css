@@ -10,12 +10,16 @@ input[type=button], input[type=submit], button, .btn{
   justify-content: center;
   cursor: pointer;
   border-radius: var(--border-radius);
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
   &:hover{
     background-color: var(--gray-lighter);
     color: inherit;
     text-decoration: none;
   }
-  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  &.selected {
+    border-bottom: 4px solid var(--blue) !important;
+    margin-bottom: -3px;
+  }
 
   &.btn-link{
     color: var(--blue);

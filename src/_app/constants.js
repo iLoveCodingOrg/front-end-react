@@ -14,9 +14,11 @@ export const ROUTES_WITHOUT_CTA = [
   'pages/welcome',
   'pages/thanks',
   'pages/verify',
+  'pages/affiliate',
 ]
 
 export const content = {
+  mainProductName: 'Full-Stack Pro',
   refundPolicy: '7-day',
   numberOfProjects: 30,
   hoursOfVideo: 40,

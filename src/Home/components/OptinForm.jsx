@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HomeForm() {
+function OptinForm() {
   return (
     <>
       {/* <form
@@ -90,4 +90,4 @@ function HomeForm() {
   )
 }
 
-export default HomeForm
+export default OptinForm

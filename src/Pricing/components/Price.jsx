@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
+import { content } from '../../_app/constants'
 import { isOfferValidSelector } from '../../Offer'
 import PriceBox from './PriceBox'
 import Switch from './Switch'
@@ -28,7 +29,7 @@ const dataOriginal = {
     // },
     '1-year': {
       planType: 'pro',
-      name: 'Full-Stack Pro',
+      name: content.mainProductName,
       // desc: <span>Best suited for self-learners who need some support</span>,
       price: 99,
       terms: 'One-time payment',

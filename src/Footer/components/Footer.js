@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 import Copyrights from './Copyrights'
 
 export default () => (
-  <footer className="flex flex-column mt-3 py-2 b bt-1">
+  <footer className="flex flex-column mt-3 py-5 b bt-1">
     <div className="align-self-center container">
-      <div className="my--5">
+      {/* <div className="my--5">
         <span className="strong pr--25">Free</span>
         <Link to="/courses/perfect-path" className="color-gray u px--5">Perfect Path to a Job-Ready Developer</Link>
         <Link to="/courses/htmlcss2" className="color-gray u px--5">Learn HTML & CSS Correctly</Link>
-      </div>
+      </div> */}
       <div className="my--5">
         <span className="strong pr--25">Students</span>
         <Link to="/curriculum" className="color-gray u px--5">Full Curriculum</Link>

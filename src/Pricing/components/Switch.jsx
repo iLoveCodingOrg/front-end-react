@@ -25,17 +25,17 @@ class Switch extends React.Component {
         />
         <label htmlFor={`${randomName}-${option.name}`}>{option.label}</label>
         {
-                    (selected === option.name)
-                      ? (
-                        <span
-                          className="switch-handle"
-                          style={{
-                            ...option.css,
-                          }}
-                        />
-                      )
-                      : null
-                }
+            (selected === option.name)
+              ? (
+                <span
+                  className="switch-handle"
+                  style={{
+                    ...option.css,
+                  }}
+                />
+              )
+              : null
+        }
       </div>
     ))
   }

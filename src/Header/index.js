@@ -2,7 +2,7 @@ import './styles.css'
 import isEmpty from 'lodash/isEmpty'
 import React from 'react'
 import { connect } from 'react-redux'
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter, NavLink } from 'react-router-dom'
 
 import logo from '../_app/images/ilovecoding-logo.svg'
 
@@ -21,14 +21,15 @@ function Header({
   const renderLinks = links => links.map(({
     label, link, className, style,
   }) => (
-    <Link
+    <NavLink
+      activeClassName="selected"
       key={label}
       style={style}
       className={`${className}`}
       to={link}
     >
       {label}
-    </Link>
+    </NavLink>
   ))
 
   const renderUserLeft = () => {
@@ -100,7 +101,13 @@ function Header({
     function renderLevel(level) {
       if (level === 'free') {
         return (
-          <Link to="/pricing" className="btn btn-success ml--5">Upgrade</Link>
+          <NavLink
+            to="/pricing"
+            activeClassName="selected"
+            className="btn btn-success ml--5"
+          >
+            Upgrade
+          </NavLink>
         )
       }
       return <span className="badge bg-success ml--5">{level}</span>
@@ -123,27 +130,27 @@ function Header({
 
   const renderGuestRight = () => {
     const links = [
+      // {
+      //   label: 'Why JavaScript?',
+      //   link: '/pages/why-javascript',
+      //   className: 'nav-link btn btn-400 py--25',
+      //   style: {},
+      // },
+      // {
+      //   label: 'How it works',
+      //   link: '/pages/how-it-works',
+      //   className: 'nav-link btn btn-400 py--25',
+      //   style: {},
+      // },
+      // {
+      //   label: 'Real Results',
+      //   link: '/reviews',
+      //   className: 'nav-link btn btn-400 py--25',
+      //   style: {},
+      // },
       {
-        label: 'Why JavaScript?',
-        link: '/pages/why-javascript',
-        className: 'nav-link btn btn-400 py--25',
-        style: {},
-      },
-      {
-        label: 'How it works',
-        link: '/pages/how-it-works',
-        className: 'nav-link btn btn-400 py--25',
-        style: {},
-      },
-      {
-        label: 'Real Results',
-        link: '/reviews',
-        className: 'nav-link btn btn-400 py--25',
-        style: {},
-      },
-      {
-        label: 'Pricing',
-        link: '/pricing',
+        label: 'Free Stuff',
+        link: '/free',
         className: 'nav-link btn btn-400 py--25',
         style: {},
       },
@@ -155,7 +162,7 @@ function Header({
       },
       {
         label: 'Enroll Now',
-        link: '/pricing',
+        link: '/#payment',
         className: 'btn btn-primary ml--5',
         style: {},
       },
@@ -170,17 +177,17 @@ function Header({
     const { length } = pathParts
     const editLink = `/${pathParts[length - 2]}/${pathParts[length - 1]}/edit`
     return (
-      <Link to={editLink} className="btn">Edit</Link>
+      <NavLink to={editLink} className="btn">Edit</NavLink>
     )
   }
 
   const renderAddButtons = () => (
     <div className="d-inline">
-      <Link to="/pages/add" className="btn">+ Page</Link>
-      <Link to="/lessons/add" className="btn">+ Lesson</Link>
-      <Link to="/courses/add" className="btn">+ Course</Link>
-      <Link to="/q/add" className="btn">+ Question</Link>
-      <Link to="/blog/add" className="btn">+ Blog</Link>
+      <NavLink activeClassName="selected" to="/pages/add" className="btn">+ Page</NavLink>
+      <NavLink activeClassName="selected" to="/lessons/add" className="btn">+ Lesson</NavLink>
+      <NavLink activeClassName="selected" to="/courses/add" className="btn">+ Course</NavLink>
+      <NavLink activeClassName="selected" to="/q/add" className="btn">+ Question</NavLink>
+      <NavLink activeClassName="selected" to="/blog/add" className="btn">+ Blog</NavLink>
     </div>
   )
 
@@ -214,13 +221,13 @@ function Header({
     >
       <div className="flex flex-column md-flex-row align-items-center">
         <div className="navbar-brand p-0">
-          <Link to="/" className="img-wrap img-wrap-hover">
+          <NavLink to="/" className="img-wrap img-wrap-hover">
             <img
               loading="lazy"
               src={logo}
               alt="iLoveCoding.org Logo"
             />
-          </Link>
+          </NavLink>
         </div>
         <nav className="mx-1 my--5 navbar-nav">
           { isLoggedIn ? renderUserLeft() : renderGuestLeft() }
