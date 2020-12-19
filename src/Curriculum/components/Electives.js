@@ -24,11 +24,6 @@ const courses = [
     thumbSrc: '//a.ilovecoding.org/thumb/oopjs.gif',
   },
   {
-    name: 'Learn Angular JS in 14 days',
-    link: '/courses/learn-angular-js-in-14-days',
-    thumbSrc: '//a.ilovecoding.org/thumb/learnAngular-1-intro.png',
-  },
-  {
     name: 'How to set a full cover background image on your website',
     link: '/courses/full-cover-background-image',
     thumbSrc: '//a.ilovecoding.org/thumb/fullCoverBackgroundImage.png',

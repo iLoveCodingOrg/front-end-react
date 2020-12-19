@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { isPremium } from '../../_user/selectors'
 
 function PremiumSupport({ isPremium }) {
+  if (!isPremium) { return null }
   return (
     <>
       <h3>Premium Support</h3>

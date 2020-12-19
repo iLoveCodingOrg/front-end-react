@@ -12,7 +12,7 @@ import {
 
 import { Curriculum } from '../../Curriculum'
 
-import AboutAziz from '../../AboutAziz/AboutAziz'
+import AboutAziz from '../../AboutAziz'
 
 function Pricing() {
   return (

@@ -8,7 +8,7 @@ export default function () {
     <div className="container container-slim faqs flex flex-column align-items-center">
       <div>
         <div className="b bb-1 mb-3">
-          <h2 className="mb-1 t-center">Common Questions</h2>
+          <h2 className="mb-1 t-center">Frequently Asked Questions</h2>
         </div>
         <div
           className="grid"
@@ -127,10 +127,10 @@ export default function () {
           <div>
             <h3 className="h3">How much time will it take?</h3>
             <p>
-          If you are a total beginner, it will take you 8 months of part-time learning (90 minutes a day), or 4 months of full-time learning (4 hours a day). The learning time should be quality focused work, which means you should deliberately consume the content and apply what is taught by building.
+              If you are a total beginner, it will take you 8 months of part-time learning (90 minutes a day), or 4 months of full-time learning (4 hours a day). The learning time should be quality focused work, which means you should deliberately consume the content and apply what is taught by building.
               <br />
               <br />
-          For best results, ask a bunch of questions, follow the path, and write a lot of code, no matter how bad. Your initial work will be horrible. That is totally normal.
+              For best results, ask a bunch of questions, follow the path, and write a lot of code, no matter how bad. Your initial work will be horrible. That is totally normal.
             </p>
           </div>
         </div>

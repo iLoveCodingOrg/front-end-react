@@ -106,9 +106,9 @@ u, .u{
 }
 
 @media (min-width: 700px) {
-  .h1, h1 {
-    font-size: 2.9rem;
-  }
+  h1, .h1 { font-size: 2.9rem; }
+  h2, .h2 { font-size: 1.6rem; }
+  h3, .h3 { font-size: 1.2rem; }
 }
 
 .badge-teal{

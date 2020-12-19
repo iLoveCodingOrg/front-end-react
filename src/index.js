@@ -20,7 +20,7 @@ import Wrap from './Wrap'
 
 import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
-import Home from './Home'
+// import Home from './Home'
 import Dashboard from './Dashboard'
 import QuestionRoutes from './Question'
 import LessonRoutes from './Lesson'
@@ -36,6 +36,7 @@ import {
   AsyncForgotPassword as ForgotPassword,
 } from './ForgotPassword'
 import Reviews from './Reviews'
+import Free from './Free'
 import Curriculum from './Curriculum'
 import Pricing from './Pricing'
 import OfficeHours from './OfficeHours'
@@ -45,9 +46,9 @@ import ChangePassword from './ChangePassword'
 import Webinar from './Webinar'
 
 const RemoveTrailingSlash = ({ location }) => {
-  const { pathname } = location
+  const { pathname, hash } = location
 
-  if (pathname.substr(-1) === '/') {
+  if (pathname.substr(-1) === '/' && !hash.length) {
     return <Redirect to={pathname.substr(0, pathname.length - 1)} />
   }
   return null
@@ -81,9 +82,11 @@ function renderApp() {
               <Route strict path="/webinar" component={withAuth(Webinar, false)} />
               <Wrap>
                 <Switch>
-                  <Route exact path="/" component={withAuth(Home, false)} />
-                  <Route exact path="/pricing" component={withAuth(Pricing, false)} />
+                  <Route exact path="/" component={withAuth(Pricing, false)} />
+                  {/* <Route exact path="/pricing" component={withAuth(Pricing, false)} /> */}
+                  <Redirect exact path="/pricing" to="/" />
                   <Route exact path="/reviews" component={withAuth(Reviews, false)} />
+                  <Route exact path="/free" component={Free} />
                   <Route exact path="/curriculum" component={withAuth(Curriculum, false)} />
                   <Route exact path="/dashboard" component={withAuth(Dashboard)} />
                   <Route strict path="/q" component={withAuth(QuestionRoutes, false)} />

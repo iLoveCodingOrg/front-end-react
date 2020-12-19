@@ -48,10 +48,7 @@ const data = [
 function Testimonials({ itemNum }) {
   return (
     <section className="flex justify-content-center">
-      <div className="
-                
-                "
-      >
+      <div className="">
         <PrintReviews
           containerClasses="flex-column"
           data={[data[itemNum || 0]]}

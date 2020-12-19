@@ -1,5 +1,6 @@
 import React from 'react'
 import { CheckMark } from '../../_common'
+import { content } from '../../_app/constants'
 import Video from '../../Video/components/Video'
 
 export default function () {
@@ -20,7 +21,7 @@ export default function () {
             <tr>
               <th width="20%" />
               <th width="27%" className="h4 align-middle b bt-2 bb-0 bx-2 b-blue card-primary">
-                iLoveCoding Pro
+                {content.mainProductName}
                 {/* <br />
                 <small>Premium)</small> */}
               </th>

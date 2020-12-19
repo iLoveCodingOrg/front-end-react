@@ -4,5 +4,13 @@
     &:hover {
       background-color: var(--gray-lighter)
     }
+    &.selected {
+      border-bottom: 4px solid var(--blue);
+      margin-bottom: -4px;
+      margin-right: 0.6em;
+      margin-left: 0.6em;
+      padding-right: 0.6em;
+      padding-left: 0.6em;
+    }
   }
 }
