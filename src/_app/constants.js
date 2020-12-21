@@ -25,3 +25,13 @@ export const content = {
   numberOfLessons: 500,
   numberOfCourses: 12,
 }
+
+export const contentTypeToRoute = {
+  blog: 'blog',
+  question: 'q',
+  lesson: 'lessons',
+  course: 'courses',
+  page: 'pages',
+}
+
+export const contentTypeRoutes = ['blog', 'q', 'lessons', 'courses', 'pages']

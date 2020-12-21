@@ -52,11 +52,3 @@ export function validateField(value, { isRequired, isEmail }) {
 export function qsParse(location) {
   return parse(location, { ignoreQueryPrefix: true })
 }
-
-export const contentTypeToRoute = {
-  blog: 'blog',
-  question: 'q',
-  lesson: 'lessons',
-  course: 'courses',
-  page: 'pages',
-}
