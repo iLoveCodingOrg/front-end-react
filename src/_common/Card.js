@@ -29,9 +29,9 @@ function Card({ item, of }) {
 
   return (
     <div className="grid grid-list-item mb-1">
-      <div>
-        {
-          thumbnail && (
+      {
+        thumbnail && (
+        <div>
           <Link to={urlTo}>
             <img
               loading="lazy"
@@ -40,9 +40,9 @@ function Card({ item, of }) {
               alt="Thumbnail"
             />
           </Link>
-          )
-        }
-      </div>
+        </div>
+        )
+      }
       <div>
         <h3><Link to={urlTo}>{title}</Link></h3>
         <div className="mb--5">
