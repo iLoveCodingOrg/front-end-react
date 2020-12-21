@@ -1,10 +1,14 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { PropTypes } from 'prop-types'
+import { Redirect, withRouter } from 'react-router-dom'
 
+
+import { isLoggedIn, isPaid } from '../../_user/selectors'
 import Header from './Header'
 import StudentCompanies from '../../LogoList/StudentCompanies'
-import SocialProof from './../../Home/components/SocialProof'
+import SocialProof from '../../Home/components/SocialProof'
 import UsedBy from '../../LogoList/UsedBy'
 
 import Price from './Price'
@@ -19,14 +23,18 @@ import WhatBuild from './WhatBuild'
 import WhatLearn from './WhatLearn'
 import WhoFor from './WhoFor'
 
-function Pricing({history}) {
+function Pricing({
+  location, isLoggedIn, isPaid,
+}) {
+  if (isLoggedIn && isPaid) return <Redirect to="/dashboard" />
+
+  const { hash } = location
   useEffect(() => {
-      const hash = history.location.hash
-      if (hash && document.getElementById(hash.substr(1))) {
-          // Check if there is a hash and if an element with that id exists
-          document.getElementById(hash.substr(1)).scrollIntoView({behavior: "smooth"})
-      }
-  }, [history.location.hash]) // Fires every time hash changes
+    if (hash && document.getElementById(hash.substr(1))) {
+      // Check if there is a hash and if an element with that id exists
+      document.getElementById(hash.substr(1)).scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [hash]) // Fires every time hash changes
 
   return (
     <div id="pricing-page" className="flex flex-column">
@@ -67,33 +75,31 @@ function Pricing({history}) {
       <div className="pb-3 t-center">
         <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
-      <div className="py-3 bg-gray-lightest"><Guarantee /></div>
       <div className="py-3 bg-gray-lighter">
         <div className="mr-auto ml-auto">
           <AboutAziz />
         </div>
       </div>
       <div className="container container-slim p-3"><Testimonials itemNum="5" /></div>
-      <div className="t-center">
-        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
-      </div>
-      <div className="pt-3"><FAQs /></div>
-      <div className="pb-3 t-center">
-        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
-      </div>
-
       <div id="payment" className="py-3 bg-gray-lighter">
         {/* <div className="t-center mb-1">
           <span className="h2">
-            Current Price:
+          Current Price:
           </span>
           <br />
           (These prices increase at the end of this week)
         </div> */}
         <Price />
+        <div className="container container-slim">
+          <Testimonials itemNum="1" />
+        </div>
       </div>
-      <div className="container container-slim p-3"><Testimonials itemNum="1" /></div>
+      <div className="py-3 bg-gray-lightest"><Guarantee /></div>
       <div className="pb-2 t-center">
+        <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
+      </div>
+      <div className="pt-3"><FAQs /></div>
+      <div className="pb-3 t-center">
         <a className="mt-2 btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
       </div>
       <UsedBy />
@@ -101,4 +107,22 @@ function Pricing({history}) {
   )
 }
 
-export default Pricing
+Pricing.propTypes = {
+  isLoggedIn: PropTypes.bool.isRequired,
+  isPaid: PropTypes.bool.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+    hash: PropTypes.string.isRequired,
+  }).isRequired,
+}
+
+function mapStateToProps(state) {
+  return {
+    isLoggedIn: isLoggedIn(state),
+    isPaid: isPaid(state),
+  }
+}
+
+export default withRouter(connect(
+  mapStateToProps,
+)(Pricing))
