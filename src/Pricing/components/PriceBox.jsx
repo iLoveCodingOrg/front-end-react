@@ -82,6 +82,7 @@ function PriceBox({
         {renderCTA()}
 
         { planType === 'pro' && <ProDetails />}
+        { planType === 'mastery' && <ProDetails />}
         { planType === 'premium' && <PremiumDetails />}
 
         {renderCTA()}

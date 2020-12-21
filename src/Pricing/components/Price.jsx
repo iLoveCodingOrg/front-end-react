@@ -7,28 +7,9 @@ import PriceBox from './PriceBox'
 import Switch from './Switch'
 
 const dataOriginal = {
-  pro: {
-    // monthly: {
-    //   planType: 'pro',
-    //   name: 'PRO',
-    //   desc: <span>Best suited for self-learners who need some support</span>,
-    //   price: 37,
-    //   terms: 'Paid Monthly',
-    //   // terms2: 'Complete training to job-ready',
-    //   link: '/checkout/ilc-pro-37m',
-    // },
-    // '6-month': {
-    //   planType: 'pro',
-    //   name: 'PRO',
-    //   desc: <span>Best suited for self-learners who need some support</span>,
-    //   price: 25,
-    //   terms: 'Billed $150 Every 6 Months',
-    //   // terms2: 'Complete training to job-ready',
-    //   link: '/checkout/ilc-pro-150sixm',
-    //   isPopular: false,
-    // },
+  mastery: {
     '1-year': {
-      planType: 'pro',
+      planType: 'mastery',
       name: content.mainProductName,
       // desc: <span>Best suited for self-learners who need some support</span>,
       price: 99,
@@ -81,7 +62,7 @@ const data30 = {
 
 function Price({ isOfferValid }) {
   const data = (isOfferValid) ? data30 : dataOriginal
-  const [selectedPlan, setSelectedPlan] = useState('pro')
+  const [selectedPlan] = useState('mastery')
   const [selectedVariant, setSelectedVariant] = useState('1-year')
 
 

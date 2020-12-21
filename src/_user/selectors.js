@@ -14,7 +14,7 @@ export const getLevel = createSelector([activePlans], (activePlans) => {
     if (isPremium) {
       type = 'premium'
     } else {
-      type = 'pro'
+      type = 'paid'
     }
   }
 
