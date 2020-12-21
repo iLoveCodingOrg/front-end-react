@@ -41,7 +41,7 @@ export default function List({
   }
 
   return (
-    <div className="container">
+    <div className="container container-slim">
       { isLoading && <Loading /> }
       { !isLoading && error && <ErrorBox /> }
       { !isLoading && !error && (

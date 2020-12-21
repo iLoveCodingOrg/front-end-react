@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { withRouter, NavLink } from 'react-router-dom'
 
 import logo from '../_app/images/ilovecoding-logo.svg'
-
+import { contentTypeRoutes } from '../_app/constants'
 import { actions, selectors } from '../_user'
 
 function Header({
@@ -174,11 +174,14 @@ function Header({
   const renderEditButton = () => {
     const { pathname } = location
     const pathParts = pathname.split('/')
-    const { length } = pathParts
-    const editLink = `/${pathParts[length - 2]}/${pathParts[length - 1]}/edit`
-    return (
-      <NavLink to={editLink} className="btn">Edit</NavLink>
-    )
+    const [extra, contentTypePath, contentSlug] = pathParts
+    if (contentTypeRoutes.includes(contentTypePath) && contentSlug) {
+      const editLink = `/${contentTypePath}/${contentSlug}/edit`
+      return (
+        <NavLink to={editLink} className="btn">Edit</NavLink>
+      )
+    }
+    return null
   }
 
   const renderAddButtons = () => (

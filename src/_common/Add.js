@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 
-import { contentTypeToRoute } from '../_app/utils'
+import { contentTypeToRoute } from '../_app/constants'
 import EditForm from './EditForm'
 
 export default function Add({

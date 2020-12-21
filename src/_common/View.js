@@ -9,7 +9,7 @@ import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
 import Comments from '../Comments'
 import Cta from '../Cta'
-import { contentTypeToRoute } from '../_app/utils'
+import { contentTypeToRoute } from '../_app/constants'
 
 export default function View({
   callMarkAsComplete,

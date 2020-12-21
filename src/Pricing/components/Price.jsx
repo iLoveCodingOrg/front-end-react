@@ -34,7 +34,7 @@ const dataOriginal = {
       price: 99,
       terms: 'One-time payment',
       terms2: 'One-year access',
-      link: 'https://checkout.ilovecoding.org/full-stack-pro',
+      link: 'https://checkout.ilovecoding.org/full-stack-mastery',
       isPopular: false,
       billingInterval: null,
     },

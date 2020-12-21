@@ -3,12 +3,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import { IMG_URL } from '../_app/constants'
+import { IMG_URL, contentTypeToRoute } from '../_app/constants'
 import Access from './Access'
 import Level from './Level'
 import Duration from './Duration'
 import LessonCount from './LessonCount'
-import { contentTypeToRoute } from '../_app/utils'
 
 function Card({ item, of }) {
   const {
@@ -30,9 +29,9 @@ function Card({ item, of }) {
 
   return (
     <div className="grid grid-list-item mb-1">
-      <div>
-        {
-          thumbnail && (
+      {
+        thumbnail && (
+        <div>
           <Link to={urlTo}>
             <img
               loading="lazy"
@@ -41,9 +40,9 @@ function Card({ item, of }) {
               alt="Thumbnail"
             />
           </Link>
-          )
-        }
-      </div>
+        </div>
+        )
+      }
       <div>
         <h3><Link to={urlTo}>{title}</Link></h3>
         <div className="mb--5">

@@ -15,7 +15,7 @@ export default function () {
           </h3>
         </div>
       </div>
-      <div>
+      <div style={{ overflowX: 'scroll' }}>
         <table className="table t-center">
           <thead className="bg-gray-lighter strong">
             <tr>

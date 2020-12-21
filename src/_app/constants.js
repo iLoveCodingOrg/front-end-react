@@ -18,10 +18,20 @@ export const ROUTES_WITHOUT_CTA = [
 ]
 
 export const content = {
-  mainProductName: 'Full-Stack Pro',
+  mainProductName: 'Full-Stack Mastery',
   refundPolicy: '7-day',
   numberOfProjects: 30,
   hoursOfVideo: 40,
   numberOfLessons: 500,
   numberOfCourses: 12,
 }
+
+export const contentTypeToRoute = {
+  blog: 'blog',
+  question: 'q',
+  lesson: 'lessons',
+  course: 'courses',
+  page: 'pages',
+}
+
+export const contentTypeRoutes = ['blog', 'q', 'lessons', 'courses', 'pages']
