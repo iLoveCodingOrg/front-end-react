@@ -51,7 +51,7 @@ const Cta = ({
   return (<></>)
 }
 
-Cta.propType = {
+Cta.propTypes = {
   isLoggedIn: PropType.bool.isRequired,
   isPaid: PropType.bool.isRequired,
   isPro: PropType.bool.isRequired,

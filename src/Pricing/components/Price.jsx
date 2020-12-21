@@ -128,16 +128,6 @@ function Price({ isOfferValid }) {
       <div className="flex flex-wrap justify-content-center">
         {renderPriceBox(data[selectedPlan][selectedVariant])}
       </div>
-      <div className="flex mt-2">
-        {/* <p className="mr--5">
-          <span aria-label="thunder" role="img">⚡️</span>&nbsp;
-          Cancel Anytime.
-        </p> */}
-        <p>
-          <span aria-label="shield" role="img">🛡️</span>&nbsp;
-          7-Day Full Refund Policy.
-        </p>
-      </div>
     </div>
   )
 }
