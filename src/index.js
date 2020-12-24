@@ -19,7 +19,7 @@ import Wrap from './Wrap'
 
 import ErrorBoundary from './ErrorBoundary'
 import ScrollToTop from './ScrollToTop'
-// import Home from './Home'
+import Home from './Home/components/HomeSalesPage'
 import Dashboard from './Dashboard'
 import QuestionRoutes from './Question'
 import LessonRoutes from './Lesson'
@@ -81,7 +81,7 @@ function renderApp() {
               <Route strict path="/webinar" component={withAuth(Webinar, false)} />
               <Wrap>
                 <Switch>
-                  <Route exact path="/" component={withAuth(Pricing, false)} />
+                  <Route exact path="/" component={withAuth(Home, false)} />
                   {/* <Route exact path="/pricing" component={withAuth(Pricing, false)} /> */}
                   <Redirect exact path="/pricing" to="/" />
                   <Route exact path="/reviews" component={withAuth(Reviews, false)} />
