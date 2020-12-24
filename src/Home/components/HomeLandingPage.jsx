@@ -5,10 +5,7 @@ import { Redirect, Link } from 'react-router-dom'
 
 import { selectors } from '../../_user'
 
-import HeroOptin from './HeroOptin'
 import UsedBy from '../../LogoList/UsedBy'
-import StudentCompanies from '../../LogoList/StudentCompanies'
-import SocialProof from './SocialProof'
 import BuildAnything from '../../Pricing/components/BuildAnything'
 import StructuredLearning from '../../Pricing/components/StructuredLearning'
 import CompleteCurriculum from '../../Pricing/components/CompleteCurriculum'

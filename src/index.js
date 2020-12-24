@@ -14,7 +14,6 @@ import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
 
 import store from './_app/store'
-import Auth from './Auth'
 import withAuth from './withAuth'
 import Wrap from './Wrap'
 
