@@ -6,20 +6,23 @@ import { Redirect, Link } from 'react-router-dom'
 import { selectors } from '../../_user'
 
 import UsedBy from '../../LogoList/UsedBy'
-import BuildAnything from '../../SalesCopy/components/BuildAnything'
-import StructuredLearning from '../../SalesCopy/components/StructuredLearning'
-import CompleteCurriculum from '../../SalesCopy/components/CompleteCurriculum'
-import PracticeProjects from '../../SalesCopy/components/PracticeProjects'
-import InterviewPrep from '../../SalesCopy/components/InterviewPrep'
-import MentorCommunitySupport from '../../Pricing/components/MentorCommunitySupport'
-import CertificateOfCompletion from '../../SalesCopy/components/CertificateOfCompletion'
 import AboutAziz from '../../AboutAziz'
 import PrintReviews from '../../Reviews/components/PrintReviews'
 import reviewsData from '../../Reviews/data'
 import Pricing from '../../Pricing/components/Price'
-import ValueProposition from '../../SalesCopy/components/ValueProposition'
-import Guarantee from '../../SalesCopy/components/Guarantee'
-import FAQs from '../../SalesCopy/components/FAQs'
+
+import {
+  BuildAnything,
+  StructuredLearning,
+  CompleteCurriculum,
+  PracticeProjects,
+  InterviewPrep,
+  MentorCommunitySupport,
+  CertificateOfCompletion,
+  ValueProposition,
+  Guarantee,
+  FAQs,
+} from '../../SalesCopy'
 
 function Home({ isLoggedIn }) {
   if (isLoggedIn) return <Redirect to="/dashboard" />
