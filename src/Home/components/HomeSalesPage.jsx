@@ -84,13 +84,6 @@ function Pricing({
       </div>
       <div className="container container-slim p-3"><Testimonials itemNum="5" /></div>
       <div id="payment" className="py-3 bg-gray-lighter">
-        {/* <div className="t-center mb-1">
-          <span className="h2">
-          Current Price:
-          </span>
-          <br />
-          (These prices increase at the end of this week)
-        </div> */}
         <Price />
         <div className="container container-slim">
           <Testimonials itemNum="1" />

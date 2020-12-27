@@ -13,6 +13,10 @@
 @import "./border.css";
 @import "./utils.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 #pricing-page{
   scroll-behavior: smooth;
 }
