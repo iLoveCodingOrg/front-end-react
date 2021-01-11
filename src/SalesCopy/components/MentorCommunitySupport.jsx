@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function () {
+export default function ({ id }) {
   return (
-    <div>
+    <div id={id}>
       <h2>Mentor & Community Support</h2>
       <p className="h3 f-300">Answers to all questions</p>
     </div>

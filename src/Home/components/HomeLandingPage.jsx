@@ -5,24 +5,24 @@ import { Redirect, Link } from 'react-router-dom'
 
 import { selectors } from '../../_user'
 
-import HeroOptin from './HeroOptin'
 import UsedBy from '../../LogoList/UsedBy'
-import StudentCompanies from '../../LogoList/StudentCompanies'
-import SocialProof from './SocialProof'
-import BuildAnything from '../../Pricing/components/BuildAnything'
-import StructuredLearning from '../../Pricing/components/StructuredLearning'
-import CompleteCurriculum from '../../Pricing/components/CompleteCurriculum'
-import PracticeProjects from '../../Pricing/components/PracticeProjects'
-import InterviewPrep from '../../Pricing/components/InterviewPrep'
-import MentorCommunitySupport from '../../Pricing/components/MentorCommunitySupport'
-import CertificateOfCompletion from '../../Pricing/components/CertificateOfCompletion'
 import AboutAziz from '../../AboutAziz'
 import PrintReviews from '../../Reviews/components/PrintReviews'
 import reviewsData from '../../Reviews/data'
-import Pricing from '../../Pricing/components/Price'
-import ValueProposition from '../../Pricing/components/ValueProposition'
-import Guarantee from '../../Pricing/components/Guarantee'
-import FAQs from '../../Pricing/components/FAQs'
+import Price from '../../Pricing/components/Price'
+
+import {
+  BuildAnything,
+  StructuredLearning,
+  CompleteCurriculum,
+  PracticeProjects,
+  InterviewPrep,
+  MentorCommunitySupport,
+  CertificateOfCompletion,
+  ValueProposition,
+  Guarantee,
+  FAQs,
+} from '../../SalesCopy'
 
 function Home({ isLoggedIn }) {
   if (isLoggedIn) return <Redirect to="/dashboard" />
@@ -46,15 +46,6 @@ function Home({ isLoggedIn }) {
           Mentor-Support / Self-paced / Tried and Tested Material
         </p>
 
-        <ul>
-          <li>Build Anything</li>
-          <li>Structured Learning</li>
-          <li>Perfect Curriculum</li>
-          <li>20+ Practice Projects</li>
-          <li>Interview Prep Alongside</li>
-          <li>Mentor & Community Support</li>
-          <li>Certificate of Completion</li>
-        </ul>
         <BuildAnything />
         <StructuredLearning />
         <CompleteCurriculum />
@@ -72,7 +63,7 @@ function Home({ isLoggedIn }) {
             reviewsData[2],
           ]}
         />
-        <Pricing />
+        <Price />
         <ValueProposition />
         <Guarantee />
         <FAQs />

@@ -2,10 +2,11 @@ import React from 'react'
 import PrintReviews from '../../Reviews/components/PrintReviews'
 import { lastMonthViews } from '../../_app/constants'
 
-const add = (a, b) => a + b
-
 function getMonthName(delta = 0) {
-  const lastMonthIndex = add((new Date()).getMonth(), delta)
+  const date = new Date()
+  date.setMonth(date.getMonth() + delta)
+  const lastMonthIndex = date.getMonth()
+
   const months = [
     'January',
     'February',
@@ -22,6 +23,19 @@ function getMonthName(delta = 0) {
   ]
 
   return months[lastMonthIndex]
+}
+
+
+function getYearOftMonth(delta) {
+  const date = new Date()
+  date.setMonth(date.getMonth() + delta)
+  return date.getFullYear()
+}
+
+function getMonthAndYear(delta) {
+  const monthName = getMonthName(delta)
+  const year = getYearOftMonth(delta)
+  return `${monthName} ${year}`
 }
 
 const data = [{
@@ -52,7 +66,7 @@ function SocialProof() {
       <h3 className="t-center mb-2">
         <u>{lastMonthViews} students</u>
         {' '}
-        learned coding from iLoveCoding last month ({getMonthName(-1)} {(new Date()).getFullYear()})
+        learned coding from iLoveCoding last month ({getMonthAndYear(-1)})
         <br />
         {' '}
         Here&apos;s what some of them had to say:

@@ -6,9 +6,9 @@ import mentorship from '../../_app/images/get/mentorship.jpg'
 import { CheckMark } from '../../_common'
 import Video from '../../Video/components/Video'
 
-export default function () {
+export default function ({ className }) {
   return (
-    <div className="container">
+    <div className={className}>
       <div className="grid-list-item align-items-center mb-2">
         <div><Video videoSource="311500556" /></div>
         <div>

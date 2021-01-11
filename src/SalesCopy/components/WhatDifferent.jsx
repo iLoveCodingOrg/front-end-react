@@ -3,9 +3,9 @@ import { CheckMark } from '../../_common'
 import { content } from '../../_app/constants'
 import Video from '../../Video/components/Video'
 
-export default function () {
+export default function ({ id, className }) {
   return (
-    <div className="container">
+    <div id={id} className={className}>
       <div className="grid-list-item align-items-center mb-2">
         <div><Video videoSource="311500900" /></div>
         <div>
@@ -16,12 +16,12 @@ export default function () {
         </div>
       </div>
       <div style={{ overflowX: 'scroll' }}>
-        <table className="table t-center">
+        <table className="table t-center mb-0">
           <thead className="bg-gray-lighter strong">
             <tr>
               <th width="20%" />
               <th width="27%" className="h4 align-middle b bt-2 bb-0 bx-2 b-blue card-primary">
-                {content.mainProductName}
+                iLoveCoding {content.mainProductName}
                 {/* <br />
                 <small>Premium)</small> */}
               </th>

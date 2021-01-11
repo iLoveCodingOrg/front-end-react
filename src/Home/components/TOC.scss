@@ -1,0 +1,37 @@
+.toc{
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+    position: sticky;
+    top: 0px;
+    ul{
+      margin: 0px;
+      list-style: none;
+      border-bottom-left-radius: 1.5em;
+      width: 100%;
+      li{
+        font-size: 0.8rem;
+        padding: 0.1em 0.4em;
+        padding-left: 0.8em;
+        &.current { 
+          padding-left: 0.4em;
+          border-left: 0.4em solid var(--blue);
+        }
+      }
+    }
+  }
+}
+
+.row{
+  display: flex;
+}
+
+@media (min-width: 576px){
+  .col-md-3{
+    width: 100/12*3%;
+  }
+
+  .col-md-9{
+    width: 100/12*9%;
+  }
+}

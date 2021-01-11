@@ -3,19 +3,16 @@
 @import "./fonts.css";
 @import "./typography.css";
 @import "./container.css";
+@import "./table.css";
 @import "./button.css";
 @import "./flex.css";
 @import "./grid.css";
-@import "./margin-padding.css";
-@import "./position-display.css";
 @import "./background.css";
 @import "./nav.css";
 @import "./border.css";
+@import "./margin-padding.css";
+@import "./position-display.css";
 @import "./utils.css";
-
-#pricing-page{
-  scroll-behavior: smooth;
-}
 
 main{
   -webkit-font-smoothing: antialiased;

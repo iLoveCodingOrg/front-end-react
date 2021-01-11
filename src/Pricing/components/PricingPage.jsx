@@ -12,16 +12,18 @@ import SocialProof from '../../Home/components/SocialProof'
 import UsedBy from '../../LogoList/UsedBy'
 
 import Price from './Price'
-import Guarantee from './Guarantee'
-import FAQs from './FAQs'
 import AboutAziz from '../../AboutAziz'
 
-import Testimonials from './Testimonials'
-import WhatYouGet from './WhatYouGet'
-import WhatDifferent from './WhatDifferent'
-import WhatBuild from './WhatBuild'
-import WhatLearn from './WhatLearn'
-import WhoFor from './WhoFor'
+import {
+  Guarantee,
+  FAQs,
+  Testimonials,
+  WhatYouGet,
+  WhatDifferent,
+  WhatBuild,
+  WhatLearn,
+  WhoFor,
+} from '../../SalesCopy'
 
 function Pricing({
   location, isLoggedIn, isPaid,
