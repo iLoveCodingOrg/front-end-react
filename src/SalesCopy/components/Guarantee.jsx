@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function () {
+export default function ({ id, className }) {
   return (
-    <div className="container container-slim flex justify-content-center">
+    <div id={id} className={`${className} flex justify-content-center`}>
       <div>
         <div className="card card-warning">
-          <h3 className="t-center text-dark">
+          <h2 className="t-center text-dark">
             <span role="img" aria-label="Sheild Emoji">🛡️</span>&nbsp;
             7-Day Full Refund Policy
-          </h3>
+          </h2>
           <p>
             If you are not happy with your purchase for any reason whatsoever, please request a refund by emailing
             {' '}
@@ -18,9 +18,6 @@ export default function () {
             <br />
             <br />
             We only want to keep your money if you think we have earned it.
-            <br />
-            <br />
-            If you cancel after the first 7-days, you will continue to have access for the current month, and you will not be billed any further.
           </p>
         </div>
       </div>

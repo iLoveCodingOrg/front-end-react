@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Copyrights from './Copyrights'
 
 export default () => (
-  <footer className="flex flex-column mt-3 py-5 b bt-1">
+  <footer className="flex flex-column py-5 b bt-1">
     <div className="align-self-center container">
       {/* <div className="my--5">
         <span className="strong pr--25">Free</span>
@@ -35,6 +35,7 @@ export default () => (
         <a className="color-gray u px--5" href="https://www.instagram.com/ilovecoding/">Instagram</a>
         <a className="color-gray u px--5" href="https://twitter.com/ilovecodingorg">Twitter</a>
         <a className="color-gray u px--5" href="https://www.quora.com/profile/Aziz-Ali">Quora</a>
+        <a className="color-gray u px--5" href="https://www.youtube.com/c/ILoveCodingOrg">Youtube</a>
       </div>
       <Copyrights />
     </div>

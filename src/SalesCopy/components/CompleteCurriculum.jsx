@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function () {
+export default function ({ id }) {
   return (
-    <div>
+    <div id={id}>
       <h2>Complete Curriculum</h2>
       <p className="h3 f-300">Everything you need to know about JavaScript explained in the right</p>
         Streamlined curriculum to become an expert at two specialties. Front-End and Full-Stack development

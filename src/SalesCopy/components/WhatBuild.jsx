@@ -12,81 +12,28 @@ export default function () {
           <h3 className="f-300">
             With iLoveCoding your focus will be to apply your knowledge; For that we will build a bunch of projects so you learn and build your portfolio in the process.
           </h3>
-          <div className="flex flex-wrap justify-space-around">
-            <div>
-              <CheckMark />
-              {' '}
-              Blog Design
-              <br />
-              <CheckMark />
-              {' '}
-              Simple To-do List App
-              <br />
-              <CheckMark />
-              {' '}
-              Snake game
-              <br />
-              <CheckMark />
-              {' '}
-              Calculator App
-              <br />
-              <CheckMark />
-              {' '}
-              Photo Slider
-              <br />
-              <CheckMark />
-              {' '}
-              Stop Watch
-              <br />
-              <CheckMark />
-              {' '}
-              Accordion Feature
-              <br />
-              <CheckMark />
-              {' '}
-              Tab Feature
-              <br />
-              <CheckMark />
-              {' '}
-              Location Finder
-              {' '}
-              <small>(Powered by Google Maps)</small>
-              <br />
-              <CheckMark />
-              {' '}
-              Song Search App
-              {' '}
-              <small>(Powered by iTunes API)</small>
-              <br />
-              <CheckMark />
-              {' '}
-              Book Search App
-              {' '}
-              <small>(Powered by Google Books)</small>
-              <br />
-              <CheckMark />
-              {' '}
-              Note Taking API
-              {' '}
-              <small>(with password protection)</small>
-              <br />
-              <CheckMark />
-              {' '}
-              Timer App
-              <br />
-              <CheckMark />
-              {' '}
-              Web Scraper
-              <br />
-              <CheckMark />
-              {' '}
-              Cryptocurrency Price Checker
-              <br />
-              <CheckMark />
-              {' '}
-              Scroll animation, and more
-            </div>
-          </div>
+        </div>
+      </div>
+      <div className="flex flex-wrap space-around">
+        <div className="px-1">
+          <CheckMark />&nbsp;Blog Design<br />
+          <CheckMark />&nbsp;Simple To-do List App<br />
+          <CheckMark />&nbsp;Snake game<br />
+          <CheckMark />&nbsp;Calculator App<br />
+          <CheckMark />&nbsp;Photo Slider<br />
+          <CheckMark />&nbsp;Stop Watch<br />
+          <CheckMark />&nbsp;Accordion Feature<br />
+          <CheckMark />&nbsp;Tab Feature<br />
+        </div>
+        <div className="px-1">
+          <CheckMark />&nbsp;Location Finder&nbsp;<small>(Powered by Google Maps)</small><br />
+          <CheckMark />&nbsp;Song Search App&nbsp;<small>(Powered by iTunes API)</small><br />
+          <CheckMark />&nbsp;Book Search App&nbsp;<small>(Powered by Google Books)</small><br />
+          <CheckMark />&nbsp;Note Taking API&nbsp;<small>(with password protection)</small><br />
+          <CheckMark />&nbsp;Timer App<br />
+          <CheckMark />&nbsp;Web Scraper<br />
+          <CheckMark />&nbsp;Cryptocurrency Price Checker<br />
+          <CheckMark />&nbsp;Scroll animation, and more
         </div>
       </div>
     </div>

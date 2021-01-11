@@ -28,8 +28,8 @@ function PriceBox({
           textDecoration: isStrikethrough && 'line-through',
         }}
       >
-        <sup className="h3" style={{ top: '-20px' }}>$</sup>
-        <span className="h1">{wholeNumber}</span>
+        <sup className="h2" style={{ top: '-20px' }}>$</sup>
+        <span className="h1" style={{ fontSize: '4rem' }}>{wholeNumber}</span>
         {/* <sup className="decimal h2">.{decimal}</sup> */}
         {billingInterval === 'month' && <span className="color-gray-dark">/mo</span>}
         {billingInterval === 'year' && <span className="color-gray-dark">/yr</span>}

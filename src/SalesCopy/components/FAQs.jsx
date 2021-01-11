@@ -1,11 +1,12 @@
 import React from 'react'
 import './FAQs.css'
-
 import { Link } from 'react-router-dom'
+import { CheckMark } from '../../_common'
 
-export default function () {
+
+export default function ({ id, className }) {
   return (
-    <div className="container container-slim faqs flex flex-column align-items-center">
+    <div id={id} className={`${className} container container-slim faqs flex flex-column align-items-center`}>
       <div>
         <div className="b bb-1 mb-3">
           <h2 className="mb-1 t-center">Frequently Asked Questions</h2>
@@ -105,21 +106,21 @@ export default function () {
             <p>
           iLoveCoding puts everything together in a systematic way:
             </p>
-            <ul>
+            <ul style={{ listStyle: 'none' }}>
               <li>
-                <span role="img" aria-label="Check mark">✅</span>
+                <CheckMark />
                 &nbsp; Simple explanations
               </li>
               <li>
-                <span role="img" aria-label="Check mark">✅</span>
+                <CheckMark />
                 &nbsp; Tons of examples
               </li>
               <li>
-                <span role="img" aria-label="Check mark">✅</span>
+                <CheckMark />
                 &nbsp; Tons of real-world projects
               </li>
               <li>
-                <span role="img" aria-label="Check mark">✅</span>
+                <CheckMark />
                 &nbsp; Professional mentorship.
               </li>
             </ul>

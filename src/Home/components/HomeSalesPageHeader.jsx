@@ -1,4 +1,5 @@
 import React from 'react'
+import { CheckMark } from '../../_common'
 
 function Header() {
   return (
@@ -11,6 +12,11 @@ function Header() {
         <h3 className="f-300 my-1">
           The ultimate resource to learn to code from scratch, build projects, and land your first software developer job. Everything you need, in one streamlined platform.
         </h3>
+        <div className="flex h4 f-300 flex-wrap space-between">
+          <div className="px-1"><CheckMark /> Structured Learning </div>
+          <div className="px-1"><CheckMark /> Mentor Support</div>
+          <div className="px-1"><CheckMark /> Practice Projects</div>
+        </div>
       </div>
     </div>
   )

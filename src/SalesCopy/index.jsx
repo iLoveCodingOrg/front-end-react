@@ -14,6 +14,7 @@ import WhatDifferent from './components/WhatDifferent'
 import WhatLearn from './components/WhatLearn'
 import WhatYouGet from './components/WhatYouGet'
 import WhoFor from './components/WhoFor'
+import TechnologiesLearn from './components/TechnologiesLearn'
 
 export {
   BuildAnything,
@@ -32,4 +33,5 @@ export {
   WhatLearn,
   WhatYouGet,
   WhoFor,
+  TechnologiesLearn,
 }

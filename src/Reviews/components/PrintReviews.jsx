@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function PrintReviews({ data, containerClasses = '', itemClasses = '' }) {
+export default function PrintReviews({
+  id, data, containerClasses = '', itemClasses = '',
+}) {
   return (
-    <div className={`grid grid-equal-wrap ${containerClasses}`}>
+    <div id={id} className={`grid grid-equal-wrap ${containerClasses}`}>
       {data.map(({
         title, body, thumbSrc, credit1, credit2,
       }, index) => (
@@ -29,7 +31,12 @@ export default function PrintReviews({ data, containerClasses = '', itemClasses 
   )
 }
 
+PrintReviews.defaultProps = {
+  id: '',
+}
+
 PrintReviews.propTypes = {
+  id: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     body: PropTypes.string,

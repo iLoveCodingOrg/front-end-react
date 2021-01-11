@@ -9,7 +9,7 @@ import UsedBy from '../../LogoList/UsedBy'
 import AboutAziz from '../../AboutAziz'
 import PrintReviews from '../../Reviews/components/PrintReviews'
 import reviewsData from '../../Reviews/data'
-import Pricing from '../../Pricing/components/Price'
+import Price from '../../Pricing/components/Price'
 
 import {
   BuildAnything,
@@ -46,15 +46,6 @@ function Home({ isLoggedIn }) {
           Mentor-Support / Self-paced / Tried and Tested Material
         </p>
 
-        <ul>
-          <li>Build Anything</li>
-          <li>Structured Learning</li>
-          <li>Perfect Curriculum</li>
-          <li>20+ Practice Projects</li>
-          <li>Interview Prep Alongside</li>
-          <li>Mentor & Community Support</li>
-          <li>Certificate of Completion</li>
-        </ul>
         <BuildAnything />
         <StructuredLearning />
         <CompleteCurriculum />
@@ -72,7 +63,7 @@ function Home({ isLoggedIn }) {
             reviewsData[2],
           ]}
         />
-        <Pricing />
+        <Price />
         <ValueProposition />
         <Guarantee />
         <FAQs />

@@ -1,4 +1,4 @@
-.container {
+.container-fluid, .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -29,6 +29,20 @@
 
 .container-slim {
   max-width: 768px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-md {
+  max-width: 968px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .list-group-item{

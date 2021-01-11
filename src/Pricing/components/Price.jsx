@@ -60,7 +60,7 @@ const data30 = {
   ...dataOriginal,
 }
 
-function Price({ isOfferValid }) {
+function Price({ id, className, isOfferValid }) {
   const data = (isOfferValid) ? data30 : dataOriginal
   const [selectedPlan] = useState('mastery')
   const [selectedVariant, setSelectedVariant] = useState('1-year')
@@ -98,7 +98,7 @@ function Price({ isOfferValid }) {
   )
 
   return (
-    <div className="flex flex-column align-items-center">
+    <div id={id} className={`${className} flex flex-column align-items-center`}>
       {/* <div className="position-relative mb-1 mx-sm-auto mr-auto">
           <Switch
               style={{ maxWidth: '400px', minWidth: '320px' }}

@@ -2,9 +2,9 @@ import React from 'react'
 import Video from '../../Video/components/Video'
 import { CheckMark } from '../../_common'
 
-export default function () {
+export default function ({ className }) {
   return (
-    <div className="container">
+    <div className={className}>
       <div className="grid-list-item align-items-start mb-2">
         <div><Video videoSource="311500173" /></div>
         <div>

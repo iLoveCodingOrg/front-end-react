@@ -69,8 +69,8 @@ const data = [
   },
 ]
 
-export default () => (
-  <div className="mt-3 pt-3 b bt-1">
+export default ({ className }) => (
+  <div className={`${className} pt-3 b bt-1`}>
     <div className="mb-2 t-center t-uppercase color-gray">
       Learn the same tools and technologies used by:
     </div>
