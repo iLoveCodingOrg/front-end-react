@@ -4,7 +4,7 @@ import Rte from './Rte'
 // import Wysiwyg from './Wysiwyg'
 
 function EditForm({ data, editableFields, onSubmitForm }) {
-  const [isViewSource, setIsViewSource] = useState(false)
+  const [isViewSource, setIsViewSource] = useState(true)
   const [fields, setFields] = useState(data)
 
   const handleChange = (field, value) => {
