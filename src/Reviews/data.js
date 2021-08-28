@@ -128,8 +128,8 @@ const data = [
   {
     title: 'Aziz creates a map for you so you can accomplish your goal.',
     body: 'iLoveCoding has a unique style of teaching. Aziz doesn\'t get stuck on little things. He sets a goal in mind and writes code to accomplish that goal. That\'s very important when learning coding. You could easily spend all the time you have and learn HTML and master it but before you know it you\'ve lost a lot of precious time that you could have used to learn other languages (like JavaScript) that are mandatory to accomplish your end results. Aziz creates a map for you and in his one-on-one call he gives you a very good idea which path you need to choose to get to your goals. I\'ve learned from iLoveCoding what I need to do and learn to successfully create the project that I want to run. iLoveCoding showing me the path, Making me think outside the box. It has great tips and tricks in courses and making me go from being completely lost to having realistic goals and plans set in place. I have membership in other sites but they use different teachers for different courses. Aziz teaches you how to get rid of the clutter and not get stuck on little things. I can\'t emphasize how important that lesson was to me.  As a perfectionist I thought the more I learn about one course the more it\'s going to help me, but after watching iLoveCoding courses, I realized not to spend too much time on stuff that I can easily look up.',
-    thumbSrc: '//a.ilovecoding.org/img/_reviews/ashley-novik.png',
-    credit1: 'Ashley Novik',
+    thumbSrc: '//a.ilovecoding.org/img/_reviews/ashley.png',
+    credit1: 'Ashley',
     credit2: 'Entrepreneur (with a lot of ideas)',
   },
   {
