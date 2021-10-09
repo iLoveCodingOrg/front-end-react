@@ -63,7 +63,7 @@ function OptinForm() {
         />
       </form> */}
 
-      <form
+      {/* <form
         className="d-none d-sm-block"
         action="https://www.getdrip.com/forms/419499831/submissions"
         method="post"
@@ -84,6 +84,30 @@ function OptinForm() {
             data-drip-attribute="sign-up-button"
             className="btn btn-lg btn-primary btn-block m--25"
           />
+        </div>
+      </form> */}
+      <form
+        className="d-none d-sm-block"
+        action="https://app.birdsend.co/subscribe"
+        method="post"
+        bs-form
+      >
+        <div className="flex flex-wrap justify-content-center">
+          <input type="hidden" name="meta_id" value="10951" />
+          <input type="hidden" name="meta_user_id" value="2413" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            className="form-control form-control-lg b-blue m--25"
+            required
+            />
+          <input
+            type="submit"
+            value="Send Me Lesson #1"
+            className="btn btn-lg btn-primary btn-block m--25"
+            />
+          <div id="bs-message"></div>
         </div>
       </form>
     </>
