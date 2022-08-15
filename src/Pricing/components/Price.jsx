@@ -8,13 +8,13 @@ import Switch from './Switch'
 
 const dataOriginal = {
   mastery: {
-    '1-year': {
+    lifeTime: {
       planType: 'mastery',
       name: content.mainProductName,
       // desc: <span>Best suited for self-learners who need some support</span>,
       price: 99,
       terms: 'One-time payment',
-      terms2: 'One-year access',
+      terms2: 'Lifetime access',
       link: 'https://checkout.ilovecoding.org/full-stack-mastery',
       isPopular: false,
       billingInterval: null,
@@ -63,7 +63,7 @@ const data30 = {
 function Price({ id, className, isOfferValid }) {
   const data = (isOfferValid) ? data30 : dataOriginal
   const [selectedPlan] = useState('mastery')
-  const [selectedVariant, setSelectedVariant] = useState('1-year')
+  const [selectedVariant, setSelectedVariant] = useState('lifeTime')
 
 
   const handleSwitch = (event) => {

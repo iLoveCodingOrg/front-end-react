@@ -6,12 +6,9 @@ export default function () {
       style={{
         backgroundColor: '#cc00da',
       }}
-      className="bg-light color-white t-center p-1"
+      className="bg-light color-white t-center p--5"
     >
-      <h3>Start Your 2020 Strong!</h3>
-      <strong>Hurry Limited Time! Get 20% OFF FOR LIFE.</strong>
-      {' '}
-      <a href="/pricing" className="btn btn-light">Claim your discount!</a>
+      <strong>Limited Time Offer:</strong> Get lifetime access to the training when you buy today!
     </div>
   )
 }
