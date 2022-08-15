@@ -68,6 +68,9 @@ export default function View({
       { !isLoading && !error && (
         <>
           <Helmet title={`${title} - iLoveCoding`} />
+          <div>
+            Limited Time Offer: Get lifetime access to the training program when you buy today!
+          </div>
           <ViewHeader
             cssClass={getVideoHeaderCss(videoSource)}
             of={of}
