@@ -82,7 +82,6 @@ function renderApp() {
               <Wrap>
                 <Switch>
                   <Route exact path="/" component={withAuth(Home, false)} />
-                  {/* <Route exact path="/pricing" component={withAuth(Pricing, false)} /> */}
                   <Redirect exact path="/pricing" to="/" />
                   <Route exact path="/reviews" component={withAuth(Reviews, false)} />
                   <Route exact path="/free" component={Free} />

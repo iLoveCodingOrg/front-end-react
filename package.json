@@ -4,7 +4,7 @@
   "description": "iLoveCoding Front-End React Application",
   "main": "src/index.js",
   "repository": {
-    "url": "git@bitbucket.org:ilovecodinginc/ilc-react.git",
+    "url": "git@github.com:iLoveCodingOrg/front-end-react.git",
     "type": "git"
   },
   "scripts": {
