@@ -58,7 +58,7 @@ export default () => (
       <p>
         <strong>Time to completion:</strong>
         <br />
-        4 weeks (Focus for week number 13-16)
+        4 weeks
       </p>
     </div>
     <div className="pl-xl-5 ">

@@ -20,7 +20,7 @@ export const ROUTES_WITHOUT_CTA = [
 ]
 
 export const content = {
-  mainProductName: 'Full-Stack Mastery',
+  mainProductName: 'Front-End Professional',
   refundPolicy: '7-day',
   numberOfProjects: 30,
   hoursOfVideo: 40,

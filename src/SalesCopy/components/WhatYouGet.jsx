@@ -31,11 +31,8 @@ export default function ({ className }) {
                 )
             </h4>
             <p>
-                40+ hours of video training organized such that it is easy to make progress.
+              40+ hours of video training organized such that it is easy to make progress.
             </p>
-            <CheckMark />
-            {' '}
-              5 Modules (11+ Courses, 20+ practice projects)
             <br />
             <CheckMark />
             {' '}
@@ -51,11 +48,7 @@ export default function ({ className }) {
             <br />
             <CheckMark />
             {' '}
-              Module 4: Mobile Development (iOS and Android)
-            <br />
-            <CheckMark />
-            {' '}
-              Module 5: Electives (Git, Working with API, etc.)
+              Electives (Git, Working with API, etc.)
             <br />
             <CheckMark />
             {' '}

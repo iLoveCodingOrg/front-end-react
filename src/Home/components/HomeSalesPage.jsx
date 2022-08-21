@@ -169,11 +169,11 @@ function HomeSalesPage({
             <div className="container-slim p-3"><Testimonials itemNum={1} /></div>
             <BuyCTA />
 
-            <div id="alternatives" className="container-fluid py-4 bg-gray-lighter">
+            {/* <div id="alternatives" className="container-fluid py-4 bg-gray-lighter">
               <WhatDifferent className="container-md" />
               <div className="container-slim p-3"><Testimonials itemNum={0} /></div>
               <BuyCTA />
-            </div>
+            </div> */}
 
             <div id="faqs" className="container-fluid pt-3">
               <FAQs className="container-md" />

@@ -4,16 +4,6 @@ import PrintTraining from './PrintTraining'
 
 const courses = [
   {
-    name: 'Learn jQuery in 14 days',
-    link: '/courses/jquery',
-    thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-0-Intro.png',
-  },
-  {
-    name: 'Learn & Master Bootstrap in a Week',
-    link: '/courses/learn-master-bootstrap-in-a-week',
-    thumbSrc: '//a.ilovecoding.org/thumb/bootstrap-1-intro.png',
-  },
-  {
     name: 'Learn React JS in 14 Days',
     link: '/courses/react',
     thumbSrc: '//a.ilovecoding.org/thumb/react/react0-intro.png',
@@ -21,42 +11,6 @@ const courses = [
 ]
 
 const practice = [
-  {
-    name: 'Project: Create a Top Bar Widget with jQuery',
-    link: '/courses/jquery/lessons/project-create-a-top-bar-widget-with-jquery',
-    thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-7-1-projectTopBar.png',
-  },
-  {
-    name: 'Project: Create Tabs functionality with jQuery',
-    link: '/courses/jquery/lessons/project-create-tabs-functionality-with-jquery',
-    thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-7-2-projectTabs.png',
-  },
-  {
-    name: 'Animate: Animating elements with jQuery',
-    link: '/courses/jquery/lessons/animate-animating-elements-with-jquery',
-    thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-8-animate.png',
-  },
-  {
-    name: 'Project: Create your own Image Carousel Slider with jQuery',
-    link: '/courses/jquery/lessons/project-create-your-own-image-carousel-slider-with-jquery',
-    thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-12-projectSlider.png',
-  },
-  {
-    name: 'Ajax: Create a Single Page App with jQuery',
-    link: '/courses/jquery/lessons/ajax-create-a-single-page-app-with-jquery',
-    thumbSrc: '//a.ilovecoding.org/thumb/jQuery14-13-ajaxSinglePage.png',
-  },
-  {
-    name: 'Ajax: Create a Location Finder App using jQuery & Google Maps API',
-    link: '/courses/jquery/lessons/ajax-create-a-location-finder-app-using-jquery-google-maps-api-part-1',
-    thumbSrc: '//a.ilovecoding.org/thumb/jQuery-14-14-googleMapsAPI-part1.png',
-  },
-  {
-    name: 'Build a Calculator App with jQuery',
-    link: '/courses/calculator',
-    thumbSrc: '//a.ilovecoding.org/thumb/calculator.png',
-
-  },
   {
     name: 'Project: Building a Todo List App with React',
     link: '/courses/react/lessons/project-building-a-todo-list-app-with-react',
@@ -89,7 +43,7 @@ export default () => (
       <p>
         <strong>Time to completion:</strong>
         <br />
-        6 weeks (Focus for week number 7-12)
+        3 weeks
       </p>
     </div>
     <div className="pl-xl-5 ">

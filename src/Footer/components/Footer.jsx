@@ -34,7 +34,6 @@ export default () => (
         <a className="color-gray u px--5" href="https://www.facebook.com/pg/ilovecodingorg">Facebook</a>
         <a className="color-gray u px--5" href="https://www.instagram.com/ilovecoding/">Instagram</a>
         <a className="color-gray u px--5" href="https://twitter.com/ilovecodingorg">Twitter</a>
-        <a className="color-gray u px--5" href="https://www.quora.com/profile/Aziz-Ali">Quora</a>
         <a className="color-gray u px--5" href="https://www.youtube.com/c/ILoveCodingOrg">Youtube</a>
       </div>
       <Copyrights />
