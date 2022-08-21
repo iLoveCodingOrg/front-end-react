@@ -35,9 +35,9 @@ export default function () {
               <h3>Start Training</h3>
               <ul className="list-unstyled">
                 <li><Link to="/curriculum">Full Curriculum</Link></li>
-                <li><Link to="/courses/core">Core Training</Link></li>
-                <li><Link to="/courses/projects">Practice Projects</Link></li>
-                <li className="d-inline-block pt--5 mt--5 b bt-1"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
+                {/* <li><Link to="/courses/core">Core Training</Link></li>
+                <li><Link to="/courses/projects">Practice Projects</Link></li> */}
+                <li className="d-inline-block"><Link to="/pages/resources">Tools &amp; Resources</Link></li>
               </ul>
             </div>
 
@@ -48,7 +48,6 @@ export default function () {
             <div>
               <h3>Account Settings</h3>
               <ul className="list-unstyled">
-                <li><Link to="/subscriptions">Subscription Info</Link></li>
                 <li><Link to="/change-password">Change Password</Link></li>
                 <li className="d-inline-block pt--5 mt--5 b bt-1">
                   Contact:

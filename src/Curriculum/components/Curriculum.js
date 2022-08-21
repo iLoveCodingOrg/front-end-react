@@ -6,19 +6,19 @@ import { Video } from '../../Video'
 import Module1 from './Module1'
 import Module2 from './Module2'
 import Module3 from './Module3'
-import Module4 from './Module4'
 import Electives from './Electives'
+import Archieved from './Archieved'
 
 export default () => (
   <div className="flex flex-column">
     <Helmet>
-      <title>The Perfect Curriculum to become a Front-End/Full-Stack JavaScript Developer - iLoveCoding</title>
+      <title>The Full Curriculum to become a professional Front-End Developer - iLoveCoding</title>
       <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
     </Helmet>
     <div className="container mt-1">
-      <h1 className="t-center">The Perfect Curriculum</h1>
+      <h1 className="t-center">The Full Curriculum</h1>
       <h3 className="f-300 t-center mb-2">
-        Go from zero to a professional Front-End and/or Full-Stack JavaScript developer.
+        Go from zero to a professional Front-End developer.
       </h3>
       <div className="b bt-1 pt-2">
         <div>
@@ -31,7 +31,7 @@ export default () => (
         </div>
         <div className="t-center p-0 mb-1">
           <Video videoSource="315031967" />
-          <h5 className="py-1">VIDEO: How to get the most out of The Perfect Curriculum</h5>
+          <h5 className="py-1">VIDEO: How to get the most out of The Full Curriculum</h5>
         </div>
       </div>
       <p>
@@ -60,10 +60,9 @@ export default () => (
       <Cta />
       <Module3 />
       <Cta />
-      <Module4 />
-      <Cta />
       <Electives />
       <Cta />
+      <Archieved />
     </div>
   </div>
 )

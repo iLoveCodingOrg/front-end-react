@@ -20,7 +20,7 @@ function Hero() {
           {/* <h1 className="strong">Sick of cheap courses and expensive bootcamps?</h1> */}
           <h1 className="strong">Skip the cheap courses and the expensive bootcamps.</h1>
           <h3 className="f-300 mt-2">
-            Let me give you a complete step-by-step guide to becoming a confident, job-ready Front-End and/or Full-Stack JavaScript Developer.
+            Let me give you a complete step-by-step guide to becoming a confident, job-ready Front-End Developer.
           </h3>
         </div>
         <div>
