@@ -7,7 +7,7 @@ import { VideoWrap } from '../Video'
 import SourceDemo from '../SourceDemo'
 import Loading from '../Loading'
 import ErrorBox from '../ErrorBox'
-import Comments from '../Comments'
+// import Comments from '../Comments'
 import Cta from '../Cta'
 import { contentTypeToRoute } from '../_app/constants'
 
@@ -111,14 +111,14 @@ export default function View({
             <div className="pt-2 mx-auto">
               <Cta of={of} slug={slug} />
             </div>
-            { of !== 'page' && (
+            {/* { of !== 'page' && (
             <Comments
               of={of}
               id={id}
               title={title}
               url={getAbsUrl(of)}
             />
-            )}
+            )} */}
           </main>
         </>
       )
