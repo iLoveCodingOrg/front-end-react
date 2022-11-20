@@ -2,7 +2,7 @@ input[type=button], input[type=submit], button, .btn{
   color: var(--gray-dark);
   background-color: transparent;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1.1em;
   width: auto;
   height: auto;
   padding: 0.4em 1.2em;
@@ -47,7 +47,6 @@ input[type=button], input[type=submit], button, .btn{
   &.btn-primary, &.btn-blue{
     background-color: var(--blue);
     color: var(--white);
-    border: 1px solid var(--blue-dark);
     &:hover{
       background-color: var(--blue-light);
       color: var(--white);

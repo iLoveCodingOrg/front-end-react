@@ -47,7 +47,7 @@ export default () => (
   <section className="bg-gray-lightest p-2 my-3 b bt-1">
     <div>
       <h2>
-        <small className="d-block color-gray">
+        <small className="d-block color-gray t-uppercase h4">
           Module 3:
         </small>
         Back-End Development

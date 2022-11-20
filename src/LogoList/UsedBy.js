@@ -31,12 +31,12 @@ const data = [
     margin: '',
     padding: '10px 0',
   },
-  {
-    altText: 'Instagram',
-    imgSrc: instagram,
-    margin: '',
-    padding: '10px 0',
-  },
+  // {
+  //   altText: 'Instagram',
+  //   imgSrc: instagram,
+  //   margin: '',
+  //   padding: '10px 0',
+  // },
   {
     altText: 'Microsoft',
     imgSrc: microsoft,
@@ -49,12 +49,12 @@ const data = [
     margin: '',
     padding: '10px 0',
   },
-  {
-    altText: 'Skype',
-    imgSrc: skype,
-    margin: '',
-    padding: '9px 0',
-  },
+  // {
+  //   altText: 'Skype',
+  //   imgSrc: skype,
+  //   margin: '',
+  //   padding: '9px 0',
+  // },
   {
     altText: 'Tesla',
     imgSrc: tesla,

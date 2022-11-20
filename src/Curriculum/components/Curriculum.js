@@ -16,7 +16,7 @@ export default () => (
       <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
     </Helmet>
     <div className="container mt-1">
-      <h1 className="t-center">The Full Curriculum</h1>
+      <h1 className="t-center">The Complete Front-End Development Curriculum</h1>
       <h3 className="f-300 t-center mb-2">
         Go from zero to a professional Front-End developer.
       </h3>

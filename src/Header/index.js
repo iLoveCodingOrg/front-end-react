@@ -219,7 +219,6 @@ function Header({
         p--5
         navbar-light
         mb-4
-        b bb-1
       "
     >
       <div className="flex flex-column md-flex-row align-items-center">

@@ -73,7 +73,6 @@ function SocialProof() {
       </h3>
       <PrintReviews
         containerClasses=""
-        itemClasses="mr--5"
         data={data}
       />
     </div>
