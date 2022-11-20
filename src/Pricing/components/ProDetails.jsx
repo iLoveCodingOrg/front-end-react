@@ -8,7 +8,7 @@ export default () => (
     <div><CheckMark />{' '} Module 1: Fundamentals of Programming and Web</div>
     <div><CheckMark />{' '} Module 2: Modern Front-End Development</div>
     <div><CheckMark />{' '} Module 3: Back-end Development and Databases</div>
-    <div><CheckMark />{' '} Module 5: Electives (Git, Working with API, etc.)</div>
+    <div><CheckMark />{' '} Module 4: Electives (Git, Working with API, etc.)</div>
     <div><CheckMark />{' '} Downloadable Cheat Sheets</div>
     <div><CheckMark />{' '} Downloadable Source Code</div>
     <div><CheckMark />{' '} Access to Homework with solutions walkthrough</div>

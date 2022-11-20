@@ -12,16 +12,16 @@
     transition: width .4s, border-radius .4s;
     display: block;
     overflow: hidden;
-    width: 64px;
-    border-radius: 40px;
+    width: 50px;
+    border-radius: 50px;
   }
   .img-wrap-hover:hover{
-    width: 205px;
+    width: 171px;
     border-radius: 16px;
   }
   img {
-    width: 250px;
-    padding: 16px 7px;
+    width: 208px;
+    padding: 12px 5px;
     background-color: var(--blue);
     vertical-align: top;
     

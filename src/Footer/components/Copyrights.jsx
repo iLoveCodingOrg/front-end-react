@@ -23,11 +23,11 @@ export default ({ className }) => (
     {' '}
     {CURRENT_YEAR}
     {' '}
-    iLoveCoding Inc. ⚡ by drive and commitment.
+    iLoveCoding Inc.
     <Link to="/pages/privacy" className="pl--25 color-gray"><u>Privacy</u></Link>
     <Link to="/pages/terms" className="pl--25 color-gray"><u>Terms</u></Link>
     <div>
-      Have a great
+      Built in 🇵🇰 &amp; 🇺🇸. Have a great
       {' '}
       {getDay()}
       {' '}

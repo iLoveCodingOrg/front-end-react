@@ -15,7 +15,7 @@ export default function ({ id, className }) {
           className="grid"
           style={{
             gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
-            gridGap: '4em',
+            gridGap: '2em',
           }}
         >
           <div>

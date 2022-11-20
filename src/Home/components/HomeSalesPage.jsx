@@ -71,7 +71,7 @@ function HomeSalesPage({
 
       <Header />
       <BuyCTA />
-      <div className="container-fluid mt-3 bg-gray-lightest p-3 b bt-1">
+      <div className="container-fluid mt-3 bg-gray-lighter p-3 b bt-1">
         <SocialProof />
         <StudentCompanies />
       </div>
@@ -164,10 +164,10 @@ function HomeSalesPage({
 
             <div id="guarantee" className="container-fluid py-4 bg-gray-lightest">
               <Guarantee className="container-md" />
+              <BuyCTA />
+              <div className="container-slim p-3"><Testimonials itemNum={1} /></div>
             </div>
 
-            <div className="container-slim p-3"><Testimonials itemNum={1} /></div>
-            <BuyCTA />
 
             {/* <div id="alternatives" className="container-fluid py-4 bg-gray-lighter">
               <WhatDifferent className="container-md" />

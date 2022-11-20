@@ -15,7 +15,7 @@ const Cta = ({
   if (!isLoggedIn) {
     return (
       <div className="card card-warning t-center my-2">
-        <span>Become a confident software developer with guidance!</span>
+        <span className="h4 f-400">Become a confident software developer with mentor support!</span>
         <br />
         <Link to="/pricing" className="btn btn-lg btn-primary my--5">Get Started</Link>
         <br />
