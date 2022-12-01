@@ -24,7 +24,7 @@ function Hero() {
           {' '}
           <u>launch-your-idea-ready</u>
           {' '}
-            Front-End Developer.
+            Full-Stack Developer.
         </h3>
         <Link to="/pricing" className="btn btn-lg btn-primary">Get Started Now</Link>
         <Link to="/pages/how-it-works" className="btn btn-link btn-lg">Or see How it works</Link>

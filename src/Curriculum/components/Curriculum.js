@@ -12,13 +12,13 @@ import Archieved from './Archieved'
 export default () => (
   <div className="flex flex-column">
     <Helmet>
-      <title>The Full Curriculum to become a professional Front-End Developer - iLoveCoding</title>
+      <title>The Full Curriculum to become a professional Full-Stack Developer - iLoveCoding</title>
       <meta name="description" content="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer." />
     </Helmet>
     <div className="container mt-1">
-      <h1 className="t-center">The Complete Front-End Development Curriculum</h1>
+      <h1 className="t-center">The Complete Full-Stack Development Curriculum</h1>
       <h3 className="f-300 t-center mb-2">
-        Go from zero to a professional Front-End developer.
+        Go from zero to a professional Full-Stack developer.
       </h3>
       <div className="b bt-1 pt-2">
         <div>

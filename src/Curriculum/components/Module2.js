@@ -66,7 +66,7 @@ export default () => (
         <li>Build interactive web app front-end</li>
         <li>Integrate your app with any sort of back-end</li>
         <li>Connect your app with any third-party API (whether it is Google, Facebook, etc.)</li>
-        <li>Call yourself a Front-End Developer</li>
+        <li>Call yourself a Front-End or Full-Stack Developer</li>
         <li>Market yourself as a Professional Developer and command a respectable salary</li>
       </ol>
     </div>
