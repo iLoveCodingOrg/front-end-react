@@ -38,7 +38,7 @@ function Home({ isLoggedIn }) {
         />
       </Helmet>
       <div className="mt-2 container container-slim">
-        <h1 className="t-center">Become a Professional Front-End developer in 25 weeks.</h1>
+        <h1 className="t-center">Become a Professional Full-Stack developer in 20 weeks.</h1>
         <p className="h2 f-300">
           The complete training to become a desirable Front-End &amp; Full-Stack JavaScript developer.
         </p>

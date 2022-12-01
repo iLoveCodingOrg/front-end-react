@@ -20,8 +20,10 @@ export const ROUTES_WITHOUT_CTA = [
 ]
 
 export const content = {
-  mainProductName: 'Front-End Professional',
+  mainProductName: 'Full-Stack Mastery',
+  link: 'https://checkout.ilovecoding.org/full-stack-mastery',
   refundPolicy: '7-day',
+  price: 99,
   numberOfProjects: 30,
   hoursOfVideo: 40,
   numberOfLessons: 500,
