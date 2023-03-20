@@ -77,7 +77,7 @@ function renderApp() {
               <Route exact strict path="/reset-password/:accessToken" component={withAuth(ResetPassword, false)} />
               <Route exact strict path="/login" component={withAuth(Login, false)} />
               <Route exact strict path="/signup" component={withAuth(Signup, false)} />
-              <Route exact strict path="/checkout/:slug" component={withAuth(Checkout, false)} />
+              {/* <Route exact strict path="/checkout/:slug" component={withAuth(Checkout, false)} /> */}
               <Route strict path="/webinar" component={withAuth(Webinar, false)} />
               <Wrap>
                 <Switch>
