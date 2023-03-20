@@ -7,8 +7,6 @@ import { Route } from 'react-router-dom'
 import Breadcrumbs from '../../Breadcrumbs'
 import { getSubscriptionById } from '../actions'
 import ViewGeneral from './ViewGeneral'
-import UpdateCard from './UpdateCard'
-import withAuth from '../../withAuth'
 
 function SubscriptionView({ match }) {
   const { id } = match.params
@@ -49,12 +47,6 @@ function SubscriptionView({ match }) {
           strict
           path="/subscriptions/:id"
           component={ViewGeneral}
-        />
-        <Route
-          exact
-          strict
-          path="/subscriptions/:id/update-card"
-          component={withAuth(UpdateCard, false)}
         />
       </section>
     </div>
