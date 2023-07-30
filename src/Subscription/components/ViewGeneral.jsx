@@ -3,15 +3,13 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import { getSubscriptionById } from '../actions'
-import Transactions from './Transactions'
 import Loading from '../../Loading'
-import PaymentMethodInfo from './PaymentMethodInfo'
 
 function ViewGeneral({
   getSubscription, isLoading, error, view, subscriptionId,
 }) {
   const {
-    plan, transactions, active, paymentMethod,
+    plan, active,
   } = view
 
   useEffect(() => {
@@ -56,22 +54,6 @@ function ViewGeneral({
                 {plan && plan.description}
               </p>
             </div>
-
-            <div>
-              <h3>Payment Method on file</h3>
-              {subscriptionId && paymentMethod && (
-                <PaymentMethodInfo
-                  subscriptionId={subscriptionId}
-                  creditCard={paymentMethod.creditCard}
-                  paypal={paymentMethod.paypal}
-                  showUpdateBtn
-                />
-              )}
-            </div>
-          </div>
-          <div>
-            <h3>Transactions</h3>
-            {transactions && <Transactions data={transactions} />}
           </div>
         </>
         )}

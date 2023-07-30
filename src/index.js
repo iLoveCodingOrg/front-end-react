@@ -28,7 +28,6 @@ import BlogRoutes from './Blog'
 import PageRoutes, { AsyncNotFound as NotFound } from './Page'
 import Login from './Login'
 import Signup from './Signup'
-import Checkout from './Checkout'
 import VerifyEmail from './VerifyEmail'
 import {
   AsyncResetPassword as ResetPassword,
@@ -77,7 +76,6 @@ function renderApp() {
               <Route exact strict path="/reset-password/:accessToken" component={withAuth(ResetPassword, false)} />
               <Route exact strict path="/login" component={withAuth(Login, false)} />
               <Route exact strict path="/signup" component={withAuth(Signup, false)} />
-              {/* <Route exact strict path="/checkout/:slug" component={withAuth(Checkout, false)} /> */}
               <Route strict path="/webinar" component={withAuth(Webinar, false)} />
               <Wrap>
                 <Switch>
