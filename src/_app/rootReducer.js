@@ -17,7 +17,6 @@ export default combineReducers({
   questions,
   lessons,
   courses,
-  checkout,
   verifyEmail,
   user,
   offer,
