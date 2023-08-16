@@ -6,7 +6,7 @@ import { parse } from 'qs'
  * @returns {*} json
  */
 export function parseJSON(response) {
-  return response.json() || response
+  return response?.json() || response
 }
 
 

@@ -8,7 +8,7 @@ export const isLoggedIn = createSelector([emailHash], emailHash => (!!(emailHash
 export const getLevel = createSelector([activePlans], (activePlans) => {
   let type = 'free'
 
-  if (activePlans.length) {
+  if (activePlans?.length) {
     const isPremium = activePlans.some(plan => plan.isGroupCalls)
 
     if (isPremium) {
