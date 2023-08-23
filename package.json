@@ -13,6 +13,7 @@
     "start:stage": "API_URL=https://api2.ilovecoding.org/api/ ./node_modules/parcel/bin/cli.js --no-cache ./src/index.html",
     "start:prod": "API_URL=https://api.ilovecoding.org/api/ ./node_modules/parcel/bin/cli.js --no-cache ./src/index.html",
     "prebuild": "rm -rf build",
+    "build:dev": "API_URL=https://api2.ilovecoding.org/api/ ./node_modules/parcel/bin/cli.js build --no-cache --no-source-maps --public-url=/ --out-dir=build ./src/index.html",
     "build": "API_URL=https://api.ilovecoding.org/api/ ./node_modules/parcel/bin/cli.js build --no-cache --no-source-maps --public-url=/ --out-dir=build ./src/index.html",
     "postbuild": "cp _copyConfigs/_redirects build/_redirects && cp _copyConfigs/robots.txt build/robots.txt && cp _copyConfigs/* build/"
   },
