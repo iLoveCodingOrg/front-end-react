@@ -223,14 +223,13 @@ export function setUser(error = false, user) {
     action.payload = {
       error,
       user: {
-        braintreeCustomerId: userData.braintreeCustomerId,
-        email: userData.email,
-        emailHash: userData.emailHash,
-        emailVerified: userData.emailVerified,
-        firstName: userData.firstName,
-        lastName: userData.lastName,
-        roles: userData.roles.map(item => item.name),
-        activePlans: userData.purchases.map(item => item.products),
+        email: userData?.email,
+        emailHash: userData?.emailHash,
+        emailVerified: userData?.emailVerified,
+        firstName: userData?.firstName,
+        lastName: userData?.lastName,
+        roles: userData?.roles?.map(item => item.name),
+        activePlans: userData?.purchases?.map(item => item.products),
       },
     }
   }

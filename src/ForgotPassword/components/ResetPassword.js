@@ -109,8 +109,8 @@ class ResetPassword extends React.Component {
               <hr />
               <form onSubmit={this.handleSubmit}>
                 {this.renderError()}
-                <div className="form-group">
-                  <label htmlFor="email">Confirm Email</label>
+                <div className="py--5">
+                  <label className="pb--25" htmlFor="email">Confirm Email</label>
                   <div>
                     <input
                       id="email"
@@ -123,8 +123,8 @@ class ResetPassword extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="password">New Password</label>
+                <div className="py--5">
+                  <label className="pb--25" htmlFor="password">New Password</label>
                   <div>
                     <input
                       id="password"
@@ -137,8 +137,8 @@ class ResetPassword extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="confirmPassword">
+                <div className="py--5">
+                  <label className="pb--25" htmlFor="confirmPassword">
                     Confirm New Password
                   </label>
                   <div>
