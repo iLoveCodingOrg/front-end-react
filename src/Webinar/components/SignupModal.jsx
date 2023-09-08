@@ -2,7 +2,6 @@ import React from 'react'
 import Modal from 'react-modal'
 import ProgressBar from '../../ProgressBar'
 import { MarketingFormApi } from '../../MarketingForm'
-import withLocation from '../../_user/withLocation'
 
 function SignupModal({ isModalOpen, closeModal }) {
   Modal.setAppElement('#app')
@@ -53,4 +52,4 @@ function SignupModal({ isModalOpen, closeModal }) {
 }
 
 // export default SignupModal
-export default withLocation(SignupModal)
+export default SignupModal

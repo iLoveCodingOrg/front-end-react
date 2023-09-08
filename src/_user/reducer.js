@@ -16,16 +16,6 @@ const initialState = {
   error: false,
   isLoading: false,
   verifyEmailStatus: '',
-  location: {
-    ip: null,
-    latitude: null,
-    longitude: null,
-    timeZone: {},
-    countryCode: null,
-    city: null,
-    region: null,
-    regionCode: null,
-  },
 }
 
 export default function (state = initialState, { type, payload }) {
@@ -46,16 +36,6 @@ export default function (state = initialState, { type, payload }) {
     case SET_USER_LOCATION:
       return {
         ...state,
-        location: {
-          ip: payload.data.ip,
-          latitude: payload.data.latitude,
-          longitude: payload.data.longitude,
-          timeZone: payload.data.timeZone,
-          countryCode: payload.data.countryCode,
-          city: payload.data.city,
-          region: payload.data.region,
-          regionCode: payload.data.regionCode,
-        },
       }
     case CLEAR_USER:
       return initialState
