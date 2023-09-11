@@ -12,6 +12,7 @@ const initialState = {
   lastName: '',
   email: '',
   emailHash: '',
+  role: 'user', // 'user' | 'admin'
   activePlans: [],
   error: false,
   isLoading: false,

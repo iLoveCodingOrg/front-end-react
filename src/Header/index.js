@@ -195,8 +195,7 @@ function Header({
   )
 
   const renderAdminLinks = () => {
-    const { roles } = user
-    if (isEmpty(roles) || roles[0] !== 'admin') return null
+    if (user.role !== 'admin') return null
 
     return (
       <div>

@@ -228,7 +228,7 @@ export function setUser(error = false, user) {
         emailVerified: userData?.emailVerified,
         firstName: userData?.firstName,
         lastName: userData?.lastName,
-        roles: userData?.roles?.map(item => item.name),
+        role: userData?.role,
         activePlans: userData?.purchases?.map(item => item.products),
       },
     }

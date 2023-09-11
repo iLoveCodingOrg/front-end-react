@@ -12,7 +12,6 @@ import CourseNav from './CourseNav'
 import SourceDemo from '../../SourceDemo'
 import Loading from '../../Loading'
 import ErrorBox from '../../ErrorBox'
-// import Comments from '../../Comments'
 import Cta from '../../Cta'
 import Breadcrumbs from '../../Breadcrumbs'
 

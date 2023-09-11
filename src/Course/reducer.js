@@ -36,7 +36,10 @@ export default function (state = initialState, { type, payload }) {
         view: {
           isLoading: false,
           error: payload.error,
-          data: payload.data,
+          data: {
+            ...payload.data,
+            lessonCount: payload.data.lessons.length,
+          },
         },
       }
     case CLEAR_COURSE:
