@@ -148,12 +148,12 @@ function Header({
       //   className: 'nav-link btn btn-400 py--25',
       //   style: {},
       // },
-      {
-        label: 'Free Stuff',
-        link: '/free',
-        className: 'nav-link btn btn-400 py--25',
-        style: {},
-      },
+      // {
+      //   label: 'Free Stuff',
+      //   link: '/free',
+      //   className: 'nav-link btn btn-400 py--25',
+      //   style: {},
+      // },
       {
         label: 'Login',
         link: '/login',
