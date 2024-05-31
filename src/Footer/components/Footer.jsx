@@ -26,7 +26,7 @@ export default () => (
         <span className="strong pr--25">Company</span>
         <Link to="/blog" className="color-gray u px--5">Blog</Link>
         <Link to="/pages/about" className="color-gray u px--5">About us</Link>
-        <Link to="/pages/affiliates" className="color-gray u px--5">Affiliates</Link>
+        {/* <Link to="/pages/affiliates" className="color-gray u px--5">Affiliates</Link> */}
         <a className="color-gray u px--5" href="mailto:support@ilovecoding.org">support@ilovecoding.org</a>
       </div>
       <div className="my--5">
