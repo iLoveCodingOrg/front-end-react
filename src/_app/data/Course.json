@@ -1,0 +1,1451 @@
+[
+  {
+    "_id": "5b28217789a15256b501b33b",
+    "slug": "react-timer-app",
+    "subTitle": "Let's build a practical Timer App with React",
+    "thumbnail": "react/react18-project-timer.png",
+    "title": "Project: Building a Timer App with React",
+    "courseTotalDuration": "31:44",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-06-18T21:17:43.804Z"
+    },
+    "updatedIso": {
+      "$date": "2018-06-18T21:26:40.73Z"
+    },
+    "technology": [
+      "React"
+    ],
+    "topic": [
+      "Front-End",
+      "React",
+      "Project"
+    ],
+    "lesson": [
+      "5a74a51322183100147c5db8",
+      "5a74a53c22183100147c5db9",
+      "5a74a55322183100147c5dba",
+      "5a74a56d22183100147c5dbb",
+      "5a74a58122183100147c5dbc"
+    ],
+    "videoSource": "none"
+  },
+  {
+    "_id": "5c13bac9637a2c6acef5b67d",
+    "slug": "full-cover-background-image",
+    "subTitle": "In this video you will learn how to set a Full Screen Background Image on your website. Similar designs are used in landing pages.",
+    "duration": "0:0",
+    "videoSource": "none",
+    "thumbnail": "fullCoverBackgroundImage.png",
+    "bodyContent": "",
+    "title": "Project: Full Cover Background Image",
+    "courseTotalDuration": "10:0",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2018-12-14T14:14:33.095Z"
+    },
+    "technology": [
+      "HTML/CSS"
+    ],
+    "topic": [
+      "Front-End",
+      "Project"
+    ],
+    "lesson": [
+      "5622d2188795649145fce183"
+    ]
+  },
+  {
+    "_id": "5b282f9d89a15256b501b33d",
+    "slug": "expressjs-notes-app",
+    "subTitle": "You will build a portfolio ready Note Taking application where users can register their account, login and create notes within this app.",
+    "thumbnail": "express-p/express-p1-setup.jpg",
+    "title": "Project: Build a Note Taking App with Express.js",
+    "courseTotalDuration": "150:46",
+    "access": 0,
+    "level": 2,
+    "createdIso": {
+      "$date": "2018-06-18T22:18:05.506Z"
+    },
+    "updatedIso": {
+      "$date": "2018-06-18T23:25:00.057Z"
+    },
+    "technology": [
+      "Express.js",
+      "Web API",
+      "database",
+      "MongoDB",
+      "Passport.js"
+    ],
+    "topic": [
+      "Back-End",
+      "Express.js",
+      "Project"
+    ],
+    "lesson": [
+      "5ac3e04fb9773a0014e29f2c",
+      "5ac3e1c4b9773a0014e29f2d",
+      "5ac3e241b9773a0014e29f2e",
+      "5ac3e275b9773a0014e29f2f",
+      "5ac3e2e9b9773a0014e29f31",
+      "5ac3e38db9773a0014e29f32",
+      "5ac3e3bbb9773a0014e29f33",
+      "5ac3e3dbb9773a0014e29f34",
+      "5ac3e40bb9773a0014e29f35",
+      "5ac3e43cb9773a0014e29f36",
+      "5ac3e58eb9773a0014e29f37",
+      "5ac3e5deb9773a0014e29f38",
+      "5ac3e616b9773a0014e29f39",
+      "5ac3e64bb9773a0014e29f3a",
+      "5ac3e6b0b9773a0014e29f3b",
+      "5ac3e6d3b9773a0014e29f3c",
+      "5ac3e6fbb9773a0014e29f3d",
+      "5ac3e72cb9773a0014e29f3e",
+      "5ac3e75db9773a0014e29f3f",
+      "5ac3e790b9773a0014e29f40",
+      "5ac3e7bcb9773a0014e29f41",
+      "5ac3e7e4b9773a0014e29f42",
+      "5ac3e808b9773a0014e29f43",
+      "5ac3e82fb9773a0014e29f44",
+      "5ac3e862b9773a0014e29f45",
+      "5ac3e8a7b9773a0014e29f46",
+      "5ac3e8e4b9773a0014e29f47",
+      "5ac3e902b9773a0014e29f48",
+      "5ac3e93cb9773a0014e29f49",
+      "5ac3e969b9773a0014e29f4a"
+    ],
+    "videoSource": "none"
+  },
+  {
+    "_id": "5c13b40f637a2c6acef5b67b",
+    "slug": "calculator",
+    "subTitle": "We will build a fully functioning Basic Calculator with jQuery. Learn how to use all the basic concepts of JavaScript and building something practical and ready for launch.",
+    "duration": "0:0",
+    "videoSource": "none",
+    "thumbnail": "calculator.png",
+    "bodyContent": "<div class=\"alert alert-warning\"><strong>To understand this lesson, You must know</strong>&nbsp;how to use Variable,&nbsp;Function, Arrays, Document-Object-Model, and Basic HTML. <a title=\"Learn JavaScript in 14 Days\" href=\"https://ilovecoding.org/courses/js2\">Learn JavaScript Correctly</a>, and <a title=\"Learn JavaScript in 14 Days\" href=\"https://ilovecoding.org/courses/learn-jquery-in-14-days\">Learn jQuery in 14 days</a>&nbsp;would be a good pre-requisite course to take before&nbsp;you do this project.</div>",
+    "title": "Project: Build a Calculator App with jQuery",
+    "courseTotalDuration": "35:3",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-12-14T13:45:51.269Z"
+    },
+    "technology": [
+      "jQuery"
+    ],
+    "topic": [
+      "jQuery",
+      "Front-End",
+      "Project"
+    ],
+    "lesson": [
+      "56270c6db8d7393405e4050e"
+    ],
+    "updatedIso": {
+      "$date": "2018-12-24T22:51:53.688Z"
+    }
+  },
+  {
+    "_id": "5b29677b89a15256b501b33f",
+    "slug": "snake-game",
+    "subTitle": "Let's build a snake game. In this process you will learn how to organize your code into small manageable chunks. You will learn about the HTML5 Canvas element and most importantly, how to break a problem down into logical chunks and then solve it to build a practical app.",
+    "videoSource": "none",
+    "thumbnail": "snakegame.jpg",
+    "title": "Project: Build Your Own Snake Game with JavaScript",
+    "courseTotalDuration": "46:52",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-06-19T20:28:43.847Z"
+    },
+    "updatedIso": {
+      "$date": "2019-01-07T17:37:22.897Z"
+    },
+    "technology": [
+      "Core JavaScript"
+    ],
+    "topic": [
+      "Project",
+      "Front-End",
+      "JavaScript",
+      "Project"
+    ],
+    "lesson": [
+      "56270d99b8d7393405e40512",
+      "56270d65b8d7393405e40511",
+      "56270d0db8d7393405e40510"
+    ]
+  },
+  {
+    "_id": "5b28327e89a15256b501b33e",
+    "slug": "react-native-crypto-price",
+    "subTitle": "You will build a portfolio ready Cryptocurrency Price Checker Mobile App with React Native. This app will be compatible with Android and iOS devices both.",
+    "videoSource": "//player.vimeo.com/video/269740815",
+    "thumbnail": "react-native/44-crypro-intro.jpg",
+    "title": "Project: Create a cryptocurrency price checker app with React Native",
+    "courseTotalDuration": "48:37",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-06-18T22:30:22.891Z"
+    },
+    "updatedIso": {
+      "$date": "2018-06-18T22:41:38.096Z"
+    },
+    "technology": [
+      "React",
+      "React Native"
+    ],
+    "topic": [
+      "Mobile Apps",
+      "Android",
+      "iOS",
+      "React",
+      "React Native",
+      "Project"
+    ],
+    "lesson": [
+      "5afb6fc007ff3d0014610fec",
+      "5afb6fdd07ff3d0014610fed",
+      "5afb6ffb07ff3d0014610fee",
+      "5afb701e07ff3d0014610fef",
+      "5afb753f07ff3d0014610ff1",
+      "5afb756c07ff3d0014610ff2",
+      "5afb758a07ff3d0014610ff3",
+      "5afb75a707ff3d0014610ff4",
+      "5afb75c607ff3d0014610ff5",
+      "5afb75e107ff3d0014610ff6",
+      "5afb760107ff3d0014610ff7"
+    ]
+  },
+  {
+    "_id": "581009d46cb3fb000fd19bc4",
+    "slug": "react",
+    "subTitle": "The practical React.js training to build modern web applications of today. This training is newbie friendly and covers advanced techniques to build professional web apps.",
+    "videoSource": "//player.vimeo.com/video/253694382",
+    "thumbnail": "react/react0-intro.png",
+    "sourceUrl": "N/A",
+    "demoUrl": "0",
+    "bodyContent": "",
+    "title": "Learn React JS in 14 days",
+    "courseTotalDuration": "234:30",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2017-10-26T01:41:40.483Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:52:54.063Z"
+    },
+    "technology": [
+      "React"
+    ],
+    "topic": [
+      "React",
+      "Front-End",
+      "Core Training"
+    ],
+    "lesson": [
+      "5a726943b736b600141cd21e",
+      "5a726aaeb736b600141cd21f",
+      "5a726c2eb736b600141cd220",
+      "5a726c85b736b600141cd221",
+      "5a726ccfb736b600141cd222",
+      "5a726d2cb736b600141cd223",
+      "5a726da8b736b600141cd224",
+      "5a726e25b736b600141cd225",
+      "5a726e7fb736b600141cd226",
+      "5a726ec9b736b600141cd227",
+      "5a726f39b736b600141cd228",
+      "5a727003b736b600141cd229",
+      "5a727067b736b600141cd22a",
+      "5a7270beb736b600141cd22b",
+      "5a727116b736b600141cd22c",
+      "5a7271ccb736b600141cd22d",
+      "5a72722db736b600141cd22e",
+      "5a727277b736b600141cd22f",
+      "5a7272b9b736b600141cd230",
+      "5a7272e2b736b600141cd231",
+      "5a7273cfb736b600141cd232",
+      "5a72743bb736b600141cd233",
+      "5a74a49522183100147c5db6",
+      "5a727495b736b600141cd234",
+      "5a74a51322183100147c5db8",
+      "5a74a53c22183100147c5db9",
+      "5a74a55322183100147c5dba",
+      "5a74a56d22183100147c5dbb",
+      "5a74a58122183100147c5dbc",
+      "5a727549b736b600141cd235",
+      "5a727587b736b600141cd236",
+      "5a7275d1b736b600141cd237",
+      "5a74a5d622183100147c5dbd",
+      "5a74a65d22183100147c5dbe",
+      "5a74a68422183100147c5dbf",
+      "5a74a6bb22183100147c5dc0",
+      "5a74a6cc22183100147c5dc1",
+      "5a74a76e22183100147c5dc2"
+    ],
+    "order": 27.0
+  },
+  {
+    "_id": "57c7a3b10809620f00da7bc5",
+    "slug": "git",
+    "subTitle": "Go from zero to getting comfortable with using Git. Git will help you track your code changes, and even help multiple developers work on the same codebase.",
+    "videoSource": "//player.vimeo.com/video/180691477",
+    "thumbnail": "git-intro.png",
+    "sourceUrl": "",
+    "demoUrl": "",
+    "bodyContent": "<h2>Git cheatsheet</h2><p><a href=\"https://docs.google.com/spreadsheets/d/1ImCkeSTAfTpVnNsgSm7saOFE73iWJM0Hux_9ye_NoS4/edit?usp=sharing\">Click here to access the Git Cheatsheet</a></p>",
+    "title": "Getting Good with Git",
+    "courseTotalDuration": "93:12",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2016-02-05T00:00:00Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:53:20.062Z"
+    },
+    "technology": [
+      "git"
+    ],
+    "topic": [
+      "Crash Course",
+      "Elective",
+      "Code Management",
+      "git",
+      "Core Training"
+    ],
+    "lesson": [
+      "57c64cb61cbef70f008a10e4",
+      "57c650d21cbef70f008a10e5",
+      "57c6537d1cbef70f008a10e6",
+      "57c654661cbef70f008a10e7",
+      "57c655521cbef70f008a10e8",
+      "57c655c11cbef70f008a10e9",
+      "57c657d61cbef70f008a10ea",
+      "57c658391cbef70f008a10eb",
+      "57c658ed1cbef70f008a10ec",
+      "57c659851cbef70f008a10ed",
+      "57c65a191cbef70f008a10ee",
+      "57c65ad81cbef70f008a10ef",
+      "57c65b231cbef70f008a10f0",
+      "57c65b921cbef70f008a10f1",
+      "57ca4f5c885dc30f0077cae7",
+      "57c65bf11cbef70f008a10f2",
+      "57c65c7b1cbef70f008a10f3"
+    ],
+    "order": 20.0
+  },
+  {
+    "_id": "560724c769c23a4b56604572",
+    "slug": "learn-angular-js-in-14-days",
+    "subTitle": "Make modern web apps and Single-Page Apps with AngularJS, and become a ninja developer in the process.",
+    "videoSource": "//player.vimeo.com/video/126777887",
+    "thumbnail": "learnAngular-1-intro.png",
+    "sourceUrl": "",
+    "demoUrl": "",
+    "bodyContent": "",
+    "title": "Learn AngularJS in 14 days (Archived)",
+    "courseTotalDuration": "125:53",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2015-11-06T23:05:43.505Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:54:04.004Z"
+    },
+    "technology": [
+      "Angular JS",
+      "Front-End"
+    ],
+    "topic": [
+      "Crash Course",
+      "Front-End",
+      "Angular JS",
+      "Core Training"
+    ],
+    "lesson": [
+      "56271c3012c48c7105503800",
+      "56271c6b12c48c7105503801",
+      "56271c9312c48c7105503802",
+      "56271cc112c48c7105503803",
+      "56271ce512c48c7105503804",
+      "56271d0e12c48c7105503805",
+      "56271da212c48c7105503806",
+      "56271dcc12c48c7105503807",
+      "56271dff12c48c7105503808",
+      "56271e1712c48c7105503809",
+      "56271e4012c48c710550380a",
+      "56271e6012c48c710550380b",
+      "56271e8612c48c710550380c",
+      "56271ea912c48c710550380d",
+      "56271ec612c48c710550380e"
+    ],
+    "order": 100.0
+  },
+  {
+    "_id": "562092d577eef33c1aebc737",
+    "slug": "learn-master-bootstrap-in-a-week",
+    "subTitle": "Learn the most popular CSS Framework in the world, Bootstrap in one week.",
+    "videoSource": "//player.vimeo.com/video/124503183",
+    "thumbnail": "bootstrap-1-intro.png",
+    "sourceUrl": "",
+    "demoUrl": "",
+    "bodyContent": "<p><br></p>",
+    "title": "Learn Bootstrap in a week (Archived)",
+    "courseTotalDuration": "126:16",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2015-11-01T06:01:57.289Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:54:14.146Z"
+    },
+    "technology": [
+      "HTML",
+      "CSS"
+    ],
+    "topic": [
+      "Crash Course",
+      "Front-End",
+      "Core Training"
+    ],
+    "lesson": [
+      "562d2132995935f23b5c56e4",
+      "562d2178995935f23b5c56e5",
+      "562d21ab995935f23b5c56e6",
+      "562d227d995935f23b5c56e7",
+      "562d22b6995935f23b5c56e8",
+      "562d22f8995935f23b5c56e9",
+      "562d23a0995935f23b5c56ea",
+      "562d2445995935f23b5c56eb",
+      "562d2499995935f23b5c56ec",
+      "562d24c8995935f23b5c56ed",
+      "562d2516995935f23b5c56ee",
+      "562d258d995935f23b5c56ef"
+    ],
+    "order": 19.0
+  },
+  {
+    "_id": "562713af12c48c71055037fe",
+    "slug": "htmlcss",
+    "subTitle": "Become a  Web Designer - In this course, you will learn HTML and CSS, which are the languages used build websites. By the end of this course you will know how to make a modern looking website. You will have all the knowledge to create a personal portfolio website, or even create small business website for yourself or your client.",
+    "videoSource": "//player.vimeo.com/video/115674370",
+    "thumbnail": "HTMLCSS14-1-intro.png",
+    "sourceUrl": "",
+    "demoUrl": "",
+    "bodyContent": "",
+    "title": "Learn HTML & CSS in 14 days (Archived)",
+    "courseTotalDuration": "181:22",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2015-10-21T04:25:19.581Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:55:27.98Z"
+    },
+    "technology": [
+      "HTML",
+      "CSS"
+    ],
+    "topic": [
+      "Front-End",
+      "Core Training"
+    ],
+    "lesson": [
+      "562d422d51e467f0010e527b",
+      "562d428a51e467f0010e527c",
+      "562d42b851e467f0010e527d",
+      "562d42e251e467f0010e527e",
+      "562d430a51e467f0010e527f",
+      "562d432c51e467f0010e5280",
+      "562d434e51e467f0010e5281",
+      "562d43ae51e467f0010e5282",
+      "562d43d951e467f0010e5283",
+      "562d440051e467f0010e5284",
+      "562d442b51e467f0010e5285",
+      "562d445051e467f0010e5286",
+      "562d446f51e467f0010e5287",
+      "562d449351e467f0010e5288",
+      "562d44b851e467f0010e5289",
+      "562d44dc51e467f0010e528a",
+      "562d450051e467f0010e528b",
+      "562d451f51e467f0010e528c",
+      "562d454451e467f0010e528d",
+      "562d457c51e467f0010e528e",
+      "562d45a351e467f0010e528f"
+    ],
+    "order": 101.0
+  },
+  {
+    "_id": "57ef318ebbd56d000f0e84c7",
+    "slug": "object-oriented-javascript",
+    "subTitle": "Learn the 3 core principals of OOP JavaScript, and learn how to apply them to write fast apps while writing less code.",
+    "videoSource": "//player.vimeo.com/video/185100067",
+    "thumbnail": "oopjs.gif",
+    "sourceUrl": "",
+    "demoUrl": "",
+    "bodyContent": "",
+    "title": "Learn Object Oriented Programming with JavaScript (Archived)",
+    "courseTotalDuration": "18:46",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2015-11-04T03:46:22.924Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:54:09.519Z"
+    },
+    "technology": [
+      "Core Javascript",
+      ""
+    ],
+    "topic": [
+      "Crash Course",
+      "Elective",
+      "Javascript",
+      "Core Training"
+    ],
+    "lesson": [
+      "57ef2ee9bbd56d000f0e84c4",
+      "57ef2fb5bbd56d000f0e84c5",
+      "57ef3066bbd56d000f0e84c6"
+    ],
+    "order": 100.0
+  },
+  {
+    "_id": "581010716cb3fb000fd19bc5",
+    "slug": "use-web-api",
+    "subTitle": "Make your app leverage the power of other apps (like Youtube, Mailchimp, Stripe, Facebook, you name it). Whether it be Posting a Tweets through your app, Send Emails using Mailchimp or Process Payments via Stripe, Web API is the road to it all.",
+    "videoSource": "//player.vimeo.com/video/201799351",
+    "thumbnail": "api1-intro.jpg",
+    "sourceUrl": "0",
+    "demoUrl": "0",
+    "bodyContent": "<p>Course parts:</p><ul><li>Learn to use any Web API - Part 1 (This course)</li><li><a href=\"https://ilovecoding.org/courses/use-web-api-part2/\">Learn to use any Web API - Part 2</a></li></ul>",
+    "title": "Learn to use any Web API - Part 1 (Archived)",
+    "courseTotalDuration": "91:54",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2016-01-01T00:00:00Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:53:37.161Z"
+    },
+    "technology": [
+      "Web API"
+    ],
+    "topic": [
+      "Web Fundamentals",
+      "Crash Course",
+      "Core Training"
+    ],
+    "lesson": [
+      "58b3def04d0bd100102f06b7",
+      "58b3dfe14d0bd100102f06b8",
+      "58b3e0604d0bd100102f06b9",
+      "58b3e0df4d0bd100102f06ba",
+      "58b3e16c4d0bd100102f06bb",
+      "58b3e22d4d0bd100102f06bc",
+      "58b3e2eb4d0bd100102f06bd",
+      "58b3e4a34d0bd100102f06be"
+    ],
+    "order": 91.0
+  },
+  {
+    "_id": "5bccaece21305f0013c19113",
+    "slug": "js2",
+    "subTitle": "JavaScript is a must-know programming language for a modern developer. With clearly explained concepts in short and to the point screencast videos, learn the basic and advanced concepts of modern JavaScript (ES6+ concepts included). Build professional-grade apps and while getting prepared to answer tough interview questions. (Cheatsheets, references, and tools included.)",
+    "videoSource": "296198422",
+    "thumbnail": "js2.gif",
+    "title": "Learn JavaScript Correctly - Beginner to Advance",
+    "courseTotalDuration": "638:43",
+    "access": 0,
+    "level": 2,
+    "createdIso": {
+      "$date": "2018-10-21T16:52:30.75Z"
+    },
+    "technology": [
+      "JavaScript"
+    ],
+    "topic": [
+      "Core JavaScript",
+      "Front-End",
+      "Core Training"
+    ],
+    "lesson": [
+      "5bcdfb64fad50100136003f5",
+      "5bcdfb85fad50100136003f6",
+      "5bcdfb94fad50100136003f7",
+      "5bcdfb9ffad50100136003f8",
+      "5bcdfbadfad50100136003f9",
+      "5bcdfbb9fad50100136003fa",
+      "5bcdfde4fad50100136003fb",
+      "5bcdfe0efad50100136003fc",
+      "5bcdfe1ffad50100136003fd",
+      "5bcdfe2ffad50100136003fe",
+      "5bcdfe43fad50100136003ff",
+      "5bcdfe51fad5010013600400",
+      "5bcdfe5bfad5010013600401",
+      "5bcdfe9dfad5010013600402",
+      "5bcdfeb0fad5010013600403",
+      "5bcdfebbfad5010013600404",
+      "5bcdfecdfad5010013600405",
+      "5bcdfed9fad5010013600406",
+      "5bcdfeeafad5010013600407",
+      "5bcdfef8fad5010013600408",
+      "5bcdff05fad5010013600409",
+      "5bcdff12fad501001360040a",
+      "5bcdff1efad501001360040b",
+      "5bcdff2cfad501001360040c",
+      "5bcdff3cfad501001360040d",
+      "5bcdff59fad501001360040e",
+      "5bcdff69fad501001360040f",
+      "5bcdff77fad5010013600410",
+      "5bcdff84fad5010013600411",
+      "5bcdff91fad5010013600412",
+      "5bcdff9efad5010013600413",
+      "5bcdffadfad5010013600414",
+      "5bcdffb8fad5010013600415",
+      "5bcdffc2fad5010013600416",
+      "5bcdffcefad5010013600417",
+      "5bcdffdbfad5010013600418",
+      "5bcdffe6fad5010013600419",
+      "5bcdfff1fad501001360041a",
+      "5bcdfffcfad501001360041b",
+      "5bce0005fad501001360041c",
+      "5bce0022fad501001360041d",
+      "5bce0253fad501001360041e",
+      "5bce0265fad501001360041f",
+      "5bce0273fad5010013600420",
+      "5bce027efad5010013600421",
+      "5bce0288fad5010013600422",
+      "5bce0291fad5010013600423",
+      "5bce02a6fad5010013600424",
+      "5bce02bafad5010013600425",
+      "5bce02ccfad5010013600426",
+      "5bce0332fad5010013600427",
+      "5bce033dfad5010013600428",
+      "5bce0347fad5010013600429",
+      "5bce0355fad501001360042a",
+      "5bce0360fad501001360042b",
+      "5bce036efad501001360042c",
+      "5bce0379fad501001360042d",
+      "5bce0383fad501001360042e",
+      "5bce0392fad501001360042f",
+      "5bce039cfad5010013600430",
+      "5bce03b7fad5010013600431",
+      "5bce03c4fad5010013600432",
+      "5bce03d3fad5010013600433",
+      "5bce03ddfad5010013600434",
+      "5bce03e6fad5010013600435",
+      "5bce03f2fad5010013600436",
+      "5bce03fbfad5010013600437",
+      "5bce0407fad5010013600438",
+      "5bce0415fad5010013600439",
+      "5bce0422fad501001360043a",
+      "5bce042dfad501001360043b",
+      "5bce0437fad501001360043c",
+      "5bce0443fad501001360043d",
+      "5bce0451fad501001360043e",
+      "5bce045dfad501001360043f",
+      "5bce0467fad5010013600440",
+      "5bce0472fad5010013600441",
+      "5bce048afad5010013600442",
+      "5bd0d1a9c80e1e0013cd2c3a",
+      "5bce0495fad5010013600443",
+      "5bce04a1fad5010013600444",
+      "5bce04acfad5010013600445",
+      "5bec3a1e9b376b0013455f8a",
+      "5bec3a909b376b0013455f8b",
+      "5bec3aad9b376b0013455f8c",
+      "5bec3ac59b376b0013455f8d",
+      "5bec3af99b376b0013455f8e",
+      "5bec3b089b376b0013455f8f",
+      "5bec3b159b376b0013455f90",
+      "5bec3b229b376b0013455f91",
+      "5bec3b2e9b376b0013455f92",
+      "5bec3b389b376b0013455f93",
+      "5bec3b479b376b0013455f94",
+      "5bec3b5a9b376b0013455f95",
+      "5bec3b669b376b0013455f96",
+      "5bec3b739b376b0013455f97",
+      "5bec3b839b376b0013455f98",
+      "5bec3b949b376b0013455f99",
+      "5bec3b9e9b376b0013455f9a",
+      "5bec3baa9b376b0013455f9b",
+      "5bec3bba9b376b0013455f9c",
+      "5bec3bcb9b376b0013455f9d",
+      "5bec3bd89b376b0013455f9e",
+      "5bec3be99b376b0013455f9f",
+      "5bec3bf59b376b0013455fa0",
+      "5bec3c009b376b0013455fa1",
+      "5bec3c0c9b376b0013455fa2",
+      "5bec3c1f9b376b0013455fa3",
+      "5bec3c2e9b376b0013455fa4",
+      "5bec3c399b376b0013455fa5",
+      "5bec3c459b376b0013455fa6",
+      "5bec3c529b376b0013455fa7",
+      "5bec3c5f9b376b0013455fa8",
+      "5bec3c699b376b0013455fa9",
+      "5bec3c799b376b0013455faa",
+      "5bec3c869b376b0013455fab",
+      "5bec3c939b376b0013455fac",
+      "5bec3c9c9b376b0013455fad",
+      "5bec3ca79b376b0013455fae",
+      "5bec3cbc9b376b0013455faf",
+      "5bec3cef9b376b0013455fb0",
+      "5bee495ac284b1001335c931",
+      "5bee4976c284b1001335c932",
+      "5bee4981c284b1001335c933",
+      "5bee4989c284b1001335c934",
+      "5bee4995c284b1001335c935",
+      "5bee49fdc284b1001335c936",
+      "5bee4a07c284b1001335c937",
+      "5bee4a10c284b1001335c938",
+      "5bee4a19c284b1001335c939",
+      "5bee4a3cc284b1001335c93a"
+    ],
+    "updatedIso": {
+      "$date": "2022-01-01T23:24:15.058Z"
+    },
+    "bodyContent": "<h3>JavaScript Cheatsheet</h3>\n<p>Download it, print it and keep it next to your desk.</p>\n<ul>\n    <li><a href=\"https://github.com/iLoveCodingOrg/javascript-cheatsheet/raw/master/js-cheatsheet.pdf\">Download JavaScript Cheatsheet (PDF)</a></li>\n    <li><a href=\"https://github.com/iLoveCodingOrg/javascript-cheatsheet\">Star JavaScript Cheatsheet on Github</a></li>\n    <li>Share Cheatsheet Link: <a href=\"https://ilovecoding.org/blog/js-cheatsheet\">https://ilovecoding.org/blog/js-cheatsheet</a></li>\n</ul>\n\n<a href=\"https://ilovecoding.org/blog/js-cheatsheet\"><img src=\"https://a.ilovecoding.org/img/js2/js-cheatsheet-thumb.png\" alt=\"JavaScript Cheatsheet Thumb\" width=\"100%\"></a>\n\n\n<p><br></p>\n<h3>Changelog:</h3>\n<p><b>Update #4:</b></p><p>Cheatsheet updated to reference concepts of <code>var</code>, <code>let</code> and <code>const</code></p>\n<p><b>Update #3:</b></p><p>Added additional topics:</p>\n<p></p>\n<ul><li>Understanding 'this' keyword</li>\n    <li>3 scenarios that impact the 'this' keyword</li>\n    <li>Understanding Constructors function in JavaScript</li>\n    <li>When and how to use custom constructors</li>\n    <li>Using built-in constructors</li>\n    <li>Using Prototype property (to improve performance)</li></ul><p></p>\n<p><b>Update #2:</b></p>\n<p>Added additional topics:</p>\n<ul>\n  <li>Clear all tasks (From To-Do List App)</li>\n  <li>DomContentLoaded Event</li>\n  <li><b>Homework</b> on Events</li>\n  <li>Global Scope and Avoiding Pitfalls</li>\n  <li>IIFE: Immediately Invoked Function Expression</li>\n  <li>Arrow Functions</li>\n  <li>Closures</li>\n  <li><b>Project:</b> Tooltip Effect</li>\n  <li>Template Literals</li>\n  <li>Prototype</li>\n  <li>Array methods: .filter() .find() .forEach() .map() .reduce()</li>\n  <li>Date</li>\n  <li>Math</li>\n  <li>Promise</li>\n  <li>Fetch</li>\n  <li><b>Project:</b> Get Population By Country</li>\n</ul>\n<p><b>Update #1:</b></p>\n<p>Launched the&nbsp;course with the following main topics:</p>\n<p>\n  </p><ul>\n    <li>Tools and Setup</li>\n    <li>History of JavaScript</li>\n    <li>JavaScript Engine in Node.js and the Browser</li>\n    <li>Types in JavaScript: Primitive and Objects</li>\n    <li>Functions, Arrays, Methods, Variables, Expression, Statement</li>\n    <li>Type checking</li>\n    <li>Static vs Dynamic type languages</li>\n    <li>Variable Hoisting &amp; Function Hoisting&nbsp;</li>\n    <li>Scope, Scope Chain, and Lexical Environment</li>\n    <li>Code Formatting and coding ethics</li>\n    <li>Operators: Arithmetic, assignment, logical, comparison etc</li>\n    <li>=== vs == operator</li>\n    <li>setTimeout, setInterval, clearTimeout, clearInterval</li>\n    <li>Call&nbsp;Stack, Event Loop, and Message Queue</li>\n    <li>\"arguments\" keyword</li>\n    <li>Spread Operator \"...\"</li>\n    <li>Default Parameters</li>\n    <li>By reference vs by value</li>\n    <li>Understanding the browser + Browser API</li>\n    <li>Understanding the DOM</li>\n    <li>Query, Create, Update, Delete DOM elements</li>\n    <li>Events and Event Listeners</li>\n    <li><b>Project:</b> To-Do List App</li>\n    <li><b>Homework-Solution:</b> To-Do List App</li>\n    <li>Event Bubbling</li>\n  </ul>\n<hr>\n<h2>Full Video Transcript</h2>\n<p>Please ignore typos, it's a computer who transcribed it.</p>\n\n<p>Hello and welcome to probably the best beginner to advanced course on JavaScript on planet Internet. In this course you will go from a complete newbie knowing nothing about programming or JavaScript for that matter to becoming comfortable in building real-world apps; And understanding each line of code that you actually write.</p><p>Now before I go further I want to say good job on choosing JavaScript as a programming language to learn. You may already know that JavaScript is the world's most versatile programming language - meaning you can do more things with JavaScript than any other programming language.</p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">JavaScript is used to build web applications, website APIs, backend, front-end, user interfaces for TV's, mobile apps, websites </span>and<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\"> even airport terminal applications. In fact, I was one of the programmers who built the United Airlines airport terminal application with JavaScript. </span>Well<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\"> that's a story for another day, but the fact of the matter is you have made a wise choice to learning JavaScript. It's going to serve you well in your career </span>now,<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\"> and in the long run.</span></p><p><b>Now let's see what you will be learning in this course:</b></p><p>There are only three goals for this course.</p><p>Firstly, have you learn the fundamentals of JavaScript.</p><p>Secondly, have you start thinking like a software engineer.</p><p>And thirdly, have you start building real-world apps - Someone who can think logically on how to break down problems into logical chunks and build something useful piece by piece.</p><p>When learning how to code and there are a few challenges that people encounter. One of the biggest challenges is that programming has a lot of complex words like closure, lexical scope, boolean, array, function, constructor, scope, operators, coercion, public and private functions, and so much more.</p><p>Now the thing is that all of these terms look complicated, sound complicated, but if understood simply they're very basic and simple. That's where this course shines. I will not only teach you how to code but I will expose you with these words so you understand them and even start talking like a developer.</p><p>The second place where this course shines is that I explain to you things simply. I use easy to understand words and I do not make assumptions that you'll have previous knowledge of other concepts. So everything I teach in this course starts from the baseline and I build your knowledge one lesson at a time until you fully understand all the major concepts.</p><p>The third and very important reason why this course will help you better is that I always give you practical examples on when and how to apply your knowledge to build real-world solutions. Many books, blogs, bootcamps, and lectures just go on in the technical conceptual side. In this course, you will learn not just the conceptual side of things but also the practical side on everything you learn. When you tie your learning with examples and real use-cases, your knowledge will actually sink in on a deeper level and you'll be able to become a much better developer in the end.</p><p>In this course, we will focus on building a solid foundation of JavaScript. So in the future when you are learning additional technologies your learning will be much more smoother because you have a solid foundation.</p><p>In this course. You will learn:</p><p></p><ul><li>What is JavaScript and how it's different than other programming languages.</li>\n    <li>What are the basic types in JavaScript and how to use them.</li>\n    <li><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">How to use JavaScript to build </span>a website<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\"> interfaces and backend server-side applications with node.js.</span></li>\n    <li>How to create simple and complex objects to structure your application.</li>\n    <li>How to use functions and scope to control the flow of your application.</li>\n    <li>How to use the new features of JavaScript like the \"spread operator\", \"const\", \"let\", \"promise\" and much more.</li>\n    <li>We will learn the advanced concepts of \"closure\", the \"this\" keyword and really understand them at a very core level, so you are actually a good developer.</li>\n    <li>We will learn about the DOM and how to use vanilla JavaScript to build apps.</li>\n    <li>We will learn about events and how JavaScript is a single-threaded environment and still extremely fast and performant.<br><br>Ther<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">e is a reason why PayPal, Uber, LinkedIn, and many other companies are using JavaScript to build their apps</span>.</li>\n    <li>We will learn about \"arrow function\", \"coercion\", \"event loop\" and so much more.</li>\n    <li>You will learn about how to debug your applications and understand the error messages that you see on the screen.</li>\n    <li>You see errors and bugs are common. No app is created without having errors.<br><br>So most new developers think that bugs are bad, but actually,<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\"> they're not. Having bugs or error messages is a normal process in a developers life.</span></li></ul><p></p><p>So I will make you comfortable that when you see a bug or an error message you're very comfortable in seeing what it is recognizing it and then fixing the problem. This is just the normal flow of a developers life.&nbsp;</p><p>Don't iPhone have bugs? Doesn't Microsoft products have bugs? They are the technology giants. They build technologies so it's a great realization for us to have that bugs are normal. It's our job as a developer to understand these errors and earn how to fix them. I will also show you how to use the dev tools built inside Google Chrome to troubleshoot your apps and resolve bugs.</p><p>You will learn how to connect your apps with third-party API and get information from them and use it in your apps. Now keep in mind all these complicated words that I've used so far, you will understand all of them because I will take you piece by piece and explain them all to you. I will give you a cheat sheets homework and examples along the way so you understand all of the concepts.</p><p>Along the way you will build a few apps like a \"todo list app\", a \"clock app\" a \"Tap feature\" so you understand things at its core and how to apply these concepts.</p><p>Just so this course does not become overly long, you will find a lot of practice projects lessons outside of this course. So in the member's area often of coding so you get a ton of practice on building things and applying your knowledge.</p><p>Imagine you finally conquering your fear of coding. Imagine you are finally thinking and building like a software engineer. Imagine your starting or enhancing your career as a software engineer. And imagine finally that your understanding JavaScript at its core and understanding what you see on the screen and building real-world stuff.</p><p>If all this excites you, let's get started.</p>\n<p></p>",
+    "order": 5.0
+  },
+  {
+    "_id": "5c13aedd5aa7dc6a57aa8b26",
+    "slug": "stopwatch",
+    "subTitle": "You will learn how to make buttons to trigger and stop action. You will also learn a few new concepts such as setTimeout() and Date()",
+    "duration": "0:0",
+    "videoSource": "none",
+    "thumbnail": "stopWatch.png",
+    "bodyContent": "",
+    "title": "Project: Build a Stopwatch app with pure JavaScript",
+    "courseTotalDuration": "43:55",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-12-14T13:23:41.367Z"
+    },
+    "technology": [
+      "JavaScript"
+    ],
+    "topic": [
+      "JavaScript",
+      "Project"
+    ],
+    "lesson": [
+      "56270bcdb8d7393405e4050b"
+    ],
+    "updatedIso": {
+      "$date": "2018-12-14T13:29:16.357Z"
+    }
+  },
+  {
+    "_id": "5b28262489a15256b501b33c",
+    "slug": "react-song-search-app",
+    "subTitle": "Learn how to build a fully functional song search app with React. We will leverage the iTunes API to find song.",
+    "thumbnail": "react/react21-project-song-search.png",
+    "title": "Project: Building a Song Search App with React",
+    "courseTotalDuration": "27:6",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-06-18T21:37:39.706Z"
+    },
+    "updatedIso": {
+      "$date": "2018-06-18T21:41:55.811Z"
+    },
+    "technology": [
+      "React",
+      "Web API"
+    ],
+    "topic": [
+      "Front-End",
+      "React",
+      "Project"
+    ],
+    "lesson": [
+      "5a74a65d22183100147c5dbe",
+      "5a74a68422183100147c5dbf",
+      "5a74a6bb22183100147c5dc0",
+      "5a74a6cc22183100147c5dc1"
+    ],
+    "videoSource": "none"
+  },
+  {
+    "_id": "5b27e0d6b12ad100147aac9d",
+    "slug": "blog-design",
+    "subTitle": "Apply your new found powers of HTML and CSS and apply it to make a beautiful blog design. Perfect for your portfolio.",
+    "thumbnail": "HTMLCSS14-9-myBlogDesign-part1.png",
+    "title": "Project: Create a blog design from scratch using HTML and CSS",
+    "courseTotalDuration": "26:50",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2018-06-18T16:41:58.87Z"
+    },
+    "updatedIso": {
+      "$date": "2018-06-18T16:59:09.505Z"
+    },
+    "technology": [
+      "HTML/CSS"
+    ],
+    "topic": [
+      "HTML/CSS",
+      "Project"
+    ],
+    "lesson": [
+      "562d449351e467f0010e5288",
+      "562d44b851e467f0010e5289",
+      "562d44dc51e467f0010e528a"
+    ],
+    "videoSource": "none"
+  },
+  {
+    "_id": "58101ff96cb3fb000fd19bc6",
+    "slug": "expressjs",
+    "subTitle": "Learn Express.js in 14 days and build serious web apps (& website backends)",
+    "videoSource": "//player.vimeo.com/video/260483697",
+    "thumbnail": "express/express-0-intro.jpg",
+    "sourceUrl": "0",
+    "demoUrl": "0",
+    "bodyContent": "",
+    "title": "Learn Express.js in 14 days",
+    "courseTotalDuration": "250:20",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2017-10-26T03:16:09.801Z"
+    },
+    "updatedIso": {
+      "$date": "2019-06-14T03:59:17.7Z"
+    },
+    "technology": [
+      "Express.js",
+      "oAuth"
+    ],
+    "topic": [
+      "Full-Stack",
+      "Back-End",
+      "Web API",
+      "Authentication",
+      "Login",
+      "Core Training"
+    ],
+    "lesson": [
+      "5ab0318c0288fc00145e24d4",
+      "5ab0326a0288fc00145e24d5",
+      "5ab032a50288fc00145e24d6",
+      "5ab032e90288fc00145e24d7",
+      "5ab0332a0288fc00145e24d8",
+      "5ab0339c0288fc00145e24d9",
+      "5ab034190288fc00145e24da",
+      "5ab034cb0288fc00145e24db",
+      "5ab034fb0288fc00145e24dc",
+      "5ab035430288fc00145e24dd",
+      "5ab035830288fc00145e24de",
+      "5ab035b40288fc00145e24df",
+      "5ab035f50288fc00145e24e0",
+      "5ab0363f0288fc00145e24e1",
+      "5ab036b60288fc00145e24e3",
+      "5ab036ed0288fc00145e24e4",
+      "5ab0375b0288fc00145e24e5",
+      "5ab037960288fc00145e24e6",
+      "5ac3e04fb9773a0014e29f2c",
+      "5ac3e1c4b9773a0014e29f2d",
+      "5ac3e241b9773a0014e29f2e",
+      "5ac3e275b9773a0014e29f2f",
+      "5ac3e2bab9773a0014e29f30",
+      "5ac3e2e9b9773a0014e29f31",
+      "5ac3e38db9773a0014e29f32",
+      "5ac3e3bbb9773a0014e29f33",
+      "5ac3e3dbb9773a0014e29f34",
+      "5ac3e40bb9773a0014e29f35",
+      "5ac3e43cb9773a0014e29f36",
+      "5ac3e58eb9773a0014e29f37",
+      "5ac3e5deb9773a0014e29f38",
+      "5ac3e616b9773a0014e29f39",
+      "5ac3e64bb9773a0014e29f3a",
+      "5ac3e6b0b9773a0014e29f3b",
+      "5ac3e6d3b9773a0014e29f3c",
+      "5ac3e6fbb9773a0014e29f3d",
+      "5ac3e72cb9773a0014e29f3e",
+      "5ac3e75db9773a0014e29f3f",
+      "5ac3e790b9773a0014e29f40",
+      "5ac3e7bcb9773a0014e29f41",
+      "5ac3e7e4b9773a0014e29f42",
+      "5ac3e808b9773a0014e29f43",
+      "5ac3e82fb9773a0014e29f44",
+      "5ac3e862b9773a0014e29f45",
+      "5ac3e8a7b9773a0014e29f46",
+      "5ac3e8e4b9773a0014e29f47",
+      "5ac3e902b9773a0014e29f48",
+      "5ac3e93cb9773a0014e29f49",
+      "5ac3e969b9773a0014e29f4a"
+    ],
+    "order": 35.0
+  },
+  {
+    "_id": "5c13b072637a2c6acef5b67a",
+    "slug": "rock-paper-scissor",
+    "subTitle": "Simple Rock Paper Scissor Game. No fancy graphics, plain JavaScript code. You will enjoy building the game",
+    "duration": "0:0",
+    "videoSource": "none",
+    "thumbnail": "rockPaperScissor.png",
+    "bodyContent": "",
+    "title": "Project: Rock Paper Scissor App with pure JavaScript",
+    "courseTotalDuration": "30:53",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-12-14T13:30:26.568Z"
+    },
+    "technology": [
+      "JavaScript"
+    ],
+    "topic": [
+      "JavaScript",
+      "Project"
+    ],
+    "lesson": [
+      "56270c39b8d7393405e4050d"
+    ],
+    "updatedIso": {
+      "$date": "2018-12-24T22:52:17.142Z"
+    }
+  },
+  {
+    "_id": "5c328c4f116a4c0014f142d1",
+    "slug": "perfect-path",
+    "subTitle": "This course will give you a complete, detailed path to becoming a job-ready software developer. Get a complete skill roadmap, learning techniques, timeline and resources you need to become job-ready.",
+    "duration": "3:08",
+    "videoSource": "308929498",
+    "thumbnail": "perfect-path.jpg",
+    "bodyContent": "<h3>Resources</h3>\n<ul><li><a href=\"https://github.com/iLoveCodingOrg/developer-types/raw/master/dev-types.pdf\">9 main areas of software development (Download PDF)</a></li>\n<li><a href=\"https://github.com/iLoveCodingOrg/skill-roadmap/raw/master/skill-roadmap.pdf\">Skill Roadmap to Front-End and Full-Stack JavaScript Development (Download PDF)</a></li></ul><h2>Video Transcript</h2><p>The #1 reason most people struggle to learn how to code is because they do not have clarity.<br></p><p>You have questions like:<br></p><p></p><ul><li>What programming language should I learn?</li><li>Should I become a web developer?</li><li>Should I become a data scientist?</li><li>What is a Front-End Developer?</li><li>Should I learn Ruby? Should I learn Python? Should I learn JavaScript?</li><li>Should I learn react.js? Should I learn jQuery?</li><li>What skills do I need? What skills do I not need?</li><li>How much time is it going to take?</li><li>What should I learn? and in what sequence?</li></ul><p></p><p>You have all of these questions and since you don't know the answer to those questions you have all these questions on <b>H</b><b>ow am I going to ever going to become a developer?</b></p><p>Now if you're struggling with all these questions and more some and you want a clear systematic answer to all these questions and a clear path on what steps to take to become a job-ready developer then you must take this FREE course <b>\"The Perfect Path to Becoming a Job-Ready Developer\"</b><br></p><h3>5 Outcomes of this course:</h3><p>My goal in this course is to answer five core questions that when answered will make everything else clear for you.<br></p><p></p><ol><li>What are the nine main types of developers out there and which one should you become?<br>So you have the best chance of success.</li><li>What programming language should you learn and why?</li><li>What exact technologies and skills should you learn and in what sequence?</li><li>Where and how to learn effectively?</li><li>Lastly How much time will it realistically take? so you are ready for the job, you are ready to launch your ideas.</li></ol><h3>Ninja Developer Learning Secrets</h3><p></p><p>In this course. I will also tell you a few techniques to speed up your learning. These techniques are like known secrets among all great developers.<br></p><p>It's more like common knowledge among professional developers that newbies do not know. I know how it feels to be lost.</p><h3>How I resolved 9-years of struggle with coding</h3><p>I struggled to learn how to code for nine years.&nbsp;<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">I tried buying cheap courses. I even got some expensive courses multiple times. I even enrolled three times in college-level courses but nothing worked for me. It all came together for me when I understood this path that I will show you in this course. When I understood this and I learned in that particular manner my skills quickly went up and I was able to build apps for United Airlines. CVS health and some very exciting funded startups. I even became so skilled that I was able to launch two of my own tech startups. I taught my process to some students and now they work at Twitter, Citibank, Sony Ericsson and some other exciting companies like them.</span></p><p>So if you want a clear path to becoming a job-ready developer then I urge you to start this FREE course and let's get started. All of your questions are going to be answered in the course.</p>",
+    "title": "The Perfect Path to Becoming a Job-Ready Developer",
+    "courseTotalDuration": "47:19",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2019-01-06T23:16:30.956Z"
+    },
+    "technology": [
+      ""
+    ],
+    "topic": [
+      "Core Training"
+    ],
+    "lesson": [
+      "5c328b5a116a4c0014f142cb",
+      "5c328b7e116a4c0014f142cc",
+      "5c328b8c116a4c0014f142cd",
+      "5c328b9e116a4c0014f142ce",
+      "5c328baa116a4c0014f142cf",
+      "5c328bb5116a4c0014f142d0"
+    ],
+    "updatedIso": {
+      "$date": "2019-02-26T18:27:48.43Z"
+    }
+  },
+  {
+    "_id": "5627130212c48c71055037fb",
+    "slug": "going-live",
+    "subTitle": "Learn how to put your static website live on the internet. I will show you where to buy your domain and web hosting from. and finally how to use FTP to put your website live.",
+    "videoSource": "//player.vimeo.com/video/121768623",
+    "thumbnail": "goingLive-part1.png",
+    "sourceUrl": "",
+    "demoUrl": "",
+    "bodyContent": "<h2>How to put your website live</h2><p>In this course, you will learn how to go live with your static website. A static website is something you make via HTML, CSS, and JavaScript. There is no back-end attached to it.</p><p>To go live, you will need two things.&nbsp;</p><ol><li>A <b>Domain Name</b> (yourname.com)</li><li>and a <b>Web Host</b></li></ol><p>A domain name is simply the name of your website. It looks like this:&nbsp;<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\"><b>yourname.com</b>.</span></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">The \".com\" part is called the extension. Your domain can have an extension such as&nbsp; \".net\", \".org\", \".info\" and <a href=\"https://iwantmyname.com/domains/domain-name-registration-list-of-extensions\">hun</a><a href=\"https://iwantmyname.com/domains\"></a>dreds of other domain extensions which are publicly available.</span></p><p>The second thing you need is the web host.&nbsp;A web host is a service that takes your website files and hosts it on their servers. Whenever someone visits your website, this web host servers your website to that user.</p><p>A web host company has special servers that work 24/7 so your website is always available. For that, they charge a nominal fee for their service.</p><p>In this course, you will learn how to pick the perfect web host provider; what features to look for, and my recommendations. I will also tell you where to buy a good domain name from.</p><p>I will also show you how to make your domain name talk to your web host. And then I'll show you, how to upload your website to the web host via FTP (i.e File Transfer Protocol.)</p>",
+    "title": "Going Live: Putting your website live on the internet",
+    "courseTotalDuration": "21:19",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2015-10-27T04:22:26.71Z"
+    },
+    "updatedIso": {
+      "$date": "2019-02-06T22:57:55.399Z"
+    },
+    "technology": [
+      "Web Hosting"
+    ],
+    "topic": [
+      "Web Fundamentals",
+      "Core Training"
+    ],
+    "lesson": [
+      "562d275b995935f23b5c56f0",
+      "562d279a995935f23b5c56f1",
+      "562d27d9995935f23b5c56f2"
+    ],
+    "order": 10.0
+  },
+  {
+    "_id": "58b56bbc45db170010ebb056",
+    "slug": "use-web-api-part2",
+    "subTitle": "Take your knowledge to the next level by understanding how to use Post, Get and Delete HTTP Request via Web API",
+    "videoSource": "//player.vimeo.com/video/205805342",
+    "thumbnail": "api2-1-intro.png",
+    "sourceUrl": "0",
+    "demoUrl": "0",
+    "bodyContent": "<h3>Course parts:</h3><ul><li><a href=\"https://ilovecoding.org/courses/use-web-api\" target=\"_blank\">Learn to use any Web API - Part 1</a></li><li>Learn to use any Web API - Part 2 (This course)</li></ul>",
+    "title": "Learn to use any Web API - Part 2",
+    "courseTotalDuration": "51:4",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2016-01-02T12:23:24.426Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:53:32.374Z"
+    },
+    "technology": [
+      "Web API",
+      "Front-End",
+      "Full-Stack"
+    ],
+    "topic": [
+      "Web Fundamentals",
+      "Crash Course",
+      "Front-End",
+      "Full-Stack",
+      "Core Training"
+    ],
+    "lesson": [
+      "58b56e4545db170010ebb057",
+      "58b56f2a45db170010ebb058",
+      "5930001675c92e0012bdbe39",
+      "59351790fce0650012ff8b27",
+      "5941185425706a0012d55d09",
+      "59411bf925706a0012d55d0a",
+      "5959d4348bc0940012a3e15c",
+      "5959d7188bc0940012a3e15d",
+      "5993194f2f385300129b8737",
+      "59931a5a2f385300129b8738",
+      "59931aff2f385300129b8739",
+      "59931b952f385300129b873a",
+      "59931c192f385300129b873b"
+    ],
+    "order": 92.0
+  },
+  {
+    "_id": "5b885abdc665e40014cad657",
+    "slug": "htmlcss2",
+    "subTitle": "This just may be the most comprehensive HTML & CSS course on the internet. With clearly explained concepts in short and to the point screencast videos, learn the fundamentals & build beautiful and professional websites. (Cheatsheets, references, and tools included.) --- IMPORTANT: This course is FREE 🆓 and always will be.",
+    "duration": "4:22",
+    "videoSource": "288830994",
+    "thumbnail": "htmlcss2/htmlcss2.gif",
+    "bodyContent": "<div class=\"card card-warning mb-2\">😇&nbsp;&nbsp;<b>Important:</b> This course is <b>FREE</b> and always will be 🙌. <i> Feel free to share it with friends.</i> 🎁</div>\n<h3>HTML Cheatsheet</h3>\n<ul>\n    <li><a href=\"https://github.com/iLoveCodingOrg/html-cheatsheet/raw/master/html-cheatsheet.pdf\">Download HTML Cheatsheet (PDF)</a></li>\n    <li><a href=\"https://github.com/iLoveCodingOrg/html-cheatsheet\">Star HTML Cheatsheet on Github</a></li>\n    <li>Share HTML/CSS Cheatsheet Link: <a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\">https://ilovecoding.org/blog/htmlcss-cheatsheet</a>  </li>\n</ul>\n<h3>CSS Cheatsheet</h3>\n<ul>\n    <li><a href=\"https://github.com/iLoveCodingOrg/css-cheatsheet/raw/master/css-cheatsheet.pdf\">Download CSS Cheatsheet (PDF)</a></li>\n    <li><a href=\"https://github.com/iLoveCodingOrg/css-cheatsheet\">Star CSS Cheatsheet on Github</a></li>\n    <li>Share HTML/CSS Cheatsheet Link: <a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\">https://ilovecoding.org/blog/htmlcss-cheatsheet</a>  </li>\n</ul>\n<p><a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\"><img class=\"w-75\" src=\"https://a.ilovecoding.org/thumb/htmlcss-cheatsheet.png\" alt=\"HTML CSS Cheatsheet thumb\"></a></p>\n<hr>\n\n<h2>What is HTML?</h2>\n<p>HTML abbreviation for <strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage, is a Markup Language to put together the&nbsp;structure of a web page. Think of HTML as the skeleton of a webpage. There is no website or webpage on the internet that does not use HTML. Without HTML, the web would not be possible.</p>\n    \n<h3>What HTML is not</h3>\n<p>HTML is not a programming language. Please don't confuse the two concepts. A programming language has logical and computational capability to instruct a computer to do some operations. A markup language, on the other hand, is static and is only used to organize data in a specific structure. HTML in our case is used to give structure to a web page.</p>\n    \n<h2>What is CSS?</h2>\n<p>CSS stands for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets. Think of it as the skin and clothing for the HTML webpage. CSS is simply a list of style properties that get applied to HTML elements. Just the way clothing is put onto a human body, similarly, CSS styling is applied on HTML elements. CSS enhances the colors, layout, and styling of the HTML webpage, making it look more beautiful and professional.</p>\n    \n\n<h2>Why learn HTML and CSS?</h2>\n<p>Unlike programming languages, HTML and CSS have NO competition. If you want to make web pages, start a career in web design, web development or even web journalism, the basic knowledge of HTML and CSS is a must have.</p>\n    \n<p>Fortunately, the foundation of HTML and CSS are not that difficult. You can start getting comfortable with HTML in a matter of hours. Basic CSS is also not that difficult, however, CSS can get complicated when trying to build advanced layouts.</p>\n\n<p>This course, <a href=\"https://ilovecoding.org/courses/htmlcss2\">\"Learn HTML and CSS Correctly\"</a>, will hold your hand to teaching you the basics and advanced concepts of HTML and CSS, so you are comfortable building simple and advanced websites.</p>\n\n<h2>What can you build with HTML and CSS?</h2>\n<p>Any website layout! Yes, any. All, yes all websites use HTML and CSS, and once you get a hang of it, you can build websites as beautiful as Airbnb, Facebook, Twitter, Amazon (You name it).</p>\n<p>Remember one thing! HTML and CSS will only help you build website layouts and static websites. The intelligent aspect of a webpage, such as a login capability, storing information in a database and advanced interactivity is built with a programming language such as JavaScript. Once you are comfortable with HTML and CSS&nbsp;and have built some projects, your next step is to <a href=\"https://ilovecoding.org/courses/js2\">learn JavaScript</a>\n</p>\n\n<h2>What resources should you refer when learning HTML and CSS</h2>\n<p>Take this course as you guide! For reference, I highly recommend the <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference\">HTML reference on Mozilla</a>. They also have some really <a href=\"https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML\">good guides here</a>.</p>\n<p>Web Docs on Mozilla (MDN) is the most authentic and trusted source to lookup information on web technology - HTML, CSS and, JavaScript. Whenever I need more information on a topic, I google the following query <em>\"topic name mozilla\"</em>\n</p>\n<h2>What will you learn in this Free video course?</h2>\n<ul>\n    <li>Basic syntax of HTML</li>\n    <li>Common HTML Elements</li>\n    <li>Must have markup on every webpage</li>\n    <li>How to create headline, paragraph and lists</li>\n    <li>How to create forms elements - text fields, radio/checkbox buttons, select boxes</li>\n    <li>How to structure a webpage layout</li>\n    <li>What are semantic elements and why to use them</li>\n    <li>Basic syntax of CSS</li>\n    <li>Common CSS properties</li>\n    <li>CSS selectors and its type</li>\n    <li>Using CSS to enhance website layout</li>\n    <li>Importing files in your HTML document</li>\n    <li>Advanced positioning of elements with CSS</li>\n    <li>Adding custom fonts</li>\n</ul>\n\n<h2>What will you create with <em>Learn HTML &amp; CSS Correctly</em> video course?</h2>\n<p>The goal of this course is&nbsp;to give you practical, real-world examples so you are off to creating your vision.</p>\n<p>For that, you will create two finished projects</p>\n\n<p class=\"text-center mb-2\"><img class=\"mx-auto shadow w-75\" src=\"https://a.ilovecoding.org/thumb/htmlcss2/blog-design.png\" alt=\"Blog Design Project\"><br><br>\n<img class=\"mx-auto shadow w-75\" src=\"https://a.ilovecoding.org/thumb/htmlcss2/coupon.png\" alt=\"Coupon with Positioning\"></p>\n\n<h2>How is the course organized?</h2>\n<p>The course is organized such that you watch the video and follow along. If you simply watch the video and do not apply your learning, you will have an illusion of learning. So its important that you download the right software tools suggested and follow the instructions.</p>\n<h2>How long will it take me to learn HTML and CSS?</h2>\n<p>It may take you 1-2 weeks to complete the course, and about a month of practice to get comfortable with HTML and CSS. The key is to apply your learning and build projects. The easiest project you can create is your own personal website. You need your own presence online. Social media profiles are not enough. You want your own website where you can express yourself and your skills. This course will give you all the skills to build that website.</p>\n<p>With more practice, you can start building websites for clients as well&nbsp;and start charging for your services.</p>\n\n<hr>\n\n<h2>Full Video Transcript</h2>\n<p>Do you want to build websites for yourself or for your clients? Then you must learn HTML and CSS.</p>\n<p>Welcome to the learn HTML and CSS in 14 days course on iLoveCoding. I'm happy that you're here because this is an awesome comprehensive and detailed course on how to build simple and professional websites with HTML and CSS.</p>\n<p>Now you may be asking what is HTML and CSS and why should you care. And why should you take this course? Those are awesome questions. You see HTML and CSS are two distinct coding languages used to make websites. The fact of the matter is that all websites are built with HTML and CSS and the Web would be impossible without it. Now, Yes! websites like Google.com, YouTube, Amazon, Twitter, Facebook, you name it - Any website, all websites, big and small are built with HTML and CSS.</p>\n<p>HTML is used to put the structure of a website together and CSS is used to make your website look pretty with colors, styled and advanced layout. If you want to make websites even the most simplest websites or want to become a web designer, webmaster, or web developer, you must learn HTML and CSS. In fact, if you want to do anything with the tech or web world, I highly recommend you take this course because it's going to serve you well now and in the future of your career.</p>\n<p><b>Now let's see what you will be learning in this course:</b></p>\n<p>In this course you will learn what is HTML and CSS, what does it stand for. You will learn how to write simple websites and web pages using HTML and CSS. You will learn the basic syntax of HTML and how it's written. You will learn how to format your code like a professional. You will learn what tools to use and what tools not to use when coding. You will learn the basic terminologies used around the web world like \"tags\", \"elements\", \"attributes\" and you will get comfortable using these features and talking like in that particular lingo.</p>\n<p>You will learn how to see the code of other websites using a tool called Chrome developer tools so you can see how other websites are coded so you can get inspiration from them and code your websites and enhance your websites accordingly.</p>\n<p>You will learn how to make headlines titles, forms, tables, paragraphs. You will learn how to link your website with other websites or link the pages of your own websites together and you will learn everything in between on building these beautiful websites. You see an HTML consist of a lot of elements. I will share with you the most common elements that you must know about and then I will travel to you two trusted resources so you can look up more information whenever you need.</p>\n<p>Kind of like a cheat sheet. Once you have a gist of HTML, then I will share with you the basics of CSS and how to use it to make your website look pretty and professional. Something like this.</p>\n<p>Yes! we will be building this beautiful blog design together in this course. Plus, I will share with you some advance hacks that professional developers use. All in all, this course will give you the tools, training, resources, cheat sheets, and homework so you become comfortable in writing HTML and CSS, and building professional and beautiful looking websites. Remember one thing. The best way to learn is to manually hand copy the things that I teach you. So I recommend in this course that you watch the videos twice. The first time you watch it and ingest the concept and take notes and then the second time you watch it and then you copy along with me in your code editor and build what I am building. This way you will internalize and knowledge and you're going to learn by doing as well.</p>\n<p>Just imagine when you create your first website how proud will you be? if that excites you. Let's get started.</p>\n<p></p><p></p>",
+    "title": "Learn HTML & CSS Correctly",
+    "courseTotalDuration": "346:3",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-08-30T20:59:41.232Z"
+    },
+    "technology": [
+      "HTML/CSS"
+    ],
+    "topic": [
+      "Front-End",
+      "Core Training"
+    ],
+    "lesson": [
+      "5b881e43c665e40014cad611",
+      "5b881eb6c665e40014cad612",
+      "5b881ed9c665e40014cad613",
+      "5b881eefc665e40014cad614",
+      "5b881f05c665e40014cad615",
+      "5b881f10c665e40014cad616",
+      "5b881f1bc665e40014cad617",
+      "5b881f26c665e40014cad618",
+      "5b881f31c665e40014cad619",
+      "5b881f42c665e40014cad61a",
+      "5b8825a5c665e40014cad61b",
+      "5b8825dcc665e40014cad61c",
+      "5b8825e8c665e40014cad61d",
+      "5b8825f6c665e40014cad61e",
+      "5b882602c665e40014cad61f",
+      "5b88260ec665e40014cad620",
+      "5b88261ec665e40014cad621",
+      "5b882629c665e40014cad622",
+      "5b882635c665e40014cad623",
+      "5b882642c665e40014cad624",
+      "5b8834b0c665e40014cad625",
+      "5b8834d5c665e40014cad626",
+      "5b8834e2c665e40014cad627",
+      "5b883502c665e40014cad628",
+      "5b883545c665e40014cad629",
+      "5b883558c665e40014cad62a",
+      "5b883575c665e40014cad62b",
+      "5b883582c665e40014cad62c",
+      "5b88358ec665e40014cad62d",
+      "5b88359ac665e40014cad62e",
+      "5b8842f5c665e40014cad62f",
+      "5b884303c665e40014cad630",
+      "5b884311c665e40014cad631",
+      "5b88431bc665e40014cad632",
+      "5b884327c665e40014cad633",
+      "5b884331c665e40014cad634",
+      "5b88433ec665e40014cad635",
+      "5b88434cc665e40014cad636",
+      "5b884363c665e40014cad637",
+      "5b88436fc665e40014cad638",
+      "5b88558bc665e40014cad639",
+      "5b88559ac665e40014cad63a",
+      "5b8855d9c665e40014cad63b",
+      "5b8855f3c665e40014cad63c",
+      "5b885602c665e40014cad63d",
+      "5b88560cc665e40014cad63e",
+      "5b885618c665e40014cad63f",
+      "5b885627c665e40014cad640",
+      "5b885639c665e40014cad641",
+      "5b885643c665e40014cad642",
+      "5b885668c665e40014cad643",
+      "5b885673c665e40014cad644",
+      "5b88567ec665e40014cad645",
+      "5b885691c665e40014cad646",
+      "5b88569bc665e40014cad647",
+      "5b8856a8c665e40014cad648",
+      "5b8856c1c665e40014cad649",
+      "5b8856d3c665e40014cad64a",
+      "5b8856e0c665e40014cad64b",
+      "5b8856eac665e40014cad64c",
+      "5b885711c665e40014cad64d",
+      "5b885726c665e40014cad64e",
+      "5b885735c665e40014cad64f",
+      "5b885748c665e40014cad650",
+      "5b885753c665e40014cad651",
+      "5b885761c665e40014cad652",
+      "5b88576dc665e40014cad653",
+      "5b88577bc665e40014cad654",
+      "5b885784c665e40014cad655",
+      "5b88578fc665e40014cad656",
+      "5b933e98da088b00144aecad"
+    ],
+    "updatedIso": {
+      "$date": "2020-12-03T03:16:23.093Z"
+    },
+    "order": 1.0
+  },
+  {
+    "_id": "562713e912c48c71055037ff",
+    "slug": "nodejs",
+    "subTitle": "Learn all the key distinctions that contributed to the success of Node.js. In this course you will get comfortable with programming in Node.js and we will build 3 mini apps in the process - (1) A Simple HTTP Server, (2) a practical web scrapper, and (3) a simple web app with routing.",
+    "videoSource": "//player.vimeo.com/video/118479459",
+    "thumbnail": "nodeWk-1-intro.png",
+    "sourceUrl": "",
+    "demoUrl": "",
+    "bodyContent": "\n<h2>What is Node.js</h2><p>Node.js is an open-source, cross-platform run-time environment for developing server-side Web applications.</p><p>Node JS is not a platform, it's not a framework. Actually, Node JS is a run-time for JavaScript that allows you to run JavaScript on the machine itself.&nbsp;Historically speaking, JavaScript was designed for the browser. So you would create a website, User interactions, user behavior and all kind of logic would be written in JavaScript and it would run on the browser only.</p><p>But with the help of Node JS,&nbsp;you can run JavaScript on the machine. This means that now JavaScript can run on the browser as well as on the machine. JavaScript can now replace and compete with other programming languages such as Ruby, Python, Java, PHP etc.</p><h3>Now you can build</h3><ul><li>Back-End of any Website</li><li>Blogs Survey App&nbsp;</li><li>Chat App&nbsp;</li><li>Social Media App&nbsp;</li><li>API&nbsp;</li><li>Data Processing</li><li>Shopping Cart&nbsp;</li><li>Game Engines</li><li>Desktop App</li><li>etc</li></ul><p>If you can name it, you can build it.</p><h3>What you will learn in this course</h3><p><ol><li><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">You will practically understand Node.js from the ground up&nbsp;</span><br></li><li><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">You will learn the fundamental distinctions that Node introduces and how it has lead to its massive growth and adoption&nbsp;</span><br></li><li><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">Get comfortable &amp; confident using Node.js</span><br></li></ol></p><h3>The concepts you will learn in this course are&nbsp;</h3><ul><li>Steams&nbsp;</li><li>Modules&nbsp;</li><li>HTTP&nbsp;</li><li>Event Loops Emitting Events&nbsp;</li><li>NPM (Node Package Manager)<br></li></ul><p>In this course we will build:<br></p><ul><li>An HTTP Server&nbsp;<br></li><li>A Web Scraper App&nbsp;<br></li><li>A Content<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\"> Editor App&nbsp;</span><br></li><li>Connect Node with a Database (i.e MongoDB in our case)<br></li></ul><p></p><p>Let's get started with \"Learn Node JS in a week\" course. I'll talk to you in the first lesson.</p>",
+    "title": "Learn Node.js in a Week",
+    "courseTotalDuration": "122:40",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2015-12-21T04:26:17.048Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:53:57.974Z"
+    },
+    "technology": [
+      "Node.js"
+    ],
+    "topic": [
+      "Crash Course",
+      "Node.js",
+      "Back-End",
+      "Full-Stack",
+      "Front-End",
+      "Core Training"
+    ],
+    "lesson": [
+      "562d469f51e467f0010e5290",
+      "562d46cc51e467f0010e5291",
+      "562d46f551e467f0010e5292",
+      "562d471e51e467f0010e5293",
+      "562d474151e467f0010e5294",
+      "562d476a51e467f0010e5295",
+      "562d479151e467f0010e5296",
+      "562d47b951e467f0010e5297",
+      "562d47dd51e467f0010e5298",
+      "562d480251e467f0010e5299"
+    ],
+    "order": 30.0
+  },
+  {
+    "_id": "581025066cb3fb000fd19bc8",
+    "slug": "react-native",
+    "subTitle": "Learn the exact framework used to build apps such as Instagram, Facebook, Airbnb and more. And yes, its done with JavaScript. React Native can be used to build mobile apps for Android and iOS devices both",
+    "videoSource": "269242757",
+    "thumbnail": "react-native/0-intro.jpg",
+    "sourceUrl": "0",
+    "demoUrl": "0",
+    "bodyContent": "",
+    "title": "Learn React Native & Build Mobile App",
+    "courseTotalDuration": "311:31",
+    "access": 0,
+    "level": 2,
+    "createdIso": {
+      "$date": "2017-10-26T03:37:42.94Z"
+    },
+    "updatedIso": {
+      "$date": "2019-02-06T22:47:22.131Z"
+    },
+    "technology": [
+      "React",
+      "React Native",
+      "Full-Stack"
+    ],
+    "topic": [
+      "React",
+      "React Native",
+      "Mobile",
+      "Mobile App Development",
+      "Full-Stack",
+      "Core Training"
+    ],
+    "lesson": [
+      "5afadad8364a340014b75d06",
+      "5afadce6364a340014b75d07",
+      "5afadd32364a340014b75d08",
+      "5afae10a6be0670014043bd4",
+      "5afae1946be0670014043bd5",
+      "5afae1ce6be0670014043bd6",
+      "5afae2636be0670014043bd7",
+      "5afae2876be0670014043bd8",
+      "5afae29c6be0670014043bd9",
+      "5afae2b86be0670014043bda",
+      "5afae3026be0670014043bdb",
+      "5afae37b6be0670014043bdc",
+      "5afae68e6be0670014043bdd",
+      "5afae72a6be0670014043bde",
+      "5afae7546be0670014043bdf",
+      "5afae7836be0670014043be0",
+      "5afae7bb6be0670014043be1",
+      "5afae7dc6be0670014043be2",
+      "5afae8116be0670014043be3",
+      "5afae88a6be0670014043be4",
+      "5afae8cc6be0670014043be5",
+      "5afae8fa6be0670014043be6",
+      "5afae9316be0670014043be7",
+      "5afae9706be0670014043be8",
+      "5afae9e56be0670014043be9",
+      "5afaea196be0670014043bea",
+      "5afaea546be0670014043beb",
+      "5afaea8d6be0670014043bec",
+      "5afaeab66be0670014043bed",
+      "5afaeaf86be0670014043bee",
+      "5afaeb276be0670014043bef",
+      "5afaebbd6be0670014043bf0",
+      "5afaebeb6be0670014043bf1",
+      "5afaec556be0670014043bf2",
+      "5afaec806be0670014043bf3",
+      "5afaecad6be0670014043bf4",
+      "5afaecd96be0670014043bf5",
+      "5afaed096be0670014043bf6",
+      "5afaed6f6be0670014043bf7",
+      "5afaed956be0670014043bf8",
+      "5afaee096be0670014043bf9",
+      "5afb64d46be0670014043bfa",
+      "5afb64f86be0670014043bfb",
+      "5afb654a6be0670014043bfc",
+      "5afb65706be0670014043bfd",
+      "5afb65a16be0670014043bfe",
+      "5afb66346be0670014043bff",
+      "5afb66706be0670014043c00",
+      "5afb67236be0670014043c01",
+      "5afb69ae07ff3d0014610fe6",
+      "5afb69da07ff3d0014610fe7",
+      "5afb6f1c07ff3d0014610fe8",
+      "5afb6f3b07ff3d0014610fe9",
+      "5afb6f5b07ff3d0014610fea",
+      "5afb6f8f07ff3d0014610feb",
+      "5afb6fc007ff3d0014610fec",
+      "5afb6fdd07ff3d0014610fed",
+      "5afb6ffb07ff3d0014610fee",
+      "5afb701e07ff3d0014610fef",
+      "5afb753f07ff3d0014610ff1",
+      "5afb756c07ff3d0014610ff2",
+      "5afb758a07ff3d0014610ff3",
+      "5afb75a707ff3d0014610ff4",
+      "5afb75c607ff3d0014610ff5",
+      "5afb75e107ff3d0014610ff6",
+      "5afb760107ff3d0014610ff7"
+    ],
+    "order": 40.0
+  },
+  {
+    "_id": "5c13bb18637a2c6acef5b67e",
+    "slug": "fullscreen-video-in-background",
+    "subTitle": "In this video you will learn how to set a Full Screen Background Video on your website. Previously we have created a similar effect on our site but with a static image",
+    "duration": "0:0",
+    "videoSource": "none",
+    "thumbnail": "fullCoverBackgroundVideo.png",
+    "bodyContent": "",
+    "title": "Project: Fullscreen Video in Background",
+    "courseTotalDuration": "5:48",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2018-12-14T14:15:52.402Z"
+    },
+    "technology": [
+      "JavaScript",
+      "DOM"
+    ],
+    "topic": [
+      "Front-End",
+      "Project"
+    ],
+    "lesson": [
+      "5622d1a88795649145fce181"
+    ],
+    "updatedIso": {
+      "$date": "2018-12-24T22:52:32.584Z"
+    }
+  },
+  {
+    "_id": "599f8238e6386400126ecc79",
+    "slug": "random",
+    "subTitle": "Miscellaneous concepts you should know as a JavaScript developer",
+    "duration": "0.0",
+    "videoSource": "none",
+    "thumbnail": "random-concepts.png",
+    "title": "Random JavaScript Concepts",
+    "courseTotalDuration": "148:22",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2017-02-07T01:49:44.668Z"
+    },
+    "technology": [
+      "Javascript"
+    ],
+    "topic": [
+      "Javascript",
+      "Electives",
+      "Core Training"
+    ],
+    "lesson": [
+      "56270a67b8d7393405e40507",
+      "56270a3cb8d7393405e40506",
+      "5622d1db8795649145fce182",
+      "5622cff58795649145fce17d",
+      "5622cf118795649145fce17a",
+      "5622d15b8795649145fce180",
+      "5622d1158795649145fce17f",
+      "5622d2188795649145fce183",
+      "5622d1a88795649145fce181",
+      "5622cfa98795649145fce17c",
+      "56270c6db8d7393405e4050e"
+    ],
+    "updatedIso": {
+      "$date": "2018-12-14T13:44:01.961Z"
+    },
+    "order": 100.0
+  },
+  {
+    "_id": "581021ea6cb3fb000fd19bc7",
+    "slug": "mongodb",
+    "subTitle": "Learn the fundamentals of databases. Learn the different kinds of databases and kickstart to using MongoDB.",
+    "videoSource": "//player.vimeo.com/video/260483296",
+    "thumbnail": "mongodb/mongodb-0-intro.jpg",
+    "sourceUrl": "0",
+    "demoUrl": "0",
+    "bodyContent": "",
+    "title": "Crash Course to Databases & MongoDB",
+    "courseTotalDuration": "44:35",
+    "access": 0,
+    "level": 1,
+    "createdIso": {
+      "$date": "2017-10-26T03:24:26.34Z"
+    },
+    "updatedIso": {
+      "$date": "2018-12-13T17:52:36.399Z"
+    },
+    "technology": [
+      "Database",
+      "MongoDB"
+    ],
+    "topic": [
+      "Crash Course",
+      "Full-Stack",
+      "Database",
+      "MongoDB",
+      "Database",
+      "Core Training"
+    ],
+    "lesson": [
+      "5ab017010288fc00145e24c8",
+      "5ab019c40288fc00145e24c9",
+      "5ab019eb0288fc00145e24ca",
+      "5ab01a1b0288fc00145e24cb",
+      "5ab01c660288fc00145e24cc",
+      "5ab01d330288fc00145e24cd",
+      "5ab01de40288fc00145e24ce",
+      "5ab01e180288fc00145e24cf",
+      "5ab01e770288fc00145e24d0",
+      "5ab01eaa0288fc00145e24d1",
+      "5ab01f1e0288fc00145e24d2",
+      "5ab01f6f0288fc00145e24d3"
+    ],
+    "order": 36.0
+  },
+  {
+    "_id": "5627134d12c48c71055037fc",
+    "slug": "jquery",
+    "subTitle": "jQuery is one of the most popular JavaScript libraries for Front-End Development. In this course, you will create multiple web features from scratch: such as a photo-slider, accordion, tab feature and much more. You will have an intimate understanding of how the browser works and how to make interactive websites.",
+    "videoSource": "//player.vimeo.com/video/116450101",
+    "thumbnail": "jQuery14-0-Intro.png",
+    "sourceUrl": "",
+    "demoUrl": "",
+    "bodyContent": "<p>jQuery is the most popular JavaScript library today that helps Web Designers and Front-End Developers make sleek user interfaces and web features on the internet.&nbsp;70%+ Top websites use jQuery on them. Website such as <a title=\"Microsoft Website\" href=\"http://microsoft.com\">Microsoft.com</a>, <a title=\"Amazon Website\" href=\"http://amazon.com\">Amazon.com</a>, <a title=\"Yahoo website\" href=\"http://Yahoo.com\">Yahoo.com</a> etc.</p><p>In this lesson, we are going to learn what is jQuery. So let's get started</p><h2>What is jQuery?</h2><p>jQuery is a JavaScript library that is tremendously helpful to use when doing website design. You may ask what is a JavaScript library? A JavaScript library is a collection of several pre-coded features that a web designer would commonly use.</p><p><b>For example:<br></b>A web designer would commonly want to select an element from an HTML page and add classes to it or add styles to it, yes you can do that same behavior with pure JavaScript but a web designer or a web developer would have to write three or four lines of code to accomplish that task like adding a class to an element. But by using jQuery you can do the same task by writing one line of code.&nbsp;</p><p>It's not about writing less code but jQuery's APIs is another word for features or functions that jQuery interface has. You are not just going to write less code but your code is going to be more elegant, more user-friendly and more structured. This is the reason why jQuery is so popular and widely accepted.&nbsp;</p><p>If you head over to jQuery <a href=\"http://jquery.com/\" target=\"\">website</a> you will see their tagline is \"Write less, do more\".</p><p>If you were to write pure JavaScript to accomplish a simple task, you might have to handle the H cases because different browsers react differently and have different versions of JavaScript running on themselves.&nbsp;So you might have to write additional lines of code to make sure that your piece of code or your particular functionality is similarly compatible with Internet Explorer 6, 7, 8, Firefox, Safari, Opera and Chrome etc.&nbsp;</p><p>But if you use jQuery, these people who have contributed to the jQuery library, have already coded those scenarios in the background that if there are other compatibility issues, there are patches available so you just simply write one line of code that you know will work across multiple browsers no matter what browser it is.</p><h3>jQuery popularity:</h3><p><span>If you to the website called <a href=\"http://builtwith.com/\" target=\"\">BuiltWith</a>&nbsp;you can find out what websites are built with jQuery. If I type jQuery and hit enter and go to jQuery usage statistics&nbsp;</span><br></p><p><img src=\"//a.ilovecoding.org/thumb//jquery_6-02-01_0352.png\" style=\"width: 100%;\"><span><br></span></p><div><span style=\"color: rgb(85, 85, 85);float: none;background-color: rgb(255, 255, 255);\">You will see that according to&nbsp;Quantcast top 10k websites use jQuery.<br></span><br></div><div><span style=\"color: rgb(85, 85, 85);float: none;background-color: rgb(255, 255, 255);\"><img src=\"//a.ilovecoding.org/thumb//jquery_2016-02-01_0356.png\" style=\"width: 100%;\"><br></span></div><p><font face=\"inherit\"><span><span id=\"selectionBoundary_1454282463745_31176708126440644\" class=\"rangySelectionBoundary\">﻿</span>If I go to Microsoft.com and right click view page source, you will find that they're also using jQuery, same in the case of Amazon.com they're also using jQuery. In the image below you see the photo slider? This slider feature may be built via jQuery. jQuery is used to&nbsp;</span></font><span>accomplish</span><font face=\"inherit\"><span>&nbsp;these kinds of user-friendly&nbsp;</span></font><span>tasks.</span><font face=\"inherit\"><span>&nbsp;<br><span id=\"selectionBoundary_1454282463744_37302709417417645\" class=\"rangySelectionBoundary\">﻿</span></span></font><br><img src=\"//a.ilovecoding.org/thumb//jquery_2016-02-01_0404.png\" style=\"width: 100%;\"><br></p><p>Another example could be if you hover over the departments section on Amazon, you notice the rest of the screen becomes black or dark grey. This feature is also accomplished by jQuery.</p><p><img src=\"//a.ilovecoding.org/thumb//jquery_2016-02-01_0408.png\" style=\"width: 100%;\"><span><br></span></p><p>Let's look into some other examples as well. If you go to this <a href=\"http://old.hellobar.com/\" target=\"\">website</a>&nbsp;it puts the top bar on the top of the page. This feature is not very difficult to create purely via jQuery.<br></p><p><img src=\"//a.ilovecoding.org/thumb//jquery_2016-02-01_0413.png\" style=\"width: 100%;\"><br></p><p><b>jQuery Accordion</b><br></p><p>You see below the jQuery accordion, If you click on handle 1 it shows up if you click on handle 2 the first handle disappears and loads the handle 2 and so for the for the rest. We can also build that feature easily via jQuery<br></p><p><img src=\"//a.ilovecoding.org/thumb//jquery_2016-02-01_0419.png\" style=\"width: 100%;\"><br></p><p><span>You can also accomplish animation via jQuery. Let's look at another example. In the image below if you go to twitter &gt; sign up page and type some random stuff in the email address tab,&nbsp;</span><span>it immediately checks and tells \"doesn't look like a valid email\" this particular behavior of popping up the new message based on the particular input can be accomplished via jQuery.</span><br></p><p><img src=\"//a.ilovecoding.org/thumb//jquery_2016-02-01_0424.png\" style=\"width: 100%;\"><br></p><p><span style=\"color: rgb(85, 85, 85);float: none;background-color: rgb(255, 255, 255);\">Another thing you notice based on the information that we provided it gives us some suggestion of the username, this is also can be done with jQuery.&nbsp;The website communities with the server side and figures out in their database like that particular user does not exist so they give a suggestion. These features are easily accomplished by jQuery.&nbsp;</span><br><br><font face=\"inherit\"><span>Once you understand the&nbsp;</span></font>fundamentals<font face=\"inherit\"><span>&nbsp;of jQuery, you can go out and create anything that you want for&nbsp;your website.&nbsp;The&nbsp;</span></font>beauty<font face=\"inherit\"><span>&nbsp;about iLoveCoding is that you don't just learn the&nbsp;fundamentals of jQuery but also we are going to do mini projects in which you are going to see how jQuery library can be used in practice and you can create cool practical features for your website.</span></font></p><p><font face=\"inherit\"><span>I hope you enjoyed this intro video, If you have any question please leave your comments below, I'll talk to you in the next lesson. Goodbye :)</span></font></p>",
+    "title": "Learn jQuery in 14 days (Archived)",
+    "courseTotalDuration": "223:12",
+    "access": 0,
+    "level": 0,
+    "createdIso": {
+      "$date": "2015-10-25T04:23:41.346Z"
+    },
+    "updatedIso": {
+      "$date": "2019-06-07T14:24:25.401Z"
+    },
+    "technology": [
+      "jQuery"
+    ],
+    "topic": [
+      "jQuery",
+      "Front-End",
+      "Core Training"
+    ],
+    "lesson": [
+      "562d29b19068f91a3cdf1c5c",
+      "562d2a3c9068f91a3cdf1c5d",
+      "562d2a909068f91a3cdf1c5e",
+      "562d2b8a9068f91a3cdf1c5f",
+      "562d2bea9068f91a3cdf1c60",
+      "562d2c189068f91a3cdf1c61",
+      "562d2c5e9068f91a3cdf1c62",
+      "562d31809068f91a3cdf1c63",
+      "562d31b39068f91a3cdf1c64",
+      "562d321d9068f91a3cdf1c65",
+      "562d324d9068f91a3cdf1c66",
+      "562d32799068f91a3cdf1c67",
+      "562d32b29068f91a3cdf1c68",
+      "562d32dd9068f91a3cdf1c69",
+      "562d33639068f91a3cdf1c6a",
+      "562d372b9068f91a3cdf1c6b",
+      "562d375a9068f91a3cdf1c6c",
+      "562d37a99068f91a3cdf1c6d"
+    ],
+    "order": 25.0
+  }
+]

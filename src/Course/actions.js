@@ -1,14 +1,16 @@
-import 'whatwg-fetch'
 import { toast } from 'react-toastify'
+import 'whatwg-fetch'
 import {
-  SET_COURSES,
+  CLEAR_COURSE,
   CLEAR_COURSES,
   SET_COURSE,
-  CLEAR_COURSE,
   SET_COURSE_LOADING,
+  SET_COURSES,
   SET_COURSES_LIST_LOADING,
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
+import CoursesData from '../_app/data/Course.json'
+import LessonsData from '../_app/data/Lesson.json'
 import {
   checkStatus,
   parseJSON,
@@ -29,32 +31,6 @@ export function setLoadingList(isLoading = true) {
     payload: {
       isLoading,
     },
-  }
-}
-
-export function getCourses(type) {
-  let filter = {}
-
-  if (type === 'project') {
-    filter = { where: { topic: 'Project' } }
-  } else if (type === 'core') {
-    filter = { where: { topic: 'Core Training' } }
-  }
-
-  const url = `${API_URL}courses/all?filter=${JSON.stringify(filter)}`
-
-  return (dispatch) => {
-    dispatch(setLoadingList(true))
-
-    return fetch(url, { credentials: 'include' })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setCourses(null, json))
-      })
-      .catch((error) => {
-        dispatch(setCourses(error))
-      })
   }
 }
 
@@ -80,30 +56,6 @@ export function setCourses(error = null, data) {
   return action
 }
 
-export function clearCourses() {
-  return {
-    type: CLEAR_COURSES,
-  }
-}
-
-export function getCourseBySlug(slug) {
-  const url = `${API_URL}courses/${slug}/data`
-
-  return (dispatch) => {
-    dispatch(setLoadingView(true))
-
-    return fetch(url, { credentials: 'include' })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setCourse(null, json))
-      })
-      .catch((err) => {
-        dispatch(setCourse(err))
-      })
-  }
-}
-
 export function setCourse(error = null, data) {
   const action = {
     type: SET_COURSE,
@@ -124,6 +76,71 @@ export function setCourse(error = null, data) {
   }
 
   return action
+}
+
+export function getCourses(type) {
+  let filter = {}
+
+  if (type === 'project') {
+    filter = { where: { topic: 'Project' } }
+  } else if (type === 'core') {
+    filter = { where: { topic: 'Core Training' } }
+  }
+
+  return (dispatch) => {
+    dispatch(setLoadingList(true))
+
+    try {
+      const filteredCourses = CoursesData.filter((course) => {
+        if (filter.where && filter.where.topic) {
+          return course.topic.includes(filter.where.topic)
+        }
+        return true
+      })
+      dispatch(setCourses(null, filteredCourses))
+    } catch (error) {
+      dispatch(setCourses(error))
+    }
+  }
+}
+
+export function clearCourses() {
+  return {
+    type: CLEAR_COURSES,
+  }
+}
+
+const getLessonObjByLessonId = (lessonId) => {
+  const lesson = LessonsData.find(lesson => lesson._id === lessonId)
+  if (lesson) {
+    return {
+      title: lesson.title,
+      slug: lesson.slug,
+      duration: lesson.duration,
+      access: lesson.access,
+      isComplete: lesson.isComplete,
+    }
+  }
+  return {}
+}
+
+export function getCourseBySlug(slug) {
+  return (dispatch) => {
+    dispatch(setLoadingView(true))
+
+    try {
+      const course = CoursesData.find(course => course.slug === slug)
+      if (course) {
+        const lessonsObj = course.lesson.map(lessonId => getLessonObjByLessonId(lessonId))
+        const updatedCourse = { ...course, lesson: lessonsObj }
+        dispatch(setCourse(null, updatedCourse))
+      } else {
+        throw new Error('Course not found')
+      }
+    } catch (error) {
+      dispatch(setCourse(error))
+    }
+  }
 }
 
 export function clearCourse() {

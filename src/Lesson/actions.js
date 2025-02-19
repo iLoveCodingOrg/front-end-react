@@ -1,15 +1,16 @@
-import 'whatwg-fetch'
 import { toast } from 'react-toastify'
+import 'whatwg-fetch'
 import {
-  SET_LESSONS,
+  CLEAR_LESSON,
   CLEAR_LESSONS,
   SET_LESSON,
-  CLEAR_LESSON,
-  SET_LESSON_LOADING,
-  SET_LESSONS_LIST_LOADING,
   SET_LESSON_AS_COMPLETE,
+  SET_LESSON_LOADING,
+  SET_LESSONS,
+  SET_LESSONS_LIST_LOADING,
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
+import LessonsData from '../_app/data/Lesson.json'
 import {
   checkStatus,
   parseJSON,
@@ -34,21 +35,29 @@ export function setLoadingList(isLoading = true) {
   }
 }
 
-export function getLessons() {
-  const url = `${API_URL}lessons/all`
+export function getLessons(type) {
+  let filter = {}
+
+  if (type === 'project') {
+    filter = { where: { topic: 'Project' } }
+  } else if (type === 'core') {
+    filter = { where: { topic: 'Core Training' } }
+  }
 
   return (dispatch) => {
     dispatch(setLoadingList(true))
 
-    return fetch(url, { credentials: 'include' })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setLessons(null, json))
+    try {
+      const filteredLessons = LessonsData.filter((lesson) => {
+        if (filter.where && filter.where.topic) {
+          return lesson.topic.includes(filter.where.topic)
+        }
+        return true
       })
-      .catch((error) => {
-        dispatch(setLessons(error))
-      })
+      dispatch(setLessons(null, filteredLessons))
+    } catch (error) {
+      dispatch(setLessons(error))
+    }
   }
 }
 
@@ -81,20 +90,19 @@ export function clearLessons() {
 }
 
 export function getLessonBySlug(slug) {
-  const url = `${API_URL}lessons/${slug}/data`
-
   return (dispatch) => {
     dispatch(setLoadingView(true))
 
-    return fetch(url, { credentials: 'include' })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setLesson(null, json))
-      })
-      .catch((err) => {
-        dispatch(setLesson(err))
-      })
+    try {
+      const lesson = LessonsData.find(lesson => lesson.slug === slug)
+      if (lesson) {
+        dispatch(setLesson(null, lesson))
+      } else {
+        throw new Error('Lesson not found')
+      }
+    } catch (error) {
+      dispatch(setLesson(error))
+    }
   }
 }
 

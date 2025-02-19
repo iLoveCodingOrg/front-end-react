@@ -1,8 +1,8 @@
 import {
-  SET_COURSES,
-  SET_COURSE,
   CLEAR_COURSE,
+  SET_COURSE,
   SET_COURSE_LOADING,
+  SET_COURSES,
   SET_COURSES_LIST_LOADING,
 } from '../_app/actionTypes'
 
@@ -38,7 +38,7 @@ export default function (state = initialState, { type, payload }) {
           error: payload.error,
           data: {
             ...payload.data,
-            lessonCount: payload.data.lessons.length,
+            lessonCount: payload.data.lesson.length,
           },
         },
       }

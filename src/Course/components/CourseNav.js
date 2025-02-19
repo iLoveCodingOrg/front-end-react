@@ -1,11 +1,11 @@
-import React from 'react'
 import get from 'lodash/get'
+import React from 'react'
 
-import CourseLinks from './CourseLinks'
 import CourseContent from './CourseContent'
+import CourseLinks from './CourseLinks'
 
 export default function CourseNav({ activeLessonIndex = -1, course }) {
-  const lessons = get(course, 'lessons')
+  const lessons = get(course, 'lesson')
   const lessonCount = get(course, 'lessonCount')
   const lessonCompletedCount = get(course, 'lessonCompletedCount')
   const courseSlug = get(course, 'slug')
