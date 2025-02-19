@@ -1,46 +1,45 @@
+import 'react-toastify/dist/ReactToastify.min.css'
 import '../node_modules/open-iconic/font/css/open-iconic-bootstrap.css'
 import './_app/styles/index.css'
-import 'react-toastify/dist/ReactToastify.min.css'
 
 import React from 'react'
 import { render } from 'react-dom'
+import { Provider } from 'react-redux'
 import {
   BrowserRouter,
+  Redirect,
   Route,
   Switch,
-  Redirect,
 } from 'react-router-dom'
-import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
 
 import store from './_app/store'
 import withAuth from './withAuth'
 import Wrap from './Wrap'
 
-import ErrorBoundary from './ErrorBoundary'
-import ScrollToTop from './ScrollToTop'
-import Home from './Home/components/HomeSalesPage'
-import Dashboard from './Dashboard'
-import QuestionRoutes from './Question'
-import LessonRoutes from './Lesson'
-import CourseRoutes from './Course'
 import BlogRoutes from './Blog'
-import PageRoutes, { AsyncNotFound as NotFound } from './Page'
-import Login from './Login'
-import Signup from './Signup'
-import VerifyEmail from './VerifyEmail'
-import {
-  AsyncResetPassword as ResetPassword,
-  AsyncForgotPassword as ForgotPassword,
-} from './ForgotPassword'
-import Reviews from './Reviews'
-import Free from './Free'
-import Curriculum from './Curriculum'
-import Pricing from './Pricing'
-import OfficeHours from './OfficeHours'
-import GroupCalls from './GroupCalls'
-import SubscriptionRoutes from './Subscription'
 import ChangePassword from './ChangePassword'
+import CourseRoutes from './Course'
+import Curriculum from './Curriculum'
+import Dashboard from './Dashboard'
+import ErrorBoundary from './ErrorBoundary'
+import {
+  AsyncForgotPassword as ForgotPassword,
+  AsyncResetPassword as ResetPassword,
+} from './ForgotPassword'
+import Free from './Free'
+import GroupCalls from './GroupCalls'
+import Home from './Home/components/HomeSalesPage'
+import LessonRoutes from './Lesson'
+import Login from './Login'
+import OfficeHours from './OfficeHours'
+import PageRoutes, { AsyncNotFound as NotFound } from './Page'
+import QuestionRoutes from './Question'
+import Reviews from './Reviews'
+import ScrollToTop from './ScrollToTop'
+import Signup from './Signup'
+import SubscriptionRoutes from './Subscription'
+import VerifyEmail from './VerifyEmail'
 import Webinar from './Webinar'
 
 const RemoveTrailingSlash = ({ location }) => {

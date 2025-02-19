@@ -1,15 +1,15 @@
 import React from 'react'
 
-import Header from '../Header'
+import Banner from '../Banner'
 import Footer from '../Footer'
-// import Banner from '../Banner'
+import Header from '../Header'
 // import withAuth from '../withAuth'
 
 export default function Wrap({ children }) {
   // const BannerHOC = withAuth(Banner, false, <></>)
   return (
     <>
-      {/* <Banner /> */}
+      <Banner />
       {/* <BannerHOC /> */}
       <Header />
       {children}

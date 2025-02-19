@@ -6,9 +6,9 @@ export default function () {
       style={{
         backgroundColor: '#f44',
       }}
-      className="bg-light color-white t-center p--5 t-uppercase"
+      className="bg-light color-white t-center p--5"
     >
-      <strong>Limited Time Offer:</strong> Get lifetime access to the training when you buy today!
+      <strong>Starting Now:</strong> iLoveCoding courses are completely FREE. No login or signup required.
     </div>
   )
 }

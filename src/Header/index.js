@@ -1,11 +1,10 @@
-import './styles.css'
-import isEmpty from 'lodash/isEmpty'
 import React from 'react'
 import { connect } from 'react-redux'
-import { withRouter, NavLink } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
+import './styles.css'
 
-import logo from '../_app/images/ilovecoding-logo.svg'
 import { contentTypeRoutes } from '../_app/constants'
+import logo from '../_app/images/ilovecoding-logo.svg'
 import { actions, selectors } from '../_user'
 
 function Header({
@@ -160,12 +159,12 @@ function Header({
         className: 'nav-link btn btn-400 py--25',
         style: {},
       },
-      {
-        label: 'Enroll Now',
-        link: '/#payment',
-        className: 'btn btn-primary ml--5',
-        style: {},
-      },
+      // {
+      //   label: 'Enroll Now',
+      //   link: '/#payment',
+      //   className: 'btn btn-primary ml--5',
+      //   style: {},
+      // },
     ]
 
     return renderLinks(links)

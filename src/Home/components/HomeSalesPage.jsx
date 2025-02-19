@@ -1,44 +1,36 @@
+import { PropTypes } from 'prop-types'
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { connect } from 'react-redux'
-import { PropTypes } from 'prop-types'
 import { Redirect, withRouter } from 'react-router-dom'
 
 import { isLoggedIn, isPaid } from '../../_user/selectors'
-import Header from './HomeSalesPageHeader'
-import StudentCompanies from '../../LogoList/StudentCompanies'
-import SocialProof from './SocialProof'
-import UsedBy from '../../LogoList/UsedBy'
-import Price from '../../Pricing/components/Price'
 import AboutAziz from '../../AboutAziz'
+import StudentCompanies from '../../LogoList/StudentCompanies'
+import UsedBy from '../../LogoList/UsedBy'
+import Header from './HomeSalesPageHeader'
+import SocialProof from './SocialProof'
 
-import TOC from './TOC'
 import {
+  CertificateOfCompletion,
+  Guarantee,
+  StructuredLearning,
+  TechnologiesLearn,
   Testimonials,
-  WhatYouGet,
-  WhatDifferent,
   WhatBuild,
   WhatLearn,
-  WhoFor,
-  BuildAnything,
-  StructuredLearning,
-  CompleteCurriculum,
-  PracticeProjects,
-  InterviewPrep,
-  MentorCommunitySupport,
-  CertificateOfCompletion,
-  ValueProposition,
-  Guarantee,
-  FAQs,
-  TechnologiesLearn,
+  WhatYouGet,
+  WhoFor
 } from '../../SalesCopy'
+import TOC from './TOC'
 
 function BuyCTA() {
-  return (
-    <div className="my-3 t-center">
-      <a className="btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
-    </div>
-  )
+  return (<></>)
+  // return (
+  //   <div className="my-3 t-center">
+  //     <a className="btn btn-lg btn-primary" href="#payment">Buy risk-free</a>
+  //   </div>
+  // )
 }
 function HomeSalesPage({
   location, isLoggedIn, isPaid,
@@ -157,10 +149,10 @@ function HomeSalesPage({
               <BuyCTA />
             </div>
 
-            <div id="payment" className="container-fluid py-4 bg-gray-lighter">
+            {/* <div id="payment" className="container-fluid py-4 bg-gray-lighter">
               <Price />
               <ValueProposition id="value" className="container-md" />
-            </div>
+            </div> */}
 
             <div id="guarantee" className="container-fluid py-4 bg-gray-lightest">
               <Guarantee className="container-md" />
@@ -175,10 +167,10 @@ function HomeSalesPage({
               <BuyCTA />
             </div> */}
 
-            <div id="faqs" className="container-fluid pt-3">
+            {/* <div id="faqs" className="container-fluid pt-3">
               <FAQs className="container-md" />
               <BuyCTA />
-            </div>
+            </div> */}
 
             <div id="instructor" className="py-4 bg-gray-lighter">
               <AboutAziz className="mr-auto ml-auto" />

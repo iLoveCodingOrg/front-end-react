@@ -22,3 +22,11 @@
   /pages/about
 - Page not found
   /pages/123
+
+## TODOD
+
+- [ ] Improve home page
+  - [ ] Remove pricing
+  - [ ] Remove login
+  - [ ] Remove banners
+  - [ ] Add banner that its free
