@@ -10,7 +10,6 @@ import {
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
 import CoursesData from '../_app/data/Course.json'
-import LessonsData from '../_app/data/Lesson.json'
 import {
   checkStatus,
   parseJSON,
@@ -110,33 +109,13 @@ export function clearCourses() {
   }
 }
 
-const getLessonObjByLessonId = (lessonId) => {
-  const lesson = LessonsData.find(lesson => lesson._id === lessonId)
-  if (lesson) {
-    return {
-      title: lesson.title,
-      slug: lesson.slug,
-      duration: lesson.duration,
-      access: lesson.access,
-      isComplete: lesson.isComplete,
-    }
-  }
-  return {}
-}
-
 export function getCourseBySlug(slug) {
   return (dispatch) => {
     dispatch(setLoadingView(true))
 
     try {
       const course = CoursesData.find(course => course.slug === slug)
-      if (course) {
-        const lessonsObj = course.lesson.map(lessonId => getLessonObjByLessonId(lessonId))
-        const updatedCourse = { ...course, lesson: lessonsObj }
-        dispatch(setCourse(null, updatedCourse))
-      } else {
-        throw new Error('Course not found')
-      }
+      dispatch(setCourse(null, course))
     } catch (error) {
       dispatch(setCourse(error))
     }
