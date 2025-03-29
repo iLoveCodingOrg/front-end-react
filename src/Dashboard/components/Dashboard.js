@@ -1,9 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
+import { Video } from '../../Video'
 import PremiumSection from './PremiumSection'
 import StudentCommunity from './StudentCommunity'
-import { Video } from '../../Video'
 
 export default function () {
   return (
@@ -25,7 +25,7 @@ export default function () {
             </h3>
           </div>
           <div className="flex-1" style={{ flexBasis: '250px' }}>
-            <Video videoSource="314907971" />
+            <Video videoSource="6rH9BULLa9w" />
           </div>
         </div>
         <hr className="mb--25" />
