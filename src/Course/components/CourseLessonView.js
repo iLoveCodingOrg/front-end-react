@@ -12,13 +12,13 @@ import { actions as lessonActions } from '../../Lesson'
 import Loading from '../../Loading'
 import SourceDemo from '../../SourceDemo'
 import { VideoWrap } from '../../Video'
-import { getCourseBySlug } from '../actions'
+import { getCourseBySlug, getLessonBySlug } from '../actions'
 import CourseNav from './CourseNav'
 
 class CourseLessonView extends React.Component {
   componentDidMount() {
     const { getLesson, getCourse, match } = this.props
-    getLesson(match.params.lessonSlug)
+    getLesson(match.params.courseSlug, match.params.lessonSlug)
     getCourse(match.params.courseSlug)
   }
 
@@ -163,8 +163,8 @@ function mapDispatchToProps(dispatch) {
     callMarkAsComplete: (id) => {
       dispatch(lessonActions.callMarkLessonComplete(id))
     },
-    getLesson: (slug) => {
-      dispatch(lessonActions.getLessonBySlug(slug))
+    getLesson: (courseSlug, lessonSlug) => {
+      dispatch(getLessonBySlug(courseSlug, lessonSlug))
     },
     getCourse: (slug) => {
       dispatch(getCourseBySlug(slug))

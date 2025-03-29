@@ -24,7 +24,7 @@ export default function CourseNav({ activeLessonIndex = -1, course }) {
       <CourseContent
         activeLessonIndex={activeLessonIndex}
         courseSlug={courseSlug}
-        lessons={lessons}
+        lesson={lessons}
         lessonCount={lessonCount}
         lessonCompletedCount={lessonCompletedCount}
       />

@@ -14,6 +14,7 @@ import {
   checkStatus,
   parseJSON,
 } from '../_app/utils'
+import { setLesson } from '../Lesson/actions'
 
 export function setLoadingView(isLoading = true) {
   return {
@@ -118,6 +119,20 @@ export function getCourseBySlug(slug) {
       dispatch(setCourse(null, course))
     } catch (error) {
       dispatch(setCourse(error))
+    }
+  }
+}
+
+export function getLessonBySlug(courseSlug, lessonSlug) {
+  return (dispatch) => {
+    dispatch(setLoadingView(true))
+
+    try {
+      const course = CoursesData.find(course => course.slug === courseSlug)
+      const lesson = course.lesson.find(lesson => lesson.slug === lessonSlug)
+      dispatch(setLesson(null, lesson))
+    } catch (error) {
+      dispatch(setLesson(error))
     }
   }
 }
