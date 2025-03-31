@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
 import get from 'lodash/get'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { Access, CheckMark } from '../../_common'
 import { isLoggedIn } from '../../_user/selectors'
@@ -85,7 +85,7 @@ class CourseContent extends React.Component {
   }
 
   renderProgressIndicator() {
-    const { lessonCompletedCount, lessonCount, isLoggedIn } = this.props
+    const { lessonCompletedCount, isLoggedIn, lesson } = this.props
 
     if (!isLoggedIn) { return null }
 
@@ -93,7 +93,7 @@ class CourseContent extends React.Component {
       <div>
         Your progress:&nbsp;
         <span className="badge bg-warning">
-          {Math.round(lessonCompletedCount / lessonCount * 100)}
+          {Math.round(lessonCompletedCount / lesson.length * 100)}
           % complete
         </span>
       </div>
@@ -129,7 +129,7 @@ class CourseContent extends React.Component {
   }
 
   render() {
-    const { lessons, maxScrollHeight } = this.props
+    const { lesson, maxScrollHeight } = this.props
     return (
       <>
         <div className="flex space-between bg-gray-lighter p-1 align-items-center">
@@ -144,7 +144,7 @@ class CourseContent extends React.Component {
             border: '3px solid #dee2e6',
           }}
         >
-          {lessons && lessons.map((item, index) => this.renderItem(item, index))}
+          {lesson && lesson.map((item, index) => this.renderItem(item, index))}
         </div>
         {this.renderScrollButtons()}
       </>
@@ -156,8 +156,7 @@ CourseContent.propTypes = {
   activeLessonIndex: PropTypes.number.isRequired,
   courseSlug: PropTypes.string.isRequired,
   isLoggedIn: PropTypes.bool.isRequired,
-  lessons: PropTypes.array.isRequired,
-  lessonCount: PropTypes.number.isRequired,
+  lesson: PropTypes.array.isRequired,
   lessonCompletedCount: PropTypes.number,
   maxScrollHeight: PropTypes.number,
 }

@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet'
 import Cta from '../../Cta'
 import { Video } from '../../Video'
 
+import Archieved from './Archieved'
+import Electives from './Electives'
 import Module1 from './Module1'
 import Module2 from './Module2'
 import Module3 from './Module3'
-import Electives from './Electives'
-import Archieved from './Archieved'
 
 export default () => (
   <div className="flex flex-column">
@@ -30,7 +30,7 @@ export default () => (
           </h3>
         </div>
         <div className="t-center p-0 mb-1">
-          <Video videoSource="315031967" />
+          <Video videoSource="q87DYpgqfhE" />
           <h5 className="py-1">VIDEO: How to get the most out of The Full Curriculum</h5>
         </div>
       </div>

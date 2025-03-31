@@ -1,24 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { Helmet } from 'react-helmet'
 import isEmpty from 'lodash/isEmpty'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { connect } from 'react-redux'
 
-import { ViewHeader, RedirectAlert } from '../../_common'
-import { VideoWrap } from '../../Video'
-import { getCourseBySlug } from '../actions'
-import { actions as lessonActions } from '../../Lesson'
-import CourseNav from './CourseNav'
-import SourceDemo from '../../SourceDemo'
-import Loading from '../../Loading'
-import ErrorBox from '../../ErrorBox'
-import Cta from '../../Cta'
+import { RedirectAlert, ViewHeader } from '../../_common'
 import Breadcrumbs from '../../Breadcrumbs'
+import Cta from '../../Cta'
+import ErrorBox from '../../ErrorBox'
+import { actions as lessonActions } from '../../Lesson'
+import Loading from '../../Loading'
+import SourceDemo from '../../SourceDemo'
+import { VideoWrap } from '../../Video'
+import { getCourseBySlug, getLessonBySlug } from '../actions'
+import CourseNav from './CourseNav'
 
 class CourseLessonView extends React.Component {
   componentDidMount() {
     const { getLesson, getCourse, match } = this.props
-    getLesson(match.params.lessonSlug)
+    getLesson(match.params.courseSlug, match.params.lessonSlug)
     getCourse(match.params.courseSlug)
   }
 
@@ -35,9 +35,9 @@ class CourseLessonView extends React.Component {
   }
 
   getActiveLessonIndex(course, lessonSlug) {
-    if (isEmpty(course.lessons)) return -1
+    if (isEmpty(course.lesson)) return -1
 
-    return course.lessons.findIndex(({ slug }) => slug === lessonSlug)
+    return course.lesson.findIndex(({ slug }) => slug === lessonSlug)
   }
 
   render() {
@@ -163,8 +163,8 @@ function mapDispatchToProps(dispatch) {
     callMarkAsComplete: (id) => {
       dispatch(lessonActions.callMarkLessonComplete(id))
     },
-    getLesson: (slug) => {
-      dispatch(lessonActions.getLessonBySlug(slug))
+    getLesson: (courseSlug, lessonSlug) => {
+      dispatch(getLessonBySlug(courseSlug, lessonSlug))
     },
     getCourse: (slug) => {
       dispatch(getCourseBySlug(slug))

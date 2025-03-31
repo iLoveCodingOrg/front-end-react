@@ -14,6 +14,13 @@
     "technology": [
       "git"
     ],
+    "topic": [
+      "Crash Course",
+      "Elective",
+      "Code Management",
+      "git",
+      "Core Training"
+    ],
     "lesson": [
       {
         "_id": "57c64cb61cbef70f008a10e4",
@@ -328,7 +335,7 @@
     "_id": "5bccaece21305f0013c19113",
     "slug": "js2",
     "subTitle": "JavaScript is a must-know programming language for a modern developer. With clearly explained concepts in short and to the point screencast videos, learn the basic and advanced concepts of modern JavaScript (ES6+ concepts included). Build professional-grade apps and while getting prepared to answer tough interview questions. (Cheatsheets, references, and tools included.)",
-    "videoSource": "tTPyKo3tFb8",
+    "videoSource": "296198422",
     "thumbnail": "js2.gif",
     "title": "Learn JavaScript Correctly - Beginner to Advance",
     "courseTotalDuration": "638:43",
@@ -349,7 +356,7 @@
         "subTitle": "Tools you will need for the Learn JavaScript Correctly course",
         "createdMsec": 1540225892396,
         "level": 0,
-        "videoSource": "pP5cQAPR6cY",
+        "videoSource": "294443216",
         "duration": "2:25",
         "technology": [
           "JavaScript"
@@ -364,7 +371,7 @@
         "subTitle": "Discover the little known background and history of JavaScript. This will help put things into perspective and clarify many misconceptions.",
         "createdMsec": 1540225925350,
         "level": 0,
-        "videoSource": "M2m9ptZuL8M",
+        "videoSource": "294446158",
         "duration": "8:06",
         "technology": [
           "JavaScript"
@@ -379,7 +386,7 @@
         "subTitle": "Learn how JavaScript is used to build apps for the Front-End and Back-End both. This lesson will make things clear.",
         "createdMsec": 1540225940012,
         "level": 1,
-        "videoSource": "CSUmgEC2RZA",
+        "videoSource": "294447664",
         "duration": "7:05",
         "technology": [
           "JavaScript"
@@ -394,7 +401,7 @@
         "subTitle": "Do not be overwhelmed with text-editors. They are very simple at its core. Get a quick intro to text-editors and VS Code in this lesson.",
         "createdMsec": 1540225951855,
         "level": 0,
-        "videoSource": "FpD4fFE8yF4",
+        "videoSource": "294443162",
         "duration": "4:14",
         "technology": [
           "JavaScript"
@@ -409,7 +416,7 @@
         "subTitle": "Project setup instructions for the 'Learn JavaScript Correctly Course'",
         "createdMsec": 1540225965499,
         "level": 0,
-        "videoSource": "tF0rQQ37C_Q",
+        "videoSource": "294443135",
         "duration": "2:34",
         "technology": [
           "JavaScript"
@@ -424,7 +431,7 @@
         "subTitle": "Types are the foundation of JavaScript - Although very simple, they have immense power and depth. Lets learn them correctly from the ground up.",
         "createdMsec": 1540225976990,
         "level": 0,
-        "videoSource": "J7ajC1hSuhg",
+        "videoSource": "296203575",
         "duration": "6:17",
         "technology": [
           "JavaScript"
@@ -439,7 +446,7 @@
         "subTitle": "Types are the foundation of JavaScript - Although very simple, they have immense power and depth. Lets learn them correctly from the ground up.",
         "createdMsec": 1540226532530,
         "level": 0,
-        "videoSource": "TI9TXsNnq6c",
+        "videoSource": "296204705",
         "duration": "4:15",
         "technology": [
           "JavaScript"
@@ -454,7 +461,7 @@
         "subTitle": "Objects are the most powerful Type in JavaScript. Let's see how to use them.",
         "createdMsec": 1540226574038,
         "level": 0,
-        "videoSource": "-fdcUifPgPE",
+        "videoSource": "295885219",
         "duration": "5:24",
         "technology": [
           "JavaScript"
@@ -469,7 +476,7 @@
         "subTitle": "Lets see how to create variables in JavaScript. Plus learn how to use the Dot and Brackets operator to access value from objects.",
         "createdMsec": 1540226591699,
         "level": 0,
-        "videoSource": "H-1cTVr8n30",
+        "videoSource": "295885848",
         "duration": "5:59",
         "technology": [
           "JavaScript"
@@ -484,7 +491,7 @@
         "subTitle": "Use the 'typeof' operator to see whats the 'type' of a value or variable.",
         "createdMsec": 1540226606998,
         "level": 0,
-        "videoSource": "FBoPicXrRDs",
+        "videoSource": "295886416",
         "duration": "4:03",
         "technology": [
           "JavaScript"
@@ -499,7 +506,7 @@
         "subTitle": "Learn the basic terminologies used to describe concepts in JavaScript. These are fancy looking words, but they are very simple once you understand them.",
         "createdMsec": 1540226627258,
         "level": 0,
-        "videoSource": "ukB6qdk_ClA",
+        "videoSource": "295886817",
         "duration": "6:40",
         "technology": [
           "JavaScript"
@@ -514,7 +521,7 @@
         "subTitle": "Learn the difference between a Dynamically-Typed language and a Statically-Typed language. They are complicated looking words, but they are simple concepts.",
         "createdMsec": 1540226640970,
         "level": 0,
-        "videoSource": "EgYIhIksuck",
+        "videoSource": "295887586",
         "duration": "2:02",
         "technology": [
           "JavaScript"
@@ -529,7 +536,7 @@
         "subTitle": "Array is simply a collection of values. Thats it! Although simple, Array is a very powerful type in JavaScript. Lets look at them in practice in this lesson.",
         "createdMsec": 1540226651407,
         "level": 0,
-        "videoSource": "5fL1o9qyCog",
+        "videoSource": "295887728",
         "duration": "4:54",
         "technology": [
           "JavaScript"
@@ -544,7 +551,7 @@
         "subTitle": "Checking Array length and looking at a scenario where the length returns incorrect value. Note: Good interview prep here.",
         "createdMsec": 1540226717123,
         "level": 0,
-        "videoSource": "B0VgsSfaaAo",
+        "videoSource": "295888085",
         "duration": "2:40",
         "technology": [
           "JavaScript"
@@ -559,7 +566,7 @@
         "subTitle": "There is a special feature in JavaScript that allows us to check the 'type' of an Array. Lets take a look here.",
         "createdMsec": 1540226736312,
         "level": 0,
-        "videoSource": "FVWdq4uCgbM",
+        "videoSource": "295888337",
         "duration": "1:25",
         "technology": [
           "JavaScript"
@@ -574,7 +581,7 @@
         "subTitle": "A function is a special type in JavaScript that hold a bunch of instructions. Lets learn its basic building blocks and where they are used.",
         "createdMsec": 1540226747548,
         "level": 0,
-        "videoSource": "d0ikhXFbuhQ",
+        "videoSource": "295888457",
         "duration": "6:02",
         "technology": [
           "JavaScript"
@@ -589,7 +596,7 @@
         "subTitle": "A function is a special type in JavaScript that hold a bunch of instructions. Lets learn its basic building blocks and where they are used.",
         "createdMsec": 1540226765692,
         "level": 0,
-        "videoSource": "8FcgPmKpeV0",
+        "videoSource": "295889125",
         "duration": "5:44",
         "technology": [
           "JavaScript"
@@ -604,7 +611,7 @@
         "subTitle": "A function is a special type in JavaScript that hold a bunch of instructions. Lets learn its basic building blocks and where they are used.",
         "createdMsec": 1540226777208,
         "level": 0,
-        "videoSource": "PAYf3OQRLYw",
+        "videoSource": "295889899",
         "duration": "5:40",
         "technology": [
           "JavaScript"
@@ -619,7 +626,7 @@
         "subTitle": "Becoming a good developer is all about understanding things at its core. With our basic knowledge so far, lets recognize some deeper sides of JavaScript.",
         "createdMsec": 1540226794858,
         "level": 0,
-        "videoSource": "eEB53HZxl4o",
+        "videoSource": "295890508",
         "duration": "5:30",
         "technology": [
           "JavaScript"
@@ -634,7 +641,7 @@
         "subTitle": "Let's make a simple app that calculates our age, at any given year.",
         "createdMsec": 1540226808456,
         "level": 0,
-        "videoSource": "RSPEUzrshh4",
+        "videoSource": "295891139",
         "duration": "6:02",
         "technology": [
           "JavaScript"
@@ -651,7 +658,7 @@
         "subTitle": "There are two flavors of writing a function. One is called Function Statement (a.k.a Function Declaration) and the other is called Function Expression. Lets see how they differ.",
         "createdMsec": 1540226821034,
         "level": 0,
-        "videoSource": "g7x3t7qSay8",
+        "videoSource": "295891490",
         "duration": "3:58",
         "technology": [
           "JavaScript"
@@ -666,7 +673,7 @@
         "subTitle": "Learn the about the two phases of processing the JavaScript engine goes through. Phase 1: Creation, Phase 2: Execution. Plus learn about the concept of 'hoisting'.",
         "createdMsec": 1540226834818,
         "level": 1,
-        "videoSource": "7VTGoCAwHHE",
+        "videoSource": "296206161",
         "duration": "7:01",
         "technology": [
           "JavaScript"
@@ -681,7 +688,7 @@
         "subTitle": "How does function hoisting work. Tip: Hoisting works differently on Function Statement and Function Expression.",
         "createdMsec": 1540226846542,
         "level": 1,
-        "videoSource": "0ySbpi0cNrA",
+        "videoSource": "295891896",
         "duration": "4:52",
         "technology": [
           "JavaScript"
@@ -696,7 +703,7 @@
         "subTitle": "Scope are the limits in which a variable exists. Lets see how the concept of 'scope' gives us limitations and power.",
         "createdMsec": 1540226860559,
         "level": 0,
-        "videoSource": "fQbqUhznWZQ",
+        "videoSource": "295892431",
         "duration": "4:57",
         "technology": [
           "JavaScript"
@@ -711,7 +718,7 @@
         "subTitle": "Scope are the limits in which a variable exists. Lets see how the concept of 'scope' gives us limitations and power.",
         "createdMsec": 1540226876620,
         "level": 0,
-        "videoSource": "Ts9o3lvU6JE",
+        "videoSource": "295892849",
         "duration": "3:02",
         "technology": [
           "JavaScript"
@@ -726,7 +733,7 @@
         "subTitle": "Inner scope has access to the variables in the outer scope. This hierarchy of scope is called the scope chain.",
         "createdMsec": 1540226905492,
         "level": 0,
-        "videoSource": "IPmPIxSx_u0",
+        "videoSource": "295893123",
         "duration": "3:45",
         "technology": [
           "JavaScript"
@@ -741,7 +748,7 @@
         "subTitle": "Lexical Environment is the physical location where a function or variable is declared. Lets learn its implication on our code.",
         "createdMsec": 1540226921251,
         "level": 0,
-        "videoSource": "A8Tg-aB0u4E",
+        "videoSource": "295898497",
         "duration": "6:00",
         "technology": [
           "JavaScript"
@@ -756,7 +763,7 @@
         "subTitle": "Writing good code consists of two parts - Part 1: Writing concise and easy to understand logic; Part 2: Organizing and formating your code well (Presentation). This lesson is about the latter.",
         "createdMsec": 1540226935662,
         "level": 0,
-        "videoSource": "_jL1J2r-22c",
+        "videoSource": "296206847",
         "duration": "6:31",
         "technology": [
           "JavaScript"
@@ -771,7 +778,7 @@
         "subTitle": "+ - / % ** are arithmetic operators in JavaScript. Lets learn how to use them.",
         "createdMsec": 1540226948711,
         "level": 0,
-        "videoSource": "bdELuGfS6Mw",
+        "videoSource": "296231745",
         "duration": "5:46",
         "technology": [
           "JavaScript"
@@ -786,7 +793,7 @@
         "subTitle": "One of the many assignment operators are used to  assign value to a variable in JavaScript. Lets learn about these assignment operators and how they differ.",
         "createdMsec": 1540226961716,
         "level": 0,
-        "videoSource": "O_NA7aHZi2k",
+        "videoSource": "295894560",
         "duration": "3:19",
         "technology": [
           "JavaScript"
@@ -801,7 +808,7 @@
         "subTitle": "Logical operators help us make decisions based on a given condition. Let's see how and when to use them.",
         "createdMsec": 1540226974328,
         "level": 0,
-        "videoSource": "tl7blY6eB1k",
+        "videoSource": "295894888",
         "duration": "5:59",
         "technology": [
           "JavaScript"
@@ -816,7 +823,7 @@
         "subTitle": "Triple equal operator compare two values, and checks if the values are exactly the same.",
         "createdMsec": 1540226989503,
         "level": 0,
-        "videoSource": "w4PzYj4Pk3k",
+        "videoSource": "295895434",
         "duration": "6:23",
         "technology": [
           "JavaScript"
@@ -831,7 +838,7 @@
         "subTitle": "Double equal operator compares two values, and checks if they are same after coercion.",
         "createdMsec": 1540227000144,
         "level": 0,
-        "videoSource": "AxA0eHBuS1k",
+        "videoSource": "295895952",
         "duration": "4:31",
         "technology": [
           "JavaScript"
@@ -846,7 +853,7 @@
         "subTitle": "Comparison Operators compare two values and checks for different conditions. Lets see how and when to use them.",
         "createdMsec": 1540227010927,
         "level": 0,
-        "videoSource": "czqD8lRIVQU",
+        "videoSource": "295896335",
         "duration": "2:39",
         "technology": [
           "JavaScript"
@@ -861,7 +868,7 @@
         "subTitle": "Conversion operators are used to convert one type into another.",
         "createdMsec": 1540227022804,
         "level": 0,
-        "videoSource": "i0NpENtMj04",
+        "videoSource": "295896561",
         "duration": "4:42",
         "technology": [
           "JavaScript"
@@ -876,7 +883,7 @@
         "subTitle": "Increment '++' and decrement '--' operators, add 1 or subtract 1 respectively.",
         "createdMsec": 1540227035941,
         "level": 0,
-        "videoSource": "LUFNB0zTQuA",
+        "videoSource": "295896888",
         "duration": "2:35",
         "technology": [
           "JavaScript"
@@ -891,7 +898,7 @@
         "subTitle": "Given one expression has multiple operators used, the operator precedence determines which operator is going to be processed first.",
         "createdMsec": 1540227046246,
         "level": 0,
-        "videoSource": "-6ug4usF070",
+        "videoSource": "295897030",
         "duration": "4:01",
         "technology": [
           "JavaScript"
@@ -906,7 +913,7 @@
         "subTitle": "Given multiple operators of the same precedence are used in an expression, the operator associativity determines in which direction the processing will happen (left-to-right / right-to-left).",
         "createdMsec": 1540227057533,
         "level": 0,
-        "videoSource": "jMmiXrYaxto",
+        "videoSource": "295897558",
         "duration": "4:12",
         "technology": [
           "JavaScript"
@@ -921,7 +928,7 @@
         "subTitle": "if-else statements are logical statements which help us run code only when certain conditions are met. Lets see how and when to use them.",
         "createdMsec": 1540227068154,
         "level": 0,
-        "videoSource": "pV6wBcSzhmI",
+        "videoSource": "296236994",
         "duration": "7:03",
         "technology": [
           "JavaScript"
@@ -936,7 +943,7 @@
         "subTitle": "Like and if/else statement, the Ternary operator also helps us run certain code when a condition is met. However ternary operator is used in simple scenarios.",
         "createdMsec": 1540227077950,
         "level": 0,
-        "videoSource": "Ou-a5ICkgu4",
+        "videoSource": "295897918",
         "duration": "2:47",
         "technology": [
           "JavaScript"
@@ -951,7 +958,7 @@
         "subTitle": "Switch statements are logical statements in JavaScript that help us run certain code only when a condition is met. Switch statement are a close sibling of if/else statement. Lets see how to use them.",
         "createdMsec": 1540227106390,
         "level": 0,
-        "videoSource": "UxTBJgaWgLw",
+        "videoSource": "295898085",
         "duration": "5:26",
         "technology": [
           "JavaScript"
@@ -965,7 +972,7 @@
         "title": "For loop in JavaScript - Part 1",
         "createdMsec": 1540227667183,
         "level": 0,
-        "videoSource": "wLyZLhCgkWc",
+        "videoSource": "296109601",
         "duration": "6:54",
         "technology": [
           "JavaScript"
@@ -979,7 +986,7 @@
         "title": "For loop in JavaScript - Part 2",
         "createdMsec": 1540227685292,
         "level": 0,
-        "videoSource": "VFt8Zhy1f9A",
+        "videoSource": "296112986",
         "duration": "5:21",
         "technology": [
           "JavaScript"
@@ -993,7 +1000,7 @@
         "title": "While loop in JavaScript",
         "createdMsec": 1540227699174,
         "level": 0,
-        "videoSource": "fdzmbFVU53Y",
+        "videoSource": "296113333",
         "duration": "4:15",
         "technology": [
           "JavaScript"
@@ -1007,7 +1014,7 @@
         "title": "Do while loop in JavaScript",
         "createdMsec": 1540227710316,
         "level": 0,
-        "videoSource": "XODhesqd9j4",
+        "videoSource": "296113668",
         "duration": "2:34",
         "technology": [
           "JavaScript"
@@ -1021,7 +1028,7 @@
         "title": "Creating variables with 'var', 'let' & 'const'",
         "createdMsec": 1540227720042,
         "level": 0,
-        "videoSource": "cmfB1p5-2RA",
+        "videoSource": "296113872",
         "duration": "4:52",
         "technology": [
           "JavaScript"
@@ -1035,7 +1042,7 @@
         "title": "More on 'const'",
         "createdMsec": 1540227729877,
         "level": 0,
-        "videoSource": "yIoMRWpDdeA",
+        "videoSource": "296114695",
         "duration": "2:40",
         "technology": [
           "JavaScript"
@@ -1049,7 +1056,7 @@
         "title": "'setInterval' & 'clearInterval'",
         "createdMsec": 1540227750496,
         "level": 0,
-        "videoSource": "Fy0lPFzUGlY",
+        "videoSource": "296114827",
         "duration": "3:40",
         "technology": [
           "JavaScript"
@@ -1063,7 +1070,7 @@
         "title": "'setTimeout' & 'clearTimeout'",
         "createdMsec": 1540227770410,
         "level": 0,
-        "videoSource": "Nr7EcLo-zwU",
+        "videoSource": "296114972",
         "duration": "1:25",
         "technology": [
           "JavaScript"
@@ -1077,7 +1084,7 @@
         "title": "Call Stack, Event Loop and Message Queue - Part 1",
         "createdMsec": 1540227788052,
         "level": 2,
-        "videoSource": "MBGZXUoXykQ",
+        "videoSource": "296115016",
         "duration": "5:25",
         "technology": [
           "JavaScript"
@@ -1091,7 +1098,7 @@
         "title": "Call Stack, Event Loop and Message Queue - Part 2",
         "createdMsec": 1540227890110,
         "level": 2,
-        "videoSource": "w06gb_Z_oWU",
+        "videoSource": "294445941",
         "duration": "4:41",
         "technology": [
           "JavaScript"
@@ -1105,7 +1112,7 @@
         "title": "Call Stack, Event Loop and Message Queue - Part 3",
         "createdMsec": 1540227901410,
         "level": 2,
-        "videoSource": "EqyWImggpD8",
+        "videoSource": "296116856",
         "duration": "6:37",
         "technology": [
           "JavaScript"
@@ -1119,7 +1126,7 @@
         "title": "Call Stack, Event Loop and Message Queue - Part 4",
         "createdMsec": 1540227911483,
         "level": 2,
-        "videoSource": "k6dedVmlTLk",
+        "videoSource": "296115858",
         "duration": "3:39",
         "technology": [
           "JavaScript"
@@ -1133,7 +1140,7 @@
         "title": "Callback functions in JavaScript",
         "createdMsec": 1540227924976,
         "level": 1,
-        "videoSource": "mdld34y4hw4",
+        "videoSource": "296116252",
         "duration": "2:23",
         "technology": [
           "JavaScript"
@@ -1147,7 +1154,7 @@
         "title": "Special 'arguments' keyword in a function",
         "createdMsec": 1540227936062,
         "level": 1,
-        "videoSource": "YLhNaA4JNdA",
+        "videoSource": "296116434",
         "duration": "3:56",
         "technology": [
           "JavaScript"
@@ -1161,7 +1168,7 @@
         "title": "Using 'arguments' in a function",
         "createdMsec": 1540227950422,
         "level": 1,
-        "videoSource": "_HcYDacqe7c",
+        "videoSource": "296116999",
         "duration": "3:45",
         "technology": [
           "JavaScript"
@@ -1175,7 +1182,7 @@
         "title": "Spread Operator '...' in JavaScript",
         "createdMsec": 1540227961129,
         "level": 1,
-        "videoSource": "RARSuEyyiWs",
+        "videoSource": "296117230",
         "duration": "5:00",
         "technology": [
           "JavaScript"
@@ -1189,7 +1196,7 @@
         "title": "Default values of function parameters",
         "createdMsec": 1540227971862,
         "level": 1,
-        "videoSource": "GCDu7TCCUg4",
+        "videoSource": "296117569",
         "duration": "4:56",
         "technology": [
           "JavaScript"
@@ -1203,7 +1210,7 @@
         "title": "By Reference, by value",
         "createdMsec": 1540227986275,
         "level": 1,
-        "videoSource": "Qy6e4EoXurA",
+        "videoSource": "294447516",
         "duration": "7:49",
         "technology": [
           "JavaScript"
@@ -1217,7 +1224,7 @@
         "title": "Browser API - Part 1",
         "createdMsec": 1540227996012,
         "level": 1,
-        "videoSource": "tZUSvFClY6I",
+        "videoSource": "296117640",
         "duration": "4:03",
         "technology": [
           "JavaScript"
@@ -1231,7 +1238,7 @@
         "title": "Browser API - Part 2",
         "createdMsec": 1540228023092,
         "level": 1,
-        "videoSource": "q2WlFyf0VBY",
+        "videoSource": "296117671",
         "duration": "6:03",
         "technology": [
           "JavaScript"
@@ -1245,7 +1252,7 @@
         "title": "DOM: Document Object Model",
         "createdMsec": 1540228036522,
         "level": 1,
-        "videoSource": "5Ing-RO29D4",
+        "videoSource": "296117759",
         "duration": "4:47",
         "technology": [
           "JavaScript"
@@ -1259,7 +1266,7 @@
         "title": "Query the DOM nodes",
         "createdMsec": 1540228051590,
         "level": 0,
-        "videoSource": "iaep20edH2w",
+        "videoSource": "296117840",
         "duration": "5:35",
         "technology": [
           "JavaScript"
@@ -1273,7 +1280,7 @@
         "title": "Modify DOM nodes",
         "createdMsec": 1540228061078,
         "level": 0,
-        "videoSource": "IpiQCnN-tXE",
+        "videoSource": "296117894",
         "duration": "6:30",
         "technology": [
           "JavaScript"
@@ -1287,7 +1294,7 @@
         "title": "Modify element class(es)",
         "createdMsec": 1540228070822,
         "level": 1,
-        "videoSource": "gixxJCJZtFI",
+        "videoSource": "296117966",
         "duration": "4:17",
         "technology": [
           "JavaScript"
@@ -1301,7 +1308,7 @@
         "title": "Create Node/Elements for the DOM",
         "createdMsec": 1540228082297,
         "level": 1,
-        "videoSource": "fAX6Yhcj1j0",
+        "videoSource": "296118014",
         "duration": "6:37",
         "technology": [
           "JavaScript"
@@ -1315,7 +1322,7 @@
         "title": "Remove Node from DOM",
         "createdMsec": 1540228091813,
         "level": 1,
-        "videoSource": "zoal5sI69U4",
+        "videoSource": "296118082",
         "duration": "5:02",
         "technology": [
           "JavaScript"
@@ -1329,7 +1336,7 @@
         "title": "Events: Adding event listeners to DOM",
         "createdMsec": 1540228103002,
         "level": 1,
-        "videoSource": "R83O8LRMNV0",
+        "videoSource": "296118133",
         "duration": "6:21",
         "technology": [
           "JavaScript"
@@ -1343,7 +1350,7 @@
         "title": "Removing event listeners from DOM",
         "createdMsec": 1540228117003,
         "level": 1,
-        "videoSource": "Ss3Pu4wBQ2Q",
+        "videoSource": "296118200",
         "duration": "6:56",
         "technology": [
           "JavaScript"
@@ -1357,7 +1364,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 1",
         "createdMsec": 1540228130056,
         "level": 1,
-        "videoSource": "tnA0r4EPHys",
+        "videoSource": "296118272",
         "duration": "4:46",
         "technology": [
           "JavaScript"
@@ -1374,7 +1381,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 2",
         "createdMsec": 1540228141012,
         "level": 1,
-        "videoSource": "Uo3LpFpStXo",
+        "videoSource": "296118313",
         "duration": "2:01",
         "technology": [
           "JavaScript"
@@ -1390,7 +1397,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 3",
         "createdMsec": 1540228151451,
         "level": 1,
-        "videoSource": "NL4bYqgIb0o",
+        "videoSource": "296118334",
         "duration": "4:28",
         "technology": [
           "JavaScript"
@@ -1406,7 +1413,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 4",
         "createdMsec": 1540228163082,
         "level": 1,
-        "videoSource": "J05ij2n4vC4",
+        "videoSource": "296119234",
         "duration": "6:51",
         "technology": [
           "JavaScript"
@@ -1422,7 +1429,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 5",
         "createdMsec": 1540228177504,
         "level": 1,
-        "videoSource": "lrS3MeolE6Q",
+        "videoSource": "296119771",
         "duration": "2:27",
         "technology": [
           "JavaScript"
@@ -1436,7 +1443,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 6",
         "createdMsec": 1540228189009,
         "level": 1,
-        "videoSource": "7yZhO7zxlAU",
+        "videoSource": "296119974",
         "duration": "4:39",
         "technology": [
           "JavaScript"
@@ -1452,7 +1459,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 7",
         "createdMsec": 1540228199548,
         "level": 1,
-        "videoSource": "unhqBJWL-GQ",
+        "videoSource": "296120405",
         "duration": "4:16",
         "technology": [
           "JavaScript"
@@ -1468,7 +1475,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 8",
         "createdMsec": 1540228210470,
         "level": 1,
-        "videoSource": "9ZRueefvoKU",
+        "videoSource": "296120960",
         "duration": "3:49",
         "technology": [
           "JavaScript"
@@ -1484,7 +1491,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 9",
         "createdMsec": 1540228234913,
         "level": 1,
-        "videoSource": "skq6ATZkm4U",
+        "videoSource": "296131351",
         "duration": "5:17",
         "technology": [
           "JavaScript"
@@ -1500,7 +1507,7 @@
         "title": "Project: To-Do List App with Vanilla JavaScript - Part 10",
         "createdMsec": 1540228234913,
         "level": 1,
-        "videoSource": "EJtK8quCK4Q",
+        "videoSource": "296951997",
         "duration": "4:09",
         "technology": [
           "JavaScript"
@@ -1515,7 +1522,7 @@
         "title": "To-Do List App Homework - Solution",
         "createdMsec": 1540228245523,
         "level": 1,
-        "videoSource": "YUaBf5GwbhA",
+        "videoSource": "296131367",
         "duration": "4:03",
         "technology": [
           "JavaScript"
@@ -1531,7 +1538,7 @@
         "title": "Event Bubbling in DOM - Part 1",
         "createdMsec": 1540228257276,
         "level": 1,
-        "videoSource": "sv8R3gWuUXw",
+        "videoSource": "296131397",
         "duration": "2:50",
         "technology": [
           "JavaScript"
@@ -1545,7 +1552,7 @@
         "title": "Event Bubbling in DOM - Part 2",
         "createdMsec": 1540228268029,
         "level": 1,
-        "videoSource": "sJlCQS0ozzI",
+        "videoSource": "296131494",
         "duration": "5:32",
         "technology": [
           "JavaScript"
@@ -1559,7 +1566,7 @@
         "title": "Clear all tasks",
         "createdMsec": 1542208030211,
         "level": 1,
-        "videoSource": "sJJYf8y6NxA",
+        "videoSource": "298906312",
         "duration": "3:09",
         "technology": [
           "JavaScript"
@@ -1573,7 +1580,7 @@
         "title": "DomContentLoaded Event",
         "createdMsec": 1542208144323,
         "level": 1,
-        "videoSource": "LrDldAAPpgQ",
+        "videoSource": "298907275",
         "duration": "7:30",
         "technology": [
           "JavaScript"
@@ -1586,7 +1593,7 @@
         "title": "More on Events + Homework",
         "createdMsec": 1542208173711,
         "level": 1,
-        "videoSource": "ZtuY1MlNlAA",
+        "videoSource": "298907898",
         "duration": "1:28",
         "technology": [
           "JavaScript"
@@ -1599,7 +1606,7 @@
         "title": "Global Scope: Avoiding Pitfalls - Part 1",
         "createdMsec": 1542208197000,
         "level": 1,
-        "videoSource": "C-khRkmB2Ks",
+        "videoSource": "298908015",
         "duration": "3:23",
         "technology": [
           "JavaScript"
@@ -1612,7 +1619,7 @@
         "title": "Global Scope: Avoiding Pitfalls - Part 2",
         "createdMsec": 1542208249633,
         "level": 1,
-        "videoSource": "Ap4ne-JRbg0",
+        "videoSource": "298908344",
         "duration": "5:56",
         "technology": [
           "JavaScript"
@@ -1625,7 +1632,7 @@
         "title": "IIFE: Immediately Invoked Function Expression",
         "createdMsec": 1542208264880,
         "level": 1,
-        "videoSource": "y_rQ2_dDpVI",
+        "videoSource": "300580630",
         "duration": "6:42",
         "technology": [
           "JavaScript"
@@ -1639,7 +1646,7 @@
         "title": "IIFE Example",
         "createdMsec": 1542208277922,
         "level": 1,
-        "videoSource": "E8XsHgU-o6g",
+        "videoSource": "298983623",
         "duration": "3:25",
         "technology": [
           "JavaScript"
@@ -1652,7 +1659,7 @@
         "title": "Arrow Functions Explained Correctly - Part 1",
         "createdMsec": 1542208290806,
         "level": 1,
-        "videoSource": "nNTV12VzVZc",
+        "videoSource": "298984229",
         "duration": "7:15",
         "technology": [
           "JavaScript"
@@ -1665,7 +1672,7 @@
         "title": "Arrow Functions Explained Correctly - Part 2",
         "createdMsec": 1542208302900,
         "level": 1,
-        "videoSource": "sY3-T_N8OS8",
+        "videoSource": "298986159",
         "duration": "3:10",
         "technology": [
           "JavaScript"
@@ -1678,7 +1685,7 @@
         "title": "Closure in JavaScript Explained Correctly - Part 1",
         "createdMsec": 1542208312871,
         "level": 2,
-        "videoSource": "qo61pSxBYsw",
+        "videoSource": "298986503",
         "duration": "5:06",
         "technology": [
           "JavaScript"
@@ -1691,7 +1698,7 @@
         "title": "Closure in JavaScript Explained Correctly - Part 2",
         "createdMsec": 1542208327745,
         "level": 2,
-        "videoSource": "0QbMAtdpSSk",
+        "videoSource": "300323617",
         "duration": "4:04",
         "technology": [
           "JavaScript"
@@ -1704,7 +1711,7 @@
         "title": "Closure in JavaScript Explained Correctly - Part 3",
         "createdMsec": 1542208346399,
         "level": 2,
-        "videoSource": "KRK8dZPxwbU",
+        "videoSource": "298987924",
         "duration": "4:34",
         "technology": [
           "JavaScript"
@@ -1717,7 +1724,7 @@
         "title": "Project: Tooltip effect - Part 1",
         "createdMsec": 1542208358460,
         "level": 1,
-        "videoSource": "7BZvcvwOE78",
+        "videoSource": "298988230",
         "duration": "8:48",
         "technology": [
           "JavaScript"
@@ -1732,7 +1739,7 @@
         "title": "Project: Tooltip effect - Part 2",
         "createdMsec": 1542208371828,
         "level": 1,
-        "videoSource": "puwZ3Mka-Q8",
+        "videoSource": "298989705",
         "duration": "6:07",
         "technology": [
           "JavaScript"
@@ -1748,7 +1755,7 @@
         "title": "Project: Tooltip effect - Part 3",
         "createdMsec": 1542208387902,
         "level": 1,
-        "videoSource": "bXb3EkJbRpI",
+        "videoSource": "298990525",
         "duration": "9:00",
         "technology": [
           "JavaScript"
@@ -1763,7 +1770,7 @@
         "title": "Project: Tooltip effect - Part 4",
         "createdMsec": 1542208404137,
         "level": 1,
-        "videoSource": "_c1cRikSVdw",
+        "videoSource": "298992670",
         "duration": "1:48",
         "technology": [
           "JavaScript"
@@ -1778,7 +1785,7 @@
         "title": "Project: Tooltip effect - Part 5",
         "createdMsec": 1542208414789,
         "level": 1,
-        "videoSource": "xp1aeoaoQP8",
+        "videoSource": "298992949",
         "duration": "5:06",
         "technology": [
           "JavaScript"
@@ -1793,7 +1800,7 @@
         "title": "Template literals (Template Strings) in JavaScript",
         "createdMsec": 1542208425990,
         "level": 1,
-        "videoSource": "1XMrb--d9L0",
+        "videoSource": "298993704",
         "duration": "3:55",
         "technology": [
           "JavaScript"
@@ -1806,7 +1813,7 @@
         "title": "Prototype: The builtin features",
         "createdMsec": 1542208442032,
         "level": 1,
-        "videoSource": "nGquwt8AgNE",
+        "videoSource": "298994162",
         "duration": "6:40",
         "technology": [
           "JavaScript"
@@ -1819,7 +1826,7 @@
         "title": "Prototype of String Constructor",
         "createdMsec": 1542208459044,
         "level": 1,
-        "videoSource": "qkIyRx4Rjio",
+        "videoSource": "298995056",
         "duration": "5:10",
         "technology": [
           "JavaScript"
@@ -1832,7 +1839,7 @@
         "title": "Prototype of Number and Boolean Constructor",
         "createdMsec": 1542208472814,
         "level": 1,
-        "videoSource": "FlI-5Px-A9o",
+        "videoSource": "298995684",
         "duration": "4:38",
         "technology": [
           "JavaScript"
@@ -1845,7 +1852,7 @@
         "title": ".filter() method of Array in JavaScript",
         "createdMsec": 1542208489140,
         "level": 1,
-        "videoSource": "kXrR-QFe188",
+        "videoSource": "298996221",
         "duration": "7:31",
         "technology": [
           "JavaScript"
@@ -1858,7 +1865,7 @@
         "title": ".filter() method of Array in JavaScript - Part 2",
         "createdMsec": 1542208501677,
         "level": 1,
-        "videoSource": "V8y5gjIeu0g",
+        "videoSource": "298997266",
         "duration": "3:56",
         "technology": [
           "JavaScript"
@@ -1871,7 +1878,7 @@
         "title": ".filter() Homework",
         "createdMsec": 1542208512274,
         "level": 1,
-        "videoSource": "MggKDTze6iQ",
+        "videoSource": "298997845",
         "duration": "5:59",
         "technology": [
           "JavaScript"
@@ -1884,7 +1891,7 @@
         "title": ".find() method of Array in JavaScript",
         "createdMsec": 1542208524260,
         "level": 1,
-        "videoSource": "WBQMkM995pY",
+        "videoSource": "298998856",
         "duration": "1:42",
         "technology": [
           "JavaScript"
@@ -1897,7 +1904,7 @@
         "title": ".forEach() method of Array in JavaScript",
         "createdMsec": 1542208543659,
         "level": 1,
-        "videoSource": "qYWOJNdbv2Q",
+        "videoSource": "298999128",
         "duration": "1:11",
         "technology": [
           "JavaScript"
@@ -1910,7 +1917,7 @@
         "title": ".map() method of Array in JavaScript",
         "createdMsec": 1542208558879,
         "level": 1,
-        "videoSource": "EQdEBk92FDA",
+        "videoSource": "298999344",
         "duration": "4:26",
         "technology": [
           "JavaScript"
@@ -1923,7 +1930,7 @@
         "title": ".reduce() method of Array in JavaScript",
         "createdMsec": 1542208569263,
         "level": 1,
-        "videoSource": "Z8GR25TlPrg",
+        "videoSource": "299001512",
         "duration": "6:36",
         "technology": [
           "JavaScript"
@@ -1936,7 +1943,7 @@
         "title": "Date object in JavaScript",
         "createdMsec": 1542208581170,
         "level": 1,
-        "videoSource": "JzyYrZjMogE",
+        "videoSource": "299002903",
         "duration": "6:44",
         "technology": [
           "JavaScript"
@@ -1949,7 +1956,7 @@
         "title": "Math object in JavaScript",
         "createdMsec": 1542208594202,
         "level": 1,
-        "videoSource": "Cm4NPwZVdHY",
+        "videoSource": "299004044",
         "duration": "4:25",
         "technology": [
           "JavaScript"
@@ -1962,7 +1969,7 @@
         "title": "Promise in JavaScript - Part 1",
         "createdMsec": 1542208606942,
         "level": 1,
-        "videoSource": "8i_jao28m4Y",
+        "videoSource": "299004746",
         "duration": "6:35",
         "technology": [
           "JavaScript"
@@ -1974,7 +1981,7 @@
         "title": "Promise in JavaScript - Part 2",
         "createdMsec": 1542208617180,
         "level": 1,
-        "videoSource": "84nbrzX-jAM",
+        "videoSource": "300575666",
         "duration": "4:53",
         "technology": [
           "JavaScript"
@@ -1986,7 +1993,7 @@
         "title": "Promise in JavaScript - Part 3",
         "createdMsec": 1542208633188,
         "level": 1,
-        "videoSource": "ALI3_eQQwwg",
+        "videoSource": "299006744",
         "duration": "8:06",
         "technology": [
           "JavaScript"
@@ -1999,7 +2006,7 @@
         "title": "Promise in JavaScript - Part 4",
         "createdMsec": 1542208646903,
         "level": 1,
-        "videoSource": "N_JrLt9kuX0",
+        "videoSource": "299008519",
         "duration": "4:28",
         "technology": [
           "JavaScript"
@@ -2012,7 +2019,7 @@
         "title": "Using fetch() to connect with HTTP",
         "createdMsec": 1542208659116,
         "level": 1,
-        "videoSource": "1qsOC_M0eik",
+        "videoSource": "299034000",
         "duration": "7:50",
         "technology": [
           "JavaScript"
@@ -2024,7 +2031,7 @@
         "title": "Project: Get list of Countries",
         "createdMsec": 1542208668891,
         "level": 1,
-        "videoSource": "StMfuOG4AKI",
+        "videoSource": "299035410",
         "duration": "5:53",
         "technology": [
           "JavaScript"
@@ -2038,7 +2045,7 @@
         "title": "Project: Get population by country - Part 1",
         "createdMsec": 1542208679696,
         "level": 1,
-        "videoSource": "Di2XQd65Fzc",
+        "videoSource": "299036617",
         "duration": "4:37",
         "technology": [
           "JavaScript"
@@ -2052,7 +2059,7 @@
         "title": "Project: Get population by country - Part 2",
         "createdMsec": 1542208700551,
         "level": 1,
-        "videoSource": "jOZkBix2IQ0",
+        "videoSource": "299038802",
         "duration": "5:46",
         "technology": [
           "JavaScript"
@@ -2066,7 +2073,7 @@
         "title": "Project + Homework: Get population by country - Part 3",
         "createdMsec": 1542208751754,
         "level": 1,
-        "videoSource": "vqs-tkaz7dI",
+        "videoSource": "299040183",
         "duration": "6:58",
         "technology": [
           "JavaScript"
@@ -2080,7 +2087,7 @@
         "title": "'this' - Understand the 'this' keyword once and for all - Part 1",
         "createdMsec": 1542343002313,
         "level": 2,
-        "videoSource": "YAsC6yxOF5k",
+        "videoSource": "301052346",
         "duration": "4:45",
         "technology": [
           "JavaScript"
@@ -2092,7 +2099,7 @@
         "title": "'this' - Understand the 'this' keyword once and for all - Part 2",
         "createdMsec": 1542343030158,
         "level": 2,
-        "videoSource": "Nil1CHFCwuo",
+        "videoSource": "301053110",
         "duration": "3:47",
         "technology": [
           "JavaScript"
@@ -2104,7 +2111,7 @@
         "title": "'this' - Using call() to modify 'this'",
         "createdMsec": 1542343041960,
         "level": 2,
-        "videoSource": "rcDv6gNAdes",
+        "videoSource": "301053616",
         "duration": "4:38",
         "technology": [
           "JavaScript"
@@ -2116,7 +2123,7 @@
         "title": "'this' - Using apply() to modify 'this'",
         "createdMsec": 1542343049877,
         "level": 2,
-        "videoSource": "bPu_rknNuoA",
+        "videoSource": "301054254",
         "duration": "1:29",
         "technology": [
           "JavaScript"
@@ -2128,7 +2135,7 @@
         "title": "'this' - Using bind() to modify 'this'",
         "createdMsec": 1542343061431,
         "level": 2,
-        "videoSource": "nD1w_wOThfU",
+        "videoSource": "301054593",
         "duration": "3:00",
         "technology": [
           "JavaScript"
@@ -2141,7 +2148,7 @@
         "title": "Avoid Pitfall: 'this' inside an arrow function",
         "createdMsec": 1542343165424,
         "level": 2,
-        "videoSource": "bLQwtMTNsJg",
+        "videoSource": "301054946",
         "duration": "3:00",
         "technology": [
           "JavaScript"
@@ -2154,7 +2161,7 @@
         "title": "Avoid Pitfall: 'this' inside a function inside a method",
         "createdMsec": 1542343175585,
         "level": 2,
-        "videoSource": "XlDPXvWDz8A",
+        "videoSource": "301055460",
         "duration": "4:37",
         "technology": [
           "JavaScript"
@@ -2166,7 +2173,7 @@
         "title": "Using Constructor - Part 1",
         "createdMsec": 1542343184823,
         "level": 2,
-        "videoSource": "8sR2UcFwIuY",
+        "videoSource": "301056291",
         "duration": "8:25",
         "technology": [
           "JavaScript"
@@ -2178,7 +2185,7 @@
         "title": "Using Constructor - Part 2",
         "createdMsec": 1542343193787,
         "level": 2,
-        "videoSource": "gAwJZHIUXA4",
+        "videoSource": "301057431",
         "duration": "4:30",
         "technology": [
           "JavaScript"
@@ -2190,7 +2197,7 @@
         "title": "'prototype' property of constructor",
         "createdMsec": 1542343228396,
         "level": 2,
-        "videoSource": "kY3KWD5C0I0",
+        "videoSource": "301057962",
         "duration": "8:21",
         "technology": [
           "JavaScript"
@@ -2206,12 +2213,18 @@
     "slug": "perfect-path",
     "subTitle": "This course will give you a complete, detailed path to becoming a job-ready software developer. Get a complete skill roadmap, learning techniques, timeline and resources you need to become job-ready.",
     "duration": "3:08",
-    "videoSource": "zUl4ewfjWL4",
+    "videoSource": "308929498",
     "thumbnail": "perfect-path.jpg",
     "bodyContent": "<h3>Resources</h3>\n<ul><li><a href=\"https://github.com/iLoveCodingOrg/developer-types/raw/master/dev-types.pdf\">9 main areas of software development (Download PDF)</a></li>\n<li><a href=\"https://github.com/iLoveCodingOrg/skill-roadmap/raw/master/skill-roadmap.pdf\">Skill Roadmap to Front-End and Full-Stack JavaScript Development (Download PDF)</a></li></ul><h2>Video Transcript</h2><p>The #1 reason most people struggle to learn how to code is because they do not have clarity.<br></p><p>You have questions like:<br></p><p></p><ul><li>What programming language should I learn?</li><li>Should I become a web developer?</li><li>Should I become a data scientist?</li><li>What is a Front-End Developer?</li><li>Should I learn Ruby? Should I learn Python? Should I learn JavaScript?</li><li>Should I learn react.js? Should I learn jQuery?</li><li>What skills do I need? What skills do I not need?</li><li>How much time is it going to take?</li><li>What should I learn? and in what sequence?</li></ul><p></p><p>You have all of these questions and since you don't know the answer to those questions you have all these questions on <b>H</b><b>ow am I going to ever going to become a developer?</b></p><p>Now if you're struggling with all these questions and more some and you want a clear systematic answer to all these questions and a clear path on what steps to take to become a job-ready developer then you must take this FREE course <b>\"The Perfect Path to Becoming a Job-Ready Developer\"</b><br></p><h3>5 Outcomes of this course:</h3><p>My goal in this course is to answer five core questions that when answered will make everything else clear for you.<br></p><p></p><ol><li>What are the nine main types of developers out there and which one should you become?<br>So you have the best chance of success.</li><li>What programming language should you learn and why?</li><li>What exact technologies and skills should you learn and in what sequence?</li><li>Where and how to learn effectively?</li><li>Lastly How much time will it realistically take? so you are ready for the job, you are ready to launch your ideas.</li></ol><h3>Ninja Developer Learning Secrets</h3><p></p><p>In this course. I will also tell you a few techniques to speed up your learning. These techniques are like known secrets among all great developers.<br></p><p>It's more like common knowledge among professional developers that newbies do not know. I know how it feels to be lost.</p><h3>How I resolved 9-years of struggle with coding</h3><p>I struggled to learn how to code for nine years.&nbsp;<span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">I tried buying cheap courses. I even got some expensive courses multiple times. I even enrolled three times in college-level courses but nothing worked for me. It all came together for me when I understood this path that I will show you in this course. When I understood this and I learned in that particular manner my skills quickly went up and I was able to build apps for United Airlines. CVS health and some very exciting funded startups. I even became so skilled that I was able to launch two of my own tech startups. I taught my process to some students and now they work at Twitter, Citibank, Sony Ericsson and some other exciting companies like them.</span></p><p>So if you want a clear path to becoming a job-ready developer then I urge you to start this FREE course and let's get started. All of your questions are going to be answered in the course.</p>",
     "title": "The Perfect Path to Becoming a Job-Ready Developer",
     "courseTotalDuration": "47:19",
     "level": 0,
+    "technology": [
+      ""
+    ],
+    "topic": [
+      "Core Training"
+    ],
     "lesson": [
       {
         "_id": "5c328b5a116a4c0014f142cb",
@@ -2219,7 +2232,7 @@
         "title": "The 9 main types of software developers",
         "subTitle": "Discover the 9 main areas of software development, the tools used in each, and which type of developers have the most promising future. You need this information to determine which type of developer you want to become.",
         "level": 0,
-        "videoSource": "gob4tduiT5E",
+        "videoSource": "308929604",
         "duration": "9:50",
         "technology": [],
         "bodyContent": "<h3>Resource</h3>\n<ul><li><a href=\"https://github.com/iLoveCodingOrg/developer-types/raw/master/dev-types.pdf\">9 main areas of software development (Download PDF)</a><br></li></ul><h2>Video Transcript</h2><p>Now there is all this craze about learning how to code but what the major information which is not informed to you is that there are different kind of programming languages and there are different areas of software development. Software development or programming or software engineering means the same thing. So when a lot of bootcamps or courses are saying hey learn how to code learn how to code become job ready. They're actually not telling you upfront what area of development you are going to be led into. They may be telling that to you but if you have a clear picture that they're actually nine main areas of software development you will be able to make informed decision on which path you want to take.</p><p>So in this video I'm going to share with you the nine areas which ones are more popular which ones are not and which one is a better more successful more profitable career, more promising career I should say for you for other people out there. So let's get started.<br></p><h3>#1: Language/Compilers Developers</h3><p>So the first area of development is actually a language or compiler developer. So these kind of developers are like linguists of the programming world. They actually build programming languages. They work with low-level programming languages and machine languages to build newer programming languages. So these account for about 1 percent of developers only 1 percent of developers actually create programming languages.</p><h3>#2: Embedded Systems Developers</h3><p>Now the next type is actually called embedded systems and developer they account for about 3 percent of developers. So embedded system developers program or write code that actually run on hardware.</p><p>So imagine your car your fridge or your washing machine or electronic toys. They have some kind of code on them. That's why when you actually click a button something happens; the fridge knows how to regulate the temperature; your car knows how to turn on, turn off, accelerate, decelerate, the car stereo electronics all of this is programmed and the embedded-system developer actually codes that program to tell the machine what needs to be done. And by the way just a side-topic, a developer is somebody who actually writes code to talk to a computer tell the computer what to do. So there are different kinds of developers who actually tell different kinds of computers on what to do.</p><p>A language and compiler developers actually create programming languages embedded systems developer. As I told you right now code on these particular hardware.</p><h3>#3: Operating System Developers</h3><p>Next in line is operating system developers. These are actually developers who actually write the operating system software. So let's say a Windows developer, Android, the people who actually made Android, Mac OS, Linux, Unix, these are the developers who actually made these operating systems and continue to improve them.</p><h3>#4: Data Scientists</h3><p>Then there are data scientist. There is all this craze about data science artificial intelligence and all of this right. They account for about 7% of developers. So now you may be imagining or thinking what does a data scientist do what kind of programs do they write. So actually data scientists are more like mathematicians and statisticians that actually code.</p><p>So a data scientist does not code a software per in the typical sense. They actually write program. They actually write code that actually work on mathematical and statistical models to predict or forecast what's going to happen. So let's say our typical data scientist will actually be given a lot of data. So maybe a lot of words or maybe a lot of stats or a lot of pricing information whatever the company is doing. They're gonna be given a lot of data and they will actually write this mathematical and statistical model that's going to forecast what that information means or could happen. So that's what they're doing, they're actually not creating user interfaces or typical softwares in the typical sense.</p><h3>#5: Video Game Developers</h3><p>Then there are video game developers these are developers who actually write the video games that we play on our console or on our computer. They account for about 8% of developers.</p><h3>#6: Dev Ops Developers</h3><p>Then we have dev ops developers. Now that's a new term these days. So dev ops stands for development and operations engineers. So they used to be actually called system administrators previously so dev-ops job is to manage and maintain computer infrastructure and servers of a company. So dev-ops do not actually make software in the typical sentence. They actually don't make mobile apps or web apps or those kind of things. They actually write code to manage and automate the servers that they are working on so those are dev ops.</p><h3>#7: Desktop Developers</h3><p>Then we have desktop developers. So these are developers who actually make desktop applications like your Microsoft Excel, Adobe Photoshop, Paint, Safari browser and other desktop applications are built by such developers. They may specialize in a particular operating system so they may specialize in a Linux desktop application or Windows desktop application, Mac desktop application or all of them. So depends on their expertise but desktop application developers will make a desktop application.</p><h3>#8: Mobile Apps Developers</h3><p>Then we have mobile apps developers. These are 20% of developers so mobile apps developers of course will make your banking application your workout application for your phone or a map application and other applications that we enjoy on our Android devices or on our iOS devices. Right. So these developers may specialize in one or other or both of these platforms so maybe an android IOS or both. Right!</p><h3>#9: Web Developers</h3><p>Now the last piece and the biggest piece is actually web app developers. So these are the people who actually code your Facebook.coms or your Google.com or your Amazon.com or your Netflix.com. Any of these dot coms or dot nets are dot org. iLoveCoding.org will be created by the web app developer.</p><p>Now previously these kind of developers were only called web developers or web developers but nowadays since the world is enhancing and progressing and development, the web application development has been broken down into two parts. So one is the one part is actually called a <b>front-end developer</b> and the other part is actually called a <b>backend developer</b>.<br></p><p>So the difference in a backend application or a front-end application or a front-end developer and a backend developer is actually a front-end application developer would actually make the user interface of a website. So let's say if you are working for you know Facebook.com or Google.com let's just go with Google. So a Google firm developer would actually make the look and feel of the entire website and also the functionality and the features of the Web site. So, for instance, let's say when you start typing inside Google it automatically shows you suggestions. Right. So that kind of feature will be created by a front-end developer, right. so the user interface is actually called the front-end. So a frontier developer would create that. Now the job of the backend developer on the other hand would be let's say when you are actually typing in some information on Google let's say, that information is actually sent to the backend system that the user doesn't see but that is the. That is the layer that's the application which actually powers the information to the front-end. So let's say when you Google something the information is actually stored your search results are actually stored in the Google database. So the information from the front-end whatever the user does is sent to the back end. The backend actually says oh the user search for this information I'm going to go look in the database and then give the result to the user. So the back end developer would actually work with the data find information processed the information make sure that information is secure and then pass that information to the front-end. So the user can see the front-end application will actually show the user and phase the back and application will manage the data and security of the data.<br></p><p>So both of these parts together actually make a web application. And now the new word for this is people who actually know both of these things are actually called full-stack developer. Front-end + backend is actually a full-stack developer previously five days five years ago these words were not existent they were actually just called web developers but these are the new specialties and that's called it virtual have been introduced.</p><p>So these are the nine types of software developers now a natural question that you may have is OK. There is there are nine areas which one should I become. This one is the most profitable most promising for my future. So let's answer that question in the next video but at least you have this big picture on the nine main areas in which are the areas where more most of the development happens. So 35% of development happens in the web, 20 % in Mobile, 12% in desktop, 11% in Dev-ops and so forth. So that's pretty much it for this video. I'm going to talk to you in the next lesson.</p>"
@@ -2230,7 +2243,7 @@
         "title": "Which type of software developer should you become?",
         "subTitle": "There are two ways to determine which areas of software development you wish to get into. #1 interest, #2 Promising future. Let's see in this video which type of developer you should become.",
         "level": 0,
-        "videoSource": "5iQjj6fvOvw",
+        "videoSource": "308929666",
         "duration": "3:50",
         "technology": [],
         "bodyContent": "<h3>Resource</h3>\n<ul><li><a href=\"https://github.com/iLoveCodingOrg/developer-types/raw/master/dev-types.pdf\">9 main areas of software development (Download PDF)</a><br></li></ul><h2>Video Transcript</h2><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">Now did you know the nine main areas of software development, The next thing to determine is what kind of developer will you become.</span><br></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">So the easiest way to determine that is by your interest, because you're going to be most successful if you're interested in your work. So if you are interested in making video games you go become a video game developer. If you are interested in mathematics, statistics and you like to work with data to predict or forecast the future - artificial intelligence then you go become a data scientist. Same with web apps mobile apps desktop apps or any other area.</span><br></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">Now if you are kind of neutral then I have certain suggestions for you that's going to increase your chances of success.</span><br></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">So that natural answer is that you want to become a web developer because there is more opportunity and there is more work and more scope of work in the market for a web developer than any other kind of developer.</span></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">So let me just make that case. So let's say there are so many companies in the world. There is a video game company right. Does the video game company have a website? Yes they do. So they need a web developer.</span><br></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">A data science company. Do they need a website? Yes they do, so they need a web developer. Operating system companies, embedded system companies, dev-ops companies, desktop app companies, mobile app companies, do they need a website? In most cases, 99% of the chances are that all the companies in the world need a website and hence there is a need for a web developer. So that is why there is more work. There is 35% of the work happening in the web app department and there's more work and more opportunity and more jobs out there for web development.</span><br></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">That's why the safest and the most long term and lucrative part of a development area is web development. In fact, a lot of the desktop apps, and the mobile apps, actually rely on the Internet. So let's say if you're talking about a slack application or the Skype application or the mobile app for let's say Instagram or Facebook mobile app they actually need data from the Internet. So actually they need a web developer to power that data which is a backend developer.</span><br></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">So all of this most of the companies need the Internet and internet is mostly programmed by a backend developer, a web developer. So the safest answer is that you want to become a web developer.</span><br></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">Now if you are listening to my videos that's great because my specialty is actually web app development and a little bit of mobile, desktop, and dev-ops as well. I do not know anything about video games data science operating systems embedded systems or language. So this is not my expertise but if you are interested in making web applications, mobile application, desktop applications and becoming a modern developer then I can assist you because I've worked for United Airlines, CVS Health, Uptake and in some other companies and launched my own companies as well. And I know that on how all of that side of the world works.</span></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">So the next natural question you may have is OK. You know Aziz I'm going to listen to you maybe web development is the most safest answer for me. Now what should I do? So for that let's go to the next video where I have a complete Skill Roadmap on each skill that you need to acquire. So you become job-ready, interview-ready and portfolio-ready - So you are a proficient and confident web developer. So let me talk to you in the next video.</span></p>"
@@ -2241,7 +2254,7 @@
         "title": "Which programming language should I learn?",
         "subTitle": "The programming language you pick will make a huge influence on your career trajectory. In this lesson, you will learn which programming language has the most scope, opportunity, promise, and profit. Answer: JavaScript.",
         "level": 0,
-        "videoSource": "FQqmcL5wMbc",
+        "videoSource": "308929751",
         "duration": "5:33",
         "technology": [],
         "bodyContent": "<h3>Resource</h3>\n<ul><li><a href=\"https://docs.google.com/presentation/d/1MBwAMSVjaNe88PRJQSeL8alxW1Fx2z5i51n-YqYNZqU/edit?usp=sharing\"></a><a href=\"https://docs.google.com/presentation/d/1jZF6ceq7-fNjBdx0X6W3C6xOgmciIhGNQUy0n_2ERTA/edit?usp=sharing\">Slide Deck of \"Which programming language should I learn?\"</a></li></ul><h3>Video Transcript</h3><p>Now that we have determined the nine areas of software development now the next step is - Which programming language should you learn so that you are able to perform the task necessary for development?</p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">So I actually have created a table that shows you that depending on which area of software development you focus on, will determine which kind of programming language you will use. So, for instance, when you are let's say an embedded systems developer that a programming language which is used to perform that particular task is either a C programming language or C++ or Java Python or JavaScript. These are some popular languages. Of course, there could be one or the other or a combination of some but it depends on the company you work for, which tools they choose. So it's not to say that one programming language is better than the other is just that certain programming languages because they are created they actually are used and become kind of specialized in certain areas of development.</span><br></p><p>So remember we were talking about that the most promising area of software development is actually the web application development. So for web application development you will be using HTML, CSS and JavaScript to make a front-end applications and for back and applications depending on the company you work for you could be using Java C#, PHP, Python, JavaScript. So it depends on which company chooses which particular tool.</p><p>So one thing you will notice I've created another chart that a Web site application consists of two parts right. So let's say it's a front-end application and a backend application. And one thing you will notice that JavaScript is the only programming language that can be used in the front-end and actually in the backend as well. So let's say a front-end application which is the user interface will always always always be using HTML CSS and JavaScript. So if you if you think about it a browser is the environment in which a website exists, a front-end exist, browser is the only environment right. So browsers only support JavaScript programming language so that is the reason why all the websites of the world if they are a little bit fancy and popular they have to and must and they do use JavaScript to create their front end applications.</p><p>Now as for the backend they have different options they could use PHP, Ruby, Python, JavaScript, C#, Java. There are different options but all Web sites the front it is built with Asia multi SS and JavaScript so it makes it very clear that JavaScript is the language to learn.</p><p>If you're going to become a front-end application developer.</p><p>Now there's one very interesting thing which has been happening for the past five, six, seven years. That is that JavaScript has become the world's most versatile programming language. So what do I mean by that? So I've created another table for you. So JavaScript has become recent in the recent years so popular and so versatile and so capable that big and small companies are using JavaScript not just to create front-end applications but also back in applications, mobile applications, and even desktop applications. So these are the list of some of the companies which are using JavaScript in a big way to create their major applications. So think about the Facebook mobile app, Instagram mobile app, Uber mobile app, Skype mobile app, Slack desktop app, Skype WhatsApp, PayPal, Uber you know they are all using JavaScript for their major applications not like a small mini fun project that they have; major applications.</p><p>So if you think about thing about this particular chart of the nine areas of software development, JavaScript is the only programming language that is used in front-end. Right. We know that which I just told you in this video but JavaScript is also the only language which can be used in front and backend, mobile, desktop development and now it is it's been used for video game development and data science as well. It's not as popular in data science and video games as much. There are other languages that rule that particular space but it has become a major player in the web world mobile world and desktop world.</p><p>So that leads you to ask the question there. OK. That's pretty clear in that JavaScript is the world's most versatile programming language. It can enable me to do far more much more things. And it will give me far much better scope in my career now and in the future because a lot of companies are using it. It just gives me bigger and bigger pool of doing stuff and the job opportunities so that's pretty clear.</p><p>Now the next step you want to determine. OK. JavaScript is a clear winner. But then what are the specific things I learned within JavaScript. What are the specific supporting technologies around JavaScript and what are the exact tools and resources and roadmap? What is my roadmap that I need? What do I do, so I become a job-ready JavaScript developer? and that we will discuss in the next video where I'm going to show you that exact path. So talk to you in the next lesson.</p>"
@@ -2252,7 +2265,7 @@
         "title": "Complete Skill Roadmap: What should you learn and in what sequence",
         "subTitle": "In this lesson, you will see a complete roadmap on what skill, libraries, frameworks and tools you need to learn to become a job-ready Front-End and Full-Stack JavaScript developer. ",
         "level": 0,
-        "videoSource": "NiIANbTIOtg",
+        "videoSource": "308929884",
         "duration": "12:22",
         "technology": [],
         "bodyContent": "<h3>Resource</h3>\n<ul><li><a href=\"https://github.com/iLoveCodingOrg/skill-roadmap/raw/master/skill-roadmap.pdf\">Skill Roadmap to Front-End and Full-Stack JavaScript Development (Download PDF)</a></li></ul><h3>Video Transcript</h3><p>Now comes the part where you get complete clarity and a complete roadmap that you can use to become a front end developer, a full stack developer and become job-ready, interview-ready, and portfolio-ready. So you are able to work in the workplace. So here is the chart that I've created for you. So it is a chart that has the skills and it has the timeline. So you already know by now that a front end developer is somebody who creates modern user interfaces for the web. So, what are the tools. What are the skills needed by a front-end developer. A front-end developer needs first and foremost to know how HTML and CSS work. Now HTML and CSS are not programming languages, they are coding languages but they are not programming languages. The difference is that a programming language would have some logical aspect of it. So let's say determining the logical flow, telling the computer if this happens do something do that. If a different situation happens do something else. So that's the logical instructional piece that a computer needs; And HTML and CSS have nothing to do with that, they have nothing to do with the logical aspect. HTML is a language that is used to make the skeleton off the websites and CSS is instruction style of writing code which is not logic but it's just a sheet of instructions that add color and advanced layout to a web page. So it's really the look and feel is determined by HTML and CSS.</p><p>So if you're going to make simple web sites you need to know HTML and CSS and iLoveCoding has a very comprehensive free course very detailed which cheatsheets and homeworks of how to learn HTML and CSS and make professional looking websites. Now once you know that that's the important piece you can not skip that piece it's important right. That issue once he has his course is better than many college level and paid courses and bootcamp courses there are people charging a thousand dollars for certain training and this course will give you that training, and it's free. You can check it out. It's you can check it out and you'll find it for yourself.</p><p>So once you have that particular training which is going to be very fast it's not a complicated subject but it has certain certain things that you need to learn. So after you know that then you're going to get into the programming phase and JavaScript as we have determined throughout your lessons that I've given you that JavaScript is the language for the web, and now language used in other areas as well.</p><p>So what you need to do is learn Javascript fundamentals so you know how programming works. You are able to think like a developer you are you are able to solve problems breakdown problem problems into logical pieces so you can build features for the web.</p><p>In our case so you learn JavaScript and then you learn how JavaScript is used in the browser. All right. So now you're using the layouts with HTML and CSS and you're using the functional aspect of JavaScript and working with the browser to actually create a modern user interfaces. So when you put these three pieces together HTML, CSS and&nbsp; JavaScript this. This combination will make you a front end developer because you're able to create these modern user interfaces. So once you know these three things you are job-ready, front-end developer of course you will have to create your portfolio items and put on your resume and you have to understand those concept concept and the nitty gritty details of Asian multi essence and JavaScript in a deep way. So you can answer those interview questions and iLoveCoding teaches you all of this. So it teaches you the details of let's say what a closure is very complicated looking bored but I make it simple so you can actually understand it and communicate it to your interview when those questions arises. So all of these concepts are covered in the JavaScript course and how the browser works and how DOM works.</p><p>Then since the world is becoming more modern and there are certain tools created in the in the world for enhancing the developer's ability to quickly create these applications there are many libraries created, so a library is a piece of software which kinda think of it like a power tool.</p><p>So that's like a hammer is a tool but let's say a drill machine is a power tool so it has certain features which can enhance the speed of a developer to do certain things. So a library is just a piece of software to speed up a developer job. So there is a very popular library out there called a React.js which is actually built on top of JavaScript HTML and CSS which actually makes it easy for developers to make modern applications. So I actually teach you in iLoveCoding these modern technologies as well so you don't just know the fundamentals which are extremely important. You can not skip the fundamentals you'll learn the fundamentals and then you learn the modern technologies which are relevant today. So you are more in-demand person in the marketplace so you can get your job quickly because these technologies are in demand today. So you're going to learn React.js and then the nitty gritty details and along the way over here it says \"core training\" and \"practice project\" so I give you the core details of the fundamentals and also I quickly translate those theories into practical projects. So you see OK. This is a complicated sounding word but it's not that complicated because explain it to you in a simple manner and then you apply that theory to you know all it's it's just oh it's it's called let's say \"prototype\" but it's just a simple property</p><p>That's what it is. Oh what is a method?, A method is just a function. What is a function? A function is just an instruction... of course I'm going to go I'm going to very quickly but explain these things in a simple manner throughout the course. So you know that the the theoretical bard and you know the practical part of it as well and that's the core, you can not just learn theory, you can and just when you were born your parents just do not give you instruction manual they actually showed you how things were done and that's how you learn through practice through actual application.</p><p>So when you know these these four areas HTML, CSS, JavaScript fundamentals, working with browser and working with a library like React.js which is very popular you are a job-ready front-end developer of course at the same time you will have to build your portfolio which I'm going to help you at. You're going to be practicing for your interviews and you're going to work on your resume. So you are actually able to you just don't have your skills you're able to translate that skilled and communicate your skills to an employer. So you know the skills but you have to show that you have the skills to do that through a resume a portfolio and applying for jobs and answering those questions in the interview.</p><p>The next part after you are a front end developer then you can actually build on top of that knowledge and become a full-stack developer, and what does a full-stack developer have? a full-stack developer knows what front-end does, He's a front-end developer plus knows how a backend application works. So I'll back an application can be built with Node.js. So remember I told you that JavaScript is now able to be used to make back in applications. So there is an environment of JavaScript called Node.js. So you're simply using the jobs for programming language in the Node.js environment and you are now able to make backend applications as well. So I have courses for Node.js and Express.js which is again a framework for framework/library of JavaScript that enables you to create these backend applications as well so you can control the data layer and then whereas all the data stored is stored in a database. So I show you there is a course on JavaScript how to work with MongoDB which is a name of a database. So how do you use a mongoDB to store your data in an organized manner so you know how to make a full application the user interface layer the backend data layer and also the database layer so you these are the three pieces which actually make a fully functional application.</p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">Think about Google. There is a user interface; there is a backend layer and there is a data layer where all that information is actually stored. Any application called dot com Amazon.com. Any any application you think about. There are always these three layers. So once you know all these three layers you are a full-stack developer and that's what you learn. I've broken it down for you.</span><br></p><p>You learn HTML, CSS, JavaScript fundamentals, working with DOM, modern libraries see your job-ready (React.js). You are going to be job-ready but is gonna be in demand so it's gonna be easy for you to get a job; Then you learn Node.js you learn Express.js for the data layer you learn MongoDB for the database then you're a full-stack developer.</p><p>Then you may say hey you know I want to make desktop applications and mobile applications as well, so remember I told you there are certain power tools that developers have created on top of JavaScript; So there is actually a library called Reactive-Native which when used which is power tool on top of JavaScript which when used will enable you to make mobile applications for Android and iOS as well. So I have a course on React Native where we actually create a cryptocurrency mobile app which you which you will enable you to learn how to use JavaScript and we need to actually launch mobile applications.</p><p>There is actually another framework out there called Electron which is a JavaScript framework so we're actually when you use JavaScript in combination with Electron you are able to make desktop applications.</p><p>So the Microsoft Editor application, the Atom Editor application, Slack desktop application, they're all built with Electron. So when I was talking about React Native, the Facebook mobile app, the Instagram mobile app, and I'm not sure about others but these mobile apps are actually built with a Reactive Native. So these are the tools which are used in the real world and they're all based on JavaScript. These these developers make these frameworks which enable you to actually build these applications and there is a course on each of this and more.</p><p>Now these are the big picture. This is the big picture roadmap and this is what you're gonna do with \"core training\" with \"practice projects\" you build your portfolio along the way you build your resume along the way you practice for your interviews along the way. So you become competent so that you are job-ready.</p><p>Now these are the big pictures but the many small topics along the way like</p><p><ul><li>What is an API?</li><li><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">How does a domain work?</span></li><li>How do you upload your website live?</li><li>How do you work with authentication?</li><li>How do you work with collaborating your code with Git and Github?</li></ul></p><p>So all these many topics are taught along the way so you don't just know the big picture but you also know these smaller topics which a developer needs to know, so you are competent and you're able to perform at your job. So that is the roadmap you need to follow. Of course you don't have to go all the way to the top. You can just go for your first start. You're gonna become a front-end developer because that's the baseline. So once you're ready and job-ready you apply for jobs you become a front end developer employed front-end developer but then you can keep on enhancing your skills and the learning never ends. You know even after five six seven eight nine ten years you're gonna be still learning and deepening your knowledge. But the foundation is there in iLoveCoding training so you are becoming job-ready and you're becoming productive, so when you have ideas to launch certain ideas in the world, web application mobile applications you can actually launch them because you have the skills. Of course it takes time but this is your roadmap.</p><p>So that's pretty much it for this video. I hope you have that clarity if you have any questions let me know and I'll talk to you in the next video.</p>"
@@ -2263,7 +2276,7 @@
         "title": "Follow these 8 rules to triple your speed of learning",
         "subTitle": "In this lesson, I share with you the 8 learning techniques I followed to go from a newbie to a job-ready developer in 5 months. Important: These techniques are simple yet extremely effective.",
         "level": 0,
-        "videoSource": "77H3hSKtK4M",
+        "videoSource": "308930134",
         "duration": "14:06",
         "technology": [],
         "bodyContent": "<h3>Resource</h3>\n<ul><li><a href=\"https://docs.google.com/presentation/d/1MBwAMSVjaNe88PRJQSeL8alxW1Fx2z5i51n-YqYNZqU/edit?usp=sharing\">Slide Deck of \"How to Learn Effectively\"</a></li></ul><h3>Video Transcript</h3><p>Now that you know the complete path of skills that you need to become a job ready and productive developer, the next logical question you may have is OK I know what to learn.</p><p>The next question is how do I learn it? Where do I learn it from? And in this video I'm going to explain the concept about how to go about effectively learning these skills. So that's the presentation we're gonna have today. So how do you really go about learning this really seemingly alien skill for writing code which is very weird. And then talking to a computer. So the answer to the question is the way you learn how to code is exactly the way you learn any particular skill.</p><p>Now when you were a child you copied your parents you copied your siblings you copied what you saw and that is the way you acquired skill. So coding is actually no different. Just to give you a solid example. A lot of authors who are trying to become authors like somebody else they aspire to become like they actually hand copy the writings of the author they want to become like they aspire to be like. So when they copy, hand-copy like a machine like a robot their writings they actually subconsciously ingest the pot processes the writing style of the big author.</p><p>They want to become like that's the exact way you're going to learn how to code. That's the exact way I learned how to code. That's the exact way I learned how to do graphic design. So what I would do is when I wanted to learn how to code when I would watch a particular video or tutorial video. I would actually copy and follow along the code. The program that the video was showing me. So when I teach at iLoveCoding. I will give you two things. I will give you the baseline background knowledge but then I will show you a practical example on how to apply that knowledge. So when I'm showing you those examples it's your job. That's my instruction to you that you copy along and follow along what I'm telling you, what I'm teaching you. So when you actually just mindlessly copy you're going to subconsciously digest and understand the concepts. And even when you're copying you're going to find some mistakes that you're making and that's going to internalize the concepts even further. So the first rule even though it's very simple is to copy and follow along just like any skill is acquired by copying.</p><p>The second thing which is very important and that's the reason why a lot of people struggle is that they have something called a \"shiny object syndrome\". What you need to do is ignore any media, any mainstream media, or any kind of information that's telling you hey learn jQuery or you don't learn jQuery or you got to learn these five things to become super genius and become job ready. All these blog articles people who are writing that's their business to write. That's how they make money. The number one technique of journalism and news is that they show you something new. Right. So when you see in the news there is something new out there. You go out and look at that information. But any successful company is successful or any successful individual is successful. Even you, you are successful in certain areas is because you stuck with the fundamentals, some baselines and that worked for you.</p><p>If you kept on chasing the new stuff the shiny stuff it wouldn't work for you, people would not progress. So ignore shiny objects ignored the tendency to chase after the new thing. It's not going to work for you.</p><p>The next thing which is kind of the same goes along with the \"shiny object syndrome\" is to stick with fundamentals first approach. What do I mean by that? What I really mean is when you are learning how to code there are certain concepts there are a lot of small mini concepts that's going to show up right. And when they show up don't just graze through it. Try to understand the core concepts and in iLoveCoding training I actually give you the the new concept in a fundamental way. So when you have a solid foundation when you go at the workplace when you're trying to make your programs you're going to be much more efficient at making those programs because you have the solid foundation. If you think about any particular sport let's say golfing any kind of sport all or mixed martial arts what they do is they actually repeatedly practice the fundamental moves of whether it be golfing or whatever sport they practice the moves the fundamental moves again and again so they never have to lose their foundation because all new techniques and skill is built on the foundation. So all these new libraries and frameworks and all these new stuff is out there is just new temporarily. The foundation is never going to go away so let's say bootstrap framework as new, React.js is new. It's very hot Vue.js is new, React.js is new, React Native is new. There's so many new stuff but all this new stuff is actually built on top of the fundamentals of HTML and CSS and JavaScript. So actually I released a course on HTML and CSS like 4 years ago and after four years the fundamentals remain the same and the course was doing pretty well unless I later released a version to just for better explanations. But the training and the concept remained the same because fundamentals tend to not change. So once you have a solid foundation you focus on the fundamentals. The way I teach you in iLoveCoding you're going to make your progress much more faster.</p><p>Learning technique number four quickly translate theory into real world use cases. So one of the things about learning is so difficult, learning how to code is so difficult is because they have this weird difficult looking, difficult sounding words, \"constructor\", \"prototype\", \"coercion\", \"closures\" right? All this weird sounding words that scare us. And the reason they scare us is because they look complicated they sound complicated but they're actually very simple if they are explained correctly to you and a lot of times they are not explained correctly because the teacher who is trying to teach us many at times, I'm just not happy to inform you and many times they don't even understand the concept themselves. Hence they are not able to translate the knowledge to you. That's just sad but that's true. I'm sorry to say that. So whenever you learn a new concept you take that concept you say okay. The new concept is always gonna be vague. Right. So when you translate that vague concept into a practical use case that's when the real learning happens.</p><p>That's what when you actually understand the concept is when you apply. Let's say if you try to explain a child what walking is like the child is like I don't know but if you show me what I'm doing with this two feet, two legs this is walking you're like Okay I know what walking is now is just when people move from one place to another with their two feet that's walking right. But but if you just put it into a definition of a dictionary it becomes weird, alien and not human. Okay so that's the one of the key foundations, the way I teach at iLoveCoding is I tell you the the new concept because you need to learn new concepts but you translate that into a practical example.</p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">Learning technique #5. That is then do not commit to memory. Anything that can be looked up in a book and that is a quote by Einstein and I live by it. And the thing is that there's so much to learn you. I'm gonna tell you just right now. Even after four years or three years or five years or probably seven years you're still going to be learning coding because coding is a long journey. It keeps on happening and you're gonna be a developer let's say in four months five months six months seven months one year whatever your timeline is you're going to become that developer you're gonna be professional you're gonna be proficient but you're gonna continue to learn so it's not that when you are learning you memorize all these concepts all what are arrays what are our functions what are the five different properties that are array has and stuff like that. All this this gibberish stuff you're not going to memorize use you do not have to memorize. Professional Developers are allowed to Google stuff and look up resources relook up their knowledge and refresh their knowledge on the job when they're doing it. So there is no requirement for you to memorize these things the way it is it's gonna be memorized is when you keep on doing it. When you keep on building these programs it's going to automatically the important stuff is going to automatically become habit. And the more or less you use to stuff is going to automatically be something in the back of your head and you can quickly Google it when the need comes</span></p><p>With that, I want to give you three fool tests that there are certain tests that I'm going to give you that's going to determine if you're making the progress in the correct direction.</p><p>So fool test number #1 is</p><p>\"If you did not code, You did not learn\"</p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">So a lot of time is going to happen is when you watch my videos you say hey you know. Oh yeah I understand this. It makes sense. Piece of cake. But my thing is if you did not copy my example to what I showed you then you have an illusion of learning. You actually did not learn. So back to the concept Number one I was copy example code. So when I show you certain code it's your job to follow along and copy those examples. If you did not code those examples then you merely have an illusion of learning and understanding that knowledge that understanding is gonna quickly fade away as not going to serve you. So if you did not code you did not learn.</span></p><p>Fool test #2 is \"If you did not ship, you did not build\".</p><p>So there is a very famous quote by Steve Jobs he said \"great artist ship\" or actually a \"real artist ship\". And what that really means is artist is somebody who creates OK a programmer is a creator a graphic designer is a creator an artist who draws is a creator author is a creator artist who acts on television or movies is an artist, right. So anybody who creates is an artist and shipping the concept of shipping means that when you launch something so them and you create your let's say you book or a blog or a program or a software or some painting you have to launch it to the world and if you do not launch it if you did not ship it then that means you'd never built it.</p><p>It's it's in your lab. That's your that's your experiment. So if you are if you did not ship if you did not launch your creations, if you do not launch your application if you'd not launch your code to the real world to github and add it to your portfolio that means you never built. So you have to make the the emphasis on when you create something it's not gonna be perfect. It's never going to be perfect. You're gonna keep every new creation you make is gonna be better but you gonna keep on improving that. So if you do not ship it that means you never built it. Okay?</p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">And full test #3 is \"If you can't explain it simply, you don't understand it yourself\" And that's by Einstein and that is the concept that a lot of teachers of the in the coding world and maybe you have had some good teachers and bad teachers of different subjects. We all have right. Let's be honest about good teachers. We have had bad teachers throughout our our our life. And the good teachers have the ability to make things explain us things in a simple manner that's digestible for us. And the reason they're able to do that is because they actually have a core understanding of that particular concept. So it's my job to explain to you things simply. And if I did not explain it simply, that means that I did not do my job.</span><br></p><p><span style=\"font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 0.9rem;\">I maybe don't understand the concept myself. And it's then your job is to understand that concept on a clear manner so that you are able to explain it. And if you are able to explain that concept whatever the new concepts you're gonna learn in programming if you can explain it that means you understand it. If you cannot explain it that means you don't understand clearly enough. And that's very important for you because when you go to you to do your interviews you're going to be asked these questions like \"What is a call stack?\" thats it, point blank. The interviewer is going to just ask you a point a blank question. Question What is it called stack. \"How does it asynchronous functions work in JavaScript?\", \"What are promises?\" just like these point blank questions that you're you're thinking right now. Oh my God I don't know what this is but I'm gonna explain these things to you in a simple manner and you will have to practice to answer these things in a simple manner. So you are interview-ready and I'm gonna help you with that. So that's my three fool test that's gonna help you towards the direction of learning things correctly. So you become job-ready, interview-ready, resume-ready, portfolio-ready. That's pretty much it for this video. I want to talk to you in the next.</span></p>"
@@ -2274,7 +2287,7 @@
         "title": "How is iLoveCoding different/better than cheap courses and expensive bootcamps",
         "subTitle": "Effective Training = Complete Video Training + Simple Explaination + Cheatsheets + Homework + Mentorship + Student Community",
         "level": 0,
-        "videoSource": "3brn7vV6lko",
+        "videoSource": "308930271",
         "duration": "1:38",
         "technology": []
       }
@@ -2285,7 +2298,7 @@
     "slug": "htmlcss2",
     "subTitle": "This just may be the most comprehensive HTML & CSS course on the internet. With clearly explained concepts in short and to the point screencast videos, learn the fundamentals & build beautiful and professional websites. (Cheatsheets, references, and tools included.) --- IMPORTANT: This course is FREE 🆓 and always will be.",
     "duration": "4:22",
-    "videoSource": "i9q3rgeBp3I",
+    "videoSource": "288830994",
     "thumbnail": "htmlcss2/htmlcss2.gif",
     "bodyContent": "<div class=\"card card-warning mb-2\">😇&nbsp;&nbsp;<b>Important:</b> This course is <b>FREE</b> and always will be 🙌. <i> Feel free to share it with friends.</i> 🎁</div>\n<h3>HTML Cheatsheet</h3>\n<ul>\n    <li><a href=\"https://github.com/iLoveCodingOrg/html-cheatsheet/raw/master/html-cheatsheet.pdf\">Download HTML Cheatsheet (PDF)</a></li>\n    <li><a href=\"https://github.com/iLoveCodingOrg/html-cheatsheet\">Star HTML Cheatsheet on Github</a></li>\n    <li>Share HTML/CSS Cheatsheet Link: <a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\">https://ilovecoding.org/blog/htmlcss-cheatsheet</a>  </li>\n</ul>\n<h3>CSS Cheatsheet</h3>\n<ul>\n    <li><a href=\"https://github.com/iLoveCodingOrg/css-cheatsheet/raw/master/css-cheatsheet.pdf\">Download CSS Cheatsheet (PDF)</a></li>\n    <li><a href=\"https://github.com/iLoveCodingOrg/css-cheatsheet\">Star CSS Cheatsheet on Github</a></li>\n    <li>Share HTML/CSS Cheatsheet Link: <a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\">https://ilovecoding.org/blog/htmlcss-cheatsheet</a>  </li>\n</ul>\n<p><a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\"><img class=\"w-75\" src=\"https://a.ilovecoding.org/thumb/htmlcss-cheatsheet.png\" alt=\"HTML CSS Cheatsheet thumb\"></a></p>\n<hr>\n\n<h2>What is HTML?</h2>\n<p>HTML abbreviation for <strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage, is a Markup Language to put together the&nbsp;structure of a web page. Think of HTML as the skeleton of a webpage. There is no website or webpage on the internet that does not use HTML. Without HTML, the web would not be possible.</p>\n    \n<h3>What HTML is not</h3>\n<p>HTML is not a programming language. Please don't confuse the two concepts. A programming language has logical and computational capability to instruct a computer to do some operations. A markup language, on the other hand, is static and is only used to organize data in a specific structure. HTML in our case is used to give structure to a web page.</p>\n    \n<h2>What is CSS?</h2>\n<p>CSS stands for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets. Think of it as the skin and clothing for the HTML webpage. CSS is simply a list of style properties that get applied to HTML elements. Just the way clothing is put onto a human body, similarly, CSS styling is applied on HTML elements. CSS enhances the colors, layout, and styling of the HTML webpage, making it look more beautiful and professional.</p>\n    \n\n<h2>Why learn HTML and CSS?</h2>\n<p>Unlike programming languages, HTML and CSS have NO competition. If you want to make web pages, start a career in web design, web development or even web journalism, the basic knowledge of HTML and CSS is a must have.</p>\n    \n<p>Fortunately, the foundation of HTML and CSS are not that difficult. You can start getting comfortable with HTML in a matter of hours. Basic CSS is also not that difficult, however, CSS can get complicated when trying to build advanced layouts.</p>\n\n<p>This course, <a href=\"https://ilovecoding.org/courses/htmlcss2\">\"Learn HTML and CSS Correctly\"</a>, will hold your hand to teaching you the basics and advanced concepts of HTML and CSS, so you are comfortable building simple and advanced websites.</p>\n\n<h2>What can you build with HTML and CSS?</h2>\n<p>Any website layout! Yes, any. All, yes all websites use HTML and CSS, and once you get a hang of it, you can build websites as beautiful as Airbnb, Facebook, Twitter, Amazon (You name it).</p>\n<p>Remember one thing! HTML and CSS will only help you build website layouts and static websites. The intelligent aspect of a webpage, such as a login capability, storing information in a database and advanced interactivity is built with a programming language such as JavaScript. Once you are comfortable with HTML and CSS&nbsp;and have built some projects, your next step is to <a href=\"https://ilovecoding.org/courses/js2\">learn JavaScript</a>\n</p>\n\n<h2>What resources should you refer when learning HTML and CSS</h2>\n<p>Take this course as you guide! For reference, I highly recommend the <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference\">HTML reference on Mozilla</a>. They also have some really <a href=\"https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML\">good guides here</a>.</p>\n<p>Web Docs on Mozilla (MDN) is the most authentic and trusted source to lookup information on web technology - HTML, CSS and, JavaScript. Whenever I need more information on a topic, I google the following query <em>\"topic name mozilla\"</em>\n</p>\n<h2>What will you learn in this Free video course?</h2>\n<ul>\n    <li>Basic syntax of HTML</li>\n    <li>Common HTML Elements</li>\n    <li>Must have markup on every webpage</li>\n    <li>How to create headline, paragraph and lists</li>\n    <li>How to create forms elements - text fields, radio/checkbox buttons, select boxes</li>\n    <li>How to structure a webpage layout</li>\n    <li>What are semantic elements and why to use them</li>\n    <li>Basic syntax of CSS</li>\n    <li>Common CSS properties</li>\n    <li>CSS selectors and its type</li>\n    <li>Using CSS to enhance website layout</li>\n    <li>Importing files in your HTML document</li>\n    <li>Advanced positioning of elements with CSS</li>\n    <li>Adding custom fonts</li>\n</ul>\n\n<h2>What will you create with <em>Learn HTML &amp; CSS Correctly</em> video course?</h2>\n<p>The goal of this course is&nbsp;to give you practical, real-world examples so you are off to creating your vision.</p>\n<p>For that, you will create two finished projects</p>\n\n<p class=\"text-center mb-2\"><img class=\"mx-auto shadow w-75\" src=\"https://a.ilovecoding.org/thumb/htmlcss2/blog-design.png\" alt=\"Blog Design Project\"><br><br>\n<img class=\"mx-auto shadow w-75\" src=\"https://a.ilovecoding.org/thumb/htmlcss2/coupon.png\" alt=\"Coupon with Positioning\"></p>\n\n<h2>How is the course organized?</h2>\n<p>The course is organized such that you watch the video and follow along. If you simply watch the video and do not apply your learning, you will have an illusion of learning. So its important that you download the right software tools suggested and follow the instructions.</p>\n<h2>How long will it take me to learn HTML and CSS?</h2>\n<p>It may take you 1-2 weeks to complete the course, and about a month of practice to get comfortable with HTML and CSS. The key is to apply your learning and build projects. The easiest project you can create is your own personal website. You need your own presence online. Social media profiles are not enough. You want your own website where you can express yourself and your skills. This course will give you all the skills to build that website.</p>\n<p>With more practice, you can start building websites for clients as well&nbsp;and start charging for your services.</p>\n\n<hr>\n\n<h2>Full Video Transcript</h2>\n<p>Do you want to build websites for yourself or for your clients? Then you must learn HTML and CSS.</p>\n<p>Welcome to the learn HTML and CSS in 14 days course on iLoveCoding. I'm happy that you're here because this is an awesome comprehensive and detailed course on how to build simple and professional websites with HTML and CSS.</p>\n<p>Now you may be asking what is HTML and CSS and why should you care. And why should you take this course? Those are awesome questions. You see HTML and CSS are two distinct coding languages used to make websites. The fact of the matter is that all websites are built with HTML and CSS and the Web would be impossible without it. Now, Yes! websites like Google.com, YouTube, Amazon, Twitter, Facebook, you name it - Any website, all websites, big and small are built with HTML and CSS.</p>\n<p>HTML is used to put the structure of a website together and CSS is used to make your website look pretty with colors, styled and advanced layout. If you want to make websites even the most simplest websites or want to become a web designer, webmaster, or web developer, you must learn HTML and CSS. In fact, if you want to do anything with the tech or web world, I highly recommend you take this course because it's going to serve you well now and in the future of your career.</p>\n<p><b>Now let's see what you will be learning in this course:</b></p>\n<p>In this course you will learn what is HTML and CSS, what does it stand for. You will learn how to write simple websites and web pages using HTML and CSS. You will learn the basic syntax of HTML and how it's written. You will learn how to format your code like a professional. You will learn what tools to use and what tools not to use when coding. You will learn the basic terminologies used around the web world like \"tags\", \"elements\", \"attributes\" and you will get comfortable using these features and talking like in that particular lingo.</p>\n<p>You will learn how to see the code of other websites using a tool called Chrome developer tools so you can see how other websites are coded so you can get inspiration from them and code your websites and enhance your websites accordingly.</p>\n<p>You will learn how to make headlines titles, forms, tables, paragraphs. You will learn how to link your website with other websites or link the pages of your own websites together and you will learn everything in between on building these beautiful websites. You see an HTML consist of a lot of elements. I will share with you the most common elements that you must know about and then I will travel to you two trusted resources so you can look up more information whenever you need.</p>\n<p>Kind of like a cheat sheet. Once you have a gist of HTML, then I will share with you the basics of CSS and how to use it to make your website look pretty and professional. Something like this.</p>\n<p>Yes! we will be building this beautiful blog design together in this course. Plus, I will share with you some advance hacks that professional developers use. All in all, this course will give you the tools, training, resources, cheat sheets, and homework so you become comfortable in writing HTML and CSS, and building professional and beautiful looking websites. Remember one thing. The best way to learn is to manually hand copy the things that I teach you. So I recommend in this course that you watch the videos twice. The first time you watch it and ingest the concept and take notes and then the second time you watch it and then you copy along with me in your code editor and build what I am building. This way you will internalize and knowledge and you're going to learn by doing as well.</p>\n<p>Just imagine when you create your first website how proud will you be? if that excites you. Let's get started.</p>\n<p></p><p></p>",
     "title": "Learn HTML & CSS Correctly",
@@ -2306,7 +2319,7 @@
         "subTitle": "You will need a modern browser and a text-editor too get started. See my recommended tools in the lesson.",
         "createdMsec": 1535647299715,
         "level": 0,
-        "videoSource": "HjyzHKYQf_E",
+        "videoSource": "286971646",
         "duration": "1:59",
         "technology": [
           "HTML/CSS"
@@ -2321,7 +2334,7 @@
         "subTitle": "Learn whats so special about a Text Editor and learn some handy features they have.",
         "createdMsec": 1535647414350,
         "level": 0,
-        "videoSource": "AsQmtk4jzdU",
+        "videoSource": "286971681",
         "duration": "4:57",
         "technology": [
           "HTML/CSS"
@@ -2336,7 +2349,7 @@
         "subTitle": "Code your very first web page. Learn about file formats, plus how the browser reads your files.",
         "createdMsec": 1535647449884,
         "level": 0,
-        "videoSource": "R7DXSTvXZuw",
+        "videoSource": "286971711",
         "duration": "3:59",
         "technology": [
           "HTML/CSS"
@@ -2353,7 +2366,7 @@
         "subTitle": "All websites are built with HTML - lets see fundamentally what is HTML really.",
         "createdMsec": 1535647471221,
         "level": 0,
-        "videoSource": "B0leMtD3NFc",
+        "videoSource": "286971745",
         "duration": "3:16",
         "technology": [
           "HTML/CSS"
@@ -2368,7 +2381,7 @@
         "subTitle": "Lets look at the basic building blocks of HTML.",
         "createdMsec": 1535647493961,
         "level": 0,
-        "videoSource": "roxjIAkRGy8",
+        "videoSource": "286971808",
         "duration": "2:46",
         "technology": [
           "HTML/CSS"
@@ -2383,7 +2396,7 @@
         "subTitle": "HTML has only ONE feature - Elements. Lets see what elements are all about.",
         "createdMsec": 1535647504827,
         "level": 0,
-        "videoSource": "Pvu8pHkqigc",
+        "videoSource": "286971864",
         "duration": "7:20",
         "technology": [
           "HTML/CSS"
@@ -2400,7 +2413,7 @@
         "subTitle": "...Continuation of the lesson on HTML Elements.",
         "createdMsec": 1535647515633,
         "level": 0,
-        "videoSource": "eEWrgWzYNOY",
+        "videoSource": "286971918",
         "duration": "3:36",
         "technology": [
           "HTML/CSS"
@@ -2417,7 +2430,7 @@
         "subTitle": "HTML has seemingly endless HTML elements - here are the most common ones you need to know.",
         "createdMsec": 1535647526663,
         "level": 0,
-        "videoSource": "p54VbpB4ZBY",
+        "videoSource": "286971946",
         "duration": "3:26",
         "technology": [
           "HTML/CSS"
@@ -2432,7 +2445,7 @@
         "subTitle": "Your code will work even if you write incorrect code - but it has limits. Lets see.",
         "createdMsec": 1535647537095,
         "level": 0,
-        "videoSource": "otXmlwJFfzU",
+        "videoSource": "286971989",
         "duration": "3:47",
         "technology": [
           "HTML/CSS"
@@ -2447,7 +2460,7 @@
         "subTitle": "All webpages on the internet has this basic markup. Lets see what this markup looks like.",
         "createdMsec": 1535647554308,
         "level": 0,
-        "videoSource": "k6hAjC7VtS4",
+        "videoSource": "286972028",
         "duration": "5:18",
         "technology": [
           "HTML/CSS"
@@ -2464,7 +2477,7 @@
         "subTitle": "These elements help us format our text in our webpage",
         "createdMsec": 1535649189055,
         "level": 0,
-        "videoSource": "FWGM_UlqWPw",
+        "videoSource": "286972329",
         "duration": "5:18",
         "technology": [
           "HTML/CSS"
@@ -2481,7 +2494,7 @@
         "subTitle": "Link your webpages with internal and external pages - on the internet.",
         "createdMsec": 1535649244856,
         "level": 0,
-        "videoSource": "_7kg8olL7V0",
+        "videoSource": "286972388",
         "duration": "4:04",
         "technology": [
           "HTML/CSS"
@@ -2498,7 +2511,7 @@
         "subTitle": "See the difference between two kinds of paths. relative and absolute paths",
         "createdMsec": 1535649256524,
         "level": 0,
-        "videoSource": "dcGhHGThpOs",
+        "videoSource": "286972424",
         "duration": "5:50",
         "technology": [
           "HTML/CSS"
@@ -2515,7 +2528,7 @@
         "subTitle": "The <div> and <span> elements although simple, are the most widely used HTML elements. Lets get familiar with them.",
         "createdMsec": 1535649270266,
         "level": 0,
-        "videoSource": "uJjKgnesGFQ",
+        "videoSource": "286972470",
         "duration": "6:36",
         "technology": [
           "HTML/CSS"
@@ -2532,7 +2545,7 @@
         "subTitle": "Lear to make numbered (ordered) or bulleted (unordered) lists in HTML.",
         "createdMsec": 1535649282154,
         "level": 0,
-        "videoSource": "8IDddOaeTyk",
+        "videoSource": "286972509",
         "duration": "5:36",
         "technology": [
           "HTML/CSS"
@@ -2549,7 +2562,7 @@
         "subTitle": "Learn to make nested list + homework for your learning.",
         "createdMsec": 1535649294030,
         "level": 0,
-        "videoSource": "IMw8pbh1yIg",
+        "videoSource": "286972550",
         "duration": "4:31",
         "technology": [
           "HTML/CSS"
@@ -2566,7 +2579,7 @@
         "subTitle": "HTML has a unique way of adding special characters in HTML - see how its done.",
         "createdMsec": 1535649310444,
         "level": 0,
-        "videoSource": "7f6bH5q0uXk",
+        "videoSource": "286972594",
         "duration": "5:50",
         "technology": [
           "HTML/CSS"
@@ -2583,7 +2596,7 @@
         "subTitle": "Speed up your coding with Emmet Shortcuts, plus see how to add notes in your code.",
         "createdMsec": 1535649321109,
         "level": 0,
-        "videoSource": "4Gb_3FzwfeI",
+        "videoSource": "286972638",
         "duration": "3:37",
         "technology": [
           "HTML/CSS"
@@ -2598,7 +2611,7 @@
         "subTitle": "What is a <meta> element and what does it do?",
         "createdMsec": 1535649333930,
         "level": 0,
-        "videoSource": "7wheOze_Eho",
+        "videoSource": "286972663",
         "duration": "3:19",
         "technology": [
           "HTML/CSS"
@@ -2615,7 +2628,7 @@
         "subTitle": "See two handy meta elements properties that help search-engines list your webpages correctly.",
         "createdMsec": 1535649346812,
         "level": 0,
-        "videoSource": "njvaew5L2y4",
+        "videoSource": "286972682",
         "duration": "3:33",
         "technology": [
           "HTML/CSS"
@@ -2630,7 +2643,7 @@
         "subTitle": "These elements format our webpage text is special spacing and different font-family as well. Learn more in this lesson.",
         "createdMsec": 1535653040561,
         "level": 0,
-        "videoSource": "XSrxIgZzcZI",
+        "videoSource": "287103454",
         "duration": "5:43",
         "technology": [
           "HTML/CSS"
@@ -2647,7 +2660,7 @@
         "subTitle": "Learn to use the <img> element and add images to your webpages",
         "createdMsec": 1535653077173,
         "level": 0,
-        "videoSource": "m2Ux7eIrdIM",
+        "videoSource": "287103570",
         "duration": "5:11",
         "technology": [
           "HTML/CSS"
@@ -2664,7 +2677,7 @@
         "subTitle": "Add custom videos and audio to your webpage. Set them to autoplay, add controls and more.",
         "createdMsec": 1535653090324,
         "level": 0,
-        "videoSource": "NqDkyl_6LYw",
+        "videoSource": "287103655",
         "duration": "5:56",
         "technology": [
           "HTML/CSS"
@@ -2681,7 +2694,7 @@
         "subTitle": "Learn about <main>, <header>, <footer>, <aside> and other elements with fancy (semantic) names + homework for you.",
         "createdMsec": 1535653122827,
         "level": 0,
-        "videoSource": "_osNt6Tn338",
+        "videoSource": "287103727",
         "duration": "4:26",
         "technology": [
           "HTML/CSS"
@@ -2698,7 +2711,7 @@
         "subTitle": "CSS is the language that beautifies our HTML web pages. Lets learn its basics.",
         "createdMsec": 1535653189457,
         "level": 0,
-        "videoSource": "aXQ8Db2CClw",
+        "videoSource": "287103790",
         "duration": "4:22",
         "technology": [
           "HTML/CSS"
@@ -2715,7 +2728,7 @@
         "subTitle": "Continuation of CSS from previous lesson.",
         "createdMsec": 1535653208407,
         "level": 0,
-        "videoSource": "W87ckj8azXI",
+        "videoSource": "287103914",
         "duration": "4:10",
         "technology": [
           "HTML/CSS"
@@ -2732,7 +2745,7 @@
         "subTitle": "CSS selectors are magical - See how you can define once your webpage styling, and it will apply everywhere.",
         "createdMsec": 1535653237866,
         "level": 0,
-        "videoSource": "2NJ46gYRknQ",
+        "videoSource": "287103977",
         "duration": "5:38",
         "technology": [
           "HTML/CSS"
@@ -2749,7 +2762,7 @@
         "subTitle": "Instead of writing your CSS in the <style> element, you can write them in a separate file. This way these styles can be shared among multiple webpages.",
         "createdMsec": 1535653250833,
         "level": 0,
-        "videoSource": "Wjb-TLZbOOo",
+        "videoSource": "287104055",
         "duration": "4:55",
         "technology": [
           "HTML/CSS"
@@ -2766,7 +2779,7 @@
         "subTitle": "Target element by its ID attribute. See how.",
         "createdMsec": 1535653262829,
         "level": 0,
-        "videoSource": "TH-yHJjxBck",
+        "videoSource": "287104113",
         "duration": "4:20",
         "technology": [
           "HTML/CSS"
@@ -2783,7 +2796,7 @@
         "subTitle": "Target elements by their class attribute. See how.",
         "createdMsec": 1535653274379,
         "level": 0,
-        "videoSource": "ymdTiN3KHfQ",
+        "videoSource": "287104211",
         "duration": "3:52",
         "technology": [
           "HTML/CSS"
@@ -2800,7 +2813,7 @@
         "subTitle": "At times you want all your elements to have certain CSS properties. Use the asterisk (*) selector for that.",
         "createdMsec": 1535656693600,
         "level": 0,
-        "videoSource": "jLRkLzrMu54",
+        "videoSource": "287104493",
         "duration": "0:58",
         "technology": [
           "HTML/CSS"
@@ -2815,7 +2828,7 @@
         "subTitle": "Multiple selectors can be used together to hyper target elements. See how in this lesson.",
         "createdMsec": 1535656707753,
         "level": 0,
-        "videoSource": "Ot0m-BnFllI",
+        "videoSource": "287104540",
         "duration": "4:40",
         "technology": [
           "HTML/CSS"
@@ -2832,7 +2845,7 @@
         "subTitle": "Hyper target elements with selector combinators",
         "createdMsec": 1535656721415,
         "level": 0,
-        "videoSource": "MoyMojEyXyI",
+        "videoSource": "287104625",
         "duration": "7:50",
         "technology": [
           "HTML/CSS"
@@ -2849,7 +2862,7 @@
         "subTitle": "Elements can have different state like hover, active etc. Style your elements differently depending on the element state.",
         "createdMsec": 1535656731011,
         "level": 0,
-        "videoSource": "bSgU7Ra-M6A",
+        "videoSource": "287104845",
         "duration": "6:04",
         "technology": [
           "HTML/CSS"
@@ -2866,7 +2879,7 @@
         "subTitle": "Chrome Developer Tools are a Godsend for front-end developer. Lets see how it helps us dissect our code, find problems so we can solve them.",
         "createdMsec": 1535656743041,
         "level": 0,
-        "videoSource": "Ld9zNjz7t4s",
+        "videoSource": "287106113",
         "duration": "6:43",
         "technology": [
           "HTML/CSS"
@@ -2881,7 +2894,7 @@
         "subTitle": "Learn the three color systems and how to use them. Plus some handy trips on color selection and preview.",
         "createdMsec": 1535656753115,
         "level": 0,
-        "videoSource": "b-8MO98e_lY",
+        "videoSource": "287104661",
         "duration": "3:19",
         "technology": [
           "HTML/CSS"
@@ -2896,7 +2909,7 @@
         "subTitle": "Multiple CSS classes can be applied to one element. See how. Plus learn how to write notes within your code with CSS code comments.",
         "createdMsec": 1535656766269,
         "level": 0,
-        "videoSource": "KtPVOLo2vWg",
+        "videoSource": "287105043",
         "duration": "2:59",
         "technology": [
           "HTML/CSS"
@@ -2913,7 +2926,7 @@
         "subTitle": "Learn to change fonts of targeted elements + learn how to install custom fancy fonts on your website.",
         "createdMsec": 1535656780273,
         "level": 0,
-        "videoSource": "wwygfTPPzps",
+        "videoSource": "287105185",
         "duration": "6:20",
         "technology": [
           "HTML/CSS"
@@ -2930,7 +2943,7 @@
         "subTitle": "Learn how to style the background of any element with color and image.",
         "createdMsec": 1535656803566,
         "level": 0,
-        "videoSource": "Cp8NzMs_fGs",
+        "videoSource": "287105344",
         "duration": "7:39",
         "technology": [
           "HTML/CSS"
@@ -2947,7 +2960,7 @@
         "subTitle": "We can size our elements with different sizing units. Lets learn the most common units and how to use them.",
         "createdMsec": 1535656815502,
         "level": 0,
-        "videoSource": "AkMfrA1BPMc",
+        "videoSource": "287105724",
         "duration": "7:01",
         "technology": [
           "HTML/CSS"
@@ -2962,7 +2975,7 @@
         "subTitle": "Learning how 'rem' unit works in CSS and when to use it.",
         "createdMsec": 1535661451938,
         "level": 0,
-        "videoSource": "Fgat1db3io8",
+        "videoSource": "287105966",
         "duration": "2:39",
         "technology": [
           "HTML/CSS"
@@ -2977,7 +2990,7 @@
         "subTitle": "The CSS properties of margin and padding help us control the spacing within and between elements. This is the stepping stone to making websites look pretty - finally.",
         "createdMsec": 1535661466677,
         "level": 0,
-        "videoSource": "o011UoeMvw4",
+        "videoSource": "287104853",
         "duration": "9:49",
         "technology": [
           "HTML/CSS"
@@ -2994,7 +3007,7 @@
         "subTitle": "Add border to HTML elements with the `border` property.",
         "createdMsec": 1535661529775,
         "level": 0,
-        "videoSource": "K6MXFQdFp8U",
+        "videoSource": "287105148",
         "duration": "4:00",
         "technology": [
           "HTML/CSS"
@@ -3009,7 +3022,7 @@
         "subTitle": "See the different CSS border styles - 'double', 'dotted' and more.",
         "createdMsec": 1535661555050,
         "level": 0,
-        "videoSource": "4Cp1NDOZKw8",
+        "videoSource": "287105322",
         "duration": "2:05",
         "technology": [
           "HTML/CSS"
@@ -3024,7 +3037,7 @@
         "subTitle": "Control element size with width/height property and position them in center of the element.",
         "createdMsec": 1535661570227,
         "level": 0,
-        "videoSource": "wQ8df52tXug",
+        "videoSource": "287105807",
         "duration": "3:21",
         "technology": [
           "HTML/CSS"
@@ -3041,7 +3054,7 @@
         "subTitle": "box-sizing can add more predictability on the size of your elements. See how.",
         "createdMsec": 1535661580881,
         "level": 0,
-        "videoSource": "Vv9HNrhc6J4",
+        "videoSource": "287105416",
         "duration": "3:43",
         "technology": [
           "HTML/CSS"
@@ -3058,7 +3071,7 @@
         "subTitle": "Don't just round corners - make custom shapes with the 'border-radius' css property.",
         "createdMsec": 1535661592923,
         "level": 0,
-        "videoSource": "X8Dbgc7ZyVk",
+        "videoSource": "287105665",
         "duration": "7:58",
         "technology": [
           "HTML/CSS"
@@ -3075,7 +3088,7 @@
         "subTitle": "Lets take an in-depth look at the difference between the <div> and <span> element. An advanced look into understanding how elements control space.",
         "createdMsec": 1535661607447,
         "level": 1,
-        "videoSource": "h0JEQzHzl2w",
+        "videoSource": "287105923",
         "duration": "4:36",
         "technology": [
           "HTML/CSS"
@@ -3092,7 +3105,7 @@
         "subTitle": "The hybrid of the 'block' and 'inline' value of 'display' property is 'inline-block'. See how it works.",
         "createdMsec": 1535661625002,
         "level": 0,
-        "videoSource": "kR_VDKCFQZU",
+        "videoSource": "287106167",
         "duration": "3:19",
         "technology": [
           "HTML/CSS"
@@ -3109,7 +3122,7 @@
         "subTitle": "The 'float' and 'clear' help us move elements around within our webpage. See how it works in this lesson.",
         "createdMsec": 1535661635753,
         "level": 0,
-        "videoSource": "H3FsqeF_ZG0",
+        "videoSource": "287106302",
         "duration": "4:38",
         "technology": [
           "HTML/CSS"
@@ -3126,7 +3139,7 @@
         "subTitle": "There are a few ways to hide content of a webpage. See how these properties can help us do that.",
         "createdMsec": 1535661672441,
         "level": 0,
-        "videoSource": "_1DiakPWmvU",
+        "videoSource": "287104728",
         "duration": "3:36",
         "technology": [
           "HTML/CSS"
@@ -3141,7 +3154,7 @@
         "subTitle": "There is a common problem in HTML when making advance layouts that parent elements act abnormally. This lesson explains the problem and shows you the solution as well.",
         "createdMsec": 1535661683120,
         "level": 0,
-        "videoSource": "f_avqXSK4D0",
+        "videoSource": "287104835",
         "duration": "3:51",
         "technology": [
           "HTML/CSS"
@@ -3158,7 +3171,7 @@
         "subTitle": "In the project we will make a beautiful blog design from scratch using pure HTML and CSS. All hand coded. This is how professional design websites. Lesson 1/7 of Project Blog Design.",
         "createdMsec": 1535661694349,
         "level": 0,
-        "videoSource": "r2iZbAme-Yk",
+        "videoSource": "287104937",
         "duration": "5:20",
         "technology": [
           "HTML/CSS"
@@ -3173,7 +3186,7 @@
         "subTitle": "Lesson 2/7 of Project Blog Design",
         "createdMsec": 1535661713082,
         "level": 0,
-        "videoSource": "dvldbts1NEo",
+        "videoSource": "287105035",
         "duration": "9:09",
         "technology": [
           "HTML/CSS"
@@ -3188,7 +3201,7 @@
         "subTitle": "Lesson 3/7 of Project Blog Design",
         "createdMsec": 1535661723231,
         "level": 0,
-        "videoSource": "jpQj_5Xbbf0",
+        "videoSource": "287105243",
         "duration": "4:01",
         "technology": [
           "HTML/CSS"
@@ -3203,7 +3216,7 @@
         "subTitle": "Lesson 4/7 of Project Blog Design",
         "createdMsec": 1535661736712,
         "level": 0,
-        "videoSource": "5WFdmpKm530",
+        "videoSource": "287105360",
         "duration": "4:02",
         "technology": [
           "HTML/CSS"
@@ -3220,7 +3233,7 @@
         "subTitle": "Lesson 5/7 of Project Blog Design",
         "createdMsec": 1535661761399,
         "level": 0,
-        "videoSource": "Vz0CdgRkbDs",
+        "videoSource": "287105513",
         "duration": "3:10",
         "technology": [
           "HTML/CSS"
@@ -3235,7 +3248,7 @@
         "subTitle": "Lesson 6/7 of Project Blog Design",
         "createdMsec": 1535661779618,
         "level": 0,
-        "videoSource": "B8YGNNxFeMo",
+        "videoSource": "287105650",
         "duration": "2:17",
         "technology": [
           "HTML/CSS"
@@ -3252,7 +3265,7 @@
         "subTitle": "Lesson 7/7 of Project Blog Design",
         "createdMsec": 1535661792460,
         "level": 0,
-        "videoSource": "QQXYWm8ReGg",
+        "videoSource": "287105716",
         "duration": "5:13",
         "technology": [
           "HTML/CSS"
@@ -3269,7 +3282,7 @@
         "subTitle": "You can freely move your elements with the `position` CSS property. See how in this lesson.",
         "createdMsec": 1535661802800,
         "level": 0,
-        "videoSource": "wWmQ4SdU_rg",
+        "videoSource": "287105912",
         "duration": "8:10",
         "technology": [
           "HTML/CSS"
@@ -3286,7 +3299,7 @@
         "subTitle": "Learn how position absolute can be used to freely place elements on page.",
         "createdMsec": 1535661841349,
         "level": 0,
-        "videoSource": "SusbZwn9kzs",
+        "videoSource": "287110710",
         "duration": "5:21",
         "technology": [
           "HTML/CSS"
@@ -3303,7 +3316,7 @@
         "subTitle": "CSS has additional set of layout properties called CSS Flexbox and CSS Grid. Lets discuss them in this lesson.",
         "createdMsec": 1535661862555,
         "level": 0,
-        "videoSource": "Lw5JGdfupq4",
+        "videoSource": "287110769",
         "duration": "3:02",
         "technology": [
           "HTML/CSS"
@@ -3320,7 +3333,7 @@
         "subTitle": "In case multiple CSS properties are being applied on an element, this is the priority in which they will be applied.",
         "createdMsec": 1535661877470,
         "level": 0,
-        "videoSource": "7f6WdKLJ2b4",
+        "videoSource": "287110801",
         "duration": "6:04",
         "technology": [
           "HTML/CSS"
@@ -3337,7 +3350,7 @@
         "subTitle": "CSS can be fun - Here are a few resources to see whats possible.",
         "createdMsec": 1535661896199,
         "level": 0,
-        "videoSource": "OgFn3DxaKFA",
+        "videoSource": "287110879",
         "duration": "5:18",
         "technology": [
           "HTML/CSS"
@@ -3354,7 +3367,7 @@
         "subTitle": "Learn the different elements used to build tables in HTML.",
         "createdMsec": 1535661907955,
         "level": 0,
-        "videoSource": "2H4uAKxI9Rs",
+        "videoSource": "287110961",
         "duration": "5:32",
         "technology": [
           "HTML/CSS"
@@ -3371,7 +3384,7 @@
         "subTitle": "Continue to learn about building tables in HTML.",
         "createdMsec": 1535661921690,
         "level": 0,
-        "videoSource": "lPm58ySx_ss",
+        "videoSource": "287111027",
         "duration": "2:41",
         "technology": [
           "HTML/CSS"
@@ -3388,7 +3401,7 @@
         "subTitle": "Have you seem youtube videos or maps embedded on pages - its done via the <iframe> element.",
         "createdMsec": 1535661933640,
         "level": 0,
-        "videoSource": "L5ev7c2vTBY",
+        "videoSource": "287111061",
         "duration": "4:16",
         "technology": [
           "HTML/CSS"
@@ -3405,7 +3418,7 @@
         "subTitle": "When you login and sign-up to websites, you are using form elements to enter and submit your information. Lets see how these forms are made.",
         "createdMsec": 1535661947104,
         "level": 0,
-        "videoSource": "FGJZlZUahpY",
+        "videoSource": "288048832",
         "duration": "11:17",
         "technology": [
           "HTML/CSS"
@@ -3422,7 +3435,7 @@
         "subTitle": "More about forms and related elements.",
         "createdMsec": 1535661956962,
         "level": 0,
-        "videoSource": "0R_PwppeUzY",
+        "videoSource": "288048912",
         "duration": "6:41",
         "technology": [
           "HTML/CSS"
@@ -3439,7 +3452,7 @@
         "subTitle": "There are virtually endless amount of CSS libraries on the internet - They provide pre-built CSS classes to make your website elements beautiful. Lets see how to find and use these libraries.",
         "createdMsec": 1535661967516,
         "level": 0,
-        "videoSource": "-zeieoiWO0M",
+        "videoSource": "288048979",
         "duration": "6:42",
         "technology": [
           "HTML/CSS"
@@ -3458,7 +3471,7 @@
         "bodyContent": "<h3>CSS Cheatsheet</h3><ul><li><a href=\"https://github.com/iLoveCodingOrg/css-cheatsheet/raw/master/css-cheatsheet.pdf\">Download CSS Cheatsheet (PDF)</a></li><li><a href=\"https://github.com/iLoveCodingOrg/css-cheatsheet\">Star CSS Cheatsheet on Github</a></li>\n<li>Share HTML/CSS Cheatsheet Link: <a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\">https://ilovecoding.org/blog/htmlcss-cheatsheet</a></li>\n</ul>\n\n<h3>HTML Cheatsheet</h3>\n<ul><li><a href=\"https://github.com/iLoveCodingOrg/html-cheatsheet/raw/master/html-cheatsheet.pdf\">Download HTML Cheatsheet (PDF)</a></li>\n<li><a href=\"https://github.com/iLoveCodingOrg/html-cheatsheet\">Star HTML Cheatsheet on Github</a></li>\n<li>Share HTML/CSS Cheatsheet Link: <a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\">https://ilovecoding.org/blog/htmlcss-cheatsheet</a></li></ul>\n\n<p><a href=\"https://ilovecoding.org/blog/htmlcss-cheatsheet\"><img class=\"w-75\" src=\"//a.ilovecoding.org/thumb/htmlcss-cheatsheet.png\" alt=\"HTML CSS Cheatsheet thumb\"></a></p>",
         "createdMsec": 1536376472088,
         "level": 0,
-        "videoSource": "Aaq6pzd4OZk",
+        "videoSource": "288830701",
         "duration": "3:28",
         "technology": [
           "HTML/CSS"

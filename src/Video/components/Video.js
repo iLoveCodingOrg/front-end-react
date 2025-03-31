@@ -1,16 +1,23 @@
+import PropTypes from 'prop-types'
+import React from 'react'
+import YouTube from 'react-youtube'
 import './video.css'
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import Vimeo from '@u-wave/react-vimeo'
-
 function Video({ videoSource, callMarkAsComplete, ...props }) {
-  const getId = () => videoSource.split('//player.vimeo.com/video/').pop()
-
   return (
-    <Vimeo
+    <YouTube
       className="video"
-      video={getId()}
+      videoId={videoSource}
+      opts={{
+        playerVars: {
+          autoplay: 0,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 1,
+          controls: 1,
+          playsinline: 0,
+        },
+      }}
       onEnd={() => callMarkAsComplete()}
       {...props}
     />
