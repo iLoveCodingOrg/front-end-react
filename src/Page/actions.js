@@ -1,14 +1,15 @@
-import 'whatwg-fetch'
 import { toast } from 'react-toastify'
+import 'whatwg-fetch'
 import {
-  SET_PAGES,
+  CLEAR_PAGE,
   CLEAR_PAGES,
   SET_PAGE,
-  CLEAR_PAGE,
   SET_PAGE_LOADING,
+  SET_PAGES,
   SET_PAGES_LIST_LOADING,
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
+import PagesData from '../_app/data/Page.json'
 import {
   checkStatus,
   parseJSON,
@@ -33,20 +34,14 @@ export function setLoadingList(isLoading = true) {
 }
 
 export function getPages() {
-  const url = `${API_URL}pages`
-
   return (dispatch) => {
-    dispatch(setLoadingList(false))
+    dispatch(setLoadingList(true))
 
-    return fetch(url, { credentials: 'include' })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setPages(null, json))
-      })
-      .catch((error) => {
-        dispatch(setPages(error))
-      })
+    try {
+      dispatch(setPages(null, PagesData))
+    } catch (error) {
+      dispatch(setPages(error))
+    }
   }
 }
 
@@ -79,20 +74,15 @@ export function clearPages() {
 }
 
 export function getPageBySlug(slug) {
-  const url = `${API_URL}pages/${slug}/data`
-
   return (dispatch) => {
     dispatch(setLoadingView(true))
 
-    return fetch(url, { credentials: 'include' })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setPage(null, json))
-      })
-      .catch((err) => {
-        dispatch(setPage(err))
-      })
+    try {
+      const page = PagesData.find(p => p.slug === slug)
+      dispatch(setPage(null, page))
+    } catch (err) {
+      dispatch(setPage(err))
+    }
   }
 }
 

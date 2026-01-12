@@ -6,7 +6,6 @@ import CourseLinks from './CourseLinks'
 
 export default function CourseNav({ activeLessonIndex = -1, course }) {
   const lessons = get(course, 'lesson')
-  const lessonCount = get(course, 'lessonCount')
   const lessonCompletedCount = get(course, 'lessonCompletedCount')
   const courseSlug = get(course, 'slug')
 
@@ -25,7 +24,6 @@ export default function CourseNav({ activeLessonIndex = -1, course }) {
         activeLessonIndex={activeLessonIndex}
         courseSlug={courseSlug}
         lesson={lessons}
-        lessonCount={lessonCount}
         lessonCompletedCount={lessonCompletedCount}
       />
     </div>

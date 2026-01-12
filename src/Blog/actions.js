@@ -1,14 +1,15 @@
-import 'whatwg-fetch'
 import { toast } from 'react-toastify'
+import 'whatwg-fetch'
 import {
-  SET_BLOGS,
+  CLEAR_BLOG,
   CLEAR_BLOGS,
   SET_BLOG,
-  CLEAR_BLOG,
   SET_BLOG_LOADING,
+  SET_BLOGS,
   SET_BLOGS_LIST_LOADING,
 } from '../_app/actionTypes'
 import { API_URL } from '../_app/constants'
+import BlogsData from '../_app/data/Blog.json'
 import {
   checkStatus,
   parseJSON,
@@ -33,20 +34,14 @@ export function setLoadingList(isLoading = true) {
 }
 
 export function getBlogs() {
-  const url = `${API_URL}blogs`
-
   return (dispatch) => {
-    dispatch(setLoadingList(false))
+    dispatch(setLoadingList(true))
 
-    return fetch(url, { credentials: 'include' })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setBlogs(null, json))
-      })
-      .catch((error) => {
-        dispatch(setBlogs(error))
-      })
+    try {
+      dispatch(setBlogs(null, BlogsData))
+    } catch (error) {
+      dispatch(setBlogs(error))
+    }
   }
 }
 
@@ -79,20 +74,15 @@ export function clearBlogs() {
 }
 
 export function getBlogBySlug(slug) {
-  const url = `${API_URL}blogs/${slug}/data`
-
   return (dispatch) => {
     dispatch(setLoadingView(true))
 
-    return fetch(url, { credentials: 'include' })
-      .then(checkStatus)
-      .then(parseJSON)
-      .then((json) => {
-        dispatch(setBlog(null, json))
-      })
-      .catch((err) => {
-        dispatch(setBlog(err))
-      })
+    try {
+      const blog = BlogsData.find(b => b.slug === slug)
+      dispatch(setBlog(null, blog))
+    } catch (err) {
+      dispatch(setBlog(err))
+    }
   }
 }
 
