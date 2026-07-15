@@ -22,6 +22,7 @@ import {
   WhatYouGet,
   WhoFor
 } from '../../SalesCopy'
+import { SHOW_PATH_DECISION_BANNER } from '../../config'
 import TOC from './TOC'
 
 function BuyCTA() {
@@ -61,7 +62,7 @@ function HomeSalesPage({
         <title>iLoveCoding - Complete Front-End & Full-Stack JavaScript Training</title>
       </Helmet>
 
-      <Header />
+      <Header showPathDecisionBanner={SHOW_PATH_DECISION_BANNER} />
       <BuyCTA />
       <div className="container-fluid mt-3 bg-gray-lighter p-3 b bt-1">
         <SocialProof />

@@ -128,46 +128,7 @@ function Header({
   }
 
   const renderGuestRight = () => {
-    const links = [
-      // {
-      //   label: 'Why JavaScript?',
-      //   link: '/pages/why-javascript',
-      //   className: 'nav-link btn btn-400 py--25',
-      //   style: {},
-      // },
-      // {
-      //   label: 'How it works',
-      //   link: '/pages/how-it-works',
-      //   className: 'nav-link btn btn-400 py--25',
-      //   style: {},
-      // },
-      // {
-      //   label: 'Real Results',
-      //   link: '/reviews',
-      //   className: 'nav-link btn btn-400 py--25',
-      //   style: {},
-      // },
-      // {
-      //   label: 'Free Stuff',
-      //   link: '/free',
-      //   className: 'nav-link btn btn-400 py--25',
-      //   style: {},
-      // },
-      {
-        label: 'Login',
-        link: '/login',
-        className: 'nav-link btn btn-400 py--25',
-        style: {},
-      },
-      // {
-      //   label: 'Enroll Now',
-      //   link: '/#payment',
-      //   className: 'btn btn-primary ml--5',
-      //   style: {},
-      // },
-    ]
-
-    return renderLinks(links)
+    return null
   }
 
   const renderEditButton = () => {
