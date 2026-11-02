@@ -1,0 +1,54 @@
+---
+import ContentMeta from './ContentMeta.astro'
+
+interface Props {
+  href: string
+  title: string
+  subTitle?: string
+  thumbnail?: string
+  level?: number | string
+  duration?: string
+  lessonCount?: number
+  date?: string
+}
+const { href, title, subTitle, thumbnail, level, duration, lessonCount, date } = Astro.props
+---
+<article class:list={['item', { 'has-thumb': thumbnail }]}>
+  {thumbnail && (
+    <a href={href} class="thumb" tabindex="-1" aria-hidden="true">
+      <img src={thumbnail} alt="" loading="lazy" />
+    </a>
+  )}
+  <div>
+    {date && <p class="date">{date}</p>}
+    <h2><a href={href}>{title}</a></h2>
+    <ContentMeta level={level} duration={duration} lessonCount={lessonCount} />
+    {subTitle && <p class="sub">{subTitle}</p>}
+  </div>
+</article>
+
+<style>
+  .item {
+    display: grid;
+    gap: 20px;
+    padding-block: 28px;
+    border-top: 1px solid var(--line);
+  }
+  .item.has-thumb { grid-template-columns: 240px 1fr; align-items: start; }
+  @media (max-width: 640px) {
+    .item.has-thumb { grid-template-columns: 1fr; }
+  }
+  .thumb img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+  }
+  h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.4em; }
+  h2 a { color: var(--ink); text-decoration: none; }
+  h2 a:hover { color: var(--blue); }
+  .date { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.25em; }
+  .sub { color: var(--ink-soft); margin: 0.6em 0 0; }
+</style>

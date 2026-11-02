@@ -1,0 +1,146 @@
+---
+import Video from '../components/Video.astro'
+import { modules } from '../data/curriculum'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { isLivePath } from '../lib/content'
+---
+<BaseLayout
+  title="The Full Curriculum to become a professional Full-Stack Developer"
+  description="Get the complete roadmap (from start to finish) on how to become a job-ready, competent JavaScript developer."
+>
+  <div class="container-md">
+    <header class="page-header">
+      <h1>The Complete Full-Stack Development Curriculum</h1>
+      <p class="lead">Go from zero to a professional Full-Stack developer.</p>
+    </header>
+
+    <div class="callout intro">
+      <strong>Important:</strong> This curriculum gives you complete training on the deep technical concepts, homework,
+      cheat sheets, and practice projects, so you become a highly-skilled software developer.{' '}
+      <strong>Watch the video to get a proper walkthrough.</strong>
+    </div>
+
+    <figure class="intro-video">
+      <Video source="q87DYpgqfhE" title="How to get the most out of The Full Curriculum" />
+      <figcaption>How to get the most out of The Full Curriculum</figcaption>
+    </figure>
+
+    <div class="copy">
+      <p>
+        By the time you are done with this curriculum you will have the complete skills to code and launch modern websites,
+        web applications and even mobile apps from scratch. Plus you will have an impressive portfolio to land you a
+        respectable job as a software developer.
+      </p>
+      <p>
+        We’ll do all of this while focusing on one programming language, which is JavaScript. JavaScript is currently the
+        most popular and versatile programming language on planet internet. In fact, 99% (maybe even 100%) of all top
+        websites use JavaScript, and all the tech giants use it to build their websites and mobile apps such as Facebook,
+        PayPal, Google, LinkedIn, Walmart, Tesla, Apple, and even Microsoft uses it actively to build their apps.
+      </p>
+      <p>
+        <strong>Trust the process — follow the modules.</strong> Each module has core training along with a ton of practice
+        projects. These practice projects will give you real-life training on how to think like a developer and go from a
+        blank screen to a fully finished application.
+      </p>
+    </div>
+
+    <div class="card total">
+      <p class="eyebrow">Time to completion</p>
+      <p class="total-value">5 months</p>
+      <p class="muted">Study 15 hrs/week and complete within 5 months.</p>
+    </div>
+
+    {modules.map(mod => (
+      <section class="module">
+        <header>
+          <p class="eyebrow">{mod.eyebrow}</p>
+          <h2>{mod.title}</h2>
+          <p class="lead">{mod.description}</p>
+          {mod.time && <p class="time"><strong>{mod.time.label}:</strong> {mod.time.value}</p>}
+          {mod.note && <p class="callout"><strong>Note:</strong> {mod.note}</p>}
+        </header>
+
+        {mod.groups.map(group => (
+          <div class="group">
+            <h3>{group.title}</h3>
+            <ul class="training">
+              {group.items.map(item => {
+                const live = isLivePath(item.link)
+                const Tag = live ? 'a' : 'div'
+                return (
+                  <li>
+                    <Tag href={live ? item.link : undefined} class:list={['training-item', { unavailable: !live }]}>
+                      <img src={item.thumbSrc} alt="" loading="lazy" />
+                      <span class="name">{item.name}</span>
+                      {!live && <span class="badge">Not currently available</span>}
+                    </Tag>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        ))}
+
+        {mod.outcomes && (
+          <div class="group">
+            <h3>Module outcomes</h3>
+            <p>Once you are done with this module you will be able to:</p>
+            <ol>{mod.outcomes.map(o => <li>{o}</li>)}</ol>
+          </div>
+        )}
+      </section>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .intro { margin-bottom: 24px; }
+  .intro-video { margin: 0 0 32px; }
+  .intro-video figcaption { text-align: center; font-size: 0.875rem; color: var(--muted); margin-top: 8px; }
+  .copy p { font-size: 1.05rem; }
+  .total { text-align: center; margin-block: 32px 48px; }
+  .total-value { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; margin: 0; }
+  .total .muted { margin: 0; }
+
+  .module {
+    padding-block: 40px;
+    border-top: 1px solid var(--line);
+  }
+  .module:last-child { margin-bottom: var(--section); }
+  .module h2 { margin-bottom: 0.3em; }
+  .time { margin-bottom: 0.5em; }
+  .group { margin-top: 32px; }
+  .group h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); }
+
+  .training {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+    gap: 20px;
+  }
+  .training-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .training-item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  a.training-item:hover { color: var(--blue); }
+  a.training-item:hover img { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .unavailable { color: var(--muted); }
+  .unavailable img { filter: grayscale(1); opacity: 0.55; }
+  .unavailable .badge { align-self: flex-start; }
+</style>

@@ -1,0 +1,40 @@
+---
+import { formatDuration, levelLabel } from '../lib/content'
+
+interface Props {
+  level?: number | string
+  duration?: string
+  lessonCount?: number
+}
+const { level, duration, lessonCount } = Astro.props
+const items = [
+  levelLabel(level),
+  formatDuration(duration),
+  lessonCount ? `${lessonCount} lessons` : '',
+].filter(Boolean)
+---
+{items.length > 0 && (
+  <ul class="meta">
+    {items.map(item => <li>{item}</li>)}
+  </ul>
+)}
+
+<style>
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.2em 0.7em;
+    border-radius: 999px;
+    background: var(--surface-alt);
+    color: var(--ink-soft);
+    border: 1px solid var(--line);
+  }
+</style>

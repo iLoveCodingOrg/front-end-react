@@ -1,0 +1,20 @@
+---
+import Review, { type ReviewData } from './Review.astro'
+
+interface Props {
+  reviews: ReviewData[]
+}
+const { reviews } = Astro.props
+---
+<div class="review-grid">
+  {reviews.map(review => <Review review={review} />)}
+</div>
+
+<style>
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: 20px;
+    align-items: start;
+  }
+</style>

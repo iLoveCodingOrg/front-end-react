@@ -1,0 +1,93 @@
+---
+import { SOCIAL_LINKS, SUPPORT_EMAIL } from '../config'
+
+const year = new Date().getFullYear()
+const groups = [
+  {
+    title: 'Learn',
+    links: [
+      { label: 'Full Curriculum', href: '/curriculum' },
+      { label: 'All Courses', href: '/courses' },
+      { label: 'Tools & Resources', href: '/pages/resources' },
+      { label: 'Reviews', href: '/reviews' },
+    ],
+  },
+  {
+    title: 'Cheat sheets',
+    links: [
+      { label: 'HTML & CSS Cheatsheet', href: '/blog/htmlcss-cheatsheet' },
+      { label: 'JavaScript Cheatsheet', href: '/blog/js-cheatsheet' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'Blog', href: '/blog' },
+      { label: 'About us', href: '/pages/about' },
+      { label: SUPPORT_EMAIL, href: `mailto:${SUPPORT_EMAIL}` },
+    ],
+  },
+  { title: 'Social', links: SOCIAL_LINKS },
+]
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="groups">
+      {groups.map(group => (
+        <div>
+          <h2 class="group-title">{group.title}</h2>
+          <ul>
+            {group.links.map(link => <li><a href={link.href}>{link.label}</a></li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="legal">
+      <span>© 2014–{year} iLoveCoding Inc.</span>
+      <a href="/pages/privacy">Privacy</a>
+      <a href="/pages/terms">Terms</a>
+      <span class="made">Built in 🇵🇰 &amp; 🇺🇸. Have a great <span data-weekday>day</span> 👌</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const el = document.querySelector('[data-weekday]')
+  if (el) el.textContent = new Date().toLocaleDateString('en-US', { weekday: 'long' })
+</script>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--line);
+    background: var(--surface-alt);
+    padding-block: 48px 32px;
+    font-size: 0.9rem;
+  }
+  .groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+  }
+  .group-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    margin-bottom: 0.75em;
+  }
+  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4em; }
+  a { color: var(--ink-soft); text-decoration: none; }
+  a:hover { color: var(--blue); text-decoration: underline; }
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .made { margin-left: auto; }
+  @media (max-width: 640px) { .made { margin-left: 0; width: 100%; } }
+</style>

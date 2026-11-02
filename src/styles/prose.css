@@ -1,0 +1,91 @@
+/*
+ * Long-form HTML that comes from the old CMS (blogs, pages, course & lesson notes).
+ * It was authored against Bootstrap-ish classes, so a small compatibility layer lives here.
+ */
+.prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
+.prose > :first-child { margin-top: 0; }
+.prose h1, .prose h2, .prose h3, .prose h4 { margin-top: 1.6em; }
+.prose h2 { font-size: 1.6rem; }
+.prose h3 { font-size: 1.3rem; }
+.prose li { margin-bottom: 0.35em; }
+.prose img { border-radius: var(--radius-sm); margin-block: 0.5em 1em; }
+.prose figcaption { font-size: 0.875rem; color: var(--muted); text-align: center; margin-top: -0.5em; margin-bottom: 1.5em; }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5em; display: block; overflow-x: auto; }
+.prose th, .prose td { border: 1px solid var(--line); padding: 0.5em 0.75em; text-align: left; }
+.prose th { background: var(--surface-alt); }
+.prose blockquote {
+  margin: 0 0 1.5em;
+  padding: 0.75em 1.25em;
+  border-left: 4px solid var(--blue);
+  background: var(--surface-alt);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.prose blockquote > :last-child { margin-bottom: 0; }
+.prose pre, .prose .precode {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  tab-size: 2;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 1.1em 1.25em;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin: 0 0 1.5em;
+}
+.prose pre code { color: inherit; background: none; padding: 0; }
+.prose iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-sm); margin-bottom: 1.5em; }
+.prose .ql-indent-1 { padding-left: 3em; }
+
+/* Legacy CMS classes */
+.prose .img-fluid { max-width: 100%; height: auto; }
+.prose .w-75 { width: 75%; }
+.prose .w-100 { width: 100%; }
+.prose .border { border: 1px solid var(--line); }
+.prose .shadow { box-shadow: var(--shadow); }
+.prose .d-block { display: block; }
+.prose .mx-auto { margin-inline: auto; }
+.prose .text-center, .prose .t-center { text-align: center; }
+.prose .lead { font-size: 1.2rem; color: var(--ink-soft); }
+.prose .mt-2 { margin-top: 1rem; }
+.prose .mb-2 { margin-bottom: 1rem; }
+.prose .mb-3, .prose .mb-4 { margin-bottom: 1.5rem; }
+.prose .pt-4 { padding-top: 1.5rem; }
+.prose .px-4 { padding-inline: 1.5rem; }
+.prose .row { display: flex; flex-wrap: wrap; gap: 1rem; }
+.prose .row > [class*='col-'] { flex: 1 1 100%; }
+@media (min-width: 640px) {
+  .prose .row > .col-6 { flex-basis: calc(50% - 0.5rem); }
+  .prose .row > .col-md-4 { flex-basis: calc(33.333% - 0.5rem); }
+  .prose .row > .col-md-8 { flex-basis: calc(66.666% - 0.5rem); }
+}
+.prose .alert, .prose .card {
+  padding: 1em 1.25em;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5em;
+  background: var(--blue-tint);
+  border: 1px solid color-mix(in srgb, var(--blue) 18%, transparent);
+}
+.prose .alert-warning, .prose .card-warning { background: var(--amber-bg); border-color: var(--amber-border); color: var(--amber-text); }
+.prose .blockquote-footer { font-size: 0.875rem; color: var(--muted); }
+.prose .btn { display: inline-block; padding: 0.6em 1.2em; border-radius: var(--radius-sm); font-weight: 700; text-decoration: none; background: var(--blue); color: #fff; }
+.prose .btn:hover { background: var(--blue-hover); color: #fff; }
+.prose .btn-lg { font-size: 1.1rem; padding: 0.8em 1.5em; }
+.prose .btn-group { display: flex; flex-wrap: wrap; gap: 0.5em; margin-bottom: 1.5em; }
+.prose .circular { border-radius: 50%; }
+.prose .repeat-box-pattern { background: url('/images/box-pattern.gif'); }
+.prose .video { margin-bottom: 1.5em; }
+
+/* Serif reading style for blog posts */
+.prose-serif {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: #2b2f33;
+}
+.prose-serif h1, .prose-serif h2, .prose-serif h3, .prose-serif h4 { font-family: var(--font-sans); }
+.prose-serif p, .prose-serif ul, .prose-serif ol { margin-bottom: 1.5em; }

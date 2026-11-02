@@ -1,0 +1,67 @@
+---
+import '../styles/global.css'
+import Analytics from '../components/Analytics.astro'
+import Banner from '../components/Banner.astro'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import { SITE_DESCRIPTION, SITE_NAME } from '../config'
+
+interface Props {
+  title?: string
+  description?: string
+  image?: string
+  noindex?: boolean
+  // Landing pages (webinar) render without the global header/footer
+  bare?: boolean
+  dark?: boolean
+}
+
+const { title, description = SITE_DESCRIPTION, image = '/images/logo-512.png', noindex = false, bare = false, dark = false } = Astro.props
+const fullTitle = title ? `${title} - ${SITE_NAME}` : `${SITE_NAME} - Learn Front-End & Full-Stack JavaScript`
+const canonical = new URL(Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/', Astro.site)
+const ogImage = new URL(image, Astro.site)
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="fb:app_id" content="1707643756216146" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ilovecodingorg" />
+    <meta name="p:domain_verify" content="0eeac2dbde884fb0be8a60b31f61e039" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#0033FF" />
+
+    <Analytics />
+  </head>
+  <body class:list={{ dark }}>
+    {!bare && <Banner />}
+    {!bare && <Header />}
+    <main id="main">
+      <slot />
+    </main>
+    {!bare && <Footer />}
+  </body>
+</html>
+
+<style is:global>
+  body.dark { background: #000; color: #f1f3f5; }
+</style>

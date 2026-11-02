@@ -1,0 +1,30 @@
+---
+import EmailOptinForm from '../components/EmailOptinForm.astro'
+import SmsOptinForm from '../components/SmsOptinForm.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+<BaseLayout title="Free 7-day email course" description="Enroll in the free 7-day email course: the exact strategies to go from a struggling newbie to a professional web developer.">
+  <section class="free">
+    <div class="container-slim">
+      <p class="eyebrow">Learn to code with confidence</p>
+      <h1>Become a Professional Full-Stack Developer</h1>
+      <p class="lead">
+        <strong>New:</strong> Enroll in my free 7-day email course where I show you the exact strategies I used to go from
+        a struggling newbie to a professional web developer.
+      </p>
+      <EmailOptinForm />
+      <div class="sms"><SmsOptinForm /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .free {
+    text-align: center;
+    padding-block: clamp(48px, 8vw, 96px);
+    background: linear-gradient(180deg, var(--blue-tint), var(--surface) 70%);
+  }
+  .eyebrow { color: var(--blue); }
+  .lead { margin-bottom: 1.5em; }
+  .sms { margin-top: 40px; }
+</style>

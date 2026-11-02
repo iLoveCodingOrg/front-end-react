@@ -1,0 +1,54 @@
+---
+interface Props {
+  items: { id: string, label: string }[]
+}
+const { items } = Astro.props
+---
+<nav class="toc" aria-label="On this page" data-toc>
+  <p class="eyebrow">On this page</p>
+  <ol>
+    {items.map(({ id, label }) => <li><a href={`#${id}`}>{label}</a></li>)}
+  </ol>
+</nav>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-toc]').forEach((toc) => {
+    const links = new Map<string, HTMLAnchorElement>()
+    toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach(a => links.set(a.hash.slice(1), a))
+
+    const setCurrent = (id: string) => links.forEach((a, key) => {
+      if (key === id) a.setAttribute('aria-current', 'true')
+      else a.removeAttribute('aria-current')
+    })
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+      if (visible[0]) setCurrent(visible[0].target.id)
+    }, { rootMargin: '0px 0px -65% 0px' })
+
+    links.forEach((_, id) => {
+      const section = document.getElementById(id)
+      if (section) observer.observe(section)
+    })
+  })
+</script>
+
+<style>
+  .toc {
+    position: sticky;
+    top: 24px;
+    font-size: 0.875rem;
+  }
+  ol { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
+  a {
+    display: block;
+    padding: 5px 0 5px 14px;
+    margin-left: -2px;
+    border-left: 2px solid transparent;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  a:hover { color: var(--blue); }
+  a[aria-current] { color: var(--blue); border-left-color: var(--blue); font-weight: 700; }
+</style>

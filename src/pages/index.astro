@@ -1,0 +1,377 @@
+---
+import AboutAziz from '../components/AboutAziz.astro'
+import Icon from '../components/Icon.astro'
+import LogoList from '../components/LogoList.astro'
+import Review from '../components/Review.astro'
+import ReviewGrid from '../components/ReviewGrid.astro'
+import SmsOptinForm from '../components/SmsOptinForm.astro'
+import PathDecisionBanner from '../components/home/PathDecisionBanner.astro'
+import Toc from '../components/home/Toc.astro'
+import { LAST_MONTH_VIEWS, SHOW_PATH_DECISION_BANNER } from '../config'
+import reviews from '../data/reviews.js'
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const toc = [
+  { id: 'what-is-ilc', label: 'What is iLoveCoding?' },
+  { id: 'complete-curriculum', label: 'Complete curriculum' },
+  { id: 'structured-learning', label: 'Structured learning' },
+  { id: 'technology-list', label: 'Technologies you’ll learn' },
+  { id: 'projects', label: 'Practice projects' },
+  { id: 'certificate', label: 'Certificate of completion' },
+  { id: 'who-is-it-for', label: 'Who is it for?' },
+  { id: 'instructor', label: 'About the instructor' },
+]
+
+const socialProof = [
+  {
+    title: 'I find your videos very informative',
+    body: 'The knowledge is presented in a way that suits me and my current programming knowledge which is more on the hobby side. Keep up and well done for the things you’ve done so far.',
+    thumbSrc: '//a.ilovecoding.org/img/_reviews/ivaylo-yosifov.gif',
+    credit1: 'Ivaylo Yosifov',
+  },
+  {
+    body: 'I really love this site. I always wanted to learn to code but never had the money to pay for school. And this will make one of my wishes become reality.',
+    thumbSrc: '//a.ilovecoding.org/img/_reviews/ryan-dracula.gif',
+    credit1: 'Ryan Dracula',
+    credit2: 'Suriname, South America',
+  },
+  {
+    body: 'Awesome man, keep up the good work! I really love what you do (For real). I think you do good as a pseudo coder. You not only know your material, but most importantly you can teach clearly. I am so lucky to find your site.',
+    thumbSrc: '//a.ilovecoding.org/img/_reviews/francis.jpg',
+    credit1: 'Francis',
+  },
+]
+
+const lastMonth = new Date()
+lastMonth.setMonth(lastMonth.getMonth() - 1)
+const lastMonthLabel = lastMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+
+const learn = [
+  'Build simple and advanced websites',
+  'Build responsive-design websites',
+  'Build modern front-end applications',
+  'Think like a developer',
+  'Problem-solving',
+  'Backend development',
+  'Working with databases',
+  'Collaborate on code with Git',
+  'Break features down into functions',
+  'Write reusable code',
+  'Build mobile apps',
+  'Build password-protected websites',
+  'Work with third-party APIs (Twitter, Facebook, etc.)',
+]
+
+const oldWay = [
+  'Google tirelessly for solutions',
+  'Blindly copy-paste code from Stack Overflow',
+  'Run away from reading documentation',
+  'Stare at blank screens, clueless where to begin',
+  'Focus on memorizing code and language features',
+  'Use multiple courses and piece information together',
+]
+
+const newWay = [
+  'Write your own solutions confidently',
+  'Understand other developers’ code and write code intentionally',
+  'Read original documentation with ease',
+  'Know how to break a problem down and code it in the proper order',
+  'Focus on building small projects for fun',
+]
+
+const technologies = [
+  ['JavaScript', 'Beginner to advanced'],
+  ['ES7+', 'Modern JavaScript features'],
+  ['HTML5', 'Basic HTML and modern HTML features'],
+  ['CSS3', 'CSS basics to modern CSS features'],
+  ['Node.js', 'Using JavaScript in the back-end'],
+  ['Express.js', 'Robust RESTful back-end APIs'],
+  ['MongoDB', 'The NoSQL database'],
+  ['React', 'Build modern web UI applications'],
+  ['DOM', 'Tame the browser with vanilla JavaScript'],
+  ['npm', 'Use third-party libraries'],
+  ['REST', 'Standard protocol to structure web APIs'],
+]
+
+const projects = [
+  'Blog design',
+  'Simple to-do list app',
+  'Snake game',
+  'Calculator app',
+  'Photo slider',
+  'Stopwatch',
+  'Accordion feature',
+  'Tab feature',
+  'Location finder (Google Maps)',
+  'Song search app (iTunes API)',
+  'Book search app (Google Books)',
+  'Note-taking API (with password protection)',
+  'Timer app',
+  'Web scraper',
+  'Cryptocurrency price checker',
+  'Scroll animations, and more',
+]
+
+const audience = ['Beginners', 'Junior/Senior developers', 'Developers from a different domain', 'Entrepreneurs']
+---
+<BaseLayout title="Complete Front-End & Full-Stack JavaScript Training">
+  {SHOW_PATH_DECISION_BANNER && <PathDecisionBanner />}
+
+  <section id="learn-coding-hero" class="hero">
+    <div class="container-slim">
+      <p class="eyebrow">Code from scratch &amp; bring your ideas to life</p>
+      <h1>Become a Professional Full-Stack Developer</h1>
+      <p class="lead">
+        The ultimate resource to learn software development from scratch, build projects, and land your first software
+        developer job. Everything you need, in one streamlined platform — now completely free.
+      </p>
+      <ul class="hero-points">
+        <li><Icon name="check" /> Mentor support</li>
+        <li><Icon name="check" /> Interview prep</li>
+        <li><Icon name="check" /> Practice projects</li>
+      </ul>
+      <div class="hero-actions">
+        <a href="/curriculum" class="btn btn-lg btn-primary">Start the curriculum</a>
+        <a href="/courses" class="btn btn-lg btn-outline">Browse courses</a>
+      </div>
+    </div>
+    <div id="sms-updates" class="container-slim sms">
+      <SmsOptinForm />
+    </div>
+  </section>
+
+  <section class="section section-alt social-proof">
+    <div class="container">
+      <h2 class="text-center">
+        {LAST_MONTH_VIEWS.toLocaleString('en-US')} students learned coding from iLoveCoding last month
+        (<span data-last-month>{lastMonthLabel}</span>).
+      </h2>
+      <p class="lead text-center">Here’s what some of them had to say:</p>
+      <ReviewGrid reviews={socialProof} />
+      <div class="logos"><LogoList set="students" /></div>
+    </div>
+  </section>
+
+  <div class="container with-toc">
+    <aside class="toc-col"><Toc items={toc} /></aside>
+
+    <div class="sections">
+      <section id="what-is-ilc" class="block">
+        <h2>What is iLoveCoding?</h2>
+        <p class="lead">
+          iLoveCoding is a platform that teaches you coding so well that you become a competent software engineer. The
+          training is structured, the topics you learn are suited for today’s job market, and you get support throughout
+          your journey — from zero to becoming a highly-skilled software engineer.
+        </p>
+        <div class="intro">
+            <h3>What will you learn?</h3>
+            <p>
+              All the technical skills so you can call yourself a competent Front-End and Full-Stack JavaScript developer —
+              someone who is job-ready and can build any kind of app.
+            </p>
+          </div>
+        <ul class="check-list cols">
+          {learn.map(item => <li><Icon name="check" />{item}</li>)}
+        </ul>
+      </section>
+
+      <section id="complete-curriculum" class="block">
+        <div class="intro">
+            <h2>What do you get?</h2>
+            <p class="lead">Access to the complete training and a mentor-moderated student community.</p>
+          </div>
+
+        <div class="card offer">
+          <div class="offer-row">
+            <img src="/images/get/modules.jpg" alt="All modules" loading="lazy" />
+            <div>
+              <h3>Complete step-by-step training</h3>
+              <p>40+ hours of video training organized so it is easy to make progress.</p>
+              <ul class="check-list">
+                <li><Icon name="check" />Module 1: Fundamentals of programming and the web</li>
+                <li><Icon name="check" />Module 2: Modern front-end development</li>
+                <li><Icon name="check" />Module 3: Back-end development and databases</li>
+                <li><Icon name="check" />Electives (Git, working with APIs, etc.)</li>
+                <li><Icon name="check" />Downloadable cheat sheets</li>
+                <li><Icon name="check" />Access to homework</li>
+              </ul>
+              <a href="/curriculum">See the full curriculum →</a>
+            </div>
+          </div>
+          <div class="offer-row">
+            <img src="/images/get/community.jpg" alt="Slack student community" loading="lazy" />
+            <div>
+              <h3>Mentor-moderated student community</h3>
+              <p>Never get stuck again! Get answers to your specific questions from your peers and mentor in the member-only Slack channel.</p>
+              <ul class="check-list">
+                <li><Icon name="check" />Get solutions to your problems</li>
+                <li><Icon name="check" />Learn from your peers</li>
+                <li><Icon name="check" />Get career, code, and project help</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <Review review={reviews[7]} class="quote" />
+      </section>
+
+      <section id="structured-learning" class="block">
+        <h2>A structured way to learn to code</h2>
+        <div class="split compare">
+          <div class="card">
+            <h3>The old way to learn</h3>
+            <img src="/images/old-way.webp" alt="" width="602" height="388" loading="lazy" />
+            <ul class="check-list">{oldWay.map(item => <li><Icon name="x" />{item}</li>)}</ul>
+          </div>
+          <div class="card">
+            <h3>The new way to learn</h3>
+            <img src="/images/new-way.webp" alt="" width="602" height="388" loading="lazy" />
+            <ul class="check-list">{newWay.map(item => <li><Icon name="check" />{item}</li>)}</ul>
+          </div>
+        </div>
+        <Review review={reviews[2]} class="quote" />
+      </section>
+
+      <section id="technology-list" class="block">
+        <h2>Technologies you will learn</h2>
+        <ul class="tech">
+          {technologies.map(([name, what]) => <li><strong>{name}</strong><span>{what}</span></li>)}
+        </ul>
+        <Review review={reviews[3]} class="quote" />
+      </section>
+
+      <section id="projects" class="block">
+        <div class="intro">
+            <h2>What will you build?</h2>
+            <p class="lead">
+              Your focus will be to apply your knowledge. You’ll build a bunch of projects so you learn and grow your
+              portfolio in the process.
+            </p>
+          </div>
+        <ul class="check-list cols">{projects.map(item => <li><Icon name="check" />{item}</li>)}</ul>
+        <Review review={reviews[4]} class="quote" />
+      </section>
+
+      <section id="certificate" class="block">
+        <h2>Certificate of completion</h2>
+        <p class="lead">
+          Becoming a Front-End or Full-Stack Developer is not an easy feat. It takes time, effort, and a deep understanding
+          of numerous aspects of programming. To demonstrate your expertise, you finish the iLoveCoding Master Project. This
+          project demonstrates the full breadth of your expertise, earning you a Certificate of Completion, and makes for a
+          strong discussion in your interviews.
+        </p>
+        <Review review={reviews[5]} class="quote" />
+      </section>
+
+      <section id="who-is-it-for" class="block">
+        <div class="intro">
+            <h2>Who is iLoveCoding for?</h2>
+            <p class="lead">
+              Designed for beginners, designers and entrepreneurs (like me — Aziz). However, experienced developers from
+              large companies constantly join as well.
+            </p>
+            <ul class="check-list">{audience.map(item => <li><Icon name="check" />{item}</li>)}</ul>
+          </div>
+        <Review review={reviews[6]} class="quote" />
+      </section>
+
+      <section id="instructor" class="block">
+        <AboutAziz />
+        <Review review={reviews[1]} class="quote" />
+      </section>
+    </div>
+  </div>
+
+  <section class="section section-alt">
+    <div class="container"><LogoList set="usedBy" /></div>
+  </section>
+</BaseLayout>
+
+<script>
+  // The stat is relative to "now", not to when the site was built
+  const el = document.querySelector('[data-last-month]')
+  if (el) {
+    const d = new Date()
+    d.setMonth(d.getMonth() - 1)
+    el.textContent = d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+  }
+</script>
+
+<style>
+  .hero {
+    text-align: center;
+    padding-block: clamp(48px, 8vw, 96px) 48px;
+    background: linear-gradient(180deg, var(--blue-tint), var(--surface) 70%);
+  }
+  .hero .eyebrow { color: var(--blue); }
+  .hero .lead { font-size: 1.25rem; }
+  .hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    font-weight: 600;
+  }
+  .hero-points li { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .sms { margin-top: 48px; }
+
+  .social-proof h2 { max-width: 760px; margin-inline: auto; }
+  .social-proof .lead { margin-bottom: 32px; }
+  .logos { margin-top: 56px; }
+
+  .with-toc {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 56px;
+  }
+  @media (max-width: 960px) {
+    .with-toc { grid-template-columns: minmax(0, 1fr); }
+    .toc-col { display: none; }
+  }
+  .toc-col { padding-block: var(--section); }
+
+  .block {
+    padding-block: var(--section);
+    border-bottom: 1px solid var(--line);
+  }
+  .block:last-child { border-bottom: 0; }
+  .intro { margin-block: 32px 24px; }
+  .quote { margin-top: 40px; max-width: 680px; }
+
+  .offer { display: grid; gap: 40px; margin-top: 32px; }
+  .offer-row {
+    display: grid;
+    grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 640px) {
+    .offer-row { grid-template-columns: minmax(0, 1fr); }
+  }
+  .offer-row img { width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--line); }
+
+  .compare { margin-top: 24px; }
+  .compare h3 { text-align: center; }
+  .compare img { display: block; width: 100%; margin-block: 8px 20px; }
+
+  .tech {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+    gap: 12px;
+  }
+  .tech li {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+  }
+  .tech span { color: var(--ink-soft); font-size: 0.9rem; }
+</style>

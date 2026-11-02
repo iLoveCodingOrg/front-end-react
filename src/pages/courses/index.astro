@@ -1,0 +1,34 @@
+---
+import ListItem from '../../components/ListItem.astro'
+import { THUMB_URL } from '../../config'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { courses } from '../../lib/content'
+---
+<BaseLayout title="Courses" description="Free video courses on HTML, CSS, JavaScript and Git, organized by topic.">
+  <div class="container-slim">
+    <header class="page-header">
+      <h1>Courses</h1>
+      <p class="lead">
+        Courses are organized into targeted technological topics. Pick a course and get started. Each course uses simple
+        terminology and gives you ample practice so your learning sinks in on a deeper level.
+      </p>
+    </header>
+    <div class="list">
+      {courses.map(c => (
+        <ListItem
+          href={`/courses/${c.slug}`}
+          title={c.title!}
+          subTitle={c.subTitle}
+          thumbnail={c.thumbnail && `${THUMB_URL}${c.thumbnail}`}
+          level={c.level}
+          duration={c.courseTotalDuration}
+          lessonCount={c.lesson.length}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .list { margin-bottom: var(--section); }
+</style>

@@ -1,0 +1,35 @@
+---
+import ListItem from '../../components/ListItem.astro'
+import { THUMB_URL } from '../../config'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { coreCourses } from '../../lib/content'
+---
+<BaseLayout title="Core Training" description="The foundation of modern software development: the core courses to become a job-ready JavaScript developer.">
+  <div class="container-slim">
+    <header class="page-header">
+      <h1>Core Training</h1>
+      <p class="lead">
+        Here you will learn the foundation of modern software development. This is your curriculum to become a modern,
+        <strong>job-ready</strong> Front-End and/or Full-Stack JavaScript developer — someone who can build modern web,
+        mobile and desktop apps.
+      </p>
+    </header>
+    <div class="list">
+      {coreCourses.map(c => (
+        <ListItem
+          href={`/courses/${c.slug}`}
+          title={c.title!}
+          subTitle={c.subTitle}
+          thumbnail={c.thumbnail && `${THUMB_URL}${c.thumbnail}`}
+          level={c.level}
+          duration={c.courseTotalDuration}
+          lessonCount={c.lesson.length}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .list { margin-bottom: var(--section); }
+</style>

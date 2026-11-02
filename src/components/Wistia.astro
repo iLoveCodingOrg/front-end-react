@@ -1,0 +1,16 @@
+---
+interface Props {
+  id: string
+}
+const { id } = Astro.props
+---
+<script is:inline async src={`https://fast.wistia.com/embed/medias/${id}.jsonp`}></script>
+<script is:inline async src="https://fast.wistia.com/assets/external/E-v1.js"></script>
+<div class="wistia">
+  <div class={`wistia_embed wistia_async_${id} seo=false videoFoam=true`}>&nbsp;</div>
+</div>
+
+<style>
+  .wistia { position: relative; aspect-ratio: 16 / 9; }
+  .wistia_embed { position: absolute; inset: 0; }
+</style>

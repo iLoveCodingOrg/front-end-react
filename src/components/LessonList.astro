@@ -1,0 +1,101 @@
+---
+import type { Course } from '../lib/content'
+
+interface Props {
+  course: Course
+  activeSlug?: string
+}
+const { course, activeSlug } = Astro.props
+const lessons = course.lesson
+const activeIndex = lessons.findIndex(l => l.slug === activeSlug)
+const urlFor = (slug: string) => `/courses/${course.slug}/lessons/${slug}`
+const prev = activeIndex > 0 ? lessons[activeIndex - 1] : undefined
+const next = activeIndex >= 0 ? lessons[activeIndex + 1] : undefined
+---
+<section class="lesson-nav" aria-label="Course content">
+  <div class="pager">
+    {activeIndex < 0 && lessons[0] && (
+      <a class="btn btn-primary" href={urlFor(lessons[0].slug)}>Start learning →</a>
+    )}
+    {prev && <a class="btn btn-outline" href={urlFor(prev.slug)} rel="prev">← Previous</a>}
+    {activeIndex >= 0 && <a class="btn btn-outline" href={`/courses/${course.slug}`}>Course overview</a>}
+    {next && <a class="btn btn-primary" href={urlFor(next.slug)} rel="next">Next lesson →</a>}
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Course content</h2>
+      <span class="muted">{lessons.length} lessons</span>
+    </div>
+    <ol class="lessons" data-lesson-list>
+      {lessons.map((lesson, i) => (
+        <li>
+          <a href={urlFor(lesson.slug)} aria-current={i === activeIndex ? 'page' : undefined}>
+            <span class="num">{i + 1}</span>
+            <span class="name">{lesson.title}</span>
+            {lesson.duration && <span class="dur">{lesson.duration}</span>}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<script>
+  // Bring the current lesson into view inside the scrollable list
+  document.querySelectorAll<HTMLElement>('[data-lesson-list]').forEach((list) => {
+    const current = list.querySelector<HTMLElement>('[aria-current="page"]')
+    if (current) list.scrollTop = current.offsetTop - list.offsetTop - list.clientHeight / 3
+  })
+</script>
+
+<style>
+  .lesson-nav { margin-block: 24px; }
+  .pager {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .panel {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 18px;
+    background: var(--surface-alt);
+    border-bottom: 1px solid var(--line);
+  }
+  .panel-head h2 { font-size: 1.05rem; margin: 0; }
+  .panel-head span { font-size: 0.875rem; }
+  .lessons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 420px;
+    overflow-y: auto;
+    position: relative;
+  }
+  .lessons li + li { border-top: 1px solid var(--line); }
+  .lessons a {
+    display: grid;
+    grid-template-columns: 2.5em 1fr auto;
+    gap: 8px;
+    padding: 10px 18px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .lessons a:hover { background: var(--blue-tint); }
+  .lessons a[aria-current='page'] {
+    background: var(--blue-tint);
+    box-shadow: inset 4px 0 0 var(--blue);
+    font-weight: 700;
+  }
+  .num, .dur { color: var(--muted); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+  .num { padding-top: 0.1em; }
+</style>

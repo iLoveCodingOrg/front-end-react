@@ -1,7 +1,8 @@
 node_modules
 dist
-build
-.cache
+.astro
+.netlify
 .env
-screenshot-localhost.png
-build-size.txt
+.env.*
+!.env.example
+.DS_Store

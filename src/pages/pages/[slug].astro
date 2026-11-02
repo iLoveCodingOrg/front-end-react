@@ -1,0 +1,29 @@
+---
+import Cta from '../../components/Cta.astro'
+import ViewHeader from '../../components/ViewHeader.astro'
+import { PAGES_WITHOUT_CTA } from '../../config'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import '../../styles/prose.css'
+import { type Post, pages, stripHtml } from '../../lib/content'
+
+export function getStaticPaths() {
+  return pages.map(page => ({ params: { slug: page.slug }, props: { page } }))
+}
+
+const { page } = Astro.props as { page: Post }
+const showCta = !PAGES_WITHOUT_CTA.some(prefix => page.slug.startsWith(prefix))
+const description = page.subTitle || stripHtml(page.bodyContent).slice(0, 160)
+---
+<BaseLayout title={page.title} description={description} noindex={!showCta}>
+  <article class="container-slim">
+    <div class="spacer"></div>
+    <ViewHeader title={page.title} subTitle={page.subTitle} />
+    <div class="prose" set:html={page.bodyContent} />
+    {showCta ? <Cta /> : <div class="spacer"></div>}
+  </article>
+</BaseLayout>
+
+<style>
+  .spacer { height: clamp(24px, 5vw, 48px); }
+  article :global(.view-header) { text-align: center; }
+</style>

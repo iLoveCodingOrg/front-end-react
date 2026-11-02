@@ -1,0 +1,102 @@
+---
+import WebinarDisclaimer from '../../components/WebinarDisclaimer.astro'
+import { EASY_WEBINAR_WIDGET_JS } from '../../config'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+---
+<BaseLayout
+  title="Free training: from beginner to highly-paid developer in 5 months"
+  description="A no-cost training session for aspiring software and web developers."
+  bare
+>
+  <div class="container">
+    <header class="head">
+      <p class="eyebrow">No-cost training session for aspiring software/web developers</p>
+      <h1>“How I went from a complete beginner to a highly-paid software developer in 5 months”</h1>
+      <p class="lead">Without having a CS degree, without attending a coding bootcamp, and without using cheap courses.</p>
+    </header>
+
+    <div class="body">
+      <figure>
+        <img src="/images/aziz-ali.jpg" alt="Aziz Ali" loading="lazy" />
+        <figcaption><strong>Presenter:</strong> Aziz Ali, founder of iLoveCoding.org.</figcaption>
+      </figure>
+      <div>
+        <h2>Here is what’s covered…</h2>
+        <ul>
+          <li><strong>The new technology stack</strong> that doesn’t require you to learn Java, Python, SQL, and other outdated technologies.</li>
+          <li><strong>How to use this 100 year old learning technique</strong>, used by experts, to quickly learn the fundamentals of programming and understand it deeply.</li>
+          <li><strong>The Reverse Resume Hack</strong> I used to attract dozens of recruiters calling me with job openings, without me having to apply to any of them.</li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-lg btn-block" data-open-signup>Yes! Reserve my seat now!</button>
+        <p class="small">100% free training — seating is limited</p>
+      </div>
+    </div>
+
+    <WebinarDisclaimer />
+  </div>
+
+  <dialog id="webinar-signup" aria-label="Reserve your seat">
+    <button type="button" class="close" data-close-signup aria-label="Close">×</button>
+    <div class="widget_wrapper">
+      <div class="ewp_form_container ewp_widget_container" webinar_id="Z3aztSvVF5a8mDevXk7QGw=="></div>
+    </div>
+  </dialog>
+
+  <script is:inline define:vars={{ widgetSrc: EASY_WEBINAR_WIDGET_JS }}>
+    const dialog = document.getElementById('webinar-signup')
+    document.querySelector('[data-open-signup]').addEventListener('click', () => {
+      if (!document.getElementById('easyWebinar')) {
+        const script = document.createElement('script')
+        script.id = 'easyWebinar'
+        script.src = widgetSrc
+        script.async = true
+        document.body.appendChild(script)
+      }
+      dialog.showModal()
+    })
+    document.querySelector('[data-close-signup]').addEventListener('click', () => dialog.close())
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close() })
+  </script>
+</BaseLayout>
+
+<style>
+  .head { text-align: center; max-width: 860px; margin: 48px auto; }
+  .head .eyebrow { color: var(--blue); }
+  .head .lead { font-style: italic; }
+  .body {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 40px;
+    align-items: start;
+  }
+  @media (max-width: 760px) { .body { grid-template-columns: minmax(0, 1fr); } }
+  figure { margin: 0; }
+  figure img { width: 100%; border-radius: var(--radius); }
+  figcaption { margin-top: 12px; padding: 12px 16px; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+  h2 { color: var(--blue); font-size: 1.5rem; text-align: center; }
+  ul { list-style: none; padding: 0; }
+  li { position: relative; padding-left: 32px; margin-bottom: 1.25em; }
+  li::before { content: '✅'; position: absolute; left: 0; top: 0; }
+  .small { text-align: center; font-size: 0.875rem; font-weight: 700; margin-top: 8px; }
+
+  dialog {
+    width: min(700px, calc(100% - 32px));
+    max-height: calc(100vh - 32px);
+    border: 0;
+    border-radius: var(--radius);
+    padding: 40px 24px 24px;
+    box-shadow: var(--shadow);
+  }
+  dialog::backdrop { background: rgb(0 0 0 / 45%); }
+  .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: 0;
+    background: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--muted);
+    cursor: pointer;
+  }
+</style>
