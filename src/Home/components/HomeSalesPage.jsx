@@ -9,6 +9,7 @@ import AboutAziz from '../../AboutAziz'
 import StudentCompanies from '../../LogoList/StudentCompanies'
 import UsedBy from '../../LogoList/UsedBy'
 import Header from './HomeSalesPageHeader'
+import SmsOptinForm from './SmsOptinForm'
 import SocialProof from './SocialProof'
 
 import {
@@ -64,6 +65,9 @@ function HomeSalesPage({
 
       <Header showPathDecisionBanner={SHOW_PATH_DECISION_BANNER} />
       <BuyCTA />
+      <div id="sms-updates" className="container-slim mt-3">
+        <SmsOptinForm />
+      </div>
       <div className="container-fluid mt-3 bg-gray-lighter p-3 b bt-1">
         <SocialProof />
         <StudentCompanies />

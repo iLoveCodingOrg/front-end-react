@@ -1,5 +1,6 @@
 import React from 'react'
 import OptinForm from './OptinForm'
+import SmsOptinForm from './SmsOptinForm'
 
 function Hero() {
   return (
@@ -13,6 +14,7 @@ function Hero() {
           <span role="img" aria-label="sparkle">🌟</span>&nbsp;<strong>NEW:</strong> Enroll in my Free 7-day email course where I show you the exact strategies I used to go from a struggling newbie to a professional web developer.
         </h3>
         <OptinForm />
+        <SmsOptinForm />
       </div>
     </div>
   )
