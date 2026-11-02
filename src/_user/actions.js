@@ -219,17 +219,17 @@ export function setUser(error = false, user) {
       error: errorMessage,
     }
   } else {
-    const { userData } = user
+    const userData = user.userData || {}
     action.payload = {
       error,
       user: {
-        email: userData?.email,
-        emailHash: userData?.emailHash,
-        emailVerified: userData?.emailVerified,
-        firstName: userData?.firstName,
-        lastName: userData?.lastName,
-        role: userData?.role,
-        activePlans: userData?.purchases?.map(item => item.products),
+        email: userData.email,
+        emailHash: userData.emailHash,
+        emailVerified: userData.emailVerified,
+        firstName: userData.firstName,
+        lastName: userData.lastName,
+        role: userData.role,
+        activePlans: userData.purchases ? userData.purchases.map(item => item.products) : undefined,
       },
     }
   }
