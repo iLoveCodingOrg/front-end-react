@@ -1,0 +1,20 @@
+---
+import { ASSET_URL } from '../config'
+
+interface Props {
+  source?: string
+  demo?: string
+}
+const full = (link: string) => (/^(https?:)?\/\//.test(link) ? link : `${ASSET_URL}${link}`)
+const { source, demo } = Astro.props
+---
+{(source || demo) && (
+  <div class="source-demo">
+    {demo && <a class="btn btn-outline btn-sm" href={full(demo)} target="_blank" rel="noopener noreferrer">View demo ↗</a>}
+    {source && <a class="btn btn-outline btn-sm" href={full(source)} target="_blank" rel="noopener noreferrer">Download source code ↗</a>}
+  </div>
+)}
+
+<style>
+  .source-demo { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+</style>

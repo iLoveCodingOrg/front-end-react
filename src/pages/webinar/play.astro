@@ -1,0 +1,23 @@
+---
+import Wistia from '../../components/Wistia.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+---
+<BaseLayout title="Webinar" bare dark noindex>
+  <div class="container">
+    <p class="live">Your webinar is in progress! Do not close the window or the presentation will end.</p>
+    <Wistia id="op37bgyfp2" />
+  </div>
+</BaseLayout>
+
+<style>
+  .live {
+    color: #ff6b6b;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-block: 16px;
+    animation: pulse 3s linear infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 0.2; } 30%, 70% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .live { animation: none; } }
+</style>

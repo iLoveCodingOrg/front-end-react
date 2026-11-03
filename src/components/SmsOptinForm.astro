@@ -1,0 +1,110 @@
+---
+import { SMS_OPTIN_URL } from '../config'
+---
+<form class="sms-form card" data-sms-optin data-endpoint={SMS_OPTIN_URL} novalidate>
+  <p class="title">Get updates by text message <span class="muted">(optional)</span></p>
+  <div class="fields">
+    <label>
+      <span class="sr-only">First name</span>
+      <input class="input" type="text" name="name" autocomplete="given-name" placeholder="First name" required />
+    </label>
+    <label>
+      <span class="sr-only">Mobile number</span>
+      <input class="input" type="tel" name="phone" autocomplete="tel" placeholder="Mobile number" required />
+    </label>
+    <button type="submit" class="btn btn-primary">Text me updates</button>
+  </div>
+  <label class="consent">
+    <input type="checkbox" name="consent" />
+    <small>
+      By providing your phone number, you agree to receive Marketing, Customer Care text messages from I LOVE CODING INC.
+      Message frequency may vary. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help.{' '}
+      <a href="/pages/privacy">Privacy Policy</a> · <a href="/pages/terms">Terms and Conditions</a>
+    </small>
+  </label>
+  <p class="status" role="status" aria-live="polite" hidden></p>
+</form>
+
+<script>
+  // Votel form field ids
+  const FIELD_NAME = 'node_50372451'
+  const FIELD_PHONE = 'node_9cbcc8a9'
+  const FIELD_CONSENT = 'node_8fd64957'
+
+  // Votel expects E.164; assume US/Canada when no country code is given
+  function toE164(input: string) {
+    const digits = input.replace(/\D/g, '')
+    if (input.trim().startsWith('+')) return `+${digits}`
+    if (digits.length === 10) return `+1${digits}`
+    if (digits.length === 11 && digits.startsWith('1')) return `+${digits}`
+    return null
+  }
+
+  document.querySelectorAll<HTMLFormElement>('[data-sms-optin]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('.status')!
+    const button = form.querySelector<HTMLButtonElement>('button')!
+
+    const show = (message: string, kind: 'error' | 'success') => {
+      status.textContent = message
+      status.dataset.kind = kind
+      status.hidden = false
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const data = new FormData(form)
+      const name = String(data.get('name') ?? '').trim()
+      const consent = data.get('consent') === 'on'
+      const phone = toE164(String(data.get('phone') ?? ''))
+
+      if (!name) return show('Please enter your first name.', 'error')
+      if (!phone) return show('Please enter a valid mobile number, e.g. (555) 123-4567.', 'error')
+      if (!consent) return show('Please tick the checkbox to receive text messages.', 'error')
+
+      button.disabled = true
+      try {
+        const res = await fetch(form.dataset.endpoint!, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            responses: { [FIELD_NAME]: name, [FIELD_PHONE]: phone, [FIELD_CONSENT]: consent },
+            is_final: true,
+          }),
+        })
+        if (!res.ok) throw new Error(res.statusText)
+        form.reset()
+        show('Thanks! You are signed up for text messages.', 'success')
+      } catch {
+        show('Something went wrong. Please try again.', 'error')
+      } finally {
+        button.disabled = false
+      }
+    })
+  })
+</script>
+
+<style>
+  .sms-form { text-align: left; }
+  .title { font-weight: 700; margin-bottom: 12px; }
+  .fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 8px;
+  }
+  @media (max-width: 640px) {
+    .fields { grid-template-columns: 1fr; }
+  }
+  .consent {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .consent input { margin-top: 3px; flex: none; }
+  .consent a { color: inherit; }
+  .status { margin: 12px 0 0; font-weight: 600; }
+  .status[data-kind='error'] { color: var(--red); }
+  .status[data-kind='success'] { color: #087f5b; }
+</style>

@@ -1,0 +1,40 @@
+---
+import Breadcrumbs from '../../../../components/Breadcrumbs.astro'
+import ContentMeta from '../../../../components/ContentMeta.astro'
+import Cta from '../../../../components/Cta.astro'
+import LessonList from '../../../../components/LessonList.astro'
+import SourceDemo from '../../../../components/SourceDemo.astro'
+import Video from '../../../../components/Video.astro'
+import ViewHeader from '../../../../components/ViewHeader.astro'
+import BaseLayout from '../../../../layouts/BaseLayout.astro'
+import '../../../../styles/prose.css'
+import { type Course, type Lesson, courses, hasContent, stripHtml } from '../../../../lib/content'
+
+export function getStaticPaths() {
+  return courses.flatMap(course => course.lesson.map(lesson => ({
+    params: { course: course.slug, lesson: lesson.slug },
+    props: { course, lesson },
+  })))
+}
+
+const { course, lesson } = Astro.props as { course: Course, lesson: Lesson }
+const body = hasContent(lesson.bodyContent) ? lesson.bodyContent : ''
+const description = lesson.subTitle || stripHtml(body).slice(0, 160) || course.subTitle
+---
+<BaseLayout title={lesson.title} description={description}>
+  <div class="container-md">
+    <Breadcrumbs items={[
+      { label: 'Courses', href: '/courses' },
+      { label: course.title!, href: `/courses/${course.slug}` },
+      { label: lesson.title },
+    ]} />
+    <ViewHeader title={lesson.title} subTitle={lesson.subTitle}>
+      <ContentMeta level={lesson.level} duration={lesson.duration} />
+    </ViewHeader>
+    <Video source={lesson.videoSource} title={lesson.title} showUnavailable />
+    <SourceDemo source={lesson.sourceUrl} demo={lesson.demoUrl} />
+    <LessonList course={course} activeSlug={lesson.slug} />
+    {body && <div class="prose" set:html={body} />}
+    <Cta />
+  </div>
+</BaseLayout>

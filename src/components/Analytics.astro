@@ -1,0 +1,15 @@
+---
+import { GA_MEASUREMENT_ID } from '../config'
+---
+{GA_MEASUREMENT_ID && (
+  <>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+    <script is:inline define:vars={{ id: GA_MEASUREMENT_ID }}>
+      window.dataLayer = window.dataLayer || []
+      function gtag() { window.dataLayer.push(arguments) }
+      window.gtag = gtag
+      gtag('js', new Date())
+      gtag('config', id)
+    </script>
+  </>
+)}

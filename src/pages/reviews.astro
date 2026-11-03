@@ -1,0 +1,26 @@
+---
+import Cta from '../components/Cta.astro'
+import ReviewGrid from '../components/ReviewGrid.astro'
+import reviews from '../data/reviews.js'
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+<BaseLayout title="Real Results" description="Read what successful students have to say about iLoveCoding: testimonials and full reviews.">
+  <div class="container">
+    <header class="page-header">
+      <h1>Real Results</h1>
+      <p class="lead">I asked my students what changed for the better since learning from iLoveCoding. Here’s what they had to say:</p>
+    </header>
+  </div>
+  <section class="section-alt reviews">
+    <div class="container">
+      <ReviewGrid reviews={reviews} />
+    </div>
+  </section>
+  <div class="container-slim">
+    <Cta />
+  </div>
+</BaseLayout>
+
+<style>
+  .reviews { padding-block: 40px; }
+</style>

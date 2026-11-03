@@ -1,0 +1,82 @@
+---
+const sets = {
+  students: {
+    heading: 'iLoveCoding students work at',
+    logos: [
+      ['Fortune 500', 'students/fortune-500.png'],
+      ['Citi', 'students/citi.png'],
+      ['Fidelity National Financial', 'students/fidelity-national-financial.png'],
+      ['Sony', 'students/sony.png'],
+      ['Twitter', 'students/twitter.png'],
+      ['CVS Health', 'my-clients/cvs-health.png'],
+      ['Cars.com', 'students/carsdotcom.png'],
+      ['Starbucks', 'students/starbucks.png'],
+      ['Intuit', 'students/intuit.png'],
+      ['TSheets', 'students/tsheets.png'],
+      ['Salesforce', 'students/salesforce.png'],
+      ['Liberty Mutual', 'students/liberty-mutual.png'],
+    ],
+  },
+  usedBy: {
+    heading: 'Learn the same tools and technologies used by',
+    logos: [
+      ['Airbnb', 'used-by/airbnb.png'],
+      ['Facebook', 'used-by/facebook.png'],
+      ['IBM', 'used-by/ibm.png'],
+      ['Microsoft', 'used-by/microsoft.png'],
+      ['Google', 'used-by/google.png'],
+      ['Tesla', 'used-by/tesla.png'],
+      ['Walmart', 'used-by/walmart.png'],
+    ],
+  },
+  clients: {
+    heading: 'Some clients I have built websites and apps for',
+    logos: [
+      ['CVS Health', 'my-clients/cvs-health.png'],
+      ['Uptake', 'my-clients/uptake.png'],
+      ['Press Ganey', 'my-clients/press-ganey.png'],
+      ['United Airlines', 'my-clients/united-airlines.png'],
+    ],
+  },
+}
+
+interface Props {
+  set: keyof typeof sets
+}
+const { heading, logos } = sets[Astro.props.set]
+---
+<div class="logo-list">
+  <p class="eyebrow">{heading}</p>
+  <ul>
+    {logos.map(([alt, src]) => (
+      <li><img src={`/images/companies/${src}`} alt={alt} loading="lazy" /></li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .logo-list { text-align: center; }
+  .eyebrow { margin-bottom: 24px; }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 40px;
+  }
+  /* Logos ship with uneven built-in whitespace; constrain both axes so they read as one row */
+  img {
+    display: block;
+    max-height: 40px;
+    max-width: 130px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.75;
+    transition: filter 0.2s ease, opacity 0.2s ease;
+  }
+  img:hover { filter: none; opacity: 1; }
+</style>

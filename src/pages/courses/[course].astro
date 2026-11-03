@@ -1,0 +1,32 @@
+---
+import Breadcrumbs from '../../components/Breadcrumbs.astro'
+import ContentMeta from '../../components/ContentMeta.astro'
+import Cta from '../../components/Cta.astro'
+import LessonList from '../../components/LessonList.astro'
+import SourceDemo from '../../components/SourceDemo.astro'
+import Video from '../../components/Video.astro'
+import ViewHeader from '../../components/ViewHeader.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import '../../styles/prose.css'
+import { type Course, courses, hasContent, stripHtml } from '../../lib/content'
+
+export function getStaticPaths() {
+  return courses.map(course => ({ params: { course: course.slug }, props: { course } }))
+}
+
+const { course } = Astro.props as { course: Course }
+const description = course.subTitle || stripHtml(course.bodyContent).slice(0, 160)
+---
+<BaseLayout title={course.title} description={description}>
+  <div class="container-md">
+    <Breadcrumbs items={[{ label: 'Courses', href: '/courses' }, { label: course.title! }]} />
+    <ViewHeader title={course.title!} subTitle={course.subTitle}>
+      <ContentMeta level={course.level} duration={course.courseTotalDuration} lessonCount={course.lesson.length} />
+    </ViewHeader>
+    <Video source={course.videoSource} title={course.title!} showUnavailable />
+    <SourceDemo source={course.sourceUrl} demo={course.demoUrl} />
+    <LessonList course={course} />
+    {hasContent(course.bodyContent) && <div class="prose" set:html={course.bodyContent} />}
+    <Cta />
+  </div>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import { videoEmbedUrl } from '../lib/video'
+
+interface Props {
+  source?: string
+  title: string
+  class?: string
+  // Show a notice instead of rendering nothing when the source can't be played
+  showUnavailable?: boolean
+}
+const { source, title, class: className, showUnavailable = false } = Astro.props
+const src = videoEmbedUrl(source)
+---
+{src && (
+  <div class:list={['video', className]}>
+    <iframe
+      src={src}
+      title={title}
+      loading="lazy"
+      allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+)}
+{!src && showUnavailable && source && source !== 'none' && (
+  <p class:list={['callout', 'callout-warning', className]}>The video for this lesson is no longer available.</p>
+)}

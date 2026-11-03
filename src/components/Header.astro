@@ -1,0 +1,59 @@
+---
+import { NAV_LINKS } from '../config'
+
+const path = Astro.url.pathname.replace(/\.html$/, '')
+const isActive = (href: string) => path === href || path.startsWith(`${href}/`)
+---
+<header class="site-header">
+  <div class="container inner">
+    <a href="/" class="logo" aria-label="iLoveCoding home">
+      <img src="/images/ilovecoding-logo.svg" alt="iLoveCoding" width="160" height="21" />
+    </a>
+    <nav aria-label="Main">
+      {NAV_LINKS.map(({ label, href }) => (
+        <a href={href} class:list={['nav-link', { active: isActive(href) }]} aria-current={isActive(href) ? 'page' : undefined}>
+          {label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    padding-block: 14px;
+  }
+  .logo {
+    display: inline-flex;
+    background: var(--blue);
+    padding: 9px 12px;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.15s ease;
+  }
+  .logo:hover { background: var(--blue-hover); }
+  .logo img { display: block; width: 150px; height: auto; }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-inline: -10px;
+  }
+  .nav-link {
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    color: var(--ink-soft);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nav-link:hover { color: var(--blue); background: var(--blue-tint); }
+  .nav-link.active { color: var(--blue); }
+</style>

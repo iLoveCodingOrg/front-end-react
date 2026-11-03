@@ -1,0 +1,27 @@
+---
+import ListItem from '../../components/ListItem.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { blogs, formatDate } from '../../lib/content'
+
+const posts = blogs.filter(b => b.isListed)
+---
+<BaseLayout title="Blog" description="Stories, insights and lessons from the path to becoming a self-taught software developer.">
+  <div class="container-slim">
+    <header class="page-header">
+      <h1>iLoveCoding Blog</h1>
+      <p class="lead">
+        Here I share my story, insights and experience on my path to becoming a self-taught software developer, along
+        with updates on iLoveCoding and food for thought for students.
+      </p>
+    </header>
+    <div class="list">
+      {posts.map(post => (
+        <ListItem href={`/blog/${post.slug}`} title={post.title} subTitle={post.subTitle} date={formatDate(post.date)} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .list { margin-bottom: var(--section); }
+</style>
